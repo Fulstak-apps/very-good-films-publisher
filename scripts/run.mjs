@@ -32,7 +32,7 @@ await withLock(async()=>{
   }
   const after=queuePlan(memory.items,brand);const result={status:after.full?'queue_full':'queue_refill',...after,prepared,processed,duplicates};console.log(JSON.stringify(result));return result;
  }
- function metaReady(){const aa=accounts();const missing=aa.filter(a=>!a.id||!a.token).map(a=>a.name);return {ready:missing.length===0,missing};}
+ function metaReady(){const aa=accounts(process.env,brand);const missing=aa.filter(a=>!a.id||!a.token).map(a=>a.name);return {ready:missing.length===0,missing};}
  if(command==='discover')await ingest();
  else if(command==='prepare')console.log(JSON.stringify(await prepareOne()));
  else if(command==='refill')console.log(JSON.stringify(await refillQueue()));
@@ -45,7 +45,7 @@ await withLock(async()=>{
  }
  else if(command==='doctor'){
   const checks={};for(const bin of ['ffmpeg','ffprobe']){try{execFileSync(bin,['-version'],{stdio:'pipe'});checks[bin]='available';}catch{checks[bin]='missing';}}
-  for(const a of accounts()){try{const me=await verifyAccount(a,brand[`${a.name}_handle`]);checks[a.name]=`verified @${me.username}`;}catch(e){checks[a.name]=e.message;}}
+  for(const a of accounts(process.env,brand)){try{const me=await verifyAccount(a,brand[`${a.name}_handle`]);checks[a.name]=`verified @${me.username}`;}catch(e){checks[a.name]=e.message;}}
   const q=queuePlan(memory.items,brand);checks.media=process.env.VGF_MEDIA_ORIGIN&&process.env.VGF_UPLOAD_TOKEN?'Cloudflare configured':process.env.GITHUB_REPOSITORY?'GitHub release assets':'missing media configuration';checks.enabled=brand.enabled;checks.scene_sources=sources.feeds.length;checks.catalog_scenes=memory.items.length;checks.queue=`${q.ready}/${q.target} ready`;console.log(JSON.stringify(checks,null,2));
  }else if(command==='status'){
   const q=queuePlan(memory.items,brand);console.log(JSON.stringify({enabled:brand.enabled,queue:q,counts:memory.items.reduce((a,x)=>(a[x.status]=(a[x.status]||0)+1,a),{}),platforms:memory.platforms,unresolved:memory.items.filter(x=>x.instagram_reconcile_required||x.threads_reconcile_required).map(x=>x.key)},null,2));
