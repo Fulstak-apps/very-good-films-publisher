@@ -1,0 +1,21 @@
+{
+  "name": "very-good-films-publisher",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "discover": "node scripts/run.mjs discover",
+    "status": "node scripts/run.mjs status",
+    "doctor": "node scripts/run.mjs doctor",
+    "publish": "node scripts/run.mjs publish",
+    "cycle": "node scripts/run.mjs cycle",
+    "deploy": "wrangler deploy",
+    "media:prepare": "node scripts/run.mjs prepare"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

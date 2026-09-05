@@ -1,0 +1,53 @@
+name: Very Good Films pipeline
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+  push:
+    branches: [main]
+    paths-ignore: ['state/**', 'docs/**', '*.md']
+permissions:
+  contents: write
+concurrency:
+  group: very-good-films-publisher
+  cancel-in-progress: false
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Configure durable state
+        run: |
+          git config user.name 'Very Good Films'
+          git config user.email 'actions@users.noreply.github.com'
+      - name: Test publisher
+        run: npm test
+      - name: Install formatter
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Discover, prepare, and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          VGF_MEDIA_ORIGIN: ${{ vars.VGF_MEDIA_ORIGIN }}
+          VGF_UPLOAD_TOKEN: ${{ secrets.VGF_UPLOAD_TOKEN }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          VGF_DURABLE_GIT: '1'
+        run: npm run cycle
+      - name: Preserve state on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-${{ github.run_id }}
+          path: state/memory.json
+          retention-days: 30

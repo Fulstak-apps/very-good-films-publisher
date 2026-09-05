@@ -1,0 +1,11 @@
+{
+ "$schema":"node_modules/wrangler/config-schema.json",
+ "name":"very-good-films-media",
+ "main":"worker/index.js",
+ "compatibility_date":"2026-09-05",
+ "compatibility_flags":["nodejs_compat"],
+ "workers_dev":true,
+ "preview_urls":false,
+ "r2_buckets":[{"binding":"MEDIA","bucket_name":"very-good-films-media"}],
+ "observability":{"enabled":true}
+}
