@@ -25,9 +25,13 @@ export async function upload(file,hash){const origin=process.env.VGF_MEDIA_ORIGI
 async function uploadGitHub(file,hash){
  const repository=process.env.GITHUB_REPOSITORY;if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository||''))throw new Error('Set GITHUB_REPOSITORY or configure Cloudflare media storage');
  const size=(await fs.stat(file)).size;if(size>90*1024*1024)throw new Error('Video exceeds GitHub media size limit');
- const url=`https://github.com/${repository}/releases/download/media/${hash}.mp4`;
- const existing=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(20000)});if(existing.ok)return url;
- try{execFileSync('gh',['release','view','media','--repo',repository],{stdio:'pipe'});}catch{execFileSync('gh',['release','create','media','--repo',repository,'--title','Very Good Films video assets','--notes','Formatted cinema clips served to the Instagram and Threads APIs.'],{stdio:'pipe'});}
+ const url=`https://github.com/${repository}/releases/download/media/${hash}.mp4?download=1`;
+ let release;
+ try{release=JSON.parse(execFileSync('gh',['release','view','media','--repo',repository,'--json','assets'],{stdio:'pipe'}).toString());}catch{execFileSync('gh',['release','create','media','--repo',repository,'--title','Very Good Films video assets','--notes','Formatted cinema clips served to the Instagram and Threads APIs.'],{stdio:'pipe'});}
+ if(release?.assets?.some(a=>a.name===`${hash}.mp4`)){
+  const check=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(30000)});if(check.ok&&Number(check.headers.get('content-length'))===size)return url;throw new Error('Existing asset is not publicly reachable yet');
+ }
+
  const named=`work/${hash}.mp4`;await fs.copyFile(file,named);
  execFileSync('gh',['release','upload','media',named,'--repo',repository],{stdio:'pipe',timeout:180000});
  const check=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(30000)});if(!check.ok)throw new Error('GitHub video asset is not publicly reachable');return url;
