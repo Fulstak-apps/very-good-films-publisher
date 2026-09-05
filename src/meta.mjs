@@ -6,12 +6,12 @@ export async function graph(base,token,path,params={},method='GET'){
  const res=await fetch(url,init);let data;try{data=await res.json();}catch{throw new Error(`Meta returned unreadable response (${res.status})`);}
  if(!res.ok||data.error){const e=new Error(`Meta HTTP ${res.status}, code ${data.error?.code??'unknown'}, subcode ${data.error?.error_subcode??'none'}`);e.definitiveRejection=res.status<500&&!!data.error;e.rateLimited=res.status===429||[4,17,32,613,9].includes(data.error?.code);throw e;}return data;
 }
-export function accounts(env=process.env){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN}];}
+export function accounts(env=process.env,brand={}){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN}].filter(a=>brand.platforms?.[a.name]!==false);}
 export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const me=await graph(a.base,a.token,a.id,{fields:'id,username'});if(me.username?.toLowerCase()!==handle.toLowerCase()||String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);return me;}
 export async function publish(memory,brand,save){
  if(!brand.enabled)return {status:'paused'};
  // Verify both destinations before publishing to either.
- const aa=accounts();for(const a of aa)await verifyAccount(a,brand[`${a.name}_handle`]);
+ const aa=accounts(process.env,brand);for(const a of aa)await verifyAccount(a,brand[`${a.name}_handle`]);
  const item=eligible(memory.items,brand);if(!item)return {status:'no_eligible_scene'};
  const errs=validate(item,true);if(errs.length)throw new Error(errs.join('; '));
  item.status='publishing';await save();
