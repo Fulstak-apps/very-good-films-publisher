@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {readJSON,saveMemory,withLock} from '../src/store.mjs';
 import {discover,discoverTMDB,enrichFilm} from '../src/discovery.mjs';
 import {download,formatVideo,sha256,upload,trustedURL} from '../src/media.mjs';
@@ -13,8 +14,8 @@ await withLock(async()=>{
  async function prepareOne(){
   const x=memory.items.find(x=>x.status==='discovered');if(!x)return {status:'empty'};
   const issues=validate(x);if(issues.length)throw new Error(issues.join('; '));trustedURL(x.source_url,sources.allowed_media_hosts);
-  await fs.mkdir('work',{recursive:true});const input=`work/${x.key}-source.mp4`,output=`work/${x.key}.mp4`;
-  await download(x.source_url,input,sources.allowed_media_hosts);const qa=formatVideo(input,output,x.scene);x.asset_sha256=await sha256(output);
+  await fs.mkdir('work',{recursive:true});const sourceKey=createHash('sha256').update(x.source_url).digest('hex'),input=`work/source-${sourceKey}.mp4`,output=`work/${x.key}.mp4`;
+  try{await fs.access(input);}catch{await download(x.source_url,input,sources.allowed_media_hosts);}const qa=formatVideo(input,output,x.scene);x.asset_sha256=await sha256(output);
   if(duplicate(x,memory.items)){x.status='duplicate';await save();return {status:'duplicate',key:x.key};}
   x.film=await enrichFilm(x.film);x.instagram_caption=caption(x,x.caption_style).text;x.threads_caption=caption(x,x.caption_style,true).text;
   x.video_url=await upload(output,x.asset_sha256);x.qa={...x.qa,media_verified:true,media:qa};x.status='ready';await save();const result={status:'prepared',key:x.key,title:x.film.title};console.log(JSON.stringify(result));return result;
