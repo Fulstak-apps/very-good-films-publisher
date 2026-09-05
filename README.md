@@ -16,7 +16,7 @@ npm run status
 npm run publish
 ```
 
-Publishing starts paused. Configure the four account secrets, verify `npm run doctor` reports the intended usernames, supply verified scenes, and then set `config/brand.json` → `enabled: true`. GitHub Actions checks every five minutes. The default editorial cap is 20/day, minimum gap 60 minutes, same-film cooldown three days. The same scene is never intentionally recycled.
+Publishing starts paused. Configure the four account secrets, verify `npm run doctor` reports the intended usernames, supply verified scenes, and then set `config/brand.json` → `enabled: true`. GitHub Actions checks every five minutes. The launch cadence is 8/day, spaced three hours apart, with a three-day same-film cooldown. The same scene is never intentionally recycled. After the first stable week, change the cap to 24 and the minimum gap to 60 minutes for hourly posting.
 
 Required repository secrets: `INSTAGRAM_USER_ID`, `INSTAGRAM_ACCESS_TOKEN`, `THREADS_USER_ID`, `THREADS_ACCESS_TOKEN`. The public repository serves MP4s from its `media` release. The workflow's own GitHub token uploads prepared assets. Locally set `GITHUB_REPOSITORY=Fulstak-apps/very-good-films-publisher` and authenticate `gh`.
 
