@@ -857,15 +857,25 @@
       },
       "qa": {
         "identity_verified": true,
-        "scene_verified": true
+        "scene_verified": true,
+        "media_verified": true,
+        "media": {
+          "width": 1080,
+          "height": 1920,
+          "duration": 45,
+          "audio": "aac",
+          "video": "h264"
+        }
       },
       "category": "horror",
       "priority": 4,
-      "status": "discovered",
+      "status": "ready",
       "discovered_at": "2026-09-06T00:32:36.426Z",
       "caption_style": "guess_the_movie",
       "instagram_caption": "Know this scene? 🎬\n\nName the movie in the comments.\n\nVery Good Films.",
-      "threads_caption": "Know this scene? 🎬\n\nName the movie in the comments.\n\nVery Good Films."
+      "threads_caption": "Know this scene? 🎬\n\nName the movie in the comments.\n\nVery Good Films.",
+      "asset_sha256": "266833bebb02f486925b6724c25f9821d955675f0cbcc3e570979a4de2429a74",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/266833bebb02f486925b6724c25f9821d955675f0cbcc3e570979a4de2429a74.mp4?download=1"
     },
     {
       "key": "aaa04c6bc86680f5ac95f911e5b023ce59f595bd9dd8c3edddc0018c3fbfacfe",
