@@ -5,7 +5,10 @@
     {"handle":"vortexfilms_","reuse":"video_and_caption","authorized_by_owner":true}
   ],
   "allowed_media_hosts": [
-    "dn600306.us.archive.org"
+    "dn600306.us.archive.org",
+    "dn600302.us.archive.org",
+    "dn600308.us.archive.org",
+    "dn600300.us.archive.org"
   ],
   "note": "Add an HTTPS JSON scene feed and its explicitly trusted media hosts. Feed schema: docs/SCENE_FEED.md. Local catalog entries are also ingested. Discovery suggestions never imply clip availability."
 }
