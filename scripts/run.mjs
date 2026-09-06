@@ -7,18 +7,27 @@ import {download,formatVideo,sha256,upload,trustedURL} from '../src/media.mjs';
 import {duplicate,validate,caption} from '../src/editorial.mjs';
 import {publish,accounts,verifyAccount} from '../src/meta.mjs';
 import {queuePlan} from '../src/queue.mjs';
+import {holdUnreviewed} from '../src/review.mjs';
 const command=process.argv[2]||'status';
 await withLock(async()=>{
  const memory=await readJSON('state/memory.json'),brand=await readJSON('config/brand.json'),sources=await readJSON('config/sources.json');const save=()=>saveMemory(memory);
+ if(holdUnreviewed(memory.items))await save();
  async function ingest(){const result=await discover(memory,sources);const metadata=await discoverTMDB(memory);await save();console.log(JSON.stringify({discovery:result,metadata}));return {discovery:result,metadata};}
  async function prepareOne(){
-  const x=memory.items.find(x=>x.status==='discovered');if(!x)return {status:'empty'};
+  const x=memory.items.find(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>Date.now()));if(!x)return {status:'empty'};
+  try{
   const issues=validate(x);if(issues.length)throw new Error(issues.join('; '));trustedURL(x.source_url,sources.allowed_media_hosts);
   await fs.mkdir('work',{recursive:true});const sourceKey=createHash('sha256').update(x.source_url).digest('hex'),input=`work/source-${sourceKey}.mp4`,output=`work/${x.key}.mp4`;
   try{await fs.access(input);}catch{await download(x.source_url,input,sources.allowed_media_hosts);}const qa=formatVideo(input,output,x.scene);x.asset_sha256=await sha256(output);
   if(duplicate(x,memory.items)){x.status='duplicate';await save();return {status:'duplicate',key:x.key};}
   x.film=await enrichFilm(x.film);x.instagram_caption=caption(x,x.caption_style).text;x.threads_caption=caption(x,x.caption_style,true).text;
-  x.video_url=await upload(output,x.asset_sha256);x.qa={...x.qa,media_verified:true,media:qa};x.status='ready';await save();const result={status:'prepared',key:x.key,title:x.film.title};console.log(JSON.stringify(result));return result;
+  x.video_url=await upload(output,x.asset_sha256);x.qa={...x.qa,media_verified:true,media:qa};x.status='ready';delete x.prepare_error;delete x.prepare_retry_at;
+  }catch(error){
+   x.prepare_failures=(x.prepare_failures||0)+1;x.prepare_error=error.message;
+   x.prepare_retry_at=new Date(Date.now()+Math.min(240,15*2**(x.prepare_failures-1))*60000).toISOString();
+   await save();return {status:'prepare_failed',key:x.key,error:error.message};
+  }
+  await save();const result={status:'prepared',key:x.key,title:x.film.title};console.log(JSON.stringify(result));return result;
  }
  async function refillQueue(){
   let plan=queuePlan(memory.items,brand);
@@ -29,6 +38,7 @@ await withLock(async()=>{
    const result=await prepareOne();processed++;
    if(result.status==='prepared')prepared++;
    else if(result.status==='duplicate')duplicates++;
+   else if(result.status==='prepare_failed')console.log(JSON.stringify(result));
    else break;
   }
   const after=queuePlan(memory.items,brand);const result={status:after.full?'queue_full':'queue_refill',...after,prepared,processed,duplicates};console.log(JSON.stringify(result));return result;

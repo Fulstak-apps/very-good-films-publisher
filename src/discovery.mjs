@@ -9,7 +9,7 @@ export async function discover(memory,sources){
   if(!plan){incoming.push(entry);continue;}
   for(let index=0;index<plan.count;index++){
    const start=plan.start+index*plan.stride;
-   incoming.push({...entry,scene:{...entry.scene,id:`${entry.scene.id}-${index+1}`,start,end:start+plan.duration},clip_plan:undefined});
+   incoming.push({...entry,qa:{...entry.qa,scene_verified:false},scene:{...entry.scene,id:`${entry.scene.id}-${index+1}`,start,end:start+plan.duration},clip_plan:undefined});
   }
  }}
  for(const feed of sources.feeds){trustedURL(feed.url,[new URL(feed.url).hostname]);const r=await fetch(feed.url,{redirect:'error',signal:AbortSignal.timeout(20000)});if(!r.ok)throw new Error(`Scene feed HTTP ${r.status}`);const raw=await r.text();if(raw.length>2e6)throw new Error('Scene feed too large');const data=JSON.parse(raw);if(!Array.isArray(data))throw new Error('Scene feed must be an array');incoming.push(...data.slice(0,200));}
