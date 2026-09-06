@@ -1,16 +1,11 @@
 {
   "feeds": [],
-  "source_feed_only": false,
+  "source_feed_only": true,
   "instagram_source_accounts": [
     {"handle":"cultureratedpv","reuse":"video_and_caption","authorized_by_owner":true},
     {"handle":"vortexafilms_","reuse":"video_and_caption","authorized_by_owner":true},
     {"handle":"moldedbyculture","reuse":"video_and_caption","requested_by_user":true}
   ],
-  "allowed_media_hosts": [
-    "dn600306.us.archive.org",
-    "dn600302.us.archive.org",
-    "dn600308.us.archive.org",
-    "dn600300.us.archive.org"
-  ],
-  "note": "Local catalog scenes are the always-on fallback. Add an HTTPS JSON scene feed and explicitly trusted media hosts to expand the queue. Feed schema: docs/SCENE_FEED.md."
+  "allowed_media_hosts": [],
+  "note": "Only approved source feeds may supply new clips. Instagram handles are registry entries until a capture feed is connected."
 }
