@@ -4,7 +4,7 @@ import {sceneKey,validate,duplicate,caption,styles} from './editorial.mjs';
 import {trustedURL} from './media.mjs';
 export async function discover(memory,sources){
  const incoming=[];
- for(const file of (await fs.readdir('catalog')).filter(x=>x.endsWith('.json'))){const data=await readJSON(`catalog/${file}`);for(const entry of (Array.isArray(data)?data:[data])){
+ for(const file of sources.source_feed_only?[]:(await fs.readdir('catalog')).filter(x=>x.endsWith('.json'))){const data=await readJSON(`catalog/${file}`);for(const entry of (Array.isArray(data)?data:[data])){
   const plan=entry.clip_plan;
   if(!plan){incoming.push(entry);continue;}
   for(let index=0;index<plan.count;index++){
@@ -14,6 +14,7 @@ export async function discover(memory,sources){
  }}
  for(const feed of sources.feeds){trustedURL(feed.url,[new URL(feed.url).hostname]);const r=await fetch(feed.url,{redirect:'error',signal:AbortSignal.timeout(20000)});if(!r.ok)throw new Error(`Scene feed HTTP ${r.status}`);const raw=await r.text();if(raw.length>2e6)throw new Error('Scene feed too large');const data=JSON.parse(raw);if(!Array.isArray(data))throw new Error('Scene feed must be an array');incoming.push(...data.slice(0,200));}
  let added=0;
+ if(sources.source_feed_only){for(const item of memory.items){if(!item.instagram_published_at&&['discovered','ready','needs_review'].includes(item.status)){item.status='retired';item.retired_reason='Catalog disabled; waiting for approved source feed';}}}
  for(const raw of incoming){const errors=validate(raw);if(errors.length){memory.events.push({at:new Date().toISOString(),type:'rejected',title:raw.film?.title,errors});continue;}
  const key=sceneKey(raw);if(memory.items.some(x=>x.key===key))continue;
  // Feed values cannot inject platform IDs, readiness, or publishing state.
