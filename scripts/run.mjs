@@ -39,7 +39,12 @@ await withLock(async()=>{
  else if(command==='refill')console.log(JSON.stringify(await refillQueue()));
  else if(command==='publish')console.log(JSON.stringify(await publish(memory,brand,save)));
  else if(command==='cycle'){
-  const queue=await refillQueue();
+  let queue;
+  try{queue=await refillQueue();}catch(error){
+   queue={status:'refill_failed',error:error.message};
+   memory.events.push({at:new Date().toISOString(),type:'refill_failed',error:error.message});
+   await save();
+  }
   const meta=metaReady();
   const publication=!brand.enabled?{status:'paused'}:!meta.ready?{status:'waiting_for_meta_credentials',missing:meta.missing}:await publish(memory,brand,save);
   console.log(JSON.stringify({queue,publication}));

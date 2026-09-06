@@ -7,7 +7,8 @@ import {createHash} from 'node:crypto';
 export function trustedURL(value,hosts){const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port&&u.port!=='443'||!hosts.includes(u.hostname))throw new Error('Media/feed URL is not on the configured HTTPS host allowlist');return u;}
 export async function download(url,path,hosts){
  trustedURL(url,hosts);const r=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(180000)});if(!r.ok||!r.body)throw new Error(`Asset download HTTP ${r.status}`);let bytes=0;const max=1024*1024*1024;
- await pipeline(r.body,new Transform({transform(chunk,enc,cb){bytes+=chunk.length;cb(bytes>max?new Error('Source exceeds 1 GiB download limit'):null,chunk);}}),createWriteStream(path));
+ const temporary=path+'.partial';
+ try{await pipeline(r.body,new Transform({transform(chunk,enc,cb){bytes+=chunk.length;cb(bytes>max?new Error('Source exceeds 1 GiB download limit'):null,chunk);}}),createWriteStream(temporary));await fs.rename(temporary,path);}catch(error){await fs.rm(temporary,{force:true});throw error;}
 }
 export function probe(path){return JSON.parse(execFileSync('ffprobe',['-v','error','-show_streams','-show_format','-of','json',path],{maxBuffer:4*1024*1024}).toString());}
 export function formatVideo(input,output,scene){
