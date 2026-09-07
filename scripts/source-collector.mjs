@@ -28,9 +28,9 @@ async function profiles(){
   for(const handle of sourceAccounts){
    const page=await context.newPage();
    try{
-    if(!(await page.locator('a[href="/direct/inbox/"]').count())){
+    if(!(await page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]').count())){
       await page.goto('https://www.instagram.com/',{waitUntil:'domcontentloaded',timeout:15_000});
-      if(!(await page.locator('a[href="/direct/inbox/"]').count()))throw new Error('Source collector profile is signed out; run npm run source:login once.');
+      if(!(await page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]').count()))throw new Error('Source collector profile is signed out; run npm run source:login once.');
     }
     await page.goto(`https://www.instagram.com/${handle}/reels/`,{waitUntil:'domcontentloaded',timeout:15_000});
     await page.waitForTimeout(1500);
@@ -85,7 +85,10 @@ try{
   if(run.queued.length>=limit)break;
   if(ledger.queued[candidate.shortcode])continue;
   try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);}
-  catch(error){run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});}
+  catch(error){
+   run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
+   if(/signed out|Source profile is not logged/i.test(error.message))break;
+  }
  }
  run.finished_at=new Date().toISOString();ledger.runs=[...(ledger.runs||[]),run].slice(-250);await save(ledgerPath,ledger);await commit();console.log(JSON.stringify(run));
 }finally{await handle.close();await fs.rm(lockPath,{force:true});}

@@ -39,7 +39,10 @@ async function launch(headless = false) {
 async function assertSourceLogin(page) {
   await page.goto("https://www.instagram.com/", { waitUntil: "domcontentloaded", timeout: 15_000 });
   await page.waitForTimeout(2500);
-  const profileLink = page.locator('a[href="/direct/inbox/"]');
+  // The shared source-viewing profile is authenticated as @rapwire247. The
+  // inbox route is sometimes lazy-rendered, so accept either stable signed-in
+  // signal instead of falsely declaring a healthy session logged out.
+  const profileLink = page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]');
   if (!(await profileLink.count())) {
     throw new Error("Source profile is not logged into Instagram. Run capture.mjs login.");
   }
