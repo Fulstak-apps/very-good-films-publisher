@@ -18,7 +18,7 @@ export function formatVideo(input,output,scene){
  let filter='scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1';
  if(scene.crop==='center')filter='scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1';
  if(scene.crop==='source_overlay')filter='crop=iw:trunc(ih*0.76/2)*2:0:trunc(ih*0.10/2)*2,scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1';
- const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=28:H-h-220:format=auto[branded]`;
+ const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=44:H-h-252:format=auto[branded]`;
  const args=['-hide_banner','-loglevel','error','-y','-ss',String(scene.start),'-i',input,'-i','assets/very-good-films-logo.png','-t',String(duration),'-filter_complex',branded,'-map','[branded]','-map','0:a:0?','-r','30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-ar','48000','-ac','2','-movflags','+faststart',output];
  execFileSync('ffmpeg',args,{timeout:600000,stdio:'pipe'});return verifyVideo(output,duration);
 }
