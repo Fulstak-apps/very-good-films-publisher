@@ -64,7 +64,7 @@ async function queue(candidate,ledger){
  if(!(duration>1))throw new Error('Source clip has no usable duration');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
- formatVideo(input,output,{start:0,end:duration});
+ formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
  const asset_sha256=await sha256(output);
  console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
  const video_url=await upload(output,asset_sha256,{repository});

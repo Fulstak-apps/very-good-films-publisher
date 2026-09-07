@@ -25,9 +25,12 @@ export function validate(x,ready=false){
 }
 export function caption(x,preferred='film_info',threads=false){
  if(x.kind==='source_repost'){
-  const suffix=`\n\nSource: @${new URL(x.source_post_url).pathname.split('/')[1]}\nVery Good Films.`;
-  const body=x.source_caption.trim(),limit=(threads?500:2200)-[...suffix].length;
-  return {style:'source_repost',text:([...body].length>limit?[...body].slice(0,limit-1).join('')+'…':body)+suffix};
+  // These are the user's own network pages. Preserve the originating post's
+  // wording without adding a visible source credit or VGF boilerplate.
+  const text=x.source_caption.trim();
+  // Threads accepts 500 characters. Instagram retains the exact caption;
+  // Threads only trims when its platform limit makes that unavoidable.
+  return {style:'source_repost',text:threads&&[...text].length>500?[...text].slice(0,499).join('')+'…':text};
  }
  const f=x.film,s=x.scene; let style=preferred;
  const needed={did_you_know:s.trivia,hidden_gem:s.why_watch,performance:s.performance,director:s.direction,quote_scene:s.quote};
