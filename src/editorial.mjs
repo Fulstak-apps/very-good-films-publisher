@@ -27,10 +27,17 @@ export function caption(x,preferred='film_info',threads=false){
  if(x.kind==='source_repost'){
   // These are the user's own network pages. Preserve the originating post's
   // wording without adding a visible source credit or VGF boilerplate.
-  const text=x.source_caption.trim();
+  const text=x.source_caption.trim(),d=x.source_details||{};
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
-  return {style:'source_repost',text:threads&&[...text].length>500?[...text].slice(0,499).join('')+'…':text};
+  if(!d.title)return {style:'source_repost',text:threads&&[...text].length>500?[...text].slice(0,499).join('')+'…':text};
+  const heading=`${d.title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
+  const overview=d.synopsis?`\n\n${d.synopsis}`:'';
+  const director=d.director?`\n\nDirected by ${d.director}`:'';
+  const cast=d.cast?.length?`\nStarring ${d.cast.join(', ')}`:'';
+  const availability=d.availability?`\n\nWhere to watch: ${d.availability}`:'';
+  const detailed=`${heading}${overview}\n\n${text}${director}${cast}${availability}`;
+  return {style:'source_repost',text:threads&&[...detailed].length>500?[...detailed].slice(0,499).join('')+'…':detailed};
  }
  const f=x.film,s=x.scene; let style=preferred;
  const needed={did_you_know:s.trivia,hidden_gem:s.why_watch,performance:s.performance,director:s.direction,quote_scene:s.quote};
