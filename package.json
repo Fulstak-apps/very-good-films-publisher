@@ -12,10 +12,16 @@
     "doctor": "node scripts/run.mjs doctor",
     "publish": "node scripts/run.mjs publish",
     "cycle": "node scripts/run.mjs cycle",
+    "source:collect": "node scripts/source-collector.mjs",
+    "source:login": "node scripts/capture/capture.mjs login",
+    "source:install": "node scripts/install-source-collector.mjs",
     "deploy": "wrangler deploy",
     "media:prepare": "node scripts/run.mjs prepare"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "playwright-core": "^1.63.0"
   }
 }
