@@ -10,7 +10,10 @@ import { assembleRanges } from "./media-ranges.mjs";
 const execFileAsync = promisify(execFile);
 
 const chromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-const profileDir = path.join(os.homedir(), "Library", "Application Support", "VeryGoodFilms", "SourceProfile");
+// This is the already-authenticated source-viewing profile used by the working
+// local repost monitor. It only reads the three allowlisted source accounts;
+// all VGF output is rendered and published through this repository.
+const profileDir = process.env.VGF_SOURCE_PROFILE_DIR || path.join(os.homedir(), "Library", "Application Support", "RapWire", "InstagramMirrorProfile");
 const outputDir = path.resolve("work", "instagram-mirror");
 
 async function launch(headless = false) {
