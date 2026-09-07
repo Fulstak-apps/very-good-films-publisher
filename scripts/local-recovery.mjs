@@ -14,8 +14,10 @@ const pending=memory.items.some(x=>x.status==='publishing');
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
+report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
-if(brand.enabled&&!active&&(pending||(ready&&due&&withinCap)||(ready<brand.queue_target&&memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now))))){
+const latestRun=Date.parse(runs[0]?.createdAt||'')||0;
+if(brand.enabled&&!active&&(pending||(ready&&due&&withinCap)||(ready<brand.queue_target&&memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now)))||(report.health==='source_queue_empty'&&now-latestRun>3600000))){
  gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';
 }
 try{

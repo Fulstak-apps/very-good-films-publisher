@@ -1,9 +1,17 @@
 import {createHash} from 'node:crypto';
+import {approvedSource} from './source-policy.mjs';
 export const styles=['film_info','scene_context','did_you_know','hidden_gem','guess_the_movie','performance','director','quote_scene'];
 export function sceneKey(x){return createHash('sha256').update(`${x.film.id}|${x.scene.id}`).digest('hex');}
 export function evidenceValid(e){return !!e && typeof e.text==='string' && e.text.trim().length>0 && /^https:\/\//.test(e.source_url||'');}
 export function validate(x,ready=false){
  const errors=[]; const f=x.film||{}, s=x.scene||{};
+ if(x.kind==='source_repost'){
+  if(!approvedSource(x.source_post_url)||!f.id||!s.id)errors.push('Approved exact source post required');
+  if(!x.source_caption?.trim()||x.qa?.source_verified!==true)errors.push('Verified source caption required');
+  if(!(s.end>s.start&&s.start>=0&&s.end-s.start<=90))errors.push('Invalid scene interval');
+  if(ready&&(!/^https:\/\//.test(x.video_url||'')||!/^[a-f0-9]{64}$/.test(x.asset_sha256||'')||x.qa?.media_verified!==true||x.qa?.branding!=='very-good-films-only-v1'))errors.push('Verified VGF-only video required');
+  return errors;
+ }
  if(!f.id||!f.title||!Number.isInteger(f.year)||f.year<1888||f.year>new Date().getFullYear()+1) errors.push('Invalid film identity/title/year');
  if(!['movie','tv'].includes(f.type)||!f.director?.length||!f.cast?.length||!f.genres?.length||!evidenceValid(f.synopsis)||!f.metadata_sources?.some(u=>/^https:\/\//.test(u))) errors.push('Missing sourced film metadata');
  if(f.imdb_rating!=null&&(!/^tt\d+$/.test(f.imdb_id||'')||!/^https:\/\//.test(f.imdb_rating_source||'')||!(f.imdb_rating>=0&&f.imdb_rating<=10)||!Number.isFinite(Date.parse(f.rating_checked_at)))) errors.push('IMDb rating needs IMDb identity, source and timestamp');
@@ -16,6 +24,11 @@ export function validate(x,ready=false){
  return errors;
 }
 export function caption(x,preferred='film_info',threads=false){
+ if(x.kind==='source_repost'){
+  const suffix=`\n\nSource: @${new URL(x.source_post_url).pathname.split('/')[1]}\nVery Good Films.`;
+  const body=x.source_caption.trim(),limit=(threads?500:2200)-[...suffix].length;
+  return {style:'source_repost',text:([...body].length>limit?[...body].slice(0,limit-1).join('')+'…':body)+suffix};
+ }
  const f=x.film,s=x.scene; let style=preferred;
  const needed={did_you_know:s.trivia,hidden_gem:s.why_watch,performance:s.performance,director:s.direction,quote_scene:s.quote};
  if(style in needed&&!evidenceValid(needed[style])) style='film_info';

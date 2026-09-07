@@ -8,10 +8,14 @@ import {duplicate,validate,caption} from '../src/editorial.mjs';
 import {publish,accounts,verifyAccount} from '../src/meta.mjs';
 import {queuePlan} from '../src/queue.mjs';
 import {holdUnreviewed} from '../src/review.mjs';
+import {enforceSourcePolicy} from '../src/source-policy.mjs';
+import {importPrepared} from '../src/imports.mjs';
 const command=process.argv[2]||'status';
 await withLock(async()=>{
  const memory=await readJSON('state/memory.json'),brand=await readJSON('config/brand.json'),sources=await readJSON('config/sources.json');const save=()=>saveMemory(memory);
  if(holdUnreviewed(memory.items))await save();
+ if(sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
+ if((await importPrepared(memory)).added)await save();
  async function ingest(){const result=await discover(memory,sources);const metadata=await discoverTMDB(memory);await save();console.log(JSON.stringify({discovery:result,metadata}));return {discovery:result,metadata};}
  async function prepareOne(){
   const x=memory.items.find(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>Date.now()));if(!x)return {status:'empty'};
@@ -58,6 +62,7 @@ await withLock(async()=>{
   const meta=metaReady();
   const publication=!brand.enabled?{status:'paused'}:!meta.ready?{status:'waiting_for_meta_credentials',missing:meta.missing}:await publish(memory,brand,save);
   console.log(JSON.stringify({queue,publication}));
+  if(brand.enabled&&!memory.items.some(x=>['ready','publishing'].includes(x.status))&&publication.status!=='published')throw new Error('Publishing starved: no prepared videos available. Source ingestion requires repair.');
  }
  else if(command==='doctor'){
   const checks={};for(const bin of ['ffmpeg','ffprobe']){try{execFileSync(bin,['-version'],{stdio:'pipe'});checks[bin]='available';}catch{checks[bin]='missing';}}
