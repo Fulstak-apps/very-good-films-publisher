@@ -46,14 +46,13 @@ async function profiles(){
  }finally{await context.close();}
 }
 async function commit(){
- // Synchronize before committing. The publisher persists state on the same
- // branch, so pulling afterward can otherwise leave this collector waiting for
- // an interactive rebase at exactly the point the next queue item is needed.
- await runCommand('git',['pull','--rebase','origin','main'],{env:commandEnv});
  const changed=(await runCommand('git',['status','--porcelain','--','inbox','monitor/source-ledger.json'])).stdout.trim();
  if(!changed)return;
  await runCommand('git',['add','--','inbox','monitor/source-ledger.json']);
  await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});
+ // The publisher also persists state on main. Rebase the just-created queue
+ // commit so the collector never overwrites publishing history.
+ await runCommand('git',['pull','--rebase','origin','main'],{env:commandEnv});
  await runCommand('git',['push','origin','HEAD:main']);
 }
 async function queue(candidate,ledger){
