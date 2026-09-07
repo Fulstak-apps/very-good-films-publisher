@@ -13,9 +13,12 @@ const monitor=path.join(root,'monitor');
 const ledgerPath=path.join(monitor,'source-ledger.json');
 const lockPath=path.join(monitor,'source-collector.lock');
 const limit=1;
+const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
+const commandTimeout=120_000;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
+const runCommand=(file,args,options={})=>exec(file,args,{timeout:commandTimeout,windowsHide:true,...options});
 
 async function lock(){
  await fs.mkdir(monitor,{recursive:true});
@@ -42,23 +45,29 @@ async function profiles(){
  }finally{await context.close();}
 }
 async function commit(){
- const changed=(await exec('git',['status','--porcelain','--','inbox','monitor/source-ledger.json'])).stdout.trim();
+ // Synchronize before committing. The publisher persists state on the same
+ // branch, so pulling afterward can otherwise leave this collector waiting for
+ // an interactive rebase at exactly the point the next queue item is needed.
+ await runCommand('git',['pull','--rebase','origin','main'],{env:{...process.env,GIT_EDITOR:'true'}});
+ const changed=(await runCommand('git',['status','--porcelain','--','inbox','monitor/source-ledger.json'])).stdout.trim();
  if(!changed)return;
- await exec('git',['add','--','inbox','monitor/source-ledger.json']);
- await exec('git',['commit','-m','Queue approved Very Good Films source clip']);
- await exec('git',['pull','--rebase','origin','main']);
- await exec('git',['push','origin','HEAD:main']);
+ await runCommand('git',['add','--','inbox','monitor/source-ledger.json']);
+ await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:{...process.env,GIT_EDITOR:'true'}});
+ await runCommand('git',['push','origin','HEAD:main']);
 }
 async function queue(candidate,ledger){
+ console.log(JSON.stringify({status:'capturing',shortcode:candidate.shortcode,source:candidate.url}));
  const evidence=await capture(candidate.url,{headless:true});
  if(!approvedSource(evidence.source_url||candidate.url))throw new Error('Capture canonical URL escaped approved-source policy');
  const input=evidence.destination;
  const duration=Math.min(90,Math.floor(Number(evidence.duration)*1000)/1000);
  if(!(duration>1))throw new Error('Source clip has no usable duration');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
+ console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  formatVideo(input,output,{start:0,end:duration});
  const asset_sha256=await sha256(output);
- const video_url=await upload(output,asset_sha256);
+ console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
+ const video_url=await upload(output,asset_sha256,{repository});
  const item={
   kind:'source_repost',
   film:{id:`instagram:${candidate.shortcode}`,title:`@${candidate.handle} clip`},
@@ -70,6 +79,7 @@ async function queue(candidate,ledger){
  };
  await fs.mkdir(inbox,{recursive:true});
  await save(path.join(inbox,`${candidate.shortcode}.json`),item);
+ console.log(JSON.stringify({status:'queued',shortcode:candidate.shortcode,video_url}));
  ledger.queued[candidate.shortcode]={source_handle:candidate.handle,source_url:item.source_post_url,queued_at:new Date().toISOString(),asset_sha256};
  return item;
 }
