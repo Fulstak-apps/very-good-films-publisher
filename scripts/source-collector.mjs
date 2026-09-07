@@ -18,7 +18,8 @@ const commandTimeout=120_000;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
-const runCommand=(file,args,options={})=>exec(file,args,{timeout:commandTimeout,windowsHide:true,...options});
+const commandEnv={...process.env,GIT_TERMINAL_PROMPT:'0',GIT_EDITOR:'true'};
+const runCommand=(file,args,options={})=>exec(file,args,{timeout:commandTimeout,windowsHide:true,env:commandEnv,...options});
 
 async function lock(){
  await fs.mkdir(monitor,{recursive:true});
@@ -48,11 +49,11 @@ async function commit(){
  // Synchronize before committing. The publisher persists state on the same
  // branch, so pulling afterward can otherwise leave this collector waiting for
  // an interactive rebase at exactly the point the next queue item is needed.
- await runCommand('git',['pull','--rebase','origin','main'],{env:{...process.env,GIT_EDITOR:'true'}});
+ await runCommand('git',['pull','--rebase','origin','main'],{env:commandEnv});
  const changed=(await runCommand('git',['status','--porcelain','--','inbox','monitor/source-ledger.json'])).stdout.trim();
  if(!changed)return;
  await runCommand('git',['add','--','inbox','monitor/source-ledger.json']);
- await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:{...process.env,GIT_EDITOR:'true'}});
+ await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});
  await runCommand('git',['push','origin','HEAD:main']);
 }
 async function queue(candidate,ledger){
