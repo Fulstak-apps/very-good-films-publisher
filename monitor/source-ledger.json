@@ -214,6 +214,17 @@
       ],
       "errors": [],
       "finished_at": "2026-09-07T21:15:16.508Z"
+    },
+    {
+      "started_at": "2026-09-07T21:16:20.660Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/Users/dw/Library/Application Support/RapWire/InstagramMirrorProfile --remote-debugging-pipe about:blank\n  - <launched> pid=92385\n  - [pid=92385][err] [92385:5689080:0907/141644.159883:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/RapWire/InstagramMirrorProfile/SingletonLock: File exists (17)\n  - [pid=92385][err] [92385:5689080:0907/141644.160603:ERROR:chrome/app/chrome_main_delegate.cc:527] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=92385] <gracefully close start>\n  - [pid=92385] <kill>\n  - [pid=92385] <will force kill>\n  - [pid=92385] exception while trying to kill process: Error: kill EPERM\n  - [pid=92385] <process did exit: exitCode=21, signal=null>\n  - [pid=92385] starting temporary directories cleanup\n  - [pid=92385] finished temporary directories cleanup\n  - [pid=92385] <gracefully close end>\n"
+        }
+      ],
+      "finished_at": "2026-09-07T21:16:51.666Z"
     }
   ]
 }
