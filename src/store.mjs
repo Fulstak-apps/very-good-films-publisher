@@ -21,4 +21,4 @@ export async function saveMemory(memory){
   }
  }
 }
-export async function withLock(fn){const path='state/runner.lock';let h;try{h=await fs.open(path,'wx');}catch(e){if(e.code==='EEXIST')throw new Error('Another runner holds state/runner.lock; verify it has stopped before removing the lock');throw e;}try{await h.writeFile(String(process.pid));return await fn();}finally{await h.close();await fs.unlink(path);}}
+export async function withLock(fn){const path='state/runner.lock';let h;try{h=await fs.open(path,'wx');}catch(e){if(e.code==='EEXIST'){const stale=Date.now()-(await fs.stat(path)).mtimeMs>15*60_000;if(stale){await fs.unlink(path);h=await fs.open(path,'wx');}else throw new Error('Another runner holds state/runner.lock; verify it has stopped before removing the lock');}else throw e;}try{await h.writeFile(String(process.pid));return await fn();}finally{await h.close();await fs.unlink(path).catch(()=>{});}}

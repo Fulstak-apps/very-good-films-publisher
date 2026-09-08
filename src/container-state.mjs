@@ -31,6 +31,7 @@ export async function advanceContainer({ item, prefix, create, inspect, publish,
     delete item[key('container_id')];
     delete item[key('container_checked_at')];
     item[key('retry_at')] = new Date(now + Math.min(240, 30 * 2 ** (failures - 1)) * 60_000).toISOString();
+    if(failures>=3){item.status='needs_review';item.review_reason=`${prefix} media processing failed ${failures} times`;delete item[key('retry_at')];}
     await save();
     throw new Error(`${prefix}: ${status}; retry after ${item[key('retry_at')]}: ${result.error_message || result.status || ''}`);
   }
