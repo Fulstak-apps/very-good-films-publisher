@@ -70,5 +70,8 @@ export function eligible(items,brand,now=Date.now()){
  const posted=items.filter(x=>x.instagram_published_at);
  if(posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length>=brand.daily_cap)return null;
  if(posted.some(x=>now-Date.parse(x.instagram_published_at)<brand.minimum_gap_minutes*60000))return null;
- return items.filter(x=>x.status==='ready'&&(!x.publish_after||Date.parse(x.publish_after)<=now)&&!posted.some(y=>y.film.id===x.film.id&&now-Date.parse(y.instagram_published_at)<brand.movie_cooldown_days*86400000)).sort((a,b)=>(b.priority||0)-(a.priority||0))[0]||null;
+ const recentSources=posted.slice().sort((a,b)=>Date.parse(b.instagram_published_at)-Date.parse(a.instagram_published_at)).slice(0,6).map(x=>x.source_post_url?.split('/')[3]).filter(Boolean);
+ const candidates=items.filter(x=>x.status==='ready'&&(!x.publish_after||Date.parse(x.publish_after)<=now)&&!posted.some(y=>y.film.id===x.film.id&&now-Date.parse(y.instagram_published_at)<brand.movie_cooldown_days*86400000));
+ const diversified=candidates.filter(x=>{const source=x.source_post_url?.split('/')[3];return !source||recentSources.filter(y=>y===source).length<2;});
+ return (diversified.length?diversified:candidates).sort((a,b)=>(b.priority||0)-(a.priority||0))[0]||null;
 }

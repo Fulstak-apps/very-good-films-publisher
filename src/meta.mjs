@@ -7,6 +7,7 @@ export async function graph(base,token,path,params={},method='GET'){
  if(!res.ok||data.error){const e=new Error(`Meta HTTP ${res.status}, code ${data.error?.code??'unknown'}, subcode ${data.error?.error_subcode??'none'}`);e.definitiveRejection=res.status<500&&!!data.error;e.rateLimited=res.status===429||[4,17,32,613,9].includes(data.error?.code);throw e;}return data;
 }
 export function accounts(env=process.env,brand={}){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN}].filter(a=>brand.platforms?.[a.name]!==false);}
+export function classifyMetaError(error){const code=Number(error?.code),sub=Number(error?.subcode);if(code===36004&&sub===2207010)return 'caption_too_long';if(code===4||code===17||code===32||code===613||code===9||error?.rateLimited)return 'rate_limited';if(code===190)return 'auth';if(error?.definitiveRejection)return 'permanent';return 'transient';}
 export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const me=await graph(a.base,a.token,a.id,{fields:'id,username'});if(me.username?.toLowerCase()!==handle.toLowerCase()||String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);return me;}
 export async function publish(memory,brand,save){
  if(!brand.enabled)return {status:'paused'};
@@ -37,7 +38,7 @@ export async function publish(memory,brand,save){
     create:()=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media':'threads'}`,a.name==='instagram'?{media_type:'REELS',video_url:item.video_url,caption:text,share_to_feed:'true'}:{media_type:'VIDEO',video_url:item.video_url,text},'POST'),
     inspect:id=>graph(a.base,a.token,id,{fields:a.name==='instagram'?'status_code,status':'status,error_message'}),
     publish:id=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media_publish':'threads_publish'}`,{creation_id:id},'POST')});
-  }catch(e){item[`${a.name}_error`]=e.message;if(e.rateLimited)state.retry_at=new Date(Date.now()+3600000).toISOString();await save();}
+  }catch(e){const kind=classifyMetaError(e);item[`${a.name}_error`]=e.message;item[`${a.name}_error_class`]=kind;if(kind==='rate_limited')state.retry_at=new Date(Date.now()+3600000).toISOString();if(['caption_too_long','permanent'].includes(kind)){item.status='needs_review';item.review_reason=`${a.name} rejected this item: ${kind}`;}await save();}
  }
  if(aa.every(a=>item[`${a.name}_media_id`])){item.status='published';item.published_at=new Date().toISOString();await save();}
  return {status:item.status,key:item.key,errors:aa.map(a=>item[`${a.name}_error`]).filter(Boolean)};

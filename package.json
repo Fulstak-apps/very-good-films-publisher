@@ -17,6 +17,7 @@
     "source:install": "node scripts/install-source-collector.mjs",
     "deploy": "wrangler deploy",
     "media:prepare": "node scripts/run.mjs prepare"
+    ,"health": "node scripts/health-check.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

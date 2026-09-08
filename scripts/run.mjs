@@ -63,8 +63,9 @@ await withLock(async()=>{
  else if(command==='cycle'){
   let queue;
   try{queue=await refillQueue();}catch(error){
-   queue={status:'refill_failed',error:error.message};
-   memory.events.push({at:new Date().toISOString(),type:'refill_failed',error:error.message});
+   const awaitingCollector=error.message==='source_feed_only is enabled but no scene feeds are configured';
+   queue={status:awaitingCollector?'awaiting_local_source_collector':'refill_failed',error:error.message};
+   memory.events.push({at:new Date().toISOString(),type:awaitingCollector?'awaiting_local_source_collector':'refill_failed',error:error.message});
    await save();
   }
   const meta=metaReady();
