@@ -214,13 +214,13 @@
   },
   "checks": {
     "cultureratedpv": {
-      "checked_at": "2026-09-08T01:41:43.848Z"
+      "checked_at": "2026-09-08T01:47:56.080Z"
     },
     "vortexafilms_": {
-      "checked_at": "2026-09-08T01:41:43.848Z"
+      "checked_at": "2026-09-08T01:47:56.080Z"
     },
     "moldedbyculture": {
-      "checked_at": "2026-09-08T01:41:43.848Z"
+      "checked_at": "2026-09-08T01:47:56.080Z"
     }
   },
   "runs": [
@@ -795,6 +795,18 @@
         }
       ],
       "finished_at": "2026-09-08T01:42:41.617Z"
+    },
+    {
+      "started_at": "2026-09-08T01:47:44.339Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/DcpMkFlOTzC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DcpMkFlOTzC-capture-diagnostic.json"
+        }
+      ],
+      "finished_at": "2026-09-08T01:48:54.459Z"
     }
   ]
 }
