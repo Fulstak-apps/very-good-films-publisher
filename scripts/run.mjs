@@ -20,6 +20,7 @@ await withLock(async()=>{
  let sourceMetadataChanged=false;
  for(const item of memory.items)if(item.kind==='source_repost'&&!item.instagram_media_id&&!item.threads_media_id){
   if(!sourceDetailsComplete(item.source_details)){item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);sourceMetadataChanged=true;}
+  if(sourceDetailsComplete(item.source_details)&&item.status==='needs_review'&&item.review_reason?.startsWith('Verified title')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
   if(!sourceDetailsComplete(item.source_details)&&['ready','discovered','publishing'].includes(item.status)){item.status='needs_review';item.review_reason='Verified title, year, synopsis, director and cast are required before publishing';sourceMetadataChanged=true;}
  }
  if(sourceMetadataChanged)await save();
