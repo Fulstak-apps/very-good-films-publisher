@@ -10,7 +10,7 @@ import {queuePlan} from '../src/queue.mjs';
 import {holdUnreviewed} from '../src/review.mjs';
 import {enforceSourcePolicy} from '../src/source-policy.mjs';
 import {importPrepared} from '../src/imports.mjs';
-import {enrichSourceMetadata} from '../src/source-metadata.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
 const command=process.argv[2]||'status';
 await withLock(async()=>{
  const memory=await readJSON('state/memory.json'),brand=await readJSON('config/brand.json'),sources=await readJSON('config/sources.json');const save=()=>saveMemory(memory);
@@ -18,7 +18,10 @@ await withLock(async()=>{
  if(sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
  if((await importPrepared(memory)).added)await save();
  let sourceMetadataChanged=false;
- for(const item of memory.items)if(item.kind==='source_repost'&&!item.source_details?.version){item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);sourceMetadataChanged=true;}
+ for(const item of memory.items)if(item.kind==='source_repost'&&!item.instagram_media_id&&!item.threads_media_id){
+  if(!sourceDetailsComplete(item.source_details)){item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);sourceMetadataChanged=true;}
+  if(!sourceDetailsComplete(item.source_details)&&['ready','discovered','publishing'].includes(item.status)){item.status='needs_review';item.review_reason='Verified title, year, synopsis, director and cast are required before publishing';sourceMetadataChanged=true;}
+ }
  if(sourceMetadataChanged)await save();
  async function ingest(){const result=await discover(memory,sources);const metadata=await discoverTMDB(memory);await save();console.log(JSON.stringify({discovery:result,metadata}));return {discovery:result,metadata};}
  async function prepareOne(){

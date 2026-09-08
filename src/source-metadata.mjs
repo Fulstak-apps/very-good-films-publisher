@@ -3,12 +3,15 @@ const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
 
 export function sourceHints(caption){
  const text=String(caption||'');
- const yearMatch=text.match(/(?:^|\n)\s*([^\n()]{2,90}?)\s*\((19\d{2}|20\d{2})\)/);
+ const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
+ const titledLine=text.match(/(?:^|\n)\s*🎬\s*([^\n]{2,90})/);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
- const title=clean(yearMatch?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'');
+ const title=clean(yearMatch?.[1]||titledLine?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'');
  const availability=clean(availableMatch?.[0]);
- return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]):undefined,availability:availability||undefined};
+ return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
 }
+
+export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source);}
 
 export async function enrichSourceMetadata(caption,current={}){
  const base={...sourceHints(caption),...current,version:'source-caption-film-info-v1'};

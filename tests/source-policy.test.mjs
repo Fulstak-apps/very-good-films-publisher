@@ -11,7 +11,7 @@ test('quarantine unbranded imports without erasing published history or uncertai
  assert.equal(enforceSourcePolicy(items),1);assert.equal(items[0].status,'needs_review');assert.equal(items[1].status,'published');assert.equal(items[2].status,'publishing');
 });
 test('source reposts require provenance and branding, preserve caption length',()=>{
- const x={kind:'source_repost',source_post_url:'https://www.instagram.com/reelgoodmovies/reel/abc/',source_caption:'A film scene. '.repeat(100),film:{id:'ig:abc'},scene:{id:'abc',start:0,end:55},video_url:'https://example.com/a.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1'}};
+ const x={kind:'source_repost',source_post_url:'https://www.instagram.com/reelgoodmovies/reel/abc/',source_caption:'A film scene. '.repeat(100),source_details:{title:'Example Film',year:2020,director:'A Director',cast:['An Actor'],synopsis:'A verified synopsis.',metadata_source:'https://www.themoviedb.org/movie/1'},film:{id:'ig:abc'},scene:{id:'abc',start:0,end:55},video_url:'https://example.com/a.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1'}};
  assert.deepEqual(validate(x,true),[]);assert.ok([...caption(x,'',true).text].length<=500);
  x.qa.branding='rapwire';assert.ok(validate(x,true).length);
 });
