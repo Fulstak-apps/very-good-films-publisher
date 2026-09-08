@@ -1,6 +1,27 @@
 name: Very Good Films pipeline
 on:
   workflow_dispatch:
+    inputs:
+      platform:
+        description: Platform to publish
+        required: false
+        default: all
+      queue_item:
+        description: Optional queue item key
+        required: false
+      retry_mode:
+        description: Retry behavior
+        required: false
+        default: normal
+      dry_run:
+        description: Prepare and validate without publishing
+        required: false
+        type: boolean
+        default: false
+      maximum_posts:
+        description: Maximum posts for this run
+        required: false
+        default: '1'
   schedule:
     - cron: '*/5 * * * *'
   push:
@@ -23,6 +44,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
+          cache: npm
       - name: Configure durable state
         run: |
           git config user.name 'Very Good Films'
@@ -32,6 +54,7 @@ jobs:
       - name: Install formatter
         run: command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y ffmpeg)
       - name: Discover, prepare, and publish
+        if: ${{ inputs.dry_run != true }}
         env:
           GH_TOKEN: ${{ github.token }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
@@ -43,6 +66,8 @@ jobs:
           TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           VGF_DURABLE_GIT: '1'
+          VGF_PLATFORM: ${{ inputs.platform || 'all' }}
+          VGF_MAX_POSTS: ${{ inputs.maximum_posts || '1' }}
         run: |
           npm run publish
           npm run cycle
@@ -57,6 +82,17 @@ jobs:
         with:
           name: recovery-${{ github.run_id }}
           path: state/memory.json
+          retention-days: 30
+      - name: Upload failure bundle
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-${{ github.run_id }}
+          path: |
+            state/memory.json
+            health-report.json
+            logs/**
+          if-no-files-found: ignore
           retention-days: 30
       - name: Health report
         if: always()
