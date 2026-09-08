@@ -204,17 +204,23 @@
       "source_url": "https://www.instagram.com/moldedbyculture/reel/DcrqP_VOoof/",
       "queued_at": "2026-09-08T01:17:15.742Z",
       "asset_sha256": "3e435b2eacf597bacdb08b5cfda784d2ffb935f2d93f1ce66117be6071487798"
+    },
+    "DckBriXuD81": {
+      "source_handle": "moldedbyculture",
+      "source_url": "https://www.instagram.com/moldedbyculture/reel/DckBriXuD81/",
+      "queued_at": "2026-09-08T01:24:04.479Z",
+      "asset_sha256": "586227d5e81abbed8cfb0a4716cac3ff8a6b46f88abdb5b8059d4795e46fddee"
     }
   },
   "checks": {
     "cultureratedpv": {
-      "checked_at": "2026-09-08T01:16:37.465Z"
+      "checked_at": "2026-09-08T01:22:31.428Z"
     },
     "vortexafilms_": {
-      "checked_at": "2026-09-08T01:16:37.465Z"
+      "checked_at": "2026-09-08T01:22:31.428Z"
     },
     "moldedbyculture": {
-      "checked_at": "2026-09-08T01:16:37.465Z"
+      "checked_at": "2026-09-08T01:22:31.428Z"
     }
   },
   "runs": [
@@ -739,6 +745,20 @@
       ],
       "errors": [],
       "finished_at": "2026-09-08T01:17:15.742Z"
+    },
+    {
+      "started_at": "2026-09-08T01:22:18.728Z",
+      "queued": [
+        "DckBriXuD81"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/DcpMkFlOTzC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DcpMkFlOTzC-capture-diagnostic.json"
+        }
+      ],
+      "finished_at": "2026-09-08T01:24:04.480Z"
     }
   ]
 }
