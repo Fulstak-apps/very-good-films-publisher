@@ -33,13 +33,15 @@ export function caption(x,preferred='film_info',threads=false){
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
   if(!d.title)return {style:'source_repost',text:threads&&[...text].length>500?[...text].slice(0,499).join('')+'…':text};
+  const limit=threads?500:2200;
   const heading=`${d.title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
   const overview=d.synopsis?`\n\n${d.synopsis}`:'';
-  const director=d.director?`\n\nDirected by ${d.director}`:'';
-  const cast=d.cast?.length?`\nStarring ${d.cast.join(', ')}`:'';
+  const credits=`\n\nDirected by ${d.director}\nStarring ${d.cast.join(', ')}`;
   const availability=`\n\nWhere to watch: ${d.availability||'No current US streaming listing found.'}`;
-  const detailed=`${heading}${overview}\n\n${text}${director}${cast}${availability}`;
-  return {style:'source_repost',text:threads&&[...detailed].length>500?[...detailed].slice(0,499).join('')+'…':detailed};
+  const prefix=`${heading}${overview}\n\nScene context: `,tail=`${credits}${availability}`;
+  const room=Math.max(0,limit-[...prefix+tail].length);
+  const scene=[...text].length>room?[...text].slice(0,Math.max(0,room-1)).join('').trimEnd()+'…':text;
+  return {style:'source_repost',text:`${prefix}${scene}${tail}`};
  }
  const f=x.film,s=x.scene; let style=preferred;
  const needed={did_you_know:s.trivia,hidden_gem:s.why_watch,performance:s.performance,director:s.direction,quote_scene:s.quote};
