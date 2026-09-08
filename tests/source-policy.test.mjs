@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {approvedSource,enforceSourcePolicy} from '../src/source-policy.mjs';
 import {validate,caption} from '../src/editorial.mjs';
 test('source account must match exact approved account and host',()=>{
- assert.ok(approvedSource('https://www.instagram.com/vortexafilms_/reel/abc/'));
- for(const u of ['https://www.instagram.com/rapwire247/reel/abc/','https://www.instagram.com.evil.org/vortexafilms_/reel/abc/','https://www.instagram.com/vortexfilms_/reel/abc/'])assert.equal(approvedSource(u),false);
+ assert.ok(approvedSource('https://www.instagram.com/reelgoodmovies/reel/abc/'));
+ for(const u of ['https://www.instagram.com/rapwire247/reel/abc/','https://www.instagram.com.evil.org/reelgoodmovies/reel/abc/','https://www.instagram.com/vortexafilms_/reel/abc/'])assert.equal(approvedSource(u),false);
 });
 test('quarantine unbranded imports without erasing published history or uncertain intent',()=>{
  const items=[{status:'ready'},{status:'published',instagram_media_id:'1'},{status:'publishing',instagram_publish_requested_at:'2026-01-01'}];
