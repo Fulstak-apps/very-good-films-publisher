@@ -150,17 +150,23 @@
       "source_url": "https://www.instagram.com/moldedbyculture/reel/DYnePCXOMxb/",
       "queued_at": "2026-09-08T00:16:13.679Z",
       "asset_sha256": "d26ee1a70aaca5594161c866bf62396987cad7208f290a6a45d56569eaa0d22d"
+    },
+    "Dc19nqDuJ0w": {
+      "source_handle": "moldedbyculture",
+      "source_url": "https://www.instagram.com/moldedbyculture/reel/Dc19nqDuJ0w/",
+      "queued_at": "2026-09-08T00:26:39.547Z",
+      "asset_sha256": "590059a832ad220950227aa16509c15a0bdb2def217e1e695dd58949cc0c1c07"
     }
   },
   "checks": {
     "cultureratedpv": {
-      "checked_at": "2026-09-08T00:15:33.463Z"
+      "checked_at": "2026-09-08T00:21:29.019Z"
     },
     "vortexafilms_": {
-      "checked_at": "2026-09-08T00:15:33.463Z"
+      "checked_at": "2026-09-08T00:21:29.019Z"
     },
     "moldedbyculture": {
-      "checked_at": "2026-09-08T00:15:33.463Z"
+      "checked_at": "2026-09-08T00:21:29.019Z"
     }
   },
   "runs": [
@@ -587,6 +593,40 @@
       ],
       "errors": [],
       "finished_at": "2026-09-08T00:16:13.679Z"
+    },
+    {
+      "started_at": "2026-09-08T00:21:16.384Z",
+      "queued": [
+        "Dc19nqDuJ0w"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/DVFGPsrDiuT/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVFGPsrDiuT-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/DRx-Y0LjnWr/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DRx-Y0LjnWr-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/Dc9uvItuyG1/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc9uvItuyG1-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/Dc7SRs4ORTi/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc7SRs4ORTi-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/moldedbyculture/reel/Dc4l990Ocrv/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc4l990Ocrv-capture-diagnostic.json"
+        }
+      ],
+      "finished_at": "2026-09-08T00:26:39.547Z"
     }
   ]
 }
