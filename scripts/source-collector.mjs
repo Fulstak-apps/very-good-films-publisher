@@ -25,11 +25,11 @@ async function lock(){
  await fs.mkdir(monitor,{recursive:true});
  try{return await fs.open(lockPath,'wx');}catch(error){if(error.code==='EEXIST'){console.log(JSON.stringify({status:'locked'}));process.exit(0);}throw error;}
 }
-async function profiles(){
+async function profiles(handles=sourceAccounts){
  const context=await launch(true);
  try{
   const found=[];
-  for(const handle of sourceAccounts){
+  for(const handle of handles){
    const page=await context.newPage();
    try{
     if(!(await page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]').count())){
@@ -89,12 +89,14 @@ try{
  const ledger=await json(ledgerPath,{version:1,queued:{},checks:{},runs:[]});
  const run={started_at:new Date().toISOString(),queued:[],errors:[]};
  let candidates=[];
- try{candidates=await profiles();for(const h of sourceAccounts)ledger.checks[h]={checked_at:new Date().toISOString()};}
+ const next=Number.isInteger(ledger.next_account_index)?ledger.next_account_index%sourceAccounts.length:0;
+ const ordered=[...sourceAccounts.slice(next),...sourceAccounts.slice(0,next)];
+ try{candidates=await profiles(ordered);for(const h of sourceAccounts)ledger.checks[h]={checked_at:new Date().toISOString()};}
  catch(error){run.errors.push({stage:'discover',error:error.message});}
  for(const candidate of candidates){
   if(run.queued.length>=limit)break;
   if(ledger.queued[candidate.shortcode])continue;
-  try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);}
+  try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);ledger.next_account_index=(sourceAccounts.indexOf(candidate.handle)+1)%sourceAccounts.length;}
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
    if(/signed out|Source profile is not logged/i.test(error.message))break;

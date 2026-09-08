@@ -1,4 +1,4 @@
-export const sourceAccounts = ['cultureratedpv','vortexafilms_','moldedbyculture'];
+export const sourceAccounts = ['reelgoodmovies','thecinemanerd.ig','theacenyc','the_goodfilms','film.fission','ellsoriaa','relatedfilms','uneedmink'];
 export function approvedSource(url) {
  try { const u=new URL(url);return u.protocol==='https:'&&u.hostname==='www.instagram.com'&&/^\/([^/]+)\/(reel|p)\/[A-Za-z0-9_-]+\/?$/.test(u.pathname)&&sourceAccounts.includes(u.pathname.split('/')[1]); } catch {return false;}
 }
