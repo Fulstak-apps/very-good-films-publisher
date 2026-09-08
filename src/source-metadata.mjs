@@ -1,5 +1,6 @@
 const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
 const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
+const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
 
 export function sourceHints(caption){
  const text=String(caption||'');
@@ -13,9 +14,31 @@ export function sourceHints(caption){
 
 export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source);}
 
+async function wikiMetadata(base){
+ const search=new URL('https://en.wikipedia.org/w/api.php');search.search='action=query&format=json&origin=*&list=search&srlimit=5&srsearch='+encodeURIComponent(`intitle:${base.title_hint} ${base.year||''} film`);
+ const hits=(await (await fetch(search,{signal:AbortSignal.timeout(15000)})).json()).query?.search||[];
+ const hit=hits.find(x=>normal(x.title).includes(normal(base.title_hint))||normal(base.title_hint).includes(normal(x.title)));if(!hit)return base;
+ const page=new URL('https://en.wikipedia.org/w/api.php');page.search='action=query&format=json&origin=*&prop=extracts|pageprops&exintro=1&explaintext=1&pageids='+hit.pageid;
+ const entry=Object.values((await (await fetch(page,{signal:AbortSignal.timeout(15000)})).json()).query?.pages||{})[0];if(!entry?.title)return base;
+ const qid=entry.pageprops?.wikibase_item;
+ let director,cast=[],year=base.year;
+ if(qid){
+  const entity=await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`,{signal:AbortSignal.timeout(15000)});if(entity.ok){
+   const claims=(await entity.json()).entities?.[qid]?.claims||{};
+   const ids=[...(claims.P57||[]).slice(0,1),...(claims.P161||[]).slice(0,3)].map(x=>x.mainsnak?.datavalue?.value?.id).filter(Boolean);
+   const labels=ids.length?await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&origin=*&ids=${ids.join('|')}&props=labels&languages=en`,{signal:AbortSignal.timeout(15000)}):null;
+   const names=labels?.ok?Object.values((await labels.json()).entities||{}).map(x=>x.labels?.en?.value).filter(Boolean):[];
+   director=names[0];cast=names.slice(1);
+   const date=claims.P577?.[0]?.mainsnak?.datavalue?.value?.time;if(date){const match=date.match(/[+-](\d{4})/);if(match)year=Number(match[1]);}
+  }
+ }
+ return {...base,title:entry.title.replace(/\s*\([^)]*\)$/,''),year,director,cast,synopsis:strip(entry.extract).slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`};
+}
+
 export async function enrichSourceMetadata(caption,current={}){
  const base={...sourceHints(caption),...current,version:'source-caption-film-info-v1'};
- if(!base.title_hint||!process.env.TMDB_READ_TOKEN)return base;
+ if(!base.title_hint)return base;
+ if(!process.env.TMDB_READ_TOKEN){try{return await wikiMetadata(base);}catch{return base;}}
  try{
   const headers={Authorization:`Bearer ${process.env.TMDB_READ_TOKEN}`};
   const query=new URL('https://api.themoviedb.org/3/search/multi');query.searchParams.set('query',base.title_hint);query.searchParams.set('include_adult','false');
@@ -28,5 +51,5 @@ export async function enrichSourceMetadata(caption,current={}){
   const providers=data['watch/providers']?.results?.US||{};
   const places=[...(providers.flatrate||[]),...(providers.free||[]),...(providers.ads||[])].map(x=>x.provider_name).filter(Boolean);
   return {...base,title:data.title||data.name,year:Number((data.release_date||data.first_air_date||'').slice(0,4))||base.year,type,director:credits.crew?.find(x=>x.job==='Director')?.name,cast:(credits.cast||[]).slice(0,3).map(x=>x.name),synopsis:clean(data.overview),availability:places.length?places.join(', '):base.availability,metadata_source:`https://www.themoviedb.org/${type}/${id}`};
- }catch{return base;}
+ }catch{try{return await wikiMetadata(base);}catch{return base;}}
 }
