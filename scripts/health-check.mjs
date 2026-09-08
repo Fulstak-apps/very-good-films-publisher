@@ -10,7 +10,7 @@ const needsReview=memory.items.filter(x=>x.status==='needs_review').length;
 const recentErrors=memory.items.filter(x=>x.instagram_error||x.threads_error).slice(-10).map(x=>({key:x.key,instagram:x.instagram_error_class,threads:x.threads_error_class}));
 const hoursSinceLast=last?(now-last)/3600000:null;
 const stalePublishing=memory.items.filter(x=>x.status==='publishing'&&now-Date.parse(x.updated_at||x.instagram_container_created_at||x.threads_container_created_at||0)>15*60_000).length;
-const healthy=!brand.enabled||ready>0||hoursSinceLast===null||hoursSinceLast<=1;
+const healthy=!brand.enabled||(hoursSinceLast!==null&&hoursSinceLast<=1&&stalePublishing===0);
 const report={at:new Date().toISOString(),healthy,ready,publishing,stalePublishing,needsReview,lastInstagramPost:published[0]?.instagram_published_at||null,lastInstagramMediaId:published[0]?.instagram_media_id||null,hoursSinceLast,sourceAccounts:JSON.parse(await fs.readFile('config/sources.json','utf8')).instagram_source_accounts.map(x=>x.handle),recentErrors};
 await fs.writeFile('health-report.json',JSON.stringify(report,null,2)+'\n');
 const summary=process.env.GITHUB_STEP_SUMMARY;
