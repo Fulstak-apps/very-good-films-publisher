@@ -38,8 +38,9 @@ export async function publish(memory,brand,save){
     create:()=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media':'threads'}`,a.name==='instagram'?{media_type:'REELS',video_url:item.video_url,caption:text,share_to_feed:'true'}:{media_type:'VIDEO',video_url:item.video_url,text},'POST'),
     inspect:id=>graph(a.base,a.token,id,{fields:a.name==='instagram'?'status_code,status':'status,error_message'}),
     publish:id=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media_publish':'threads_publish'}`,{creation_id:id},'POST')});
-  }catch(e){const kind=classifyMetaError(e);item[`${a.name}_error`]=e.message;item[`${a.name}_error_class`]=kind;if(kind==='rate_limited')state.retry_at=new Date(Date.now()+3600000).toISOString();if(['caption_too_long','permanent'].includes(kind)){item.status='needs_review';item.review_reason=`${a.name} rejected this item: ${kind}`;}await save();}
+  }catch(e){const kind=classifyMetaError(e);item[`${a.name}_error`]=e.message;item[`${a.name}_error_class`]=kind;state.retry_at=new Date(Date.now()+(kind==='rate_limited'?3600000:kind==='transient'?15*60000:0)).toISOString();if(['caption_too_long','permanent'].includes(kind)){item.status='needs_review';item.review_reason=`${a.name} rejected this item: ${kind}`;}await save();}
  }
  if(aa.every(a=>item[`${a.name}_media_id`])){item.status='published';item.published_at=new Date().toISOString();await save();}
+ else if(aa.some(a=>item[`${a.name}_media_id`])&&item.status==='publishing'){item.status='partial';item.publish_retry_at=new Date(Date.now()+15*60000).toISOString();await save();}
  return {status:item.status,key:item.key,errors:aa.map(a=>item[`${a.name}_error`]).filter(Boolean)};
 }

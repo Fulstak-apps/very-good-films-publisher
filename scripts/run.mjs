@@ -71,7 +71,7 @@ await withLock(async()=>{
   const meta=metaReady();
   const publication=!brand.enabled?{status:'paused'}:!meta.ready?{status:'waiting_for_meta_credentials',missing:meta.missing}:await publish(memory,brand,save);
   console.log(JSON.stringify({queue,publication}));
-  if(brand.enabled&&!memory.items.some(x=>['ready','publishing','needs_review'].includes(x.status))&&publication.status!=='published')throw new Error('Publishing starved: no prepared videos available. Source ingestion requires repair.');
+  if(brand.enabled&&!memory.items.some(x=>['ready','partial','publishing','needs_review'].includes(x.status))&&publication.status!=='published')throw new Error('Publishing starved: no prepared videos available. Source ingestion requires repair.');
  }
  else if(command==='doctor'){
   const checks={};for(const bin of ['ffmpeg','ffprobe']){try{execFileSync(bin,['-version'],{stdio:'pipe'});checks[bin]='available';}catch{checks[bin]='missing';}}
