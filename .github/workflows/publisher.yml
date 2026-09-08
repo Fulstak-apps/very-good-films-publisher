@@ -30,11 +30,12 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: very-good-films-publisher
+  group: very-good-films-${{ github.event.inputs.platform || 'all' }}
   cancel-in-progress: false
 jobs:
   pipeline:
     runs-on: ubuntu-latest
+    environment: production
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
