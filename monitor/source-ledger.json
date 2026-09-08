@@ -270,6 +270,12 @@
       "source_url": "https://www.instagram.com/reelgoodmovies/reel/Cur_hPFowrV/",
       "queued_at": "2026-09-08T03:43:12.918Z",
       "asset_sha256": "c52a4384ac2c09d221850a4f28dc716d760df1c8ef98d1dfe78e4f667d40f1af"
+    },
+    "DLxC8BtTO04": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DLxC8BtTO04/",
+      "queued_at": "2026-09-08T03:50:29.108Z",
+      "asset_sha256": "545b94944e647ede8017670f54e315cf9a67da971ab1baf61f3c71c955e6b557"
     }
   },
   "checks": {
@@ -283,28 +289,28 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-08T03:42:11.235Z"
+      "checked_at": "2026-09-08T03:49:02.437Z"
     }
   },
   "runs": [
@@ -1043,7 +1049,21 @@
       ],
       "errors": [],
       "finished_at": "2026-09-08T03:43:12.918Z"
+    },
+    {
+      "started_at": "2026-09-08T03:48:16.846Z",
+      "queued": [
+        "DLxC8BtTO04"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "finished_at": "2026-09-08T03:50:29.108Z"
     }
   ],
-  "next_account_index": 1
+  "next_account_index": 2
 }
