@@ -12,6 +12,16 @@ export async function publish(memory,brand,save){
  if(!brand.enabled)return {status:'paused'};
  // Verify both destinations before publishing to either.
  const aa=accounts(process.env,brand);for(const a of aa)await verifyAccount(a,brand[`${a.name}_handle`]);
+ // A state save can succeed after the platform returned a media ID but before
+ // the final status write. Close that partial completion before selecting the
+ // next item so a stale `publishing` state never blocks the queue.
+ for(const pending of memory.items.filter(x=>x.status==='publishing')){
+  if(aa.every(a=>pending[`${a.name}_media_id`])){
+   pending.status='published';pending.published_at??=new Date().toISOString();
+   for(const a of aa)delete pending[`${a.name}_error`];
+   await save();
+  }
+ }
  const item=eligible(memory.items,brand);if(!item)return {status:'no_eligible_scene'};
  const errs=validate(item,true);if(errs.length)throw new Error(errs.join('; '));
  item.status='publishing';await save();
