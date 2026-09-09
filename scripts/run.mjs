@@ -8,7 +8,7 @@ import {duplicate,validate,caption} from '../src/editorial.mjs';
 import {publish,accounts,verifyAccount} from '../src/meta.mjs';
 import {queuePlan} from '../src/queue.mjs';
 import {holdUnreviewed} from '../src/review.mjs';
-import {enforceSourcePolicy} from '../src/source-policy.mjs';
+import {enforceSourcePolicy,approvedSource} from '../src/source-policy.mjs';
 import {importPrepared} from '../src/imports.mjs';
 import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
 const command=process.argv[2]||'status';
@@ -18,8 +18,12 @@ await withLock(async()=>{
  if(sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
  if((await importPrepared(memory)).added)await save();
  let sourceMetadataChanged=false;
- for(const item of memory.items)if(item.kind==='source_repost'&&!item.instagram_media_id&&!item.threads_media_id){
-  if(!sourceDetailsComplete(item.source_details)){item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);sourceMetadataChanged=true;}
+ for(const item of memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
+  if(!sourceDetailsComplete(item.source_details)){
+   if(item.source_details?.version==='source-caption-film-info-v2'&&Date.parse(item.metadata_retry_at||'')>Date.now())continue;
+   item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);
+   item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();sourceMetadataChanged=true;
+  }
   if(sourceDetailsComplete(item.source_details)&&item.status==='needs_review'&&item.review_reason?.startsWith('Verified title')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
   if(!sourceDetailsComplete(item.source_details)&&['ready','discovered','publishing'].includes(item.status)){item.status='needs_review';item.review_reason='Verified title, year, synopsis, director and cast are required before publishing';sourceMetadataChanged=true;}
  }
