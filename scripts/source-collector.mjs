@@ -26,7 +26,7 @@ async function lock(){
  try{return await fs.open(lockPath,'wx');}catch(error){
   if(error.code!=='EEXIST')throw error;
   const age=Date.now()-(await fs.stat(lockPath)).mtimeMs;
-  if(age>15*60_000){await fs.rename(lockPath,`${lockPath}.stale-${Date.now()}`);return fs.open(lockPath,'wx');}
+  if(age>2*60_000){await fs.rename(lockPath,`${lockPath}.stale-${Date.now()}`);return fs.open(lockPath,'wx');}
   console.log(JSON.stringify({status:'locked'}));process.exit(0);
  }
 }
