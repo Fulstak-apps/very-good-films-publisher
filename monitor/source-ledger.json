@@ -360,6 +360,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DctUs5KuUJ1/",
       "queued_at": "2026-09-09T01:43:19.511Z",
       "asset_sha256": "cb56a4d3556888c9bcce04370cde6ca91d68bf27a52ded2a898c47ca272b9e64"
+    },
+    "DbYdvlXxdhp": {
+      "source_handle": "theacenyc",
+      "source_url": "https://www.instagram.com/theacenyc/reel/DbYdvlXxdhp/",
+      "queued_at": "2026-09-09T01:50:37.251Z",
+      "asset_sha256": "a705b424e49984fa256f7b8a73dc3042c5049ef361d0f49c1458a3b03ee9db4c"
     }
   },
   "checks": {
@@ -373,34 +379,34 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-09T01:32:47.180Z"
+      "checked_at": "2026-09-09T01:48:58.949Z"
     }
   },
   "runs": [
@@ -1306,7 +1312,21 @@
         }
       ],
       "finished_at": "2026-09-09T01:43:19.511Z"
+    },
+    {
+      "started_at": "2026-09-09T01:48:22.422Z",
+      "queued": [
+        "DbYdvlXxdhp"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/DbhE84oRHI2/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbhE84oRHI2-capture-diagnostic.json"
+        }
+      ],
+      "finished_at": "2026-09-09T01:50:37.251Z"
     }
   ],
-  "next_account_index": 2
+  "next_account_index": 3
 }
