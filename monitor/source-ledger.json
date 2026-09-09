@@ -1883,6 +1883,17 @@
         }
       ],
       "finished_at": "2026-09-09T05:42:26.258Z"
+    },
+    {
+      "started_at": "2026-09-09T05:47:29.378Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Source collector profile is signed out; run npm run source:login once."
+        }
+      ],
+      "finished_at": "2026-09-09T05:47:31.004Z"
     }
   ],
   "next_account_index": 8
