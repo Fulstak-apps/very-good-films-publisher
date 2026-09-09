@@ -3401,9 +3401,20 @@
         }
       ],
       "finished_at": "2026-09-09T19:10:57.791Z"
+    },
+    {
+      "started_at": "2026-09-09T20:11:07.423Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Instagram source session requires account verification; open npm run source:login."
+        }
+      ],
+      "finished_at": "2026-09-09T20:11:09.231Z"
     }
   ],
   "next_account_index": 8,
-  "retry_after": "2026-09-09T20:10:57.791Z",
+  "retry_after": "2026-09-09T21:11:09.231Z",
   "session_error": "Instagram source session requires account verification; open npm run source:login."
 }
