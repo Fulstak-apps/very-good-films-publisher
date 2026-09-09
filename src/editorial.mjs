@@ -41,7 +41,9 @@ export function caption(x,preferred='film_info',threads=false){
   const prefix=`${heading}${overview}\n\nScene context: `,tail=`${credits}${availability}`;
   const room=Math.max(0,limit-[...prefix+tail].length);
   const scene=[...text].length>room?[...text].slice(0,Math.max(0,room-1)).join('').trimEnd()+'…':text;
-  return {style:'source_repost',text:`${prefix}${scene}${tail}`};
+  let rendered=`${prefix}${scene}${tail}`;
+  if(threads&&[...rendered].length>500)rendered=[...rendered].slice(0,499).join('').trimEnd()+'…';
+  return {style:'source_repost',text:rendered};
  }
  const f=x.film,s=x.scene; let style=preferred;
  const needed={did_you_know:s.trivia,hidden_gem:s.why_watch,performance:s.performance,director:s.direction,quote_scene:s.quote};

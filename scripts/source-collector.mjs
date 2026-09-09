@@ -23,7 +23,12 @@ const runCommand=(file,args,options={})=>exec(file,args,{timeout:commandTimeout,
 
 async function lock(){
  await fs.mkdir(monitor,{recursive:true});
- try{return await fs.open(lockPath,'wx');}catch(error){if(error.code==='EEXIST'){console.log(JSON.stringify({status:'locked'}));process.exit(0);}throw error;}
+ try{return await fs.open(lockPath,'wx');}catch(error){
+  if(error.code!=='EEXIST')throw error;
+  const age=Date.now()-(await fs.stat(lockPath)).mtimeMs;
+  if(age>15*60_000){await fs.rename(lockPath,`${lockPath}.stale-${Date.now()}`);return fs.open(lockPath,'wx');}
+  console.log(JSON.stringify({status:'locked'}));process.exit(0);
+ }
 }
 async function profiles(handles=sourceAccounts){
  const context=await launch(true);
@@ -52,8 +57,11 @@ async function commit(){
  await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});
  // The publisher also persists state on main. Rebase the just-created queue
  // commit so the collector never overwrites publishing history.
- await runCommand('git',['pull','--rebase','origin','main'],{env:commandEnv});
- await runCommand('git',['push','origin','HEAD:main']);
+ await runCommand('git',['pull','--rebase','--autostash','origin','main'],{env:commandEnv});
+ for(let attempt=0;attempt<3;attempt++){
+  try{await runCommand('git',['push','origin','HEAD:main']);break;}
+  catch(error){if(attempt===2)throw error;await runCommand('git',['pull','--rebase','--autostash','origin','main'],{env:commandEnv});}
+ }
 }
 async function queue(candidate,ledger){
  console.log(JSON.stringify({status:'capturing',shortcode:candidate.shortcode,source:candidate.url}));
