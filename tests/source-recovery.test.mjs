@@ -3,6 +3,11 @@ import assert from 'node:assert/strict';
 import {EventEmitter} from 'node:events';
 import {navigateSource,SourceSessionError} from '../scripts/capture/source-session.mjs';
 import {sourceHints} from '../src/source-metadata.mjs';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {importPrepared} from '../src/imports.mjs';
+import {caption} from '../src/editorial.mjs';
 
 test('source navigation reports protection challenge even when navigation throws',async()=>{
  const page=new EventEmitter();page.url=()=> 'https://www.instagram.com/challenge/advanced_protection/';
@@ -20,4 +25,24 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').title_hint,'Bend It Like Beckham');
  assert.equal(sourceHints('Barbershop follows Calvin Palmer Jr.').title_hint,'Barbershop');
  assert.equal(sourceHints('🎬 Back to the Future (1985)').year,1985);
+});
+
+test('already imported clips make no metadata requests',async()=>{
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'vgf-import-'));
+ const oldFetch=globalThis.fetch;let requests=0;
+ globalThis.fetch=async()=>{requests++;throw Error('Network should not be used');};
+ try{
+  const raw={kind:'source_repost',film:{id:'film'},scene:{id:'scene'},source_post_url:'https://www.instagram.com/reelgoodmovies/reel/example/',source_caption:'Barbershop (2002)',asset_sha256:'abc'};
+  await fs.writeFile(path.join(dir,'clip.json'),JSON.stringify(raw));
+  assert.deepEqual(await importPrepared({items:[raw]},dir),{added:0});
+  assert.equal(requests,0);
+ }finally{globalThis.fetch=oldFetch;await fs.rm(dir,{recursive:true,force:true});}
+});
+
+test('Threads keeps title year and credits when synopsis is long',()=>{
+ const x={kind:'source_repost',source_caption:'A scene.\nAvailable on Prime',source_details:{title:'Barbershop',year:2002,director:'Tim Story',cast:['Ice Cube','Anthony Anderson'],synopsis:'Calvin runs a neighborhood barbershop. '.repeat(30)}};
+ const text=caption(x,'film_info',true).text;
+ assert.ok([...text].length<=500);assert.match(text,/BARBERSHOP \(2002\)/);
+ assert.match(text,/Directed by Tim Story/);assert.match(text,/Starring Ice Cube, Anthony Anderson/);
+ assert.doesNotMatch(text,/Available on Prime/);
 });
