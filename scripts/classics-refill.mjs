@@ -10,7 +10,9 @@ if(buffered+pending>=9){console.log('Classics buffer full');process.exit(0);}
 const allowed=new Set(['imdb:tt0051744','imdb:tt0055830','imdb:tt0042369','imdb:tt0063350']);
 const candidates=memory.items.filter(x=>x.rights?.status==='public_domain'&&allowed.has(x.film.id)&&x.video_url&&!x.instagram_media_id&&!x.threads_media_id&&!staged.includes(`${x.key}.json`)&&!(Date.parse(failures[x.key]?.retry_after)>Date.now()));
 let count=0;
+let attempts=0;
 for(const x of candidates){
+ if(++attempts>6)break; // Leave time for the Instagram-source collector as well.
  try{
   const input=`work/classic-source-${x.key}.mp4`,output=`work/classic-clean-${x.key}.mp4`;
   try{await fs.access(input);}catch{const r=await fetch(x.video_url,{signal:AbortSignal.timeout(120000)});if(!r.ok)throw Error(`Asset HTTP ${r.status}`);await fs.writeFile(input,Buffer.from(await r.arrayBuffer()));}
