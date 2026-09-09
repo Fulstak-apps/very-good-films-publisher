@@ -3423,9 +3423,20 @@
         }
       ],
       "finished_at": "2026-09-09T21:11:21.100Z"
+    },
+    {
+      "started_at": "2026-09-09T22:11:30.891Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Instagram source requests are rate limited (HTTP 429)."
+        }
+      ],
+      "finished_at": "2026-09-09T22:11:32.181Z"
     }
   ],
   "next_account_index": 8,
-  "retry_after": "2026-09-09T22:11:21.100Z",
-  "session_error": "Instagram source session requires account verification; open npm run source:login."
+  "retry_after": "2026-09-09T23:11:32.181Z",
+  "session_error": "Instagram source requests are rate limited (HTTP 429)."
 }
