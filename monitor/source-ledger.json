@@ -486,6 +486,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DcicRkaTMcf/",
       "queued_at": "2026-09-09T04:38:50.947Z",
       "asset_sha256": "2c3aaac090e1abd23b5d925f054a94f185ec8543e35125934762152479522d09"
+    },
+    "DZlYUWvvzkQ": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DZlYUWvvzkQ/",
+      "queued_at": "2026-09-09T04:48:17.108Z",
+      "asset_sha256": "64741d7262d3bd8f27cf98f7d522560e12e345efb9cc15118233a15ee847917b"
     }
   },
   "checks": {
@@ -499,34 +505,34 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-09T04:28:17.253Z"
+      "checked_at": "2026-09-09T04:44:32.382Z"
     }
   },
   "runs": [
@@ -1728,7 +1734,31 @@
         }
       ],
       "finished_at": "2026-09-09T04:38:50.947Z"
+    },
+    {
+      "started_at": "2026-09-09T04:43:54.301Z",
+      "queued": [
+        "DZlYUWvvzkQ"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZu8VE6T6qP/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DZu8VE6T6qP-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZtaornzI-J/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DZtaornzI-J-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZodVGLTJgF/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DZodVGLTJgF-capture-diagnostic.json"
+        }
+      ],
+      "finished_at": "2026-09-09T04:48:17.108Z"
     }
   ],
-  "next_account_index": 7
+  "next_account_index": 8
 }
