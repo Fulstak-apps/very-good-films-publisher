@@ -354,6 +354,12 @@
       "source_url": "https://www.instagram.com/reelgoodmovies/reel/Cswik2HI-fj/",
       "queued_at": "2026-09-09T01:27:05.943Z",
       "asset_sha256": "c1b3545aad6324fd00b54d048f9a071c05442a743d7d34b059daa87c5a626de9"
+    },
+    "DctUs5KuUJ1": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DctUs5KuUJ1/",
+      "queued_at": "2026-09-09T01:43:19.511Z",
+      "asset_sha256": "cb56a4d3556888c9bcce04370cde6ca91d68bf27a52ded2a898c47ca272b9e64"
     }
   },
   "checks": {
@@ -367,34 +373,34 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-09T01:26:30.417Z"
+      "checked_at": "2026-09-09T01:32:47.180Z"
     }
   },
   "runs": [
@@ -1251,7 +1257,56 @@
       ],
       "errors": [],
       "finished_at": "2026-09-09T01:27:05.943Z"
+    },
+    {
+      "started_at": "2026-09-09T01:32:08.916Z",
+      "queued": [
+        "DctUs5KuUJ1"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdB9byjOinm/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdB9byjOinm-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dc_dQdkO0YO/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_dQdkO0YO-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dc8r3ZXOYxy/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc8r3ZXOYxy-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dc6Nxp2OnoT/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc6Nxp2OnoT-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dc1Gk3xuVLt/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc1Gk3xuVLt-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dcyg3cHOJWx/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dcyg3cHOJWx-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcxI_YGOshu/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DcxI_YGOshu-capture-diagnostic.json"
+        }
+      ],
+      "finished_at": "2026-09-09T01:43:19.511Z"
     }
   ],
-  "next_account_index": 1
+  "next_account_index": 2
 }
