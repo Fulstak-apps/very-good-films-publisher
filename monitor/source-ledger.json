@@ -2015,6 +2015,17 @@
         }
       ],
       "finished_at": "2026-09-09T06:43:27.258Z"
+    },
+    {
+      "started_at": "2026-09-09T06:48:30.108Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Source collector profile is signed out; run npm run source:login once."
+        }
+      ],
+      "finished_at": "2026-09-09T06:48:32.022Z"
     }
   ],
   "next_account_index": 8
