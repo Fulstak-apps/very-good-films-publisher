@@ -29,19 +29,20 @@ export function caption(x,preferred='film_info',threads=false){
  if(x.kind==='source_repost'){
   // These are the user's own network pages. Preserve the originating post's
   // wording without adding a visible source credit or VGF boilerplate.
-  const text=x.source_caption.trim(),d=x.source_details||{};
+  const text=x.source_caption.split('\n').filter(line=>!/(?:where to watch|\bstreaming\b|\bavailable (?:on|to)|\bin theaters now\b)/i.test(line)).join('\n').trim(),d=x.source_details||{};
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
   if(!d.title)return {style:'source_repost',text:threads&&[...text].length>500?[...text].slice(0,499).join('')+'…':text};
   const limit=threads?500:2200;
   const heading=`${d.title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
-  const overview=d.synopsis?`\n\n${d.synopsis}`:'';
   const credits=`\n\nDirected by ${d.director}\nStarring ${d.cast.join(', ')}`;
-  const prefix=`${heading}${overview}\n\nScene context: `,tail=credits;
-  const room=Math.max(0,limit-[...prefix+tail].length);
-  const scene=[...text].length>room?[...text].slice(0,Math.max(0,room-1)).join('').trimEnd()+'…':text;
-  let rendered=`${prefix}${scene}${tail}`;
-  if(threads&&[...rendered].length>500)rendered=[...rendered].slice(0,499).join('').trimEnd()+'…';
+  const truncate=(value,n)=>[...value].length<=n?value:[...value].slice(0,Math.max(0,n-1)).join('').trimEnd()+'…';
+  const synopsisRoom=Math.max(0,limit-[...heading+credits].length-2);
+  const overview=d.synopsis&&synopsisRoom>1?`\n\n${truncate(d.synopsis,synopsisRoom)}`:'';
+  let rendered=`${heading}${overview}${credits}`;
+  const room=limit-[...rendered].length-17;
+  if(room>40&&text)rendered+=`\n\nScene context: ${truncate(text,room)}`;
+  rendered=truncate(rendered,limit);
   return {style:'source_repost',text:rendered};
  }
  const f=x.film,s=x.scene; let style=preferred;
