@@ -3368,7 +3368,20 @@
         }
       ],
       "finished_at": "2026-09-09T17:08:37.926Z"
+    },
+    {
+      "started_at": "2026-09-09T17:09:48.715Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Instagram source requests are rate limited (HTTP 429)."
+        }
+      ],
+      "finished_at": "2026-09-09T17:09:50.550Z"
     }
   ],
-  "next_account_index": 8
+  "next_account_index": 8,
+  "retry_after": "2026-09-09T18:09:50.550Z",
+  "session_error": "Instagram source requests are rate limited (HTTP 429)."
 }
