@@ -37,8 +37,7 @@ export function caption(x,preferred='film_info',threads=false){
   const heading=`${d.title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
   const overview=d.synopsis?`\n\n${d.synopsis}`:'';
   const credits=`\n\nDirected by ${d.director}\nStarring ${d.cast.join(', ')}`;
-  const availability=`\n\nWhere to watch: ${d.availability||'No current US streaming listing found.'}`;
-  const prefix=`${heading}${overview}\n\nScene context: `,tail=`${credits}${availability}`;
+  const prefix=`${heading}${overview}\n\nScene context: `,tail=credits;
   const room=Math.max(0,limit-[...prefix+tail].length);
   const scene=[...text].length>room?[...text].slice(0,Math.max(0,room-1)).join('').trimEnd()+'…':text;
   let rendered=`${prefix}${scene}${tail}`;
