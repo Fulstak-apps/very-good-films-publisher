@@ -505,34 +505,34 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-09T04:44:32.382Z"
+      "checked_at": "2026-09-09T04:53:57.555Z"
     }
   },
   "runs": [
@@ -1758,6 +1758,43 @@
         }
       ],
       "finished_at": "2026-09-09T04:48:17.108Z"
+    },
+    {
+      "started_at": "2026-09-09T04:53:19.992Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/Dc53jSLhKfw/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc53jSLhKfw-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/Dc3Srg0hXO1/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3Srg0hXO1-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/Dc0t3e7Br3e/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc0t3e7Br3e-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/DcyJKgtBalc/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DcyJKgtBalc-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/DcvkTpchxzn/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DcvkTpchxzn-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/Dcs_iGPBbaz/",
+          "stage": "capture_or_queue",
+          "error": "Source profile is not logged into Instagram. Run capture.mjs login."
+        }
+      ],
+      "finished_at": "2026-09-09T05:01:45.472Z"
     }
   ],
   "next_account_index": 8
