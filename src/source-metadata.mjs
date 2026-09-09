@@ -3,11 +3,13 @@ const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
 const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
 
 export function sourceHints(caption){
- const text=String(caption||'');
+ const raw=String(caption||'');
+ const text=raw.replace(/^[\p{Extended_Pictographic}\uFE0F\t :]+/gmu,'');
  const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
- const titledLine=text.match(/(?:^|\n)\s*🎬\s*([^\n]{2,90})/);
+ const titledLine=raw.match(/(?:^|\n)[ \t]*[🎬🎥📺]+[\uFE0F :\t]*([^\n]{2,100})/u);
+ const narrative=text.match(/^([^\n]{2,110}?)\s+(?:follows\b|is (?:a|an)\b)/);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
- const title=clean(yearMatch?.[1]||titledLine?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'');
+ const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
 }
@@ -26,20 +28,23 @@ async function wikiMetadata(base){
  if(qid){
   const entity=await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`,{headers,signal:AbortSignal.timeout(15000)});if(entity.ok){
    const claims=(await entity.json()).entities?.[qid]?.claims||{};
-   const ids=[...(claims.P57||[]).slice(0,1),...(claims.P161||[]).slice(0,3)].map(x=>x.mainsnak?.datavalue?.value?.id).filter(Boolean);
+   const directorId=claims.P57?.[0]?.mainsnak?.datavalue?.value?.id;
+   const castIds=[...(claims.P161||[]),...(claims.P725||[])].map(x=>x.mainsnak?.datavalue?.value?.id).filter(Boolean).slice(0,3);
+   const ids=[directorId,...castIds].filter(Boolean);
    const labels=ids.length?await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&origin=*&ids=${ids.join('|')}&props=labels&languages=en`,{headers,signal:AbortSignal.timeout(15000)}):null;
-   const names=labels?.ok?Object.values((await labels.json()).entities||{}).map(x=>x.labels?.en?.value).filter(Boolean):[];
-   director=names[0];cast=names.slice(1);
+   const entities=labels?.ok?(await labels.json()).entities||{}:{};
+   director=entities[directorId]?.labels?.en?.value;cast=castIds.map(id=>entities[id]?.labels?.en?.value).filter(Boolean);
    const date=claims.P577?.[0]?.mainsnak?.datavalue?.value?.time;if(date){const match=date.match(/[+-](\d{4})/);if(match)year=Number(match[1]);}
   }
  }
- return {...base,title:entry.title.replace(/\s*\([^)]*\)$/,''),year,director,cast,synopsis:strip(entry.extract).slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`};
+ if(!director)return base; // Do not accept bands, books or disambiguation pages as films.
+ return {...base,title:entry.title.replace(/\s*\([^)]*\)$/,''),year,director,cast:cast.length?cast:(base.cast||[]),synopsis:strip(entry.extract).slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`};
 }
 
 export async function enrichSourceMetadata(caption,current={}){
- const base={...sourceHints(caption),...current,version:'source-caption-film-info-v1'};
+ const base={...current,...sourceHints(caption),version:'source-caption-film-info-v2'};
  // A verified source caption can supply credits missing from the metadata API.
- const castMatch=String(caption||'').match(/\bstarring\s+([^.!\n]+)[.\n]/i);
+ const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
  if(sourceDetailsComplete(base))return base;
  if(!base.title_hint)return base;

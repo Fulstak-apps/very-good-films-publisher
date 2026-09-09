@@ -1,11 +1,13 @@
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { chromium } from "playwright-core";
 import { readExactPost } from "./post-metadata.mjs";
 import { assembleRanges } from "./media-ranges.mjs";
+import { navigateSource } from "./source-session.mjs";
 
 const execFileAsync = promisify(execFile);
 
@@ -51,7 +53,8 @@ async function assertSourceLogin(page) {
 async function login() {
   const context = await launch(false);
   const page = context.pages()[0] || await context.newPage();
-  await page.goto("https://www.instagram.com/", { waitUntil: "domcontentloaded" });
+  try { await navigateSource(page, "https://www.instagram.com/"); }
+  catch (error) { console.error(error.message); }
   console.log("Sign into your source-viewing Instagram account in this dedicated window, then close the window. The login will be reused by scheduled runs.");
   // Login is intentionally interactive and may take longer than Playwright's
   // default 30-second event timeout.
@@ -70,7 +73,6 @@ async function capture(reelUrl, options = {}) {
   const context = await launch(options.headless === true);
   try {
     const page = context.pages()[0] || await context.newPage();
-    await assertSourceLogin(page);
     const candidates = [];
     page.on("response", async (response) => {
       try {
@@ -83,7 +85,7 @@ async function capture(reelUrl, options = {}) {
         // Streaming responses may be unavailable until playback completes.
       }
     });
-    await page.goto(reelUrl, { waitUntil: "domcontentloaded" });
+    await navigateSource(page, reelUrl);
     await page.waitForTimeout(2500);
     const video = page.locator("video:visible").first();
     await video.waitFor({ state: "visible", timeout: 15_000 });
@@ -197,7 +199,7 @@ async function capture(reelUrl, options = {}) {
 }
 
 export { capture, launch };
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
  const [command,url]=process.argv.slice(2);
  if(command==='login') await login();
  else if(command==='capture') await capture(url);

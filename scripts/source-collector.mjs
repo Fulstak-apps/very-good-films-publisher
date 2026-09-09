@@ -5,6 +5,7 @@ import {promisify} from 'node:util';
 import {capture,launch} from './capture/capture.mjs';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {approvedSource,sourceAccounts} from '../src/source-policy.mjs';
+import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
 
 const exec=promisify(execFile);
 const root=path.resolve('.');
@@ -12,7 +13,7 @@ const inbox=path.join(root,'inbox');
 const monitor=path.join(root,'monitor');
 const ledgerPath=path.join(monitor,'source-ledger.json');
 const lockPath=path.join(monitor,'source-collector.lock');
-const limit=1;
+const limit=5;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
@@ -23,28 +24,30 @@ const runCommand=(file,args,options={})=>exec(file,args,{timeout:commandTimeout,
 
 async function lock(){
  await fs.mkdir(monitor,{recursive:true});
- try{return await fs.open(lockPath,'wx');}catch(error){
+ try{const handle=await fs.open(lockPath,'wx');await handle.writeFile(JSON.stringify({pid:process.pid,started_at:new Date().toISOString()}));return handle;}catch(error){
   if(error.code!=='EEXIST')throw error;
-  const age=Date.now()-(await fs.stat(lockPath)).mtimeMs;
-  if(age>2*60_000){await fs.rename(lockPath,`${lockPath}.stale-${Date.now()}`);return fs.open(lockPath,'wx');}
+  let owner;try{owner=JSON.parse(await fs.readFile(lockPath,'utf8'));}catch{}
+  let alive=true;
+  if(Number.isInteger(owner?.pid)){try{process.kill(owner.pid,0);}catch(e){if(e.code==='ESRCH')alive=false;}}
+  else alive=Date.now()-(await fs.stat(lockPath)).mtimeMs<60*60_000;
+  if(!alive){await fs.rename(lockPath,`${lockPath}.stale-${Date.now()}`);return lock();}
   console.log(JSON.stringify({status:'locked'}));process.exit(0);
  }
 }
-async function profiles(handles=sourceAccounts){
+async function profiles(handles=sourceAccounts,errors=[]){
  const context=await launch(true);
  try{
   const found=[];
   for(const handle of handles){
    const page=await context.newPage();
    try{
-    if(!(await page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]').count())){
-      await page.goto('https://www.instagram.com/',{waitUntil:'domcontentloaded',timeout:15_000});
-      if(!(await page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]').count()))throw new Error('Source collector profile is signed out; run npm run source:login once.');
-    }
-    await page.goto(`https://www.instagram.com/${handle}/reels/`,{waitUntil:'domcontentloaded',timeout:15_000});
+    await navigateSource(page,`https://www.instagram.com/${handle}/reels/`);
     await page.waitForTimeout(1500);
     const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
     for(const url of [...new Set(urls)])if(approvedSource(url)&&new URL(url).pathname.split('/')[1]===handle)found.push({handle,url,shortcode:shortcode(url)});
+   }catch(error){
+    if(error instanceof SourceSessionError)throw error;
+    errors.push({stage:'discover',source_handle:handle,error:error.message});
    }finally{await page.close();}
   }
   return found;
@@ -95,20 +98,27 @@ async function queue(candidate,ledger){
 const handle=await lock();
 try{
  const ledger=await json(ledgerPath,{version:1,queued:{},checks:{},runs:[]});
+ if(Date.parse(ledger.retry_after||'')>Date.now()){
+  console.log(JSON.stringify({status:'source_cooldown',retry_after:ledger.retry_after,reason:ledger.session_error}));
+ }else{
  const run={started_at:new Date().toISOString(),queued:[],errors:[]};
  let candidates=[];
  const next=Number.isInteger(ledger.next_account_index)?ledger.next_account_index%sourceAccounts.length:0;
  const ordered=[...sourceAccounts.slice(next),...sourceAccounts.slice(0,next)];
- try{candidates=await profiles(ordered);for(const h of sourceAccounts)ledger.checks[h]={checked_at:new Date().toISOString()};}
- catch(error){run.errors.push({stage:'discover',error:error.message});}
+ try{candidates=await profiles(ordered,run.errors);delete ledger.retry_after;delete ledger.session_error;for(const h of sourceAccounts)ledger.checks[h]={checked_at:new Date().toISOString()};}
+ catch(error){run.errors.push({stage:'discover',error:error.message});if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;}}
+ // Take one candidate per source in each pass so a five-item refill rotates accounts.
+ const groups=ordered.map(h=>candidates.filter(c=>c.handle===h));
+ candidates=[];while(groups.some(g=>g.length))for(const group of groups)if(group.length)candidates.push(group.shift());
  for(const candidate of candidates){
   if(run.queued.length>=limit)break;
   if(ledger.queued[candidate.shortcode])continue;
   try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);ledger.next_account_index=(sourceAccounts.indexOf(candidate.handle)+1)%sourceAccounts.length;}
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
-   if(/signed out|Source profile is not logged/i.test(error.message))break;
+   if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
   }
  }
  run.finished_at=new Date().toISOString();ledger.runs=[...(ledger.runs||[]),run].slice(-250);await save(ledgerPath,ledger);await commit();console.log(JSON.stringify(run));
+ }
 }finally{await handle.close();await fs.rm(lockPath,{force:true});}
