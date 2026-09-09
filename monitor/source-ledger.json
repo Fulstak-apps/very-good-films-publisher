@@ -2576,6 +2576,17 @@
         }
       ],
       "finished_at": "2026-09-09T11:02:15.396Z"
+    },
+    {
+      "started_at": "2026-09-09T11:07:18.217Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://www.instagram.com/\nCall log:\n  - navigating to \"https://www.instagram.com/\", waiting until \"domcontentloaded\"\n"
+        }
+      ],
+      "finished_at": "2026-09-09T11:07:19.364Z"
     }
   ],
   "next_account_index": 8
