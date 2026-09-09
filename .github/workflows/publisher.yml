@@ -53,7 +53,12 @@ jobs:
       - name: Test publisher
         run: npm test
       - name: Install formatter
-        run: command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y ffmpeg)
+        run: |
+          if node --input-type=module -e "import fs from 'node:fs';process.exit(JSON.parse(fs.readFileSync('config/sources.json')).source_feed_only ? 0 : 1)"; then
+            echo 'Approved-source assets are already formatted by the collector.'
+          else
+            command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y ffmpeg tesseract-ocr)
+          fi
       - name: Discover, prepare, and publish
         if: ${{ inputs.dry_run != true }}
         env:
