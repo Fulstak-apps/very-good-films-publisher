@@ -4,6 +4,7 @@ import {pipeline} from 'node:stream/promises';
 import {Transform} from 'node:stream';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {detectCleanCrop} from './clean-crop.mjs';
 export function trustedURL(value,hosts){const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port&&u.port!=='443'||!hosts.includes(u.hostname))throw new Error('Media/feed URL is not on the configured HTTPS host allowlist');return u;}
 export async function download(url,path,hosts){
  trustedURL(url,hosts);const r=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(180000)});if(!r.ok||!r.body)throw new Error(`Asset download HTTP ${r.status}`);let bytes=0;const max=1024*1024*1024;
@@ -17,10 +18,15 @@ export function formatVideo(input,output,scene){
  // bottom social overlays before the film image fills the Reel frame.
  let filter='scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1';
  if(scene.crop==='center')filter='scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1';
- if(scene.crop==='source_overlay')filter='crop=iw:trunc(ih*0.76/2)*2:0:trunc(ih*0.10/2)*2,scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1';
+ let cropQA;
+ if(scene.crop==='source_overlay'){
+  const v=probe(input).streams.find(s=>s.codec_type==='video');
+  cropQA=detectCleanCrop(input,scene,v);
+  filter=`crop=${cropQA.width}:${cropQA.height}:${cropQA.x}:${cropQA.y},scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1`;
+ }
  const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=44:H-h-252:format=auto[branded]`;
  const args=['-hide_banner','-loglevel','error','-y','-ss',String(scene.start),'-i',input,'-i','assets/very-good-films-logo.png','-t',String(duration),'-filter_complex',branded,'-map','[branded]','-map','0:a:0?','-r','30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-ar','48000','-ac','2','-movflags','+faststart',output];
- execFileSync('ffmpeg',args,{timeout:600000,stdio:'pipe'});return verifyVideo(output,duration);
+ execFileSync('ffmpeg',args,{timeout:600000,stdio:'pipe'});return {...verifyVideo(output,duration),...(cropQA?{clean_crop:cropQA}:{})};
 }
 export function verifyVideo(file,expected){const p=probe(file),v=p.streams.find(s=>s.codec_type==='video'),a=p.streams.find(s=>s.codec_type==='audio'),d=Number(p.format.duration);if(!v||v.codec_name!=='h264'||v.width!==1080||v.height!==1920||v.pix_fmt!=='yuv420p'||!a||a.codec_name!=='aac'||!Number.isFinite(d)||Math.abs(d-expected)>1)throw new Error('Rendered Reel failed video/audio/duration QA');return {width:v.width,height:v.height,duration:d,audio:a.codec_name,video:v.codec_name};}
 export async function sha256(file){const h=createHash('sha256');for await(const chunk of createReadStream(file))h.update(chunk);return h.digest('hex');}

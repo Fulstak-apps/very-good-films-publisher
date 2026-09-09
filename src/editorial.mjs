@@ -11,6 +11,7 @@ export function validate(x,ready=false){
   if(!x.source_caption?.trim()||x.qa?.source_verified!==true)errors.push('Verified source caption required');
   if(!(s.end>s.start&&s.start>=0&&s.end-s.start<=90))errors.push('Invalid scene interval');
   if(ready&&!sourceDetailsComplete(x.source_details))errors.push('Verified title, year, synopsis, director and cast required');
+  if(ready&&x.qa?.clean_crop?.layout!=='film-only-crop-v2')errors.push('Clean movie crop required before publishing');
   if(ready&&(!/^https:\/\//.test(x.video_url||'')||!/^[a-f0-9]{64}$/.test(x.asset_sha256||'')||x.qa?.media_verified!==true||x.qa?.branding!=='very-good-films-only-v1'))errors.push('Verified VGF-only video required');
   return errors;
  }

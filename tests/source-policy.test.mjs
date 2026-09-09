@@ -12,6 +12,7 @@ test('quarantine unbranded imports without erasing published history or uncertai
 });
 test('source reposts require provenance and branding, preserve caption length',()=>{
  const x={kind:'source_repost',source_post_url:'https://www.instagram.com/reelgoodmovies/reel/abc/',source_caption:'A film scene. '.repeat(100),source_details:{title:'Example Film',year:2020,director:'A Director',cast:['An Actor'],synopsis:'A verified synopsis.',metadata_source:'https://www.themoviedb.org/movie/1'},film:{id:'ig:abc'},scene:{id:'abc',start:0,end:55},video_url:'https://example.com/a.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1'}};
+ x.qa.clean_crop={layout:'film-only-crop-v2'};
  assert.deepEqual(validate(x,true),[]);assert.ok([...caption(x,'',true).text].length<=500);assert.ok([...caption(x,'',false).text].length<=2200);
  x.qa.branding='rapwire';assert.ok(validate(x,true).length);
 });

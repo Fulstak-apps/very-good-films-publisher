@@ -75,7 +75,7 @@ async function queue(candidate,ledger){
  if(!(duration>1))throw new Error('Source clip has no usable duration');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
- formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
+ const renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
  const asset_sha256=await sha256(output);
  console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
  const video_url=await upload(output,asset_sha256,{repository});
@@ -86,7 +86,7 @@ async function queue(candidate,ledger){
   source_post_url:evidence.source_url||candidate.url,
   source_caption:(evidence.source_caption_text||'Scene worth watching.').trim(),
   video_url,asset_sha256,
-  qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1',reviewed_at:new Date().toISOString(),source_duration:Number(evidence.duration),media_match_method:evidence.media_match_method}
+  qa:{...renderQA,source_verified:true,media_verified:true,branding:'very-good-films-only-v1',reviewed_at:new Date().toISOString(),source_duration:Number(evidence.duration),media_match_method:evidence.media_match_method}
  };
  await fs.mkdir(inbox,{recursive:true});
  await save(path.join(inbox,`${candidate.shortcode}.json`),item);
