@@ -30,6 +30,7 @@ export function detectCleanCrop(input,scene,dimensions){
  const frames=times.map(t=>execFileSync('ffmpeg',['-v','error','-ss',String(t),'-i',input,'-frames:v','1','-vf',`scale=${w}:${h}`,'-f','rawvideo','-pix_fmt','rgb24','pipe:1'],{maxBuffer:8*1024*1024}));
  const bounds=pictureBounds(frames,w,h);
  let rect={x:0,y:even(bounds.top*height/h+2),width:even(width),height:even((bounds.bottom-bounds.top)*height/h-4)};
+ if(width>=height&&rect.height<height*.75)throw Error('Dark landscape frame has ambiguous picture boundaries; hold for crop review');
  const originalHeight=rect.height;
  const dir=mkdtempSync(path.join(os.tmpdir(),'vgf-crop-'));
  try{
