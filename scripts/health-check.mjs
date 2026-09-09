@@ -16,11 +16,14 @@ const delivery=Object.fromEntries(['instagram','threads'].filter(p=>brand.platfo
  return [p,{mediaId:latest?.[`${p}_media_id`]||null,hoursSinceVideo:age,healthy:age!==null&&age<=1}];
 }));
 const queueHours=ready*brand.minimum_gap_minutes/60;
-const healthy=!brand.enabled||(Object.values(delivery).every(x=>x.healthy)&&stalePublishing===0&&queueHours>=2);
+let sourceLedger={};try{sourceLedger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));}catch{}
+const sourceRecovery={restricted:Boolean(sourceLedger.session_error),reason:sourceLedger.session_error||null,retryAfter:sourceLedger.retry_after||null};
+const healthy=!brand.enabled||(Object.values(delivery).every(x=>x.healthy)&&stalePublishing===0&&queueHours>=2&&!sourceRecovery.restricted);
 const report={at:new Date().toISOString(),healthy,ready,publishing,stalePublishing,needsReview,lastInstagramPost:published[0]?.instagram_published_at||null,lastInstagramMediaId:published[0]?.instagram_media_id||null,hoursSinceLast,sourceAccounts:JSON.parse(await fs.readFile('config/sources.json','utf8')).instagram_source_accounts.map(x=>x.handle),recentErrors};
-Object.assign(report,{delivery,queueHours,queueLow:queueHours<2});
+Object.assign(report,{delivery,queueHours,queueLow:queueHours<2,sourceRecovery});
 await fs.writeFile('health-report.json',JSON.stringify(report,null,2)+'\n');
 const summary=process.env.GITHUB_STEP_SUMMARY;
 if(summary)await fs.appendFile(summary,`### Very Good Films health\n\n- Status: **${healthy?'healthy':'attention required'}**\n- Ready queue: **${ready}**\n- Publishing: **${publishing}**\n- Needs review: **${needsReview}**\n- Last Instagram post: **${report.lastInstagramPost||'none'}**\n- Hours since last post: **${hoursSinceLast===null?'n/a':hoursSinceLast.toFixed(2)}**\n`);
 console.log(JSON.stringify(report));
+if(summary)await fs.appendFile(summary,`\n- Source refill: **${sourceRecovery.restricted?'restricted':'no session restriction recorded'}**\n- Refill retry: **${sourceRecovery.retryAfter||'normal schedule'}**\n- Source detail: ${sourceRecovery.reason||'none'}\n`);
 if(!healthy)process.exitCode=1;
