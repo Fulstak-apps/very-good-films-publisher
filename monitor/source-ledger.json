@@ -1960,6 +1960,17 @@
         }
       ],
       "finished_at": "2026-09-09T06:17:58.582Z"
+    },
+    {
+      "started_at": "2026-09-09T06:23:01.497Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Source collector profile is signed out; run npm run source:login once."
+        }
+      ],
+      "finished_at": "2026-09-09T06:23:06.143Z"
     }
   ],
   "next_account_index": 8
