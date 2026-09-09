@@ -38,6 +38,10 @@ async function wikiMetadata(base){
 
 export async function enrichSourceMetadata(caption,current={}){
  const base={...sourceHints(caption),...current,version:'source-caption-film-info-v1'};
+ // A verified source caption can supply credits missing from the metadata API.
+ const castMatch=String(caption||'').match(/\bstarring\s+([^.!\n]+)[.\n]/i);
+ if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
+ if(sourceDetailsComplete(base))return base;
  if(!base.title_hint)return base;
  if(!process.env.TMDB_READ_TOKEN){try{return await wikiMetadata(base);}catch{return base;}}
  try{
