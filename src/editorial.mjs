@@ -1,6 +1,7 @@
 import {createHash} from 'node:crypto';
 import {approvedSource} from './source-policy.mjs';
 import {sourceDetailsComplete} from './source-metadata.mjs';
+import {isClassic,classicDailyProgress} from './classics.mjs';
 export const styles=['film_info','scene_context','did_you_know','hidden_gem','guess_the_movie','performance','director','quote_scene'];
 export function sceneKey(x){return createHash('sha256').update(`${x.film.id}|${x.scene.id}`).digest('hex');}
 export function evidenceValid(e){return !!e && typeof e.text==='string' && e.text.trim().length>0 && /^https:\/\//.test(e.source_url||'');}
@@ -76,5 +77,9 @@ export function eligible(items,brand,now=Date.now()){
  const recentSources=posted.slice().sort((a,b)=>Date.parse(b.instagram_published_at)-Date.parse(a.instagram_published_at)).slice(0,6).map(x=>x.source_post_url?.split('/')[3]).filter(Boolean);
  const candidates=items.filter(x=>['ready','partial'].includes(x.status)&&(!x.publish_after||Date.parse(x.publish_after)<=now)&&(!x.publish_retry_at||Date.parse(x.publish_retry_at)<=now)&&(x.status==='partial'||!posted.some(y=>y.film.id===x.film.id&&now-Date.parse(y.instagram_published_at)<brand.movie_cooldown_days*86400000)));
  const diversified=candidates.filter(x=>{const source=x.source_post_url?.split('/')[3];return !source||recentSources.filter(y=>y===source).length<2;});
+ const progress=classicDailyProgress(items,brand,now);
+ if(progress.confirmed<progress.due){const classic=candidates.find(isClassic);if(classic)return classic;}
+ const modern=diversified.filter(x=>!isClassic(x));
+ if(modern.length)return modern.sort((a,b)=>(a.status==='ready'?0:1)-(b.status==='ready'?0:1)||(b.priority||0)-(a.priority||0))[0];
  return (diversified.length?diversified:candidates).sort((a,b)=>(a.status==='ready'?0:1)-(b.status==='ready'?0:1)||(b.priority||0)-(a.priority||0))[0]||null;
 }

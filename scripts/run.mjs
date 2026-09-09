@@ -10,6 +10,7 @@ import {queuePlan} from '../src/queue.mjs';
 import {holdUnreviewed} from '../src/review.mjs';
 import {enforceSourcePolicy,approvedSource} from '../src/source-policy.mjs';
 import {importPrepared} from '../src/imports.mjs';
+import {importClassics} from '../src/classic-imports.mjs';
 import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
 const command=process.argv[2]||'status';
 await withLock(async()=>{
@@ -17,6 +18,7 @@ await withLock(async()=>{
  if(holdUnreviewed(memory.items))await save();
  if(sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
  if((await importPrepared(memory)).added)await save();
+ if((await importClassics(memory)).added)await save();
  let sourceMetadataChanged=false;
  for(const item of memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
   if(!sourceDetailsComplete(item.source_details)){

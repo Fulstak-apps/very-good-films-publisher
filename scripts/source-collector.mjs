@@ -54,9 +54,9 @@ async function profiles(handles=sourceAccounts,errors=[]){
  }finally{await context.close();}
 }
 async function commit(){
- const changed=(await runCommand('git',['status','--porcelain','--','inbox','monitor/source-ledger.json'])).stdout.trim();
+ const changed=(await runCommand('git',['status','--porcelain','--','inbox','inbox-classics','monitor/source-ledger.json'])).stdout.trim();
  if(!changed)return;
- await runCommand('git',['add','--','inbox','monitor/source-ledger.json']);
+ await runCommand('git',['add','--','inbox','inbox-classics','monitor/source-ledger.json']);
  await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});
  // The publisher also persists state on main. Rebase the just-created queue
  // commit so the collector never overwrites publishing history.
@@ -97,6 +97,7 @@ async function queue(candidate,ledger){
 
 const handle=await lock();
 try{
+ try{const result=await runCommand(process.execPath,['scripts/classics-refill.mjs'],{timeout:600000});console.log(result.stdout);await commit();}catch(error){console.error('Classics refill:',error.message.slice(0,300));}
  const ledger=await json(ledgerPath,{version:1,queued:{},checks:{},runs:[]});
  if(Date.parse(ledger.retry_after||'')>Date.now()){
   console.log(JSON.stringify({status:'source_cooldown',retry_after:ledger.retry_after,reason:ledger.session_error}));

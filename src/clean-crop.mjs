@@ -28,7 +28,7 @@ export function detectCleanCrop(input,scene,dimensions){
  const {width,height}=dimensions,duration=scene.end-scene.start;
  const w=180,h=even(height*w/width),times=Array.from({length:9},(_,i)=>scene.start+(i+.5)*duration/9);
  const frames=times.map(t=>execFileSync('ffmpeg',['-v','error','-ss',String(t),'-i',input,'-frames:v','1','-vf',`scale=${w}:${h}`,'-f','rawvideo','-pix_fmt','rgb24','pipe:1'],{maxBuffer:8*1024*1024}));
- const bounds=pictureBounds(frames,w,h);
+ const bounds=scene.preserve_picture?{top:0,bottom:h}:pictureBounds(frames,w,h);
  let rect={x:0,y:even(bounds.top*height/h+2),width:even(width),height:even((bounds.bottom-bounds.top)*height/h-4)};
  if(width>=height&&rect.height<height*.75)throw Error('Dark landscape frame has ambiguous picture boundaries; hold for crop review');
  const originalHeight=rect.height;
@@ -43,6 +43,7 @@ export function detectCleanCrop(input,scene,dimensions){
     for(const row of tsv.trim().split('\n').slice(1)){
      const c=row.split('\t');if(Number(c[10])<55||!/[A-Za-z]{3}/.test(c[11]||''))continue;
      const y=Number(c[7]),end=y+Number(c[9]);
+     if(scene.preserve_picture)throw Error('Text detected in classic master; hold for review');
      if(end<rect.height*.3)top=Math.max(top,end+10);
      else if(y>rect.height*.7)bottom=Math.min(bottom,y-10);
      else throw Error('Text inside movie picture cannot be safely cropped; hold for review');
