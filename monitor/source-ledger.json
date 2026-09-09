@@ -408,6 +408,12 @@
       "source_url": "https://www.instagram.com/reelgoodmovies/reel/CrjKCS5oUUY/",
       "queued_at": "2026-09-09T02:49:33.881Z",
       "asset_sha256": "48423330ee242e32a6558ad02295b348de117a40207de3ac08a8474259f35f68"
+    },
+    "DdB9byjOinm": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdB9byjOinm/",
+      "queued_at": "2026-09-09T02:57:29.049Z",
+      "asset_sha256": "d07d55f5bb7f0ab601e840d9aac9da637cf815eaa52454c7b2ffe914dffd37b8"
     }
   },
   "checks": {
@@ -421,34 +427,34 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.330Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-09T02:48:44.906Z"
+      "checked_at": "2026-09-09T02:55:17.331Z"
     }
   },
   "runs": [
@@ -1487,7 +1493,21 @@
       ],
       "errors": [],
       "finished_at": "2026-09-09T02:49:33.881Z"
+    },
+    {
+      "started_at": "2026-09-09T02:54:37.029Z",
+      "queued": [
+        "DdB9byjOinm"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "finished_at": "2026-09-09T02:57:29.049Z"
     }
   ],
-  "next_account_index": 1
+  "next_account_index": 2
 }
