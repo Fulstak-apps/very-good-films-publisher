@@ -37,6 +37,7 @@ async function launch(headless = false) {
       return await chromium.launchPersistentContext(profileDir, {
         executablePath: chromePath,
         headless,
+        args: ['--disable-gpu','--disable-extensions','--disable-background-networking','--disable-software-rasterizer'],
         viewport: { width: 1280, height: 900 },
         acceptDownloads: true
       });

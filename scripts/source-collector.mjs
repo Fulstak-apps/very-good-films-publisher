@@ -48,8 +48,9 @@ async function profiles(handles=sourceAccounts,errors=[]){
  try{
   const found=[];
   for(const handle of handles){
-   const page=await context.newPage();
+   let page;
    try{
+    page=await context.newPage();
     await navigateSource(page,`https://www.instagram.com/${handle}/reels/`);
     await page.waitForTimeout(1500);
     const seen=new Set();
@@ -66,7 +67,7 @@ async function profiles(handles=sourceAccounts,errors=[]){
    }catch(error){
     if(error instanceof SourceSessionError)throw error;
     errors.push({stage:'discover',source_handle:handle,error:error.message});
-   }finally{await page.close();}
+   }finally{if(page)await page.close().catch(()=>{});}
   }
   return found;
  }finally{await context.close();}
