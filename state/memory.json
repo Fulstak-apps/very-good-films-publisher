@@ -6244,8 +6244,9 @@
       "discovered_at": "2026-09-08T04:26:05.478Z",
       "key": "40e9bc159c8b49f4b739e8eb9b848fb0220e60ab4415a109e185573c5b2b8473",
       "review_reason": "Clean movie crop required before publishing",
-      "recovery_error": "Text inside movie picture cannot be safely cropped; hold for review",
-      "recovery_checked_at": "2026-09-10T18:20:01.408Z"
+      "recovery_error": "spawnSync ffprobe ENOENT",
+      "recovery_checked_at": "2026-09-10T19:03:43.001Z",
+      "recovery_retry_at": "2026-09-11T01:03:43.002Z"
     },
     {
       "kind": "source_repost",
@@ -6708,7 +6709,10 @@
       "status": "needs_review",
       "discovered_at": "2026-09-09T01:44:02.582Z",
       "key": "56d8b04836142d7ad4bd2fdb3cc295a89c1e65549c8b7ad1716bc5478230fb04",
-      "review_reason": "Clean movie crop required before publishing"
+      "review_reason": "Clean movie crop required before publishing",
+      "recovery_error": "spawnSync ffprobe ENOENT",
+      "recovery_checked_at": "2026-09-10T19:03:44.702Z",
+      "recovery_retry_at": "2026-09-11T01:03:44.702Z"
     },
     {
       "kind": "source_repost",
