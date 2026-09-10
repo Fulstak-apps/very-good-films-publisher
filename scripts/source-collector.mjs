@@ -78,15 +78,18 @@ async function queue(candidate,ledger){
  const input=evidence.destination;
  const duration=Math.min(90,Math.floor(Number(evidence.duration)*1000)/1000);
  if(!(duration>1))throw new Error('Source clip has no usable duration');
+ // Do this before the expensive render/upload path. Bad or vague source
+ // captions should be deferred quickly, leaving the collector capacity for a
+ // clip that can actually be published with complete film information.
+ const source_caption=(evidence.source_caption_text||'').trim();
+ const source_details=await enrichSourceMetadata(source_caption);
+ if(!sourceDetailsComplete(source_details))throw new Error('Verified title, year, synopsis, director and cast are required before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  const renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
  const asset_sha256=await sha256(output);
  console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
  const video_url=await upload(output,asset_sha256,{repository});
- const source_caption=(evidence.source_caption_text||'').trim();
- const source_details=await enrichSourceMetadata(source_caption);
- if(!sourceDetailsComplete(source_details))throw new Error('Verified title, year, synopsis, director and cast are required before queueing');
  const item={
   kind:'source_repost',
   film:{id:`instagram:${candidate.shortcode}`,title:`@${candidate.handle} clip`},

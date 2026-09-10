@@ -11,13 +11,26 @@ export function classifyMetaError(error){const code=Number(error?.code),sub=Numb
 export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const me=await graph(a.base,a.token,a.id,{fields:'id,username'});if(me.username?.toLowerCase()!==handle.toLowerCase()||String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);return me;}
 export async function publish(memory,brand,save){
  if(!brand.enabled)return {status:'paused'};
- // Verify both destinations before publishing to either.
- const aa=accounts(process.env,brand);for(const a of aa)await verifyAccount(a,brand[`${a.name}_handle`]);
+ // Verify each destination independently. A Threads outage must never prevent
+ // Instagram from publishing (or vice versa); the unavailable platform will be
+ // resumed from the same item on a later run.
+ const configured=accounts(process.env,brand), verificationErrors=[];
+ const aa=[];
+ for(const a of configured){
+  try{await verifyAccount(a,brand[`${a.name}_handle`]);aa.push(a);}
+  catch(error){
+   const state=memory.platforms[a.name]??={};
+   state.retry_at=new Date(Date.now()+15*60_000).toISOString();
+   state.last_error=error.message;
+   verificationErrors.push(`${a.name}: ${error.message}`);
+  }
+ }
+ if(!aa.length){await save();return {status:'no_available_platform',errors:verificationErrors};}
  // A state save can succeed after the platform returned a media ID but before
  // the final status write. Close that partial completion before selecting the
  // next item so a stale `publishing` state never blocks the queue.
  for(const pending of memory.items.filter(x=>x.status==='publishing')){
-  if(aa.every(a=>pending[`${a.name}_media_id`])){
+  if(configured.every(a=>pending[`${a.name}_media_id`])){
    pending.status='published';pending.published_at??=new Date().toISOString();
    for(const a of aa)delete pending[`${a.name}_error`];
    await save();
@@ -40,7 +53,7 @@ export async function publish(memory,brand,save){
     publish:id=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media_publish':'threads_publish'}`,{creation_id:id},'POST')});
   }catch(e){const kind=classifyMetaError(e);item[`${a.name}_error`]=e.message;item[`${a.name}_error_class`]=kind;state.retry_at=new Date(Date.now()+(kind==='rate_limited'?3600000:kind==='transient'?15*60000:0)).toISOString();if(['caption_too_long','permanent'].includes(kind)){item.status='needs_review';item.review_reason=`${a.name} rejected this item: ${kind}`;}await save();}
  }
- if(aa.every(a=>item[`${a.name}_media_id`])){item.status='published';item.published_at=new Date().toISOString();await save();}
+ if(configured.every(a=>item[`${a.name}_media_id`])){item.status='published';item.published_at=new Date().toISOString();await save();}
  else if(aa.some(a=>item[`${a.name}_media_id`])&&item.status==='publishing'){item.status='partial';item.publish_retry_at=new Date(Date.now()+15*60000).toISOString();await save();}
- return {status:item.status,key:item.key,errors:aa.map(a=>item[`${a.name}_error`]).filter(Boolean)};
+ return {status:item.status,key:item.key,errors:[...verificationErrors,...configured.map(a=>item[`${a.name}_error`]).filter(Boolean)]};
 }
