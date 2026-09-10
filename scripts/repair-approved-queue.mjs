@@ -22,8 +22,7 @@ await withLock(async()=>{
  const memory=await readJSON('state/memory.json');
  if(memory.items.some(x=>['ready','partial','publishing'].includes(x.status))){console.log(JSON.stringify({status:'queue_not_empty'}));return;}
  const candidates=memory.items.filter(x=>
-  x.status==='needs_review'&&x.review_reason==='Clean movie crop required before publishing'&&
-  x.kind==='source_repost'&&approvedSource(x.source_post_url)&&sourceDetailsComplete(x.source_details)&&
+  x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&sourceDetailsComplete(x.source_details)&&
   x.qa?.source_verified===true&&x.qa?.media_verified===true&&x.qa?.branding==='very-good-films-only-v1'&&
   !(Date.parse(x.recovery_retry_at||'')>Date.now())
  ).slice(0,candidatesPerRun);
