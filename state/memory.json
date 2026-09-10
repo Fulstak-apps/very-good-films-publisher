@@ -7684,7 +7684,10 @@
       "status": "needs_review",
       "discovered_at": "2026-09-09T04:39:33.056Z",
       "key": "2c2e894179c731a442a725c82416a9d4148bab2e8b1ec8f3fdc3f6caa4beeb18",
-      "review_reason": "Clean movie crop required before publishing"
+      "review_reason": "Clean movie crop required before publishing",
+      "recovery_error": "spawnSync ffprobe ENOENT",
+      "recovery_checked_at": "2026-09-10T19:14:08.455Z",
+      "recovery_retry_at": "2026-09-11T01:14:08.457Z"
     },
     {
       "kind": "source_repost",
