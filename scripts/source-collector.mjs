@@ -6,6 +6,7 @@ import {capture,launch} from './capture/capture.mjs';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {approvedSource,sourceAccounts} from '../src/source-policy.mjs';
 import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
 
 const exec=promisify(execFile);
 const root=path.resolve('.');
@@ -14,6 +15,7 @@ const monitor=path.join(root,'monitor');
 const ledgerPath=path.join(monitor,'source-ledger.json');
 const lockPath=path.join(monitor,'source-collector.lock');
 const limit=5;
+const maxAttempts=18;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
@@ -54,13 +56,16 @@ async function profiles(handles=sourceAccounts,errors=[]){
  }finally{await context.close();}
 }
 async function commit(){
+ // Rebase before staging collector output. This keeps state commits from the
+ // publisher out of the collector commit and prevents a queue refill race from
+ // blocking the next scheduled run.
+ await runCommand('git',['pull','--rebase','--autostash','origin','main'],{env:commandEnv});
  const changed=(await runCommand('git',['status','--porcelain','--','inbox','inbox-classics','monitor/source-ledger.json'])).stdout.trim();
  if(!changed)return;
  await runCommand('git',['add','--','inbox','inbox-classics','monitor/source-ledger.json']);
  await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});
  // The publisher also persists state on main. Rebase the just-created queue
  // commit so the collector never overwrites publishing history.
- await runCommand('git',['pull','--rebase','--autostash','origin','main'],{env:commandEnv});
  for(let attempt=0;attempt<3;attempt++){
   try{await runCommand('git',['push','origin','HEAD:main']);break;}
   catch(error){if(attempt===2)throw error;await runCommand('git',['pull','--rebase','--autostash','origin','main'],{env:commandEnv});}
@@ -79,12 +84,16 @@ async function queue(candidate,ledger){
  const asset_sha256=await sha256(output);
  console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
  const video_url=await upload(output,asset_sha256,{repository});
+ const source_caption=(evidence.source_caption_text||'').trim();
+ const source_details=await enrichSourceMetadata(source_caption);
+ if(!sourceDetailsComplete(source_details))throw new Error('Verified title, year, synopsis, director and cast are required before queueing');
  const item={
   kind:'source_repost',
   film:{id:`instagram:${candidate.shortcode}`,title:`@${candidate.handle} clip`},
   scene:{id:candidate.shortcode,start:0,end:duration},
   source_post_url:evidence.source_url||candidate.url,
-  source_caption:(evidence.source_caption_text||'Scene worth watching.').trim(),
+  source_caption,
+  source_details,
   video_url,asset_sha256,
   qa:{...renderQA,source_verified:true,media_verified:true,branding:'very-good-films-only-v1',reviewed_at:new Date().toISOString(),source_duration:Number(evidence.duration),media_match_method:evidence.media_match_method}
  };
@@ -98,7 +107,8 @@ async function queue(candidate,ledger){
 const handle=await lock();
 try{
  try{const result=await runCommand(process.execPath,['scripts/classics-refill.mjs'],{timeout:600000});console.log(result.stdout);await commit();}catch(error){console.error('Classics refill:',error.message.slice(0,300));}
- const ledger=await json(ledgerPath,{version:1,queued:{},checks:{},runs:[]});
+ const ledger=await json(ledgerPath,{version:1,queued:{},failed:{},checks:{},runs:[]});
+ ledger.failed??={};
  if(Date.parse(ledger.retry_after||'')>Date.now()){
   console.log(JSON.stringify({status:'source_cooldown',retry_after:ledger.retry_after,reason:ledger.session_error}));
  }else{
@@ -111,12 +121,15 @@ try{
  // Take one candidate per source in each pass so a five-item refill rotates accounts.
  const groups=ordered.map(h=>candidates.filter(c=>c.handle===h));
  candidates=[];while(groups.some(g=>g.length))for(const group of groups)if(group.length)candidates.push(group.shift());
+ let attempts=0;
  for(const candidate of candidates){
-  if(run.queued.length>=limit)break;
-  if(ledger.queued[candidate.shortcode])continue;
+  if(run.queued.length>=limit||attempts>=maxAttempts)break;
+  if(ledger.queued[candidate.shortcode]||Date.parse(ledger.failed[candidate.shortcode]?.retry_at||'')>Date.now())continue;
+  attempts++;
   try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);ledger.next_account_index=(sourceAccounts.indexOf(candidate.handle)+1)%sourceAccounts.length;}
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
+   ledger.failed[candidate.shortcode]={error:error.message.slice(0,300),failed_at:new Date().toISOString(),retry_at:new Date(Date.now()+6*60*60_000).toISOString()};
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
   }
  }

@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: write
   issues: write
 jobs:
   watchdog:
@@ -20,13 +21,20 @@ jobs:
       - run: npm ci
       - name: Check health and confirmed media IDs
         id: health
+        env:
+          VGF_HEALTH_STRICT: '1'
         run: npm run health
+      - name: Dispatch publisher recovery
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publisher.yml --ref main
       - name: Open or update incident issue
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue list --state open --label automation --search "publisher watchdog" --json number --jq '.[0].number' | {
+          gh issue list --state open --search "in:title publisher watchdog" --json number --jq '.[0].number' | {
             read number || true
-            if [ -n "$number" ]; then gh issue comment "$number" --body "Watchdog still failing at $GITHUB_RUN_ID"; else gh issue create --title "publisher watchdog: no confirmed post" --label automation --body "The five-minute watchdog detected a stalled or unhealthy publisher. Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"; fi
+            if [ -n "$number" ]; then gh issue comment "$number" --body "Watchdog still failing at $GITHUB_RUN_ID"; else gh issue create --title "publisher watchdog: no confirmed post" --body "The five-minute watchdog detected a stalled or unhealthy publisher. Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"; fi
           }

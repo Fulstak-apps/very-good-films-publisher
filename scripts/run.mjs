@@ -15,12 +15,13 @@ import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata
 const command=process.argv[2]||'status';
 await withLock(async()=>{
  const memory=await readJSON('state/memory.json'),brand=await readJSON('config/brand.json'),sources=await readJSON('config/sources.json');const save=()=>saveMemory(memory);
- if(holdUnreviewed(memory.items))await save();
- if(sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
- if((await importPrepared(memory)).added)await save();
- if((await importClassics(memory)).added)await save();
+ const readOnly=['status','doctor'].includes(command);
+ if(!readOnly&&holdUnreviewed(memory.items))await save();
+ if(!readOnly&&sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
+ if(!readOnly&&(await importPrepared(memory)).added)await save();
+ if(!readOnly&&(await importClassics(memory)).added)await save();
  let sourceMetadataChanged=false;
- for(const item of memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
+ for(const item of readOnly?[]:memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
   if(!sourceDetailsComplete(item.source_details)){
    if(item.source_details?.version==='source-caption-film-info-v2'&&Date.parse(item.metadata_retry_at||'')>Date.now())continue;
    item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);

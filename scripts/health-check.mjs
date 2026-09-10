@@ -26,4 +26,4 @@ const summary=process.env.GITHUB_STEP_SUMMARY;
 if(summary)await fs.appendFile(summary,`### Very Good Films health\n\n- Status: **${healthy?'healthy':'attention required'}**\n- Ready queue: **${ready}**\n- Publishing: **${publishing}**\n- Needs review: **${needsReview}**\n- Last Instagram post: **${report.lastInstagramPost||'none'}**\n- Hours since last post: **${hoursSinceLast===null?'n/a':hoursSinceLast.toFixed(2)}**\n`);
 console.log(JSON.stringify(report));
 if(summary)await fs.appendFile(summary,`\n- Source refill: **${sourceRecovery.restricted?'restricted':'no session restriction recorded'}**\n- Refill retry: **${sourceRecovery.retryAfter||'normal schedule'}**\n- Source detail: ${sourceRecovery.reason||'none'}\n`);
-if(!healthy)process.exitCode=1;
+if(!healthy&&process.env.VGF_HEALTH_STRICT==='1')process.exitCode=1;
