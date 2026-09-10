@@ -7964,7 +7964,7 @@
         "source_duration": 47.08875542208875,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "status": "publishing",
+      "status": "partial",
       "discovered_at": "2026-09-10T03:39:23.243Z",
       "key": "cf6911196705f5c7147bf0f08691fdd6505d21d6f31f453616e9331e340ac53c",
       "instagram_container_id": "18126351380306483",
@@ -7980,7 +7980,8 @@
       "threads_previous_container_id": "18111488176878796",
       "threads_retry_at": "2026-09-10T06:10:15.534Z",
       "threads_error": "threads: ERROR; retry after 2026-09-10T06:10:15.534Z: UNKNOWN",
-      "threads_error_class": "transient"
+      "threads_error_class": "transient",
+      "publish_retry_at": "2026-09-10T05:55:20.158Z"
     },
     {
       "kind": "source_repost",
