@@ -7,6 +7,7 @@ let memory=remote('state/memory.json'),brand=remote('config/brand.json');
 // Keep a verified fallback queue available when fresh source captures are
 // temporarily too vague or have overlays that cannot be removed safely.
 if(brand.enabled&&!memory.items.some(x=>['ready','partial','publishing'].includes(x.status))){
+ try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});}catch{}
  try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
 }
 const runs=JSON.parse(gh(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));
