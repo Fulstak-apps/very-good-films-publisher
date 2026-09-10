@@ -7461,20 +7461,30 @@
         "synopsis": "Fallen Angels is a 1995 Hong Kong neo-noir crime comedy-drama film written and directed by Wong Kar-wai. It features two intertwined storylines—one tells the story of a hitman wishing to leave the criminal underworld (Leon Lai), the eccentric woman he starts a relationship with (Karen Mok), and his agent that remains unnamed throughout the movie (Michele Reis), who is infatuated with him. The other story is of a mute ex-convict on the run from the police (Takeshi Kaneshiro) and a mentally unstable woman dumped by her boyfriend (Charlie Yeung). Set in 1995 pre-Handover Hong Kong, Fallen Angels explores the characters' loneliness, their alienation from the situations around them, and yearning ",
         "metadata_source": "https://en.wikipedia.org/wiki/Fallen_Angels_(1995_film)"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/2b0d6b0aeea7fd39a374d55bcab3934e974445c6dab6225588ec1af8d43058a6.mp4?download=1",
-      "asset_sha256": "2b0d6b0aeea7fd39a374d55bcab3934e974445c6dab6225588ec1af8d43058a6",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/82dda20a92d25683553fc9abdc2f0ce8a9a03b6c13774e00f59a8a2c050f1e92.mp4?download=1",
+      "asset_sha256": "82dda20a92d25683553fc9abdc2f0ce8a9a03b6c13774e00f59a8a2c050f1e92",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-09T04:00:29.231Z",
         "source_duration": 32.666666666666664,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 1080,
+          "height": 452,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "tesseract-9-frames",
+          "checked_at": "2026-09-10T17:24:10.990Z"
+        },
+        "recovered_at": "2026-09-10T17:24:10.991Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-09T04:01:09.618Z",
-      "key": "916bb9cb728a4c626ffcf81fd61795de523c8738750a9805d96ef2fd64442964",
-      "review_reason": "Clean movie crop required before publishing"
+      "key": "916bb9cb728a4c626ffcf81fd61795de523c8738750a9805d96ef2fd64442964"
     },
     {
       "kind": "source_repost",
