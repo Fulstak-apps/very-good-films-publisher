@@ -4,10 +4,11 @@ const repo='Fulstak-apps/very-good-films-publisher';
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000});
 const remote=path=>JSON.parse(Buffer.from(JSON.parse(gh(['api',`repos/${repo}/contents/${path}`])).content,'base64').toString());
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
+let collectorStatus='not_needed',collectorError;
 // Keep a verified fallback queue available when fresh source captures are
 // temporarily too vague or have overlays that cannot be removed safely.
 if(brand.enabled&&!memory.items.some(x=>['ready','partial','publishing'].includes(x.status))){
- try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});}catch{}
+ try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});collectorStatus='completed';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
  try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
 }
 const runs=JSON.parse(gh(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));
@@ -20,6 +21,7 @@ const pending=memory.items.some(x=>x.status==='publishing');
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
+Object.assign(report,{collectorStatus,collectorError});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
 const latestRun=Date.parse(runs[0]?.createdAt||'')||0;

@@ -19,6 +19,7 @@ const limit=5;
 // often has several clips with burned-in text; stopping after eight attempts
 // can leave the publisher starved even when a clean clip is available later.
 const maxAttempts=32;
+const maxRunMs=8*60_000;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
 const collectorVersion=2;
@@ -155,7 +156,7 @@ try{
  candidates=[];while(groups.some(g=>g.length))for(const group of groups)if(group.length)candidates.push(group.shift());
  let attempts=0;
  for(const candidate of candidates){
-  if(run.queued.length>=limit||attempts>=maxAttempts)break;
+  if(run.queued.length>=limit||attempts>=maxAttempts||Date.now()-Date.parse(run.started_at)>=maxRunMs)break;
   const previous=ledger.failed[candidate.shortcode];
   if(ledger.queued[candidate.shortcode]||(previous?.collector_version===collectorVersion&&Date.parse(previous.retry_at||'')>Date.now()))continue;
   attempts++;
