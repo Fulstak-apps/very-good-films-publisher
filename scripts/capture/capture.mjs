@@ -18,6 +18,17 @@ const chromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome
 const profileDir = process.env.VGF_SOURCE_PROFILE_DIR || path.join(os.homedir(), "Library", "Application Support", "VeryGoodFilms", "InstagramSourceProfile");
 const outputDir = path.resolve("work", "instagram-mirror");
 
+async function cachedCapture(shortcode,reelUrl,destination){
+ try{
+  const evidence=JSON.parse(await fs.readFile(path.join(outputDir,`${shortcode}.json`),'utf8'));
+  if(evidence.source_url!==reelUrl||evidence.logoOverlay!=null||evidence.destination!==destination)return null;
+  const {stdout}=await execFileAsync('ffprobe',['-v','error','-show_entries','stream=codec_type,width,height:format=duration','-of','json',destination]);
+  const probe=JSON.parse(stdout),video=probe.streams?.find(x=>x.codec_type==='video'),audio=probe.streams?.find(x=>x.codec_type==='audio'),duration=Number(probe.format?.duration);
+  if(!video||!audio||video.width!==evidence.width||video.height!==evidence.height||Math.abs(duration-evidence.duration)>1)return null;
+  await fs.access(destination);return evidence;
+ }catch{return null;}
+}
+
 async function launch(headless = false) {
   await fs.mkdir(profileDir, { recursive: true });
   let lastError;
@@ -70,6 +81,8 @@ async function capture(reelUrl, options = {}) {
   await fs.mkdir(outputDir, { recursive: true });
   const shortcode = reelUrl.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)[1];
   const destination = path.join(outputDir, `${shortcode}.mp4`);
+  const cached=await cachedCapture(shortcode,reelUrl,destination);
+  if(cached){console.log(JSON.stringify({shortcode,destination,cached:true,source:reelUrl}));return cached;}
   const context = await launch(options.headless === true);
   try {
     const page = context.pages()[0] || await context.newPage();
