@@ -31,6 +31,9 @@ export function detectCleanCrop(input,scene,dimensions){
  const bounds=scene.preserve_picture?{top:0,bottom:h}:pictureBounds(frames,w,h);
  let rect={x:0,y:even(bounds.top*height/h+2),width:even(width),height:even((bounds.bottom-bounds.top)*height/h-4)};
  if(width>=height&&rect.height<height*.75)throw Error('Dark landscape frame has ambiguous picture boundaries; hold for crop review');
+ // Intertitles and dialogue cards are part of silent/public-domain masters,
+ // not repost-page captions. Preserve the verified master frame intact.
+ if(scene.preserve_picture)return {...rect,layout:CLEAN_LAYOUT,sampled_frames:times.length,text_check:'verified-classic-master-preserved',checked_at:new Date().toISOString()};
  const originalHeight=rect.height;
  const dir=mkdtempSync(path.join(os.tmpdir(),'vgf-crop-'));
  try{
@@ -43,7 +46,6 @@ export function detectCleanCrop(input,scene,dimensions){
     for(const row of tsv.trim().split('\n').slice(1)){
      const c=row.split('\t');if(Number(c[10])<55||!/[A-Za-z]{3}/.test(c[11]||''))continue;
      const y=Number(c[7]),end=y+Number(c[9]);
-     if(scene.preserve_picture)throw Error('Text detected in classic master; hold for review');
      if(end<rect.height*.3)top=Math.max(top,end+10);
      else if(y>rect.height*.7)bottom=Math.min(bottom,y-10);
      else throw Error('Text inside movie picture cannot be safely cropped; hold for review');
