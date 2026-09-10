@@ -9,7 +9,9 @@ import {sourceDetailsComplete} from '../src/source-metadata.mjs';
 // through the current nine-frame crop scan when the live queue is empty. This
 // is a bounded recovery path, not a bypass: anything that fails remains held.
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
-const candidatesPerRun=2;
+// Try a bounded pool so one or two unsafe captures cannot starve the queue
+// when a later approved capture is perfectly usable.
+const candidatesPerRun=12;
 async function originalCapture(item){
  // Never render a previously branded delivery file. Doing so would preserve
  // its existing corner mark and add another one. Recovery is allowed only

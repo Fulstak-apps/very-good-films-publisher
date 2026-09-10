@@ -14,13 +14,14 @@ export function sourceHints(caption){
  const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
  const titledLine=raw.match(/(?:^|\n)[ \t]*[🎬🎥📺]+[\uFE0F :\t]*([^\n]{2,100})/u);
  const narrative=text.match(/^([^\n]{2,110}?)\s+(?:follows\b|is (?:a|an)\b)/);
+ const contextTitle=text.match(/(?:ending|scene|clip|from)\s+(?:of|in|from)\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)(?:\s*\(\d{4}\)|[.!?\n]|$)/i);
  // Film and television accounts often put the title in running prose rather
  // than a heading (for example, “Silo opening title sequence” or “Silo Season
  // 3 spoilers”). Capture that explicit title token without guessing from a
  // generic sentence.
  const proseTitle=text.match(/\b([A-Z][A-Za-z0-9'’:-]{1,50})\s+(?:Season\s+\d+|opening\s+(?:title|credits)|spoilers?|finale)\b/);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
- const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
+ const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||contextTitle?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
 }
