@@ -23,7 +23,7 @@ await withLock(async()=>{
  let sourceMetadataChanged=false;
  for(const item of readOnly?[]:memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
   if(!sourceDetailsComplete(item.source_details)){
-   if(item.source_details?.version==='source-caption-film-info-v2'&&Date.parse(item.metadata_retry_at||'')>Date.now())continue;
+   if(item.source_details?.version==='source-caption-film-info-v3'&&Date.parse(item.metadata_retry_at||'')>Date.now())continue;
    item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);
    item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();sourceMetadataChanged=true;
   }
