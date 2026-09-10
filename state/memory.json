@@ -887,6 +887,7 @@
     },
     {
       "key": "96b98463ea6b02514ede92a50b93d257bb805f0449e92fe5f7e2d37a46a41f0c",
+      "program": "public_domain_classics",
       "film": {
         "id": "imdb:tt0051744",
         "imdb_id": "tt0051744",
@@ -930,7 +931,7 @@
       },
       "qa": {
         "identity_verified": true,
-        "scene_verified": false,
+        "scene_verified": true,
         "media_verified": true,
         "media": {
           "width": 1080,
@@ -938,19 +939,31 @@
           "duration": 45,
           "audio": "aac",
           "video": "h264"
-        }
+        },
+        "width": 1080,
+        "height": 1920,
+        "duration": 45,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 1080,
+          "height": 1916,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "verified-classic-master-preserved",
+          "checked_at": "2026-09-10T21:15:08.889Z"
+        },
+        "black_and_white": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-09-10T21:15:28.037Z"
       },
-      "category": "horror",
-      "priority": 4,
-      "status": "retired",
-      "discovered_at": "2026-09-06T00:32:36.426Z",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/97bcc524abb09256592524b5317b37fb1216ef58b44698988e2ecc7ac956c6cd.mp4?download=1",
+      "asset_sha256": "97bcc524abb09256592524b5317b37fb1216ef58b44698988e2ecc7ac956c6cd",
       "caption_style": "film_info",
-      "instagram_caption": "HOUSE ON HAUNTED HILL (1959) 🎬\n\nA wealthy eccentric invites five strangers to spend a night in a supposedly haunted mansion.\n\nDirected by William Castle\nStarring Vincent Price, Carol Ohmart, Richard Long\n\nVery Good Films.",
-      "threads_caption": "HOUSE ON HAUNTED HILL (1959) 🎬\n\nA wealthy eccentric invites five strangers to spend a night in a supposedly haunted mansion.\n\nDirected by William Castle\nStarring Vincent Price, Carol Ohmart, Richard Long\n\nVery Good Films.",
-      "asset_sha256": "3a91ab1db872f69efa80d37fe54ccde6aa31c23b97dbaae8ac7c9e561f8a92e5",
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/3a91ab1db872f69efa80d37fe54ccde6aa31c23b97dbaae8ac7c9e561f8a92e5.mp4?download=1",
-      "review_reason": "Automatically spaced timecode requires individual scene review",
-      "retired_reason": "Catalog disabled; waiting for approved source feed"
+      "status": "ready",
+      "discovered_at": "2026-09-10T21:15:47.920Z"
     },
     {
       "key": "bbe4864883f991efc328e030a517ae072ffe101853a7071a1ae6285a0f325b36",
