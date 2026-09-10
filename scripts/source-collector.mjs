@@ -19,7 +19,9 @@ const limit=5;
 // often has several clips with burned-in text; stopping after eight attempts
 // can leave the publisher starved even when a clean clip is available later.
 const maxAttempts=32;
-const maxRunMs=8*60_000;
+// Leave enough time for the current capture to finish, save the ledger, and
+// push a queued asset before the recovery supervisor's 9.5-minute deadline.
+const maxRunMs=6*60_000;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
 const collectorVersion=2;
