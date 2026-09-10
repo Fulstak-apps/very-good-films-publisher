@@ -637,45 +637,37 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-10T15:53:01.717Z"
+      "checked_at": "2026-09-10T16:05:05.258Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-08T00:07:10.064Z",
-      "queued": [
-        "Dc-5uGzyffu"
-      ],
-      "errors": [],
-      "finished_at": "2026-09-08T00:10:19.463Z"
-    },
     {
       "started_at": "2026-09-08T00:15:22.226Z",
       "queued": [
@@ -7645,6 +7637,53 @@
         }
       ],
       "finished_at": "2026-09-10T15:59:39.003Z"
+    },
+    {
+      "started_at": "2026-09-10T16:04:43.536Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DcywSNZs9N7/",
+          "stage": "capture_or_queue",
+          "error": "Text inside movie picture cannot be safely cropped; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dc0yA7fCdus/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcAZ_PqT9WI/",
+          "stage": "capture_or_queue",
+          "error": "Text removal would discard too much movie picture; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZTwb4PzgkS/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/DcisUFDhMYC/",
+          "stage": "capture_or_queue",
+          "error": "Text inside movie picture cannot be safely cropped; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/DbBMzN5RjmJ/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dctnu2lM19O/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dcy6OWvCkvq/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-10T16:09:14.906Z"
     }
   ],
   "next_account_index": 6,
@@ -7808,6 +7847,46 @@
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
       "failed_at": "2026-09-10T15:59:39.003Z",
       "retry_at": "2026-09-10T21:59:39.003Z"
+    },
+    "DcywSNZs9N7": {
+      "error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "failed_at": "2026-09-10T16:05:42.109Z",
+      "retry_at": "2026-09-10T22:05:42.109Z"
+    },
+    "Dc0yA7fCdus": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T16:06:32.225Z",
+      "retry_at": "2026-09-10T22:06:32.225Z"
+    },
+    "DcAZ_PqT9WI": {
+      "error": "Text removal would discard too much movie picture; hold for review",
+      "failed_at": "2026-09-10T16:06:47.753Z",
+      "retry_at": "2026-09-10T22:06:47.753Z"
+    },
+    "DZTwb4PzgkS": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T16:06:58.129Z",
+      "retry_at": "2026-09-10T22:06:58.129Z"
+    },
+    "DcisUFDhMYC": {
+      "error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "failed_at": "2026-09-10T16:07:16.473Z",
+      "retry_at": "2026-09-10T22:07:16.473Z"
+    },
+    "DbBMzN5RjmJ": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T16:07:43.785Z",
+      "retry_at": "2026-09-10T22:07:43.785Z"
+    },
+    "Dctnu2lM19O": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T16:09:00.930Z",
+      "retry_at": "2026-09-10T22:09:00.930Z"
+    },
+    "Dcy6OWvCkvq": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T16:09:14.906Z",
+      "retry_at": "2026-09-10T22:09:14.906Z"
     }
   }
 }
