@@ -637,45 +637,37 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.820Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-10T16:52:46.949Z"
+      "checked_at": "2026-09-10T16:58:13.822Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-08T01:10:33.087Z",
-      "queued": [
-        "DcxGkABuJ8v"
-      ],
-      "errors": [],
-      "finished_at": "2026-09-08T01:11:23.691Z"
-    },
     {
       "started_at": "2026-09-08T01:16:26.589Z",
       "queued": [
@@ -7642,6 +7634,18 @@
       "queued": [],
       "errors": [],
       "finished_at": "2026-09-10T16:52:46.949Z"
+    },
+    {
+      "started_at": "2026-09-10T16:57:51.726Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdHUTtysAeA/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-10T16:58:23.237Z"
     }
   ],
   "next_account_index": 6,
@@ -7845,6 +7849,11 @@
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
       "failed_at": "2026-09-10T16:09:14.906Z",
       "retry_at": "2026-09-10T22:09:14.906Z"
+    },
+    "DdHUTtysAeA": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T16:58:23.237Z",
+      "retry_at": "2026-09-10T22:58:23.237Z"
     }
   }
 }
