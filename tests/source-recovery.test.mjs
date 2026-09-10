@@ -25,6 +25,8 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').title_hint,'Bend It Like Beckham');
  assert.equal(sourceHints('Barbershop follows Calvin Palmer Jr.').title_hint,'Barbershop');
  assert.equal(sourceHints('🎬 Back to the Future (1985)').year,1985);
+ assert.equal(sourceHints('Silo opening title sequence is widely praised').title_hint,'Silo');
+ assert.equal(sourceHints('Silo Season 3 spoilers warning').title_hint,'Silo');
 });
 
 test('Wikipedia attribution fills credits when Wikidata has missing English labels',()=>{
