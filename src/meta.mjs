@@ -38,7 +38,7 @@ export async function publish(memory,brand,save){
  }
  const item=eligible(memory.items,brand);if(!item)return {status:'no_eligible_scene'};
  const errs=validate(item,true);if(errs.length)throw new Error(errs.join('; '));
- item.status='publishing';await save();
+ item.status='publishing';item.updated_at=new Date().toISOString();await save();
  for(const a of aa){
   if(item[`${a.name}_media_id`])continue;
   memory.platforms[a.name]??={};const state=memory.platforms[a.name];if(Date.parse(state.retry_at||'')>Date.now())continue;
@@ -53,7 +53,7 @@ export async function publish(memory,brand,save){
     publish:id=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media_publish':'threads_publish'}`,{creation_id:id},'POST')});
   }catch(e){const kind=classifyMetaError(e);item[`${a.name}_error`]=e.message;item[`${a.name}_error_class`]=kind;state.retry_at=new Date(Date.now()+(kind==='rate_limited'?3600000:kind==='transient'?15*60000:0)).toISOString();if(['caption_too_long','permanent'].includes(kind)){item.status='needs_review';item.review_reason=`${a.name} rejected this item: ${kind}`;}await save();}
  }
- if(configured.every(a=>item[`${a.name}_media_id`])){item.status='published';item.published_at=new Date().toISOString();await save();}
- else if(aa.some(a=>item[`${a.name}_media_id`])&&item.status==='publishing'){item.status='partial';item.publish_retry_at=new Date(Date.now()+15*60000).toISOString();await save();}
+ if(configured.every(a=>item[`${a.name}_media_id`])){item.status='published';item.published_at=new Date().toISOString();item.updated_at=item.published_at;await save();}
+ else if(aa.some(a=>item[`${a.name}_media_id`])&&item.status==='publishing'){item.status='partial';item.publish_retry_at=new Date(Date.now()+15*60000).toISOString();item.updated_at=new Date().toISOString();await save();}
  return {status:item.status,key:item.key,errors:[...verificationErrors,...configured.map(a=>item[`${a.name}_error`]).filter(Boolean)]};
 }

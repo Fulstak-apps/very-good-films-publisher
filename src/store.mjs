@@ -21,4 +21,15 @@ export async function saveMemory(memory){
   }
  }
 }
-export async function withLock(fn){const path='state/runner.lock';let h;try{h=await fs.open(path,'wx');}catch(e){if(e.code==='EEXIST'){const stale=Date.now()-(await fs.stat(path)).mtimeMs>15*60_000;if(stale){await fs.unlink(path);h=await fs.open(path,'wx');}else throw new Error('Another runner holds state/runner.lock; verify it has stopped before removing the lock');}else throw e;}try{await h.writeFile(String(process.pid));return await fn();}finally{await h.close();await fs.unlink(path).catch(()=>{});}}
+export async function withLock(fn){
+ const path='state/runner.lock';let h;
+ try{h=await fs.open(path,'wx');}
+ catch(e){
+  if(e.code!=='EEXIST')throw e;
+  let pid,age=0;try{pid=Number((await fs.readFile(path,'utf8')).trim());age=Date.now()-(await fs.stat(path)).mtimeMs;}catch(error){if(error.code==='ENOENT')return withLock(fn);throw error;}
+  let alive=Number.isInteger(pid)&&pid>0; if(alive)try{process.kill(pid,0);}catch(error){if(error.code==='ESRCH')alive=false;else throw error;}
+  if(!alive&&age>60_000){await fs.unlink(path).catch(error=>{if(error.code!=='ENOENT')throw error;});return withLock(fn);}
+  throw new Error(`Another runner (${pid||'unknown'}) holds state/runner.lock`);
+ }
+ try{await h.writeFile(String(process.pid));return await fn();}finally{await h.close();await fs.unlink(path).catch(()=>{});}
+}

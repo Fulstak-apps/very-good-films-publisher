@@ -63,7 +63,10 @@ async function commit(){
  // publisher out of the collector commit and prevents a queue refill race from
  // blocking the next scheduled run.
  await runCommand('git',['pull','--rebase','--autostash','origin','main'],{env:commandEnv});
- const changed=(await runCommand('git',['status','--porcelain','--','inbox','inbox-classics','monitor/source-ledger.json'])).stdout.trim();
+ // Do not push a commit for routine ledger timestamps. Those commits used to
+ // trigger a publisher workflow every five minutes and raced publication-state
+ // commits. Persist the ledger remotely only when an actual queue asset exists.
+ const changed=(await runCommand('git',['status','--porcelain','--','inbox','inbox-classics'])).stdout.trim();
  if(!changed)return;
  await runCommand('git',['add','--','inbox','inbox-classics','monitor/source-ledger.json']);
  await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});

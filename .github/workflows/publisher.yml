@@ -51,6 +51,7 @@ jobs:
           git config user.name 'Very Good Films'
           git config user.email 'actions@users.noreply.github.com'
       - name: Test publisher
+        if: github.event_name == 'push'
         run: npm test
       - name: Install formatter
         run: |
