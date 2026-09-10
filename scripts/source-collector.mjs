@@ -24,7 +24,7 @@ const maxAttempts=32;
 const maxRunMs=6*60_000;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
-const collectorVersion=2;
+const collectorVersion=3;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
