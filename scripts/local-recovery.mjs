@@ -3,7 +3,12 @@ import fs from 'node:fs/promises';
 const repo='Fulstak-apps/very-good-films-publisher';
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000});
 const remote=path=>JSON.parse(Buffer.from(JSON.parse(gh(['api',`repos/${repo}/contents/${path}`])).content,'base64').toString());
-const memory=remote('state/memory.json'),brand=remote('config/brand.json');
+let memory=remote('state/memory.json'),brand=remote('config/brand.json');
+// Keep a verified fallback queue available when fresh source captures are
+// temporarily too vague or have overlays that cannot be removed safely.
+if(brand.enabled&&!memory.items.some(x=>['ready','partial','publishing'].includes(x.status))){
+ try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
+}
 const runs=JSON.parse(gh(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));
 const active=runs.some(x=>['queued','in_progress','waiting','pending','requested'].includes(x.status));
 const now=Date.now();
