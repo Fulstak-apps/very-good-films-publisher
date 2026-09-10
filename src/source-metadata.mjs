@@ -1,6 +1,12 @@
 const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
 const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
 const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
+const names=value=>clean(value).replace(/\b(?:and|with)\b/gi,',').split(',').map(clean).filter(x=>/^[A-Z][A-Za-z .'-]{1,80}$/.test(x)).slice(0,3);
+export function fallbackCredits(extract){
+ const director=clean(String(extract||'').match(/(?:written and )?directed by ([A-Z][A-Za-z .'-]{2,80}?)(?:\s+(?:that|who|,|\.|\band\b))/i)?.[1]);
+ const castText=String(extract||'').match(/(?:stars?|features? an ensemble cast including|starring)\s+([^.!]{3,500})/i)?.[1];
+ return {director,cast:names(castText||'')};
+}
 
 export function sourceHints(caption){
  const raw=String(caption||'');
@@ -37,12 +43,19 @@ async function wikiMetadata(base){
    const date=claims.P577?.[0]?.mainsnak?.datavalue?.value?.time;if(date){const match=date.match(/[+-](\d{4})/);if(match)year=Number(match[1]);}
   }
  }
+ const extract=strip(entry.extract);
+ // Wikidata can omit English labels even when the film page has clearly
+ // attributed credits. Use only the page's introductory attribution as a
+ // fallback, never a guessed name.
+ const fallback=fallbackCredits(extract);
+ director??=fallback.director;
+ if(!cast.length)cast=fallback.cast;
  if(!director)return base; // Do not accept bands, books or disambiguation pages as films.
- return {...base,title:entry.title.replace(/\s*\([^)]*\)$/,''),year,director,cast:cast.length?cast:(base.cast||[]),synopsis:strip(entry.extract).slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`};
+ return {...base,title:entry.title.replace(/\s*\([^)]*\)$/,''),year,director,cast:cast.length?cast:(base.cast||[]),synopsis:extract.slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`};
 }
 
 export async function enrichSourceMetadata(caption,current={}){
- const base={...current,...sourceHints(caption),version:'source-caption-film-info-v2'};
+ const base={...current,...sourceHints(caption),version:'source-caption-film-info-v3'};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}

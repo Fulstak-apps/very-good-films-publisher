@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {EventEmitter} from 'node:events';
 import {navigateSource,SourceSessionError} from '../scripts/capture/source-session.mjs';
-import {sourceHints} from '../src/source-metadata.mjs';
+import {sourceHints,fallbackCredits} from '../src/source-metadata.mjs';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -25,6 +25,12 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').title_hint,'Bend It Like Beckham');
  assert.equal(sourceHints('Barbershop follows Calvin Palmer Jr.').title_hint,'Barbershop');
  assert.equal(sourceHints('🎬 Back to the Future (1985)').year,1985);
+});
+
+test('Wikipedia attribution fills credits when Wikidata has missing English labels',()=>{
+ const credits=fallbackCredits('Dunkirk is a 2017 war film produced, written, and directed by Christopher Nolan that depicts history. It features an ensemble cast including Fionn Whitehead, Tom Glynn-Carney, Jack Lowden.');
+ assert.equal(credits.director,'Christopher Nolan');
+ assert.deepEqual(credits.cast,['Fionn Whitehead','Tom Glynn-Carney','Jack Lowden']);
 });
 
 test('already imported clips make no metadata requests',async()=>{

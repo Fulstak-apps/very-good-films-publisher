@@ -15,7 +15,7 @@ const monitor=path.join(root,'monitor');
 const ledgerPath=path.join(monitor,'source-ledger.json');
 const lockPath=path.join(monitor,'source-collector.lock');
 const limit=5;
-const maxAttempts=18;
+const maxAttempts=8;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
