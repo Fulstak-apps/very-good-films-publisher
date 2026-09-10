@@ -637,45 +637,37 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-10T15:45:04.742Z"
+      "checked_at": "2026-09-10T15:53:01.717Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-07T23:59:45.086Z",
-      "queued": [
-        "Dc-6GaPvD7s"
-      ],
-      "errors": [],
-      "finished_at": "2026-09-08T00:02:07.174Z"
-    },
     {
       "started_at": "2026-09-08T00:07:10.064Z",
       "queued": [
@@ -7606,6 +7598,53 @@
         }
       ],
       "finished_at": "2026-09-10T15:47:36.820Z"
+    },
+    {
+      "started_at": "2026-09-10T15:52:41.294Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dcyg3cHOJWx/",
+          "stage": "capture_or_queue",
+          "error": "Dark landscape frame has ambiguous picture boundaries; hold for crop review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dc31bubsF_Z/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dc-UZ18SIXE/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbpg7aTntF/",
+          "stage": "capture_or_queue",
+          "error": "Dark landscape frame has ambiguous picture boundaries; hold for crop review"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcxI_YGOshu/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dc1uG5HsfX0/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZWhr1gzwOm/",
+          "stage": "capture_or_queue",
+          "error": "Text inside movie picture cannot be safely cropped; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/DbE3YWqxRQ8/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-10T15:59:39.003Z"
     }
   ],
   "next_account_index": 6,
@@ -7729,6 +7768,46 @@
       "error": "Exact source caption missing, generic or truncated; needs review",
       "failed_at": "2026-09-10T15:47:36.820Z",
       "retry_at": "2026-09-10T21:47:36.820Z"
+    },
+    "Dcyg3cHOJWx": {
+      "error": "Dark landscape frame has ambiguous picture boundaries; hold for crop review",
+      "failed_at": "2026-09-10T15:53:20.210Z",
+      "retry_at": "2026-09-10T21:53:20.210Z"
+    },
+    "Dc31bubsF_Z": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T15:54:13.759Z",
+      "retry_at": "2026-09-10T21:54:13.759Z"
+    },
+    "Dc-UZ18SIXE": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T15:54:41.088Z",
+      "retry_at": "2026-09-10T21:54:41.088Z"
+    },
+    "DZbpg7aTntF": {
+      "error": "Dark landscape frame has ambiguous picture boundaries; hold for crop review",
+      "failed_at": "2026-09-10T15:57:33.426Z",
+      "retry_at": "2026-09-10T21:57:33.426Z"
+    },
+    "DcxI_YGOshu": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T15:58:21.342Z",
+      "retry_at": "2026-09-10T21:58:21.342Z"
+    },
+    "Dc1uG5HsfX0": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T15:58:39.496Z",
+      "retry_at": "2026-09-10T21:58:39.496Z"
+    },
+    "DZWhr1gzwOm": {
+      "error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "failed_at": "2026-09-10T15:59:29.477Z",
+      "retry_at": "2026-09-10T21:59:29.477Z"
+    },
+    "DbE3YWqxRQ8": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T15:59:39.003Z",
+      "retry_at": "2026-09-10T21:59:39.003Z"
     }
   }
 }
