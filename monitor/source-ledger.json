@@ -637,49 +637,37 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-10T17:42:31.292Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-10T17:42:31.293Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-10T17:42:31.293Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-10T17:42:31.293Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-10T17:42:31.294Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-10T17:42:31.294Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-10T17:42:31.294Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-10T17:42:31.294Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-10T17:42:31.294Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-10T17:42:31.294Z"
+      "checked_at": "2026-09-10T17:47:57.840Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-08T02:06:24.839Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/moldedbyculture/reel/DcpMkFlOTzC/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DcpMkFlOTzC-capture-diagnostic.json"
-        }
-      ],
-      "finished_at": "2026-09-08T02:07:34.557Z"
-    },
     {
       "started_at": "2026-09-08T02:12:37.587Z",
       "queued": [],
@@ -7600,6 +7588,18 @@
       "queued": [],
       "errors": [],
       "finished_at": "2026-09-10T17:42:31.294Z"
+    },
+    {
+      "started_at": "2026-09-10T17:47:36.547Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdHQH6HSKyE/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-10T17:50:06.871Z"
     }
   ],
   "next_account_index": 6,
@@ -7808,6 +7808,11 @@
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
       "failed_at": "2026-09-10T16:58:23.237Z",
       "retry_at": "2026-09-10T22:58:23.237Z"
+    },
+    "DdHQH6HSKyE": {
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-10T17:50:06.871Z",
+      "retry_at": "2026-09-10T23:50:06.871Z"
     }
   }
 }
