@@ -30,7 +30,8 @@ await withLock(async()=>{
  const candidates=memory.items.filter(x=>
   x.status==='needs_review'&&x.review_reason==='Clean movie crop required before publishing'&&
   x.kind==='source_repost'&&approvedSource(x.source_post_url)&&sourceDetailsComplete(x.source_details)&&
-  x.qa?.source_verified===true&&x.qa?.media_verified===true&&x.qa?.branding==='very-good-films-only-v1'
+  x.qa?.source_verified===true&&x.qa?.media_verified===true&&x.qa?.branding==='very-good-films-only-v1'&&
+  !(Date.parse(x.recovery_retry_at||'')>Date.now())
  ).slice(0,candidatesPerRun);
  const repaired=[],held=[];
  for(const item of candidates){
@@ -44,7 +45,8 @@ await withLock(async()=>{
    item.status='ready';delete item.review_reason;delete item.instagram_error;delete item.threads_error;
    repaired.push({key:item.key,title:item.source_details.title});
   }catch(error){
-   item.recovery_error=error.message;item.recovery_checked_at=new Date().toISOString();held.push({key:item.key,error:error.message});
+   item.recovery_error=error.message;item.recovery_checked_at=new Date().toISOString();
+   item.recovery_retry_at=new Date(Date.now()+6*60*60_000).toISOString();held.push({key:item.key,error:error.message});
   }
  }
  if(repaired.length||held.length)await saveMemory(memory);
