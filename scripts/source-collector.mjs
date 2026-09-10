@@ -24,7 +24,7 @@ const maxAttempts=32;
 const maxRunMs=6*60_000;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
-const collectorVersion=4;
+const collectorVersion=5;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -113,7 +113,7 @@ async function queue(candidate,ledger){
  let source_details=await enrichSourceMetadata(source_caption);
  if(!sourceDetailsComplete(source_details)){
   const title_hint=await localTitleHint(source_caption);
-  if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint});
+  if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
  }
  if(!sourceDetailsComplete(source_details))throw new Error('Verified title, year, synopsis, director and cast are required before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);

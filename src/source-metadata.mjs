@@ -14,7 +14,7 @@ export function sourceHints(caption){
  const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
  const titledLine=raw.match(/(?:^|\n)[ \t]*[🎬🎥📺]+[\uFE0F :\t]*([^\n]{2,100})/u);
  const narrative=text.match(/^([^\n]{2,110}?)\s+(?:follows\b|is (?:a|an)\b)/);
- const contextTitle=text.match(/(?:ending|scene|clip|from)\s+(?:of|in|from)\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)(?:\s*\(\d{4}\)|[.!?\n]|$)/i);
+ const contextTitle=text.match(/(?:ending|scene|clip|cut|from)\s+(?:of|in|from)\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)(?:\s*\(\d{4}\)|[.!?\n]|$)/i);
  // Film and television accounts often put the title in running prose rather
  // than a heading (for example, “Silo opening title sequence” or “Silo Season
  // 3 spoilers”). Capture that explicit title token without guessing from a
@@ -61,7 +61,8 @@ async function wikiMetadata(base){
 }
 
 export async function enrichSourceMetadata(caption,current={}){
- const base={...current,...sourceHints(caption),version:'source-caption-film-info-v3'};
+ const hints=sourceHints(caption);
+ const base={...current,...hints,title_hint:current.title_hint_verified||hints.title_hint,version:'source-caption-film-info-v3'};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
