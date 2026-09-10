@@ -6244,8 +6244,8 @@
       "discovered_at": "2026-09-08T04:26:05.478Z",
       "key": "40e9bc159c8b49f4b739e8eb9b848fb0220e60ab4415a109e185573c5b2b8473",
       "review_reason": "Clean movie crop required before publishing",
-      "recovery_error": "spawnSync ffprobe ENOENT",
-      "recovery_checked_at": "2026-09-10T18:17:47.448Z"
+      "recovery_error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "recovery_checked_at": "2026-09-10T18:20:01.408Z"
     },
     {
       "kind": "source_repost",
@@ -6454,20 +6454,35 @@
         "synopsis": "EuroTrip is a 2004 American teen sex comedy film directed by Jeff Schaffer, from a screenplay he wrote with Alec Berg and David Mandel. The film was produced by The Montecito Picture Company and distributed by DreamWorks Pictures. It stars Scott Mechlowicz, Jacob Pitts, Michelle Trachtenberg, and Travis Wester. Mechlowicz portrays Scotty Thomas, a recent high school graduate from the Youngstown, Ohio area who travels across Europe in search of his German pen pal, Mieke (Jessica Boehrs). Accompanied by his friend Cooper (Pitts) and twin siblings Jenny and Jamie (Trachtenberg and Wester), Scotty's quest takes him to England, France, the Netherlands, Slovakia, Germany, and Italy, encountering a",
         "metadata_source": "https://en.wikipedia.org/wiki/EuroTrip"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/937b3542edb07f5aae2d4f0539b38de7b3f3cff1a32e75697ea8a4ee8ebaf6ae.mp4?download=1",
-      "asset_sha256": "937b3542edb07f5aae2d4f0539b38de7b3f3cff1a32e75697ea8a4ee8ebaf6ae",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/978765e1e3d5aaa5b93c2cc7d725756e491d0d933553ab43623e225b60c407cf.mp4?download=1",
+      "asset_sha256": "978765e1e3d5aaa5b93c2cc7d725756e491d0d933553ab43623e225b60c407cf",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-09T01:11:24.305Z",
         "source_duration": 18.924263,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.866667,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 610,
+          "width": 1080,
+          "height": 936,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "tesseract-9-frames",
+          "checked_at": "2026-09-10T18:20:10.076Z"
+        },
+        "recovered_at": "2026-09-10T18:20:19.288Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-09T01:15:02.673Z",
       "key": "9fdc24fb029002f3babe0ce31bc7127490b98bd4c471e8aabc4cff74424b99f0",
-      "review_reason": "Clean movie crop required before publishing",
       "recovery_error": "spawnSync ffprobe ENOENT",
       "recovery_checked_at": "2026-09-10T18:17:47.450Z"
     },
