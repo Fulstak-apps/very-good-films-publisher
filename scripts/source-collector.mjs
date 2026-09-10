@@ -48,7 +48,16 @@ async function profiles(handles=sourceAccounts,errors=[]){
    try{
     await navigateSource(page,`https://www.instagram.com/${handle}/reels/`);
     await page.waitForTimeout(1500);
-    const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
+    const seen=new Set();
+    // Instagram virtualizes profile grids. Read several rows so a handful of
+    // recently rejected clips cannot make the source appear exhausted.
+    for(let row=0;row<5;row++){
+     const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
+     for(const url of urls)seen.add(url);
+     await page.evaluate(()=>window.scrollBy(0,Math.max(window.innerHeight*1.5,1200)));
+     await page.waitForTimeout(700);
+    }
+    const urls=[...seen];
     for(const url of [...new Set(urls)])if(approvedSource(url)&&new URL(url).pathname.split('/')[1]===handle)found.push({handle,url,shortcode:shortcode(url)});
    }catch(error){
     if(error instanceof SourceSessionError)throw error;
@@ -57,6 +66,15 @@ async function profiles(handles=sourceAccounts,errors=[]){
   }
   return found;
  }finally{await context.close();}
+}
+
+async function localTitleHint(caption){
+ if(process.env.VGF_OLLAMA_METADATA==='0'||!caption.trim())return undefined;
+ try{
+  const response=await fetch('http://127.0.0.1:11434/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:process.env.VGF_OLLAMA_MODEL||'qwen3:4b',stream:false,think:false,format:'json',prompt:'Extract the single movie or television title explicitly named by this caption. Never guess. Return JSON exactly as {"title":string|null}. Caption: '+caption.slice(0,3000),options:{temperature:0,num_predict:60}}),signal:AbortSignal.timeout(20_000)});
+  if(!response.ok)return undefined;const parsed=JSON.parse((await response.json()).response||'{}');
+  const title=String(parsed.title||'').trim();return title&&caption.toLowerCase().includes(title.toLowerCase())?title:undefined;
+ }catch{return undefined;}
 }
 async function commit(){
  // Rebase before staging collector output. This keeps state commits from the
@@ -88,7 +106,11 @@ async function queue(candidate,ledger){
  // captions should be deferred quickly, leaving the collector capacity for a
  // clip that can actually be published with complete film information.
  const source_caption=(evidence.source_caption_text||'').trim();
- const source_details=await enrichSourceMetadata(source_caption);
+ let source_details=await enrichSourceMetadata(source_caption);
+ if(!sourceDetailsComplete(source_details)){
+  const title_hint=await localTitleHint(source_caption);
+  if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint});
+ }
  if(!sourceDetailsComplete(source_details))throw new Error('Verified title, year, synopsis, director and cast are required before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
