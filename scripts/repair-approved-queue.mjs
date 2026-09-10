@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises';
-import {createHash} from 'node:crypto';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {readJSON,saveMemory,withLock} from '../src/store.mjs';
 import {approvedSource} from '../src/source-policy.mjs';
@@ -11,17 +10,12 @@ import {sourceDetailsComplete} from '../src/source-metadata.mjs';
 // is a bounded recovery path, not a bypass: anything that fails remains held.
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const candidatesPerRun=2;
-const githubAsset=/^https:\/\/github\.com\/Fulstak-apps\/very-good-films-publisher\/releases\/download\/media\/([a-f0-9]{64})\.mp4(?:\?download=1)?$/;
-
-async function cachedOrDownload(item){
- const match=item.video_url?.match(githubAsset);if(!match)throw new Error('Recovery asset is not a trusted Very Good Films media file');
- const file=`work/recovery-${item.key}.mp4`;
- try{await fs.access(file);return file;}catch{}
- const response=await fetch(item.video_url,{redirect:'follow',signal:AbortSignal.timeout(180000)});
- if(!response.ok)throw new Error(`Recovery asset HTTP ${response.status}`);
- const bytes=Buffer.from(await response.arrayBuffer());
- if(!bytes.length||bytes.length>95*1024*1024)throw new Error('Recovery asset has an invalid size');
- await fs.mkdir('work',{recursive:true});await fs.writeFile(file,bytes);return file;
+async function originalCapture(item){
+ // Never render a previously branded delivery file. Doing so would preserve
+ // its existing corner mark and add another one. Recovery is allowed only
+ // from the original capture, which has no VGF branding baked into it.
+ const file=`work/instagram-mirror/${item.scene.id}.mp4`;
+ try{await fs.access(file);return file;}catch{throw new Error('Original unbranded capture is unavailable; refusing to add a second logo');}
 }
 
 await withLock(async()=>{
@@ -36,7 +30,7 @@ await withLock(async()=>{
  const repaired=[],held=[];
  for(const item of candidates){
   try{
-   const input=await cachedOrDownload(item),output=`work/recovery-${item.key}-clean.mp4`;
+   const input=await originalCapture(item),output=`work/recovery-${item.key}-clean.mp4`;
    const scene={start:0,end:item.scene.end-item.scene.start,crop:'source_overlay'};
    const qa=formatVideo(input,output,scene),asset_sha256=await sha256(output);
    const video_url=await upload(output,asset_sha256,{repository});
