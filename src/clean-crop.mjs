@@ -39,18 +39,23 @@ export function detectCleanCrop(input,scene,dimensions){
  try{
   for(let pass=0;pass<4;pass++){
    let top=0,bottom=rect.height;
+   let centralHits=0;
    for(let i=0;i<times.length;i++){
     const file=path.join(dir,`${i}.png`);
     execFileSync('ffmpeg',['-v','error','-y','-ss',String(times[i]),'-i',input,'-frames:v','1','-vf',`crop=${rect.width}:${rect.height}:${rect.x}:${rect.y}`,file]);
     const tsv=execFileSync('tesseract',[file,'stdout','--psm','11','tsv'],{maxBuffer:4*1024*1024,stdio:['ignore','pipe','pipe']}).toString();
     for(const row of tsv.trim().split('\n').slice(1)){
-     const c=row.split('\t');if(Number(c[10])<55||!/[A-Za-z]{3}/.test(c[11]||''))continue;
+     const c=row.split('\t');if(Number(c[10])<75||!/[A-Za-z]{3}/.test(c[11]||''))continue;
      const y=Number(c[7]),end=y+Number(c[9]);
-     if(end<rect.height*.3)top=Math.max(top,end+10);
-     else if(y>rect.height*.7)bottom=Math.min(bottom,y-10);
-     else throw Error('Text inside movie picture cannot be safely cropped; hold for review');
-    }
+     // Subtitle and repost-caption bands often sit inside the lower third of
+     // the detected picture rectangle. Remove those bands when doing so keeps
+     // most of the frame; only text near the visual center remains a hard hold.
+     if(end<rect.height*.45)top=Math.max(top,end+10);
+     else if(y>rect.height*.55)bottom=Math.min(bottom,y-10);
+     else centralHits++;
    }
+   }
+   if(centralHits>=3)throw Error('Text inside movie picture cannot be safely cropped; hold for review');
    if(top===0&&bottom===rect.height)return {...rect,layout:CLEAN_LAYOUT,sampled_frames:times.length,text_check:'tesseract-9-frames',checked_at:new Date().toISOString()};
    rect={...rect,y:rect.y+even(top+1),height:even(bottom-top)};
    if(rect.height<originalHeight*.5)throw Error('Text removal would discard too much movie picture; hold for review');
