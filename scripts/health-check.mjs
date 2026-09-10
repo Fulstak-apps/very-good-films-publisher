@@ -18,7 +18,11 @@ const delivery=Object.fromEntries(['instagram','threads'].filter(p=>brand.platfo
 const queueHours=ready*brand.minimum_gap_minutes/60;
 let sourceLedger={};try{sourceLedger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));}catch{}
 const sourceRecovery={restricted:Boolean(sourceLedger.session_error),reason:sourceLedger.session_error||null,retryAfter:sourceLedger.retry_after||null};
-const healthy=!brand.enabled||(Object.values(delivery).every(x=>x.healthy)&&stalePublishing===0&&queueHours>=2&&!sourceRecovery.restricted);
+// A low queue is a refill warning, not a publishing outage. Treating it as a
+// hard failure made the five-minute watchdog dispatch overlapping recovery
+// jobs immediately after a confirmed post. The watchdog must wake the
+// publisher only for actual delivery, processing, or source-session trouble.
+const healthy=!brand.enabled||(Object.values(delivery).every(x=>x.healthy)&&stalePublishing===0&&!sourceRecovery.restricted);
 const report={at:new Date().toISOString(),healthy,ready,publishing,stalePublishing,needsReview,lastInstagramPost:published[0]?.instagram_published_at||null,lastInstagramMediaId:published[0]?.instagram_media_id||null,hoursSinceLast,sourceAccounts:JSON.parse(await fs.readFile('config/sources.json','utf8')).instagram_source_accounts.map(x=>x.handle),recentErrors};
 Object.assign(report,{delivery,queueHours,queueLow:queueHours<2,sourceRecovery});
 await fs.writeFile('health-report.json',JSON.stringify(report,null,2)+'\n');
