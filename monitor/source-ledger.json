@@ -637,45 +637,37 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-10T14:46:48.021Z"
+      "checked_at": "2026-09-10T15:28:31.711Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-07T23:36:04.920Z",
-      "queued": [
-        "Dc_A0m-PBw3"
-      ],
-      "errors": [],
-      "finished_at": "2026-09-07T23:38:10.466Z"
-    },
     {
       "started_at": "2026-09-07T23:43:13.426Z",
       "queued": [
@@ -7489,7 +7481,96 @@
         }
       ],
       "finished_at": "2026-09-10T15:21:19.573Z"
+    },
+    {
+      "started_at": "2026-09-10T15:28:09.934Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdHGUHpMrHH/",
+          "stage": "capture_or_queue",
+          "error": "Dark landscape frame has ambiguous picture boundaries; hold for crop review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdE_Yl0SPLj/",
+          "stage": "capture_or_queue",
+          "error": "No reliable film rectangle; hold for crop review"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdEzwoeNeTI/",
+          "stage": "capture_or_queue",
+          "error": "Text inside movie picture cannot be safely cropped; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DdEEqYnqDYZ/",
+          "stage": "capture_or_queue",
+          "error": "No reliable film rectangle; hold for crop review"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdHHyyNuQSb/",
+          "stage": "capture_or_queue",
+          "error": "Text inside movie picture cannot be safely cropped; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdEYRwosqlF/",
+          "stage": "capture_or_queue",
+          "error": "Text inside movie picture cannot be safely cropped; hold for review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdEgIkTS-6z/",
+          "stage": "capture_or_queue",
+          "error": "No reliable film rectangle; hold for crop review"
+        }
+      ],
+      "finished_at": "2026-09-10T15:31:38.471Z"
     }
   ],
-  "next_account_index": 6
+  "next_account_index": 6,
+  "failed": {
+    "DdHGUHpMrHH": {
+      "error": "Dark landscape frame has ambiguous picture boundaries; hold for crop review",
+      "failed_at": "2026-09-10T15:29:01.642Z",
+      "retry_at": "2026-09-10T21:29:01.642Z"
+    },
+    "DdE_Yl0SPLj": {
+      "error": "No reliable film rectangle; hold for crop review",
+      "failed_at": "2026-09-10T15:29:16.434Z",
+      "retry_at": "2026-09-10T21:29:16.434Z"
+    },
+    "DCeu2jgy3BO": {
+      "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
+      "failed_at": "2026-09-10T15:29:26.003Z",
+      "retry_at": "2026-09-10T21:29:26.003Z"
+    },
+    "DdEzwoeNeTI": {
+      "error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "failed_at": "2026-09-10T15:29:57.071Z",
+      "retry_at": "2026-09-10T21:29:57.072Z"
+    },
+    "DdEEqYnqDYZ": {
+      "error": "No reliable film rectangle; hold for crop review",
+      "failed_at": "2026-09-10T15:30:41.149Z",
+      "retry_at": "2026-09-10T21:30:41.149Z"
+    },
+    "DdHHyyNuQSb": {
+      "error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "failed_at": "2026-09-10T15:31:16.564Z",
+      "retry_at": "2026-09-10T21:31:16.564Z"
+    },
+    "DdEYRwosqlF": {
+      "error": "Text inside movie picture cannot be safely cropped; hold for review",
+      "failed_at": "2026-09-10T15:31:27.799Z",
+      "retry_at": "2026-09-10T21:31:27.799Z"
+    },
+    "DdEgIkTS-6z": {
+      "error": "No reliable film rectangle; hold for crop review",
+      "failed_at": "2026-09-10T15:31:38.471Z",
+      "retry_at": "2026-09-10T21:31:38.471Z"
+    }
+  }
 }
