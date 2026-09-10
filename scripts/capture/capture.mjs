@@ -116,6 +116,22 @@ async function capture(reelUrl, options = {}) {
       group.push({ ...item, rangeStart, rangeEnd });
       groups.set(key, group);
     }
+    // Instagram sometimes delivers only tail byte ranges to the video element.
+    // Re-fetch the exact signed CDN URLs through the authenticated browser
+    // request context so ffprobe receives the initialization bytes as well.
+    for (const [url,parts] of groups) {
+      try{
+        const response=await context.request.get(url,{headers:{Range:'bytes=0-'}});
+        if(!response.ok())continue;
+        const body=await response.body(),headers=response.headers();
+        if(!body.length)continue;
+        const match=headers['content-range']?.match(/bytes (\d+)-(\d+)\/(\d+|\*)/);
+        const rangeStart=Number(match?.[1]||0),rangeEnd=match?Number(match[2]):body.length-1;
+        groups.set(url,[{body,type:headers['content-type']||'',url,headers,status:response.status(),rangeStart,rangeEnd}]);
+      }catch{
+        // The normal playback capture remains available below.
+      }
+    }
     const assembled = [...groups.values()]
       .map((parts) => ({ parts: parts.sort((a, b) => a.rangeStart - b.rangeStart), bytes: parts.reduce((sum, part) => sum + part.body.length, 0) }))
       .sort((a, b) => b.bytes - a.bytes);
