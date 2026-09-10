@@ -6480,7 +6480,7 @@
         },
         "recovered_at": "2026-09-10T18:20:19.288Z"
       },
-      "status": "publishing",
+      "status": "partial",
       "discovered_at": "2026-09-09T01:15:02.673Z",
       "key": "9fdc24fb029002f3babe0ce31bc7127490b98bd4c471e8aabc4cff74424b99f0",
       "recovery_error": "spawnSync ffprobe ENOENT",
@@ -6495,7 +6495,8 @@
       "instagram_publish_requested_at": "2026-09-10T18:23:00.826Z",
       "instagram_media_id": "18092840903128940",
       "instagram_published_at": "2026-09-10T18:23:00.826Z",
-      "threads_container_status": "IN_PROGRESS"
+      "threads_container_status": "IN_PROGRESS",
+      "publish_retry_at": "2026-09-10T18:38:14.837Z"
     },
     {
       "kind": "source_repost",
