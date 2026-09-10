@@ -21,6 +21,7 @@ const limit=5;
 const maxAttempts=32;
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 const commandTimeout=120_000;
+const collectorVersion=2;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -155,12 +156,14 @@ try{
  let attempts=0;
  for(const candidate of candidates){
   if(run.queued.length>=limit||attempts>=maxAttempts)break;
-  if(ledger.queued[candidate.shortcode]||Date.parse(ledger.failed[candidate.shortcode]?.retry_at||'')>Date.now())continue;
+  const previous=ledger.failed[candidate.shortcode];
+  if(ledger.queued[candidate.shortcode]||(previous?.collector_version===collectorVersion&&Date.parse(previous.retry_at||'')>Date.now()))continue;
   attempts++;
   try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);ledger.next_account_index=(sourceAccounts.indexOf(candidate.handle)+1)%sourceAccounts.length;}
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
-   ledger.failed[candidate.shortcode]={error:error.message.slice(0,300),failed_at:new Date().toISOString(),retry_at:new Date(Date.now()+6*60*60_000).toISOString()};
+   const metadataFailure=error.message.startsWith('Verified title, year');
+   ledger.failed[candidate.shortcode]={collector_version:collectorVersion,error:error.message.slice(0,300),failed_at:new Date().toISOString(),retry_at:new Date(Date.now()+(metadataFailure?30:180)*60_000).toISOString()};
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
   }
  }
