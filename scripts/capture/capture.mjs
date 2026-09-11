@@ -107,6 +107,22 @@ async function capture(reelUrl, options = {}) {
     await video.evaluate(element => { element.muted = false; return element.play().catch(() => { element.muted = true; return element.play(); }); });
     await page.waitForTimeout(3000);
     const sourceEvidence = await readExactPost(page, reelUrl);
+    // Instagram may expose the playable CDN URL on the element while its
+    // response events contain only partial or opaque range requests. Fetch
+    // currentSrc through the authenticated browser context so we retain a
+    // complete stream candidate for the same visible post.
+    try {
+      const currentSrc = await video.evaluate(element => element.currentSrc || element.src || "");
+      if (currentSrc && /^https?:/i.test(currentSrc)) {
+        const response = await context.request.get(currentSrc, { headers: { Range: "bytes=0-" } });
+        if (response.ok()) {
+          const body = await response.body();
+          if (body.length) candidates.push({ body, type: response.headers()["content-type"] || "", url: currentSrc, headers: response.headers(), status: response.status() });
+        }
+      }
+    } catch {
+      // Playback response candidates remain available as a fallback.
+    }
     const bufferDeadline = Date.now() + Math.min(240000, (sourceEvidence.duration + 15) * 1000);
     let fullyBuffered = false;
     while (Date.now() < bufferDeadline) {
