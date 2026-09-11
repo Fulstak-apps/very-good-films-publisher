@@ -3,6 +3,27 @@ import fs from 'node:fs/promises';
 const repo='Fulstak-apps/very-good-films-publisher';
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000});
 const remote=path=>JSON.parse(Buffer.from(JSON.parse(gh(['api',`repos/${repo}/contents/${path}`])).content,'base64').toString());
+const recoveryLock='monitor/recovery.lock';
+await fs.mkdir('monitor',{recursive:true});
+let recoveryHandle;
+try {
+ recoveryHandle=await fs.open(recoveryLock,'wx');
+ await recoveryHandle.writeFile(String(process.pid));
+} catch(error) {
+ if(error.code!=='EEXIST') throw error;
+ let pid=0,alive=false,age=0;
+ try { pid=Number((await fs.readFile(recoveryLock,'utf8')).trim()); age=Date.now()-(await fs.stat(recoveryLock)).mtimeMs; } catch(readError) { if(readError.code==='ENOENT') process.exit(0); }
+ if(pid>0) try { process.kill(pid,0); alive=true; } catch(signalError) { if(signalError.code!=='ESRCH') throw signalError; }
+ if(alive || age<15*60_000) process.exit(0);
+ await fs.unlink(recoveryLock).catch(unlinkError=>{if(unlinkError.code!=='ENOENT')throw unlinkError;});
+ recoveryHandle=await fs.open(recoveryLock,'wx');
+ await recoveryHandle.writeFile(String(process.pid));
+}
+const releaseRecoveryLock=async()=>{await recoveryHandle?.close().catch(()=>{});await fs.unlink(recoveryLock).catch(()=>{});};
+process.on('uncaughtException',async error=>{console.error(error);await releaseRecoveryLock();process.exit(1);});
+process.on('unhandledRejection',async error=>{console.error(error);await releaseRecoveryLock();process.exit(1);});
+process.on('SIGTERM',async()=>{await releaseRecoveryLock();process.exit(143);});
+process.on('SIGINT',async()=>{await releaseRecoveryLock();process.exit(130);});
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
 let collectorStatus='not_needed',collectorError;
 // Keep a verified fallback queue available when fresh source captures are
@@ -36,3 +57,4 @@ try{
 await fs.mkdir('logs',{recursive:true});
 await fs.writeFile('logs/local-recovery.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report));
+await releaseRecoveryLock();
