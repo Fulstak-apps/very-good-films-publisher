@@ -648,6 +648,12 @@
       "source_url": "https://www.instagram.com/theacenyc/reel/DbBMzN5RjmJ/",
       "queued_at": "2026-09-11T15:04:11.491Z",
       "asset_sha256": "2cd656b7c9392e8870757e118c6be94e95ffff755f84b5190b305fd141560b72"
+    },
+    "DdHrZwxtC-W": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DdHrZwxtC-W/",
+      "queued_at": "2026-09-11T15:07:19.285Z",
+      "asset_sha256": "c109c59d75f7a6e6169c79826a1ed10c3855952c03f15769d72524f3c0d9b39c"
     }
   },
   "checks": {
@@ -661,43 +667,37 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-11T15:00:28.590Z"
+      "checked_at": "2026-09-11T15:05:22.469Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-10T18:50:18.185Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-10T18:50:38.436Z"
-    },
     {
       "started_at": "2026-09-10T18:55:42.933Z",
       "queued": [],
@@ -3610,9 +3610,23 @@
         }
       ],
       "finished_at": "2026-09-11T15:04:16.110Z"
+    },
+    {
+      "started_at": "2026-09-11T15:04:25.292Z",
+      "queued": [
+        "DdHrZwxtC-W"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/DdJUViQtTgM/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-11T15:07:19.285Z"
     }
   ],
-  "next_account_index": 3,
+  "next_account_index": 4,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -3877,9 +3891,9 @@
     },
     "DdJUViQtTgM": {
       "collector_version": 7,
-      "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdJUViQtTgM-capture-diagnostic.json",
-      "failed_at": "2026-09-11T12:03:48.057Z",
-      "retry_at": "2026-09-11T15:03:48.057Z"
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-11T15:06:41.741Z",
+      "retry_at": "2026-09-11T15:36:41.741Z"
     },
     "DdJlAduNfWu": {
       "collector_version": 7,
