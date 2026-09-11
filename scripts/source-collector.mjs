@@ -44,10 +44,10 @@ async function lock(){
  }
 }
 async function profiles(handles=sourceAccounts,errors=[]){
- const context=await launch(true);
- try{
-  const found=[];
-  for(const handle of handles){
+ const found=[];
+ for(const handle of handles){
+  const context=await launch(true);
+  try{
    let page;
    try{
     page=await context.newPage();
@@ -67,10 +67,10 @@ async function profiles(handles=sourceAccounts,errors=[]){
    }catch(error){
     if(error instanceof SourceSessionError)throw error;
     errors.push({stage:'discover',source_handle:handle,error:error.message});
-   }finally{if(page)await page.close().catch(()=>{});}
+   }finally{if(page)await page.close().catch(()=>{});await context.close().catch(()=>{});}
   }
-  return found;
- }finally{await context.close();}
+ }
+ return found;
 }
 
 async function localTitleHint(caption){
