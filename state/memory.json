@@ -6259,20 +6259,35 @@
         "synopsis": "Bend It Like Beckham is a 2002 sports comedy-drama film directed by Gurinder Chadha from a screenplay by Chadha, Guljit Bindra, and Paul Mayeda Berges. It stars Parminder Nagra, Keira Knightley, Jonathan Rhys Meyers, Anupam Kher, Archie Panjabi, Shaznay Lewis, Frank Harper, and Juliet Stevenson. In Bend It Like Beckham, Jesminder Bhamra (Nagra) and Jules Paxton (Knightley) chase careers in professional football despite their parents' wishes. Development for the film began after Chadha, Bindra, and Berges completed the screenplay by early 2001. Nagra and Knightley were hired soon afterwards, with casting rounded out with the additions of Meyers, Kher, Stevenson, Lewis, and Panjabi by that May",
         "metadata_source": "https://en.wikipedia.org/wiki/Bend_It_Like_Beckham"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/583d4c7cef22cbb9095f22f77976f0015e68a82999f15248b5eefe34d8dbca5f.mp4?download=1",
-      "asset_sha256": "583d4c7cef22cbb9095f22f77976f0015e68a82999f15248b5eefe34d8dbca5f",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/9fa334005d4f1ddf0b1c91986de2d75ec084ba0442ec65fabe61bf85c866d1ca.mp4?download=1",
+      "asset_sha256": "9fa334005d4f1ddf0b1c91986de2d75ec084ba0442ec65fabe61bf85c866d1ca",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-08T04:25:32.927Z",
         "source_duration": 15.650249,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "width": 1080,
+        "height": 1920,
+        "duration": 15.6,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 370,
+          "width": 720,
+          "height": 432,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "tesseract-9-frames",
+          "checked_at": "2026-09-11T13:16:40.745Z"
+        },
+        "recovered_at": "2026-09-11T13:16:48.452Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-08T04:26:05.478Z",
       "key": "40e9bc159c8b49f4b739e8eb9b848fb0220e60ab4415a109e185573c5b2b8473",
-      "review_reason": "Clean movie crop required before publishing",
       "recovery_error": "spawnSync ffprobe ENOENT",
       "recovery_checked_at": "2026-09-11T07:09:11.478Z",
       "recovery_retry_at": "2026-09-11T13:09:11.479Z"
@@ -6725,20 +6740,35 @@
         "synopsis": "The Wind Rises (Japanese: 風立ちぬ, Hepburn: Kaze Tachinu; lit. 'The Wind Has Risen') is a 2013 Japanese animated historical drama film written and directed by Hayao Miyazaki based on his 2009 manga of the same name. Produced by Studio Ghibli and distributed by Toho, the film stars the voices of Hideaki Anno, Miori Takimoto, Hidetoshi Nishijima, Masahiko Nishimura, Morio Kazama, Keiko Takeshita, Mirai Shida, Jun Kunimura, Shinobu Otake, and Nomura Mansai. The film portrays a fictionalised account of the life of Japanese aeronautical engineer Jiro Horikoshi, in particular his engineering career from his time at the University of Tokyo in 1923 to the first test flight of the Mitsubishi Ka-14 on 4 ",
         "metadata_source": "https://en.wikipedia.org/wiki/The_Wind_Rises"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/cb56a4d3556888c9bcce04370cde6ca91d68bf27a52ded2a898c47ca272b9e64.mp4?download=1",
-      "asset_sha256": "cb56a4d3556888c9bcce04370cde6ca91d68bf27a52ded2a898c47ca272b9e64",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/fcff1d628f3afafc839f78c08d9381951bdc6b12940c2be01b8cae712fd311e2.mp4?download=1",
+      "asset_sha256": "fcff1d628f3afafc839f78c08d9381951bdc6b12940c2be01b8cae712fd311e2",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-09T01:43:19.501Z",
         "source_duration": 89.8,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "width": 1080,
+        "height": 1920,
+        "duration": 89.8,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 28,
+          "width": 960,
+          "height": 632,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "tesseract-9-frames",
+          "checked_at": "2026-09-11T13:16:54.327Z"
+        },
+        "recovered_at": "2026-09-11T13:17:29.767Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-09T01:44:02.582Z",
       "key": "56d8b04836142d7ad4bd2fdb3cc295a89c1e65549c8b7ad1716bc5478230fb04",
-      "review_reason": "Clean movie crop required before publishing",
       "recovery_error": "spawnSync ffprobe ENOENT",
       "recovery_checked_at": "2026-09-11T07:09:11.480Z",
       "recovery_retry_at": "2026-09-11T13:09:11.480Z"
@@ -6946,20 +6976,35 @@
         "synopsis": "Don't Be a Menace to South Central While Drinking Your Juice in the Hood (or simply Don't Be a Menace) is a 1996 American hood comedy film directed by Paris Barclay in his feature directorial debut, written by and starring Shawn Wayans and Marlon Wayans along with contributions by Phil Beauman. In the film, two cousins explore the surreal, comedic world of South Central Los Angeles. Don't Be a Menace spoofs several 1990s hood films, notably Menace II Society (1993), South Central, Juice (both 1992), and Boyz n the Hood (1991). It features cameos by actors from those films, often parodying their original roles. Produced by Keenen Ivory Wayans, it is the Wayans' second film to parody black fil",
         "metadata_source": "https://en.wikipedia.org/wiki/Don't_Be_a_Menace_to_South_Central_While_Drinking_Your_Juice_in_the_Hood"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/1c98e6da0db12a9d5ec78094d14a599e87ffb6cbfb62b387547cf62e08bbefdd.mp4?download=1",
-      "asset_sha256": "1c98e6da0db12a9d5ec78094d14a599e87ffb6cbfb62b387547cf62e08bbefdd",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/ec6e0501b0d17130958b44dc61c1654f15a734d5fb51b0064d5435d093180273.mp4?download=1",
+      "asset_sha256": "ec6e0501b0d17130958b44dc61c1654f15a734d5fb51b0064d5435d093180273",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-09T02:29:55.187Z",
         "source_duration": 7.801904,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "width": 1080,
+        "height": 1920,
+        "duration": 7.8,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 370,
+          "width": 720,
+          "height": 540,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "tesseract-9-frames",
+          "checked_at": "2026-09-11T13:17:32.926Z"
+        },
+        "recovered_at": "2026-09-11T13:17:37.613Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-09T02:30:41.136Z",
       "key": "f1fa965415db87b0dddf84f520d55df850f5f579550e33c45d56f741c984e7b1",
-      "review_reason": "Clean movie crop required before publishing",
       "recovery_error": "spawnSync ffprobe ENOENT",
       "recovery_checked_at": "2026-09-11T07:09:11.481Z",
       "recovery_retry_at": "2026-09-11T13:09:11.481Z"
@@ -7261,20 +7306,35 @@
         "synopsis": "Eat Pray Love is a 2010 American biographical romantic drama film, directed and co-written by Ryan Murphy and starring Julia Roberts as Elizabeth Gilbert. It is based on Gilbert's 2006 memoir, and was released in the United States on August 13, 2010, to mixed reviews from critics. The film was a financial success, grossing $205 million against a $60 million budget.",
         "metadata_source": "https://en.wikipedia.org/wiki/Eat_Pray_Love"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/fbae5f31e293865548bb27be54104b9efb73c4a100fe5d767fe37b87166b3a72.mp4?download=1",
-      "asset_sha256": "fbae5f31e293865548bb27be54104b9efb73c4a100fe5d767fe37b87166b3a72",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/41e64077df3229887d2867ff32d8a17588d1811740a04163e0db25999624c646.mp4?download=1",
+      "asset_sha256": "41e64077df3229887d2867ff32d8a17588d1811740a04163e0db25999624c646",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-09T03:11:35.493Z",
         "source_duration": 39.333333333333336,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "width": 1080,
+        "height": 1920,
+        "duration": 39.333333,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 62,
+          "width": 720,
+          "height": 836,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "tesseract-9-frames",
+          "checked_at": "2026-09-11T13:17:44.016Z"
+        },
+        "recovered_at": "2026-09-11T13:18:05.816Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-09T03:12:18.530Z",
       "key": "03e50a03507e42d6b153efbdcfb5a6567c9b854c408ce0dc2cbef87eb674f54c",
-      "review_reason": "Clean movie crop required before publishing",
       "recovery_error": "spawnSync ffprobe ENOENT",
       "recovery_checked_at": "2026-09-11T07:15:18.148Z",
       "recovery_retry_at": "2026-09-11T13:15:18.149Z"
@@ -7714,9 +7774,9 @@
       "discovered_at": "2026-09-09T04:39:33.056Z",
       "key": "2c2e894179c731a442a725c82416a9d4148bab2e8b1ec8f3fdc3f6caa4beeb18",
       "review_reason": "Clean movie crop required before publishing",
-      "recovery_error": "spawnSync ffprobe ENOENT",
-      "recovery_checked_at": "2026-09-11T07:15:18.150Z",
-      "recovery_retry_at": "2026-09-11T13:15:18.150Z"
+      "recovery_error": "No reliable film rectangle; hold for crop review",
+      "recovery_checked_at": "2026-09-11T13:18:06.426Z",
+      "recovery_retry_at": "2026-09-11T19:18:06.426Z"
     },
     {
       "kind": "source_repost",
