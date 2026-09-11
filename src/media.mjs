@@ -5,13 +5,17 @@ import {Transform} from 'node:stream';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {detectCleanCrop} from './clean-crop.mjs';
+
 export function trustedURL(value,hosts){const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port&&u.port!=='443'||!hosts.includes(u.hostname))throw new Error('Media/feed URL is not on the configured HTTPS host allowlist');return u;}
+
 export async function download(url,path,hosts){
  trustedURL(url,hosts);const r=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(180000)});if(!r.ok||!r.body)throw new Error(`Asset download HTTP ${r.status}`);let bytes=0;const max=1024*1024*1024;
  const temporary=path+'.partial';
  try{await pipeline(r.body,new Transform({transform(chunk,enc,cb){bytes+=chunk.length;cb(bytes>max?new Error('Source exceeds 1 GiB download limit'):null,chunk);}}),createWriteStream(temporary));await fs.rename(temporary,path);}catch(error){await fs.rm(temporary,{force:true});throw error;}
 }
+
 export function probe(path){return JSON.parse(execFileSync('ffprobe',['-v','error','-show_streams','-show_format','-of','json',path],{maxBuffer:4*1024*1024}).toString());}
+
 export function formatVideo(input,output,scene){
  const duration=scene.end-scene.start;if(!(duration>0&&duration<=90))throw new Error('Invalid clip duration');
  // Preserve the complete frame by default. Source reposts remove their top and
@@ -24,13 +28,17 @@ export function formatVideo(input,output,scene){
   cropQA=detectCleanCrop(input,scene,v);
   filter=`crop=${cropQA.width}:${cropQA.height}:${cropQA.x}:${cropQA.y},scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1`;
  }
- const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=44:H-h-252:format=auto[branded]`;
+ // Moved logo up from H-h-252 to H-h-320 to avoid being clipped by mobile UI (home bars/captions).
+ const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=44:H-h-320:format=auto[branded]`;
  const args=['-hide_banner','-loglevel','error','-y','-ss',String(scene.start),'-i',input,'-i','assets/very-good-films-logo.png','-t',String(duration),'-filter_complex',branded,'-map','[branded]','-map','0:a:0?','-r','30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-ar','48000','-ac','2','-movflags','+faststart',output];
  execFileSync('ffmpeg',args,{timeout:600000,stdio:'pipe'});return {...verifyVideo(output,duration),...(cropQA?{clean_crop:cropQA}:{})};
 }
+
 export function verifyVideo(file,expected){const p=probe(file),v=p.streams.find(s=>s.codec_type==='video'),a=p.streams.find(s=>s.codec_type==='audio'),d=Number(p.format.duration);if(!v||v.codec_name!=='h264'||v.width!==1080||v.height!==1920||v.pix_fmt!=='yuv420p'||!a||a.codec_name!=='aac'||!Number.isFinite(d)||Math.abs(d-expected)>1)throw new Error('Rendered Reel failed video/audio/duration QA');return {width:v.width,height:v.height,duration:d,audio:a.codec_name,video:v.codec_name};}
+
 export async function sha256(file){const h=createHash('sha256');for await(const chunk of createReadStream(file))h.update(chunk);return h.digest('hex');}
-export async function upload(file,hash,{repository:repositoryOverride}={}){const origin=process.env.VGF_MEDIA_ORIGIN,token=process.env.VGF_UPLOAD_TOKEN;if(!origin||!token)return uploadGitHub(file,hash,repositoryOverride);const url=new URL(`/media/${hash}.mp4`,origin);if(url.protocol!=='https:')throw new Error('Media origin must use HTTPS');const stat=await fs.stat(file);if(stat.size>95*1024*1024)throw new Error('Rendered video exceeds upload limit');const r=await fetch(url,{method:'PUT',headers:{Authorization:`Bearer ${token}`,'Content-Type':'video/mp4','Content-Length':String(stat.size)},body:createReadStream(file),duplex:'half',signal:AbortSignal.timeout(180000)});if(!r.ok)throw new Error(`Media upload HTTP ${r.status}`);const check=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(15000)});if(!check.ok||Number(check.headers.get('content-length'))!==stat.size)throw new Error('Public media verification failed');return url.href;}
+
+export async function upload(file,hash,{repository:repositoryOverride}={}){const origin=process.env.VGF_MEDIA_ORIGIN,token=process.env.VGF_UPLOAD_TOKEN;if(!origin||!token)return uploadGitHub(file,hash,repositoryOverride);const url=new URL(`/media/${hash}.mp4`,origin);if(url.protocol!=='https:')throw new Error('Media origin must use HTTPS');const stat=await fs.stat(file);if(stat.size>95*1024*1024)throw new Error('Rendered video exceeds upload limit');const r=await fetch(url,{method:'PUT',headers:{Authorization:`Bearer ${token}`,'Content-Type':'video/mp4','Content-Length':String(stat.size)},body:createReadStream(file),duplex:'half',signal:AbortSignal.timeout(180000)});if(!r.ok)throw new Error(`Media upload HTTP ${r.status}`);const check=await fetch(url, {method:'HEAD',signal:AbortSignal.timeout(15000)});if(!check.ok||Number(check.headers.get('content-length'))!==stat.size)throw new Error('Public media verification failed');return url.href;}
 
 async function uploadGitHub(file,hash,repositoryOverride){
  const repository=repositoryOverride||process.env.GITHUB_REPOSITORY;if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository||''))throw new Error('Set GITHUB_REPOSITORY or configure Cloudflare media storage');

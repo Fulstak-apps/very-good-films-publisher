@@ -11,10 +11,21 @@ import { navigateSource } from "./source-session.mjs";
 
 const execFileAsync = promisify(execFile);
 
-const chromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-// This is the already-authenticated source-viewing profile used by the working
-// local repost monitor. It only reads the three allowlisted source accounts;
-// all VGF output is rendered and published through this repository.
+async function resolveChromePath() {
+  const commonPaths = [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+    "/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta",
+  ];
+  for (const p of commonPaths) {
+    try {
+      await fs.access(p);
+      return p;
+    } catch {}
+  }
+  throw new Error("Google Chrome not found in standard Applications paths.");
+}
+
 const profileDir = process.env.VGF_SOURCE_PROFILE_DIR || path.join(os.homedir(), "Library", "Application Support", "VeryGoodFilms", "InstagramSourceProfile");
 const outputDir = path.resolve("work", "instagram-mirror");
 
@@ -31,6 +42,7 @@ async function cachedCapture(shortcode,reelUrl,destination){
 
 async function launch(headless = false) {
   await fs.mkdir(profileDir, { recursive: true });
+  const chromePath = process.env.VGF_CHROME_PATH || await resolveChromePath();
   let lastError;
   for (let attempt = 0; attempt < 6; attempt += 1) {
     try {
@@ -53,9 +65,6 @@ async function launch(headless = false) {
 async function assertSourceLogin(page) {
   await page.goto("https://www.instagram.com/", { waitUntil: "domcontentloaded", timeout: 15_000 });
   await page.waitForTimeout(2500);
-  // The shared source-viewing profile is authenticated as @rapwire247. The
-  // inbox route is sometimes lazy-rendered, so accept either stable signed-in
-  // signal instead of falsely declaring a healthy session logged out.
   const profileLink = page.locator('a[href="/direct/inbox/"], a[href="/rapwire247/"]');
   if (!(await profileLink.count())) {
     throw new Error("Source profile is not logged into Instagram. Run capture.mjs login.");
@@ -68,8 +77,6 @@ async function login() {
   try { await navigateSource(page, "https://www.instagram.com/"); }
   catch (error) { console.error(error.message); }
   console.log("Sign into your source-viewing Instagram account in this dedicated window, then close the window. The login will be reused by scheduled runs.");
-  // Login is intentionally interactive and may take longer than Playwright's
-  // default 30-second event timeout.
   await new Promise((resolve) => context.once("close", resolve));
 }
 
@@ -103,14 +110,9 @@ async function capture(reelUrl, options = {}) {
     await page.waitForTimeout(2500);
     const video = page.locator("video:visible").first();
     await video.waitFor({ state: "visible", timeout: 15_000 });
-    // Clicking blindly may pause autoplay, leaving only the first media range.
     await video.evaluate(element => { element.muted = false; return element.play().catch(() => { element.muted = true; return element.play(); }); });
     await page.waitForTimeout(3000);
     const sourceEvidence = await readExactPost(page, reelUrl);
-    // Instagram may expose the playable CDN URL on the element while its
-    // response events contain only partial or opaque range requests. Fetch
-    // currentSrc through the authenticated browser context so we retain a
-    // complete stream candidate for the same visible post.
     try {
       const currentSrc = await video.evaluate(element => element.currentSrc || element.src || "");
       if (currentSrc && /^https?:/i.test(currentSrc)) {
@@ -121,7 +123,7 @@ async function capture(reelUrl, options = {}) {
         }
       }
     } catch {
-      // Playback response candidates remain available as a fallback.
+      // Fallback to captured ranges.
     }
     const bufferDeadline = Date.now() + Math.min(240000, (sourceEvidence.duration + 15) * 1000);
     let fullyBuffered = false;
@@ -130,7 +132,6 @@ async function capture(reelUrl, options = {}) {
       if (buffered.end >= buffered.duration - 0.25) { fullyBuffered = true; break; }
       await page.waitForTimeout(2500);
     }
-    // Let response.body() handlers finish after the last buffered segment.
     await page.waitForTimeout(1500);
     if (!candidates.length) throw new Error("No authenticated video response was captured from Instagram.");
     const groups = new Map();
@@ -146,9 +147,6 @@ async function capture(reelUrl, options = {}) {
       group.push({ ...item, rangeStart, rangeEnd });
       groups.set(key, group);
     }
-    // Instagram sometimes delivers only tail byte ranges to the video element.
-    // Re-fetch the exact signed CDN URLs through the authenticated browser
-    // request context so ffprobe receives the initialization bytes as well.
     for (const [url,parts] of groups) {
       try{
         const response=await context.request.get(url,{headers:{Range:'bytes=0-'}});
@@ -158,9 +156,7 @@ async function capture(reelUrl, options = {}) {
         const match=headers['content-range']?.match(/bytes (\d+)-(\d+)\/(\d+|\*)/);
         const rangeStart=Number(match?.[1]||0),rangeEnd=match?Number(match[2]):body.length-1;
         groups.set(url,[{body,type:headers['content-type']||'',url,headers,status:response.status(),rangeStart,rangeEnd}]);
-      }catch{
-        // The normal playback capture remains available below.
-      }
+      }catch{}
     }
     const assembled = [...groups.values()]
       .map((parts) => ({ parts: parts.sort((a, b) => a.rangeStart - b.rangeStart), bytes: parts.reduce((sum, part) => sum + part.body.length, 0) }))
@@ -188,7 +184,6 @@ async function capture(reelUrl, options = {}) {
           else if (!videoStream && hasAudio) matchedAudio.push(candidatePath);
         } catch {
           diagnostics.push({index,result:'unreadable'});
-          // Ignore incomplete or duplicate streaming groups.
         }
       }
       if (matchedVideos.length !== 1) {
