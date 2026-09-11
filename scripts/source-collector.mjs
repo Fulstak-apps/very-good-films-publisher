@@ -47,7 +47,6 @@ async function profiles(handles=sourceAccounts,errors=[]){
  const found=[];
  for(const handle of handles){
   const context=await launch(true);
-  try{
    let page;
    try{
     page=await context.newPage();
@@ -68,7 +67,6 @@ async function profiles(handles=sourceAccounts,errors=[]){
     if(error instanceof SourceSessionError)throw error;
     errors.push({stage:'discover',source_handle:handle,error:error.message});
    }finally{if(page)await page.close().catch(()=>{});await context.close().catch(()=>{});}
-  }
  }
  return found;
 }
