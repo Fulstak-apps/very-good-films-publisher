@@ -34,38 +34,8 @@ export function detectCleanCrop(input,scene,dimensions){
  // Intertitles and dialogue cards are part of silent/public-domain masters,
  // not repost-page captions. Preserve the verified master frame intact.
  if(scene.preserve_picture)return {...rect,layout:CLEAN_LAYOUT,sampled_frames:times.length,text_check:'verified-classic-master-preserved',checked_at:new Date().toISOString()};
- const originalHeight=rect.height;
- const dir=mkdtempSync(path.join(os.tmpdir(),'vgf-crop-'));
- try{
-  for(let pass=0;pass<4;pass++){
-   let top=0,bottom=rect.height;
-   let centralHits=0;
-   let topHits=0,bottomHits=0;
-   for(let i=0;i<times.length;i++){
-    const file=path.join(dir,`${i}.png`);
-    execFileSync('ffmpeg',['-v','error','-y','-ss',String(times[i]),'-i',input,'-frames:v','1','-vf',`crop=${rect.width}:${rect.height}:${rect.x}:${rect.y}`,file]);
-    const tsv=execFileSync('tesseract',[file,'stdout','--psm','11','tsv'],{maxBuffer:4*1024*1024,stdio:['ignore','pipe','pipe']}).toString();
-    for(const row of tsv.trim().split('\n').slice(1)){
-     const c=row.split('\t');if(Number(c[10])<75||!/[A-Za-z]{3}/.test(c[11]||''))continue;
-     const y=Number(c[7]),end=y+Number(c[9]);
-     // Subtitle and repost-caption bands often sit inside the lower third of
-     // the detected picture rectangle. Remove those bands when doing so keeps
-     // most of the frame; only text near the visual center remains a hard hold.
-     if(end<rect.height*.45){top=Math.max(top,end+10);topHits++;}
-     else if(y>rect.height*.55){bottom=Math.min(bottom,y-10);bottomHits++;}
-     else centralHits++;
-   }
-   }
-   // A single OCR hit can be a face, a sign, or a frame of dialogue. Require
-   // repeated evidence across the sampled frames before removing any image
-   // band, otherwise the crop can cut through a character's head or shoulders.
-   if(centralHits>=3)throw Error('Text inside movie picture cannot be safely cropped; hold for review');
-   if(topHits<3)top=0;
-   if(bottomHits<3)bottom=rect.height;
-   if(top===0&&bottom===rect.height)return {...rect,layout:CLEAN_LAYOUT,sampled_frames:times.length,text_check:'tesseract-9-frames',checked_at:new Date().toISOString()};
-   rect={...rect,y:rect.y+even(top+1),height:even(bottom-top)};
-   if(rect.height<originalHeight*.5)throw Error('Text removal would discard too much movie picture; hold for review');
-  }
-  throw Error('Text remains after crop; hold for review');
- }finally{rmSync(dir,{recursive:true,force:true});}
+ // Preserve subtitles and on-screen dialogue. The bounds above remove only
+ // external social panels; no OCR-driven trimming is allowed inside the film
+ // rectangle because it can cut subtitles, faces, or other story content.
+ return {...rect,layout:CLEAN_LAYOUT,sampled_frames:times.length,text_check:'subtitles-preserved',checked_at:new Date().toISOString()};
 }
