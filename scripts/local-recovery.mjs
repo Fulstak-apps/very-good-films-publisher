@@ -29,7 +29,9 @@ let collectorStatus='not_needed',collectorError;
 // Refill before the live queue reaches zero. The supervisor lock prevents
 // this longer capture from overlapping the next five-minute health pass.
 const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
-if(brand.enabled&&buffered<brand.queue_target){
+const sourceBuffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)&&x.program!=='public_domain_classics').length;
+const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_minimum||0));
+if(brand.enabled&&sourceBuffered<sourceTarget){
  try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});collectorStatus='completed';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
  if(buffered===0)try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
 }

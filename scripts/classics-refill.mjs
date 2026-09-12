@@ -7,7 +7,9 @@ const classicFormatterVersion=2;
 const staged=await fs.readdir(directory);
 const buffered=memory.items.filter(x=>x.program==='public_domain_classics'&&['ready','publishing','partial'].includes(x.status)).length;
 const pending=staged.filter(name=>!memory.items.some(x=>`${x.key}.json`===name&&x.program==='public_domain_classics')).length;
-if(buffered+pending>=9){console.log('Classics buffer full');process.exit(0);}
+// Classics are a daily accent, not the emergency fallback inventory. Keeping
+// only the daily allotment prevents them from crowding out approved sources.
+if(buffered+pending>=3){console.log('Classics buffer full');process.exit(0);}
 const allowed=new Set(['imdb:tt0051744','imdb:tt0055830','imdb:tt0042369','imdb:tt0063350']);
 const candidates=memory.items.filter(x=>x.rights?.status==='public_domain'&&allowed.has(x.film.id)&&x.video_url&&!x.instagram_media_id&&!x.threads_media_id&&!staged.includes(`${x.key}.json`)&&!(failures[x.key]?.formatter_version===classicFormatterVersion&&Date.parse(failures[x.key]?.retry_after)>Date.now()));
 let count=0;
