@@ -2421,6 +2421,7 @@
     },
     {
       "key": "33ae1e0e43106002e2fb9ec5f31d8f5afc41f8150a28f5372381dcd91f745bd1",
+      "program": "public_domain_classics",
       "film": {
         "id": "imdb:tt0055830",
         "imdb_id": "tt0055830",
@@ -2464,7 +2465,7 @@
       },
       "qa": {
         "identity_verified": true,
-        "scene_verified": false,
+        "scene_verified": true,
         "media_verified": true,
         "media": {
           "width": 1080,
@@ -2472,19 +2473,31 @@
           "duration": 45,
           "audio": "aac",
           "video": "h264"
-        }
+        },
+        "width": 1080,
+        "height": 1920,
+        "duration": 45,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 1080,
+          "height": 1916,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "verified-classic-master-preserved",
+          "checked_at": "2026-09-12T08:14:37.761Z"
+        },
+        "black_and_white": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-09-12T08:14:52.607Z"
       },
-      "category": "cult",
-      "priority": 4,
-      "status": "retired",
-      "discovered_at": "2026-09-06T00:32:36.427Z",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/ddabdeeaff0306c90a3e099c236b48590b0086b8c5c4cddcfbdb1c33992512d0.mp4?download=1",
+      "asset_sha256": "ddabdeeaff0306c90a3e099c236b48590b0086b8c5c4cddcfbdb1c33992512d0",
       "caption_style": "film_info",
-      "instagram_caption": "CARNIVAL OF SOULS (1962) 🎬\n\nAfter surviving a car accident, a young woman is drawn toward a deserted carnival and haunted by an apparition.\n\nDirected by Herk Harvey\nStarring Candace Hilligoss, Frances Feist, Sidney Berger\n\nVery Good Films.",
-      "threads_caption": "CARNIVAL OF SOULS (1962) 🎬\n\nAfter surviving a car accident, a young woman is drawn toward a deserted carnival and haunted by an apparition.\n\nDirected by Herk Harvey\nStarring Candace Hilligoss, Frances Feist, Sidney Berger\n\nVery Good Films.",
-      "asset_sha256": "57b8664235ffcc3efa00115802dd39e3dff1bfee1b7d049427abbcbdd2d4286c",
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/57b8664235ffcc3efa00115802dd39e3dff1bfee1b7d049427abbcbdd2d4286c.mp4?download=1",
-      "review_reason": "Automatically spaced timecode requires individual scene review",
-      "retired_reason": "Catalog disabled; waiting for approved source feed"
+      "status": "ready",
+      "discovered_at": "2026-09-12T08:15:07.781Z"
     },
     {
       "key": "fcf9463de891c3af61a6d13a8727105427246c0c51ea5c8c803fe2433dffc576",
