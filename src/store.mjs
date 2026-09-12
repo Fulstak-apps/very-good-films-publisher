@@ -29,7 +29,7 @@ export async function withLock(fn, lockPath='state/runner.lock'){
   let pid,age=0;try{pid=Number((await fs.readFile(lockPath,'utf8')).trim());age=Date.now()-(await fs.stat(lockPath)).mtimeMs;}catch(error){if(error.code==='ENOENT')return withLock(fn,lockPath);throw error;}
   let alive=Number.isInteger(pid)&&pid>0; if(alive)try{process.kill(pid,0);}catch(error){if(error.code==='ESRCH')alive=false;else throw error;}
   if(!alive&&age>60_000){await fs.unlink(lockPath).catch(error=>{if(error.code!=='ENOENT')throw error;});return withLock(fn,lockPath);}
-  throw new Error(\`Another process (\${pid||'unknown'}) holds \${lockPath}\`);
+  throw new Error(`Another process (${pid||'unknown'}) holds ${lockPath}`);
  }
  try{await h.writeFile(String(process.pid));return await fn();}finally{await h.close();await fs.unlink(lockPath).catch(()=>{});}
 }
