@@ -113,6 +113,7 @@ async function queue(candidate,ledger){
  // captions should be deferred quickly, leaving the collector capacity for a
  // clip that can actually be published with complete film information.
  const source_caption=(evidence.source_caption_text||'').trim();
+ if(/(?:@rapwire247|\brap\s*wire\b)/i.test(source_caption))throw new Error('RapWire-branded source is prohibited on Very Good Films');
  let source_details=await enrichSourceMetadata(source_caption);
  if(!sourceDetailsComplete(source_details)){
   const title_hint=await localTitleHint(source_caption);
