@@ -21,7 +21,12 @@ export function sourceHints(caption){
  // generic sentence.
  const proseTitle=text.match(/\b([A-Z][A-Za-z0-9'’:-]{1,50})\s+(?:Season\s+\d+|opening\s+(?:title|credits)|spoilers?|finale)\b/);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
- const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||contextTitle?.[1]||availableMatch?.[1]).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
+ // Some source pages put the title only in a single title hashtag. Treat it
+ // as a lookup hint only when it is unambiguous; actor and topic tag clouds
+ // are never used to guess a movie.
+ const tags=[...raw.matchAll(/#([A-Za-z][A-Za-z0-9]{2,80})/g)].map(x=>x[1]);
+ const hashtagTitle=tags.length===1?tags[0]:undefined;
+ const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||contextTitle?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
 }
