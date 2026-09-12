@@ -50,6 +50,12 @@ jobs:
         run: |
           git config user.name 'Very Good Films'
           git config user.email 'actions@users.noreply.github.com'
+      - name: Syntax preflight
+        run: |
+          set -euo pipefail
+          while IFS= read -r file; do
+            node --check "$file"
+          done < <(rg --files -g '*.mjs' -g '!node_modules/**')
       - name: Test publisher
         if: github.event_name == 'push'
         run: npm test
