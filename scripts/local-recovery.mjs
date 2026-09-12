@@ -26,11 +26,12 @@ process.on('SIGTERM',async()=>{await releaseRecoveryLock();process.exit(143);});
 process.on('SIGINT',async()=>{await releaseRecoveryLock();process.exit(130);});
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
 let collectorStatus='not_needed',collectorError;
-// Keep a verified fallback queue available when fresh source captures are
-// temporarily too vague or have overlays that cannot be removed safely.
-if(brand.enabled&&!memory.items.some(x=>['ready','partial','publishing'].includes(x.status))){
+// Refill before the live queue reaches zero. The supervisor lock prevents
+// this longer capture from overlapping the next five-minute health pass.
+const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
+if(brand.enabled&&buffered<brand.queue_target){
  try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});collectorStatus='completed';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
- try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
+ if(buffered===0)try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
 }
 const runs=JSON.parse(gh(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));
 const active=runs.some(x=>['queued','in_progress','waiting','pending','requested'].includes(x.status));
