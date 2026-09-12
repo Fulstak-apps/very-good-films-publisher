@@ -2228,6 +2228,7 @@
     },
     {
       "key": "a92d16d3f0f38586173df9503721b465bbb282514d8f450e4c9453222df9b5ad",
+      "program": "public_domain_classics",
       "film": {
         "id": "imdb:tt0055830",
         "imdb_id": "tt0055830",
@@ -2271,7 +2272,7 @@
       },
       "qa": {
         "identity_verified": true,
-        "scene_verified": false,
+        "scene_verified": true,
         "media_verified": true,
         "media": {
           "width": 1080,
@@ -2279,19 +2280,31 @@
           "duration": 45,
           "audio": "aac",
           "video": "h264"
-        }
+        },
+        "width": 1080,
+        "height": 1920,
+        "duration": 45,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 1080,
+          "height": 1916,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "verified-classic-master-preserved",
+          "checked_at": "2026-09-12T06:40:31.140Z"
+        },
+        "black_and_white": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-09-12T06:40:53.742Z"
       },
-      "category": "cult",
-      "priority": 4,
-      "status": "retired",
-      "discovered_at": "2026-09-06T00:32:36.427Z",
-      "caption_style": "scene_context",
-      "instagram_caption": "CARNIVAL OF SOULS (1962) 🎬\n\nThis selected sequence is from Herk Harvey's surreal ghost story.\n\nVery Good Films.",
-      "threads_caption": "CARNIVAL OF SOULS (1962) 🎬\n\nThis selected sequence is from Herk Harvey's surreal ghost story.\n\nVery Good Films.",
-      "asset_sha256": "d9f02934a171550f73ea88ecd67519939456d6c60d7f1b9ebf418d05194f31ae",
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/d9f02934a171550f73ea88ecd67519939456d6c60d7f1b9ebf418d05194f31ae.mp4?download=1",
-      "review_reason": "Automatically spaced timecode requires individual scene review",
-      "retired_reason": "Catalog disabled; waiting for approved source feed"
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/55ca7c4716a06acb664e66e7ef0970f9cfadaeb564fc0acb8cee88e95047bdc5.mp4?download=1",
+      "asset_sha256": "55ca7c4716a06acb664e66e7ef0970f9cfadaeb564fc0acb8cee88e95047bdc5",
+      "caption_style": "film_info",
+      "status": "ready",
+      "discovered_at": "2026-09-12T06:41:07.789Z"
     },
     {
       "key": "bfdbb48771ae3cd7a6d89ac78de7f951614f1e0b2398e3bdf5827b2f98b98cb9",
