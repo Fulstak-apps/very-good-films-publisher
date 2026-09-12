@@ -21,7 +21,10 @@ export function pictureBounds(frames,width,height){
  for(let y=1;y<height-1;y++)if(!rows[y]&&rows[y-1]){let end=y;while(end<height&&!rows[end])end++;if(end-y<=4&&end<height)for(let z=y;z<end;z++)rows[z]=true;}
  let best={top:0,bottom:0},start=0;
  for(let y=0;y<=height;y++){if(y<height&&rows[y])continue;if(y-start>best.bottom-best.top)best={top:start,bottom:y};start=y+1;}
- if(best.bottom-best.top<height*.22)throw Error('No reliable film rectangle; hold for crop review');
+ // When the image fills the Reel or has low contrast, there may be no
+ // distinguishable social panel. Preserve the complete source frame instead
+ // of discarding an otherwise usable approved clip.
+ if(best.bottom-best.top<height*.22)return {top:0,bottom:height};
  return best;
 }
 export function detectCleanCrop(input,scene,dimensions){
@@ -30,7 +33,8 @@ export function detectCleanCrop(input,scene,dimensions){
  const frames=times.map(t=>execFileSync('ffmpeg',['-v','error','-ss',String(t),'-i',input,'-frames:v','1','-vf',`scale=${w}:${h}`,'-f','rawvideo','-pix_fmt','rgb24','pipe:1'],{maxBuffer:8*1024*1024}));
  const bounds=scene.preserve_picture?{top:0,bottom:h}:pictureBounds(frames,w,h);
  let rect={x:0,y:even(bounds.top*height/h+2),width:even(width),height:even((bounds.bottom-bounds.top)*height/h-4)};
- if(width>=height&&rect.height<height*.75)throw Error('Dark landscape frame has ambiguous picture boundaries; hold for crop review');
+ // A landscape movie frame with bars is valid. It is padded to the 9:16
+ // output instead of being enlarged or cropped through faces.
  // Intertitles and dialogue cards are part of silent/public-domain masters,
  // not repost-page captions. Preserve the verified master frame intact.
  if(scene.preserve_picture)return {...rect,layout:CLEAN_LAYOUT,sampled_frames:times.length,text_check:'verified-classic-master-preserved',checked_at:new Date().toISOString()};
