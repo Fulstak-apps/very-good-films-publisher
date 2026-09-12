@@ -2517,6 +2517,7 @@
     },
     {
       "key": "fcf9463de891c3af61a6d13a8727105427246c0c51ea5c8c803fe2433dffc576",
+      "program": "public_domain_classics",
       "film": {
         "id": "imdb:tt0055830",
         "imdb_id": "tt0055830",
@@ -2560,7 +2561,7 @@
       },
       "qa": {
         "identity_verified": true,
-        "scene_verified": false,
+        "scene_verified": true,
         "media_verified": true,
         "media": {
           "width": 1080,
@@ -2568,19 +2569,31 @@
           "duration": 45,
           "audio": "aac",
           "video": "h264"
-        }
+        },
+        "width": 1080,
+        "height": 1920,
+        "duration": 45,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 1080,
+          "height": 1916,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "verified-classic-master-preserved",
+          "checked_at": "2026-09-12T08:47:19.526Z"
+        },
+        "black_and_white": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-09-12T08:47:39.204Z"
       },
-      "category": "cult",
-      "priority": 4,
-      "status": "retired",
-      "discovered_at": "2026-09-06T00:32:36.427Z",
-      "caption_style": "guess_the_movie",
-      "instagram_caption": "Know this scene? 🎬\n\nName the movie in the comments.\n\nVery Good Films.",
-      "threads_caption": "Know this scene? 🎬\n\nName the movie in the comments.\n\nVery Good Films.",
-      "asset_sha256": "3b57156cbb61c9cd5cb2e4ce767fee903d2ab77b42d85e7146fbe88a9dde1d1f",
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/3b57156cbb61c9cd5cb2e4ce767fee903d2ab77b42d85e7146fbe88a9dde1d1f.mp4?download=1",
-      "review_reason": "Automatically spaced timecode requires individual scene review",
-      "retired_reason": "Catalog disabled; waiting for approved source feed"
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/96558ac1a18a19e2982c4eb64880e672a5f5087364943eee19dbeaed710c99e6.mp4?download=1",
+      "asset_sha256": "96558ac1a18a19e2982c4eb64880e672a5f5087364943eee19dbeaed710c99e6",
+      "caption_style": "film_info",
+      "status": "ready",
+      "discovered_at": "2026-09-12T08:47:51.935Z"
     },
     {
       "key": "8c644be3088accc0a155381ef2c2cda632c6fc474ee7dca2a2e5e70dfe5484cf",
