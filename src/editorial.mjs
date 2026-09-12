@@ -81,5 +81,7 @@ export function eligible(items,brand,now=Date.now()){
  if(progress.confirmed<progress.due){const classic=candidates.find(isClassic);if(classic)return classic;}
  const modern=diversified.filter(x=>!isClassic(x));
  if(modern.length)return modern.sort((a,b)=>(a.status==='ready'?0:1)-(b.status==='ready'?0:1)||(b.priority||0)-(a.priority||0))[0];
- return (diversified.length?diversified:candidates).sort((a,b)=>(a.status==='ready'?0:1)-(b.status==='ready'?0:1)||(b.priority||0)-(a.priority||0))[0]||null;
+ // Public-domain films have explicit daily slots. Never use them as an
+ // unlimited fallback when the modern approved-source queue is empty.
+ return null;
 }
