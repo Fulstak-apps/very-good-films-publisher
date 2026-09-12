@@ -33,6 +33,10 @@ export function detectCleanCrop(input,scene,dimensions){
  const frames=times.map(t=>execFileSync('ffmpeg',['-v','error','-ss',String(t),'-i',input,'-frames:v','1','-vf',`scale=${w}:${h}`,'-f','rawvideo','-pix_fmt','rgb24','pipe:1'],{maxBuffer:8*1024*1024}));
  const bounds=scene.preserve_picture?{top:0,bottom:h}:pictureBounds(frames,w,h);
  let rect={x:0,y:even(bounds.top*height/h+2),width:even(width),height:even((bounds.bottom-bounds.top)*height/h-4)};
+ // A tiny landscape strip extracted from a portrait repost often means the
+ // source itself has already cropped the movie too tightly. Do not amplify
+ // that into a full-screen Reel where faces are visibly cut off.
+ if(!scene.preserve_picture&&height>width&&rect.height/height<.4)throw Error('Movie frame is too short inside portrait source; hold for face-safe review');
  // A landscape movie frame with bars is valid. It is padded to the 9:16
  // output instead of being enlarged or cropped through faces.
  // Intertitles and dialogue cards are part of silent/public-domain masters,
