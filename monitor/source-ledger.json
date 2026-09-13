@@ -798,6 +798,18 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdHFB7lg6ee/",
       "queued_at": "2026-09-13T00:45:21.745Z",
       "asset_sha256": "a2154a0d4499f7d7df0267cc872699ff6c0c02af40aa22ef5e2f11bbd0c76c72"
+    },
+    "DdEONu_gkQ9": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdEONu_gkQ9/",
+      "queued_at": "2026-09-13T00:57:36.989Z",
+      "asset_sha256": "1749e4bb083754c0085bbbc44ac596ce4d1190d81ce4b4bace53242d56342f88"
+    },
+    "DZbpg7aTntF": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DZbpg7aTntF/",
+      "queued_at": "2026-09-13T01:00:52.557Z",
+      "asset_sha256": "a348b95014fa55fbbac5cc31d530354f812e7252123ca69d17afd9008bb18d6a"
     }
   },
   "checks": {
@@ -811,46 +823,40 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.131Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.133Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.133Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-13T00:43:34.165Z"
+      "checked_at": "2026-09-13T00:56:16.134Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-11T20:34:45.422Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-11T20:35:42.809Z"
-    },
     {
       "started_at": "2026-09-11T20:35:49.749Z",
       "queued": [],
@@ -5140,9 +5146,64 @@
         }
       ],
       "finished_at": "2026-09-13T00:49:40.508Z"
+    },
+    {
+      "started_at": "2026-09-13T00:54:52.167Z",
+      "queued": [
+        "DdEONu_gkQ9",
+        "DZbpg7aTntF"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/reelgoodmovies/reel/Cq8NW4ToJoc/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdCGBEitd8B/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdCcfoyMGgQ/",
+          "stage": "capture_or_queue",
+          "error": "Capture canonical URL escaped approved-source policy"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdEgIkTS-6z/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdB9lmxSzLX/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcxI_YGOshu/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdCOYony4VZ/",
+          "stage": "capture_or_queue",
+          "error": "Verified title, year, synopsis, director and cast are required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-13T01:00:52.557Z"
     }
   ],
-  "next_account_index": 0,
+  "next_account_index": 8,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5189,14 +5250,14 @@
     "DdEgIkTS-6z": {
       "collector_version": 7,
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-12T16:44:52.924Z",
-      "retry_at": "2026-09-12T17:14:52.924Z"
+      "failed_at": "2026-09-13T00:58:59.633Z",
+      "retry_at": "2026-09-13T01:28:59.633Z"
     },
     "DdCOYony4VZ": {
       "collector_version": 7,
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-12T16:44:59.226Z",
-      "retry_at": "2026-09-12T17:14:59.226Z"
+      "failed_at": "2026-09-13T01:00:20.661Z",
+      "retry_at": "2026-09-13T01:30:20.661Z"
     },
     "DdBZUezK_9A": {
       "collector_version": 7,
@@ -5243,8 +5304,8 @@
     "DdCGBEitd8B": {
       "collector_version": 7,
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-12T16:44:51.363Z",
-      "retry_at": "2026-09-12T17:14:51.363Z"
+      "failed_at": "2026-09-13T00:57:40.992Z",
+      "retry_at": "2026-09-13T01:27:40.992Z"
     },
     "DZodVGLTJgF": {
       "collector_version": 7,
@@ -5273,20 +5334,20 @@
     "DcMBrFQzHwg": {
       "collector_version": 7,
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-12T16:44:54.267Z",
-      "retry_at": "2026-09-12T17:14:54.267Z"
+      "failed_at": "2026-09-13T00:57:42.242Z",
+      "retry_at": "2026-09-13T01:27:42.242Z"
     },
     "Cq8NW4ToJoc": {
       "collector_version": 7,
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-12T16:44:56.650Z",
-      "retry_at": "2026-09-12T17:14:56.650Z"
+      "failed_at": "2026-09-13T00:57:39.393Z",
+      "retry_at": "2026-09-13T01:27:39.393Z"
     },
     "DZbqwhnT0Uq": {
       "collector_version": 7,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-09-12T16:45:08.558Z",
-      "retry_at": "2026-09-12T19:45:08.559Z"
+      "failed_at": "2026-09-13T00:59:07.466Z",
+      "retry_at": "2026-09-13T03:59:07.466Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -5315,8 +5376,8 @@
     "DcxI_YGOshu": {
       "collector_version": 7,
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-12T16:10:18.402Z",
-      "retry_at": "2026-09-12T16:40:18.402Z"
+      "failed_at": "2026-09-13T01:00:17.585Z",
+      "retry_at": "2026-09-13T01:30:17.585Z"
     },
     "Dc1uG5HsfX0": {
       "collector_version": 7,
@@ -5501,6 +5562,18 @@
       "error": "Verified title, year, synopsis, director and cast are required before queueing",
       "failed_at": "2026-09-13T00:49:40.508Z",
       "retry_at": "2026-09-13T01:19:40.508Z"
+    },
+    "DdCcfoyMGgQ": {
+      "collector_version": 7,
+      "error": "Capture canonical URL escaped approved-source policy",
+      "failed_at": "2026-09-13T00:58:58.019Z",
+      "retry_at": "2026-09-13T03:58:58.019Z"
+    },
+    "DdB9lmxSzLX": {
+      "collector_version": 7,
+      "error": "Verified title, year, synopsis, director and cast are required before queueing",
+      "failed_at": "2026-09-13T01:00:15.841Z",
+      "retry_at": "2026-09-13T01:30:15.841Z"
     }
   }
 }
