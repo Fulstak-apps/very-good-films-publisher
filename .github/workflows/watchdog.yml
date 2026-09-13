@@ -7,6 +7,9 @@ permissions:
   contents: read
   actions: write
   issues: write
+concurrency:
+  group: very-good-films-watchdog
+  cancel-in-progress: true
 jobs:
   watchdog:
     runs-on: ubuntu-latest
@@ -24,8 +27,21 @@ jobs:
         env:
           VGF_HEALTH_STRICT: '1'
         run: npm run health
-      - name: Dispatch publisher recovery
+      - name: Check for active publisher recovery
         if: failure()
+        id: publisher
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          active="$(gh run list --workflow publisher.yml --limit 20 --json status --jq 'map(select(.status == "in_progress" or .status == "queued")) | length')"
+          if [ "$active" -gt 0 ]; then
+            echo 'active=true' >> "$GITHUB_OUTPUT"
+            echo 'A publisher run is already active; recovery dispatch is unnecessary.'
+          else
+            echo 'active=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Dispatch publisher recovery
+        if: failure() && steps.publisher.outputs.active != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run publisher.yml --ref main

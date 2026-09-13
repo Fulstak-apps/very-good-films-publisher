@@ -30,7 +30,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: very-good-films-${{ github.event.inputs.platform || 'all' }}
+  group: very-good-films-publisher
   cancel-in-progress: false
 jobs:
   pipeline:

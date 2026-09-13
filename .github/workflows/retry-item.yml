@@ -13,6 +13,9 @@ on:
         default: false
 permissions:
   contents: write
+concurrency:
+  group: very-good-films-publisher
+  cancel-in-progress: false
 jobs:
   retry:
     runs-on: ubuntu-latest
