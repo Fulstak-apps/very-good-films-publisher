@@ -13273,8 +13273,7 @@
         "source_duration": 58.720408,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:03:16.621Z",
       "key": "56b73fa9b68cd1220a2cb0e9c2c526af59e1cb08f2a0bdbd447cb2b9a2c6b51d",
@@ -13324,8 +13323,7 @@
         "source_duration": 29.208332,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:03:16.896Z",
       "key": "b9ead9c991d14956c4a8505cdd0d630fb10bc8edfcf486bdd8f2fa0238e6b5d0",
@@ -13375,8 +13373,7 @@
         "source_duration": 39.25,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:03:17.347Z",
       "key": "bbdd3953d89ab8ddfe9f946745ffc269638d48885de0d5b6959f9a3dd94e4521",
@@ -13426,8 +13423,7 @@
         "source_duration": 51.583333333333336,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:12:03.859Z",
       "key": "3a1e877bade98f9c7924b9bb08c220bf9a667ec32031cf93c55cc206be345c54",
@@ -13476,8 +13472,7 @@
         "source_duration": 32.916666666666664,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:12:04.091Z",
       "key": "bb47b215b78126aedb9647fcd109e1ceeb33c3af64f099f79b97bd0a2ceb87f1",
@@ -13526,10 +13521,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:12:04.093Z",
       "key": "0a9c444fcb1fc48621fc29767d33055c8a18c8f0ed1c9e95eb0cd88b122b3686",
-      "metadata_retry_at": "2026-09-14T03:12:07.141Z"
+      "metadata_retry_at": "2026-09-14T03:12:07.141Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -13577,10 +13573,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:12:04.340Z",
       "key": "46fd5ee8a1f3b2b5782cfed9b2ca43ac839227b4d7a5a50db2618a8135e90187",
-      "metadata_retry_at": "2026-09-14T03:12:07.376Z"
+      "metadata_retry_at": "2026-09-14T03:12:07.376Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -13625,8 +13622,7 @@
         "source_duration": 32.96666666666667,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:12:04.824Z",
       "key": "e896ca81b700114b0185c13e5d36d208d1a6f63cab1eeb585f2a63610a9e2fb5",
@@ -13675,8 +13671,7 @@
         "source_duration": 23.034194,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:22:39.000Z",
       "key": "82e0f83052f84665767485467ab32ea5fc0fd9fcd9dd3de81b31ccb4eccdd286",
@@ -13725,10 +13720,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:22:39.018Z",
       "key": "73eb8bec425fb582370123b4af2e9bcdb663b9218b4eddc8332b60b842bc7bb9",
-      "metadata_retry_at": "2026-09-14T03:22:41.274Z"
+      "metadata_retry_at": "2026-09-14T03:22:41.274Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -13773,10 +13769,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:22:39.020Z",
       "key": "53b5e99fc6c603444b41111fd7e4e0f2a32e8254dbb57190b8f183300e5bb931",
-      "metadata_retry_at": "2026-09-14T03:22:41.274Z"
+      "metadata_retry_at": "2026-09-14T03:22:41.274Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -13879,10 +13876,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:22:39.526Z",
       "key": "a695e71fe1056458a5b0f48044e9c635d76f6df8382a307a4d3c8e5ca53a5f94",
-      "metadata_retry_at": "2026-09-14T03:22:41.274Z"
+      "metadata_retry_at": "2026-09-14T03:22:41.274Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -13927,10 +13925,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:30:37.661Z",
       "key": "1cbb2432f4163a68ea783adaf6dcc5e1c1d922f77168548c88a6d4846e6edf83",
-      "metadata_retry_at": "2026-09-14T03:30:40.390Z"
+      "metadata_retry_at": "2026-09-14T03:30:40.390Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -13977,10 +13976,11 @@
       },
       "caption_style": "guess_the_movie",
       "metadata_pending": true,
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-13T21:30:38.771Z",
       "key": "b85b582be9b869833cee1e97fcbed71a10f485a69c84df637b63ebd53a7fe839",
-      "metadata_retry_at": "2026-09-14T03:30:41.459Z"
+      "metadata_retry_at": "2026-09-14T03:30:41.459Z",
+      "review_reason": "Verified movie title required before publishing"
     },
     {
       "kind": "source_repost",
@@ -14034,8 +14034,7 @@
         "source_duration": 81.76666666666667,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "caption_style": "guess_the_movie",
-      "metadata_pending": true,
+      "caption_style": "source_repost",
       "status": "ready",
       "discovered_at": "2026-09-13T21:30:39.081Z",
       "key": "1ee18dfa5bdc340d9a7a170a87b9e654028b65f38239dc9897a366b33a553d7b",
