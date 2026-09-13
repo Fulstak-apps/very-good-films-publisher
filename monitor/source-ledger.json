@@ -888,48 +888,6 @@
   },
   "runs": [
     {
-      "started_at": "2026-09-11T21:17:35.074Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "source_handle": "cinemoviie",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        },
-        {
-          "stage": "discover",
-          "source_handle": "filmreelsvault",
-          "error": "browserContext.newPage: Protocol error (Target.createTarget): Failed to open a new tab"
-        },
-        {
-          "stage": "discover",
-          "source_handle": "reelgoodmovies",
-          "error": "browserContext.newPage: Protocol error (Target.createTarget): Failed to open a new tab"
-        },
-        {
-          "stage": "discover",
-          "source_handle": "thecinemanerd.ig",
-          "error": "browserContext.newPage: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n<launched> pid=73860\n[pid=73860][err] Trying to load the allocator multiple times. This is *not* supported.\n[pid=73860][err] [73899:13287369:0911/141744.302293:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141744.325206:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141744.325874:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141744.332938:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141744.342374:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141744.347904:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141745.371019:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73860:13287168:0911/141749.385229:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n[pid=73860][err] [73899:13287369:0911/141756.420638:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141804.015420:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860][err] [73899:13287369:0911/141810.831772:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=73860] <gracefully close start>"
-        },
-        {
-          "stage": "discover",
-          "source_handle": "theacenyc",
-          "error": "browserContext.newPage: Target page, context or browser has been closed"
-        },
-        {
-          "stage": "discover",
-          "source_handle": "the_goodfilms",
-          "error": "browserContext.newPage: Target page, context or browser has been closed"
-        },
-        {
-          "stage": "discover",
-          "source_handle": "film.fission",
-          "error": "browserContext.newPage: Target page, context or browser has been closed"
-        }
-      ],
-      "finished_at": "2026-09-11T21:18:13.346Z"
-    },
-    {
       "started_at": "2026-09-11T21:18:47.030Z",
       "queued": [
         "Dcx18H7Cqxd"
@@ -5786,6 +5744,17 @@
         }
       ],
       "finished_at": "2026-09-13T08:36:10.357Z"
+    },
+    {
+      "started_at": "2026-09-13T08:41:23.436Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Instagram source session is signed out; open npm run source:login."
+        }
+      ],
+      "finished_at": "2026-09-13T08:41:31.898Z"
     }
   ],
   "next_account_index": 0,
@@ -6184,5 +6153,7 @@
       "failed_at": "2026-09-13T08:31:54.811Z",
       "retry_at": "2026-09-13T09:01:54.811Z"
     }
-  }
+  },
+  "retry_after": "2026-09-13T09:41:31.898Z",
+  "session_error": "Instagram source session is signed out; open npm run source:login."
 }
