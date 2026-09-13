@@ -62,7 +62,6 @@ await withLock(async()=>{
   }
   const after=queuePlan(memory.items,brand);const result={status:after.full?'queue_full':'queue_refill',...after,prepared,processed,duplicates};console.log(JSON.stringify(result));return result;
  }
- function metaReady(){const aa=accounts(process.env,brand);const missing=aa.filter(a=>!a.id||!a.token).map(a=>a.name);return {ready:missing.length===0,missing};}
  if(command==='discover')await ingest();
  else if(command==='prepare')console.log(JSON.stringify(await prepareOne()));
  else if(command==='refill')console.log(JSON.stringify(await refillQueue()));
@@ -75,8 +74,9 @@ await withLock(async()=>{
    memory.events.push({at:new Date().toISOString(),type:awaitingCollector?'awaiting_local_source_collector':'refill_failed',error:error.message});
    await save();
   }
-  const meta=metaReady();
-  const publication=!brand.enabled?{status:'paused'}:!meta.ready?{status:'waiting_for_meta_credentials',missing:meta.missing}:await publish(memory,brand,save);
+  // publish() verifies each enabled platform independently. Do not let a
+  // Threads credential/cooldown issue prevent an eligible Instagram reel.
+  const publication=!brand.enabled?{status:'paused'}:await publish(memory,brand,save);
   console.log(JSON.stringify({queue,publication}));
   if(brand.enabled&&!memory.items.some(x=>['ready','partial','publishing','needs_review'].includes(x.status))&&publication.status!=='published')throw new Error('Publishing starved: no prepared videos available. Source ingestion requires repair.');
  }

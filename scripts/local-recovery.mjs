@@ -1,9 +1,9 @@
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 const repo='Fulstak-apps/very-good-films-publisher';
-// state/memory.json grows with confirmed delivery history. The GitHub contents
-// response is base64 encoded, so its output is larger than the file itself and
-// can exceed Node's default 1 MiB buffer if no explicit limit is provided.
+// memory.json is intentionally durable history and now exceeds Node's 1 MiB
+// child-process default once GitHub returns it base64-encoded. A recovery
+// process must be able to read that state rather than crashing with ENOBUFS.
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:8*1024*1024});
 const remote=path=>JSON.parse(Buffer.from(JSON.parse(gh(['api',`repos/${repo}/contents/${path}`])).content,'base64').toString());
 const recoveryLock='monitor/recovery.lock';
