@@ -4,7 +4,7 @@ import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
 import {capture,launch} from './capture/capture.mjs';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
-import {approvedSource,sourceAccounts} from '../src/source-policy.mjs';
+import {approvedSource,capturedFromApprovedSource,sourceAccounts} from '../src/source-policy.mjs';
 import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
 import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
 
@@ -26,7 +26,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 const commandTimeout=120_000;
 // Bump when eligibility semantics change so clips previously held by an older
 // rule are reconsidered instead of waiting for stale retry timestamps.
-const collectorVersion=8;
+const collectorVersion=9;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -108,7 +108,8 @@ async function commit(includeLedger=false){
 async function queue(candidate,ledger){
  console.log(JSON.stringify({status:'capturing',shortcode:candidate.shortcode,source:candidate.url}));
  const evidence=await capture(candidate.url,{headless:true});
- if(!approvedSource(evidence.source_url||candidate.url))throw new Error('Capture canonical URL escaped approved-source policy');
+ const canonicalUrl=evidence.source_url||candidate.url;
+ if(!capturedFromApprovedSource(candidate.url,canonicalUrl))throw new Error('Captured media no longer matches its approved source post');
  const input=evidence.destination;
  const duration=Math.min(90,Math.floor(Number(evidence.duration)*1000)/1000);
  if(!(duration>1))throw new Error('Source clip has no usable duration');
@@ -133,7 +134,10 @@ async function queue(candidate,ledger){
   kind:'source_repost',
   film:{id:`instagram:${candidate.shortcode}`,title:`@${candidate.handle} clip`},
   scene:{id:candidate.shortcode,start:0,end:duration},
-  source_post_url:evidence.source_url||candidate.url,
+  // This is the approved account where the clip was discovered. The canonical
+  // creator URL is retained separately because Instagram can rewrite it.
+  source_post_url:candidate.url,
+  source_canonical_url:canonicalUrl,
   source_caption,
   source_details,
   video_url,asset_sha256,
