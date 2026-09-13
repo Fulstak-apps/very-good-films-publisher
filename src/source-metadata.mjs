@@ -1,4 +1,6 @@
-const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
+// Instagram captions frequently use mathematical bold/italic Unicode letters.
+// NFKC turns those presentation characters back into ordinary searchable text.
+const clean=value=>String(value||'').normalize('NFKC').replace(/\s+/g,' ').trim();
 const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
 const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
 const names=value=>clean(value).replace(/\b(?:and|with)\b/gi,',').split(',').map(clean).filter(x=>/^[A-Z][A-Za-z .'-]{1,80}$/.test(x)).slice(0,3);
@@ -9,7 +11,7 @@ export function fallbackCredits(extract){
 }
 
 export function sourceHints(caption){
- const raw=String(caption||'');
+ const raw=String(caption||'').normalize('NFKC');
  const text=raw.replace(/^[\p{Extended_Pictographic}\uFE0F\t :]+/gmu,'');
  const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
  const titledLine=raw.match(/(?:^|\n)[ \t]*[🎬🎥📺]+[\uFE0F :\t]*([^\n]{2,100})/u);
@@ -20,13 +22,18 @@ export function sourceHints(caption){
  // 3 spoilers”). Capture that explicit title token without guessing from a
  // generic sentence.
  const proseTitle=text.match(/\b([A-Z][A-Za-z0-9'’:-]{1,50})\s+(?:Season\s+\d+|opening\s+(?:title|credits)|spoilers?|finale)\b/);
+ const screeningTitle=text.match(/\b(?:screening|showing|presentation)\s+of\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)(?:\s*[🍿🎬🎥]|[.!?\n]|$)/i);
+ const sceneInMatch=text.match(/\b(?:scene|sequence|dance|fight|performance|moment)\s+(?:from|in)\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)\s+(?:was|is|where|when|features?|shows?|directed|starring)\b/i);
+ // “dance in the restaurant at Lisbon in Poor Things was…” should resolve
+ // to the innermost named work, not the location phrase before it.
+ const sceneInTitle=sceneInMatch?.[1]?.split(/\s+in\s+/i).at(-1);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
  // Some source pages put the title only in a single title hashtag. Treat it
  // as a lookup hint only when it is unambiguous; actor and topic tag clouds
  // are never used to guess a movie.
  const tags=[...raw.matchAll(/#([A-Za-z][A-Za-z0-9]{2,80})/g)].map(x=>x[1]);
  const hashtagTitle=tags.length===1?tags[0]:undefined;
- const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||contextTitle?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
+ const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
 }
@@ -37,7 +44,10 @@ async function wikiMetadata(base){
  const headers={'User-Agent':'VeryGoodFilmsPublisher/1.0 (metadata@verygoodfilms.local)'};
  const search=new URL('https://en.wikipedia.org/w/api.php');search.search='action=query&format=json&origin=*&list=search&srlimit=5&srsearch='+encodeURIComponent(`intitle:${base.title_hint} ${base.year||''} film`);
  const hits=(await (await fetch(search,{headers,signal:AbortSignal.timeout(15000)})).json()).query?.search||[];
- const hit=hits.find(x=>normal(x.title).includes(normal(base.title_hint))||normal(base.title_hint).includes(normal(x.title)));if(!hit)return base;
+ const matching=hits.filter(x=>normal(x.title).includes(normal(base.title_hint))||normal(base.title_hint).includes(normal(x.title)));
+ // Prefer a film-specific result over a same-named novel, album, or general
+ // article. This is common for titles such as Poor Things.
+ const hit=matching.find(x=>/\((?:\d{4}\s+)?film\)/i.test(x.title))||matching[0];if(!hit)return base;
  const page=new URL('https://en.wikipedia.org/w/api.php');page.search='action=query&format=json&origin=*&prop=extracts|pageprops&exintro=1&explaintext=1&pageids='+hit.pageid;
  const entry=Object.values((await (await fetch(page,{headers,signal:AbortSignal.timeout(15000)})).json()).query?.pages||{})[0];if(!entry?.title)return base;
  const qid=entry.pageprops?.wikibase_item;
