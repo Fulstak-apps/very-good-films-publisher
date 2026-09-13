@@ -912,6 +912,36 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DdKhuwviev2/",
       "queued_at": "2026-09-13T21:02:56.791Z",
       "asset_sha256": "51797336c1e71ed7a3da1aedc919d30512370fcd876354b9bb26148c86a6a365"
+    },
+    "DdJu6QvR11t": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdJu6QvR11t/",
+      "queued_at": "2026-09-13T21:09:48.828Z",
+      "asset_sha256": "9babcef2338369163e12fe5a843e7727129977247f3474e5d1231450291d26a9"
+    },
+    "DdN3gUwSssg": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DdN3gUwSssg/",
+      "queued_at": "2026-09-13T21:10:06.419Z",
+      "asset_sha256": "025ec5e7ca553463ce6a590ab5906219692bbc896b6d95ec9c764c23577adb82"
+    },
+    "DdGne1HAbK5": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdGne1HAbK5/",
+      "queued_at": "2026-09-13T21:10:55.942Z",
+      "asset_sha256": "7ccd4743304fd8279712f437dbc75f6d2ff15a019415b52ded0f86f305722b28"
+    },
+    "DdEzwoeNeTI": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DdEzwoeNeTI/",
+      "queued_at": "2026-09-13T21:11:22.645Z",
+      "asset_sha256": "da58cb4c316af9bc44fe4ab1f5724898e7318daf2fc5f9f4e698efd5ada12703"
+    },
+    "DdEEqYnqDYZ": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DdEEqYnqDYZ/",
+      "queued_at": "2026-09-13T21:11:47.113Z",
+      "asset_sha256": "61445474aa1011faa214046360219d31f85655052bcdb02cd5045773ffa10938"
     }
   },
   "checks": {
@@ -925,46 +955,40 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-13T21:00:53.491Z"
+      "checked_at": "2026-09-13T21:08:32.545Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-12T14:02:19.869Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-12T14:03:43.602Z"
-    },
     {
       "started_at": "2026-09-12T14:03:54.634Z",
       "queued": [],
@@ -6274,6 +6298,29 @@
         }
       ],
       "finished_at": "2026-09-13T21:02:56.791Z"
+    },
+    {
+      "started_at": "2026-09-13T21:07:17.426Z",
+      "queued": [
+        "DdJu6QvR11t",
+        "DdN3gUwSssg",
+        "DdGne1HAbK5",
+        "DdEzwoeNeTI",
+        "DdEEqYnqDYZ"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdMR93gyo9v/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "finished_at": "2026-09-13T21:11:47.113Z"
     }
   ],
   "next_account_index": 6,
@@ -6345,10 +6392,10 @@
       "retry_at": "2026-09-12T16:35:47.369Z"
     },
     "Dck4uAuTLyv": {
-      "collector_version": 7,
-      "error": "Verified title, year, synopsis, director and cast are required before queueing",
-      "failed_at": "2026-09-13T20:47:48.498Z",
-      "retry_at": "2026-09-13T21:17:48.498Z"
+      "collector_version": 9,
+      "error": "Movie frame is too short inside portrait source; hold for face-safe review",
+      "failed_at": "2026-09-13T21:10:08.942Z",
+      "retry_at": "2026-09-14T00:10:08.942Z"
     },
     "DZtaornzI-J": {
       "collector_version": 7,
@@ -6601,10 +6648,10 @@
       "retry_at": "2026-09-13T21:17:32.881Z"
     },
     "DdMR93gyo9v": {
-      "collector_version": 7,
+      "collector_version": 9,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-13T20:47:55.862Z",
-      "retry_at": "2026-09-13T23:47:55.862Z"
+      "failed_at": "2026-09-13T21:11:24.239Z",
+      "retry_at": "2026-09-14T00:11:24.240Z"
     },
     "DdMvS8qSNxF": {
       "collector_version": 7,
