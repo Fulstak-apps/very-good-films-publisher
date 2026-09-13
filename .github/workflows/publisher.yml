@@ -55,7 +55,7 @@ jobs:
           set -euo pipefail
           while IFS= read -r file; do
             node --check "$file"
-          done < <(rg --files -g '*.mjs' -g '!node_modules/**')
+          done < <(git ls-files '*.mjs' ':!node_modules/**')
       - name: Test publisher
         if: github.event_name == 'push'
         run: npm test
