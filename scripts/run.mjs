@@ -11,7 +11,7 @@ import {holdUnreviewed} from '../src/review.mjs';
 import {enforceSourcePolicy,approvedSource} from '../src/source-policy.mjs';
 import {importPrepared} from '../src/imports.mjs';
 import {importClassics} from '../src/classic-imports.mjs';
-import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceTitle} from '../src/source-metadata.mjs';
 const command=process.argv[2]||'status';
 await withLock(async()=>{
  const memory=await readJSON('state/memory.json'),brand=await readJSON('config/brand.json'),sources=await readJSON('config/sources.json');const save=()=>saveMemory(memory);
@@ -28,10 +28,14 @@ await withLock(async()=>{
    item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();sourceMetadataChanged=true;
   }
   if(sourceDetailsComplete(item.source_details)){
-   if(item.caption_style==='guess_the_movie'){item.caption_style='film_info';delete item.metadata_pending;sourceMetadataChanged=true;}
-   if(item.status==='needs_review'&&item.review_reason?.startsWith('Verified title')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
+   if(item.caption_style!=='source_repost'){item.caption_style='source_repost';delete item.metadata_pending;sourceMetadataChanged=true;}
+   if(item.status==='needs_review'&&item.review_reason?.startsWith('Verified')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
   }
-  if(!sourceDetailsComplete(item.source_details)&&['ready','discovered','publishing'].includes(item.status)&&item.caption_style!=='guess_the_movie'){item.status='needs_review';item.review_reason='Verified title, year, synopsis, director and cast are required before publishing';sourceMetadataChanged=true;}
+  if(verifiedSourceTitle(item.source_details)){
+   if(item.caption_style!=='source_repost'){item.caption_style='source_repost';delete item.metadata_pending;sourceMetadataChanged=true;}
+   if(item.status==='needs_review'&&item.review_reason?.startsWith('Verified')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
+  }
+  if(!verifiedSourceTitle(item.source_details)&&['ready','discovered','publishing'].includes(item.status)){item.status='needs_review';item.review_reason='Verified movie title required before publishing';sourceMetadataChanged=true;}
  }
  if(sourceMetadataChanged)await save();
  async function ingest(){const result=await discover(memory,sources);const metadata=await discoverTMDB(memory);await save();console.log(JSON.stringify({discovery:result,metadata}));return {discovery:result,metadata};}

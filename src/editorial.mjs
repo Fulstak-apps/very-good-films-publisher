@@ -1,8 +1,8 @@
 import {createHash} from 'node:crypto';
 import {approvedSource} from './source-policy.mjs';
-import {sourceDetailsComplete} from './source-metadata.mjs';
+import {sourceDetailsComplete,verifiedSourceTitle} from './source-metadata.mjs';
 import {isClassic,classicDailyProgress} from './classics.mjs';
-export const styles=['film_info','scene_context','did_you_know','hidden_gem','guess_the_movie','performance','director','quote_scene'];
+export const styles=['film_info','scene_context','did_you_know','hidden_gem','performance','director','quote_scene'];
 export function sceneKey(x){return createHash('sha256').update(`${x.film.id}|${x.scene.id}`).digest('hex');}
 export function evidenceValid(e){return !!e && typeof e.text==='string' && e.text.trim().length>0 && /^https:\/\//.test(e.source_url||'');}
 export function validate(x,ready=false){
@@ -11,11 +11,7 @@ export function validate(x,ready=false){
   if(!approvedSource(x.source_post_url)||!f.id||!s.id)errors.push('Approved exact source post required');
   if(!x.source_caption?.trim()||x.qa?.source_verified!==true)errors.push('Verified source caption required');
   if(!(s.end>s.start&&s.start>=0&&s.end-s.start<=90))errors.push('Invalid scene interval');
-  // Some approved source posts deliberately withhold the title. They belong in
-  // the editorially intentional Guess The Movie lane while metadata recovery
-  // continues; do not let them drain the whole video reserve. Every other
-  // caption mode still requires complete, verified film facts.
-  if(ready&&!sourceDetailsComplete(x.source_details)&&x.caption_style!=='guess_the_movie')errors.push('Verified title, year, synopsis, director and cast required');
+  if(ready&&!verifiedSourceTitle(x.source_details))errors.push('Verified movie title required before publishing');
   if(ready&&x.qa?.clean_crop?.layout!=='film-only-crop-v2')errors.push('Clean movie crop required before publishing');
   if(ready&&(!/^https:\/\//.test(x.video_url||'')||!/^[a-f0-9]{64}$/.test(x.asset_sha256||'')||x.qa?.media_verified!==true||x.qa?.branding!=='very-good-films-only-v1'))errors.push('Verified VGF-only video required');
   return errors;
@@ -39,16 +35,14 @@ export function caption(x,preferred='film_info',threads=false){
   const truncate=(value,n)=>[...value].length<=n?value:[...value].slice(0,Math.max(0,n-1)).join('').trimEnd()+'…';
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
-  if(!d.title){
-   const prefix='WHAT MOVIE IS THIS? 🎬';
-   const tail='\n\nName it in the comments.\n\nVery Good Films.';
-   const limit=threads?500:2200;
-   const room=Math.max(0,limit-[...prefix+tail].length-2);
-   return {style:'guess_the_movie',text:prefix+(text?`\n\n${truncate(text,room)}`:'')+tail};
-  }
+  const title=verifiedSourceTitle(d);
+  if(!title)throw new Error('Verified movie title required before caption rendering');
   const limit=threads?500:2200;
-  const heading=`${d.title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
-  const credits=`\n\nDirected by ${d.director}\nStarring ${d.cast.join(', ')}`;
+  const heading=`${title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
+  const creditLines=[];
+  if(d.director)creditLines.push(`Directed by ${d.director}`);
+  if(Array.isArray(d.cast)&&d.cast.length)creditLines.push(`Starring ${d.cast.join(', ')}`);
+  const credits=creditLines.length?`\n\n${creditLines.join('\n')}`:'';
   const synopsisRoom=Math.max(0,limit-[...heading+credits].length-2);
   const overview=d.synopsis&&synopsisRoom>1?`\n\n${truncate(d.synopsis,synopsisRoom)}`:'';
   let rendered=`${heading}${overview}${credits}`;
@@ -65,14 +59,13 @@ export function caption(x,preferred='film_info',threads=false){
  case 'scene_context':body=s.context.text;break;
  case 'did_you_know':body=`Did you know? ${s.trivia.text}`;break;
  case 'hidden_gem':body=s.why_watch.text;break;
- case 'guess_the_movie':heading='Know this scene? 🎬';body='Name the movie in the comments.';break;
  case 'performance':body=s.performance.text;break;
  case 'director':body=s.direction.text;break;
  case 'quote_scene':body=`“${s.quote.text}”`;break;
  default:body=f.synopsis.text;
  }
  const credits=style==='film_info'?`\n\nDirected by ${f.director.join(' & ')}\nStarring ${f.cast.slice(0,3).join(', ')}`:'';
- const rating=f.imdb_rating!=null&&style!=='guess_the_movie'?`\n\n⭐ IMDb: ${f.imdb_rating}`:'';
+ const rating=f.imdb_rating!=null?`\n\n⭐ IMDb: ${f.imdb_rating}`:'';
  let text=`${heading}\n\n${body}${credits}${rating}\n\nVery Good Films.`;
  const limit=threads?500:2200;
  if([...text].length>limit){const tail='\n\nVery Good Films.'; const prefix=heading+'\n\n';text=prefix+[...body].slice(0,limit-[...prefix+tail].length-1).join('').trimEnd()+'…'+tail;}

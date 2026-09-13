@@ -6,7 +6,7 @@ import {capture,launch} from './capture/capture.mjs';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {approvedSource,capturedFromApprovedSource,sourceAccounts} from '../src/source-policy.mjs';
 import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
-import {enrichSourceMetadata,sourceDetailsComplete} from '../src/source-metadata.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceTitle} from '../src/source-metadata.mjs';
 
 const exec=promisify(execFile);
 const root=path.resolve('.');
@@ -26,7 +26,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 const commandTimeout=120_000;
 // Bump when eligibility semantics change so clips previously held by an older
 // rule are reconsidered instead of waiting for stale retry timestamps.
-const collectorVersion=9;
+const collectorVersion=10;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -124,6 +124,7 @@ async function queue(candidate,ledger){
   const title_hint=await localTitleHint(source_caption);
   if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
  }
+ if(!verifiedSourceTitle(source_details))throw new Error('Verified movie title required before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  const renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
@@ -141,7 +142,7 @@ async function queue(candidate,ledger){
   source_caption,
   source_details,
   video_url,asset_sha256,
-  caption_style:sourceDetailsComplete(source_details)?'film_info':'guess_the_movie',
+  caption_style:'source_repost',
   metadata_pending:!sourceDetailsComplete(source_details),
   qa:{...renderQA,source_verified:true,media_verified:true,branding:'very-good-films-only-v1',reviewed_at:new Date().toISOString(),source_duration:Number(evidence.duration),media_match_method:evidence.media_match_method}
  };

@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import {validate,sceneKey} from './editorial.mjs';
-import {enrichSourceMetadata,sourceDetailsComplete} from './source-metadata.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceTitle} from './source-metadata.mjs';
 import {approvedSource} from './source-policy.mjs';
 export async function importPrepared(memory,directory='inbox'){
  let added=0;
@@ -14,7 +14,8 @@ export async function importPrepared(memory,directory='inbox'){
   if(memory.items.some(y=>y.key===sceneKey(raw)||y.source_post_url===raw.source_post_url||y.asset_sha256===raw.asset_sha256))continue;
   const source_details=await enrichSourceMetadata(raw.source_caption,raw.source_details);
   const complete=sourceDetailsComplete(source_details);
-  const x={kind:raw.kind,film:raw.film,scene:raw.scene,source_post_url:raw.source_post_url,source_caption:raw.source_caption,source_details,video_url:raw.video_url,asset_sha256:raw.asset_sha256,qa:raw.qa,caption_style:complete?'film_info':'guess_the_movie',metadata_pending:!complete,status:'ready',discovered_at:new Date().toISOString()};
+  const titleVerified=Boolean(verifiedSourceTitle(source_details));
+  const x={kind:raw.kind,film:raw.film,scene:raw.scene,source_post_url:raw.source_post_url,source_caption:raw.source_caption,source_details,video_url:raw.video_url,asset_sha256:raw.asset_sha256,qa:raw.qa,caption_style:'source_repost',metadata_pending:!complete,status:titleVerified?'ready':'needs_review',review_reason:titleVerified?undefined:'Verified movie title required before publishing',discovered_at:new Date().toISOString()};
   const errors=validate(x,x.status==='ready');if(x.kind!=='source_repost'||errors.length)throw new Error(`Invalid prepared import ${name}: ${errors.join('; ')}`);
   x.key=sceneKey(x);
   if(memory.items.some(y=>y.key===x.key||y.source_post_url===x.source_post_url||y.asset_sha256===x.asset_sha256))continue;

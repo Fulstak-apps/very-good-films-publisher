@@ -39,6 +39,13 @@ export function sourceHints(caption){
 }
 
 export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source);}
+// A title extracted verbatim from the approved post, or confirmed by the
+// metadata lookup, is enough to identify a source clip. Never use a bare
+// parser hint as a publishable title: those can be a character name or phrase.
+export function verifiedSourceTitle(details){
+ const title=clean(details?.title||details?.title_hint_verified);
+ return title||undefined;
+}
 
 async function wikiMetadata(base){
  const headers={'User-Agent':'VeryGoodFilmsPublisher/1.0 (metadata@verygoodfilms.local)'};

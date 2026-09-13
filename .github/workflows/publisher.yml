@@ -80,7 +80,6 @@ jobs:
           VGF_PLATFORM: ${{ inputs.platform || 'all' }}
           VGF_MAX_POSTS: ${{ inputs.maximum_posts || '1' }}
         run: |
-          npm run publish
           npm run cycle
           for attempt in 1 2 3; do
             node --input-type=module -e "import fs from 'node:fs';const m=JSON.parse(fs.readFileSync('state/memory.json'));process.exit(m.items.some(x=>x.status==='publishing')?0:1)" || break
