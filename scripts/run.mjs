@@ -27,8 +27,11 @@ await withLock(async()=>{
    item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);
    item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();sourceMetadataChanged=true;
   }
-  if(sourceDetailsComplete(item.source_details)&&item.status==='needs_review'&&item.review_reason?.startsWith('Verified title')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
-  if(!sourceDetailsComplete(item.source_details)&&['ready','discovered','publishing'].includes(item.status)){item.status='needs_review';item.review_reason='Verified title, year, synopsis, director and cast are required before publishing';sourceMetadataChanged=true;}
+  if(sourceDetailsComplete(item.source_details)){
+   if(item.caption_style==='guess_the_movie'){item.caption_style='film_info';delete item.metadata_pending;sourceMetadataChanged=true;}
+   if(item.status==='needs_review'&&item.review_reason?.startsWith('Verified title')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
+  }
+  if(!sourceDetailsComplete(item.source_details)&&['ready','discovered','publishing'].includes(item.status)&&item.caption_style!=='guess_the_movie'){item.status='needs_review';item.review_reason='Verified title, year, synopsis, director and cast are required before publishing';sourceMetadataChanged=true;}
  }
  if(sourceMetadataChanged)await save();
  async function ingest(){const result=await discover(memory,sources);const metadata=await discoverTMDB(memory);await save();console.log(JSON.stringify({discovery:result,metadata}));return {discovery:result,metadata};}

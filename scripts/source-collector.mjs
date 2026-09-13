@@ -110,9 +110,10 @@ async function queue(candidate,ledger){
  const input=evidence.destination;
  const duration=Math.min(90,Math.floor(Number(evidence.duration)*1000)/1000);
  if(!(duration>1))throw new Error('Source clip has no usable duration');
- // Do this before the expensive render/upload path. Bad or vague source
- // captions should be deferred quickly, leaving the collector capacity for a
- // clip that can actually be published with complete film information.
+ // Capture metadata before rendering when possible. Posts that deliberately
+ // withhold the title remain eligible for the explicit Guess The Movie lane;
+ // they are not allowed to empty the reserve while a later metadata pass
+ // attempts to identify them.
  const source_caption=(evidence.source_caption_text||'').trim();
  if(/(?:@rapwire247|\brap\s*wire\b)/i.test(source_caption))throw new Error('RapWire-branded source is prohibited on Very Good Films');
  let source_details=await enrichSourceMetadata(source_caption);
@@ -120,7 +121,6 @@ async function queue(candidate,ledger){
   const title_hint=await localTitleHint(source_caption);
   if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
  }
- if(!sourceDetailsComplete(source_details))throw new Error('Verified title, year, synopsis, director and cast are required before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  const renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
@@ -135,6 +135,8 @@ async function queue(candidate,ledger){
   source_caption,
   source_details,
   video_url,asset_sha256,
+  caption_style:sourceDetailsComplete(source_details)?'film_info':'guess_the_movie',
+  metadata_pending:!sourceDetailsComplete(source_details),
   qa:{...renderQA,source_verified:true,media_verified:true,branding:'very-good-films-only-v1',reviewed_at:new Date().toISOString(),source_duration:Number(evidence.duration),media_match_method:evidence.media_match_method}
  };
  await fs.mkdir(inbox,{recursive:true});

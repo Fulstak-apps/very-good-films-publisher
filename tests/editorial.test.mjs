@@ -7,4 +7,9 @@ test('unverified trivia falls back rather than inventing',()=>{const x=fixture()
 test('rejects wrong year, absent source and unverified identity',()=>{const x=fixture();assert.deepEqual(validate(x),[]);x.film.year=0;x.qa.identity_verified=false;delete x.rights;assert.equal(validate(x).length,3);assert.ok(validate(fixture(),true).length);});
 test('IMDb rating cannot be substituted from another provider',()=>{const x=fixture();x.film.imdb_rating=8;assert.ok(validate(x).some(s=>s.includes('IMDb')));});
 test('same movie different nonoverlapping scene allowed; overlapping rejected',()=>{const a=fixture();a.key=sceneKey(a);const b=fixture();b.scene.id='second';b.scene.start=50;b.scene.end=80;b.key=sceneKey(b);assert.equal(duplicate(b,[a]),false);b.scene.start=20;assert.equal(duplicate(b,[a]),true);});
+test('approved source clips with missing film facts use the explicit guess lane',()=>{
+ const x={kind:'source_repost',film:{id:'instagram:abc',title:'@film.fission clip'},scene:{id:'abc',start:0,end:30},source_post_url:'https://www.instagram.com/film.fission/reel/abc/',source_caption:'A tense scene that people keep quoting.',source_details:{version:'source-caption-film-info-v3'},caption_style:'guess_the_movie',video_url:'https://example.com/clip.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1',clean_crop:{layout:'film-only-crop-v2'}}};
+ assert.deepEqual(validate(x,true),[]);
+ assert.match(caption(x,'guess_the_movie').text,/WHAT MOVIE IS THIS/);
+});
 test('resumes partial platform work and enforces movie cooldown',()=>{const now=Date.now();const brand={daily_cap:20,minimum_gap_minutes:60,movie_cooldown_days:3};const a={...fixture(),status:'published',instagram_published_at:new Date(now-7200000).toISOString()},b={...fixture(),status:'ready'};assert.equal(eligible([a,b],brand,now),null);b.status='publishing';assert.equal(eligible([a,b],brand,now),b);});

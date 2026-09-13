@@ -11,7 +11,11 @@ export function validate(x,ready=false){
   if(!approvedSource(x.source_post_url)||!f.id||!s.id)errors.push('Approved exact source post required');
   if(!x.source_caption?.trim()||x.qa?.source_verified!==true)errors.push('Verified source caption required');
   if(!(s.end>s.start&&s.start>=0&&s.end-s.start<=90))errors.push('Invalid scene interval');
-  if(ready&&!sourceDetailsComplete(x.source_details))errors.push('Verified title, year, synopsis, director and cast required');
+  // Some approved source posts deliberately withhold the title. They belong in
+  // the editorially intentional Guess The Movie lane while metadata recovery
+  // continues; do not let them drain the whole video reserve. Every other
+  // caption mode still requires complete, verified film facts.
+  if(ready&&!sourceDetailsComplete(x.source_details)&&x.caption_style!=='guess_the_movie')errors.push('Verified title, year, synopsis, director and cast required');
   if(ready&&x.qa?.clean_crop?.layout!=='film-only-crop-v2')errors.push('Clean movie crop required before publishing');
   if(ready&&(!/^https:\/\//.test(x.video_url||'')||!/^[a-f0-9]{64}$/.test(x.asset_sha256||'')||x.qa?.media_verified!==true||x.qa?.branding!=='very-good-films-only-v1'))errors.push('Verified VGF-only video required');
   return errors;
@@ -32,13 +36,19 @@ export function caption(x,preferred='film_info',threads=false){
   // These are the user's own network pages. Preserve the originating post's
   // wording without adding a visible source credit or VGF boilerplate.
   const text=x.source_caption.split('\n').filter(line=>!/(?:where to watch|\bstreaming\b|\bavailable (?:on|to)|\bin theaters now\b)/i.test(line)).join('\n').trim(),d=x.source_details||{};
+  const truncate=(value,n)=>[...value].length<=n?value:[...value].slice(0,Math.max(0,n-1)).join('').trimEnd()+'…';
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
-  if(!d.title)return {style:'source_repost',text:threads&&[...text].length>500?[...text].slice(0,499).join('')+'…':text};
+  if(!d.title){
+   const prefix='WHAT MOVIE IS THIS? 🎬';
+   const tail='\n\nName it in the comments.\n\nVery Good Films.';
+   const limit=threads?500:2200;
+   const room=Math.max(0,limit-[...prefix+tail].length-2);
+   return {style:'guess_the_movie',text:prefix+(text?`\n\n${truncate(text,room)}`:'')+tail};
+  }
   const limit=threads?500:2200;
   const heading=`${d.title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
   const credits=`\n\nDirected by ${d.director}\nStarring ${d.cast.join(', ')}`;
-  const truncate=(value,n)=>[...value].length<=n?value:[...value].slice(0,Math.max(0,n-1)).join('').trimEnd()+'…';
   const synopsisRoom=Math.max(0,limit-[...heading+credits].length-2);
   const overview=d.synopsis&&synopsisRoom>1?`\n\n${truncate(d.synopsis,synopsisRoom)}`:'';
   let rendered=`${heading}${overview}${credits}`;
