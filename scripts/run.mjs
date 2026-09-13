@@ -23,9 +23,12 @@ await withLock(async()=>{
  let sourceMetadataChanged=false;
  for(const item of readOnly?[]:memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
   if(!sourceDetailsComplete(item.source_details)){
-   if(item.source_details?.version==='source-caption-film-info-v3'&&Date.parse(item.metadata_retry_at||'')>Date.now())continue;
-   item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);
-   item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();sourceMetadataChanged=true;
+   // Metadata refreshes can be throttled, but title eligibility cannot be:
+   // an old retry timer must never let an unnamed clip reach the publisher.
+   if(!(item.source_details?.version==='source-caption-film-info-v3'&&Date.parse(item.metadata_retry_at||'')>Date.now())){
+    item.source_details=await enrichSourceMetadata(item.source_caption,item.source_details);
+    item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();sourceMetadataChanged=true;
+   }
   }
   if(sourceDetailsComplete(item.source_details)){
    if(item.caption_style!=='source_repost'){item.caption_style='source_repost';delete item.metadata_pending;sourceMetadataChanged=true;}
