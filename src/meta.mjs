@@ -7,6 +7,13 @@ export async function graph(base,token,path,params={},method='GET'){
  if(!res.ok||data.error){const detail=data.error?.error_user_msg||data.error?.message||data.error?.type||'no detail';const e=new Error(`Meta HTTP ${res.status}, code ${data.error?.code??'unknown'}, subcode ${data.error?.error_subcode??'none'}: ${detail}`);e.code=data.error?.code;e.subcode=data.error?.error_subcode;e.definitiveRejection=res.status<500&&!!data.error;e.rateLimited=res.status===429||[4,17,32,613,9].includes(data.error?.code);throw e;}return data;
 }
 export function accounts(env=process.env,brand={}){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN}].filter(a=>brand.platforms?.[a.name]!==false);}
+export function threadsBacklogEligible(item,state={},now=Date.now()){
+ if(item.status!=='published'||item.threads_pending!==true||item.threads_media_id)return false;
+ if(Date.parse(state.retry_at||'')>now)return false;
+ if(!item.threads_reconcile_required)return true;
+ const requested=Date.parse(item.threads_publish_requested_at||'');
+ return Number.isFinite(requested)&&now-requested>=35*60_000;
+}
 export function classifyMetaError(error){const code=Number(error?.code),sub=Number(error?.subcode);if(code===36004&&sub===2207010)return 'caption_too_long';if(code===4||code===17||code===32||code===613||code===9||error?.rateLimited)return 'rate_limited';if(code===190)return 'auth';if(error?.definitiveRejection)return 'permanent';return 'transient';}
 export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const me=await graph(a.base,a.token,a.id,{fields:'id,username'});if(me.username?.toLowerCase()!==handle.toLowerCase()||String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);return me;}
 export async function publish(memory,brand,save){
@@ -40,12 +47,12 @@ export async function publish(memory,brand,save){
  // was down, retain its outstanding delivery separately so it cannot hold the
  // next Instagram slot hostage.
  const threadsAvailable=aa.some(a=>a.name==='threads');
- const threadsBacklog=threadsAvailable&&memory.items.find(x=>x.status==='published'&&x.threads_pending===true&&!x.threads_media_id);
+ const threadsBacklog=threadsAvailable&&memory.items.find(x=>threadsBacklogEligible(x,memory.platforms.threads));
  const item=threadsBacklog||eligible(memory.items,brand);if(!item)return {status:'no_eligible_scene'};
  const errs=validate(item,true);if(errs.length)throw new Error(errs.join('; '));
  if(!threadsBacklog){item.status='publishing';item.updated_at=new Date().toISOString();await save();}
  for(const a of aa){
-  if(item[`${a.name}_media_id`])continue;
+  if(item[`${a.name}_media_id`]||item[`${a.name}_abandoned_at`])continue;
   memory.platforms[a.name]??={};const state=memory.platforms[a.name];if(Date.parse(state.retry_at||'')>Date.now())continue;
   try{
    if(a.name==='instagram'){
@@ -60,7 +67,7 @@ export async function publish(memory,brand,save){
  }
  if(item.instagram_media_id){
   item.status='published';item.published_at??=new Date().toISOString();item.updated_at=new Date().toISOString();
-  if(configured.some(a=>a.name==='threads')&&!item.threads_media_id)item.threads_pending=true;
+  if(configured.some(a=>a.name==='threads')&&!item.threads_media_id&&!item.threads_abandoned_at)item.threads_pending=true;
   else delete item.threads_pending;
   await save();
  }

@@ -2,7 +2,23 @@
 export async function advanceContainer({ item, prefix, create, inspect, publish, save, now = Date.now() }) {
   const key = suffix => `${prefix}_${suffix}`;
   if (item[key('media_id')]) return { id: item[key('media_id')], existing: true };
-  if (item[key('reconcile_required')]) throw new Error(`${prefix}: uncertain publication needs reconciliation; not duplicating it`);
+  if (item[key('reconcile_required')]) {
+    const requestedAt=Date.parse(item[key('publish_requested_at')]||'');
+    // Never repeat an ambiguous publish request. After preserving a full
+    // posting interval for reconciliation, abandon only this destination so
+    // the uncertain item cannot hold the entire queue forever.
+    if(Number.isFinite(requestedAt)&&now-requestedAt>=35*60_000){
+      item[key('abandoned_at')]=new Date(now).toISOString();
+      item[key('abandon_reason')]='Publish outcome remained uncertain after the reconciliation window';
+      if(prefix==='instagram'){
+        item.status='needs_review';
+        item.review_reason='Instagram publication outcome is uncertain; request was not repeated';
+      }
+      await save();
+      return {abandoned:true};
+    }
+    throw new Error(`${prefix}: uncertain publication needs reconciliation; not duplicating it`);
+  }
   if (Date.parse(item[key('retry_at')] || '') > now) return null;
   if (!item[key('container_id')]) {
     const result = await create();

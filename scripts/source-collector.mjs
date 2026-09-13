@@ -39,7 +39,7 @@ async function lock(){
   let alive=true;
   if(Number.isInteger(owner?.pid)){try{process.kill(owner.pid,0);}catch(e){if(e.code==='ESRCH')alive=false;}}
   else alive=Date.now()-(await fs.stat(lockPath)).mtimeMs<60*60_000;
-  if(!alive){await fs.rename(lockPath,`${lockPath}.stale-${Date.now()}`);return lock();}
+  if(!alive){await fs.unlink(lockPath).catch(e=>{if(e.code!=='ENOENT')throw e;});return lock();}
   console.log(JSON.stringify({status:'locked'}));process.exit(0);
  }
 }

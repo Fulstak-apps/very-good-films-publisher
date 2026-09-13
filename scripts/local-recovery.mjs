@@ -1,11 +1,10 @@
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 const repo='Fulstak-apps/very-good-films-publisher';
-// memory.json is intentionally durable history and now exceeds Node's 1 MiB
-// child-process default once GitHub returns it base64-encoded. A recovery
-// process must be able to read that state rather than crashing with ENOBUFS.
-const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:8*1024*1024});
-const remote=path=>JSON.parse(Buffer.from(JSON.parse(gh(['api',`repos/${repo}/contents/${path}`])).content,'base64').toString());
+// Ask GitHub for raw file content instead of a base64-wrapped Contents API
+// response. This keeps the recovery reader viable as publication history grows.
+const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:64*1024*1024});
+const remote=path=>JSON.parse(gh(['api','-H','Accept: application/vnd.github.raw+json',`repos/${repo}/contents/${path}`]));
 const recoveryLock='monitor/recovery.lock';
 await fs.mkdir('monitor',{recursive:true});
 let recoveryHandle;
