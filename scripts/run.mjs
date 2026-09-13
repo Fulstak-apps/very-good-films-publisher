@@ -83,7 +83,7 @@ await withLock(async()=>{
  else if(command==='doctor'){
   const checks={};for(const bin of ['ffmpeg','ffprobe']){try{execFileSync(bin,['-version'],{stdio:'pipe'});checks[bin]='available';}catch{checks[bin]='missing';}}
   for(const a of accounts(process.env,brand)){try{const me=await verifyAccount(a,brand[`${a.name}_handle`]);checks[a.name]=`verified @${me.username}`;}catch(e){checks[a.name]=e.message;}}
-  const q=queuePlan(memory.items,brand);checks.media=process.env.VGF_MEDIA_ORIGIN&&process.env.VGF_UPLOAD_TOKEN?'Cloudflare configured':process.env.GITHUB_REPOSITORY?'GitHub release assets':'missing media configuration';checks.enabled=brand.enabled;checks.scene_sources=sources.feeds.length;checks.catalog_scenes=memory.items.length;checks.queue=`${q.ready}/${q.target} ready`;console.log(JSON.stringify(checks,null,2));
+  const q=queuePlan(memory.items,brand);checks.media=process.env.GITHUB_REPOSITORY?'GitHub release assets':'missing GitHub repository configuration';checks.enabled=brand.enabled;checks.scene_sources=sources.feeds.length;checks.catalog_scenes=memory.items.length;checks.queue=`${q.ready}/${q.target} ready`;console.log(JSON.stringify(checks,null,2));
  }else if(command==='status'){
   const q=queuePlan(memory.items,brand);console.log(JSON.stringify({enabled:brand.enabled,queue:q,counts:memory.items.reduce((a,x)=>(a[x.status]=(a[x.status]||0)+1,a),{}),platforms:memory.platforms,unresolved:memory.items.filter(x=>x.instagram_reconcile_required||x.threads_reconcile_required).map(x=>x.key)},null,2));
  }else throw new Error(`Unknown command ${command}`);

@@ -20,7 +20,7 @@ Publishing starts paused. Configure the four account secrets, verify `npm run do
 
 Required repository secrets: `INSTAGRAM_USER_ID`, `INSTAGRAM_ACCESS_TOKEN`, `THREADS_USER_ID`, `THREADS_ACCESS_TOKEN`. The public repository serves MP4s from its `media` release. The workflow's own GitHub token uploads prepared assets. Locally set `GITHUB_REPOSITORY=Fulstak-apps/very-good-films-publisher` and authenticate `gh`.
 
-Optional: `TMDB_READ_TOKEN` (film discovery), `OMDB_API_KEY` (verified IMDb ratings), `VGF_UPLOAD_TOKEN` plus repository variable `VGF_MEDIA_ORIGIN` (Cloudflare storage).
+Optional: `TMDB_READ_TOKEN` (film discovery), `OMDB_API_KEY` (verified IMDb ratings). Formatted video assets are stored as GitHub Release assets.
 
 See [Architecture](docs/ARCHITECTURE.md), [Scene feed contract](docs/SCENE_FEED.md), [Operations](docs/OPERATIONS.md), and [editorial prompt](prompts/editor.md).
 

@@ -38,10 +38,12 @@ export function verifyVideo(file,expected){const p=probe(file),v=p.streams.find(
 
 export async function sha256(file){const h=createHash('sha256');for await(const chunk of createReadStream(file))h.update(chunk);return h.digest('hex');}
 
-export async function upload(file,hash,{repository:repositoryOverride}={}){const origin=process.env.VGF_MEDIA_ORIGIN,token=process.env.VGF_UPLOAD_TOKEN;if(!origin||!token)return uploadGitHub(file,hash,repositoryOverride);const url=new URL(`/media/${hash}.mp4`,origin);if(url.protocol!=='https:')throw new Error('Media origin must use HTTPS');const stat=await fs.stat(file);if(stat.size>95*1024*1024)throw new Error('Rendered video exceeds upload limit');const r=await fetch(url,{method:'PUT',headers:{Authorization:`Bearer ${token}`,'Content-Type':'video/mp4','Content-Length':String(stat.size)},body:createReadStream(file),duplex:'half',signal:AbortSignal.timeout(180000)});if(!r.ok)throw new Error(`Media upload HTTP ${r.status}`);const check=await fetch(url, {method:'HEAD',signal:AbortSignal.timeout(15000)});if(!check.ok||Number(check.headers.get('content-length'))!==stat.size)throw new Error('Public media verification failed');return url.href;}
+// GitHub Releases is the sole media origin. One public, verified path means a
+// failed Action can resume delivery without depending on a second provider.
+export async function upload(file,hash,{repository:repositoryOverride}={}){return uploadGitHub(file,hash,repositoryOverride);}
 
 async function uploadGitHub(file,hash,repositoryOverride){
- const repository=repositoryOverride||process.env.GITHUB_REPOSITORY;if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository||''))throw new Error('Set GITHUB_REPOSITORY or configure Cloudflare media storage');
+ const repository=repositoryOverride||process.env.GITHUB_REPOSITORY;if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository||''))throw new Error('Set GITHUB_REPOSITORY for GitHub Release media storage');
  const size=(await fs.stat(file)).size;if(size>90*1024*1024)throw new Error('Video exceeds GitHub media size limit');
  const url=`https://github.com/${repository}/releases/download/media/${hash}.mp4?download=1`;
  let release;

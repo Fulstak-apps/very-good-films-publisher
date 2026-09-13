@@ -12,7 +12,7 @@ Keep the collector installed with `npm run source:install` on an always-on Mac o
 
 ## Media hosting
 
-The publisher uses GitHub release assets when no object-storage credentials are configured. For a larger queue, set `VGF_MEDIA_ORIGIN` and `VGF_UPLOAD_TOKEN` in the repository Actions secrets to use the existing object-storage upload path. The health report identifies the active backend; no secret values are written to logs.
+The publisher stores formatted video as GitHub Release assets. The health report verifies that this media path is available; no secret values are written to logs.
 
 ## Rotation and review
 
