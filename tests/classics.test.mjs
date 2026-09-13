@@ -19,3 +19,9 @@ test('Pacific date resets the confirmed classic count; unconfirmed attempts do n
  assert.equal(classicDailyProgress([old,{...classic(),instagram_published_at:new Date(now).toISOString()}],brand,now).confirmed,0);
  const item=classic();assert.equal(enforceSourcePolicy([item]),0);
 });
+test('prepared classic reserve prevents a completely empty modern queue',()=>{
+ const now=Date.parse('2026-09-09T17:00:00Z'),a=classic();
+ const posted=[0,1,2].map(i=>({...classic(),status:'published',instagram_media_id:String(i+1),instagram_published_at:new Date(now-(i+2)*3600000).toISOString()}));
+ assert.equal(classicDailyProgress(posted,brand,now).confirmed,3);
+ assert.equal(eligible([...posted,a],brand,now),a);
+});

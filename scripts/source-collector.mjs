@@ -79,7 +79,7 @@ async function localTitleHint(caption){
   const title=String(parsed.title||'').trim();return title&&caption.toLowerCase().includes(title.toLowerCase())?title:undefined;
  }catch{return undefined;}
 }
-async function commit(){
+async function commit(includeLedger=false){
  // Rebase before staging collector output. This keeps state commits from the
  // publisher out of the collector commit and prevents a queue refill race from
  // blocking the next scheduled run.
@@ -91,7 +91,8 @@ async function commit(){
  // Do not push a commit for routine ledger timestamps. Those commits used to
  // trigger a publisher workflow every five minutes and raced publication-state
  // commits. Persist the ledger remotely only when an actual queue asset exists.
- const changed=(await runCommand('git',['status','--porcelain','--','inbox','inbox-classics'])).stdout.trim();
+ const watched=includeLedger?['inbox','inbox-classics','monitor/source-ledger.json']:['inbox','inbox-classics'];
+ const changed=(await runCommand('git',['status','--porcelain','--',...watched])).stdout.trim();
  if(!changed)return;
  await runCommand('git',['add','--','inbox','inbox-classics','monitor/source-ledger.json']);
  await runCommand('git',['commit','-m','Queue approved Very Good Films source clip'],{env:commandEnv});
@@ -151,6 +152,7 @@ try{
  if(Date.parse(ledger.retry_after||'')>Date.now()){
   console.log(JSON.stringify({status:'source_cooldown',retry_after:ledger.retry_after,reason:ledger.session_error}));
  }else{
+ const previousSessionError=ledger.session_error||null;
  const run={started_at:new Date().toISOString(),queued:[],errors:[]};
  let candidates=[];
  const next=Number.isInteger(ledger.next_account_index)?ledger.next_account_index%sourceAccounts.length:0;
@@ -174,6 +176,8 @@ try{
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
   }
  }
- run.finished_at=new Date().toISOString();ledger.runs=[...(ledger.runs||[]),run].slice(-250);await save(ledgerPath,ledger);await commit();console.log(JSON.stringify(run));
+ run.finished_at=new Date().toISOString();ledger.runs=[...(ledger.runs||[]),run].slice(-250);await save(ledgerPath,ledger);
+ const sessionStateChanged=previousSessionError!==(ledger.session_error||null);
+ await commit(sessionStateChanged);console.log(JSON.stringify(run));
  }
 }finally{await handle.close();await fs.rm(lockPath,{force:true});}

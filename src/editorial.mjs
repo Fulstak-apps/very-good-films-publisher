@@ -86,5 +86,9 @@ export function eligible(items,brand,now=Date.now()){
  // valid modern clip from a recently used source is still better than an
  // idle account, so only relax source diversity as a final fallback.
  const anyModern=candidates.filter(x=>!isClassic(x));
- return anyModern.sort((a,b)=>(a.status==='ready'?0:1)-(b.status==='ready'?0:1)||(b.priority||0)-(a.priority||0))[0]||null;
+ const nextModern=anyModern.sort((a,b)=>(a.status==='ready'?0:1)-(b.status==='ready'?0:1)||(b.priority||0)-(a.priority||0))[0];
+ if(nextModern)return nextModern;
+ // Emergency continuity reserve: when every approved-source clip is gone,
+ // use an already prepared classic rather than leaving both feeds silent.
+ return candidates.find(isClassic)||null;
 }
