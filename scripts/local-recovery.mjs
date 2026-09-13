@@ -35,7 +35,10 @@ const sourceBuffered=memory.items.filter(x=>['ready','partial','publishing'].inc
 const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_minimum||0));
 if(brand.enabled&&sourceBuffered<sourceTarget){
  try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});collectorStatus='completed';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
- if(buffered===0)try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
+ // Rebuild verified approved-source captures before the queue reaches zero.
+ // The repair script enforces its own floor and refuses branded or previously
+ // published media, so running this check early cannot create duplicates.
+ try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
 }
 const runs=JSON.parse(gh(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));
 const active=runs.some(x=>['queued','in_progress','waiting','pending','requested'].includes(x.status));

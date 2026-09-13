@@ -21,13 +21,17 @@ async function originalCapture(item){
 }
 
 await withLock(async()=>{
- const memory=await readJSON('state/memory.json');
- if(memory.items.some(x=>['ready','partial','publishing'].includes(x.status))){console.log(JSON.stringify({status:'queue_not_empty'}));return;}
+ const [memory,brand]=await Promise.all([readJSON('state/memory.json'),readJSON('config/brand.json')]);
+ const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
+ const recoveryFloor=Math.max(10,Math.ceil((brand.queue_target||30)/2));
+ if(buffered>=recoveryFloor){console.log(JSON.stringify({status:'queue_above_recovery_floor',buffered,recoveryFloor}));return;}
+ const deficit=Math.max(0,(brand.queue_target||30)-buffered);
  const candidates=memory.items.filter(x=>
   x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&sourceDetailsComplete(x.source_details)&&
   x.qa?.source_verified===true&&x.qa?.media_verified===true&&x.qa?.branding==='very-good-films-only-v1'&&
+  !x.instagram_media_id&&!x.threads_media_id&&
   !(Date.parse(x.recovery_retry_at||'')>Date.now())
- ).slice(0,candidatesPerRun);
+ ).slice(0,Math.min(candidatesPerRun,deficit));
  const repaired=[],held=[];
  for(const item of candidates){
   try{
