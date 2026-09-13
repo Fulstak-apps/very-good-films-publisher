@@ -54,7 +54,7 @@ Object.assign(report,{collectorStatus,collectorError});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
 const latestRun=Date.parse(runs[0]?.createdAt||'')||0;
-if(brand.enabled&&!active&&(pending||(ready&&due&&withinCap)||(ready<brand.queue_target&&memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now)))||(report.health==='source_queue_empty'&&now-latestRun>3600000))){
+if(brand.enabled&&!active&&(pending||(ready&&due&&withinCap)||(ready<brand.queue_target&&memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now)))||report.health==='source_queue_empty')){
  gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';
 }
 try{
