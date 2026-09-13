@@ -8383,20 +8383,35 @@
         "synopsis": "Barbershop is a 2002 American comedy-drama film and the first installment in the Barbershop series directed by Tim Story and written by Mark Brown, Don D. Scott and Marshall Todd, from a story by Brown. It was produced by George Tillman Jr., Robert Teitel and Brown. The film stars Ice Cube, Anthony Anderson, Sean Patrick Thomas, Eve, Troy Garity, Michael Ealy, Leonard Earl Howze, Keith David and Cedric the Entertainer. Its plot revolves around the social life in a barbershop on the South Side of Chicago. The film was released on September 13, 2002, by MGM Distribution Co. under the Metro-Goldwyn-Mayer label. It received positive reviews from critics and grossed $77 million worldwide. A seque",
         "metadata_source": "https://en.wikipedia.org/wiki/Barbershop_(film)"
       },
-      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/2c3aaac090e1abd23b5d925f054a94f185ec8543e35125934762152479522d09.mp4?download=1",
-      "asset_sha256": "2c3aaac090e1abd23b5d925f054a94f185ec8543e35125934762152479522d09",
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/1b0cf8fe85a0fe5ba9fac17eef325242c6660ddd6cb0f80df18dad5e7afe2a8a.mp4?download=1",
+      "asset_sha256": "1b0cf8fe85a0fe5ba9fac17eef325242c6660ddd6cb0f80df18dad5e7afe2a8a",
       "qa": {
         "source_verified": true,
         "media_verified": true,
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-09T04:38:50.941Z",
         "source_duration": 5.066666,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "width": 1080,
+        "height": 1920,
+        "duration": 5.066667,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 720,
+          "height": 1276,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "subtitles-preserved",
+          "checked_at": "2026-09-13T03:53:20.940Z"
+        },
+        "recovered_at": "2026-09-13T03:53:25.467Z"
       },
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-09T04:39:33.056Z",
       "key": "2c2e894179c731a442a725c82416a9d4148bab2e8b1ec8f3fdc3f6caa4beeb18",
-      "review_reason": "Clean movie crop required before publishing",
       "recovery_error": "No reliable film rectangle; hold for crop review",
       "recovery_checked_at": "2026-09-11T13:18:06.426Z",
       "recovery_retry_at": "2026-09-11T19:18:06.426Z"
