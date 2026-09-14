@@ -1020,6 +1020,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DdRslftyTAm/",
       "queued_at": "2026-09-14T17:48:00.525Z",
       "asset_sha256": "139a925f737e080fe72f35686f5017bded726b084f8c3fe323302fa26af7027d"
+    },
+    "DdR79hFq4jH": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DdR79hFq4jH/",
+      "queued_at": "2026-09-14T20:11:33.610Z",
+      "asset_sha256": "f11309def4c37278219e04a77050e62de9b9fb2ec9df08ac1dad23ea3a027bbf"
     }
   },
   "checks": {
@@ -1033,205 +1039,40 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-14T17:46:34.692Z"
+      "checked_at": "2026-09-14T20:10:04.037Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-13T04:15:50.306Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=68784\n  - [pid=68784][err] [68784:18466232:0912/211613.913364:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=68784][err] [68784:18466232:0912/211613.915707:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=68784] <gracefully close start>\n  - [pid=68784] <kill>\n  - [pid=68784] <will force kill>\n  - [pid=68784] exception while trying to kill process: Error: kill EPERM\n  - [pid=68784] <process did exit: exitCode=21, signal=null>\n  - [pid=68784] starting temporary directories cleanup\n  - [pid=68784] finished temporary directories cleanup\n  - [pid=68784] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:16:21.423Z"
-    },
-    {
-      "started_at": "2026-09-13T04:21:38.526Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=70155\n  - [pid=70155][err] [70155:18477769:0912/212202.111909:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=70155][err] [70155:18477769:0912/212202.112855:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=70155] <gracefully close start>\n  - [pid=70155] <kill>\n  - [pid=70155] <will force kill>\n  - [pid=70155] exception while trying to kill process: Error: kill ESRCH\n  - [pid=70155] <process did exit: exitCode=21, signal=null>\n  - [pid=70155] starting temporary directories cleanup\n  - [pid=70155] finished temporary directories cleanup\n  - [pid=70155] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:22:09.666Z"
-    },
-    {
-      "started_at": "2026-09-13T04:27:23.387Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=71451\n  - [pid=71451][err] [71451:18490200:0912/212746.887167:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=71451][err] [71451:18490200:0912/212746.887867:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=71451] <gracefully close start>\n  - [pid=71451] <kill>\n  - [pid=71451] <will force kill>\n  - [pid=71451] exception while trying to kill process: Error: kill EPERM\n  - [pid=71451] <process did exit: exitCode=21, signal=null>\n  - [pid=71451] starting temporary directories cleanup\n  - [pid=71451] finished temporary directories cleanup\n  - [pid=71451] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:27:54.397Z"
-    },
-    {
-      "started_at": "2026-09-13T04:33:03.545Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=72627\n  - [pid=72627][err] [72627:18502647:0912/213327.470331:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=72627][err] [72627:18502647:0912/213327.471081:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=72627] <gracefully close start>\n  - [pid=72627] <kill>\n  - [pid=72627] <will force kill>\n  - [pid=72627] exception while trying to kill process: Error: kill EPERM\n  - [pid=72627] <process did exit: exitCode=21, signal=null>\n  - [pid=72627] starting temporary directories cleanup\n  - [pid=72627] finished temporary directories cleanup\n  - [pid=72627] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:33:34.979Z"
-    },
-    {
-      "started_at": "2026-09-13T04:38:45.904Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=73857\n  - [pid=73857][err] [73857:18512931:0912/213909.378011:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=73857][err] [73857:18512931:0912/213909.378733:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=73857] <gracefully close start>\n  - [pid=73857] <kill>\n  - [pid=73857] <will force kill>\n  - [pid=73857] exception while trying to kill process: Error: kill EPERM\n  - [pid=73857] <process did exit: exitCode=21, signal=null>\n  - [pid=73857] starting temporary directories cleanup\n  - [pid=73857] finished temporary directories cleanup\n  - [pid=73857] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:39:16.885Z"
-    },
-    {
-      "started_at": "2026-09-13T04:44:24.645Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=74563\n  - [pid=74563][err] [74563:18521032:0912/214448.026167:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=74563][err] [74563:18521032:0912/214448.026883:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=74563] <gracefully close start>\n  - [pid=74563] <kill>\n  - [pid=74563] <will force kill>\n  - [pid=74563] exception while trying to kill process: Error: kill EPERM\n  - [pid=74563] <process did exit: exitCode=21, signal=null>\n  - [pid=74563] starting temporary directories cleanup\n  - [pid=74563] finished temporary directories cleanup\n  - [pid=74563] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:44:55.533Z"
-    },
-    {
-      "started_at": "2026-09-13T04:50:03.797Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=75731\n  - [pid=75731][err] [75731:18533461:0912/215027.257503:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=75731][err] [75731:18533461:0912/215027.258234:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=75731] <gracefully close start>\n  - [pid=75731] <kill>\n  - [pid=75731] <will force kill>\n  - [pid=75731] exception while trying to kill process: Error: kill EPERM\n  - [pid=75731] <process did exit: exitCode=21, signal=null>\n  - [pid=75731] starting temporary directories cleanup\n  - [pid=75731] finished temporary directories cleanup\n  - [pid=75731] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:50:34.765Z"
-    },
-    {
-      "started_at": "2026-09-13T04:55:43.070Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=76462\n  - [pid=76462][err] [76462:18541196:0912/215606.386947:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=76462][err] [76462:18541196:0912/215606.387811:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=76462] <gracefully close start>\n  - [pid=76462] <kill>\n  - [pid=76462] <will force kill>\n  - [pid=76462] exception while trying to kill process: Error: kill EPERM\n  - [pid=76462] <process did exit: exitCode=21, signal=null>\n  - [pid=76462] starting temporary directories cleanup\n  - [pid=76462] finished temporary directories cleanup\n  - [pid=76462] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T04:56:13.893Z"
-    },
-    {
-      "started_at": "2026-09-13T05:01:23.368Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=77463\n  - [pid=77463][err] [77463:18551571:0912/220146.717298:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=77463][err] [77463:18551571:0912/220146.718009:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=77463] <gracefully close start>\n  - [pid=77463] <kill>\n  - [pid=77463] <will force kill>\n  - [pid=77463] exception while trying to kill process: Error: kill EPERM\n  - [pid=77463] <process did exit: exitCode=21, signal=null>\n  - [pid=77463] starting temporary directories cleanup\n  - [pid=77463] finished temporary directories cleanup\n  - [pid=77463] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T05:01:54.224Z"
-    },
-    {
-      "started_at": "2026-09-13T05:07:03.639Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=78327\n  - [pid=78327][err] [78327:18561819:0912/220727.004573:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=78327][err] [78327:18561819:0912/220727.005357:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=78327] <gracefully close start>\n  - [pid=78327] <kill>\n  - [pid=78327] <will force kill>\n  - [pid=78327] exception while trying to kill process: Error: kill EPERM\n  - [pid=78327] <process did exit: exitCode=21, signal=null>\n  - [pid=78327] starting temporary directories cleanup\n  - [pid=78327] finished temporary directories cleanup\n  - [pid=78327] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T05:07:34.511Z"
-    },
-    {
-      "started_at": "2026-09-13T05:12:42.913Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=79167\n  - [pid=79167][err] [79167:18571616:0912/221306.216764:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=79167][err] [79167:18571616:0912/221306.217641:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=79167] <gracefully close start>\n  - [pid=79167] <kill>\n  - [pid=79167] <will force kill>\n  - [pid=79167] exception while trying to kill process: Error: kill EPERM\n  - [pid=79167] <process did exit: exitCode=21, signal=null>\n  - [pid=79167] starting temporary directories cleanup\n  - [pid=79167] finished temporary directories cleanup\n  - [pid=79167] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T05:13:13.723Z"
-    },
-    {
-      "started_at": "2026-09-13T05:18:21.842Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "browserType.launchPersistentContext: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n  - <launched> pid=79870\n  - [pid=79870][err] [79870:18580926:0912/221845.227244:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile/SingletonLock: File exists (17)\n  - [pid=79870][err] [79870:18580926:0912/221845.228036:ERROR:chrome/app/chrome_main_delegate.cc:550] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n  - [pid=79870] <gracefully close start>\n  - [pid=79870] <kill>\n  - [pid=79870] <will force kill>\n  - [pid=79870] exception while trying to kill process: Error: kill EPERM\n  - [pid=79870] <process did exit: exitCode=21, signal=null>\n  - [pid=79870] starting temporary directories cleanup\n  - [pid=79870] finished temporary directories cleanup\n  - [pid=79870] <gracefully close end>\n"
-        }
-      ],
-      "finished_at": "2026-09-13T05:18:52.733Z"
-    },
-    {
-      "started_at": "2026-09-13T05:24:02.467Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "Instagram source session is signed out; open npm run source:login."
-        }
-      ],
-      "finished_at": "2026-09-13T05:24:31.145Z"
-    },
-    {
-      "started_at": "2026-09-13T06:26:10.737Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "Instagram source session is signed out; open npm run source:login."
-        }
-      ],
-      "finished_at": "2026-09-13T06:26:19.146Z"
-    },
-    {
-      "started_at": "2026-09-13T07:27:56.140Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "Instagram source session is signed out; open npm run source:login."
-        }
-      ],
-      "finished_at": "2026-09-13T07:27:57.950Z"
-    },
     {
       "started_at": "2026-09-13T08:29:33.642Z",
       "queued": [
@@ -5329,9 +5170,137 @@
       ],
       "errors": [],
       "finished_at": "2026-09-14T17:48:00.525Z"
+    },
+    {
+      "started_at": "2026-09-14T17:53:13.226Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T17:54:27.006Z"
+    },
+    {
+      "started_at": "2026-09-14T17:59:40.667Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:01:11.567Z"
+    },
+    {
+      "started_at": "2026-09-14T18:06:23.120Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:07:48.152Z"
+    },
+    {
+      "started_at": "2026-09-14T18:13:01.170Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:14:43.344Z"
+    },
+    {
+      "started_at": "2026-09-14T18:19:53.273Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:21:10.239Z"
+    },
+    {
+      "started_at": "2026-09-14T18:26:20.596Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:27:35.320Z"
+    },
+    {
+      "started_at": "2026-09-14T18:32:48.671Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:34:22.432Z"
+    },
+    {
+      "started_at": "2026-09-14T18:39:36.590Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:41:06.191Z"
+    },
+    {
+      "started_at": "2026-09-14T18:46:17.296Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:47:39.721Z"
+    },
+    {
+      "started_at": "2026-09-14T18:52:59.278Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T18:54:21.595Z"
+    },
+    {
+      "started_at": "2026-09-14T18:59:38.171Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T19:00:58.919Z"
+    },
+    {
+      "started_at": "2026-09-14T19:06:18.401Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T19:07:47.365Z"
+    },
+    {
+      "started_at": "2026-09-14T19:13:06.393Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T19:14:30.045Z"
+    },
+    {
+      "started_at": "2026-09-14T19:19:40.858Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-14T19:26:49.182Z"
+    },
+    {
+      "started_at": "2026-09-14T20:08:35.405Z",
+      "queued": [
+        "DdR79hFq4jH"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdPVcL5yqUB/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdMR93gyo9v/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "finished_at": "2026-09-14T20:12:11.179Z"
     }
   ],
-  "next_account_index": 5,
+  "next_account_index": 6,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5348,8 +5317,8 @@
     "DCeu2jgy3BO": {
       "collector_version": 10,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-09-14T17:10:37.274Z",
-      "retry_at": "2026-09-14T20:10:37.274Z"
+      "failed_at": "2026-09-14T20:11:47.597Z",
+      "retry_at": "2026-09-14T23:11:47.599Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -5402,8 +5371,8 @@
     "Dck4uAuTLyv": {
       "collector_version": 10,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-14T17:10:46.292Z",
-      "retry_at": "2026-09-14T20:10:46.292Z"
+      "failed_at": "2026-09-14T20:11:55.345Z",
+      "retry_at": "2026-09-14T23:11:55.345Z"
     },
     "DZtaornzI-J": {
       "collector_version": 7,
@@ -5462,8 +5431,8 @@
     "DcMBrFQzHwg": {
       "collector_version": 10,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-14T17:10:49.868Z",
-      "retry_at": "2026-09-14T20:10:49.868Z"
+      "failed_at": "2026-09-14T20:11:58.282Z",
+      "retry_at": "2026-09-14T23:11:58.282Z"
     },
     "Cq8NW4ToJoc": {
       "collector_version": 7,
@@ -5474,8 +5443,8 @@
     "DZbqwhnT0Uq": {
       "collector_version": 10,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-09-14T17:10:57.388Z",
-      "retry_at": "2026-09-14T20:10:57.388Z"
+      "failed_at": "2026-09-14T20:12:11.177Z",
+      "retry_at": "2026-09-14T23:12:11.179Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -5658,8 +5627,8 @@
     "DdMR93gyo9v": {
       "collector_version": 10,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-14T17:10:47.724Z",
-      "retry_at": "2026-09-14T20:10:47.724Z"
+      "failed_at": "2026-09-14T20:11:59.955Z",
+      "retry_at": "2026-09-14T23:11:59.955Z"
     },
     "DdMvS8qSNxF": {
       "collector_version": 7,
@@ -5730,8 +5699,8 @@
     "DdOuzu6gQ42": {
       "collector_version": 10,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-14T17:10:43.945Z",
-      "retry_at": "2026-09-14T20:10:43.945Z"
+      "failed_at": "2026-09-14T20:11:35.819Z",
+      "retry_at": "2026-09-14T23:11:35.819Z"
     },
     "DcMXMFfSSnX": {
       "collector_version": 7,
@@ -5742,8 +5711,8 @@
     "DdPVcL5yqUB": {
       "collector_version": 10,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-14T17:10:42.294Z",
-      "retry_at": "2026-09-14T20:10:42.294Z"
+      "failed_at": "2026-09-14T20:11:51.917Z",
+      "retry_at": "2026-09-14T23:11:51.917Z"
     }
   }
 }
