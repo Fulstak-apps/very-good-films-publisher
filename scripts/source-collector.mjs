@@ -18,7 +18,7 @@ const limit=5;
 // Keep searching across the full approved source rotation. A single profile
 // often has several clips with burned-in text; stopping after eight attempts
 // can leave the publisher starved even when a clean clip is available later.
-const maxAttempts=32;
+const maxAttempts=64;
 // Leave enough time for the current capture to finish, save the ledger, and
 // push a queued asset before the recovery supervisor's 9.5-minute deadline.
 const maxRunMs=6*60_000;
@@ -26,7 +26,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 const commandTimeout=120_000;
 // Bump when eligibility semantics change so clips previously held by an older
 // rule are reconsidered instead of waiting for stale retry timestamps.
-const collectorVersion=10;
+const collectorVersion=11;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -57,7 +57,10 @@ async function profiles(handles=sourceAccounts,errors=[]){
     const seen=new Set();
     // Instagram virtualizes profile grids. Read several rows so a handful of
     // recently rejected clips cannot make the source appear exhausted.
-    for(let row=0;row<5;row++){
+    // Instagram virtualizes the profile grid and several approved pages post
+    // frequently. Five rows can contain only reels already in the ledger, so
+    // scan a deeper window before declaring the source rotation exhausted.
+    for(let row=0;row<12;row++){
      const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
      for(const url of urls)seen.add(url);
      await page.evaluate(()=>window.scrollBy(0,Math.max(window.innerHeight*1.5,1200)));
