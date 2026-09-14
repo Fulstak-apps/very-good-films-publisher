@@ -30,6 +30,17 @@ const collectorVersion=12;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
+async function cleanupWork(){
+ const directory=path.join(root,'work');const now=Date.now();const entries=await fs.readdir(directory,{withFileTypes:true}).catch(e=>e.code==='ENOENT'?[]:Promise.reject(e));
+ for(const entry of entries){
+  const target=path.join(directory,entry.name);
+  if(entry.isDirectory()&&entry.name==='instagram-mirror'){
+   for(const file of await fs.readdir(target)){const p=path.join(target,file);const stat=await fs.stat(p).catch(()=>null);if(stat&&now-stat.mtimeMs>30*86400000)await fs.rm(p,{recursive:true,force:true});}
+  }else if(entry.isFile()&&/\.(mp4|bin|tmp)$/i.test(entry.name)){
+   const stat=await fs.stat(target).catch(()=>null);if(stat&&now-stat.mtimeMs>2*86400000)await fs.rm(target,{force:true});
+  }
+ }
+}
 const commandEnv={...process.env,GIT_TERMINAL_PROMPT:'0',GIT_EDITOR:'true'};
 const runCommand=(file,args,options={})=>exec(file,args,{timeout:commandTimeout,windowsHide:true,env:commandEnv,...options});
 
@@ -158,6 +169,7 @@ async function queue(candidate,ledger){
 
 const handle=await lock();
 try{
+ await cleanupWork();
  try{const result=await runCommand(process.execPath,['scripts/classics-refill.mjs'],{timeout:600000});console.log(result.stdout);await commit();}catch(error){console.error('Classics refill:',error.message.slice(0,300));}
  const ledger=await json(ledgerPath,{version:1,queued:{},failed:{},checks:{},runs:[]});
  ledger.failed??={};
