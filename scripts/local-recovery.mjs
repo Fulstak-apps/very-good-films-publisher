@@ -4,7 +4,9 @@ const repo='Fulstak-apps/very-good-films-publisher';
 // Ask GitHub for raw file content instead of a base64-wrapped Contents API
 // response. This keeps the recovery reader viable as publication history grows.
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:64*1024*1024});
-const remote=path=>JSON.parse(gh(['api','-H','Accept: application/vnd.github.raw+json',`repos/${repo}/contents/${path}`]));
+const wait=(ms)=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
+const ghRead=args=>{let last;for(let attempt=0;attempt<3;attempt++){try{return gh(args);}catch(error){last=error;if(attempt<2)wait(2000*(attempt+1));}}throw last;};
+const remote=path=>JSON.parse(ghRead(['api','-H','Accept: application/vnd.github.raw+json',`repos/${repo}/contents/${path}`]));
 const recoveryLock='monitor/recovery.lock';
 await fs.mkdir('monitor',{recursive:true});
 let recoveryHandle;
@@ -40,7 +42,9 @@ if(brand.enabled&&sourceBuffered<sourceTarget){
  // published media, so running this check early cannot create duplicates.
  try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
 }
-const runs=JSON.parse(gh(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));
+let runs=[],workflowError;
+try{runs=JSON.parse(ghRead(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));}
+catch(error){workflowError=String(error.message||error).slice(0,500);}
 const active=runs.some(x=>['queued','in_progress','waiting','pending','requested'].includes(x.status));
 const now=Date.now();
 const posted=memory.items.filter(x=>x.instagram_published_at);
@@ -50,12 +54,13 @@ const pending=memory.items.some(x=>x.status==='publishing');
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
-Object.assign(report,{collectorStatus,collectorError});
+Object.assign(report,{collectorStatus,collectorError,workflowError});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
 const latestRun=Date.parse(runs[0]?.createdAt||'')||0;
 if(brand.enabled&&!active&&(pending||(ready&&due&&withinCap)||(ready<brand.queue_target&&memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now)))||report.health==='source_queue_empty')){
- gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';
+ try{gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';}
+ catch(error){report.action='dispatch_failed';report.dispatchError=String(error.message||error).slice(0,500);}
 }
 try{
  const response=await fetch('http://127.0.0.1:11434/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'qwen3:4b',stream:false,think:false,prompt:'Summarize this publishing health snapshot in one sentence. Do not claim a dispatch is a published post. No commands. '+JSON.stringify(report),options:{num_predict:100}}),signal:AbortSignal.timeout(60000)});
