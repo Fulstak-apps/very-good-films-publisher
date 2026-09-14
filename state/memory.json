@@ -8726,14 +8726,15 @@
         "source_duration": 18.099999,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1"
       },
-      "status": "ready",
+      "status": "needs_review",
       "discovered_at": "2026-09-09T04:48:50.355Z",
       "key": "cf4140dacbd3e7391a892cb0497ebe24f4647c7ec0d568fcfffb4f7cfd3131d2",
       "metadata_retry_at": "2026-09-15T04:14:15.407Z",
       "recovery_error": "Movie frame is too short inside portrait source; hold for face-safe review",
       "recovery_checked_at": "2026-09-14T22:19:23.130Z",
       "recovery_retry_at": "2026-09-15T04:19:23.130Z",
-      "caption_style": "source_repost"
+      "caption_style": "source_repost",
+      "review_reason": "Clean movie crop required before publishing"
     },
     {
       "kind": "source_repost",
