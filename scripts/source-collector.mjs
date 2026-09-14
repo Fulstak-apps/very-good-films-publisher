@@ -26,7 +26,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 const commandTimeout=120_000;
 // Bump when eligibility semantics change so clips previously held by an older
 // rule are reconsidered instead of waiting for stale retry timestamps.
-const collectorVersion=11;
+const collectorVersion=12;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -60,7 +60,7 @@ async function profiles(handles=sourceAccounts,errors=[]){
     // Instagram virtualizes the profile grid and several approved pages post
     // frequently. Five rows can contain only reels already in the ledger, so
     // scan a deeper window before declaring the source rotation exhausted.
-    for(let row=0;row<12;row++){
+    for(let row=0;row<20;row++){
      const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
      for(const url of urls)seen.add(url);
      await page.evaluate(()=>window.scrollBy(0,Math.max(window.innerHeight*1.5,1200)));
