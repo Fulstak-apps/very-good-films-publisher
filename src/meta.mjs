@@ -47,15 +47,20 @@ export async function publish(memory,brand,save){
  const configured=accounts(process.env,brand), verificationErrors=[];
  const aa=[];
  for(const a of configured){
+  const state=memory.platforms[a.name]??={};
+  if(Date.parse(state.retry_at||'')>Date.now()){verificationErrors.push(`${a.name}: cooling down until ${state.retry_at}`);continue;}
   try{await verifyAccount(a,brand[`${a.name}_handle`]);aa.push(a);}
   catch(error){
-   const state=memory.platforms[a.name]??={};
    state.retry_at=new Date(Date.now()+15*60_000).toISOString();
    state.last_error=error.message;
    verificationErrors.push(`${a.name}: ${error.message}`);
   }
  }
- if(!aa.length){await save();return {status:'no_available_platform',errors:verificationErrors};}
+ if(!aa.length){
+  let released=false;
+  for(const pending of memory.items.filter(x=>x.status==='publishing'))released=releaseFailedItem(pending,configured.map(a=>a.name),memory.platforms)||released;
+  await save();return {status:'no_available_platform',errors:verificationErrors,released};
+ }
  // A state save can succeed after the platform returned a media ID but before
  // the final status write. Close that partial completion before selecting the
  // next item so a stale `publishing` state never blocks the queue.
