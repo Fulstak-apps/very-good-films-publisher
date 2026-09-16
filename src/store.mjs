@@ -15,7 +15,7 @@ export async function saveMemory(memory){
    catch(error){
     if(attempt===2)throw error;
     git('fetch','origin','main');
-    git('rebase','origin/main');
+    git('rebase','--autostash','origin/main');
    }
   }
  }
