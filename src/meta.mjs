@@ -8,11 +8,34 @@ export async function graph(base,token,path,params={},method='GET'){
 }
 export function accounts(env=process.env,brand={}){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN}].filter(a=>brand.platforms?.[a.name]!==false);}
 export function threadsBacklogEligible(item,state={},now=Date.now()){
- if(item.status!=='published'||item.threads_pending!==true||item.threads_media_id)return false;
+ if(item.status!=='published'||item.threads_pending!==true||item.threads_media_id||item.threads_abandoned_at)return false;
  if(Date.parse(state.retry_at||'')>now)return false;
  if(!item.threads_reconcile_required)return true;
  const requested=Date.parse(item.threads_publish_requested_at||'');
  return Number.isFinite(requested)&&now-requested>=35*60_000;
+}
+export function selectPublishCandidate(items,brand,now=Date.now()){
+ const quarantined=[];
+ for(let attempts=0;attempts<=items.length;attempts++){
+  const item=eligible(items,brand,now);
+  if(!item)return {item:null,quarantined};
+  const errors=validate(item,true);
+  if(!errors.length)return {item,quarantined};
+  item.status='needs_review';item.review_reason=`Pre-publish validation failed: ${errors.join('; ')}`;item.updated_at=new Date(now).toISOString();quarantined.push({key:item.key,errors});
+ }
+ return {item:null,quarantined};
+}
+export function releaseFailedItem(item,platformNames,platformState,now=Date.now()){
+ if(item.status!=='publishing'||platformNames.some(name=>item[`${name}_media_id`]))return false;
+ if(platformNames.some(name=>item[`${name}_reconcile_required`])){
+  item.status='needs_review';item.review_reason='A platform publish result is uncertain; held to prevent a duplicate post.';
+ }else{
+  item.status='ready';
+  const retryTimes=platformNames.map(name=>Date.parse(platformState[name]?.retry_at||'')).filter(t=>Number.isFinite(t)&&t>now);
+  item.publish_retry_at=new Date(retryTimes.length?Math.max(...retryTimes):now+15*60000).toISOString();
+ }
+ item.updated_at=new Date(now).toISOString();
+ return true;
 }
 export function classifyMetaError(error){const code=Number(error?.code),sub=Number(error?.subcode);if(code===36004&&sub===2207010)return 'caption_too_long';if(code===4||code===17||code===32||code===613||code===9||error?.rateLimited)return 'rate_limited';if(code===190)return 'auth';if(error?.definitiveRejection)return 'permanent';return 'transient';}
 export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const me=await graph(a.base,a.token,a.id,{fields:'id,username'});if(me.username?.toLowerCase()!==handle.toLowerCase()||String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);return me;}
@@ -47,9 +70,13 @@ export async function publish(memory,brand,save){
  // was down, retain its outstanding delivery separately so it cannot hold the
  // next Instagram slot hostage.
  const threadsAvailable=aa.some(a=>a.name==='threads');
- const threadsBacklog=threadsAvailable&&memory.items.find(x=>threadsBacklogEligible(x,memory.platforms.threads));
- const item=threadsBacklog||eligible(memory.items,brand);if(!item)return {status:'no_eligible_scene'};
- const errs=validate(item,true);if(errs.length)throw new Error(errs.join('; '));
+ let backlogQuarantined=false;
+ let threadsBacklog=threadsAvailable&&memory.items.find(x=>threadsBacklogEligible(x,memory.platforms.threads));
+ if(threadsBacklog){const errors=validate(threadsBacklog,true);if(errors.length){threadsBacklog.status='needs_review';threadsBacklog.review_reason=`Pre-publish validation failed: ${errors.join('; ')}`;threadsBacklog.updated_at=new Date().toISOString();threadsBacklog=null;backlogQuarantined=true;}}
+ const selection=threadsBacklog?{item:threadsBacklog,quarantined:[]}:selectPublishCandidate(memory.items,brand);
+ const item=selection.item;
+ if(selection.quarantined.length||backlogQuarantined)await save();
+ if(!item)return {status:'no_eligible_scene',quarantined:selection.quarantined};
  if(!threadsBacklog){item.status='publishing';item.updated_at=new Date().toISOString();await save();}
  for(const a of aa){
   if(item[`${a.name}_media_id`]||item[`${a.name}_abandoned_at`])continue;
@@ -72,5 +99,6 @@ export async function publish(memory,brand,save){
   await save();
  }
  else if(aa.some(a=>item[`${a.name}_media_id`])&&item.status==='publishing'){item.status='partial';item.publish_retry_at=new Date(Date.now()+15*60000).toISOString();item.updated_at=new Date().toISOString();await save();}
+ else if(releaseFailedItem(item,configured.map(a=>a.name),memory.platforms)){await save();}
  return {status:item.status,key:item.key,errors:[...verificationErrors,...configured.map(a=>item[`${a.name}_error`]).filter(Boolean)]};
 }
