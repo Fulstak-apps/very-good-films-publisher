@@ -1098,6 +1098,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DdVfEGUNM5H/",
       "queued_at": "2026-09-16T10:09:42.358Z",
       "asset_sha256": "dc3b44c8d36643eddf3119d956d4053e9d62ca7c2e043d58809f28a6c175a294"
+    },
+    "DZI8-wXhTrl": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DZI8-wXhTrl/",
+      "queued_at": "2026-09-16T11:00:13.703Z",
+      "asset_sha256": "cc0aa44f53d86a87783e27b7d3fa3ffa00b308137d091de5478481660712519d"
     }
   },
   "checks": {
@@ -1111,70 +1117,40 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.165Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-16T10:08:25.102Z"
+      "checked_at": "2026-09-16T10:55:38.167Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-14T09:47:00.198Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-14T09:48:17.311Z"
-    },
-    {
-      "started_at": "2026-09-14T09:53:31.937Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-14T09:54:50.319Z"
-    },
-    {
-      "started_at": "2026-09-14T10:00:03.069Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-14T10:01:22.744Z"
-    },
-    {
-      "started_at": "2026-09-14T10:06:32.715Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-14T10:07:49.223Z"
-    },
-    {
-      "started_at": "2026-09-14T10:13:01.327Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-14T10:14:17.407Z"
-    },
     {
       "started_at": "2026-09-14T10:19:30.885Z",
       "queued": [],
@@ -3298,9 +3274,47 @@
         }
       ],
       "finished_at": "2026-09-16T10:10:11.551Z"
+    },
+    {
+      "started_at": "2026-09-16T10:15:36.139Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-16T10:18:48.356Z"
+    },
+    {
+      "started_at": "2026-09-16T10:24:10.544Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-16T10:27:21.096Z"
+    },
+    {
+      "started_at": "2026-09-16T10:32:45.327Z",
+      "queued": [],
+      "errors": [],
+      "finished_at": "2026-09-16T10:36:02.359Z"
+    },
+    {
+      "started_at": "2026-09-16T10:41:40.707Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "source_handle": "film.fission",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "finished_at": "2026-09-16T10:45:15.094Z"
+    },
+    {
+      "started_at": "2026-09-16T10:50:47.233Z",
+      "queued": [
+        "DZI8-wXhTrl"
+      ],
+      "errors": [],
+      "finished_at": "2026-09-16T11:00:13.704Z"
     }
   ],
-  "next_account_index": 6,
+  "next_account_index": 8,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
