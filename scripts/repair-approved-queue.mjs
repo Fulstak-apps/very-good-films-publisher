@@ -51,7 +51,7 @@ await withLock(async()=>{
   x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&verifiedSourceTitle(x.source_details)&&
   x.qa?.source_verified===true&&x.qa?.media_verified===true&&
   !x.instagram_media_id&&!x.threads_media_id&&
-  !(Date.parse(x.recovery_retry_at||'')>Date.now())
+  true
  ).slice(0,Math.min(candidatesPerRun,deficit));
  const repaired=[],held=[];
  for(const item of candidates){
