@@ -16253,6 +16253,64 @@
       "threads_container_created_at": "2026-09-16T15:16:55.535Z",
       "threads_container_checked_at": "2026-09-16T15:16:55.535Z",
       "publish_retry_at": "2026-09-16T15:31:57.891Z"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DcjCXpduEUg",
+        "title": "@thecinemanerd.ig clip"
+      },
+      "scene": {
+        "id": "DcjCXpduEUg",
+        "start": 0,
+        "end": 70.3
+      },
+      "source_post_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcjCXpduEUg/",
+      "source_caption": "Roy Orbison initially rejected David Lynch’s request to use the song “In Dreams” in the brothel scene. Lynch found a way to legally use the song anyway, and Orbison did not discover the song was in the movie until Orbison just happened to see the movie in a California theatre. Orbison eventually filmed a video for the song that was produced by Lynch with footage from the movie.\n-\n🎥: Blue Velvet (1986)\nDir. David Lynch",
+      "source_details": {
+        "title_hint": "Blue Velvet",
+        "year": 1986,
+        "version": "source-caption-film-info-v3",
+        "title": "Blue Velvet",
+        "director": "David Lynch",
+        "cast": [
+          "Dennis Hopper",
+          "Isabella Rossellini",
+          "Kyle MacLachlan"
+        ],
+        "synopsis": "Blue Velvet is a 1986 American neo-noir mystery thriller film written and directed by David Lynch. The film stars Kyle MacLachlan, Isabella Rossellini, Dennis Hopper, and Laura Dern, and is named after the 1951 song of the same name. The film follows a college student (MacLachlan) who returns to his hometown and discovers a severed human ear in a field, which leads him to uncover a criminal conspiracy involving a troubled nightclub singer (Rossellini). Lynch's screenplay of Blue Velvet had been passed around multiple times in the late 1970s and early 1980s, with several major studios declining it due to its strong sexual and violent content. After the failure of his 1984 film Dune, Lynch mad",
+        "metadata_source": "https://en.wikipedia.org/wiki/Blue_Velvet_(film)"
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/c0254b9d21b438ec370355d57e6583c66793cf29d62041a0aa342d26092f4495.mp4?download=1",
+      "asset_sha256": "c0254b9d21b438ec370355d57e6583c66793cf29d62041a0aa342d26092f4495",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 70.3,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 2,
+          "width": 960,
+          "height": 716,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "subtitles-preserved",
+          "checked_at": "2026-09-16T15:36:31.821Z"
+        },
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-09-16T15:38:33.379Z",
+        "source_duration": 70.3,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-09-16T15:38:56.399Z",
+      "key": "c8a2d7f961b3efcf60adc12bc9c2d59772aefb98ca40cef89363b709a08a7695"
     }
   ],
   "discovery": [],
