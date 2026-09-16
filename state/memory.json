@@ -16178,6 +16178,64 @@
       "threads_container_created_at": "2026-09-16T14:17:48.701Z",
       "threads_container_checked_at": "2026-09-16T14:17:48.701Z",
       "publish_retry_at": "2026-09-16T14:32:50.882Z"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DdWfugfqXkp",
+        "title": "@ellsoriaa clip"
+      },
+      "scene": {
+        "id": "DdWfugfqXkp",
+        "start": 0,
+        "end": 30.916
+      },
+      "source_post_url": "https://www.instagram.com/ellsoriaa/reel/DdWfugfqXkp/",
+      "source_caption": "american psycho, 2000\n\n #fyp #americanpsycho #christianbale #willemdafoe #reesewitherspoon",
+      "source_details": {
+        "title_hint": "american psycho",
+        "year": 2000,
+        "version": "source-caption-film-info-v3",
+        "title": "American Psycho",
+        "director": "Mary Harron",
+        "cast": [
+          "Christian Bale",
+          "Justin Theroux",
+          "Jared Leto"
+        ],
+        "synopsis": "American Psycho is a 2000 psychological thriller film directed by Mary Harron, who co-wrote the screenplay with Guinevere Turner. Based on the 1991 novel by Bret Easton Ellis, it stars Christian Bale as Patrick Bateman, a wealthy New York City investment banker who leads a double life as a serial killer. Willem Dafoe, Jared Leto, Josh Lucas, Chloë Sevigny, Samantha Mathis, Cara Seymour, Justin Theroux, Turner, and Reese Witherspoon appear in supporting roles. The film blends psychological horror and black comedy to satirize 1980s yuppie culture and consumerism, exemplified by Bateman. Ellis considered his novel unfilmable; however, producer Edward R. Pressman was determined to adapt it and b",
+        "metadata_source": "https://en.wikipedia.org/wiki/American_Psycho_(film)"
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/2177aaa0c84da1e4828aa1bb01cccd79b153a00937e353259536c333bbe75acd.mp4?download=1",
+      "asset_sha256": "2177aaa0c84da1e4828aa1bb01cccd79b153a00937e353259536c333bbe75acd",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 30.916,
+        "audio": "aac",
+        "video": "h264",
+        "clean_crop": {
+          "x": 0,
+          "y": 166,
+          "width": 720,
+          "height": 912,
+          "layout": "film-only-crop-v2",
+          "sampled_frames": 9,
+          "text_check": "subtitles-preserved",
+          "checked_at": "2026-09-16T14:45:03.285Z"
+        },
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-09-16T14:45:20.121Z",
+        "source_duration": 30.916666,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-09-16T14:45:39.105Z",
+      "key": "cd57e78018d04652a3d27b811863b0cf78d6df8b7e7d169c9f4cb1ac2b3a19ec"
     }
   ],
   "discovery": [],
