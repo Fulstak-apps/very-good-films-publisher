@@ -25,9 +25,12 @@ export function selectPublishCandidate(items,brand,now=Date.now()){
  }
  return {item:null,quarantined};
 }
-export function releaseFailedItem(item,platformNames,platformState,now=Date.now()){
+export function releaseFailedItem(item,platformNames,platformState,now=Date.now(),force=false){
  if(item.status!=='publishing'||platformNames.some(name=>item[`${name}_media_id`]))return false;
- if(platformNames.some(name=>item[`${name}_reconcile_required`])){
+ const uncertain=platformNames.some(name=>item[`${name}_reconcile_required`]);
+ const activeContainer=platformNames.some(name=>item[`${name}_container_id`]&&!item[`${name}_abandoned_at`]);
+ if(activeContainer&&!uncertain&&!force)return false;
+ if(uncertain){
   item.status='needs_review';item.review_reason='A platform publish result is uncertain; held to prevent a duplicate post.';
  }else{
   item.status='ready';
@@ -58,7 +61,7 @@ export async function publish(memory,brand,save){
  }
  if(!aa.length){
   let released=false;
-  for(const pending of memory.items.filter(x=>x.status==='publishing'))released=releaseFailedItem(pending,configured.map(a=>a.name),memory.platforms)||released;
+  for(const pending of memory.items.filter(x=>x.status==='publishing'))released=releaseFailedItem(pending,configured.map(a=>a.name),memory.platforms,Date.now(),true)||released;
   await save();return {status:'no_available_platform',errors:verificationErrors,released};
  }
  // A state save can succeed after the platform returned a media ID but before

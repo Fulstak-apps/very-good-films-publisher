@@ -26,10 +26,13 @@ test('invalid active queue item is quarantined and the next valid video is selec
  const result=selectPublishCandidate([invalid,valid],{daily_cap:20,minimum_gap_minutes:30,movie_cooldown_days:0});
  assert.equal(result.item,valid);assert.equal(invalid.status,'needs_review');assert.equal(result.quarantined.length,1);
 });
-test('definite platform failure releases the item with backoff; ambiguous outcome is quarantined',()=>{
+test('definite platform failure releases the item with backoff; processing stays in flight; ambiguous outcome is quarantined',()=>{
  const now=Date.now(),retryAt=new Date(now+3600000).toISOString(),item={status:'publishing'};
  assert.equal(releaseFailedItem(item,['instagram','threads'],{instagram:{retry_at:retryAt}},now),true);
  assert.equal(item.status,'ready');assert.equal(item.publish_retry_at,retryAt);
+ const processing={status:'publishing',instagram_container_id:'container'};
+ assert.equal(releaseFailedItem(processing,['instagram','threads'],{},now),false);assert.equal(processing.status,'publishing');
+ assert.equal(releaseFailedItem(processing,['instagram','threads'],{},now,true),true);assert.equal(processing.status,'ready');
  const uncertain={status:'publishing',instagram_reconcile_required:true};
  releaseFailedItem(uncertain,['instagram','threads'],{},now);assert.equal(uncertain.status,'needs_review');
 });
