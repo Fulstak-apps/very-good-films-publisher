@@ -43,7 +43,9 @@ await withLock(async()=>{
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
   if(!verifiedSourceTitle(details)){
    const title=await titleFromCaption(item.source_caption);
+   const hinted=String(details.title_hint||'').trim();
    if(title)details={...details,title_hint_verified:title};
+   else if(hinted && normalize(item.source_caption).includes(normalize(hinted))) details={...details,title_hint_verified:hinted};
   }
   if(JSON.stringify(details)!==JSON.stringify(item.source_details||{})){item.source_details=details;item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();}
  }
