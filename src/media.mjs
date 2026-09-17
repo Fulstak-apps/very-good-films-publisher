@@ -1,4 +1,6 @@
 import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 import {createReadStream,createWriteStream} from 'node:fs';
 import {pipeline} from 'node:stream/promises';
 import {Transform} from 'node:stream';
@@ -42,16 +44,23 @@ export async function sha256(file){const h=createHash('sha256');for await(const 
 // failed Action can resume delivery without depending on a second provider.
 export async function upload(file,hash,{repository:repositoryOverride}={}){return uploadGitHub(file,hash,repositoryOverride);}
 
-// Once every enabled destination has confirmed delivery, remove generated
-// staging files. The published media IDs and captions remain in state; only
-// local render/download copies are discarded. Cleanup is best-effort so it
+// Once every enabled destination has confirmed delivery, move generated
+// staging files to the user's Trash. The published media IDs and captions
+// remain in state; cleanup is best-effort so it
 // can never turn a successful post into a failed run.
 export async function cleanupLocalMedia(item){
  const names=new Set();
  if(item.asset_sha256)names.add(`work/${item.asset_sha256}.mp4`);
  if(item.key){names.add(`work/${item.key}.mp4`);names.add(`work/recovery-${item.key}-clean.mp4`);names.add(`work/classic-clean-${item.key}.mp4`);names.add(`work/classic-source-${item.key}.mp4`);}
  if(item.scene?.id){names.add(`work/vgf-${item.scene.id}.mp4`);names.add(`work/instagram-mirror/${item.scene.id}.mp4`);}
- for(const file of names)await fs.rm(file,{force:true}).catch(()=>{});
+ const trash=path.join(os.homedir(),'.Trash');await fs.mkdir(trash,{recursive:true}).catch(()=>{});
+ for(const file of names){
+  try{
+   await fs.access(file);
+   const base=path.basename(file),stamp=Date.now(),target=path.join(trash,`${base}.verygoodfilms-${stamp}`);
+   await fs.rename(file,target);
+  }catch{}
+ }
 }
 
 async function uploadGitHub(file,hash,repositoryOverride){
