@@ -1,7 +1,9 @@
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-const root=path.resolve('.');
+// Always install the supervisor for this checkout, even when the installer is
+// invoked from another working directory by a recovery tool.
+const root=path.resolve(new URL('.',import.meta.url).pathname,'..');
 // One supervisor owns collection, queue repair, and workflow dispatch. Running
 // a second collector timer against the same checkout causes Git and state races.
 const plist=path.join(os.homedir(),'Library','LaunchAgents','com.verygoodfilms.recovery.plist');
