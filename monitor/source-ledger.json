@@ -1158,6 +1158,18 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DdXXGWbCp7L/",
       "queued_at": "2026-09-16T22:34:35.316Z",
       "asset_sha256": "e36ee5245f00b16a5663f1210c560bcb7b951f3b495a49218fec387a84a3ef25"
+    },
+    "DdZIS9rtpbP": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DdZIS9rtpbP/",
+      "queued_at": "2026-09-17T19:17:17.145Z",
+      "asset_sha256": "390dc6780567b4a751b01b456da4a8e5b12a2d0a94e0239f5518b737ed9f1fff"
+    },
+    "DdZJCBASdkP": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DdZJCBASdkP/",
+      "queued_at": "2026-09-17T19:18:35.145Z",
+      "asset_sha256": "1f362901e0e26d6abf55088861cc14dbe73cb77e9352962bfc6f2f3c37501a65"
     }
   },
   "checks": {
@@ -1171,46 +1183,40 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.557Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-17T14:51:12.481Z"
+      "checked_at": "2026-09-17T19:16:06.560Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-15T21:53:02.528Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-15T21:56:17.050Z"
-    },
     {
       "started_at": "2026-09-15T22:01:40.043Z",
       "queued": [],
@@ -3164,9 +3170,24 @@
         }
       ],
       "finished_at": "2026-09-17T14:51:12.482Z"
+    },
+    {
+      "started_at": "2026-09-17T19:12:33.641Z",
+      "queued": [
+        "DdZIS9rtpbP",
+        "DdZJCBASdkP"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "finished_at": "2026-09-17T19:18:35.145Z"
     }
   ],
-  "next_account_index": 6,
+  "next_account_index": 5,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -3601,8 +3622,8 @@
     "DdTx5Hagpfo": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-17T02:25:54.806Z",
-      "retry_at": "2026-09-17T05:25:54.806Z"
+      "failed_at": "2026-09-17T19:16:07.338Z",
+      "retry_at": "2026-09-17T22:16:07.338Z"
     },
     "DdT80p4ySJl": {
       "collector_version": 12,
