@@ -42,6 +42,18 @@ export async function sha256(file){const h=createHash('sha256');for await(const 
 // failed Action can resume delivery without depending on a second provider.
 export async function upload(file,hash,{repository:repositoryOverride}={}){return uploadGitHub(file,hash,repositoryOverride);}
 
+// Once every enabled destination has confirmed delivery, remove generated
+// staging files. The published media IDs and captions remain in state; only
+// local render/download copies are discarded. Cleanup is best-effort so it
+// can never turn a successful post into a failed run.
+export async function cleanupLocalMedia(item){
+ const names=new Set();
+ if(item.asset_sha256)names.add(`work/${item.asset_sha256}.mp4`);
+ if(item.key){names.add(`work/${item.key}.mp4`);names.add(`work/recovery-${item.key}-clean.mp4`);names.add(`work/classic-clean-${item.key}.mp4`);names.add(`work/classic-source-${item.key}.mp4`);}
+ if(item.scene?.id){names.add(`work/vgf-${item.scene.id}.mp4`);names.add(`work/instagram-mirror/${item.scene.id}.mp4`);}
+ for(const file of names)await fs.rm(file,{force:true}).catch(()=>{});
+}
+
 async function uploadGitHub(file,hash,repositoryOverride){
  const repository=repositoryOverride||process.env.GITHUB_REPOSITORY;if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository||''))throw new Error('Set GITHUB_REPOSITORY for GitHub Release media storage');
  const size=(await fs.stat(file)).size;if(size>90*1024*1024)throw new Error('Video exceeds GitHub media size limit');

@@ -1,5 +1,6 @@
 import {advanceContainer} from './container-state.mjs';
 import {caption,eligible,validate} from './editorial.mjs';
+import {cleanupLocalMedia} from './media.mjs';
 export async function graph(base,token,path,params={},method='GET'){
  const url=new URL(`${base}/${path}`); const init={method,headers:{Authorization:`Bearer ${token}`},signal:AbortSignal.timeout(60000)};
  if(method==='GET')for(const [k,v]of Object.entries(params))url.searchParams.set(k,v);else init.body=new URLSearchParams(params);
@@ -105,6 +106,8 @@ export async function publish(memory,brand,save){
   if(configured.some(a=>a.name==='threads')&&!item.threads_media_id&&!item.threads_abandoned_at)item.threads_pending=true;
   else delete item.threads_pending;
   await save();
+  const allEnabledConfirmed=configured.every(a=>item[`${a.name}_media_id`]||item[`${a.name}_abandoned_at`]);
+  if(allEnabledConfirmed)await cleanupLocalMedia(item);
  }
  else if(aa.some(a=>item[`${a.name}_media_id`])&&item.status==='publishing'){item.status='partial';item.publish_retry_at=new Date(Date.now()+15*60000).toISOString();item.updated_at=new Date().toISOString();await save();}
  else if(releaseFailedItem(item,configured.map(a=>a.name),memory.platforms)){await save();}
