@@ -1170,6 +1170,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DdS0bIiSmA6/",
       "queued_at": "2026-09-17T14:57:40.610Z",
       "asset_sha256": "9371d0593898b713f282caa9c8482da5e05b8aba607f3b1d9f92f7ae21ca0615"
+    },
+    "DdZIS9rtpbP": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DdZIS9rtpbP/",
+      "queued_at": "2026-09-17T15:02:15.646Z",
+      "asset_sha256": "390dc6780567b4a751b01b456da4a8e5b12a2d0a94e0239f5518b737ed9f1fff"
     }
   },
   "checks": {
@@ -1183,59 +1189,40 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-17T14:55:01.333Z"
+      "checked_at": "2026-09-17T15:01:22.424Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-17T14:55:01.335Z"
+      "checked_at": "2026-09-17T15:01:22.426Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-14T22:13:45.141Z",
-      "queued": [
-        "DavnWw8ROhO"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dc_h-EHghu2/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-14T22:20:55.660Z"
-    },
     {
       "started_at": "2026-09-14T22:26:09.270Z",
       "queued": [],
@@ -3359,9 +3346,43 @@
         }
       ],
       "finished_at": "2026-09-17T14:57:40.610Z"
+    },
+    {
+      "started_at": "2026-09-17T14:57:58.453Z",
+      "queued": [
+        "DdZIS9rtpbP"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "finished_at": "2026-09-17T15:03:59.179Z"
     }
   ],
-  "next_account_index": 5,
+  "next_account_index": 4,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -3432,8 +3453,8 @@
     "Dck4uAuTLyv": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-16T20:24:45.637Z",
-      "retry_at": "2026-09-16T23:24:45.637Z"
+      "failed_at": "2026-09-17T15:02:33.239Z",
+      "retry_at": "2026-09-17T18:02:33.239Z"
     },
     "DZtaornzI-J": {
       "collector_version": 7,
@@ -3492,8 +3513,8 @@
     "DcMBrFQzHwg": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-16T20:24:48.849Z",
-      "retry_at": "2026-09-16T23:24:48.849Z"
+      "failed_at": "2026-09-17T15:03:11.019Z",
+      "retry_at": "2026-09-17T18:03:11.019Z"
     },
     "Cq8NW4ToJoc": {
       "collector_version": 7,
@@ -3504,8 +3525,8 @@
     "DZbqwhnT0Uq": {
       "collector_version": 12,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-09-16T20:24:56.705Z",
-      "retry_at": "2026-09-16T23:24:56.705Z"
+      "failed_at": "2026-09-17T15:03:59.179Z",
+      "retry_at": "2026-09-17T18:03:59.179Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -3784,8 +3805,8 @@
     "DdS2t1JyFk-": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-16T20:24:46.505Z",
-      "retry_at": "2026-09-16T23:24:46.505Z"
+      "failed_at": "2026-09-17T15:03:50.730Z",
+      "retry_at": "2026-09-17T18:03:50.730Z"
     },
     "DdS0bIiSmA6": {
       "collector_version": 12,
@@ -3802,8 +3823,8 @@
     "DdT80p4ySJl": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-16T20:24:43.168Z",
-      "retry_at": "2026-09-16T23:24:43.168Z"
+      "failed_at": "2026-09-17T15:02:52.187Z",
+      "retry_at": "2026-09-17T18:02:52.187Z"
     },
     "DcjEpnPujxH": {
       "collector_version": 12,
