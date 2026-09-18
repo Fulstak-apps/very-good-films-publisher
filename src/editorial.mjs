@@ -43,11 +43,11 @@ export function caption(x,preferred='film_info',threads=false){
   if(d.director)creditLines.push(`Directed by ${d.director}`);
   if(Array.isArray(d.cast)&&d.cast.length)creditLines.push(`Starring ${d.cast.join(', ')}`);
   const credits=creditLines.length?`\n\n${creditLines.join('\n')}`:'';
-  const synopsisRoom=Math.max(0,limit-[...heading+credits].length-2);
-  const overview=d.synopsis&&synopsisRoom>1?`\n\n${truncate(d.synopsis,synopsisRoom)}`:'';
+  const synopsisRoom=Math.max(0,limit-[...heading+credits].length-18);
+  const overview=d.synopsis&&synopsisRoom>1?`\n\nAbout the film:\n${truncate(d.synopsis,synopsisRoom)}`:'';
   let rendered=`${heading}${overview}${credits}`;
-  const room=limit-[...rendered].length-17;
-  if(room>40&&text)rendered+=`\n\nScene context: ${truncate(text,room)}`;
+  const room=limit-[...rendered].length-20;
+  if(room>40&&text)rendered+=`\n\nScene context:\n${truncate(text,room)}`;
   rendered=truncate(rendered,limit);
   return {style:'source_repost',text:rendered};
  }
