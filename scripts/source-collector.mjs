@@ -1,3 +1,4 @@
+import {rememberCandidates,candidateReady} from '../src/source-inventory.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {execFile} from 'node:child_process';
@@ -191,7 +192,7 @@ try{
  ledger.next_account_index=(next+1)%sourceAccounts.length;
  try{
   const discovered=await profiles(selected,run.errors,ledger);
-  for(const candidate of discovered)ledger.candidates[candidate.shortcode]=candidate;
+  rememberCandidates(ledger,discovered);
   run.discovered=discovered.length;
   delete ledger.retry_after;delete ledger.session_error;
   for(const h of selected)ledger.checks[h]={checked_at:new Date().toISOString()};
@@ -205,7 +206,7 @@ try{
  for(const candidate of candidates){
   if(run.queued.length>=limit||attempts>=maxAttempts||Date.now()-Date.parse(run.started_at)>=maxRunMs)break;
   const previous=ledger.failed[candidate.shortcode];
-  if(ledger.queued[candidate.shortcode]||(previous?.collector_version===collectorVersion&&Date.parse(previous.retry_at||'')>Date.now()))continue;
+  if(!candidateReady(candidate,ledger,collectorVersion))continue;
   attempts++;
   try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);await save(ledgerPath,ledger);await commit(true);}
   catch(error){
