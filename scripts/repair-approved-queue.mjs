@@ -39,7 +39,7 @@ await withLock(async()=>{
  // Older approved captures were held before the title-only rule existed. Use
  // the local model only as an exact-caption extractor; a returned title must
  // literally occur in the source caption, so this path can never invent one.
- for(const item of memory.items.filter(x=>x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id&&!(Date.parse(x.metadata_retry_at||'')>Date.now())){
+ for(const item of memory.items.filter(x=>x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id&&!(Date.parse(x.metadata_retry_at||'')>Date.now()))){
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
   if(!verifiedSourceTitle(details)){
    const title=await titleFromCaption(item.source_caption);
