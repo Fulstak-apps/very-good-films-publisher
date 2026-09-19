@@ -1,3 +1,4 @@
+import {refillHealth} from '../src/refill-health.mjs';
 import fs from 'node:fs/promises';
 const memory=JSON.parse(await fs.readFile('state/memory.json','utf8'));
 const brand=JSON.parse(await fs.readFile('config/brand.json','utf8'));
@@ -29,6 +30,7 @@ const deliveryHealthy=Object.values(delivery).every(x=>x.healthy)&&stalePublishi
 const refillHealthy=!sourceRecovery.restricted||queueHours>=2;
 const healthy=!brand.enabled||(deliveryHealthy&&refillHealthy);
 const report={at:new Date().toISOString(),healthy,ready,publishing,stalePublishing,needsReview,lastInstagramPost:published[0]?.instagram_published_at||null,lastInstagramMediaId:published[0]?.instagram_media_id||null,hoursSinceLast,sourceAccounts:JSON.parse(await fs.readFile('config/sources.json','utf8')).instagram_source_accounts.map(x=>x.handle),recentErrors};
+Object.assign(report,refillHealth(memory.items,brand,sourceLedger,now));
 Object.assign(report,{delivery,queueHours,queueLow:queueHours<2,sourceRecovery,deliveryHealthy,refillHealthy});
 await fs.writeFile('health-report.json',JSON.stringify(report,null,2)+'\n');
 const summary=process.env.GITHUB_STEP_SUMMARY;

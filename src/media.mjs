@@ -16,7 +16,7 @@ export async function download(url,path,hosts){
  try{await pipeline(r.body,new Transform({transform(chunk,enc,cb){bytes+=chunk.length;cb(bytes>max?new Error('Source exceeds 1 GiB download limit'):null,chunk);}}),createWriteStream(temporary));await fs.rename(temporary,path);}catch(error){await fs.rm(temporary,{force:true});throw error;}
 }
 
-export function probe(path){return JSON.parse(execFileSync('ffprobe',['-v','error','-show_streams','-show_format','-of','json',path],{maxBuffer:4*1024*1024}).toString());}
+export function probe(path){return JSON.parse(execFileSync('ffprobe',['-v','error','-show_streams','-show_format','-of','json',path],{maxBuffer:4*1024*1024,timeout:30000}).toString());}
 
 export function formatVideo(input,output,scene){
  const duration=scene.end-scene.start;if(!(duration>0&&duration<=90))throw new Error('Invalid clip duration');
@@ -33,7 +33,7 @@ export function formatVideo(input,output,scene){
  // Moved logo up from H-h-252 to H-h-320 to avoid being clipped by mobile UI (home bars/captions).
  const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=44:H-h-320:format=auto[branded]`;
  const args=['-hide_banner','-loglevel','error','-y','-ss',String(scene.start),'-i',input,'-i','assets/very-good-films-logo.png','-t',String(duration),'-filter_complex',branded,'-map','[branded]','-map','0:a:0?','-r','30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-ar','48000','-ac','2','-movflags','+faststart',output];
- execFileSync('ffmpeg',args,{timeout:600000,stdio:'pipe'});return {...verifyVideo(output,duration),...(cropQA?{clean_crop:cropQA}:{})};
+ execFileSync('ffmpeg',args,{timeout:180000,stdio:'pipe'});return {...verifyVideo(output,duration),...(cropQA?{clean_crop:cropQA}:{})};
 }
 
 export function verifyVideo(file,expected){const p=probe(file),v=p.streams.find(s=>s.codec_type==='video'),a=p.streams.find(s=>s.codec_type==='audio'),d=Number(p.format.duration);if(!v||v.codec_name!=='h264'||v.width!==1080||v.height!==1920||v.pix_fmt!=='yuv420p'||!a||a.codec_name!=='aac'||!Number.isFinite(d)||Math.abs(d-expected)>1)throw new Error('Rendered Reel failed video/audio/duration QA');return {width:v.width,height:v.height,duration:d,audio:a.codec_name,video:v.codec_name};}
@@ -68,7 +68,7 @@ async function uploadGitHub(file,hash,repositoryOverride){
  const size=(await fs.stat(file)).size;if(size>90*1024*1024)throw new Error('Video exceeds GitHub media size limit');
  const url=`https://github.com/${repository}/releases/download/media/${hash}.mp4?download=1`;
  let release;
- try{release=JSON.parse(execFileSync('gh',['release','view','media','--repo',repository,'--json','assets'],{stdio:'pipe'}).toString());}catch{execFileSync('gh',['release','create','media','--repo',repository,'--title','Very Good Films video assets','--notes','Formatted cinema clips served to the Instagram and Threads APIs.'],{stdio:'pipe'});}
+ try{release=JSON.parse(execFileSync('gh',['release','view','media','--repo',repository,'--json','assets'],{stdio:'pipe',timeout:30000}).toString());}catch{execFileSync('gh',['release','create','media','--repo',repository,'--title','Very Good Films video assets','--notes','Formatted cinema clips served to the Instagram and Threads APIs.'],{stdio:'pipe',timeout:30000});}
  if(release?.assets?.some(a=>a.name===`${hash}.mp4`)){
   const check=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(30000)});if(check.ok&&Number(check.headers.get('content-length'))===size)return url;throw new Error('Existing asset is not publicly reachable yet');
  }

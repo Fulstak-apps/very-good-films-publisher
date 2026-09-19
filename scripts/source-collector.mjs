@@ -56,7 +56,7 @@ async function lock(){
   console.log(JSON.stringify({status:'locked'}));process.exit(0);
  }
 }
-async function profiles(handles=sourceAccounts,errors=[]){
+async function profiles(handles=sourceAccounts,errors=[],ledger){
  const found=[];
  for(const handle of handles){
   const context=await launch(true);
@@ -71,12 +71,15 @@ async function profiles(handles=sourceAccounts,errors=[]){
     // Instagram virtualizes the profile grid and several approved pages post
     // frequently. Five rows can contain only reels already in the ledger, so
     // scan a deeper window before declaring the source rotation exhausted.
-    for(let row=0;row<20;row++){
+    const depth=ledger.discovery_depth?.[handle]||20;
+    for(let row=0;row<depth;row++){
      const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
      for(const url of urls)seen.add(url);
      await page.evaluate(()=>window.scrollBy(0,Math.max(window.innerHeight*1.5,1200)));
      await page.waitForTimeout(700);
     }
+    ledger.discovery_depth??={};
+    ledger.discovery_depth[handle]=depth>=80?20:depth+10;
     const urls=[...seen];
     for(const url of [...new Set(urls)])if(approvedSource(url)&&new URL(url).pathname.split('/')[1]===handle)found.push({handle,url,shortcode:shortcode(url)});
    }catch(error){
@@ -120,6 +123,8 @@ async function commit(includeLedger=false){
  }
 }
 async function queue(candidate,ledger){
+ const prepared=await json(path.join(inbox,`${candidate.shortcode}.json`),null);
+ if(prepared?.asset_sha256&&prepared?.video_url){ledger.queued[candidate.shortcode]={source_handle:candidate.handle,queued_at:new Date().toISOString(),asset_sha256:prepared.asset_sha256};return prepared;}
  console.log(JSON.stringify({status:'capturing',shortcode:candidate.shortcode,source:candidate.url}));
  const evidence=await capture(candidate.url,{headless:true});
  const canonicalUrl=evidence.source_url||candidate.url;
@@ -127,10 +132,7 @@ async function queue(candidate,ledger){
  const input=evidence.destination;
  const duration=Math.min(90,Math.floor(Number(evidence.duration)*1000)/1000);
  if(!(duration>1))throw new Error('Source clip has no usable duration');
- // Capture metadata before rendering when possible. Posts that deliberately
- // withhold the title remain eligible for the explicit Guess The Movie lane;
- // they are not allowed to empty the reserve while a later metadata pass
- // attempts to identify them.
+ // Require verified identity before rendering; reuse completed renders after restarts.
  const source_caption=(evidence.source_caption_text||'').trim();
  if(/(?:@rapwire247|\brap\s*wire\b)/i.test(source_caption))throw new Error('RapWire-branded source is prohibited on Very Good Films');
  let source_details=await enrichSourceMetadata(source_caption);
@@ -141,7 +143,11 @@ async function queue(candidate,ledger){
  if(!verifiedSourceTitle(source_details))throw new Error('Verified movie title required before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
- const renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});
+ const checkpoint=path.join(monitor,`render-${candidate.shortcode}.json`);
+ const saved=await json(checkpoint,null);
+ let renderQA;
+ if(saved?.input_sha256===await sha256(input)&&saved?.output_sha256===await sha256(output).catch(()=>null)){renderQA=saved.qa;}
+ else {renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});await save(checkpoint,{input_sha256:await sha256(input),output_sha256:await sha256(output),qa:renderQA});}
  const asset_sha256=await sha256(output);
  console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
  const video_url=await upload(output,asset_sha256,{repository});
@@ -170,9 +176,8 @@ async function queue(candidate,ledger){
 const handle=await lock();
 try{
  await cleanupWork();
- try{const result=await runCommand(process.execPath,['scripts/classics-refill.mjs'],{timeout:600000});console.log(result.stdout);await commit();}catch(error){console.error('Classics refill:',error.message.slice(0,300));}
  const ledger=await json(ledgerPath,{version:1,queued:{},failed:{},checks:{},runs:[]});
- ledger.failed??={};
+ ledger.failed??={};ledger.candidates??={};
  if(Date.parse(ledger.retry_after||'')>Date.now()){
   console.log(JSON.stringify({status:'source_cooldown',retry_after:ledger.retry_after,reason:ledger.session_error}));
  }else{
@@ -181,8 +186,18 @@ try{
  let candidates=[];
  const next=Number.isInteger(ledger.next_account_index)?ledger.next_account_index%sourceAccounts.length:0;
  const ordered=[...sourceAccounts.slice(next),...sourceAccounts.slice(0,next)];
- try{candidates=await profiles(ordered,run.errors);delete ledger.retry_after;delete ledger.session_error;for(const h of sourceAccounts)ledger.checks[h]={checked_at:new Date().toISOString()};}
- catch(error){run.errors.push({stage:'discover',error:error.message});if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;}}
+ // Scan one account per cycle, persist inventory before expensive processing.
+ const selected=ordered.slice(0,1);
+ ledger.next_account_index=(next+1)%sourceAccounts.length;
+ try{
+  const discovered=await profiles(selected,run.errors,ledger);
+  for(const candidate of discovered)ledger.candidates[candidate.shortcode]=candidate;
+  run.discovered=discovered.length;
+  delete ledger.retry_after;delete ledger.session_error;
+  for(const h of selected)ledger.checks[h]={checked_at:new Date().toISOString()};
+ }catch(error){run.errors.push({stage:'discover',error:error.message});if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;}}
+ await save(ledgerPath,ledger);
+ candidates=Object.values(ledger.candidates);
  // Take one candidate per source in each pass so a five-item refill rotates accounts.
  const groups=ordered.map(h=>candidates.filter(c=>c.handle===h));
  candidates=[];while(groups.some(g=>g.length))for(const group of groups)if(group.length)candidates.push(group.shift());
@@ -192,14 +207,16 @@ try{
   const previous=ledger.failed[candidate.shortcode];
   if(ledger.queued[candidate.shortcode]||(previous?.collector_version===collectorVersion&&Date.parse(previous.retry_at||'')>Date.now()))continue;
   attempts++;
-  try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);ledger.next_account_index=(sourceAccounts.indexOf(candidate.handle)+1)%sourceAccounts.length;}
+  try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);await save(ledgerPath,ledger);await commit(true);}
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
-   const metadataFailure=error.message.startsWith('Verified title, year');
+   const metadataFailure=/Verified (?:title|movie title)/.test(error.message);
    ledger.failed[candidate.shortcode]={collector_version:collectorVersion,error:error.message.slice(0,300),failed_at:new Date().toISOString(),retry_at:new Date(Date.now()+(metadataFailure?30:180)*60_000).toISOString()};
+   await save(ledgerPath,ledger);
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
   }
  }
+ run.attempts=attempts;run.inventory=Object.keys(ledger.candidates).length;run.status=run.queued.length?'queued':attempts?'no_eligible_clip':candidates.length?'candidates_on_hold':'discovery_empty';
  run.finished_at=new Date().toISOString();ledger.runs=[...(ledger.runs||[]),run].slice(-250);await save(ledgerPath,ledger);
  const sessionStateChanged=previousSessionError!==(ledger.session_error||null);
  await commit(sessionStateChanged);console.log(JSON.stringify(run));

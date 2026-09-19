@@ -1,3 +1,4 @@
+import {shouldDispatch,refillHealth} from '../src/refill-health.mjs';
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 const repo='Fulstak-apps/very-good-films-publisher';
@@ -29,18 +30,20 @@ process.on('unhandledRejection',async error=>{console.error(error);await release
 process.on('SIGTERM',async()=>{await releaseRecoveryLock();process.exit(143);});
 process.on('SIGINT',async()=>{await releaseRecoveryLock();process.exit(130);});
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
-let collectorStatus='not_needed',collectorError;
+let collectorStatus='not_needed',collectorError,repairError,classicsError;
 // Refill before the live queue reaches zero. The supervisor lock prevents
 // this longer capture from overlapping the next five-minute health pass.
 const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
 const sourceBuffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)&&x.program!=='public_domain_classics').length;
 const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_minimum||0));
 if(brand.enabled&&sourceBuffered<sourceTarget){
- try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});collectorStatus='completed';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
+ try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});const ledger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));collectorStatus=ledger.runs?.at(-1)?.status||'completed_without_outcome';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
  // Rebuild verified approved-source captures before the queue reaches zero.
  // The repair script enforces its own floor and refuses branded or previously
  // published media, so running this check early cannot create duplicates.
- try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch{}
+ try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
+ try{execFileSync(process.execPath,['scripts/classics-refill.mjs'],{stdio:'pipe',timeout:180000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});}catch(error){classicsError=String(error.message||error).slice(0,500);}
+ memory=remote('state/memory.json');
 }
 let runs=[],workflowError;
 try{runs=JSON.parse(ghRead(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));}
@@ -54,11 +57,11 @@ const pending=memory.items.some(x=>x.status==='publishing');
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
-Object.assign(report,{collectorStatus,collectorError,workflowError});
+Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
-const latestRun=Date.parse(runs[0]?.createdAt||'')||0;
-if(brand.enabled&&!active&&(pending||(ready&&due&&withinCap)||(ready<brand.queue_target&&memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now)))||report.health==='source_queue_empty')){
+Object.assign(report,refillHealth(memory.items,brand,JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8').catch(()=>'{}'))));
+if(brand.enabled&&shouldDispatch({active,ready,pending,due,withinCap,discovered:memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now))})){
  try{gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';}
  catch(error){report.action='dispatch_failed';report.dispatchError=String(error.message||error).slice(0,500);}
 }

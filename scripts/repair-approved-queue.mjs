@@ -39,7 +39,7 @@ await withLock(async()=>{
  // Older approved captures were held before the title-only rule existed. Use
  // the local model only as an exact-caption extractor; a returned title must
  // literally occur in the source caption, so this path can never invent one.
- for(const item of memory.items.filter(x=>x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id)){
+ for(const item of memory.items.filter(x=>x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id&&!(Date.parse(x.metadata_retry_at||'')>Date.now())){
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
   if(!verifiedSourceTitle(details)){
    const title=await titleFromCaption(item.source_caption);
@@ -71,6 +71,6 @@ await withLock(async()=>{
    item.recovery_retry_at=new Date(Date.now()+6*60*60_000).toISOString();held.push({key:item.key,error:error.message});
   }
  }
- if(repaired.length||held.length)await saveMemory(memory);
+ await saveMemory(memory);
  console.log(JSON.stringify({status:repaired.length?'repaired':'no_safe_repair',repaired,held}));
 });

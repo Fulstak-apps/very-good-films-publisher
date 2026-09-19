@@ -40,8 +40,13 @@ jobs:
           else
             echo 'active=false' >> "$GITHUB_OUTPUT"
           fi
+      - name: Check whether publisher has recoverable work
+        if: failure()
+        id: work
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';const m=JSON.parse(fs.readFileSync('state/memory.json'));fs.appendFileSync(process.env.GITHUB_OUTPUT,'available='+m.items.some(x=>['ready','partial','publishing','discovered'].includes(x.status))+'\n');"
       - name: Dispatch publisher recovery
-        if: failure() && steps.publisher.outputs.active != 'true'
+        if: failure() && steps.publisher.outputs.active != 'true' && steps.work.outputs.available == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run publisher.yml --ref main
