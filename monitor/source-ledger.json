@@ -1247,6 +1247,12 @@
       "source_handle": "film.fission",
       "queued_at": "2026-09-19T17:53:08.945Z",
       "asset_sha256": "9371d0593898b713f282caa9c8482da5e05b8aba607f3b1d9f92f7ae21ca0615"
+    },
+    "DcY0DTKB2Gt": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DcY0DTKB2Gt/",
+      "queued_at": "2026-09-20T03:09:26.070Z",
+      "asset_sha256": "c732781e669c1ecf1e8b3f7045ca8c80126b2d6fe02bc9bb266846d8c5f9ee31"
     }
   },
   "checks": {
@@ -1260,2218 +1266,65 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-19T17:52:30.863Z"
+      "checked_at": "2026-09-20T02:53:32.674Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-19T17:44:06.032Z"
+      "checked_at": "2026-09-20T02:54:41.960Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-19T17:44:56.687Z"
+      "checked_at": "2026-09-20T02:55:45.294Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-19T17:45:47.192Z"
+      "checked_at": "2026-09-20T02:56:49.267Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-19T17:46:39.159Z"
+      "checked_at": "2026-09-20T02:57:58.952Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-19T17:47:28.435Z"
+      "checked_at": "2026-09-20T02:59:08.394Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-19T17:48:18.049Z"
+      "checked_at": "2026-09-20T03:00:13.241Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-19T17:49:07.879Z"
+      "checked_at": "2026-09-20T03:01:25.511Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-19T17:49:55.746Z"
+      "checked_at": "2026-09-20T03:02:39.328Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-19T17:50:44.869Z"
+      "checked_at": "2026-09-20T03:03:57.204Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-19T17:51:33.704Z"
+      "checked_at": "2026-09-20T03:05:08.662Z"
+    },
+    "movie_vault_4u": {
+      "checked_at": "2026-09-20T03:05:35.742Z"
     }
   },
   "runs": [
     {
-      "started_at": "2026-09-18T23:21:21.359Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:24:34.763Z"
-    },
-    {
-      "started_at": "2026-09-18T23:24:50.752Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:28:00.317Z"
-    },
-    {
-      "started_at": "2026-09-18T23:28:15.770Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:31:25.720Z"
-    },
-    {
-      "started_at": "2026-09-18T23:31:40.522Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS0bIiSmA6/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-18T23:35:21.904Z"
-    },
-    {
-      "started_at": "2026-09-18T23:35:37.762Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:38:47.632Z"
-    },
-    {
-      "started_at": "2026-09-18T23:39:03.017Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:42:15.339Z"
-    },
-    {
-      "started_at": "2026-09-18T23:42:30.969Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:45:41.711Z"
-    },
-    {
-      "started_at": "2026-09-18T23:45:57.097Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:49:11.516Z"
-    },
-    {
-      "started_at": "2026-09-18T23:49:27.355Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:52:38.262Z"
-    },
-    {
-      "started_at": "2026-09-18T23:52:56.445Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:56:17.661Z"
-    },
-    {
-      "started_at": "2026-09-18T23:56:32.960Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-18T23:59:44.143Z"
-    },
-    {
-      "started_at": "2026-09-19T00:00:01.115Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:03:18.916Z"
-    },
-    {
-      "started_at": "2026-09-19T00:03:34.018Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:06:44.094Z"
-    },
-    {
-      "started_at": "2026-09-19T00:07:00.430Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:10:12.702Z"
-    },
-    {
-      "started_at": "2026-09-19T00:10:28.597Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:13:40.020Z"
-    },
-    {
-      "started_at": "2026-09-19T00:13:56.622Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:17:11.829Z"
-    },
-    {
-      "started_at": "2026-09-19T00:17:28.960Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:20:54.286Z"
-    },
-    {
-      "started_at": "2026-09-19T00:21:12.290Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:24:44.541Z"
-    },
-    {
-      "started_at": "2026-09-19T00:24:59.773Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:28:12.392Z"
-    },
-    {
-      "started_at": "2026-09-19T00:28:28.764Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:31:43.835Z"
-    },
-    {
-      "started_at": "2026-09-19T00:31:59.833Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:35:10.830Z"
-    },
-    {
-      "started_at": "2026-09-19T00:35:26.190Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-19T00:38:44.414Z"
-    },
-    {
-      "started_at": "2026-09-19T00:39:00.289Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:42:44.889Z"
-    },
-    {
-      "started_at": "2026-09-19T00:43:01.288Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:46:15.679Z"
-    },
-    {
-      "started_at": "2026-09-19T00:46:31.786Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:49:47.949Z"
-    },
-    {
-      "started_at": "2026-09-19T00:50:03.206Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:53:27.492Z"
-    },
-    {
-      "started_at": "2026-09-19T00:53:46.204Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T00:57:05.767Z"
-    },
-    {
-      "started_at": "2026-09-19T00:57:22.301Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:00:50.136Z"
-    },
-    {
-      "started_at": "2026-09-19T01:01:05.880Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:04:15.512Z"
-    },
-    {
-      "started_at": "2026-09-19T01:04:31.508Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:07:48.126Z"
-    },
-    {
-      "started_at": "2026-09-19T01:08:03.970Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:11:17.212Z"
-    },
-    {
-      "started_at": "2026-09-19T01:11:33.256Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:14:49.854Z"
-    },
-    {
-      "started_at": "2026-09-19T01:15:05.605Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:18:20.627Z"
-    },
-    {
-      "started_at": "2026-09-19T01:18:37.618Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:21:53.800Z"
-    },
-    {
-      "started_at": "2026-09-19T01:22:11.833Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:25:23.484Z"
-    },
-    {
-      "started_at": "2026-09-19T01:25:39.719Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:28:53.358Z"
-    },
-    {
-      "started_at": "2026-09-19T01:29:08.478Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:32:20.163Z"
-    },
-    {
-      "started_at": "2026-09-19T01:32:36.422Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:35:53.194Z"
-    },
-    {
-      "started_at": "2026-09-19T01:36:08.937Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:39:22.304Z"
-    },
-    {
-      "started_at": "2026-09-19T01:40:12.505Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:43:23.509Z"
-    },
-    {
-      "started_at": "2026-09-19T01:43:40.105Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:46:58.144Z"
-    },
-    {
-      "started_at": "2026-09-19T01:47:14.276Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:50:27.211Z"
-    },
-    {
-      "started_at": "2026-09-19T01:50:43.438Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:53:58.445Z"
-    },
-    {
-      "started_at": "2026-09-19T01:54:14.516Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T01:57:29.380Z"
-    },
-    {
-      "started_at": "2026-09-19T01:57:46.759Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:01:01.880Z"
-    },
-    {
-      "started_at": "2026-09-19T02:01:17.970Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:04:31.030Z"
-    },
-    {
-      "started_at": "2026-09-19T02:04:46.971Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:07:59.849Z"
-    },
-    {
-      "started_at": "2026-09-19T02:08:16.325Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:11:29.938Z"
-    },
-    {
-      "started_at": "2026-09-19T02:11:45.642Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:14:58.504Z"
-    },
-    {
-      "started_at": "2026-09-19T02:15:15.118Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:18:27.067Z"
-    },
-    {
-      "started_at": "2026-09-19T02:18:42.989Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:21:54.618Z"
-    },
-    {
-      "started_at": "2026-09-19T02:22:19.984Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:25:33.164Z"
-    },
-    {
-      "started_at": "2026-09-19T02:25:50.095Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:29:02.425Z"
-    },
-    {
-      "started_at": "2026-09-19T02:29:19.263Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:32:32.448Z"
-    },
-    {
-      "started_at": "2026-09-19T02:32:50.195Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS0bIiSmA6/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-19T02:36:35.072Z"
-    },
-    {
-      "started_at": "2026-09-19T02:36:51.046Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:40:02.494Z"
-    },
-    {
-      "started_at": "2026-09-19T02:40:19.338Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:43:32.777Z"
-    },
-    {
-      "started_at": "2026-09-19T02:43:49.193Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:47:01.640Z"
-    },
-    {
-      "started_at": "2026-09-19T02:47:19.103Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:50:31.169Z"
-    },
-    {
-      "started_at": "2026-09-19T02:50:47.418Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:54:04.214Z"
-    },
-    {
-      "started_at": "2026-09-19T02:54:20.110Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T02:57:31.610Z"
-    },
-    {
-      "started_at": "2026-09-19T02:58:03.348Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:01:15.172Z"
-    },
-    {
-      "started_at": "2026-09-19T03:01:35.235Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:04:51.992Z"
-    },
-    {
-      "started_at": "2026-09-19T03:05:08.803Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:08:19.536Z"
-    },
-    {
-      "started_at": "2026-09-19T03:08:36.794Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:11:50.698Z"
-    },
-    {
-      "started_at": "2026-09-19T03:12:06.719Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:15:19.436Z"
-    },
-    {
-      "started_at": "2026-09-19T03:15:37.534Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:18:50.599Z"
-    },
-    {
-      "started_at": "2026-09-19T03:19:06.583Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:22:21.884Z"
-    },
-    {
-      "started_at": "2026-09-19T03:22:37.267Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:25:53.768Z"
-    },
-    {
-      "started_at": "2026-09-19T03:26:09.460Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:29:26.464Z"
-    },
-    {
-      "started_at": "2026-09-19T03:29:41.696Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:32:54.775Z"
-    },
-    {
-      "started_at": "2026-09-19T03:33:11.131Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T03:36:26.048Z"
-    },
-    {
-      "started_at": "2026-09-19T03:36:42.527Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-19T03:40:07.382Z"
-    },
-    {
-      "started_at": "2026-09-19T03:40:25.036Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "Instagram source session is signed out; open npm run source:login."
-        }
-      ],
-      "finished_at": "2026-09-19T03:43:05.588Z"
-    },
-    {
-      "started_at": "2026-09-19T04:43:08.552Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T04:46:18.610Z"
-    },
-    {
-      "started_at": "2026-09-19T04:46:35.870Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T04:49:46.164Z"
-    },
-    {
-      "started_at": "2026-09-19T04:50:03.813Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T04:53:13.736Z"
-    },
-    {
-      "started_at": "2026-09-19T04:53:29.197Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T04:56:39.141Z"
-    },
-    {
-      "started_at": "2026-09-19T04:56:55.924Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:00:05.829Z"
-    },
-    {
-      "started_at": "2026-09-19T05:00:21.372Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:03:32.380Z"
-    },
-    {
-      "started_at": "2026-09-19T05:03:48.185Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:06:58.297Z"
-    },
-    {
-      "started_at": "2026-09-19T05:07:14.522Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:10:25.382Z"
-    },
-    {
-      "started_at": "2026-09-19T05:10:43.277Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:13:54.215Z"
-    },
-    {
-      "started_at": "2026-09-19T05:14:09.825Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:17:19.663Z"
-    },
-    {
-      "started_at": "2026-09-19T05:17:35.318Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:20:45.231Z"
-    },
-    {
-      "started_at": "2026-09-19T05:21:01.339Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:24:11.195Z"
-    },
-    {
-      "started_at": "2026-09-19T05:24:26.258Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:27:37.047Z"
-    },
-    {
-      "started_at": "2026-09-19T05:27:53.533Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:31:03.375Z"
-    },
-    {
-      "started_at": "2026-09-19T05:31:19.292Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:34:29.257Z"
-    },
-    {
-      "started_at": "2026-09-19T05:34:44.824Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS0bIiSmA6/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-19T05:38:24.461Z"
-    },
-    {
-      "started_at": "2026-09-19T05:38:40.437Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:41:50.413Z"
-    },
-    {
-      "started_at": "2026-09-19T05:42:07.254Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:45:17.654Z"
-    },
-    {
-      "started_at": "2026-09-19T05:45:33.069Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:48:42.910Z"
-    },
-    {
-      "started_at": "2026-09-19T05:48:59.630Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:52:08.942Z"
-    },
-    {
-      "started_at": "2026-09-19T05:52:24.421Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T05:55:34.467Z"
-    },
-    {
-      "started_at": "2026-09-19T05:55:49.986Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "error": "Instagram source session is signed out; open npm run source:login."
-        }
-      ],
-      "finished_at": "2026-09-19T05:58:28.091Z"
-    },
-    {
-      "started_at": "2026-09-19T11:45:29.628Z",
-      "queued": [
-        "Ddd3sqRAh4R"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS0bIiSmA6/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-19T11:50:27.257Z"
-    },
-    {
-      "started_at": "2026-09-19T11:50:42.402Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T11:53:52.342Z"
-    },
-    {
-      "started_at": "2026-09-19T11:54:07.806Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T11:57:17.625Z"
-    },
-    {
-      "started_at": "2026-09-19T11:57:32.710Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:00:42.368Z"
-    },
-    {
-      "started_at": "2026-09-19T12:00:58.610Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:04:09.214Z"
-    },
-    {
-      "started_at": "2026-09-19T12:04:24.931Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:07:34.652Z"
-    },
-    {
-      "started_at": "2026-09-19T12:07:49.652Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:10:58.765Z"
-    },
-    {
-      "started_at": "2026-09-19T12:11:14.901Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:14:24.923Z"
-    },
-    {
-      "started_at": "2026-09-19T12:14:40.956Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:17:50.518Z"
-    },
-    {
-      "started_at": "2026-09-19T12:18:06.652Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        }
-      ],
-      "finished_at": "2026-09-19T12:21:55.949Z"
-    },
-    {
-      "started_at": "2026-09-19T12:22:13.449Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:25:28.108Z"
-    },
-    {
-      "started_at": "2026-09-19T12:25:45.028Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:29:01.344Z"
-    },
-    {
-      "started_at": "2026-09-19T12:29:17.782Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:32:30.467Z"
-    },
-    {
-      "started_at": "2026-09-19T12:32:49.017Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:37:41.952Z"
-    },
-    {
-      "started_at": "2026-09-19T12:37:58.326Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T12:41:09.226Z"
-    },
-    {
-      "started_at": "2026-09-19T12:41:26.039Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "source_handle": "fuckinggoodmovies",
-          "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/fuckinggoodmovies/reels/\", waiting until \"domcontentloaded\"\n"
-        }
-      ],
-      "finished_at": "2026-09-19T14:11:39.628Z"
-    },
-    {
-      "started_at": "2026-09-19T14:30:51.132Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T14:34:07.927Z"
-    },
-    {
-      "started_at": "2026-09-19T14:34:47.034Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "finished_at": "2026-09-19T14:38:10.707Z"
-    },
-    {
-      "started_at": "2026-09-19T14:38:26.639Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T14:41:38.318Z"
-    },
-    {
-      "started_at": "2026-09-19T14:41:54.281Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T14:45:06.801Z"
-    },
-    {
-      "started_at": "2026-09-19T14:45:23.292Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T14:48:34.586Z"
-    },
-    {
-      "started_at": "2026-09-19T14:48:50.615Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS0bIiSmA6/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        }
-      ],
-      "finished_at": "2026-09-19T14:52:53.575Z"
-    },
-    {
-      "started_at": "2026-09-19T14:53:09.817Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T14:56:33.798Z"
-    },
-    {
-      "started_at": "2026-09-19T14:56:49.813Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:00:07.067Z"
-    },
-    {
-      "started_at": "2026-09-19T15:00:24.647Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:03:43.147Z"
-    },
-    {
-      "started_at": "2026-09-19T15:03:59.692Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:07:30.085Z"
-    },
-    {
-      "started_at": "2026-09-19T15:07:58.503Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdeSvRUuc0_/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        }
-      ],
-      "finished_at": "2026-09-19T15:12:13.449Z"
-    },
-    {
-      "started_at": "2026-09-19T15:12:32.532Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:15:42.705Z"
-    },
-    {
-      "started_at": "2026-09-19T15:15:58.319Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:19:08.838Z"
-    },
-    {
-      "started_at": "2026-09-19T15:19:24.178Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
-          "stage": "capture_or_queue",
-          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
-        }
-      ],
-      "finished_at": "2026-09-19T15:22:35.918Z"
-    },
-    {
-      "started_at": "2026-09-19T15:22:55.014Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:26:08.229Z"
-    },
-    {
-      "started_at": "2026-09-19T15:27:01.741Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:30:15.062Z"
-    },
-    {
-      "started_at": "2026-09-19T15:30:31.076Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:33:45.267Z"
-    },
-    {
-      "started_at": "2026-09-19T15:34:02.367Z",
-      "queued": [],
-      "errors": [],
-      "finished_at": "2026-09-19T15:37:20.280Z"
-    },
-    {
-      "started_at": "2026-09-19T15:37:27.044Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 8,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:37:44.804Z"
-    },
-    {
-      "started_at": "2026-09-19T15:38:00.455Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 20,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:38:18.329Z"
-    },
-    {
-      "started_at": "2026-09-19T15:38:28.092Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 32,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:38:45.392Z"
-    },
-    {
-      "started_at": "2026-09-19T15:38:58.504Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 44,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:39:16.114Z"
-    },
-    {
-      "started_at": "2026-09-19T15:39:29.466Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 56,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:39:47.055Z"
-    },
-    {
-      "started_at": "2026-09-19T15:40:00.442Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 68,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:40:19.068Z"
-    },
-    {
-      "started_at": "2026-09-19T15:40:31.305Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 80,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:40:51.361Z"
-    },
-    {
-      "started_at": "2026-09-19T15:41:02.140Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 92,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:41:20.047Z"
-    },
-    {
-      "started_at": "2026-09-19T15:41:32.870Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 92,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:41:50.330Z"
-    },
-    {
-      "started_at": "2026-09-19T15:42:04.018Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 104,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:42:22.784Z"
-    },
-    {
-      "started_at": "2026-09-19T15:42:36.154Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:42:54.823Z"
-    },
-    {
-      "started_at": "2026-09-19T15:43:04.547Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:43:29.382Z"
-    },
-    {
-      "started_at": "2026-09-19T15:43:36.781Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:44:01.645Z"
-    },
-    {
-      "started_at": "2026-09-19T15:44:09.161Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:44:34.087Z"
-    },
-    {
-      "started_at": "2026-09-19T15:44:41.409Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:45:06.270Z"
-    },
-    {
-      "started_at": "2026-09-19T15:45:13.939Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:45:39.589Z"
-    },
-    {
-      "started_at": "2026-09-19T15:45:48.440Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:46:15.444Z"
-    },
-    {
-      "started_at": "2026-09-19T15:46:23.908Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:46:48.874Z"
-    },
-    {
-      "started_at": "2026-09-19T15:46:57.189Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:47:21.711Z"
-    },
-    {
-      "started_at": "2026-09-19T15:47:29.380Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:47:53.955Z"
-    },
-    {
-      "started_at": "2026-09-19T15:48:02.221Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:48:29.502Z"
-    },
-    {
-      "started_at": "2026-09-19T15:48:38.278Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:49:05.448Z"
-    },
-    {
-      "started_at": "2026-09-19T15:49:13.540Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:49:46.261Z"
-    },
-    {
-      "started_at": "2026-09-19T15:49:53.785Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:50:25.754Z"
-    },
-    {
-      "started_at": "2026-09-19T15:50:32.846Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:51:04.602Z"
-    },
-    {
-      "started_at": "2026-09-19T15:51:50.646Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:52:23.734Z"
-    },
-    {
-      "started_at": "2026-09-19T15:52:32.610Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:53:05.177Z"
-    },
-    {
-      "started_at": "2026-09-19T15:53:13.436Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:53:46.692Z"
-    },
-    {
-      "started_at": "2026-09-19T15:53:54.806Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:54:26.554Z"
-    },
-    {
-      "started_at": "2026-09-19T15:54:34.374Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:55:06.524Z"
-    },
-    {
-      "started_at": "2026-09-19T15:55:14.173Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:55:47.670Z"
-    },
-    {
-      "started_at": "2026-09-19T15:55:55.772Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:56:28.739Z"
-    },
-    {
-      "started_at": "2026-09-19T15:56:35.979Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:57:07.817Z"
-    },
-    {
-      "started_at": "2026-09-19T15:57:15.565Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:57:54.475Z"
-    },
-    {
-      "started_at": "2026-09-19T15:58:05.038Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:58:45.400Z"
-    },
-    {
-      "started_at": "2026-09-19T15:58:53.300Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T15:59:33.820Z"
-    },
-    {
-      "started_at": "2026-09-19T15:59:41.957Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:00:21.373Z"
-    },
-    {
-      "started_at": "2026-09-19T16:00:29.339Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:01:08.406Z"
-    },
-    {
-      "started_at": "2026-09-19T16:01:15.871Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:01:55.006Z"
-    },
-    {
-      "started_at": "2026-09-19T16:02:02.305Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:02:43.285Z"
-    },
-    {
-      "started_at": "2026-09-19T16:02:51.153Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:03:31.734Z"
-    },
-    {
-      "started_at": "2026-09-19T16:03:39.343Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:04:18.599Z"
-    },
-    {
-      "started_at": "2026-09-19T16:04:26.432Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:05:05.880Z"
-    },
-    {
-      "started_at": "2026-09-19T16:05:14.849Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:05:54.893Z"
-    },
-    {
-      "started_at": "2026-09-19T16:06:03.681Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:06:52.778Z"
-    },
-    {
-      "started_at": "2026-09-19T16:07:02.458Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:07:49.698Z"
-    },
-    {
-      "started_at": "2026-09-19T16:07:58.846Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:08:46.486Z"
-    },
-    {
-      "started_at": "2026-09-19T16:08:55.377Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:09:42.817Z"
-    },
-    {
-      "started_at": "2026-09-19T16:09:55.550Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:10:43.307Z"
-    },
-    {
-      "started_at": "2026-09-19T16:10:53.187Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:12:50.761Z"
-    },
-    {
-      "started_at": "2026-09-19T16:12:58.189Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:13:45.010Z"
-    },
-    {
-      "started_at": "2026-09-19T16:13:53.221Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:14:39.197Z"
-    },
-    {
-      "started_at": "2026-09-19T16:14:46.381Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:15:32.314Z"
-    },
-    {
-      "started_at": "2026-09-19T16:15:39.563Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:16:25.898Z"
-    },
-    {
-      "started_at": "2026-09-19T16:16:33.771Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:17:20.685Z"
-    },
-    {
-      "started_at": "2026-09-19T16:17:28.724Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:18:22.641Z"
-    },
-    {
-      "started_at": "2026-09-19T16:18:30.769Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:19:24.284Z"
-    },
-    {
-      "started_at": "2026-09-19T16:19:32.123Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:20:25.478Z"
-    },
-    {
-      "started_at": "2026-09-19T16:20:32.805Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:42:44.688Z"
-    },
-    {
-      "started_at": "2026-09-19T16:43:19.604Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 116,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:44:26.595Z"
-    },
-    {
-      "started_at": "2026-09-19T16:45:48.005Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 16,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:47:38.099Z"
-    },
-    {
-      "started_at": "2026-09-19T16:47:58.152Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:53:33.995Z"
-    },
-    {
-      "started_at": "2026-09-19T16:53:41.779Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:54:35.354Z"
-    },
-    {
-      "started_at": "2026-09-19T16:54:42.950Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:55:36.815Z"
-    },
-    {
-      "started_at": "2026-09-19T16:55:44.906Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:56:39.199Z"
-    },
-    {
-      "started_at": "2026-09-19T16:56:48.082Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:57:42.323Z"
-    },
-    {
-      "started_at": "2026-09-19T16:57:49.962Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T16:58:50.716Z"
-    },
-    {
-      "started_at": "2026-09-19T16:59:00.128Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:00:02.649Z"
-    },
-    {
-      "started_at": "2026-09-19T17:00:14.342Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 120,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:01:20.911Z"
-    },
-    {
-      "started_at": "2026-09-19T17:01:28.990Z",
-      "queued": [
-        "DdebgvuNRro"
-      ],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 1,
-      "inventory": 121,
-      "status": "queued",
-      "finished_at": "2026-09-19T17:04:10.452Z"
-    },
-    {
-      "started_at": "2026-09-19T17:04:17.488Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 121,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:05:17.760Z"
-    },
-    {
-      "started_at": "2026-09-19T17:05:24.858Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 121,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:06:24.984Z"
-    },
-    {
-      "started_at": "2026-09-19T17:06:33.252Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 121,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:07:33.271Z"
-    },
-    {
-      "started_at": "2026-09-19T17:07:41.375Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 121,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:08:41.713Z"
-    },
-    {
-      "started_at": "2026-09-19T17:08:48.751Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 121,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:09:49.115Z"
-    },
-    {
-      "started_at": "2026-09-19T17:09:57.261Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 121,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:11:01.262Z"
-    },
-    {
-      "started_at": "2026-09-19T17:21:55.420Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:22:13.472Z"
-    },
-    {
-      "started_at": "2026-09-19T17:22:26.379Z",
+      "started_at": "2026-09-19T18:05:56.261Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:22:44.554Z"
+      "finished_at": "2026-09-19T18:06:51.300Z"
     },
     {
-      "started_at": "2026-09-19T17:22:55.561Z",
+      "started_at": "2026-09-19T18:07:02.670Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:23:13.138Z"
+      "finished_at": "2026-09-19T18:08:00.257Z"
     },
     {
-      "started_at": "2026-09-19T17:23:26.542Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:23:44.221Z"
-    },
-    {
-      "started_at": "2026-09-19T17:23:57.320Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:24:17.919Z"
-    },
-    {
-      "started_at": "2026-09-19T17:25:13.894Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:25:31.433Z"
-    },
-    {
-      "started_at": "2026-09-19T17:25:44.272Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:26:01.847Z"
-    },
-    {
-      "started_at": "2026-09-19T17:26:15.124Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:26:33.125Z"
-    },
-    {
-      "started_at": "2026-09-19T17:26:46.008Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:27:04.040Z"
-    },
-    {
-      "started_at": "2026-09-19T17:27:16.718Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:27:35.055Z"
-    },
-    {
-      "started_at": "2026-09-19T17:27:47.351Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:28:05.992Z"
-    },
-    {
-      "started_at": "2026-09-19T17:28:18.177Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:28:42.751Z"
-    },
-    {
-      "started_at": "2026-09-19T17:28:51.942Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:29:16.621Z"
-    },
-    {
-      "started_at": "2026-09-19T17:29:25.191Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:29:50.186Z"
-    },
-    {
-      "started_at": "2026-09-19T17:30:00.071Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:30:24.513Z"
-    },
-    {
-      "started_at": "2026-09-19T17:30:33.276Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:30:57.589Z"
-    },
-    {
-      "started_at": "2026-09-19T17:31:06.664Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:31:30.915Z"
-    },
-    {
-      "started_at": "2026-09-19T17:31:39.348Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:32:03.835Z"
-    },
-    {
-      "started_at": "2026-09-19T17:32:13.032Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:32:37.668Z"
-    },
-    {
-      "started_at": "2026-09-19T17:32:46.462Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:33:10.850Z"
-    },
-    {
-      "started_at": "2026-09-19T17:33:19.701Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:33:44.103Z"
-    },
-    {
-      "started_at": "2026-09-19T17:33:53.590Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:34:17.872Z"
-    },
-    {
-      "started_at": "2026-09-19T17:34:26.965Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:34:58.559Z"
-    },
-    {
-      "started_at": "2026-09-19T17:35:07.096Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:35:38.812Z"
-    },
-    {
-      "started_at": "2026-09-19T17:35:47.041Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:36:18.939Z"
-    },
-    {
-      "started_at": "2026-09-19T17:36:34.528Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:37:07.740Z"
-    },
-    {
-      "started_at": "2026-09-19T17:37:18.598Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:37:52.879Z"
-    },
-    {
-      "started_at": "2026-09-19T17:38:03.499Z",
+      "started_at": "2026-09-19T18:08:10.103Z",
       "queued": [],
       "errors": [
         {
@@ -3484,170 +1337,2848 @@
       "attempts": 1,
       "inventory": 122,
       "status": "no_eligible_clip",
-      "finished_at": "2026-09-19T17:38:37.817Z"
+      "finished_at": "2026-09-19T18:09:05.402Z"
     },
     {
-      "started_at": "2026-09-19T17:38:47.861Z",
+      "started_at": "2026-09-19T18:09:15.081Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:39:19.902Z"
+      "finished_at": "2026-09-19T18:10:09.105Z"
     },
     {
-      "started_at": "2026-09-19T17:39:33.166Z",
+      "started_at": "2026-09-19T18:10:19.918Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:40:05.053Z"
+      "finished_at": "2026-09-19T18:11:13.975Z"
     },
     {
-      "started_at": "2026-09-19T17:40:15.024Z",
+      "started_at": "2026-09-19T18:11:26.832Z",
       "queued": [],
-      "errors": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdeSvRUuc0_/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
       "discovered": 0,
-      "attempts": 0,
+      "attempts": 1,
       "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:40:47.059Z"
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T18:12:21.452Z"
     },
     {
-      "started_at": "2026-09-19T17:41:02.853Z",
+      "started_at": "2026-09-19T18:12:31.296Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:41:36.815Z"
+      "finished_at": "2026-09-19T18:13:24.432Z"
     },
     {
-      "started_at": "2026-09-19T17:41:50.206Z",
+      "started_at": "2026-09-19T18:13:34.549Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:42:22.909Z"
+      "finished_at": "2026-09-19T18:14:28.059Z"
     },
     {
-      "started_at": "2026-09-19T17:42:34.730Z",
+      "started_at": "2026-09-19T18:14:37.731Z",
       "queued": [],
       "errors": [],
       "discovered": 8,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:43:15.928Z"
+      "finished_at": "2026-09-19T18:15:37.871Z"
     },
     {
-      "started_at": "2026-09-19T17:43:26.952Z",
+      "started_at": "2026-09-19T18:16:34.113Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:44:06.034Z"
+      "finished_at": "2026-09-19T18:17:35.004Z"
     },
     {
-      "started_at": "2026-09-19T17:44:16.580Z",
+      "started_at": "2026-09-19T18:17:48.170Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:44:56.692Z"
+      "finished_at": "2026-09-19T18:18:50.891Z"
     },
     {
-      "started_at": "2026-09-19T17:45:07.253Z",
+      "started_at": "2026-09-19T18:19:00.930Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:45:47.194Z"
+      "finished_at": "2026-09-19T18:20:43.911Z"
     },
     {
-      "started_at": "2026-09-19T17:45:59.978Z",
+      "started_at": "2026-09-19T18:20:53.262Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:46:39.161Z"
+      "finished_at": "2026-09-19T18:21:53.979Z"
     },
     {
-      "started_at": "2026-09-19T17:46:49.292Z",
+      "started_at": "2026-09-19T18:22:04.264Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 5,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T18:23:12.695Z"
+    },
+    {
+      "started_at": "2026-09-19T18:23:22.554Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:47:28.437Z"
+      "finished_at": "2026-09-19T18:24:23.343Z"
     },
     {
-      "started_at": "2026-09-19T17:47:38.353Z",
+      "started_at": "2026-09-19T18:25:15.551Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:48:18.057Z"
+      "finished_at": "2026-09-19T18:26:16.302Z"
     },
     {
-      "started_at": "2026-09-19T17:48:28.352Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:49:07.881Z"
-    },
-    {
-      "started_at": "2026-09-19T17:49:16.773Z",
+      "started_at": "2026-09-19T18:26:25.845Z",
       "queued": [],
       "errors": [],
       "discovered": 0,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:49:55.747Z"
+      "finished_at": "2026-09-19T18:27:27.401Z"
     },
     {
-      "started_at": "2026-09-19T17:50:05.642Z",
+      "started_at": "2026-09-19T18:27:36.368Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:50:44.873Z"
+      "finished_at": "2026-09-19T18:28:36.530Z"
     },
     {
-      "started_at": "2026-09-19T17:50:54.224Z",
+      "started_at": "2026-09-19T18:28:45.943Z",
       "queued": [],
       "errors": [],
       "discovered": 12,
       "attempts": 0,
       "inventory": 122,
       "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T17:51:33.707Z"
+      "finished_at": "2026-09-19T18:29:46.185Z"
+    },
+    {
+      "started_at": "2026-09-19T18:29:55.705Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:30:13.209Z"
+    },
+    {
+      "started_at": "2026-09-19T18:30:25.793Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:30:43.502Z"
+    },
+    {
+      "started_at": "2026-09-19T18:30:56.734Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:31:14.597Z"
+    },
+    {
+      "started_at": "2026-09-19T18:31:27.300Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:31:45.359Z"
+    },
+    {
+      "started_at": "2026-09-19T18:31:58.266Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:32:15.735Z"
+    },
+    {
+      "started_at": "2026-09-19T18:32:28.843Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:32:46.302Z"
+    },
+    {
+      "started_at": "2026-09-19T18:32:59.781Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:33:19.789Z"
+    },
+    {
+      "started_at": "2026-09-19T18:33:30.319Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:33:48.687Z"
+    },
+    {
+      "started_at": "2026-09-19T18:34:00.649Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:34:18.676Z"
+    },
+    {
+      "started_at": "2026-09-19T18:34:31.104Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:34:48.977Z"
+    },
+    {
+      "started_at": "2026-09-19T18:35:01.615Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:35:19.941Z"
+    },
+    {
+      "started_at": "2026-09-19T18:35:32.904Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:35:57.796Z"
+    },
+    {
+      "started_at": "2026-09-19T18:45:53.994Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T18:54:44.939Z"
+    },
+    {
+      "started_at": "2026-09-19T18:55:08.973Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "source_handle": "theacenyc",
+          "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/theacenyc/reels/\", waiting until \"domcontentloaded\"\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 0,
+      "attempts": 4,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T19:04:01.132Z"
+    },
+    {
+      "started_at": "2026-09-19T19:20:32.216Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "source_handle": "the_goodfilms",
+          "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/the_goodfilms/reels/\", waiting until \"domcontentloaded\"\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 0,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T19:21:31.348Z"
+    },
+    {
+      "started_at": "2026-09-19T19:22:26.675Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:22:51.732Z"
+    },
+    {
+      "started_at": "2026-09-19T19:23:00.912Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:23:26.288Z"
+    },
+    {
+      "started_at": "2026-09-19T19:23:34.993Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:23:59.998Z"
+    },
+    {
+      "started_at": "2026-09-19T19:24:08.103Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:24:32.825Z"
+    },
+    {
+      "started_at": "2026-09-19T19:24:41.398Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:25:09.124Z"
+    },
+    {
+      "started_at": "2026-09-19T19:25:18.392Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:25:43.275Z"
+    },
+    {
+      "started_at": "2026-09-19T19:25:51.024Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:26:15.596Z"
+    },
+    {
+      "started_at": "2026-09-19T19:26:23.395Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:26:55.534Z"
+    },
+    {
+      "started_at": "2026-09-19T19:27:03.082Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:27:34.846Z"
+    },
+    {
+      "started_at": "2026-09-19T19:27:42.476Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:28:07.068Z"
+    },
+    {
+      "started_at": "2026-09-19T19:28:14.799Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:28:39.577Z"
+    },
+    {
+      "started_at": "2026-09-19T19:29:25.074Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 3,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T19:30:27.146Z"
+    },
+    {
+      "started_at": "2026-09-19T19:30:35.603Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:31:07.619Z"
+    },
+    {
+      "started_at": "2026-09-19T19:31:18.436Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:31:56.014Z"
+    },
+    {
+      "started_at": "2026-09-19T19:32:03.830Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:32:35.793Z"
+    },
+    {
+      "started_at": "2026-09-19T19:32:43.670Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:33:15.488Z"
+    },
+    {
+      "started_at": "2026-09-19T19:33:24.641Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:33:56.955Z"
+    },
+    {
+      "started_at": "2026-09-19T19:34:06.054Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T19:34:40.035Z"
+    },
+    {
+      "started_at": "2026-09-19T19:34:47.769Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:35:26.713Z"
+    },
+    {
+      "started_at": "2026-09-19T19:35:34.157Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:36:13.099Z"
+    },
+    {
+      "started_at": "2026-09-19T19:36:23.923Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:36:56.110Z"
+    },
+    {
+      "started_at": "2026-09-19T19:37:05.335Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:37:36.846Z"
+    },
+    {
+      "started_at": "2026-09-19T19:37:46.402Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:38:25.665Z"
+    },
+    {
+      "started_at": "2026-09-19T19:38:34.084Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:39:12.803Z"
+    },
+    {
+      "started_at": "2026-09-19T19:39:20.611Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:39:59.346Z"
+    },
+    {
+      "started_at": "2026-09-19T19:40:07.562Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:40:46.351Z"
+    },
+    {
+      "started_at": "2026-09-19T19:40:54.814Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:41:33.324Z"
+    },
+    {
+      "started_at": "2026-09-19T19:41:41.077Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:42:20.195Z"
+    },
+    {
+      "started_at": "2026-09-19T19:43:01.669Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:43:41.111Z"
+    },
+    {
+      "started_at": "2026-09-19T19:44:23.541Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:45:11.001Z"
+    },
+    {
+      "started_at": "2026-09-19T19:45:21.432Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:46:09.765Z"
+    },
+    {
+      "started_at": "2026-09-19T19:46:19.013Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:46:59.057Z"
+    },
+    {
+      "started_at": "2026-09-19T19:47:09.636Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:47:48.866Z"
+    },
+    {
+      "started_at": "2026-09-19T19:47:57.723Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:48:43.703Z"
+    },
+    {
+      "started_at": "2026-09-19T19:48:51.643Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:49:37.579Z"
+    },
+    {
+      "started_at": "2026-09-19T19:49:46.158Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:50:32.595Z"
+    },
+    {
+      "started_at": "2026-09-19T19:50:41.436Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:51:27.903Z"
+    },
+    {
+      "started_at": "2026-09-19T19:51:36.690Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 0,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T19:52:23.085Z"
+    },
+    {
+      "started_at": "2026-09-19T19:52:32.852Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:53:20.041Z"
+    },
+    {
+      "started_at": "2026-09-19T19:53:29.152Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:54:15.223Z"
+    },
+    {
+      "started_at": "2026-09-19T19:54:24.298Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:55:17.704Z"
+    },
+    {
+      "started_at": "2026-09-19T19:55:26.849Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:56:20.246Z"
+    },
+    {
+      "started_at": "2026-09-19T19:56:28.502Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:57:14.873Z"
+    },
+    {
+      "started_at": "2026-09-19T19:57:23.326Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:58:09.690Z"
+    },
+    {
+      "started_at": "2026-09-19T19:58:17.861Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T19:59:12.734Z"
+    },
+    {
+      "started_at": "2026-09-19T19:59:22.182Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 3,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T20:03:54.968Z"
+    },
+    {
+      "started_at": "2026-09-19T20:04:43.527Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T20:10:08.667Z"
+    },
+    {
+      "started_at": "2026-09-19T20:20:36.708Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:21:33.354Z"
+    },
+    {
+      "started_at": "2026-09-19T20:21:41.638Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 0,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T20:22:36.147Z"
+    },
+    {
+      "started_at": "2026-09-19T20:22:45.862Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:23:39.337Z"
+    },
+    {
+      "started_at": "2026-09-19T20:23:48.469Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:24:42.463Z"
+    },
+    {
+      "started_at": "2026-09-19T20:24:52.240Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:25:53.193Z"
+    },
+    {
+      "started_at": "2026-09-19T20:26:02.353Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:27:02.889Z"
+    },
+    {
+      "started_at": "2026-09-19T20:27:11.326Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:28:05.944Z"
+    },
+    {
+      "started_at": "2026-09-19T20:28:15.247Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:42:55.490Z"
+    },
+    {
+      "started_at": "2026-09-19T20:47:59.786Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 4,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T20:49:06.410Z"
+    },
+    {
+      "started_at": "2026-09-19T20:49:13.670Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:50:14.306Z"
+    },
+    {
+      "started_at": "2026-09-19T20:50:22.113Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:51:22.543Z"
+    },
+    {
+      "started_at": "2026-09-19T20:52:12.816Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 8,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T20:53:52.390Z"
+    },
+    {
+      "started_at": "2026-09-19T20:54:40.913Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:55:41.095Z"
+    },
+    {
+      "started_at": "2026-09-19T20:55:49.611Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:56:49.882Z"
+    },
+    {
+      "started_at": "2026-09-19T20:56:57.609Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:57:57.730Z"
+    },
+    {
+      "started_at": "2026-09-19T20:58:07.141Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:58:24.906Z"
+    },
+    {
+      "started_at": "2026-09-19T20:58:37.920Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T20:58:55.468Z"
+    },
+    {
+      "started_at": "2026-09-19T20:59:08.093Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:00:08.283Z"
+    },
+    {
+      "started_at": "2026-09-19T21:00:16.562Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:01:17.105Z"
+    },
+    {
+      "started_at": "2026-09-19T21:01:26.070Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:01:45.724Z"
+    },
+    {
+      "started_at": "2026-09-19T21:02:36.634Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:02:54.870Z"
+    },
+    {
+      "started_at": "2026-09-19T21:03:41.570Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:03:59.612Z"
+    },
+    {
+      "started_at": "2026-09-19T21:04:12.015Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:04:30.946Z"
+    },
+    {
+      "started_at": "2026-09-19T21:04:41.929Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:04:59.355Z"
+    },
+    {
+      "started_at": "2026-09-19T21:05:12.510Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:05:30.147Z"
+    },
+    {
+      "started_at": "2026-09-19T21:05:43.479Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:06:01.065Z"
+    },
+    {
+      "started_at": "2026-09-19T21:06:13.569Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:06:38.206Z"
+    },
+    {
+      "started_at": "2026-09-19T21:06:46.300Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:07:10.911Z"
+    },
+    {
+      "started_at": "2026-09-19T21:07:18.318Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:07:35.861Z"
+    },
+    {
+      "started_at": "2026-09-19T21:07:48.510Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:08:06.111Z"
+    },
+    {
+      "started_at": "2026-09-19T21:08:19.322Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:08:44.068Z"
+    },
+    {
+      "started_at": "2026-09-19T21:08:51.458Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:09:16.357Z"
+    },
+    {
+      "started_at": "2026-09-19T21:09:24.382Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:09:49.319Z"
+    },
+    {
+      "started_at": "2026-09-19T21:09:58.774Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:10:24.442Z"
+    },
+    {
+      "started_at": "2026-09-19T21:10:33.900Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:10:58.683Z"
+    },
+    {
+      "started_at": "2026-09-19T21:11:06.584Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:11:32.160Z"
+    },
+    {
+      "started_at": "2026-09-19T21:11:41.126Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:12:06.454Z"
+    },
+    {
+      "started_at": "2026-09-19T21:12:14.649Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdeSvRUuc0_/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 8,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:12:48.920Z"
+    },
+    {
+      "started_at": "2026-09-19T21:12:57.047Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:13:29.088Z"
+    },
+    {
+      "started_at": "2026-09-19T21:13:36.695Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:14:01.304Z"
+    },
+    {
+      "started_at": "2026-09-19T21:14:09.492Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:14:35.066Z"
+    },
+    {
+      "started_at": "2026-09-19T21:14:43.135Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:15:15.935Z"
+    },
+    {
+      "started_at": "2026-09-19T21:15:24.130Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:15:56.425Z"
+    },
+    {
+      "started_at": "2026-09-19T21:16:47.568Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:17:20.139Z"
+    },
+    {
+      "started_at": "2026-09-19T21:17:28.139Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:18:01.324Z"
+    },
+    {
+      "started_at": "2026-09-19T21:18:11.289Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:18:44.287Z"
+    },
+    {
+      "started_at": "2026-09-19T21:18:52.344Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 4,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:19:29.597Z"
+    },
+    {
+      "started_at": "2026-09-19T21:19:37.295Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:20:09.145Z"
+    },
+    {
+      "started_at": "2026-09-19T21:20:17.628Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:20:56.832Z"
+    },
+    {
+      "started_at": "2026-09-19T21:21:06.726Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:21:46.526Z"
+    },
+    {
+      "started_at": "2026-09-19T21:21:55.291Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 122,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:22:27.465Z"
+    },
+    {
+      "started_at": "2026-09-19T21:22:37.346Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:23:11.053Z"
+    },
+    {
+      "started_at": "2026-09-19T21:23:19.443Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 122,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:23:59.147Z"
+    },
+    {
+      "started_at": "2026-09-19T21:24:07.027Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dde9lL4C3Pp/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 123,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:25:00.337Z"
+    },
+    {
+      "started_at": "2026-09-19T21:25:08.330Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:25:47.578Z"
+    },
+    {
+      "started_at": "2026-09-19T21:25:55.822Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:26:34.840Z"
+    },
+    {
+      "started_at": "2026-09-19T21:26:46.210Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:27:26.628Z"
+    },
+    {
+      "started_at": "2026-09-19T21:27:35.506Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:28:14.670Z"
+    },
+    {
+      "started_at": "2026-09-19T21:28:22.796Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:29:01.927Z"
+    },
+    {
+      "started_at": "2026-09-19T21:29:10.824Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:29:58.168Z"
+    },
+    {
+      "started_at": "2026-09-19T21:30:06.405Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:30:53.667Z"
+    },
+    {
+      "started_at": "2026-09-19T21:31:01.968Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:31:42.007Z"
+    },
+    {
+      "started_at": "2026-09-19T21:31:50.111Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:32:30.380Z"
+    },
+    {
+      "started_at": "2026-09-19T21:32:38.725Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:33:25.234Z"
+    },
+    {
+      "started_at": "2026-09-19T21:33:35.779Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:34:23.677Z"
+    },
+    {
+      "started_at": "2026-09-19T21:34:31.488Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:35:17.650Z"
+    },
+    {
+      "started_at": "2026-09-19T21:35:25.340Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:36:11.816Z"
+    },
+    {
+      "started_at": "2026-09-19T21:36:19.887Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:37:07.048Z"
+    },
+    {
+      "started_at": "2026-09-19T21:37:15.029Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:38:01.630Z"
+    },
+    {
+      "started_at": "2026-09-19T21:38:11.299Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:38:58.534Z"
+    },
+    {
+      "started_at": "2026-09-19T21:39:05.949Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:39:59.582Z"
+    },
+    {
+      "started_at": "2026-09-19T21:40:07.639Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:41:00.885Z"
+    },
+    {
+      "started_at": "2026-09-19T21:41:09.716Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:41:56.406Z"
+    },
+    {
+      "started_at": "2026-09-19T21:42:04.746Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:42:50.677Z"
+    },
+    {
+      "started_at": "2026-09-19T21:42:58.581Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:43:52.481Z"
+    },
+    {
+      "started_at": "2026-09-19T21:44:00.674Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:44:54.856Z"
+    },
+    {
+      "started_at": "2026-09-19T21:45:03.217Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:45:58.542Z"
+    },
+    {
+      "started_at": "2026-09-19T21:46:07.786Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:47:03.063Z"
+    },
+    {
+      "started_at": "2026-09-19T21:47:11.746Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:48:06.026Z"
+    },
+    {
+      "started_at": "2026-09-19T21:48:14.689Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:49:09.348Z"
+    },
+    {
+      "started_at": "2026-09-19T21:49:17.984Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 4,
+      "inventory": 123,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:50:17.742Z"
+    },
+    {
+      "started_at": "2026-09-19T21:50:25.600Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:51:28.785Z"
+    },
+    {
+      "started_at": "2026-09-19T21:51:38.146Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:52:39.782Z"
+    },
+    {
+      "started_at": "2026-09-19T21:52:48.592Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:53:42.875Z"
+    },
+    {
+      "started_at": "2026-09-19T21:53:51.399Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 123,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T21:54:45.907Z"
+    },
+    {
+      "started_at": "2026-09-19T21:54:54.542Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:55:55.594Z"
+    },
+    {
+      "started_at": "2026-09-19T21:56:04.315Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:57:05.715Z"
+    },
+    {
+      "started_at": "2026-09-19T21:57:13.978Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:58:15.907Z"
+    },
+    {
+      "started_at": "2026-09-19T21:58:25.859Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T21:59:28.170Z"
+    },
+    {
+      "started_at": "2026-09-19T21:59:36.953Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:00:38.651Z"
+    },
+    {
+      "started_at": "2026-09-19T22:00:47.975Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:01:48.233Z"
+    },
+    {
+      "started_at": "2026-09-19T22:01:56.803Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:02:57.139Z"
+    },
+    {
+      "started_at": "2026-09-19T22:03:05.323Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:03:23.358Z"
+    },
+    {
+      "started_at": "2026-09-19T22:03:35.738Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:03:53.221Z"
+    },
+    {
+      "started_at": "2026-09-19T22:04:06.535Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:05:06.565Z"
+    },
+    {
+      "started_at": "2026-09-19T22:05:15.018Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:06:15.394Z"
+    },
+    {
+      "started_at": "2026-09-19T22:06:24.479Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:06:43.963Z"
+    },
+    {
+      "started_at": "2026-09-19T22:06:55.714Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:07:13.979Z"
+    },
+    {
+      "started_at": "2026-09-19T22:07:25.189Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:07:42.811Z"
+    },
+    {
+      "started_at": "2026-09-19T22:07:56.237Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:08:13.912Z"
+    },
+    {
+      "started_at": "2026-09-19T22:08:26.547Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:08:44.006Z"
+    },
+    {
+      "started_at": "2026-09-19T22:08:57.130Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:09:14.846Z"
+    },
+    {
+      "started_at": "2026-09-19T22:09:28.070Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:09:45.927Z"
+    },
+    {
+      "started_at": "2026-09-19T22:09:58.479Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:10:23.071Z"
+    },
+    {
+      "started_at": "2026-09-19T22:10:34.543Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:10:59.828Z"
+    },
+    {
+      "started_at": "2026-09-19T22:11:27.775Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:11:46.458Z"
+    },
+    {
+      "started_at": "2026-09-19T22:11:58.860Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:12:17.001Z"
+    },
+    {
+      "started_at": "2026-09-19T22:12:30.851Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:12:59.177Z"
+    },
+    {
+      "started_at": "2026-09-19T22:13:11.312Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:13:43.811Z"
+    },
+    {
+      "started_at": "2026-09-19T22:13:54.027Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:14:19.630Z"
+    },
+    {
+      "started_at": "2026-09-19T22:14:42.519Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:15:09.989Z"
+    },
+    {
+      "started_at": "2026-09-19T22:15:37.297Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:16:07.198Z"
+    },
+    {
+      "started_at": "2026-09-19T22:17:23.185Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:18:07.642Z"
+    },
+    {
+      "started_at": "2026-09-19T22:18:16.723Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:18:41.998Z"
+    },
+    {
+      "started_at": "2026-09-19T22:18:50.462Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:19:22.225Z"
+    },
+    {
+      "started_at": "2026-09-19T22:19:31.268Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:20:03.133Z"
+    },
+    {
+      "started_at": "2026-09-19T22:20:43.530Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 4,
+      "inventory": 123,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T22:21:12.873Z"
+    },
+    {
+      "started_at": "2026-09-19T22:21:20.616Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:21:45.142Z"
+    },
+    {
+      "started_at": "2026-09-19T22:22:21.289Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:22:53.519Z"
+    },
+    {
+      "started_at": "2026-09-19T22:23:01.505Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:23:33.318Z"
+    },
+    {
+      "started_at": "2026-09-19T22:23:41.510Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:24:13.385Z"
+    },
+    {
+      "started_at": "2026-09-19T22:24:21.711Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 123,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-19T22:24:54.297Z"
+    },
+    {
+      "started_at": "2026-09-19T22:25:02.708Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:25:34.180Z"
+    },
+    {
+      "started_at": "2026-09-19T22:25:43.330Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:26:15.324Z"
+    },
+    {
+      "started_at": "2026-09-19T22:26:23.245Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:26:55.106Z"
+    },
+    {
+      "started_at": "2026-09-19T22:27:02.988Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:27:41.720Z"
+    },
+    {
+      "started_at": "2026-09-19T22:27:49.328Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:28:28.298Z"
+    },
+    {
+      "started_at": "2026-09-19T22:28:35.655Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:29:07.654Z"
+    },
+    {
+      "started_at": "2026-09-19T22:29:15.620Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:29:47.346Z"
+    },
+    {
+      "started_at": "2026-09-19T22:30:07.210Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:30:46.195Z"
+    },
+    {
+      "started_at": "2026-09-19T22:30:54.289Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:31:33.403Z"
+    },
+    {
+      "started_at": "2026-09-19T22:31:41.690Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:32:20.527Z"
+    },
+    {
+      "started_at": "2026-09-19T22:33:04.734Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:33:44.541Z"
+    },
+    {
+      "started_at": "2026-09-19T22:33:52.751Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:34:31.420Z"
+    },
+    {
+      "started_at": "2026-09-19T22:34:39.592Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:35:18.134Z"
+    },
+    {
+      "started_at": "2026-09-19T22:35:26.151Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:36:04.898Z"
+    },
+    {
+      "started_at": "2026-09-19T22:36:13.196Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:36:59.724Z"
+    },
+    {
+      "started_at": "2026-09-19T22:37:08.009Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:37:53.994Z"
+    },
+    {
+      "started_at": "2026-09-19T22:38:02.019Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:38:40.868Z"
+    },
+    {
+      "started_at": "2026-09-19T22:39:19.626Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:39:58.806Z"
+    },
+    {
+      "started_at": "2026-09-19T22:40:06.737Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:40:53.028Z"
+    },
+    {
+      "started_at": "2026-09-19T22:41:01.488Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-19T22:41:56.077Z"
+    },
+    {
+      "started_at": "2026-09-19T22:42:06.139Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "source_handle": "relatedfilms",
+          "error": "locator.evaluateAll: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-software-rasterizer --user-data-dir=/Users/dw/Library/Application Support/VeryGoodFilms/InstagramSourceProfile --remote-debugging-pipe about:blank\n<launched> pid=1341\n[pid=1341][err] Trying to load the allocator multiple times. This is *not* supported.\n[pid=1341][err] [1349:2527845:0919/154206.866289:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1349:2527845:0919/154206.868159:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1349:2527845:0919/154206.868696:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1349:2527845:0919/154206.869236:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1349:2527845:0919/154206.870446:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1349:2527845:0919/154206.871565:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1349:2527845:0919/154207.716793:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[pid=1341][err] [1341:2527752:0919/154213.406811:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\n[pid=1341][err] [1350:2527836:0919/154238.857532:ERROR:net/disk_cache/simple/simple_index_file.cc:331] Failed to write the temporary index file\n[pid=1341][err] [1353:2527906:0919/154239.372897:ERROR:third_party/blink/renderer/platform/disk_data_allocator.cc:198] DISK: Cannot write to disk. written = 0 FILE_ERROR_NO_SPACE\n[pid=1341] <gracefully close start>\n[pid=1341] <forcefully close>\n[pid=1341] <kill>\n[pid=1341] <will force kill>"
+        }
+      ],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:33:46.460Z"
+    },
+    {
+      "started_at": "2026-09-20T02:35:49.468Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdeSvRUuc0_/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dde9lL4C3Pp/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 15,
+      "inventory": 123,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-20T02:38:17.519Z"
+    },
+    {
+      "started_at": "2026-09-20T02:38:28.894Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:39:14.871Z"
+    },
+    {
+      "started_at": "2026-09-20T02:39:23.641Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:40:10.809Z"
+    },
+    {
+      "started_at": "2026-09-20T02:40:19.613Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:41:05.775Z"
+    },
+    {
+      "started_at": "2026-09-20T02:41:13.644Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:42:07.041Z"
+    },
+    {
+      "started_at": "2026-09-20T02:42:14.890Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:43:08.482Z"
+    },
+    {
+      "started_at": "2026-09-20T02:43:17.003Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:44:03.131Z"
+    },
+    {
+      "started_at": "2026-09-20T02:44:13.063Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:44:59.312Z"
+    },
+    {
+      "started_at": "2026-09-20T02:45:10.592Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:46:05.175Z"
+    },
+    {
+      "started_at": "2026-09-20T02:46:16.469Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:47:10.063Z"
+    },
+    {
+      "started_at": "2026-09-20T02:47:18.659Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:48:05.752Z"
+    },
+    {
+      "started_at": "2026-09-20T02:48:17.626Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:49:10.956Z"
+    },
+    {
+      "started_at": "2026-09-20T02:49:21.870Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:50:15.848Z"
+    },
+    {
+      "started_at": "2026-09-20T02:50:26.176Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:51:19.328Z"
+    },
+    {
+      "started_at": "2026-09-20T02:51:30.025Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:52:23.336Z"
+    },
+    {
+      "started_at": "2026-09-20T02:52:32.390Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:53:32.676Z"
+    },
+    {
+      "started_at": "2026-09-20T02:53:42.084Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:54:41.961Z"
+    },
+    {
+      "started_at": "2026-09-20T02:54:51.799Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:55:45.295Z"
+    },
+    {
+      "started_at": "2026-09-20T02:55:56.350Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:56:49.268Z"
+    },
+    {
+      "started_at": "2026-09-20T02:56:58.286Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:57:58.954Z"
+    },
+    {
+      "started_at": "2026-09-20T02:58:07.699Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T02:59:08.396Z"
+    },
+    {
+      "started_at": "2026-09-20T02:59:17.951Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T03:00:13.244Z"
+    },
+    {
+      "started_at": "2026-09-20T03:00:23.783Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T03:01:25.513Z"
+    },
+    {
+      "started_at": "2026-09-20T03:01:34.552Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 123,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T03:02:39.331Z"
+    },
+    {
+      "started_at": "2026-09-20T03:02:53.884Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 16,
+      "attempts": 0,
+      "inventory": 127,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T03:03:57.208Z"
+    },
+    {
+      "started_at": "2026-09-20T03:04:07.194Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 127,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-20T03:05:08.666Z"
     }
   ],
-  "next_account_index": 1,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -3664,8 +4195,8 @@
     "DCeu2jgy3BO": {
       "collector_version": 12,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-09-19T17:52:42.400Z",
-      "retry_at": "2026-09-19T20:52:42.400Z"
+      "failed_at": "2026-09-20T02:37:13.903Z",
+      "retry_at": "2026-09-20T05:37:13.903Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -3717,9 +4248,9 @@
     },
     "Dck4uAuTLyv": {
       "collector_version": 12,
-      "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T17:52:56.634Z",
-      "retry_at": "2026-09-19T20:52:56.634Z"
+      "error": "Verified movie title required before queueing",
+      "failed_at": "2026-09-20T02:37:43.821Z",
+      "retry_at": "2026-09-20T03:07:43.821Z"
     },
     "DZtaornzI-J": {
       "collector_version": 7,
@@ -3777,9 +4308,9 @@
     },
     "DcMBrFQzHwg": {
       "collector_version": 12,
-      "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T17:53:00.495Z",
-      "retry_at": "2026-09-19T20:53:00.495Z"
+      "error": "Verified movie title required before queueing",
+      "failed_at": "2026-09-20T02:38:03.890Z",
+      "retry_at": "2026-09-20T03:08:03.890Z"
     },
     "Cq8NW4ToJoc": {
       "collector_version": 7,
@@ -3790,8 +4321,8 @@
     "DZbqwhnT0Uq": {
       "collector_version": 12,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-09-19T17:53:08.942Z",
-      "retry_at": "2026-09-19T20:53:08.942Z"
+      "failed_at": "2026-09-20T02:38:11.701Z",
+      "retry_at": "2026-09-20T05:38:11.701Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -4046,8 +4577,8 @@
     "DdOuzu6gQ42": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T17:52:58.631Z",
-      "retry_at": "2026-09-19T20:52:58.631Z"
+      "failed_at": "2026-09-20T02:37:23.290Z",
+      "retry_at": "2026-09-20T05:37:23.290Z"
     },
     "DcMXMFfSSnX": {
       "collector_version": 7,
@@ -4082,14 +4613,14 @@
     "DdTx5Hagpfo": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-19T17:52:50.721Z",
-      "retry_at": "2026-09-19T18:22:50.721Z"
+      "failed_at": "2026-09-20T02:37:17.581Z",
+      "retry_at": "2026-09-20T03:07:17.581Z"
     },
     "DdT80p4ySJl": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T14:52:53.575Z",
-      "retry_at": "2026-09-19T17:52:53.575Z"
+      "failed_at": "2026-09-20T02:38:15.297Z",
+      "retry_at": "2026-09-20T05:38:15.297Z"
     },
     "DcjEpnPujxH": {
       "collector_version": 12,
@@ -4100,44 +4631,50 @@
     "DdZJ4TruOnt": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T17:52:53.746Z",
-      "retry_at": "2026-09-19T20:52:53.746Z"
+      "failed_at": "2026-09-20T02:37:21.410Z",
+      "retry_at": "2026-09-20T05:37:21.410Z"
     },
     "DcysNcgyJ-F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-19T17:52:50.056Z",
-      "retry_at": "2026-09-19T18:22:50.056Z"
+      "failed_at": "2026-09-20T02:37:19.821Z",
+      "retry_at": "2026-09-20T03:07:19.821Z"
     },
     "DdbZwC6A5DM": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-19T17:52:47.009Z",
-      "retry_at": "2026-09-19T18:22:47.009Z"
+      "failed_at": "2026-09-20T02:37:15.264Z",
+      "retry_at": "2026-09-20T03:07:15.264Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-19T17:52:46.071Z",
-      "retry_at": "2026-09-19T18:22:46.071Z"
+      "failed_at": "2026-09-20T02:37:02.592Z",
+      "retry_at": "2026-09-20T03:07:02.592Z"
     },
     "Ddd_V6piIkS": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T15:22:35.917Z",
-      "retry_at": "2026-09-19T18:22:35.917Z"
+      "failed_at": "2026-09-20T02:36:42.307Z",
+      "retry_at": "2026-09-20T05:36:42.307Z"
     },
     "DdeIThxy21F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-19T17:38:37.815Z",
-      "retry_at": "2026-09-19T18:08:37.815Z"
+      "failed_at": "2026-09-20T02:37:14.632Z",
+      "retry_at": "2026-09-20T03:07:14.632Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-19T15:12:13.449Z",
-      "retry_at": "2026-09-19T18:12:13.449Z"
+      "failed_at": "2026-09-20T02:37:17.110Z",
+      "retry_at": "2026-09-20T05:37:17.110Z"
+    },
+    "Dde9lL4C3Pp": {
+      "collector_version": 12,
+      "error": "Movie frame is too short inside portrait source; hold for face-safe review",
+      "failed_at": "2026-09-20T02:38:17.491Z",
+      "retry_at": "2026-09-20T05:38:17.491Z"
     }
   },
   "candidates": {
@@ -4750,19 +5287,105 @@
       "handle": "fuckinggoodmovies",
       "url": "https://www.instagram.com/fuckinggoodmovies/reel/DdefKPgAaVy/",
       "shortcode": "DdefKPgAaVy"
+    },
+    "Dde9lL4C3Pp": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dde9lL4C3Pp/",
+      "shortcode": "Dde9lL4C3Pp"
+    },
+    "Dcs_iGPBbaz": {
+      "handle": "filmreelsvault",
+      "url": "https://www.instagram.com/filmreelsvault/reel/Dcs_iGPBbaz/",
+      "shortcode": "Dcs_iGPBbaz"
+    },
+    "Dcqav58hpx9": {
+      "handle": "filmreelsvault",
+      "url": "https://www.instagram.com/filmreelsvault/reel/Dcqav58hpx9/",
+      "shortcode": "Dcqav58hpx9"
+    },
+    "Dcn16R1B3rq": {
+      "handle": "filmreelsvault",
+      "url": "https://www.instagram.com/filmreelsvault/reel/Dcn16R1B3rq/",
+      "shortcode": "Dcn16R1B3rq"
+    },
+    "DcisUFDhMYC": {
+      "handle": "filmreelsvault",
+      "url": "https://www.instagram.com/filmreelsvault/reel/DcisUFDhMYC/",
+      "shortcode": "DcisUFDhMYC"
+    },
+    "DcY0DTKB2Gt": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DcY0DTKB2Gt/",
+      "shortcode": "DcY0DTKB2Gt"
+    },
+    "DcxN4UwB944": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DcxN4UwB944/",
+      "shortcode": "DcxN4UwB944"
+    },
+    "Ddeeu6ah2G9": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddeeu6ah2G9/",
+      "shortcode": "Ddeeu6ah2G9"
+    },
+    "Ddeb19ShlKH": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddeb19ShlKH/",
+      "shortcode": "Ddeb19ShlKH"
+    },
+    "DdcGKfJTNKw": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdcGKfJTNKw/",
+      "shortcode": "DdcGKfJTNKw"
+    },
+    "DdcF5mbTmr5": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdcF5mbTmr5/",
+      "shortcode": "DdcF5mbTmr5"
+    },
+    "DdbpKiNB6CD": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdbpKiNB6CD/",
+      "shortcode": "DdbpKiNB6CD"
+    },
+    "DdbpA_thU08": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdbpA_thU08/",
+      "shortcode": "DdbpA_thU08"
+    },
+    "DdbbQ2EBU6B": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdbbQ2EBU6B/",
+      "shortcode": "DdbbQ2EBU6B"
+    },
+    "Ddba1LUh3yf": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddba1LUh3yf/",
+      "shortcode": "Ddba1LUh3yf"
+    },
+    "DdaWMumBFUj": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdaWMumBFUj/",
+      "shortcode": "DdaWMumBFUj"
+    },
+    "DdZsSWuTaEI": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdZsSWuTaEI/",
+      "shortcode": "DdZsSWuTaEI"
     }
   },
   "discovery_depth": {
-    "reelgoodmovies": 70,
-    "thecinemanerd.ig": 60,
-    "theacenyc": 60,
-    "the_goodfilms": 60,
-    "film.fission": 60,
-    "ellsoriaa": 60,
-    "relatedfilms": 60,
-    "uneedmink": 60,
-    "cinemoviie": 60,
-    "filmreelsvault": 60,
-    "fuckinggoodmovies": 60
+    "reelgoodmovies": 20,
+    "thecinemanerd.ig": 20,
+    "theacenyc": 80,
+    "the_goodfilms": 80,
+    "film.fission": 20,
+    "ellsoriaa": 20,
+    "relatedfilms": 80,
+    "uneedmink": 20,
+    "cinemoviie": 20,
+    "filmreelsvault": 20,
+    "fuckinggoodmovies": 20,
+    "movie_vault_4u": 30
   }
 }
