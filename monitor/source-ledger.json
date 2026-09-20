@@ -1259,6 +1259,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DcxN4UwB944/",
       "queued_at": "2026-09-20T03:14:39.047Z",
       "asset_sha256": "d2a6c1c9108a2c61ded9110aa7015d16e84779e24aa92cbe13f14d152dfd3bcd"
+    },
+    "Ddeeu6ah2G9": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddeeu6ah2G9/",
+      "queued_at": "2026-09-20T03:16:03.186Z",
+      "asset_sha256": "824ad1c0378d7167af657b6fa3cf2d1028bf9c8a4d9682be83209a1f570b4b20"
     }
   },
   "checks": {
@@ -1272,7 +1278,7 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-20T02:53:32.674Z"
+      "checked_at": "2026-09-20T03:15:08.636Z"
     },
     "thecinemanerd.ig": {
       "checked_at": "2026-09-20T02:54:41.960Z"
@@ -1309,16 +1315,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-19T18:05:56.261Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T18:06:51.300Z"
-    },
     {
       "started_at": "2026-09-19T18:07:02.670Z",
       "queued": [],
@@ -4182,9 +4178,22 @@
       "inventory": 127,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-20T03:05:08.666Z"
+    },
+    {
+      "started_at": "2026-09-20T03:05:17.788Z",
+      "queued": [
+        "DcY0DTKB2Gt",
+        "DcxN4UwB944"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 139,
+      "status": "queued",
+      "finished_at": "2026-09-20T03:14:41.792Z"
     }
   ],
-  "next_account_index": 0,
+  "next_account_index": 1,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -4649,14 +4658,14 @@
     "DdbZwC6A5DM": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-20T02:37:15.264Z",
-      "retry_at": "2026-09-20T03:07:15.264Z"
+      "failed_at": "2026-09-20T03:15:10.852Z",
+      "retry_at": "2026-09-20T03:45:10.852Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-20T02:37:02.592Z",
-      "retry_at": "2026-09-20T03:07:02.592Z"
+      "failed_at": "2026-09-20T03:15:10.411Z",
+      "retry_at": "2026-09-20T03:45:10.411Z"
     },
     "Ddd_V6piIkS": {
       "collector_version": 12,
@@ -4667,8 +4676,8 @@
     "DdeIThxy21F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-20T02:37:14.632Z",
-      "retry_at": "2026-09-20T03:07:14.632Z"
+      "failed_at": "2026-09-20T03:15:09.166Z",
+      "retry_at": "2026-09-20T03:45:09.166Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
@@ -5381,7 +5390,7 @@
     }
   },
   "discovery_depth": {
-    "reelgoodmovies": 20,
+    "reelgoodmovies": 30,
     "thecinemanerd.ig": 20,
     "theacenyc": 80,
     "the_goodfilms": 80,
