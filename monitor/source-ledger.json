@@ -1301,6 +1301,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdbbQ2EBU6B/",
       "queued_at": "2026-09-20T03:37:12.130Z",
       "asset_sha256": "25fd08d5f85a4291ad5e1af7f35c9f2641d278d7f9b99a34c894f4fd49fefbdc"
+    },
+    "DdaWMumBFUj": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdaWMumBFUj/",
+      "queued_at": "2026-09-20T03:40:33.422Z",
+      "asset_sha256": "937c35a811a28966956d5f20d8e7d3fddd24a8343104622ef75c9cabf82908e2"
     }
   },
   "checks": {
@@ -1323,7 +1329,7 @@
       "checked_at": "2026-09-20T03:31:47.120Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-09-20T02:56:49.267Z"
+      "checked_at": "2026-09-20T03:38:59.322Z"
     },
     "film.fission": {
       "checked_at": "2026-09-20T02:57:58.952Z"
@@ -1351,16 +1357,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-19T18:09:15.081Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 122,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-19T18:10:09.105Z"
-    },
     {
       "started_at": "2026-09-19T18:10:19.918Z",
       "queued": [],
@@ -4260,9 +4256,28 @@
       "inventory": 139,
       "status": "queued",
       "finished_at": "2026-09-20T03:30:37.685Z"
+    },
+    {
+      "started_at": "2026-09-20T03:30:45.948Z",
+      "queued": [
+        "DdbpA_thU08",
+        "DdbbQ2EBU6B"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 3,
+      "inventory": 139,
+      "status": "queued",
+      "finished_at": "2026-09-20T03:37:14.689Z"
     }
   ],
-  "next_account_index": 3,
+  "next_account_index": 4,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -4759,6 +4774,12 @@
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
       "failed_at": "2026-09-20T02:38:17.491Z",
       "retry_at": "2026-09-20T05:38:17.491Z"
+    },
+    "Ddba1LUh3yf": {
+      "collector_version": 12,
+      "error": "Movie frame is too short inside portrait source; hold for face-safe review",
+      "failed_at": "2026-09-20T03:39:31.251Z",
+      "retry_at": "2026-09-20T06:39:31.251Z"
     }
   },
   "candidates": {
@@ -5462,7 +5483,7 @@
     "reelgoodmovies": 30,
     "thecinemanerd.ig": 30,
     "theacenyc": 20,
-    "the_goodfilms": 80,
+    "the_goodfilms": 20,
     "film.fission": 20,
     "ellsoriaa": 20,
     "relatedfilms": 80,
