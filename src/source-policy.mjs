@@ -1,4 +1,6 @@
-export const sourceAccounts = ['reelgoodmovies','thecinemanerd.ig','theacenyc','the_goodfilms','film.fission','ellsoriaa','relatedfilms','uneedmink','cinemoviie','filmreelsvault','fuckinggoodmovies'];
+import {readFileSync} from 'node:fs';
+const sourceConfig=JSON.parse(readFileSync(new URL('../config/sources.json',import.meta.url),'utf8'));
+export const sourceAccounts=sourceConfig.instagram_source_accounts.filter(x=>x.authorized_by_owner===true).map(x=>x.handle);
 const rapWireBranding = /(?:@rapwire247|\brap\s*wire\b)/i;
 export function approvedSource(url) {
  try { const u=new URL(url);return u.protocol==='https:'&&u.hostname==='www.instagram.com'&&/^\/([^/]+)\/(reel|p)\/[A-Za-z0-9_-]+\/?$/.test(u.pathname)&&sourceAccounts.includes(u.pathname.split('/')[1]); } catch {return false;}

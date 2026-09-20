@@ -22,3 +22,13 @@ test('source reposts require provenance and branding, preserve caption length',(
  assert.deepEqual(validate(x,true),[]);assert.ok([...caption(x,'',true).text].length<=500);assert.ok([...caption(x,'',false).text].length<=2200);
  x.qa.branding='rapwire';assert.ok(validate(x,true).length);
 });
+
+test('configured approved sources are available to the collector and validator',async()=>{
+ const fs=await import('node:fs/promises');
+ const {sourceAccounts}=await import('../src/source-policy.mjs');
+ const config=JSON.parse(await fs.readFile(new URL('../config/sources.json',import.meta.url)));
+ for(const account of config.instagram_source_accounts.filter(x=>x.authorized_by_owner)){
+  assert.ok(sourceAccounts.includes(account.handle));
+  assert.ok(approvedSource(`https://www.instagram.com/${account.handle}/reel/Test123/`));
+ }
+});
