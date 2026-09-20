@@ -59,7 +59,9 @@ async function lock(){
 }
 async function profiles(handles=sourceAccounts,errors=[],ledger){
  const found=[];
+ const discoveryDeadline=Date.now()+90_000;
  for(const handle of handles){
+  if(Date.now()>=discoveryDeadline)break;
   const context=await launch(true);
    let page;
    try{
@@ -73,7 +75,7 @@ async function profiles(handles=sourceAccounts,errors=[],ledger){
     // frequently. Five rows can contain only reels already in the ledger, so
     // scan a deeper window before declaring the source rotation exhausted.
     const depth=ledger.discovery_depth?.[handle]||20;
-    for(let row=0;row<depth;row++){
+    for(let row=0;row<depth&&Date.now()<discoveryDeadline;row++){
      const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
      for(const url of urls)seen.add(url);
      await page.evaluate(()=>window.scrollBy(0,Math.max(window.innerHeight*1.5,1200)));
