@@ -1337,6 +1337,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdgZy6KA33m/",
       "queued_at": "2026-09-20T14:30:37.743Z",
       "asset_sha256": "368c7bc87af65584e329433e9307dd995bd9d54070cd51a95500572bb70b4a96"
+    },
+    "DdguxTfh_v2": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdguxTfh_v2/",
+      "queued_at": "2026-09-20T14:34:32.298Z",
+      "asset_sha256": "731190bf1b640f862fe3486959e22629360ff2db9d62546d40a4be7b79926165"
     }
   },
   "checks": {
@@ -1383,20 +1389,10 @@
       "checked_at": "2026-09-20T14:27:04.622Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-09-20T08:22:17.590Z"
+      "checked_at": "2026-09-20T14:31:42.704Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-20T02:40:19.613Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 123,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-20T02:41:05.775Z"
-    },
     {
       "started_at": "2026-09-20T02:41:13.644Z",
       "queued": [],
@@ -4281,9 +4277,22 @@
       "inventory": 144,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-20T14:26:09.106Z"
+    },
+    {
+      "started_at": "2026-09-20T14:26:17.699Z",
+      "queued": [
+        "DdgynGhgS8I",
+        "DdgZy6KA33m"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 146,
+      "status": "queued",
+      "finished_at": "2026-09-20T14:30:40.488Z"
     }
   ],
-  "next_account_index": 11,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5524,6 +5533,16 @@
       "handle": "fuckinggoodmovies",
       "url": "https://www.instagram.com/fuckinggoodmovies/reel/DdgZy6KA33m/",
       "shortcode": "DdgZy6KA33m"
+    },
+    "DdguxTfh_v2": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdguxTfh_v2/",
+      "shortcode": "DdguxTfh_v2"
+    },
+    "Ddguk1lh8vN": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddguk1lh8vN/",
+      "shortcode": "Ddguk1lh8vN"
     }
   },
   "discovery_depth": {
@@ -5538,6 +5557,6 @@
     "cinemoviie": 60,
     "filmreelsvault": 70,
     "fuckinggoodmovies": 70,
-    "movie_vault_4u": 70
+    "movie_vault_4u": 80
   }
 }
