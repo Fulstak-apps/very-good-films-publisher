@@ -1289,6 +1289,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdbpKiNB6CD/",
       "queued_at": "2026-09-20T03:30:34.803Z",
       "asset_sha256": "a6588ccfba532e6c1f20725747e2012ab3199d38f168aac02047eca956a8623f"
+    },
+    "DdbpA_thU08": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdbpA_thU08/",
+      "queued_at": "2026-09-20T03:35:31.612Z",
+      "asset_sha256": "50596eb9fe228433bb1e6a0b0b325869c8b710848872845ad1f40a9deb1c3bc1"
     }
   },
   "checks": {
@@ -1308,7 +1314,7 @@
       "checked_at": "2026-09-20T03:23:20.826Z"
     },
     "theacenyc": {
-      "checked_at": "2026-09-20T02:55:45.294Z"
+      "checked_at": "2026-09-20T03:31:47.120Z"
     },
     "the_goodfilms": {
       "checked_at": "2026-09-20T02:56:49.267Z"
@@ -1339,22 +1345,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-19T18:08:10.103Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "discovered": 12,
-      "attempts": 1,
-      "inventory": 122,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-09-19T18:09:05.402Z"
-    },
     {
       "started_at": "2026-09-19T18:09:15.081Z",
       "queued": [],
@@ -4245,9 +4235,28 @@
       "inventory": 139,
       "status": "queued",
       "finished_at": "2026-09-20T03:22:53.604Z"
+    },
+    {
+      "started_at": "2026-09-20T03:23:01.907Z",
+      "queued": [
+        "DdcF5mbTmr5",
+        "DdbpKiNB6CD"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 3,
+      "inventory": 139,
+      "status": "queued",
+      "finished_at": "2026-09-20T03:30:37.685Z"
     }
   ],
-  "next_account_index": 2,
+  "next_account_index": 3,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -4377,9 +4386,9 @@
     },
     "DcMBrFQzHwg": {
       "collector_version": 12,
-      "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-20T02:38:03.890Z",
-      "retry_at": "2026-09-20T03:08:03.890Z"
+      "error": "Movie frame is too short inside portrait source; hold for face-safe review",
+      "failed_at": "2026-09-20T03:31:49.356Z",
+      "retry_at": "2026-09-20T06:31:49.356Z"
     },
     "Cq8NW4ToJoc": {
       "collector_version": 7,
@@ -5446,7 +5455,7 @@
   "discovery_depth": {
     "reelgoodmovies": 30,
     "thecinemanerd.ig": 30,
-    "theacenyc": 80,
+    "theacenyc": 20,
     "the_goodfilms": 80,
     "film.fission": 20,
     "ellsoriaa": 20,
