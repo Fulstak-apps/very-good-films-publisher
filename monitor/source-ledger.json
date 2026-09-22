@@ -1487,6 +1487,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DdlLGdzyVRm/",
       "queued_at": "2026-09-22T15:07:39.917Z",
       "asset_sha256": "6d466af2c3d0cb670d1cce95206a59f8af5c203d00821faa392c4586df679794"
+    },
+    "DdlyxtmBYP0": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdlyxtmBYP0/",
+      "queued_at": "2026-09-22T15:17:31.963Z",
+      "asset_sha256": "56363282d379f6023f9bf637be884ec7c483555b79ec5ada954447c502135470"
     }
   },
   "checks": {
@@ -1515,98 +1521,28 @@
       "checked_at": "2026-09-22T15:06:55.386Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-22T09:44:03.119Z"
+      "checked_at": "2026-09-22T15:08:11.338Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-22T10:14:15.359Z"
+      "checked_at": "2026-09-22T15:09:20.746Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-22T06:33:27.034Z"
+      "checked_at": "2026-09-22T15:10:29.302Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-22T11:17:56.183Z"
+      "checked_at": "2026-09-22T15:10:59.049Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-22T12:19:45.962Z"
+      "checked_at": "2026-09-22T15:11:32.334Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-22T12:40:48.387Z"
+      "checked_at": "2026-09-22T15:12:07.099Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-09-22T06:37:11.807Z"
+      "checked_at": "2026-09-22T15:13:17.805Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-22T02:51:14.056Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:52:14.842Z"
-    },
-    {
-      "started_at": "2026-09-22T02:52:30.732Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:53:34.001Z"
-    },
-    {
-      "started_at": "2026-09-22T02:53:57.831Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:54:16.369Z"
-    },
-    {
-      "started_at": "2026-09-22T02:54:35.070Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:54:53.710Z"
-    },
-    {
-      "started_at": "2026-09-22T02:55:09.239Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:55:27.920Z"
-    },
-    {
-      "started_at": "2026-09-22T02:55:44.760Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:56:18.174Z"
-    },
-    {
-      "started_at": "2026-09-22T02:56:33.609Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 176,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-22T02:57:06.893Z"
-    },
     {
       "started_at": "2026-09-22T02:57:23.354Z",
       "queued": [],
@@ -4811,9 +4747,93 @@
       "inventory": 178,
       "status": "queued",
       "finished_at": "2026-09-22T15:05:39.429Z"
+    },
+    {
+      "started_at": "2026-09-22T15:05:52.612Z",
+      "queued": [
+        "DdlLGdzyVRm"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Ddlz16LSRDj/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 180,
+      "status": "queued",
+      "finished_at": "2026-09-22T15:07:42.810Z"
+    },
+    {
+      "started_at": "2026-09-22T15:07:51.005Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 180,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-22T15:08:11.347Z"
+    },
+    {
+      "started_at": "2026-09-22T15:08:26.539Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 180,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-22T15:09:20.751Z"
+    },
+    {
+      "started_at": "2026-09-22T15:09:33.395Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 180,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-22T15:10:29.306Z"
+    },
+    {
+      "started_at": "2026-09-22T15:10:40.305Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 180,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-22T15:10:59.057Z"
+    },
+    {
+      "started_at": "2026-09-22T15:11:10.591Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 180,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-22T15:11:32.364Z"
+    },
+    {
+      "started_at": "2026-09-22T15:11:45.287Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 181,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-22T15:12:42.366Z"
     }
   ],
-  "next_account_index": 5,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5406,6 +5426,12 @@
       "error": "Verified movie title required before queueing",
       "failed_at": "2026-09-22T15:07:09.496Z",
       "retry_at": "2026-09-22T15:37:09.496Z"
+    },
+    "Ddl5SHjACt3": {
+      "collector_version": 12,
+      "error": "Verified movie title required before queueing",
+      "failed_at": "2026-09-22T15:12:42.364Z",
+      "retry_at": "2026-09-22T15:42:42.364Z"
     }
   },
   "candidates": {
@@ -6308,6 +6334,26 @@
       "handle": "film.fission",
       "url": "https://www.instagram.com/film.fission/reel/DdlLGdzyVRm/",
       "shortcode": "DdlLGdzyVRm"
+    },
+    "Ddl5SHjACt3": {
+      "handle": "fuckinggoodmovies",
+      "url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+      "shortcode": "Ddl5SHjACt3"
+    },
+    "DdlyxtmBYP0": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdlyxtmBYP0/",
+      "shortcode": "DdlyxtmBYP0"
+    },
+    "Ddlr40fBkrk": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddlr40fBkrk/",
+      "shortcode": "Ddlr40fBkrk"
+    },
+    "Ddlrn-SBftA": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddlrn-SBftA/",
+      "shortcode": "Ddlrn-SBftA"
     }
   },
   "discovery_depth": {
@@ -6316,12 +6362,12 @@
     "theacenyc": 30,
     "the_goodfilms": 20,
     "film.fission": 20,
-    "ellsoriaa": 20,
-    "relatedfilms": 70,
-    "uneedmink": 70,
-    "cinemoviie": 20,
-    "filmreelsvault": 20,
-    "fuckinggoodmovies": 20,
-    "movie_vault_4u": 30
+    "ellsoriaa": 30,
+    "relatedfilms": 80,
+    "uneedmink": 80,
+    "cinemoviie": 30,
+    "filmreelsvault": 30,
+    "fuckinggoodmovies": 30,
+    "movie_vault_4u": 40
   }
 }
