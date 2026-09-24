@@ -1649,6 +1649,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddq9M6ygrbX/",
       "queued_at": "2026-09-24T15:13:07.205Z",
       "asset_sha256": "7407af7e91b407f4586a722a7c8e71263152456594f8383b6049e719b3fd7c54"
+    },
+    "Ddq6vzayDP3": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq6vzayDP3/",
+      "queued_at": "2026-09-24T15:18:11.643Z",
+      "asset_sha256": "94499ae86039879ffb6cfe8270111f4ac5a3a3cced4ce5ed77cbe881e06e5a66"
     }
   },
   "checks": {
@@ -1695,20 +1701,10 @@
       "checked_at": "2026-09-24T15:11:26.737Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-09-24T11:01:36.702Z"
+      "checked_at": "2026-09-24T15:14:11.206Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-24T04:19:11.067Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T04:19:58.940Z"
-    },
     {
       "started_at": "2026-09-24T04:20:15.742Z",
       "queued": [],
@@ -5359,9 +5355,21 @@
       "inventory": 216,
       "status": "no_eligible_clip",
       "finished_at": "2026-09-24T15:10:44.885Z"
+    },
+    {
+      "started_at": "2026-09-24T15:11:01.516Z",
+      "queued": [
+        "Ddq9M6ygrbX"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 217,
+      "status": "queued",
+      "finished_at": "2026-09-24T15:13:10.011Z"
     }
   ],
-  "next_account_index": 11,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -6014,6 +6022,12 @@
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json",
       "failed_at": "2026-09-24T15:10:44.881Z",
       "retry_at": "2026-09-24T18:10:44.881Z"
+    },
+    "Ddq66owhDGl": {
+      "collector_version": 12,
+      "error": "Verified movie title required before queueing",
+      "failed_at": "2026-09-24T15:16:48.427Z",
+      "retry_at": "2026-09-24T15:46:48.427Z"
     }
   },
   "candidates": {
@@ -7101,6 +7115,16 @@
       "handle": "fuckinggoodmovies",
       "url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddq9M6ygrbX/",
       "shortcode": "Ddq9M6ygrbX"
+    },
+    "Ddq66owhDGl": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
+      "shortcode": "Ddq66owhDGl"
+    },
+    "Ddq6vzayDP3": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Ddq6vzayDP3/",
+      "shortcode": "Ddq6vzayDP3"
     }
   },
   "discovery_depth": {
@@ -7115,6 +7139,6 @@
     "cinemoviie": 30,
     "filmreelsvault": 50,
     "fuckinggoodmovies": 40,
-    "movie_vault_4u": 50
+    "movie_vault_4u": 60
   }
 }
