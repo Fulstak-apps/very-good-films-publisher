@@ -1703,6 +1703,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
       "queued_at": "2026-09-24T18:10:45.844Z",
       "asset_sha256": "819ed3aaa997702af2c28c4ad0abad18d76ebfd7ba121aaf1d506039a4c41ce2"
+    },
+    "Ddba1LUh3yf": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddba1LUh3yf/",
+      "queued_at": "2026-09-24T18:12:18.290Z",
+      "asset_sha256": "feeff980c9e803db18344e59c2df862c1ec07ad5ac342e1fd42c42e52495de4d"
     }
   },
   "checks": {
@@ -1740,7 +1746,7 @@
       "checked_at": "2026-09-24T18:08:24.095Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-24T17:58:55.346Z"
+      "checked_at": "2026-09-24T18:11:29.528Z"
     },
     "filmreelsvault": {
       "checked_at": "2026-09-24T17:59:47.487Z"
@@ -1753,16 +1759,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-24T07:16:20.560Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T07:17:09.709Z"
-    },
     {
       "started_at": "2026-09-24T07:17:22.331Z",
       "queued": [],
@@ -5307,9 +5303,31 @@
       "inventory": 223,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-24T18:07:52.164Z"
+    },
+    {
+      "started_at": "2026-09-24T18:08:01.780Z",
+      "queued": [
+        "DdeSvRUuc0_",
+        "DdZJ4TruOnt",
+        "DdOuzu6gQ42",
+        "Dck4uAuTLyv",
+        "DcMBrFQzHwg"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git push origin HEAD:main\nTo https://github.com/Fulstak-apps/very-good-films-publisher.git\n ! [remote rejected]   HEAD -> main (cannot lock ref 'refs/heads/main': is at c65408820b40c03b14015e17c90e2fe2f10e96c6 but expected 0104d7387dce26a490a5aff2efcf5e2d8d140666)\nerror: failed to push some refs to 'https://github.com/Fulstak-apps/very-good-films-publisher.git'\n"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 5,
+      "inventory": 223,
+      "status": "queued",
+      "finished_at": "2026-09-24T18:10:48.618Z"
     }
   ],
-  "next_account_index": 8,
+  "next_account_index": 9,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5452,8 +5470,8 @@
     "DZbqwhnT0Uq": {
       "collector_version": 12,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-09-24T15:08:23.496Z",
-      "retry_at": "2026-09-24T18:08:23.496Z"
+      "failed_at": "2026-09-24T18:11:43.455Z",
+      "retry_at": "2026-09-24T21:11:43.455Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -5744,8 +5762,8 @@
     "DdTx5Hagpfo": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T17:40:43.356Z",
-      "retry_at": "2026-09-24T18:10:43.356Z"
+      "failed_at": "2026-09-24T18:11:32.794Z",
+      "retry_at": "2026-09-24T18:41:32.794Z"
     },
     "DdT80p4ySJl": {
       "collector_version": 12,
@@ -5768,20 +5786,20 @@
     "DcysNcgyJ-F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T17:40:45.947Z",
-      "retry_at": "2026-09-24T18:10:45.947Z"
+      "failed_at": "2026-09-24T18:11:35.239Z",
+      "retry_at": "2026-09-24T18:41:35.239Z"
     },
     "DdbZwC6A5DM": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T17:40:42.912Z",
-      "retry_at": "2026-09-24T18:10:42.912Z"
+      "failed_at": "2026-09-24T18:11:32.361Z",
+      "retry_at": "2026-09-24T18:41:32.361Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T17:40:41.964Z",
-      "retry_at": "2026-09-24T18:10:41.964Z"
+      "failed_at": "2026-09-24T18:11:31.488Z",
+      "retry_at": "2026-09-24T18:41:31.488Z"
     },
     "Ddd_V6piIkS": {
       "collector_version": 12,
@@ -5792,8 +5810,8 @@
     "DdeIThxy21F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T17:40:42.442Z",
-      "retry_at": "2026-09-24T18:10:42.442Z"
+      "failed_at": "2026-09-24T18:11:31.937Z",
+      "retry_at": "2026-09-24T18:41:31.937Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
@@ -7102,7 +7120,7 @@
     "ellsoriaa": 70,
     "relatedfilms": 40,
     "uneedmink": 30,
-    "cinemoviie": 40,
+    "cinemoviie": 50,
     "filmreelsvault": 60,
     "fuckinggoodmovies": 50,
     "movie_vault_4u": 70
