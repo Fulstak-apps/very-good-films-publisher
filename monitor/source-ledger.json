@@ -1757,6 +1757,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
       "queued_at": "2026-09-24T19:42:09.133Z",
       "asset_sha256": "470b2e14bf29924f9732c826b088b77a0d33daa11ec882cf77bcf1dc67a50858"
+    },
+    "DdrpVkVTSYd": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrpVkVTSYd/",
+      "queued_at": "2026-09-24T19:45:03.130Z",
+      "asset_sha256": "92215eec85f85f791e650f1d757292eba6b55ca3456228025009d9eeca5e785f"
     }
   },
   "checks": {
@@ -1797,36 +1803,16 @@
       "checked_at": "2026-09-24T19:41:43.625Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-24T19:30:18.832Z"
+      "checked_at": "2026-09-24T19:43:20.445Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-24T19:31:08.275Z"
+      "checked_at": "2026-09-24T19:44:17.773Z"
     },
     "movie_vault_4u": {
       "checked_at": "2026-09-24T19:32:14.251Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-24T15:51:42.006Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 221,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T15:52:30.888Z"
-    },
-    {
-      "started_at": "2026-09-24T15:52:39.481Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 221,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T15:53:39.334Z"
-    },
     {
       "started_at": "2026-09-24T15:53:47.978Z",
       "queued": [],
@@ -5131,9 +5117,68 @@
       "inventory": 224,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-24T19:40:55.289Z"
+    },
+    {
+      "started_at": "2026-09-24T19:41:04.472Z",
+      "queued": [
+        "Ddd_V6piIkS"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 0,
+      "attempts": 6,
+      "inventory": 224,
+      "status": "queued",
+      "finished_at": "2026-09-24T19:42:16.400Z"
+    },
+    {
+      "started_at": "2026-09-24T19:42:26.210Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 224,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-24T19:43:21.764Z"
     }
   ],
-  "next_account_index": 9,
+  "next_account_index": 11,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5550,14 +5595,14 @@
     "Da0lk6Mx0J9": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:12:53.194Z",
-      "retry_at": "2026-09-24T19:42:53.194Z"
+      "failed_at": "2026-09-24T19:43:21.109Z",
+      "retry_at": "2026-09-24T20:13:21.109Z"
     },
     "DdS2t1JyFk-": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:12:53.779Z",
-      "retry_at": "2026-09-24T19:42:53.779Z"
+      "failed_at": "2026-09-24T19:43:21.762Z",
+      "retry_at": "2026-09-24T20:13:21.762Z"
     },
     "DdS0bIiSmA6": {
       "collector_version": 12,
@@ -5568,8 +5613,8 @@
     "DdTx5Hagpfo": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:11:57.334Z",
-      "retry_at": "2026-09-24T19:41:57.334Z"
+      "failed_at": "2026-09-24T19:42:14.063Z",
+      "retry_at": "2026-09-24T20:12:14.063Z"
     },
     "DdT80p4ySJl": {
       "collector_version": 12,
@@ -5592,20 +5637,20 @@
     "DcysNcgyJ-F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:11:56.972Z",
-      "retry_at": "2026-09-24T19:41:56.972Z"
+      "failed_at": "2026-09-24T19:42:16.392Z",
+      "retry_at": "2026-09-24T20:12:16.392Z"
     },
     "DdbZwC6A5DM": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:11:54.609Z",
-      "retry_at": "2026-09-24T19:41:54.609Z"
+      "failed_at": "2026-09-24T19:42:13.684Z",
+      "retry_at": "2026-09-24T20:12:13.684Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:11:54.112Z",
-      "retry_at": "2026-09-24T19:41:54.112Z"
+      "failed_at": "2026-09-24T19:42:12.729Z",
+      "retry_at": "2026-09-24T20:12:12.729Z"
     },
     "Ddd_V6piIkS": {
       "collector_version": 12,
@@ -5616,8 +5661,8 @@
     "DdeIThxy21F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T19:11:52.456Z",
-      "retry_at": "2026-09-24T19:41:52.456Z"
+      "failed_at": "2026-09-24T19:42:13.244Z",
+      "retry_at": "2026-09-24T20:12:13.244Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
@@ -6920,6 +6965,11 @@
       "handle": "the_goodfilms",
       "url": "https://www.instagram.com/the_goodfilms/reel/Ddro2jusi2N/",
       "shortcode": "Ddro2jusi2N"
+    },
+    "DdrpVkVTSYd": {
+      "handle": "fuckinggoodmovies",
+      "url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrpVkVTSYd/",
+      "shortcode": "DdrpVkVTSYd"
     }
   },
   "discovery_depth": {
@@ -6932,8 +6982,8 @@
     "relatedfilms": 50,
     "uneedmink": 40,
     "cinemoviie": 60,
-    "filmreelsvault": 70,
-    "fuckinggoodmovies": 60,
+    "filmreelsvault": 80,
+    "fuckinggoodmovies": 70,
     "movie_vault_4u": 80
   }
 }
