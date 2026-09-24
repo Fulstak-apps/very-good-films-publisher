@@ -1751,6 +1751,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/Ddro2jusi2N/",
       "queued_at": "2026-09-24T19:37:41.529Z",
       "asset_sha256": "be100e97d8a27084f0a38deb733ef271f07885286a257144607c84cbc619a1e6"
+    },
+    "Ddd_V6piIkS": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
+      "queued_at": "2026-09-24T19:42:09.133Z",
+      "asset_sha256": "470b2e14bf29924f9732c826b088b77a0d33daa11ec882cf77bcf1dc67a50858"
     }
   },
   "checks": {
@@ -1776,19 +1782,19 @@
       "checked_at": "2026-09-24T19:36:15.042Z"
     },
     "film.fission": {
-      "checked_at": "2026-09-24T19:26:13.124Z"
+      "checked_at": "2026-09-24T19:38:39.359Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-24T19:27:10.488Z"
+      "checked_at": "2026-09-24T19:39:41.776Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-24T19:27:52.184Z"
+      "checked_at": "2026-09-24T19:40:22.212Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-24T19:28:33.160Z"
+      "checked_at": "2026-09-24T19:40:55.288Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-24T19:29:21.845Z"
+      "checked_at": "2026-09-24T19:41:43.625Z"
     },
     "filmreelsvault": {
       "checked_at": "2026-09-24T19:30:18.832Z"
@@ -1801,62 +1807,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-24T15:46:51.562Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
-          "stage": "capture_or_queue",
-          "error": "Verified movie title required before queueing"
-        }
-      ],
-      "discovered": 12,
-      "attempts": 1,
-      "inventory": 221,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-09-24T15:47:46.925Z"
-    },
-    {
-      "started_at": "2026-09-24T15:47:57.020Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 221,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T15:48:28.497Z"
-    },
-    {
-      "started_at": "2026-09-24T15:48:38.417Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 221,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T15:49:03.706Z"
-    },
-    {
-      "started_at": "2026-09-24T15:49:49.009Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 221,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T15:50:27.745Z"
-    },
-    {
-      "started_at": "2026-09-24T15:50:39.348Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 221,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T15:51:33.259Z"
-    },
     {
       "started_at": "2026-09-24T15:51:42.006Z",
       "queued": [],
@@ -5129,9 +5079,61 @@
       "inventory": 223,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-24T19:35:27.424Z"
+    },
+    {
+      "started_at": "2026-09-24T19:35:36.069Z",
+      "queued": [
+        "Ddro2jusi2N"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 224,
+      "status": "queued",
+      "finished_at": "2026-09-24T19:37:44.824Z"
+    },
+    {
+      "started_at": "2026-09-24T19:37:53.275Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 224,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T19:38:39.362Z"
+    },
+    {
+      "started_at": "2026-09-24T19:38:48.687Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 224,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T19:39:41.778Z"
+    },
+    {
+      "started_at": "2026-09-24T19:39:50.032Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 224,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T19:40:22.215Z"
+    },
+    {
+      "started_at": "2026-09-24T19:40:30.733Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 224,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T19:40:55.289Z"
     }
   ],
-  "next_account_index": 4,
+  "next_account_index": 9,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -6925,11 +6927,11 @@
     "thecinemanerd.ig": 80,
     "theacenyc": 80,
     "the_goodfilms": 60,
-    "film.fission": 60,
-    "ellsoriaa": 70,
-    "relatedfilms": 40,
-    "uneedmink": 30,
-    "cinemoviie": 50,
+    "film.fission": 70,
+    "ellsoriaa": 80,
+    "relatedfilms": 50,
+    "uneedmink": 40,
+    "cinemoviie": 60,
     "filmreelsvault": 70,
     "fuckinggoodmovies": 60,
     "movie_vault_4u": 80
