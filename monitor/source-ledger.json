@@ -1637,6 +1637,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/Ddqe8CLy3BS/",
       "queued_at": "2026-09-24T10:27:30.922Z",
       "asset_sha256": "0caa576283b19e0135cbe748112d8b81b0edd4dfe65e97ad3c0f43a63a852808"
+    },
+    "DdqZLhPhk9x": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdqZLhPhk9x/",
+      "queued_at": "2026-09-24T10:40:16.757Z",
+      "asset_sha256": "0cfd8c9e0cde80cbf2a36a048b6e7e176eb0b9ec8ad55adb27cf6159bdf09322"
     }
   },
   "checks": {
@@ -1665,98 +1671,28 @@
       "checked_at": "2026-09-24T10:25:10.627Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-24T07:28:19.525Z"
+      "checked_at": "2026-09-24T10:29:42.671Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-09-24T07:29:03.588Z"
+      "checked_at": "2026-09-24T10:30:39.328Z"
     },
     "uneedmink": {
-      "checked_at": "2026-09-24T07:29:48.927Z"
+      "checked_at": "2026-09-24T10:31:33.509Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-09-24T07:30:48.734Z"
+      "checked_at": "2026-09-24T10:32:44.455Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-09-24T07:31:54.987Z"
+      "checked_at": "2026-09-24T10:34:01.372Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-09-24T07:32:53.368Z"
+      "checked_at": "2026-09-24T10:35:06.997Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-09-24T07:34:05.584Z"
+      "checked_at": "2026-09-24T10:35:35.908Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-24T03:42:59.089Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:43:38.708Z"
-    },
-    {
-      "started_at": "2026-09-24T03:43:54.021Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:44:32.947Z"
-    },
-    {
-      "started_at": "2026-09-24T03:44:49.507Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:45:42.524Z"
-    },
-    {
-      "started_at": "2026-09-24T03:45:57.636Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:46:58.236Z"
-    },
-    {
-      "started_at": "2026-09-24T03:47:13.035Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:48:07.383Z"
-    },
-    {
-      "started_at": "2026-09-24T03:48:21.342Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:48:40.333Z"
-    },
-    {
-      "started_at": "2026-09-24T03:48:54.949Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 214,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-24T03:49:19.819Z"
-    },
     {
       "started_at": "2026-09-24T03:49:34.292Z",
       "queued": [],
@@ -4961,9 +4897,262 @@
       "inventory": 214,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-24T09:35:19.565Z"
+    },
+    {
+      "started_at": "2026-09-24T10:24:17.262Z",
+      "queued": [
+        "Ddqe8CLy3BS"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Ddd_V6piIkS/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdcFGCNgjkT/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdeSvRUuc0_/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcysNcgyJ-F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdZJ4TruOnt/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/Dck4uAuTLyv/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdOuzu6gQ42/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DcMBrFQzHwg/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddba1LUh3yf/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdT80p4ySJl/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdZsSWuTaEI/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddguk1lh8vN/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdhOXWeTauR/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dde9lL4C3Pp/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddi9WT-grlj/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddje2sfBBkc/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Ddlz16LSRDj/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdjiDskhP-e/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdnyKXIy4a3/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DdoYZiwtS2x/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddn-0ZZgh39/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYK2ahxnK/",
+          "stage": "capture_or_queue",
+          "error": "Movie frame is too short inside portrait source; hold for face-safe review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdolZLRBT5d/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        }
+      ],
+      "discovered": 12,
+      "attempts": 37,
+      "inventory": 215,
+      "status": "queued",
+      "finished_at": "2026-09-24T10:28:23.918Z"
+    },
+    {
+      "started_at": "2026-09-24T10:28:37.381Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 215,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T10:29:42.680Z"
+    },
+    {
+      "started_at": "2026-09-24T10:29:58.783Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 215,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T10:30:39.335Z"
+    },
+    {
+      "started_at": "2026-09-24T10:30:53.957Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 215,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T10:31:33.512Z"
+    },
+    {
+      "started_at": "2026-09-24T10:31:48.964Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 215,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T10:32:44.534Z"
+    },
+    {
+      "started_at": "2026-09-24T10:32:58.206Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 215,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T10:34:01.375Z"
+    },
+    {
+      "started_at": "2026-09-24T10:34:11.337Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 215,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-09-24T10:35:07.003Z"
     }
   ],
-  "next_account_index": 5,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -5578,14 +5767,14 @@
     "DdoYWyWzhP3": {
       "collector_version": 12,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-09-24T06:04:08.101Z",
-      "retry_at": "2026-09-24T09:04:08.103Z"
+      "failed_at": "2026-09-24T10:27:54.367Z",
+      "retry_at": "2026-09-24T13:27:54.369Z"
     },
     "DdoYK2ahxnK": {
       "collector_version": 12,
       "error": "Movie frame is too short inside portrait source; hold for face-safe review",
-      "failed_at": "2026-09-24T06:04:10.767Z",
-      "retry_at": "2026-09-24T09:04:10.767Z"
+      "failed_at": "2026-09-24T10:27:56.864Z",
+      "retry_at": "2026-09-24T13:27:56.864Z"
     },
     "DdoYZiwtS2x": {
       "collector_version": 12,
@@ -5596,8 +5785,8 @@
     "DdolZLRBT5d": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-24T07:10:08.299Z",
-      "retry_at": "2026-09-24T07:40:08.299Z"
+      "failed_at": "2026-09-24T10:28:00.359Z",
+      "retry_at": "2026-09-24T10:58:00.359Z"
     },
     "DdolT-eNK_o": {
       "collector_version": 12,
@@ -5614,8 +5803,8 @@
     "DdpvSGKh-c-": {
       "collector_version": 12,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json",
-      "failed_at": "2026-09-24T05:00:23.717Z",
-      "retry_at": "2026-09-24T08:00:23.717Z"
+      "failed_at": "2026-09-24T10:28:23.916Z",
+      "retry_at": "2026-09-24T13:28:23.916Z"
     }
   },
   "candidates": {
@@ -6693,6 +6882,11 @@
       "handle": "film.fission",
       "url": "https://www.instagram.com/film.fission/reel/Ddqe8CLy3BS/",
       "shortcode": "Ddqe8CLy3BS"
+    },
+    "DdqZLhPhk9x": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdqZLhPhk9x/",
+      "shortcode": "DdqZLhPhk9x"
     }
   },
   "discovery_depth": {
@@ -6701,12 +6895,12 @@
     "theacenyc": 20,
     "the_goodfilms": 80,
     "film.fission": 80,
-    "ellsoriaa": 80,
-    "relatedfilms": 50,
-    "uneedmink": 50,
-    "cinemoviie": 70,
-    "filmreelsvault": 80,
-    "fuckinggoodmovies": 70,
-    "movie_vault_4u": 20
+    "ellsoriaa": 20,
+    "relatedfilms": 60,
+    "uneedmink": 60,
+    "cinemoviie": 80,
+    "filmreelsvault": 20,
+    "fuckinggoodmovies": 80,
+    "movie_vault_4u": 30
   }
 }
