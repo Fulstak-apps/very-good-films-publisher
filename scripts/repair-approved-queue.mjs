@@ -59,7 +59,7 @@ await withLock(async()=>{
  for(const item of candidates){
   try{
    const input=await originalCapture(item),output=`work/recovery-${item.key}-clean.mp4`;
-   const scene={start:0,end:item.scene.end-item.scene.start,crop:'source_overlay'};
+   const scene={start:0,end:item.scene.end-item.scene.start};
    const qa=formatVideo(input,output,scene),asset_sha256=await sha256(output);
    const video_url=await upload(output,asset_sha256,{repository});
    item.video_url=video_url;item.asset_sha256=asset_sha256;

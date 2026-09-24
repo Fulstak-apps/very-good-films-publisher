@@ -21,7 +21,7 @@ test('abandoned Threads backlog is skipped permanently',()=>{
  assert.equal(threadsBacklogEligible(item,{},Date.now()),false);
 });
 test('invalid active queue item is quarantined and the next valid video is selected',()=>{
- const valid={kind:'source_repost',key:'valid',status:'ready',film:{id:'instagram:x',title:'Film'},scene:{id:'scene',start:0,end:30},source_post_url:'https://www.instagram.com/film.fission/reel/x/',source_caption:'Title: Film',source_details:{title:'Film'},caption_style:'source_repost',video_url:'https://example.org/v.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1',clean_crop:{layout:'film-only-crop-v2'}}};
+ const valid={kind:'source_repost',key:'valid',status:'ready',film:{id:'instagram:x',title:'Film'},scene:{id:'scene',start:0,end:30},source_post_url:'https://www.instagram.com/film.fission/reel/x/',source_caption:'Title: Film',source_details:{title:'Film'},caption_style:'source_repost',video_url:'https://example.org/v.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1',frame_preserved:true}};
  const invalid={...valid,key:'bad',status:'publishing',source_details:{}};
  const result=selectPublishCandidate([invalid,valid],{daily_cap:20,minimum_gap_minutes:30,movie_cooldown_days:0});
  assert.equal(result.item,valid);assert.equal(invalid.status,'needs_review');assert.equal(result.quarantined.length,1);

@@ -1,4 +1,4 @@
-export function isClassic(x){return x.program==='public_domain_classics'&&x.rights?.status==='public_domain'&&x.qa?.black_and_white===true&&x.qa?.clean_crop?.layout==='film-only-crop-v2';}
+export function isClassic(x){return x.program==='public_domain_classics'&&x.rights?.status==='public_domain'&&x.qa?.black_and_white===true&&x.qa?.frame_preserved===true;}
 export function classicDailyProgress(items,brand,now=Date.now()){
  const zone=brand.posting_timezone||'America/Los_Angeles';
  const day=t=>new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));

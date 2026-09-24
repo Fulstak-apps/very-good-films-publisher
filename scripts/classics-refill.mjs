@@ -19,7 +19,7 @@ for(const x of candidates){
  try{
   const input=`work/classic-source-${x.key}.mp4`,output=`work/classic-clean-${x.key}.mp4`;
   try{await fs.access(input);}catch{const r=await fetch(x.video_url,{signal:AbortSignal.timeout(120000)});if(!r.ok)throw Error(`Asset HTTP ${r.status}`);await fs.writeFile(input,Buffer.from(await r.arrayBuffer()));}
-  const qa=formatVideo(input,output,{start:0,end:x.scene.end-x.scene.start,crop:'source_overlay',preserve_picture:true});
+  const qa=formatVideo(input,output,{start:0,end:x.scene.end-x.scene.start});
   const hash=await sha256(output),url=await upload(output,hash,{repository:'Fulstak-apps/very-good-films-publisher'});
   const item={key:x.key,program:'public_domain_classics',film:x.film,scene:x.scene,source_url:x.source_url,rights:x.rights,caption_style:'film_info',video_url:url,asset_sha256:hash,qa:{...x.qa,...qa,black_and_white:true,branding:'very-good-films-only-v1',scene_verified:true,reviewed_at:new Date().toISOString(),media_verified:true},status:'ready'};
   await fs.writeFile(`${directory}/${x.key}.json`,JSON.stringify(item,null,2)+'\n');

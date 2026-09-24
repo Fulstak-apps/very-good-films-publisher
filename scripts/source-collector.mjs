@@ -150,7 +150,7 @@ async function queue(candidate,ledger){
  const saved=await json(checkpoint,null);
  let renderQA;
  if(saved?.input_sha256===await sha256(input)&&saved?.output_sha256===await sha256(output).catch(()=>null)){renderQA=saved.qa;}
- else {renderQA=formatVideo(input,output,{start:0,end:duration,crop:'source_overlay'});await save(checkpoint,{input_sha256:await sha256(input),output_sha256:await sha256(output),qa:renderQA});}
+ else {renderQA=formatVideo(input,output,{start:0,end:duration});await save(checkpoint,{input_sha256:await sha256(input),output_sha256:await sha256(output),qa:renderQA});}
  const asset_sha256=await sha256(output);
  console.log(JSON.stringify({status:'uploading',shortcode:candidate.shortcode,bytes:(await fs.stat(output)).size}));
  const video_url=await upload(output,asset_sha256,{repository});

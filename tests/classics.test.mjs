@@ -4,7 +4,7 @@ import {eligible} from '../src/editorial.mjs';
 import {classicDailyProgress} from '../src/classics.mjs';
 import {enforceSourcePolicy} from '../src/source-policy.mjs';
 const brand={daily_cap:48,minimum_gap_minutes:30,movie_cooldown_days:0,public_domain_daily_minimum:3,public_domain_hours:[8,14,20],posting_timezone:'America/Los_Angeles'};
-const classic=()=>({status:'ready',film:{id:'classic'},program:'public_domain_classics',rights:{status:'public_domain'},qa:{black_and_white:true,clean_crop:{layout:'film-only-crop-v2'},branding:'very-good-films-only-v1'}});
+const classic=()=>({status:'ready',film:{id:'classic'},program:'public_domain_classics',rights:{status:'public_domain'},qa:{black_and_white:true,frame_preserved:true,branding:'very-good-films-only-v1'}});
 test('classics receive daily slots and catch up, without replacing the normal mix',()=>{
  const now=Date.parse('2026-09-09T22:00:00Z'),a=classic(),modern={status:'ready',film:{id:'modern'}};
  assert.equal(classicDailyProgress([],brand,now).due,2);
