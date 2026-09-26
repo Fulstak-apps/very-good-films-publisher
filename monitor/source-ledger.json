@@ -1913,6 +1913,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwMvyfg6bb/",
       "queued_at": "2026-09-26T14:48:08.000Z",
       "asset_sha256": "d6cebe659a82b22d6bbad2179d49e85a00ebe5f0da77f4dfe6813d7e6ae7d7da"
+    },
+    "DdwFAV6hsFh": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdwFAV6hsFh/",
+      "queued_at": "2026-09-26T14:52:26.413Z",
+      "asset_sha256": "e055d2c3b6e1c7c7df4517c79cc7a358866b487c684ceb37725e2a27395f19cf"
     }
   },
   "checks": {
@@ -1959,20 +1965,10 @@
       "checked_at": "2026-09-26T14:45:26.670Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-09-26T05:48:49.654Z"
+      "checked_at": "2026-09-26T14:49:18.089Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-26T02:10:06.307Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 254,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-26T02:10:34.281Z"
-    },
     {
       "started_at": "2026-09-26T02:10:58.623Z",
       "queued": [],
@@ -5709,9 +5705,21 @@
       "inventory": 259,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-26T14:44:31.464Z"
+    },
+    {
+      "started_at": "2026-09-26T14:44:39.933Z",
+      "queued": [
+        "DdwMvyfg6bb"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 260,
+      "status": "queued",
+      "finished_at": "2026-09-26T14:48:10.589Z"
     }
   ],
-  "next_account_index": 11,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -7696,6 +7704,16 @@
       "handle": "fuckinggoodmovies",
       "url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwMvyfg6bb/",
       "shortcode": "DdwMvyfg6bb"
+    },
+    "DdwFAV6hsFh": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdwFAV6hsFh/",
+      "shortcode": "DdwFAV6hsFh"
+    },
+    "DdwEpjZhogh": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DdwEpjZhogh/",
+      "shortcode": "DdwEpjZhogh"
     }
   },
   "discovery_depth": {
@@ -7710,6 +7728,6 @@
     "cinemoviie": 70,
     "filmreelsvault": 80,
     "fuckinggoodmovies": 70,
-    "movie_vault_4u": 80
+    "movie_vault_4u": 20
   }
 }
