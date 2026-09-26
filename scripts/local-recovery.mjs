@@ -37,12 +37,15 @@ const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(
 const sourceBuffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)&&x.program!=='public_domain_classics').length;
 const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_minimum||0));
 if(brand.enabled&&sourceBuffered<sourceTarget){
- try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:570000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});const ledger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));collectorStatus=ledger.runs?.at(-1)?.status||'completed_without_outcome';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
+ // This supervisor runs every five minutes. It must not spend most of a
+ // cycle waiting on sequential recovery jobs, or the next source attempt
+ // never starts. The collector saves each completed item before moving on,
+ // so a bounded run can safely resume on the next cycle.
+ try{execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:420000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});const ledger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));collectorStatus=ledger.runs?.at(-1)?.status||'completed_without_outcome';}catch(error){collectorStatus='failed';collectorError=String(error.message||error).slice(0,500);}
  // Rebuild verified approved-source captures before the queue reaches zero.
  // The repair script enforces its own floor and refuses branded or previously
  // published media, so running this check early cannot create duplicates.
- try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:600000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
- try{execFileSync(process.execPath,['scripts/classics-refill.mjs'],{stdio:'pipe',timeout:180000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});}catch(error){classicsError=String(error.message||error).slice(0,500);}
+ if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:120000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
  memory=remote('state/memory.json');
 }
 let runs=[],workflowError;
