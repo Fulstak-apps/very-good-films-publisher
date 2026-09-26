@@ -1925,6 +1925,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdwEpjZhogh/",
       "queued_at": "2026-09-26T14:54:14.687Z",
       "asset_sha256": "df231ad9846226f173db4677d4deb3f34a75f88eaaf51e5241030b641be8cf68"
+    },
+    "DdwQTiNODQs": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DdwQTiNODQs/",
+      "queued_at": "2026-09-26T14:56:35.589Z",
+      "asset_sha256": "7a835b6bef4cc26b08795774f599e7c5a74c7400f496a3a6f424c76500a84597"
     }
   },
   "checks": {
@@ -1938,10 +1944,10 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-09-26T13:19:54.945Z"
+      "checked_at": "2026-09-26T14:54:43.346Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-09-26T13:48:18.189Z"
+      "checked_at": "2026-09-26T14:56:09.452Z"
     },
     "theacenyc": {
       "checked_at": "2026-09-26T14:07:48.528Z"
@@ -1975,26 +1981,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-26T02:10:58.623Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 254,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-26T02:11:18.616Z"
-    },
-    {
-      "started_at": "2026-09-26T02:11:29.274Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 254,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-26T02:12:30.523Z"
-    },
     {
       "started_at": "2026-09-26T02:12:40.740Z",
       "queued": [],
@@ -5723,9 +5709,38 @@
       "inventory": 260,
       "status": "queued",
       "finished_at": "2026-09-26T14:48:10.589Z"
+    },
+    {
+      "started_at": "2026-09-26T14:48:17.662Z",
+      "queued": [
+        "DdwFAV6hsFh",
+        "DdwEpjZhogh"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 262,
+      "status": "queued",
+      "finished_at": "2026-09-26T14:54:17.417Z"
+    },
+    {
+      "started_at": "2026-09-26T14:54:25.213Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Verified movie title required before queueing"
+        }
+      ],
+      "discovered": 8,
+      "attempts": 1,
+      "inventory": 262,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-09-26T14:54:44.227Z"
     }
   ],
-  "next_account_index": 0,
+  "next_account_index": 2,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -6208,8 +6223,8 @@
     "DdeIThxy21F": {
       "collector_version": 12,
       "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-26T14:23:31.924Z",
-      "retry_at": "2026-09-26T14:53:31.924Z"
+      "failed_at": "2026-09-26T14:54:44.219Z",
+      "retry_at": "2026-09-26T15:24:44.219Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
@@ -7720,11 +7735,16 @@
       "handle": "movie_vault_4u",
       "url": "https://www.instagram.com/movie_vault_4u/reel/DdwEpjZhogh/",
       "shortcode": "DdwEpjZhogh"
+    },
+    "DdwQTiNODQs": {
+      "handle": "thecinemanerd.ig",
+      "url": "https://www.instagram.com/thecinemanerd.ig/reel/DdwQTiNODQs/",
+      "shortcode": "DdwQTiNODQs"
     }
   },
   "discovery_depth": {
-    "reelgoodmovies": 20,
-    "thecinemanerd.ig": 80,
+    "reelgoodmovies": 30,
+    "thecinemanerd.ig": 20,
     "theacenyc": 80,
     "the_goodfilms": 70,
     "film.fission": 70,
