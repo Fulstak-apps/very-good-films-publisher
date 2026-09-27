@@ -189,16 +189,27 @@ try{
  let candidates=[];
  const next=Number.isInteger(ledger.next_account_index)?ledger.next_account_index%sourceAccounts.length:0;
  const ordered=[...sourceAccounts.slice(next),...sourceAccounts.slice(0,next)];
- // Scan one account per cycle, persist inventory before expensive processing.
- const selected=ordered.slice(0,1);
- ledger.next_account_index=(next+1)%sourceAccounts.length;
- try{
-  const discovered=await profiles(selected,run.errors,ledger);
-  rememberCandidates(ledger,discovered);
-  run.discovered=discovered.length;
-  delete ledger.retry_after;delete ledger.session_error;
-  for(const h of selected)ledger.checks[h]={checked_at:new Date().toISOString()};
- }catch(error){run.errors.push({stage:'discover',error:error.message});if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;}}
+ // Process the durable inventory before opening Instagram again. The queue can
+ // recover from already discovered approved reels even when Chrome is slow or
+ // Instagram is temporarily unavailable. Previously every recovery pass spent
+ // its first 90 seconds scanning a profile, so a browser timeout could strand
+ // usable candidates in the ledger and leave the publishing queue empty.
+ const inventory=Object.values(ledger.candidates);
+ const hasEligibleInventory=inventory.some(candidate=>candidateReady(candidate,ledger,collectorVersion));
+ if(!hasEligibleInventory){
+  // Scan one account per cycle only after the durable inventory is exhausted.
+  const selected=ordered.slice(0,1);
+  ledger.next_account_index=(next+1)%sourceAccounts.length;
+  try{
+   const discovered=await profiles(selected,run.errors,ledger);
+   rememberCandidates(ledger,discovered);
+   run.discovered=discovered.length;
+   delete ledger.retry_after;delete ledger.session_error;
+   for(const h of selected)ledger.checks[h]={checked_at:new Date().toISOString()};
+  }catch(error){run.errors.push({stage:'discover',error:error.message});if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;}}
+ }else{
+  run.discovery_skipped='eligible_inventory_available';
+ }
  await save(ledgerPath,ledger);
  candidates=Object.values(ledger.candidates);
  // Take one candidate per source in each pass so a five-item refill rotates accounts.
