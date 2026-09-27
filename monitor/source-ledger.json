@@ -2003,6 +2003,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/Ddy2KioSdfy/",
       "queued_at": "2026-09-27T15:18:15.754Z",
       "asset_sha256": "05ab9a6e0d8a84f468a2cd4b60cdf3f9d3922e79771a48bf91babd140678d821"
+    },
+    "DdygU4DCwXR": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DdygU4DCwXR/",
+      "queued_at": "2026-09-27T15:19:50.531Z",
+      "asset_sha256": "3fb1c62ec900d2052e4d34e490dec4e4cb0f673f64b1e4d9ee49c632f1827c54"
     }
   },
   "checks": {
@@ -2031,7 +2037,7 @@
       "checked_at": "2026-09-27T15:15:13.974Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-09-27T08:33:39.299Z"
+      "checked_at": "2026-09-27T15:19:01.359Z"
     },
     "relatedfilms": {
       "checked_at": "2026-09-27T08:34:52.962Z"
@@ -2053,16 +2059,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-27T05:09:10.514Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 279,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-27T05:09:30.515Z"
-    },
     {
       "started_at": "2026-09-27T05:09:42.157Z",
       "queued": [],
@@ -5579,9 +5575,21 @@
       "inventory": 280,
       "status": "no_eligible_clip",
       "finished_at": "2026-09-27T15:14:37.370Z"
+    },
+    {
+      "started_at": "2026-09-27T15:14:47.467Z",
+      "queued": [
+        "Ddy2KioSdfy"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 281,
+      "status": "queued",
+      "finished_at": "2026-09-27T15:18:18.392Z"
     }
   ],
-  "next_account_index": 5,
+  "next_account_index": 6,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -7701,6 +7709,11 @@
       "handle": "film.fission",
       "url": "https://www.instagram.com/film.fission/reel/Ddy2KioSdfy/",
       "shortcode": "Ddy2KioSdfy"
+    },
+    "DdygU4DCwXR": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DdygU4DCwXR/",
+      "shortcode": "DdygU4DCwXR"
     }
   },
   "discovery_depth": {
@@ -7709,7 +7722,7 @@
     "theacenyc": 50,
     "the_goodfilms": 40,
     "film.fission": 40,
-    "ellsoriaa": 40,
+    "ellsoriaa": 50,
     "relatedfilms": 20,
     "uneedmink": 80,
     "cinemoviie": 30,
