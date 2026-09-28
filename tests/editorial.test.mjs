@@ -7,10 +7,11 @@ test('unverified trivia falls back rather than inventing',()=>{const x=fixture()
 test('rejects wrong year, absent source and unverified identity',()=>{const x=fixture();assert.deepEqual(validate(x),[]);x.film.year=0;x.qa.identity_verified=false;delete x.rights;assert.equal(validate(x).length,3);assert.ok(validate(fixture(),true).length);});
 test('IMDb rating cannot be substituted from another provider',()=>{const x=fixture();x.film.imdb_rating=8;assert.ok(validate(x).some(s=>s.includes('IMDb')));});
 test('same movie different nonoverlapping scene allowed; overlapping rejected',()=>{const a=fixture();a.key=sceneKey(a);const b=fixture();b.scene.id='second';b.scene.start=50;b.scene.end=80;b.key=sceneKey(b);assert.equal(duplicate(b,[a]),false);b.scene.start=20;assert.equal(duplicate(b,[a]),true);});
-test('approved source clips require a verified title before publishing',()=>{
+test('approved source clips require a complete exact identity before publishing',()=>{
  const x={kind:'source_repost',film:{id:'instagram:abc',title:'@film.fission clip'},scene:{id:'abc',start:0,end:30},source_post_url:'https://www.instagram.com/film.fission/reel/abc/',source_caption:'A tense scene that people keep quoting.',source_details:{version:'source-caption-film-info-v3'},caption_style:'guess_the_movie',video_url:'https://example.com/clip.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1',frame_preserved:true}};
- assert.ok(validate(x,true).some(error=>error.includes('Verified movie title')));
- x.source_details.title_hint_verified='Example Film';
+ assert.ok(validate(x,true).some(error=>error.includes('Exact title')));
+ x.source_caption='Example Film (2020)';
+ x.source_details={title:'Example Film',year:2020,type:'movie',director:'Example Director',cast:['Example Actor'],synopsis:'An example synopsis.',metadata_source:'https://www.themoviedb.org/movie/1',identity_verified:true,identity:{version:'source-catalog-identity-v1',source_title:'Example Film',catalog_title:'Example Film',source_year:2020,catalog_year:2020,catalog_type:'movie'}};
  assert.deepEqual(validate(x,true),[]);
  assert.match(caption(x,'film_info').text,/EXAMPLE FILM/);
 });

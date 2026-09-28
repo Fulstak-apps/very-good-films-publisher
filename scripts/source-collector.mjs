@@ -7,7 +7,7 @@ import {capture,launch} from './capture/capture.mjs';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {approvedSource,capturedFromApprovedSource,sourceAccounts} from '../src/source-policy.mjs';
 import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
-import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceTitle} from '../src/source-metadata.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceIdentity} from '../src/source-metadata.mjs';
 
 const exec=promisify(execFile);
 const root=path.resolve('.');
@@ -143,7 +143,7 @@ async function queue(candidate,ledger){
   const title_hint=await localTitleHint(source_caption);
   if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
  }
- if(!verifiedSourceTitle(source_details))throw new Error('Verified movie title required before queueing');
+ if(!verifiedSourceIdentity(source_details,source_caption))throw new Error('Exact title, year, and media type must be verified before queueing');
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  const checkpoint=path.join(monitor,`render-${candidate.shortcode}.json`);

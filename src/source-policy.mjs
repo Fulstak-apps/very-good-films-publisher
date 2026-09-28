@@ -1,4 +1,5 @@
 import {readFileSync} from 'node:fs';
+import {verifiedSourceIdentity} from './source-metadata.mjs';
 const sourceConfig=JSON.parse(readFileSync(new URL('../config/sources.json',import.meta.url),'utf8'));
 export const sourceAccounts=sourceConfig.instagram_source_accounts.filter(x=>x.authorized_by_owner===true).map(x=>x.handle);
 const rapWireBranding = /(?:@rapwire247|\brap\s*wire\b)/i;
@@ -30,6 +31,9 @@ export function enforceSourcePolicy(items) {
   }
   if(x.kind==='source_repost'&&x.qa?.frame_preserved!==true){
    x.status='needs_review';x.review_reason='Full source frame required before publishing';changed++;continue;
+  }
+  if(x.kind==='source_repost'&&!verifiedSourceIdentity(x.source_details,x.source_caption)){
+   x.status='needs_review';x.review_reason='Exact title, year, and media type must be verified before publishing';changed++;continue;
   }
   if(!approvedSource(x.source_post_url)||x.qa?.branding!=='very-good-films-only-v1'){
    x.status='needs_review';x.review_reason='Original approved-source video and VGF-only branding required';changed++;

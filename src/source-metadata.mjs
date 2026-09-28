@@ -38,13 +38,25 @@ export function sourceHints(caption){
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
 }
 
-export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source);}
-// A title extracted verbatim from the approved post, or confirmed by the
-// metadata lookup, is enough to identify a source clip. Never use a bare
-// parser hint as a publishable title: those can be a character name or phrase.
+export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&['movie','tv'].includes(details?.type)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source&&details?.identity_verified===true);}
+// A parser hint is only a search query. It is never a publishable identity:
+// source captions can mention another work, and titles such as Maverick have
+// multiple catalog matches. Publication requires an exact source-to-catalog
+// identity record produced below.
 export function verifiedSourceTitle(details){
- const title=clean(details?.title||details?.title_hint_verified);
+ if(!sourceDetailsComplete(details))return undefined;
+ const identity=details.identity||{};
+ if(identity.version!=='source-catalog-identity-v1'||normal(identity.source_title)!==normal(details.title)||normal(identity.catalog_title)!==normal(details.title)||identity.catalog_year!==details.year||identity.catalog_type!==details.type)return undefined;
+ if(identity.source_year!=null&&identity.source_year!==details.year)return undefined;
+ const title=clean(details?.title);
  return title||undefined;
+}
+export function verifiedSourceIdentity(details,caption){
+ const title=verifiedSourceTitle(details);
+ // The catalog identity must be anchored in the source post itself. This
+ // blocks stale or injected metadata from relabeling a clip after it was
+ // captured (for example, a Sopranos scene becoming The Godfather).
+ return title&&normal(caption).includes(normal(details.identity.source_title))?title:undefined;
 }
 
 async function wikiMetadata(base){
@@ -78,30 +90,45 @@ async function wikiMetadata(base){
  const fallback=fallbackCredits(extract);
  director??=fallback.director;
  if(!cast.length)cast=fallback.cast;
- if(!director)return base; // Do not accept bands, books or disambiguation pages as films.
- return {...base,title:entry.title.replace(/\s*\([^)]*\)$/,''),year,director,cast:cast.length?cast:(base.cast||[]),synopsis:extract.slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`};
+ const title=entry.title.replace(/\s*\([^)]*\)$/,'');
+ const type=/\btelevision (?:series|show)\b/i.test(extract)?'tv':/\bfilm\b/i.test(extract)?'movie':undefined;
+ // Wikipedia is allowed only for an exact, unambiguous title match. A source
+ // year, when supplied, must agree with Wikidata; otherwise a same-named work
+ // cannot be distinguished safely.
+ const exact=matching.filter(x=>normal(x.title.replace(/\s*\([^)]*\)$/,''))===normal(base.source_title||base.title_hint));
+ const yearMatches=!base.source_year||year===base.source_year;
+ if(!director||!type||normal(title)!==normal(base.source_title||base.title_hint)||exact.length!==1||!yearMatches)return base;
+ return {...base,title,year,type,director,cast:cast.length?cast:(base.cast||[]),synopsis:extract.slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`,identity_verified:true,identity:{version:'source-catalog-identity-v1',method:'wikipedia_exact_title',source_title:base.source_title,source_year:base.source_year||null,catalog_title:title,catalog_year:year,catalog_type:type,exact_matches:exact.length}};
 }
 
 export async function enrichSourceMetadata(caption,current={}){
  const hints=sourceHints(caption);
- const base={...current,...hints,title_hint:current.title_hint_verified||hints.title_hint,version:'source-caption-film-info-v3'};
+ // Always derive identity evidence from the current source caption. Never let
+ // an older local-model guess override it after a retry or queue restart.
+ const base={...current,...hints,source_title:hints.title_hint,source_year:hints.year,title_hint:hints.title_hint,version:'source-caption-film-info-v4',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
- if(sourceDetailsComplete(base))return base;
  if(!base.title_hint)return base;
  if(!process.env.TMDB_READ_TOKEN){try{return await wikiMetadata(base);}catch{return base;}}
  try{
   const headers={Authorization:`Bearer ${process.env.TMDB_READ_TOKEN}`};
   const query=new URL('https://api.themoviedb.org/3/search/multi');query.searchParams.set('query',base.title_hint);query.searchParams.set('include_adult','false');
   const search=await fetch(query,{headers,signal:AbortSignal.timeout(15000)});if(!search.ok)return base;
-  const hit=(await search.json()).results?.find(x=>['movie','tv'].includes(x.media_type)&&normal(x.title||x.name)===normal(base.title_hint)&&(!base.year||Number((x.release_date||x.first_air_date||'').slice(0,4))===base.year));
-  if(!hit)return base;
+  const exact=(await search.json()).results?.filter(x=>['movie','tv'].includes(x.media_type)&&normal(x.title||x.name)===normal(base.title_hint))||[];
+  const candidates=base.source_year?exact.filter(x=>Number((x.release_date||x.first_air_date||'').slice(0,4))===base.source_year):exact;
+  // No year means the exact title must resolve to exactly one movie/series.
+  // With a year, that title/year pair must resolve to exactly one result.
+  if(candidates.length!==1)return {...base,identity_error:'Ambiguous or missing exact catalog title'};
+  const hit=candidates[0];
   const type=hit.media_type,id=hit.id;
   const detail=await fetch(`https://api.themoviedb.org/3/${type}/${id}?append_to_response=credits,watch/providers`,{headers,signal:AbortSignal.timeout(15000)});if(!detail.ok)return base;
   const data=await detail.json(),credits=data.credits||{};
   const providers=data['watch/providers']?.results?.US||{};
   const places=[...(providers.flatrate||[]),...(providers.free||[]),...(providers.ads||[])].map(x=>x.provider_name).filter(Boolean);
-  return {...base,title:data.title||data.name,year:Number((data.release_date||data.first_air_date||'').slice(0,4))||base.year,type,director:credits.crew?.find(x=>x.job==='Director')?.name,cast:(credits.cast||[]).slice(0,3).map(x=>x.name),synopsis:clean(data.overview),availability:places.length?places.join(', '):base.availability,metadata_source:`https://www.themoviedb.org/${type}/${id}`};
+  const title=data.title||data.name,year=Number((data.release_date||data.first_air_date||'').slice(0,4));
+  if(normal(title)!==normal(base.source_title)||!Number.isInteger(year)||(base.source_year&&year!==base.source_year))return {...base,identity_error:'Catalog identity does not match source caption'};
+  const director=credits.crew?.find(x=>x.job==='Director')?.name || (type==='tv'?data.created_by?.[0]?.name:undefined);
+  return {...base,title,year,type,director,cast:(credits.cast||[]).slice(0,3).map(x=>x.name),synopsis:clean(data.overview),availability:places.length?places.join(', '):base.availability,metadata_source:`https://www.themoviedb.org/${type}/${id}`,identity_verified:true,identity:{version:'source-catalog-identity-v1',method:'tmdb_exact_title',source_title:base.source_title,source_year:base.source_year||null,catalog_title:title,catalog_year:year,catalog_type:type,exact_matches:candidates.length}};
  }catch{try{return await wikiMetadata(base);}catch{return base;}}
 }

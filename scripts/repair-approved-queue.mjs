@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {readJSON,saveMemory,withLock} from '../src/store.mjs';
 import {approvedSource} from '../src/source-policy.mjs';
-import {enrichSourceMetadata,verifiedSourceTitle} from '../src/source-metadata.mjs';
+import {enrichSourceMetadata,verifiedSourceIdentity} from '../src/source-metadata.mjs';
 
 // Older captures from the approved account list may have passed identity and
 // branding checks before the clean-crop field was introduced. Re-render them
@@ -41,7 +41,7 @@ await withLock(async()=>{
  // literally occur in the source caption, so this path can never invent one.
  for(const item of memory.items.filter(x=>x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id&&!(Date.parse(x.metadata_retry_at||'')>Date.now()))){
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
-  if(!verifiedSourceTitle(details)){
+  if(!verifiedSourceIdentity(details,item.source_caption)){
    const title=await titleFromCaption(item.source_caption);
    const hinted=String(details.title_hint||'').trim();
    if(title)details={...details,title_hint_verified:title};
@@ -50,7 +50,7 @@ await withLock(async()=>{
   if(JSON.stringify(details)!==JSON.stringify(item.source_details||{})){item.source_details=details;item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();}
  }
  const candidates=memory.items.filter(x=>
-  x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&verifiedSourceTitle(x.source_details)&&
+  x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&verifiedSourceIdentity(x.source_details,x.source_caption)&&
   x.qa?.source_verified===true&&x.qa?.media_verified===true&&
   !x.instagram_media_id&&!x.threads_media_id&&
   !(Date.parse(x.recovery_retry_at||'')>Date.now())

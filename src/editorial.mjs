@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 import {approvedSource} from './source-policy.mjs';
-import {sourceDetailsComplete,verifiedSourceTitle} from './source-metadata.mjs';
+import {sourceDetailsComplete,verifiedSourceIdentity} from './source-metadata.mjs';
 import {isClassic,classicDailyProgress} from './classics.mjs';
 export const styles=['film_info','scene_context','did_you_know','hidden_gem','performance','director','quote_scene'];
 export function sceneKey(x){return createHash('sha256').update(`${x.film.id}|${x.scene.id}`).digest('hex');}
@@ -11,7 +11,7 @@ export function validate(x,ready=false){
   if(!approvedSource(x.source_post_url)||!f.id||!s.id)errors.push('Approved exact source post required');
   if(!x.source_caption?.trim()||x.qa?.source_verified!==true)errors.push('Verified source caption required');
   if(!(s.end>s.start&&s.start>=0&&s.end-s.start<=90))errors.push('Invalid scene interval');
-  if(ready&&!verifiedSourceTitle(x.source_details))errors.push('Verified movie title required before publishing');
+  if(ready&&!verifiedSourceIdentity(x.source_details,x.source_caption))errors.push('Exact title, year, and media type must be verified before publishing');
   if(ready&&x.qa?.frame_preserved!==true)errors.push('Full source frame required before publishing');
   if(ready&&(!/^https:\/\//.test(x.video_url||'')||!/^[a-f0-9]{64}$/.test(x.asset_sha256||'')||x.qa?.media_verified!==true||x.qa?.branding!=='very-good-films-only-v1'))errors.push('Verified VGF-only video required');
   return errors;
@@ -35,7 +35,7 @@ export function caption(x,preferred='film_info',threads=false){
   const truncate=(value,n)=>[...value].length<=n?value:[...value].slice(0,Math.max(0,n-1)).join('').trimEnd()+'…';
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
-  const title=verifiedSourceTitle(d);
+  const title=verifiedSourceIdentity(d,x.source_caption);
   if(!title)throw new Error('Verified movie title required before caption rendering');
   const limit=threads?500:2200;
   const heading=`${title.toUpperCase()}${d.year?` (${d.year})`:''} 🎬`;
