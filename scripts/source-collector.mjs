@@ -7,7 +7,7 @@ import {capture,launch} from './capture/capture.mjs';
 import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {approvedSource,capturedFromApprovedSource,sourceAccounts} from '../src/source-policy.mjs';
 import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
-import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceIdentity} from '../src/source-metadata.mjs';
+import {enrichSourceMetadata,sourceDetailsComplete,sourceHints,verifiedSourceIdentity} from '../src/source-metadata.mjs';
 
 const exec=promisify(execFile);
 const root=path.resolve('.');
@@ -27,7 +27,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 const commandTimeout=120_000;
 // Bump when eligibility semantics change so clips previously held by an older
 // rule are reconsidered instead of waiting for stale retry timestamps.
-const collectorVersion=12;
+const collectorVersion=13;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -138,12 +138,18 @@ async function queue(candidate,ledger){
  // Require verified identity before rendering; reuse completed renders after restarts.
  const source_caption=(evidence.source_caption_text||'').trim();
  if(/(?:@rapwire247|\brap\s*wire\b)/i.test(source_caption))throw new Error('RapWire-branded source is prohibited on Very Good Films');
+ // A clip still needs a title literally present in its source caption, but the
+ // local capture machine does not hold the TMDB secret. Capture it as pending
+ // metadata and let the GitHub publisher perform the authoritative catalog
+ // match. This prevents a local credential gap from starving both feeds while
+ // retaining the exact same publish-time identity gate.
+ if(!sourceHints(source_caption).title_hint)throw new Error('Source caption has no explicit movie or television title');
  let source_details=await enrichSourceMetadata(source_caption);
  if(!sourceDetailsComplete(source_details)){
   const title_hint=await localTitleHint(source_caption);
   if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
  }
- if(!verifiedSourceIdentity(source_details,source_caption))throw new Error('Exact title, year, and media type must be verified before queueing');
+ const identityVerified=Boolean(verifiedSourceIdentity(source_details,source_caption));
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  const checkpoint=path.join(monitor,`render-${candidate.shortcode}.json`);
@@ -166,7 +172,7 @@ async function queue(candidate,ledger){
   source_details,
   video_url,asset_sha256,
   caption_style:'source_repost',
-  metadata_pending:!sourceDetailsComplete(source_details),
+  metadata_pending:!identityVerified,
   qa:{...renderQA,source_verified:true,media_verified:true,branding:'very-good-films-only-v1',reviewed_at:new Date().toISOString(),source_duration:Number(evidence.duration),media_match_method:evidence.media_match_method}
  };
  await fs.mkdir(inbox,{recursive:true});
@@ -224,7 +230,7 @@ try{
   try{await queue(candidate,ledger);run.queued.push(candidate.shortcode);await save(ledgerPath,ledger);await commit(true);}
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
-   const metadataFailure=/Verified (?:title|movie title)/.test(error.message);
+   const metadataFailure=/(?:Verified (?:title|movie title)|explicit movie or television title)/.test(error.message);
    ledger.failed[candidate.shortcode]={collector_version:collectorVersion,error:error.message.slice(0,300),failed_at:new Date().toISOString(),retry_at:new Date(Date.now()+(metadataFailure?30:180)*60_000).toISOString()};
    await save(ledgerPath,ledger);
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
