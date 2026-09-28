@@ -8,6 +8,21 @@ const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout
 const wait=(ms)=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
 const ghRead=args=>{let last;for(let attempt=0;attempt<3;attempt++){try{return gh(args);}catch(error){last=error;if(attempt<2)wait(2000*(attempt+1));}}throw last;};
 const remote=path=>JSON.parse(ghRead(['api','-H','Accept: application/vnd.github.raw+json',`repos/${repo}/contents/${path}`]));
+// Published reels live on the media host. Keeping their local captures and
+// rendered exports eventually fills the Mac disk and prevents the recovery
+// loop from creating even its lock file. Remove only confirmed deliveries;
+// current queue and recovery candidates are never touched here.
+const cleanupPublishedMedia=async memory=>{
+ let files=0,bytes=0;
+ const targets=new Set();
+ for(const item of memory.items.filter(x=>x.status==='published'||x.instagram_published_at||x.threads_published_at)){
+  const id=item.scene?.id,key=item.key;
+  if(id){targets.add(`work/vgf-${id}.mp4`);targets.add(`work/instagram-mirror/${id}.mp4`);targets.add(`work/instagram-mirror/${id}.json`);targets.add(`monitor/render-${id}.json`);}
+  if(key){targets.add(`work/${key}.mp4`);targets.add(`work/recovery-${key}-clean.mp4`);}
+ }
+ for(const file of targets)try{const stat=await fs.stat(file);if(stat.isFile()){await fs.rm(file,{force:true});files++;bytes+=stat.size;}}catch(error){if(error.code!=='ENOENT')throw error;}
+ return {files,bytes};
+};
 const recoveryLock='monitor/recovery.lock';
 await fs.mkdir('monitor',{recursive:true});
 let recoveryHandle;
@@ -30,6 +45,7 @@ process.on('unhandledRejection',async error=>{console.error(error);await release
 process.on('SIGTERM',async()=>{await releaseRecoveryLock();process.exit(143);});
 process.on('SIGINT',async()=>{await releaseRecoveryLock();process.exit(130);});
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
+let mediaCleanup=await cleanupPublishedMedia(memory);
 let collectorStatus='not_needed',collectorError,repairError,classicsError;
 // Refill before the live queue reaches zero. The supervisor lock prevents
 // this longer capture from overlapping the next five-minute health pass.
@@ -47,6 +63,7 @@ if(brand.enabled&&sourceBuffered<sourceTarget){
  // published media, so running this check early cannot create duplicates.
  if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:120000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
  memory=remote('state/memory.json');
+ mediaCleanup=await cleanupPublishedMedia(memory);
 }
 let runs=[],workflowError;
 try{runs=JSON.parse(ghRead(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));}
@@ -60,7 +77,7 @@ const pending=memory.items.some(x=>x.status==='publishing');
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
-Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError});
+Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError,mediaCleanup});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
 Object.assign(report,refillHealth(memory.items,brand,JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8').catch(()=>'{}'))));
