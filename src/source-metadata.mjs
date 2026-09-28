@@ -14,6 +14,7 @@ export function sourceHints(caption){
  const raw=String(caption||'').normalize('NFKC');
  const text=raw.replace(/^[\p{Extended_Pictographic}\uFE0F\t :]+/gmu,'');
  const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
+ const standaloneYear=text.match(/(?:^|\n)\s*(19\d{2}|20\d{2})(?:\s*[‧·|–—-]|\s*$)/m);
  const titledLine=raw.match(/(?:^|\n)[ \t]*[🎬🎥📺]+[\uFE0F :\t]*([^\n]{2,100})/u);
  const narrative=text.match(/^([^\n]{2,110}?)\s+(?:follows\b|is (?:a|an)\b)/);
  const contextTitle=text.match(/(?:ending|scene|clip|cut|from)\s+(?:of|in|from)\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)(?:\s*\(\d{4}\)|[.!?\n]|$)/i);
@@ -35,7 +36,8 @@ export function sourceHints(caption){
  const hashtagTitle=tags.length===1?tags[0]:undefined;
  const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
- return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):undefined,availability:availability||undefined};
+ const media_type_hint=/\b(?:season|episode|television|tv series|series finale)\b/i.test(text)?'tv':/\b(?:film|movie|feature)\b/i.test(text)?'movie':undefined;
+ return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):standaloneYear?Number(standaloneYear[1]):undefined,media_type_hint,availability:availability||undefined};
 }
 
 export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&['movie','tv'].includes(details?.type)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source&&details?.identity_verified===true);}
@@ -116,7 +118,7 @@ export async function enrichSourceMetadata(caption,current={}){
   const query=new URL('https://api.themoviedb.org/3/search/multi');query.searchParams.set('query',base.title_hint);query.searchParams.set('include_adult','false');
   const search=await fetch(query,{headers,signal:AbortSignal.timeout(15000)});if(!search.ok)return base;
   const exact=(await search.json()).results?.filter(x=>['movie','tv'].includes(x.media_type)&&normal(x.title||x.name)===normal(base.title_hint))||[];
-  const candidates=base.source_year?exact.filter(x=>Number((x.release_date||x.first_air_date||'').slice(0,4))===base.source_year):exact;
+  const candidates=(base.source_year?exact.filter(x=>Number((x.release_date||x.first_air_date||'').slice(0,4))===base.source_year):exact).filter(x=>!base.media_type_hint||x.media_type===base.media_type_hint);
   // No year means the exact title must resolve to exactly one movie/series.
   // With a year, that title/year pair must resolve to exactly one result.
   if(candidates.length!==1)return {...base,identity_error:'Ambiguous or missing exact catalog title'};

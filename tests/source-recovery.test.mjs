@@ -25,7 +25,9 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').title_hint,'Bend It Like Beckham');
  assert.equal(sourceHints('Barbershop follows Calvin Palmer Jr.').title_hint,'Barbershop');
  assert.equal(sourceHints('🎬 Back to the Future (1985)').year,1985);
+ assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').year,2002);
  assert.equal(sourceHints('Silo opening title sequence is widely praised').title_hint,'Silo');
+ assert.equal(sourceHints('The Sopranos Season 3 spoilers warning').media_type_hint,'tv');
  assert.equal(sourceHints('Silo Season 3 spoilers warning').title_hint,'Silo');
  assert.equal(sourceHints('𝐎𝐋𝐃𝐒𝐂𝐇𝐎𝐎𝐋 𝐒𝐂𝐑𝐄𝐄𝐍𝐈𝐍𝐆 𝐎𝐅 𝐃𝐀𝐙𝐄𝐃 𝐀𝐍𝐃 𝐂𝐎𝐍𝐅𝐔𝐒𝐄𝐃 🍿').title_hint,'DAZED AND CONFUSED');
  assert.equal(sourceHints("Emma Stone and Mark Ruffalo's iconic dance in Poor Things was choreographed in Lisbon.").title_hint,'Poor Things');
@@ -62,4 +64,5 @@ test('Threads keeps title year and credits when synopsis is long',()=>{
  assert.ok([...text].length<=500);assert.match(text,/BARBERSHOP \(2002\)/);
  assert.match(text,/Directed by Tim Story/);assert.match(text,/Starring Ice Cube, Anthony Anderson/);
  assert.doesNotMatch(text,/Available on Prime/);
+ assert.doesNotMatch(text,/Scene context/);
 });

@@ -29,9 +29,10 @@ export function validate(x,ready=false){
 }
 export function caption(x,preferred='film_info',threads=false){
  if(x.kind==='source_repost'){
-  // These are the user's own network pages. Preserve the originating post's
-  // wording without adding a visible source credit or VGF boilerplate.
-  const text=x.source_caption.split('\n').filter(line=>!/(?:where to watch|\bstreaming\b|\bavailable (?:on|to)|\bin theaters now\b)/i.test(line)).join('\n').trim(),d=x.source_details||{};
+  // Source posts often contain advertisements, hashtags, account mentions,
+  // and stale promotion copy. Captions use the verified catalog record only,
+  // so the page never republishes that noise as film context.
+  const d=x.source_details||{};
   const truncate=(value,n)=>[...value].length<=n?value:[...value].slice(0,Math.max(0,n-1)).join('').trimEnd()+'…';
   // Threads accepts 500 characters. Instagram retains the exact caption;
   // Threads only trims when its platform limit makes that unavoidable.
@@ -46,8 +47,6 @@ export function caption(x,preferred='film_info',threads=false){
   const synopsisRoom=Math.max(0,limit-[...heading+credits].length-18);
   const overview=d.synopsis&&synopsisRoom>1?`\n\nAbout the film:\n${truncate(d.synopsis,synopsisRoom)}`:'';
   let rendered=`${heading}${overview}${credits}`;
-  const room=limit-[...rendered].length-20;
-  if(room>40&&text)rendered+=`\n\nScene context:\n${truncate(text,room)}`;
   rendered=truncate(rendered,limit);
   return {style:'source_repost',text:rendered};
  }
