@@ -2183,6 +2183,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd1Sswxsvd2/",
       "queued_at": "2026-09-28T19:32:43.575Z",
       "asset_sha256": "478e8898f13450f7192093be5e5d6a81519bb990daa9081bb178e1a075f6d3f8"
+    },
+    "DdzyyjjJyyr": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DdzyyjjJyyr/",
+      "queued_at": "2026-09-28T19:38:17.929Z",
+      "asset_sha256": "146bc82df92da3227f9e226349cb1f4d79504d194a36e6645dbe2057b32fd8bc"
     }
   },
   "checks": {
@@ -2233,16 +2239,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-27T21:22:01.381Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 294,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-27T21:22:26.945Z"
-    },
     {
       "started_at": "2026-09-27T21:22:34.820Z",
       "queued": [],
@@ -8642,6 +8638,43 @@
       "inventory": 312,
       "status": "queued",
       "finished_at": "2026-09-28T19:21:25.586Z"
+    },
+    {
+      "started_at": "2026-09-28T19:26:35.258Z",
+      "queued": [
+        "DdoYZiwtS2x",
+        "Ddn-0ZZgh39",
+        "DdzlGPXp5TS",
+        "Dd1he92O6Vw",
+        "Dd1Sswxsvd2"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 9,
+      "inventory": 312,
+      "status": "queued",
+      "finished_at": "2026-09-28T19:32:47.167Z"
     }
   ],
   "next_account_index": 3,
@@ -9109,8 +9142,8 @@
     "DdbZwC6A5DM": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-09-28T19:05:25.108Z",
-      "retry_at": "2026-09-28T19:35:25.108Z"
+      "failed_at": "2026-09-28T19:37:57.461Z",
+      "retry_at": "2026-09-28T20:07:57.461Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
@@ -9127,8 +9160,8 @@
     "DdeIThxy21F": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-09-28T19:04:16.198Z",
-      "retry_at": "2026-09-28T19:34:16.198Z"
+      "failed_at": "2026-09-28T19:37:57.419Z",
+      "retry_at": "2026-09-28T20:07:57.419Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
