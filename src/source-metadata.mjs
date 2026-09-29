@@ -71,22 +71,22 @@ export function verifiedSourceIdentity(details,caption){
 async function wikiMetadata(base){
  const headers={'User-Agent':'VeryGoodFilmsPublisher/1.0 (metadata@verygoodfilms.local)'};
  const search=new URL('https://en.wikipedia.org/w/api.php');search.search='action=query&format=json&origin=*&list=search&srlimit=5&srsearch='+encodeURIComponent(`intitle:${base.title_hint} ${base.year||''} film`);
- const hits=(await (await fetch(search,{headers,signal:AbortSignal.timeout(15000)})).json()).query?.search||[];
+ const hits=(await (await fetch(search,{headers,signal:AbortSignal.timeout(5000)})).json()).query?.search||[];
  const matching=hits.filter(x=>normal(x.title).includes(normal(base.title_hint))||normal(base.title_hint).includes(normal(x.title)));
  // Prefer a film-specific result over a same-named novel, album, or general
  // article. This is common for titles such as Poor Things.
  const hit=matching.find(x=>/\((?:\d{4}\s+)?film\)/i.test(x.title))||matching[0];if(!hit)return base;
  const page=new URL('https://en.wikipedia.org/w/api.php');page.search='action=query&format=json&origin=*&prop=extracts|pageprops&exintro=1&explaintext=1&pageids='+hit.pageid;
- const entry=Object.values((await (await fetch(page,{headers,signal:AbortSignal.timeout(15000)})).json()).query?.pages||{})[0];if(!entry?.title)return base;
+ const entry=Object.values((await (await fetch(page,{headers,signal:AbortSignal.timeout(5000)})).json()).query?.pages||{})[0];if(!entry?.title)return base;
  const qid=entry.pageprops?.wikibase_item;
  let director,cast=[],year=base.year;
  if(qid){
-  const entity=await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`,{headers,signal:AbortSignal.timeout(15000)});if(entity.ok){
+  const entity=await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`,{headers,signal:AbortSignal.timeout(5000)});if(entity.ok){
    const claims=(await entity.json()).entities?.[qid]?.claims||{};
    const directorId=claims.P57?.[0]?.mainsnak?.datavalue?.value?.id;
    const castIds=[...(claims.P161||[]),...(claims.P725||[])].map(x=>x.mainsnak?.datavalue?.value?.id).filter(Boolean).slice(0,3);
    const ids=[directorId,...castIds].filter(Boolean);
-   const labels=ids.length?await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&origin=*&ids=${ids.join('|')}&props=labels&languages=en`,{headers,signal:AbortSignal.timeout(15000)}):null;
+   const labels=ids.length?await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&origin=*&ids=${ids.join('|')}&props=labels&languages=en`,{headers,signal:AbortSignal.timeout(5000)}):null;
    const entities=labels?.ok?(await labels.json()).entities||{}:{};
    director=entities[directorId]?.labels?.en?.value;cast=castIds.map(id=>entities[id]?.labels?.en?.value).filter(Boolean);
    const date=claims.P577?.[0]?.mainsnak?.datavalue?.value?.time;if(date){const match=date.match(/[+-](\d{4})/);if(match)year=Number(match[1]);}

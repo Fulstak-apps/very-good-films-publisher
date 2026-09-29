@@ -11,7 +11,10 @@ import {enrichSourceMetadata,sourceHints,verifiedSourceIdentity} from '../src/so
 const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-publisher';
 // Try a bounded pool so one or two unsafe captures cannot starve the queue
 // when a later approved capture is perfectly usable.
-const candidatesPerRun=12;
+// Each candidate may require three catalog requests plus a render/upload.
+// Keep this below the recovery supervisor's two-minute allowance so a slow
+// public catalog cannot make the whole repair pass lose its lock and work.
+const candidatesPerRun=4;
 const normalize=value=>String(value||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 async function titleFromCaption(caption){
  if(process.env.VGF_OLLAMA_METADATA==='0'||!String(caption||'').trim())return undefined;
