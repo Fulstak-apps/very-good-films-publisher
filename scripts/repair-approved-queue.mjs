@@ -56,10 +56,15 @@ await withLock(async()=>{
  for(const item of reviewBatch){
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
   if(!verifiedSourceIdentity(details,item.source_caption)){
-   const title=await titleFromCaption(item.source_caption);
    const hinted=String(details.title_hint||'').trim();
-   if(title)details={...details,title_hint_verified:title};
-   else if(hinted && normalize(item.source_caption).includes(normalize(hinted))) details={...details,title_hint_verified:hinted};
+   // A parser hint that is literally present in the caption is already safer
+   // than an extra model request.  Calling Ollama first cost up to 20 seconds
+   // per item and repeatedly exhausted the supervisor window.
+   if(hinted && normalize(item.source_caption).includes(normalize(hinted))) details={...details,title_hint_verified:hinted};
+   else {
+    const title=await titleFromCaption(item.source_caption);
+    if(title)details={...details,title_hint_verified:title};
+   }
   }
   if(JSON.stringify(details)!==JSON.stringify(item.source_details||{})){item.source_details=details;item.metadata_retry_at=new Date(Date.now()+6*3600000).toISOString();}
  }
