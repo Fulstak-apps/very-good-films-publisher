@@ -51,7 +51,7 @@ await withLock(async()=>{
  const reviewBatch=memory.items.filter(x=>
   x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id&&
   sourceHints(x.source_caption).title_hint&&
-  (x.source_details?.version!=='source-caption-film-info-v5'||!(Date.parse(x.metadata_retry_at||'')>Date.now()))
+  (x.source_details?.version!=='source-caption-film-info-v6'||!(Date.parse(x.metadata_retry_at||'')>Date.now()))
  ).slice(0,candidatesPerRun);
  for(const item of reviewBatch){
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
