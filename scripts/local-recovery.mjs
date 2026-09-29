@@ -61,7 +61,7 @@ if(brand.enabled&&sourceBuffered<sourceTarget){
  // Rebuild verified approved-source captures before the queue reaches zero.
  // The repair script enforces its own floor and refuses branded or previously
  // published media, so running this check early cannot create duplicates.
- if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:120000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
+ if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:240000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
  memory=remote('state/memory.json');
  mediaCleanup=await cleanupPublishedMedia(memory);
 }

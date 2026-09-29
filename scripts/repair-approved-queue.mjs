@@ -14,7 +14,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 // Each candidate may require three catalog requests plus a render/upload.
 // Keep this below the recovery supervisor's two-minute allowance so a slow
 // public catalog cannot make the whole repair pass lose its lock and work.
-const candidatesPerRun=4;
+const candidatesPerRun=1;
 const normalize=value=>String(value||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 async function titleFromCaption(caption){
  if(process.env.VGF_OLLAMA_METADATA==='0'||!String(caption||'').trim())return undefined;

@@ -53,7 +53,7 @@ test('repair has a bounded title-bearing metadata batch',async()=>{
  assert.match(script,/const reviewBatch=/);
  assert.match(script,/\.slice\(0,candidatesPerRun\)/);
  assert.match(script,/sourceHints\(x\.source_caption\)\.title_hint/);
- assert.match(script,/const candidatesPerRun=4/);
+ assert.match(script,/const candidatesPerRun=1/);
  assert.ok(script.indexOf('if(hinted && normalize(item.source_caption).includes(normalize(hinted)))')<script.indexOf('const title=await titleFromCaption'));
 });
 });
