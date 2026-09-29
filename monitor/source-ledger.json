@@ -2303,6 +2303,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/Ddmkk9NCD-S/",
       "queued_at": "2026-09-29T01:42:11.001Z",
       "asset_sha256": "5ab21bf0ba05eb48596f4846ef606ba9358b9df5cbfab1173ed9f9698bbf70cb"
+    },
+    "DdmklxRKKXR": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DdmklxRKKXR/",
+      "queued_at": "2026-09-29T01:49:02.590Z",
+      "asset_sha256": "1c7cb7432f7d0babaa2c77cf0272ea5ef6920c43be47fbfc4ff03a08f708b453"
     }
   },
   "checks": {
@@ -2356,16 +2362,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-27T21:59:44.673Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 295,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-27T22:00:46.189Z"
-    },
     {
       "started_at": "2026-09-27T22:00:55.376Z",
       "queued": [],
@@ -9573,6 +9569,38 @@
       "inventory": 316,
       "status": "no_eligible_clip",
       "finished_at": "2026-09-29T01:19:48.960Z"
+    },
+    {
+      "started_at": "2026-09-29T01:37:07.909Z",
+      "queued": [
+        "DdxWSasiWIQ",
+        "DdxWRvmicgg",
+        "DdmlBWFCiHC",
+        "Ddmkvn7KcO3",
+        "Ddmkk9NCD-S"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 328,
+      "status": "queued",
+      "finished_at": "2026-09-29T01:42:13.983Z"
     }
   ],
   "next_account_index": 0,
