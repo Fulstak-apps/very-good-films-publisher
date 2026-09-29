@@ -28,13 +28,20 @@ export function sourceHints(caption){
  // “dance in the restaurant at Lisbon in Poor Things was…” should resolve
  // to the innermost named work, not the location phrase before it.
  const sceneInTitle=sceneInMatch?.[1]?.split(/\s+in\s+/i).at(-1);
+ // Caption writers often introduce a title in prose immediately before its
+ // release year.  The generic heading matcher above deliberately avoids
+ // treating an entire sentence as a title, so handle the two explicit forms
+ // here.  These patterns are anchored by both a film word and a year; they
+ // do not infer a title from the video itself.
+ const workAfterPreposition=text.match(/\b(?:of|in|from)\s+([A-Z][A-Za-z0-9'’:& -]{1,80}?)\s*\((?:19\d{2}|20\d{2})\)/);
+ const workAfterDescriptor=text.match(/\b(?:classic|film|movie|feature)\s+([A-Z][A-Za-z0-9'’:& -]{1,80}?)\s*,\s*(?:19\d{2}|20\d{2})\b/i);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
  // Some source pages put the title only in a single title hashtag. Treat it
  // as a lookup hint only when it is unambiguous; actor and topic tag clouds
  // are never used to guess a movie.
  const tags=[...raw.matchAll(/#([A-Za-z][A-Za-z0-9]{2,80})/g)].map(x=>x[1]);
  const hashtagTitle=tags.length===1?tags[0]:undefined;
- const title=clean(yearMatch?.[1]||titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/[,\s]+$/,'');
+ const title=clean(titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||workAfterPreposition?.[1]||workAfterDescriptor?.[1]||yearMatch?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  const media_type_hint=/\b(?:season|episode|television|tv series|series finale)\b/i.test(text)?'tv':/\b(?:film|movie|feature)\b/i.test(text)?'movie':undefined;
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):standaloneYear?Number(standaloneYear[1]):undefined,media_type_hint,availability:availability||undefined};
@@ -107,7 +114,14 @@ export async function enrichSourceMetadata(caption,current={}){
  const hints=sourceHints(caption);
  // Always derive identity evidence from the current source caption. Never let
  // an older local-model guess override it after a retry or queue restart.
- const base={...current,...hints,source_title:hints.title_hint,source_year:hints.year,title_hint:hints.title_hint,version:'source-caption-film-info-v4',identity_verified:false};
+ // `title_hint_verified` is produced only when the local extractor found a
+ // literal title inside this same caption.  Keep that narrower evidence over
+ // a broad heading regex: otherwise a retry can replace “About Last Night”
+ // with “Demi Moore & Rob Lowe in 80s Romcom Classic About Last Night” and
+ // permanently prevent an exact catalog match.
+ const trustedTitle=clean(current.title_hint_verified);
+ const titleHint=trustedTitle&&normal(caption).includes(normal(trustedTitle))?trustedTitle:hints.title_hint;
+ const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,version:'source-caption-film-info-v4',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
