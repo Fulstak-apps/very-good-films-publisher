@@ -104,7 +104,12 @@ async function wikiMetadata(base){
  // Wikipedia is allowed only for an exact, unambiguous title match. A source
  // year, when supplied, must agree with Wikidata; otherwise a same-named work
  // cannot be distinguished safely.
- const exact=matching.filter(x=>normal(x.title.replace(/\s*\([^)]*\)$/,''))===normal(base.source_title||base.title_hint));
+ // Search results can include a soundtrack, horse, or album whose parent
+ // title happens to equal the film title.  That must not make an otherwise
+ // exact film caption unpublishable.  The selected article itself is the
+ // identity evidence, so count only the matching result that won the
+ // film/article selection above.
+ const exact=normal(hit.title.replace(/\s*\([^)]*\)$/,''))===normal(base.source_title||base.title_hint)?[hit]:[];
  const yearMatches=!base.source_year||year===base.source_year;
  if(!director||!type||normal(title)!==normal(base.source_title||base.title_hint)||exact.length!==1||!yearMatches)return base;
  return {...base,title,year,type,director,cast:cast.length?cast:(base.cast||[]),synopsis:extract.slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`,identity_verified:true,identity:{version:'source-catalog-identity-v1',method:'wikipedia_exact_title',source_title:base.source_title,source_year:base.source_year||null,catalog_title:title,catalog_year:year,catalog_type:type,exact_matches:exact.length}};

@@ -33,6 +33,20 @@ test('movie hints support camera labels, narrative captions and stale parser inp
 assert.equal(sourceHints("Emma Stone and Mark Ruffalo's iconic dance in Poor Things was choreographed in Lisbon.").title_hint,'Poor Things');
 assert.equal(sourceHints('Ethan Hawke was not fond of Great Expectations (1998), despite working with Robert De Niro.').title_hint,'Great Expectations');
 assert.equal(sourceHints('Demi Moore & Rob Lowe in 80s Romcom Classic About Last Night, 1986.').title_hint,'About Last Night');
+
+test('Wikipedia fallback ignores same-named soundtrack results',async()=>{
+ const original=global.fetch;
+ const response=value=>({ok:true,json:async()=>value});
+ global.fetch=async url=>{
+  const target=String(url);
+  if(target.includes('list=search'))return response({query:{search:[{title:'Real Steel',pageid:1},{title:'Real Steel (soundtrack)',pageid:2}]}});
+  if(target.includes('pageids=1'))return response({query:{pages:{1:{title:'Real Steel',pageprops:{wikibase_item:'Q1'},extract:'Real Steel is a 2011 American science fiction sports film directed by Shawn Levy and starring Hugh Jackman.'}}}});
+  if(target.includes('EntityData/Q1'))return response({entities:{Q1:{claims:{P57:[{mainsnak:{datavalue:{value:{id:'Q2'}}}}],P161:[{mainsnak:{datavalue:{value:{id:'Q3'}}}}],P577:[{mainsnak:{datavalue:{value:{time:'+2011-01-01T00:00:00Z'}}}}]}}}});
+  if(target.includes('wbgetentities'))return response({entities:{Q2:{labels:{en:{value:'Shawn Levy'}}},Q3:{labels:{en:{value:'Hugh Jackman'}}}}});
+  throw new Error(`unexpected ${target}`);
+ };
+ try{const {enrichSourceMetadata}=await import('../src/source-metadata.mjs');const result=await enrichSourceMetadata('Real Steel (2011) is a movie.');assert.equal(result.identity_verified,true);assert.equal(result.title,'Real Steel');}finally{global.fetch=original;}
+});
 });
 
 test('Wikipedia attribution fills credits when Wikidata has missing English labels',()=>{
