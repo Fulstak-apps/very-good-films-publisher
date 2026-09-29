@@ -47,6 +47,13 @@ test('Wikipedia fallback ignores same-named soundtrack results',async()=>{
  };
  try{const {enrichSourceMetadata}=await import('../src/source-metadata.mjs');const result=await enrichSourceMetadata('Real Steel (2011) is a movie.');assert.equal(result.identity_verified,true);assert.equal(result.title,'Real Steel');}finally{global.fetch=original;}
 });
+
+test('repair has a bounded title-bearing metadata batch',async()=>{
+ const script=await fs.readFile(new URL('../scripts/repair-approved-queue.mjs',import.meta.url),'utf8');
+ assert.match(script,/const reviewBatch=/);
+ assert.match(script,/\.slice\(0,candidatesPerRun\)/);
+ assert.match(script,/sourceHints\(x\.source_caption\)\.title_hint/);
+});
 });
 
 test('Wikipedia attribution fills credits when Wikidata has missing English labels',()=>{

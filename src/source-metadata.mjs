@@ -126,7 +126,7 @@ export async function enrichSourceMetadata(caption,current={}){
  // permanently prevent an exact catalog match.
  const trustedTitle=clean(current.title_hint_verified);
  const titleHint=trustedTitle&&normal(caption).includes(normal(trustedTitle))?trustedTitle:hints.title_hint;
- const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,version:'source-caption-film-info-v4',identity_verified:false};
+ const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,version:'source-caption-film-info-v5',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
