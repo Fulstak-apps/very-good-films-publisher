@@ -28,10 +28,12 @@ const sourceRecovery={restricted:Boolean(sourceLedger.session_error),reason:sour
 // unhealthy watchdog state only when the ready reserve falls below two hours.
 const deliveryHealthy=Object.values(delivery).every(x=>x.healthy)&&stalePublishing===0;
 const refillHealthy=!sourceRecovery.restricted||queueHours>=2;
+const readyReserveHours=ready*(brand.minimum_gap_minutes||30)/60;
+const refillNeeded=brand.enabled&&readyReserveHours<(brand.refill_warning_hours||2);
 const healthy=!brand.enabled||(deliveryHealthy&&refillHealthy);
 const report={at:new Date().toISOString(),healthy,ready,publishing,stalePublishing,needsReview,lastInstagramPost:published[0]?.instagram_published_at||null,lastInstagramMediaId:published[0]?.instagram_media_id||null,hoursSinceLast,sourceAccounts:JSON.parse(await fs.readFile('config/sources.json','utf8')).instagram_source_accounts.map(x=>x.handle),recentErrors};
 Object.assign(report,refillHealth(memory.items,brand,sourceLedger,now));
-Object.assign(report,{delivery,queueHours,queueLow:queueHours<2,sourceRecovery,deliveryHealthy,refillHealthy});
+Object.assign(report,{delivery,queueHours,queueLow:queueHours<2,readyReserveHours,refillNeeded,sourceRecovery,deliveryHealthy,refillHealthy});
 await fs.writeFile('health-report.json',JSON.stringify(report,null,2)+'\n');
 const summary=process.env.GITHUB_STEP_SUMMARY;
 if(summary)await fs.appendFile(summary,`### Very Good Films health\n\n- Status: **${healthy?'healthy':'attention required'}**\n- Ready queue: **${ready}**\n- Publishing: **${publishing}**\n- Needs review: **${needsReview}**\n- Last Instagram post: **${report.lastInstagramPost||'none'}**\n- Hours since last post: **${hoursSinceLast===null?'n/a':hoursSinceLast.toFixed(2)}**\n`);
