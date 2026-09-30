@@ -2411,6 +2411,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd6EfKrAWXy/",
       "queued_at": "2026-09-30T16:01:21.808Z",
       "asset_sha256": "366d0ca050c32ef53ece34dca3edceee9b7227e7ef4e2b136fb6afdd9d76c316"
+    },
+    "Dd6kdILyyZY": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd6kdILyyZY/",
+      "queued_at": "2026-09-30T16:09:46.049Z",
+      "asset_sha256": "e5c42ef70f05c1324a7019d92dbe991757ffdf181a94bc5b9e6ee9f79cd1c81b"
     }
   },
   "checks": {
@@ -2457,23 +2463,13 @@
       "checked_at": "2026-09-30T16:00:45.495Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-09-30T09:48:25.455Z"
+      "checked_at": "2026-09-30T16:07:22.566Z"
     },
     "popcorncutzz": {
       "checked_at": "2026-09-30T10:03:21.594Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-29T02:36:43.992Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 328,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-29T02:37:44.544Z"
-    },
     {
       "started_at": "2026-09-29T02:42:53.535Z",
       "queued": [],
@@ -10734,9 +10730,21 @@
       "inventory": 347,
       "status": "candidates_on_hold",
       "finished_at": "2026-09-30T15:55:01.114Z"
+    },
+    {
+      "started_at": "2026-09-30T16:00:13.761Z",
+      "queued": [
+        "Dd6EfKrAWXy"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 348,
+      "status": "queued",
+      "finished_at": "2026-09-30T16:01:25.033Z"
     }
   ],
-  "next_account_index": 11,
+  "next_account_index": 12,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -13329,6 +13337,26 @@
       "handle": "fuckinggoodmovies",
       "url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd6EfKrAWXy/",
       "shortcode": "Dd6EfKrAWXy"
+    },
+    "Dd6kdILyyZY": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Dd6kdILyyZY/",
+      "shortcode": "Dd6kdILyyZY"
+    },
+    "Dd6kWPUyM7F": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Dd6kWPUyM7F/",
+      "shortcode": "Dd6kWPUyM7F"
+    },
+    "Dd6SkX1Bh_w": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Dd6SkX1Bh_w/",
+      "shortcode": "Dd6SkX1Bh_w"
+    },
+    "Dd6SX39Bazu": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/Dd6SX39Bazu/",
+      "shortcode": "Dd6SX39Bazu"
     }
   },
   "discovery_depth": {
@@ -13343,7 +13371,7 @@
     "cinemoviie": 50,
     "filmreelsvault": 60,
     "fuckinggoodmovies": 50,
-    "movie_vault_4u": 60,
+    "movie_vault_4u": 70,
     "popcorncutzz": 50
   }
 }
