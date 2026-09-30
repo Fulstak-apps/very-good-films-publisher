@@ -23,7 +23,7 @@ on:
         required: false
         default: '1'
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
   push:
     branches: [main]
     paths-ignore: ['state/**', 'docs/**', '*.md']
