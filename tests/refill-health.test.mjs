@@ -11,3 +11,9 @@ test('reserve counts unfinished platform deliveries independently and detects ze
  const r=refillHealth([{status:'partial',instagram_media_id:'confirmed'},{status:'ready'}],{platforms:{instagram:true,threads:true},minimum_gap_minutes:30},{runs:[{queued:[]},{queued:[]},{queued:[]}]});
  assert.equal(r.reserve.instagram.hours,.5);assert.equal(r.reserve.threads.hours,1);assert.equal(r.refill.starved,true);
 });
+
+test('empty queue is marked for refill while delivery health stays a separate signal',()=>{
+ const r=refillHealth([],{platforms:{instagram:true,threads:true},minimum_gap_minutes:30},{runs:[]});
+ assert.equal(r.refillNeeded,true);
+ assert.equal(r.readyReserveHours,0);
+});
