@@ -2477,6 +2477,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd7fCWjzONY/",
       "queued_at": "2026-10-01T00:50:42.893Z",
       "asset_sha256": "2eab8d74899a3adc70796fa9c6c264a038b58390fe33eaa9927c14c7ed085e97"
+    },
+    "Dd7YJ2si3yf": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/Dd7YJ2si3yf/",
+      "queued_at": "2026-10-01T00:58:09.753Z",
+      "asset_sha256": "daee4aa12f415e9f0a74cbfbf786401f98c5bd800cfbbbde670c984d979ecee0"
     }
   },
   "checks": {
@@ -2526,20 +2532,10 @@
       "checked_at": "2026-10-01T00:46:29.499Z"
     },
     "popcorncutzz": {
-      "checked_at": "2026-09-30T21:25:42.298Z"
+      "checked_at": "2026-10-01T00:56:55.162Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-09-29T16:27:55.389Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 333,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-09-29T16:28:50.610Z"
-    },
     {
       "started_at": "2026-09-29T16:34:09.217Z",
       "queued": [
@@ -11678,9 +11674,22 @@
       "inventory": 360,
       "status": "queued",
       "finished_at": "2026-10-01T00:41:04.680Z"
+    },
+    {
+      "started_at": "2026-10-01T00:46:11.784Z",
+      "queued": [
+        "Dd7fGbSzaTy",
+        "Dd7fCWjzONY"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 362,
+      "status": "queued",
+      "finished_at": "2026-10-01T00:50:45.040Z"
     }
   ],
-  "next_account_index": 12,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -14361,6 +14370,16 @@
       "handle": "movie_vault_4u",
       "url": "https://www.instagram.com/movie_vault_4u/reel/Dd7fCWjzONY/",
       "shortcode": "Dd7fCWjzONY"
+    },
+    "Dd7YJ2si3yf": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/Dd7YJ2si3yf/",
+      "shortcode": "Dd7YJ2si3yf"
+    },
+    "Dd7YIj1CcP1": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/Dd7YIj1CcP1/",
+      "shortcode": "Dd7YIj1CcP1"
     }
   },
   "discovery_depth": {
@@ -14376,6 +14395,6 @@
     "filmreelsvault": 20,
     "fuckinggoodmovies": 80,
     "movie_vault_4u": 30,
-    "popcorncutzz": 80
+    "popcorncutzz": 20
   }
 }
