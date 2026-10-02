@@ -29535,15 +29535,21 @@
         "synopsis": "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU). Directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely, the film features an ensemble cast that includes Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Don Cheadle, Paul Rudd, Brie Larson, Karen Gillan, Danai Gurira, Benedict Wong, Jon Favreau, Bradley Cooper, Gwyneth Paltrow, and Josh Brolin. In the film, th",
         "metadata_source": "https://en.wikipedia.org/wiki/Avengers%3A_Endgame",
         "identity": {
-          "version": "source-catalog-identity-v1",
+          "version": "source-catalog-identity-v2",
           "method": "wikipedia_exact_title",
           "source_title": "Avengers: Endgame",
           "source_year": null,
           "catalog_title": "Avengers: Endgame",
           "catalog_year": 2019,
           "catalog_type": "movie",
-          "exact_matches": 1
-        }
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "structured_title_match"
+          ]
+        },
+        "structured_title_evidence": true
       },
       "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/978785a3821eaf15010f129673695267da00feed76b83bd95a6edf794589a112.mp4?download=1",
       "asset_sha256": "978785a3821eaf15010f129673695267da00feed76b83bd95a6edf794589a112",
@@ -29561,15 +29567,14 @@
         "reviewed_at": "2026-09-29T01:40:46.527Z",
         "source_duration": 48.433968,
         "media_match_method": "unique-complete-stream-duration-dimensions-v1",
-        "recovered_at": "2026-10-02T00:26:28.050Z"
+        "recovered_at": "2026-10-02T00:56:02.413Z"
       },
       "caption_style": "source_repost",
       "metadata_pending": true,
-      "status": "needs_review",
+      "status": "ready",
       "discovered_at": "2026-09-29T01:42:25.614Z",
       "key": "c6a80addd83c4caca7e7f62908cc212957ad850792a3dd555b8d998278c4bf54",
-      "metadata_retry_at": "2026-10-02T06:12:42.200Z",
-      "review_reason": "Exact title, year, and media type must be verified before publishing"
+      "metadata_retry_at": "2026-10-02T06:55:47.051Z"
     },
     {
       "kind": "source_repost",
@@ -31974,7 +31979,8 @@
         "source_title": "warrenzeiders",
         "version": "source-caption-film-info-v6",
         "identity_verified": false,
-        "structured_title_evidence": true
+        "structured_title_evidence": true,
+        "title_hint_verified": "warrenzeiders"
       },
       "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/5a652740b9e26fee21ae861f7fc585d52ed9bca738dddf63286a7cc5cfca6d23.mp4?download=1",
       "asset_sha256": "5a652740b9e26fee21ae861f7fc585d52ed9bca738dddf63286a7cc5cfca6d23",
@@ -31999,7 +32005,7 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-10-01T09:53:29.835Z",
       "key": "e6117a522f7a044e750607858cae475764faa5d1990fa056b7fab9548eb5a791",
-      "metadata_retry_at": "2026-10-02T06:53:35.782Z"
+      "metadata_retry_at": "2026-10-02T06:55:47.967Z"
     },
     {
       "kind": "source_repost",
