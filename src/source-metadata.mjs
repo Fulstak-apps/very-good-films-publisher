@@ -144,7 +144,7 @@ export async function enrichSourceMetadata(caption,current={}){
  // a broad heading regex: otherwise a retry can replace “About Last Night”
  // with “Demi Moore & Rob Lowe in 80s Romcom Classic About Last Night” and
  // permanently prevent an exact catalog match.
- const trustedTitle=clean(current.title_hint_verified);
+ const trustedTitle=clean(current.title_hint_verified).replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'');
  const titleHint=trustedTitle&&normal(caption).includes(normal(trustedTitle))?trustedTitle:hints.title_hint;
  const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,structured_title_evidence:structuredTitleMatch(caption,titleHint),version:'source-caption-film-info-v6',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.

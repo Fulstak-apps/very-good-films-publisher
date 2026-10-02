@@ -25,6 +25,7 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').title_hint,'Bend It Like Beckham');
  assert.equal(sourceHints('Barbershop follows Calvin Palmer Jr.').title_hint,'Barbershop');
  assert.equal(sourceHints('🎬 Back to the Future (1985)').year,1985);
+ assert.equal(sourceHints('🎥🎬: Death Becomes Her (1992)').title_hint,'Death Becomes Her');
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').year,2002);
  assert.equal(sourceHints('Silo opening title sequence is widely praised').title_hint,'Silo');
  assert.equal(sourceHints('The Sopranos Season 3 spoilers warning').media_type_hint,'tv');
