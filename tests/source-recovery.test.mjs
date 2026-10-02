@@ -74,6 +74,14 @@ test('a source title is publishable only with a complete exact identity record',
  assert.equal(verifiedSourceTitle(mismatched),undefined);
 });
 
+test('identity requires three-way evidence and rejects ambiguous same-name works',()=>{
+ const base={title:'The Godfather',year:1972,director:'Francis Ford Coppola',cast:['Marlon Brando'],synopsis:'A crime family saga.',metadata_source:'https://www.themoviedb.org/movie/238',type:'movie',identity_verified:true};
+ const twoChecks={...base,identity:{version:'source-catalog-identity-v2',source_title:'The Godfather',catalog_title:'The Godfather',source_year:null,catalog_year:1972,catalog_type:'movie',evidence:['caption_literal_title','catalog_exact_title']}};
+ assert.equal(verifiedSourceTitle(twoChecks),undefined);
+ const threeChecks={...base,identity:{...twoChecks.identity,source_year:1972,evidence:['caption_literal_title','catalog_exact_title','source_year_match']}};
+ assert.equal(verifiedSourceTitle(threeChecks),'The Godfather');
+});
+
 test('already imported clips make no metadata requests',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'vgf-import-'));
  const oldFetch=globalThis.fetch;let requests=0;
@@ -87,7 +95,7 @@ test('already imported clips make no metadata requests',async()=>{
 });
 
 test('Threads keeps title year and credits when synopsis is long',()=>{
- const x={kind:'source_repost',source_caption:'Barbershop (2002)\nA scene.\nAvailable on Prime',source_details:{title:'Barbershop',year:2002,type:'movie',director:'Tim Story',cast:['Ice Cube','Anthony Anderson'],synopsis:'Calvin runs a neighborhood barbershop. '.repeat(30),metadata_source:'https://www.themoviedb.org/movie/10683',identity_verified:true,identity:{version:'source-catalog-identity-v1',source_title:'Barbershop',catalog_title:'Barbershop',source_year:2002,catalog_year:2002,catalog_type:'movie'}}};
+ const x={kind:'source_repost',source_caption:'Barbershop (2002)\nA scene.\nAvailable on Prime',source_details:{title:'Barbershop',year:2002,type:'movie',director:'Tim Story',cast:['Ice Cube','Anthony Anderson'],synopsis:'Calvin runs a neighborhood barbershop. '.repeat(30),metadata_source:'https://www.themoviedb.org/movie/10683',identity_verified:true,identity:{version:'source-catalog-identity-v2',evidence:['caption_literal_title','catalog_exact_title','source_year_match'],source_title:'Barbershop',catalog_title:'Barbershop',source_year:2002,catalog_year:2002,catalog_type:'movie'}}};
  const text=caption(x,'film_info',true).text;
  assert.ok([...text].length<=500);assert.match(text,/BARBERSHOP \(2002\)/);
  assert.match(text,/Directed by Tim Story/);assert.match(text,/Starring Ice Cube, Anthony Anderson/);

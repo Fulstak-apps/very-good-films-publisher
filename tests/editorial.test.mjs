@@ -11,7 +11,7 @@ test('approved source clips require a complete exact identity before publishing'
  const x={kind:'source_repost',film:{id:'instagram:abc',title:'@film.fission clip'},scene:{id:'abc',start:0,end:30},source_post_url:'https://www.instagram.com/film.fission/reel/abc/',source_caption:'A tense scene that people keep quoting.',source_details:{version:'source-caption-film-info-v3'},caption_style:'guess_the_movie',video_url:'https://example.com/clip.mp4',asset_sha256:'a'.repeat(64),qa:{source_verified:true,media_verified:true,branding:'very-good-films-only-v1',frame_preserved:true}};
  assert.ok(validate(x,true).some(error=>error.includes('Exact title')));
  x.source_caption='Example Film (2020)';
- x.source_details={title:'Example Film',year:2020,type:'movie',director:'Example Director',cast:['Example Actor'],synopsis:'An example synopsis.',metadata_source:'https://www.themoviedb.org/movie/1',identity_verified:true,identity:{version:'source-catalog-identity-v1',source_title:'Example Film',catalog_title:'Example Film',source_year:2020,catalog_year:2020,catalog_type:'movie'}};
+ x.source_details={title:'Example Film',year:2020,type:'movie',director:'Example Director',cast:['Example Actor'],synopsis:'An example synopsis.',metadata_source:'https://www.themoviedb.org/movie/1',identity_verified:true,identity:{version:'source-catalog-identity-v2',evidence:['caption_literal_title','catalog_exact_title','source_year_match'],source_title:'Example Film',catalog_title:'Example Film',source_year:2020,catalog_year:2020,catalog_type:'movie'}};
  assert.deepEqual(validate(x,true),[]);
  assert.match(caption(x,'film_info').text,/EXAMPLE FILM/);
 });
