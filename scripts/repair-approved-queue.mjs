@@ -3,6 +3,7 @@ import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {readJSON,saveMemory,withLock} from '../src/store.mjs';
 import {approvedSource} from '../src/source-policy.mjs';
 import {enrichSourceMetadata,sourceHints,verifiedSourceIdentity} from '../src/source-metadata.mjs';
+import {sameWork} from '../src/editorial.mjs';
 
 // Older captures from the approved account list may have passed identity and
 // branding checks before the clean-crop field was introduced. Re-render them
@@ -44,6 +45,13 @@ await withLock(async()=>{
    item.status='needs_review';
    item.review_reason='Source identity must pass current three-way verification';
    delete item.metadata_retry_at;
+  }
+ }
+ const confirmed=memory.items.filter(x=>x.instagram_media_id||x.threads_media_id||x.status==='published');
+ for(const item of memory.items){
+  if(['ready','partial'].includes(item.status)&&confirmed.some(post=>post.key!==item.key&&sameWork(item,post))){
+   item.status='duplicate';
+   item.review_reason='This movie has already been published; only one clip per movie is allowed';
   }
  }
  const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;

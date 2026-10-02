@@ -70,14 +70,19 @@ export function caption(x,preferred='film_info',threads=false){
  if([...text].length>limit){const tail='\n\nVery Good Films.'; const prefix=heading+'\n\n';text=prefix+[...body].slice(0,limit-[...prefix+tail].length-1).join('').trimEnd()+'…'+tail;}
  return {text,style};
 }
-export function duplicate(x,items){return items.some(y=>y.key!==x.key&&(y.key===sceneKey(x)||y.asset_sha256&&y.asset_sha256===x.asset_sha256||y.film.id===x.film.id&&y.scene.start<x.scene.end&&x.scene.start<y.scene.end));}
+const workValue=x=>({title:x.source_details?.title||x.film?.title,year:x.source_details?.year||x.film?.year,type:x.source_details?.type||x.film?.type});
+export function sameWork(a,b){
+ const x=workValue(a),y=workValue(b),normalize=v=>String(v||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9]+/g,'');
+ return Boolean(normalize(x.title)&&normalize(x.title)===normalize(y.title)&&Number(x.year)===Number(y.year)&&String(x.type||'movie')===String(y.type||'movie'));
+}
+export function duplicate(x,items){return items.some(y=>y.key!==x.key&&['ready','partial','publishing','published'].includes(y.status||'ready')&&(sameWork(x,y)||y.key===sceneKey(x)||y.asset_sha256&&y.asset_sha256===x.asset_sha256||y.film.id===x.film.id&&y.scene.start<x.scene.end&&x.scene.start<y.scene.end));}
 export function eligible(items,brand,now=Date.now()){
  const active=items.find(x=>x.status==='publishing'); if(active)return active;
  const posted=items.filter(x=>x.instagram_published_at);
  if(posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length>=brand.daily_cap)return null;
  if(posted.some(x=>now-Date.parse(x.instagram_published_at)<brand.minimum_gap_minutes*60000))return null;
  const recentSources=posted.slice().sort((a,b)=>Date.parse(b.instagram_published_at)-Date.parse(a.instagram_published_at)).slice(0,6).map(x=>x.source_post_url?.split('/')[3]).filter(Boolean);
- const candidates=items.filter(x=>['ready','partial'].includes(x.status)&&(!x.publish_after||Date.parse(x.publish_after)<=now)&&(!x.publish_retry_at||Date.parse(x.publish_retry_at)<=now)&&(x.status==='partial'||!posted.some(y=>y.film.id===x.film.id&&now-Date.parse(y.instagram_published_at)<brand.movie_cooldown_days*86400000)));
+ const candidates=items.filter(x=>['ready','partial'].includes(x.status)&&(!x.publish_after||Date.parse(x.publish_after)<=now)&&(!x.publish_retry_at||Date.parse(x.publish_retry_at)<=now)&&(x.status==='partial'||!posted.some(y=>sameWork(x,y))));
  const diversified=candidates.filter(x=>{const source=x.source_post_url?.split('/')[3];return !source||recentSources.filter(y=>y===source).length<2;});
  const progress=classicDailyProgress(items,brand,now);
  if(progress.confirmed<progress.due){const classic=candidates.find(isClassic);if(classic)return classic;}
