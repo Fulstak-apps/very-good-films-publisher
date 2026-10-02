@@ -49,7 +49,7 @@ await withLock(async()=>{
  }
  const confirmed=memory.items.filter(x=>x.instagram_media_id||x.threads_media_id||x.status==='published');
  for(const item of memory.items){
-  if(['ready','partial'].includes(item.status)&&confirmed.some(post=>post.key!==item.key&&sameWork(item,post))){
+  if(['ready','partial','needs_review'].includes(item.status)&&!item.instagram_media_id&&!item.threads_media_id&&confirmed.some(post=>post.key!==item.key&&sameWork(item,post))){
    item.status='duplicate';
    item.review_reason='This movie has already been published; only one clip per movie is allowed';
   }
@@ -94,6 +94,7 @@ await withLock(async()=>{
  }
  const candidates=memory.items.filter(x=>
   x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&verifiedSourceIdentity(x.source_details,x.source_caption)&&
+  !confirmed.some(post=>sameWork(x,post))&&
   x.qa?.source_verified===true&&x.qa?.media_verified===true&&
   !x.instagram_media_id&&!x.threads_media_id&&
   !(Date.parse(x.recovery_retry_at||'')>Date.now())

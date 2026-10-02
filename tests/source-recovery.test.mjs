@@ -57,6 +57,7 @@ test('repair has a bounded title-bearing metadata batch',async()=>{
  assert.ok(script.indexOf('if(hinted && normalize(item.source_caption).includes(normalize(hinted)))')<script.indexOf('const title=await titleFromCaption'));
  assert.match(script,/identity_verified===true&&!verifiedSourceIdentity/);
  assert.match(script,/Source identity must pass current three-way verification/);
+ assert.match(script,/!confirmed\.some\(post=>sameWork\(x,post\)\)/);
 });
 });
 
