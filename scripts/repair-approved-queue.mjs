@@ -15,6 +15,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 // Keep this below the recovery supervisor's two-minute allowance so a slow
 // public catalog cannot make the whole repair pass lose its lock and work.
 const candidatesPerRun=1;
+const metadataCandidatesPerRun=3;
 const normalize=value=>String(value||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 async function titleFromCaption(caption){
  if(process.env.VGF_OLLAMA_METADATA==='0'||!String(caption||'').trim())return undefined;
@@ -63,7 +64,11 @@ await withLock(async()=>{
   sourceHints(x.source_caption).title_hint&&
   (x.source_details?.version!=='source-caption-film-info-v6'||x.source_details?.identity?.version!=='source-catalog-identity-v2'||!(Date.parse(x.metadata_retry_at||'')>Date.now())||
    (x.source_details?.identity_verified===true&&!verifiedSourceIdentity(x.source_details,x.source_caption)))
- ).slice(0,candidatesPerRun);
+ ).sort((a,b)=>{
+  const verifiedDelta=Number(b.source_details?.identity_verified===true)-Number(a.source_details?.identity_verified===true);
+  if(verifiedDelta)return verifiedDelta;
+  return Date.parse(b.updated_at||b.discovered_at||0)-Date.parse(a.updated_at||a.discovered_at||0);
+ }).slice(0,metadataCandidatesPerRun);
  for(const item of reviewBatch){
   let details=await enrichSourceMetadata(item.source_caption,item.source_details||{});
   if(!verifiedSourceIdentity(details,item.source_caption)){

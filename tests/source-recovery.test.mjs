@@ -51,7 +51,7 @@ test('Wikipedia fallback ignores same-named soundtrack results',async()=>{
 test('repair has a bounded title-bearing metadata batch',async()=>{
  const script=await fs.readFile(new URL('../scripts/repair-approved-queue.mjs',import.meta.url),'utf8');
  assert.match(script,/const reviewBatch=/);
- assert.match(script,/\.slice\(0,candidatesPerRun\)/);
+ assert.match(script,/\.slice\(0,metadataCandidatesPerRun\)/);
  assert.match(script,/sourceHints\(x\.source_caption\)\.title_hint/);
  assert.match(script,/const candidatesPerRun=1/);
  assert.ok(script.indexOf('if(hinted && normalize(item.source_caption).includes(normalize(hinted)))')<script.indexOf('const title=await titleFromCaption'));
