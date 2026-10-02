@@ -62,6 +62,8 @@ test('Wikipedia attribution fills credits when Wikidata has missing English labe
  const credits=fallbackCredits('Dunkirk is a 2017 war film produced, written, and directed by Christopher Nolan that depicts history. It features an ensemble cast including Fionn Whitehead, Tom Glynn-Carney, Jack Lowden.');
  assert.equal(credits.director,'Christopher Nolan');
  assert.deepEqual(credits.cast,['Fionn Whitehead','Tom Glynn-Carney','Jack Lowden']);
+ const commonWording=fallbackCredits('Avengers: Endgame is a film directed by Anthony Russo that features an ensemble cast that includes Robert Downey Jr., Chris Evans, Mark Ruffalo.');
+ assert.deepEqual(commonWording.cast,['Robert Downey Jr.','Chris Evans','Mark Ruffalo']);
 });
 
 test('a source title is publishable only with a complete exact identity record',()=>{

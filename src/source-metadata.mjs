@@ -6,7 +6,7 @@ const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
 const names=value=>clean(value).replace(/\b(?:and|with)\b/gi,',').split(',').map(clean).filter(x=>/^[A-Z][A-Za-z .'-]{1,80}$/.test(x)).slice(0,3);
 export function fallbackCredits(extract){
  const director=clean(String(extract||'').match(/(?:written and )?directed by ([A-Z][A-Za-z .'-]{2,80}?)(?:\s+(?:that|who|,|\.|\band\b))/i)?.[1]);
- const castText=String(extract||'').match(/(?:stars?|features? an ensemble cast including|starring)\s+([^.!]{3,500})/i)?.[1];
+ const castText=String(extract||'').match(/(?:stars?|features? an ensemble cast (?:including|that includes)|starring)\s+([^!\n]{3,500}?)(?:\.(?=\s+[A-Z]|$)|!|$)/i)?.[1];
  return {director,cast:names(castText||'')};
 }
 
