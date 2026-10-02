@@ -35,6 +35,16 @@ async function originalCapture(item){
 
 await withLock(async()=>{
  const [memory,brand]=await Promise.all([readJSON('state/memory.json'),readJSON('config/brand.json')]);
+ // Revalidate buffered clips whenever the identity contract changes. A clip
+ // verified under an older, weaker rule must never wait in `ready` and slip
+ // through on the next scheduled publisher run.
+ for(const item of memory.items){
+  if(item.kind==='source_repost'&&['ready','partial'].includes(item.status)&&!verifiedSourceIdentity(item.source_details,item.source_caption)){
+   item.status='needs_review';
+   item.review_reason='Source identity must pass current three-way verification';
+   delete item.metadata_retry_at;
+  }
+ }
  const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
  const recoveryFloor=Math.max(10,Math.ceil((brand.queue_target||30)/2));
  if(buffered>=recoveryFloor){console.log(JSON.stringify({status:'queue_above_recovery_floor',buffered,recoveryFloor}));return;}
