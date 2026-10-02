@@ -29,6 +29,8 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('Silo opening title sequence is widely praised').title_hint,'Silo');
  assert.equal(sourceHints('The Sopranos Season 3 spoilers warning').media_type_hint,'tv');
  assert.equal(sourceHints('Silo Season 3 spoilers warning').title_hint,'Silo');
+ assert.equal(sourceHints('🎥🎬: Abbott Elementary\n#Sitcom #TVComedy').media_type_hint,'tv');
+ assert.equal(sourceHints('🎥🎬: Breeder\n#HorrorFilm #MoviePlot').media_type_hint,'movie');
  assert.equal(sourceHints('𝐎𝐋𝐃𝐒𝐂𝐇𝐎𝐎𝐋 𝐒𝐂𝐑𝐄𝐄𝐍𝐈𝐍𝐆 𝐎𝐅 𝐃𝐀𝐙𝐄𝐃 𝐀𝐍𝐃 𝐂𝐎𝐍𝐅𝐔𝐒𝐄𝐃 🍿').title_hint,'DAZED AND CONFUSED');
 assert.equal(sourceHints("Emma Stone and Mark Ruffalo's iconic dance in Poor Things was choreographed in Lisbon.").title_hint,'Poor Things');
 assert.equal(sourceHints('Ethan Hawke was not fond of Great Expectations (1998), despite working with Robert De Niro.').title_hint,'Great Expectations');

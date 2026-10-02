@@ -47,7 +47,7 @@ export function sourceHints(caption){
  const hashtagTitle=tags.length===1?tags[0]:undefined;
  const title=clean(titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||workAfterPreposition?.[1]||workAfterDescriptor?.[1]||yearMatch?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
- const media_type_hint=/\b(?:season|episode|television|tv series|series finale)\b/i.test(text)?'tv':/\b(?:film|movie|feature)\b/i.test(text)?'movie':undefined;
+ const media_type_hint=/\b(?:season|episode|television|tv series|series finale|sitcom)\b|#(?:tv|tvcomedy|tvseries|sitcom)\b/i.test(text)?'tv':/\b(?:film|movie|feature)\b|#(?:movie|movies|horrorfilm)\b/i.test(text)?'movie':undefined;
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):standaloneYear?Number(standaloneYear[1]):undefined,media_type_hint,availability:availability||undefined};
 }
 
@@ -81,12 +81,13 @@ export function verifiedSourceIdentity(details,caption){
 
 async function wikiMetadata(base){
  const headers={'User-Agent':'VeryGoodFilmsPublisher/1.0 (metadata@verygoodfilms.local)'};
- const search=new URL('https://en.wikipedia.org/w/api.php');search.search='action=query&format=json&origin=*&list=search&srlimit=5&srsearch='+encodeURIComponent(`intitle:${base.title_hint} ${base.year||''} film`);
+ const workKind=base.media_type_hint==='tv'?'television series':'film';
+ const search=new URL('https://en.wikipedia.org/w/api.php');search.search='action=query&format=json&origin=*&list=search&srlimit=5&srsearch='+encodeURIComponent(`intitle:${base.title_hint} ${base.year||''} ${workKind}`);
  const hits=(await (await fetch(search,{headers,signal:AbortSignal.timeout(5000)})).json()).query?.search||[];
  const matching=hits.filter(x=>normal(x.title).includes(normal(base.title_hint))||normal(base.title_hint).includes(normal(x.title)));
  // Prefer a film-specific result over a same-named novel, album, or general
  // article. This is common for titles such as Poor Things.
- const hit=matching.find(x=>/\((?:\d{4}\s+)?film\)/i.test(x.title))||matching[0];if(!hit)return base;
+ const hit=matching.find(x=>base.media_type_hint==='tv'?/\((?:tv|television series)\)/i.test(x.title):/\((?:\d{4}\s+)?film\)/i.test(x.title))||matching[0];if(!hit)return base;
  const page=new URL('https://en.wikipedia.org/w/api.php');page.search='action=query&format=json&origin=*&prop=extracts|pageprops&exintro=1&explaintext=1&pageids='+hit.pageid;
  const entry=Object.values((await (await fetch(page,{headers,signal:AbortSignal.timeout(5000)})).json()).query?.pages||{})[0];if(!entry?.title)return base;
  const qid=entry.pageprops?.wikibase_item;
