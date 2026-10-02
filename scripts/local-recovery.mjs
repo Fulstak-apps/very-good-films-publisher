@@ -7,7 +7,9 @@ const repo='Fulstak-apps/very-good-films-publisher';
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:64*1024*1024});
 const wait=(ms)=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
 const ghRead=args=>{let last;for(let attempt=0;attempt<3;attempt++){try{return gh(args);}catch(error){last=error;if(attempt<2)wait(2000*(attempt+1));}}throw last;};
-const git=args=>execFileSync('/usr/bin/git',args,{encoding:'utf8',timeout:60000,maxBuffer:16*1024*1024});
+// Do not use Apple's /usr/bin/git here: an OS/Xcode update can suddenly gate
+// it behind an interactive license prompt and silently stop queue recovery.
+const git=args=>execFileSync('/opt/homebrew/bin/git',args,{encoding:'utf8',timeout:60000,maxBuffer:16*1024*1024});
 const persistRepairState=()=>{
  if(!git(['status','--porcelain','--','state/memory.json']).trim())return;
  git(['add','--','state/memory.json']);git(['commit','-m','Restore verified source queue item']);

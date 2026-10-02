@@ -64,6 +64,8 @@ test('repair has a bounded title-bearing metadata batch',async()=>{
 
 test('local recovery persists a repaired queue before dispatch',async()=>{
  const script=await fs.readFile(new URL('../scripts/local-recovery.mjs',import.meta.url),'utf8');
+ assert.match(script,/\/opt\/homebrew\/bin\/git/);
+ assert.doesNotMatch(script,/execFileSync\('\/usr\/bin\/git'/);
  assert.match(script,/persistRepairState\(\)/);
  assert.ok(script.indexOf('persistRepairState();memory=remote')<script.indexOf("gh(['workflow','run'"));
 });
