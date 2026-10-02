@@ -24,9 +24,6 @@ on:
         default: '1'
   schedule:
     - cron: '*/15 * * * *'
-  push:
-    branches: [main]
-    paths-ignore: ['state/**', 'docs/**', '*.md']
 permissions:
   contents: write
 concurrency:
