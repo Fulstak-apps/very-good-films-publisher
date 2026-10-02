@@ -95,7 +95,9 @@ async function wikiMetadata(base){
  if(qid){
   const entity=await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`,{headers,signal:AbortSignal.timeout(5000)});if(entity.ok){
    const claims=(await entity.json()).entities?.[qid]?.claims||{};
-   const directorId=claims.P57?.[0]?.mainsnak?.datavalue?.value?.id;
+   // Television works commonly store their creator under P170 and have no
+   // film-director (P57). Use the catalogued creator as the caption credit.
+   const directorId=(claims.P57?.[0]||claims.P170?.[0])?.mainsnak?.datavalue?.value?.id;
    const castIds=[...(claims.P161||[]),...(claims.P725||[])].map(x=>x.mainsnak?.datavalue?.value?.id).filter(Boolean).slice(0,3);
    const ids=[directorId,...castIds].filter(Boolean);
    const labels=ids.length?await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&origin=*&ids=${ids.join('|')}&props=labels&languages=en`,{headers,signal:AbortSignal.timeout(5000)}):null;
@@ -105,6 +107,10 @@ async function wikiMetadata(base){
   }
  }
  const extract=strip(entry.extract);
+ if(!year){
+  const premiere=extract.match(/\b(?:premiered|debuted|released)\b[^.]{0,120}\b(19\d{2}|20\d{2})\b/i);
+  if(premiere)year=Number(premiere[1]);
+ }
  // Wikidata can omit English labels even when the film page has clearly
  // attributed credits. Use only the page's introductory attribution as a
  // fallback, never a guessed name.

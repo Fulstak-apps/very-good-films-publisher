@@ -71,6 +71,17 @@ test('Wikipedia attribution fills credits when Wikidata has missing English labe
  assert.deepEqual(commonWording.cast,['Robert Downey Jr.','Chris Evans','Mark Ruffalo']);
 });
 
+test('TV metadata accepts a catalogued creator and premiere year',async()=>{
+ const original=global.fetch,response=value=>({ok:true,json:async()=>value});
+ global.fetch=async url=>{const target=String(url);
+  if(target.includes('list=search'))return response({query:{search:[{title:'Abbott Elementary',pageid:1}]}});
+  if(target.includes('pageids=1'))return response({query:{pages:{1:{title:'Abbott Elementary',pageprops:{wikibase_item:'Q1'},extract:'Abbott Elementary is an American sitcom television series created by Quinta Brunson. It stars Quinta Brunson and Tyler James Williams. The series premiered on December 7, 2021.'}}}});
+  if(target.includes('EntityData/Q1'))return response({entities:{Q1:{claims:{P170:[{mainsnak:{datavalue:{value:{id:'Q2'}}}}],P161:[{mainsnak:{datavalue:{value:{id:'Q2'}}}},{mainsnak:{datavalue:{value:{id:'Q3'}}}}]}}}});
+  if(target.includes('wbgetentities'))return response({entities:{Q2:{labels:{en:{value:'Quinta Brunson'}}},Q3:{labels:{en:{value:'Tyler James Williams'}}}}});throw Error(target);
+ };
+ try{const {enrichSourceMetadata}=await import('../src/source-metadata.mjs');const result=await enrichSourceMetadata('🎥🎬: Abbott Elementary\n#Sitcom #TVComedy');assert.equal(result.identity_verified,true);assert.equal(result.year,2021);assert.equal(result.director,'Quinta Brunson');}finally{global.fetch=original;}
+});
+
 test('a source title is publishable only with a complete exact identity record',()=>{
  const partial={title:'The Godfather',year:1972,director:'Francis Ford Coppola',cast:['Marlon Brando'],synopsis:'A crime family saga.',metadata_source:'https://www.themoviedb.org/movie/238',type:'movie'};
  assert.equal(verifiedSourceTitle(partial),undefined);
