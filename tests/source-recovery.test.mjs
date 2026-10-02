@@ -69,6 +69,12 @@ test('local recovery persists a repaired queue before dispatch',async()=>{
  assert.match(script,/persistRepairState\(\)/);
  assert.ok(script.indexOf('persistRepairState();memory=remote')<script.indexOf("gh(['workflow','run'"));
 });
+
+test('collector asks the literal-title extractor before rejecting an unparsed caption',async()=>{
+ const script=await fs.readFile(new URL('../scripts/source-collector.mjs',import.meta.url),'utf8');
+ assert.match(script,/const extractedHint=parsedHint\|\|await localTitleHint\(source_caption\)/);
+ assert.ok(script.indexOf('const extractedHint=')<script.indexOf("throw new Error('Source caption has no explicit"));
+});
 });
 
 test('Wikipedia attribution fills credits when Wikidata has missing English labels',()=>{

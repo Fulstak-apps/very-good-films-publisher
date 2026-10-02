@@ -143,8 +143,10 @@ async function queue(candidate,ledger){
  // metadata and let the GitHub publisher perform the authoritative catalog
  // match. This prevents a local credential gap from starving both feeds while
  // retaining the exact same publish-time identity gate.
- if(!sourceHints(source_caption).title_hint)throw new Error('Source caption has no explicit movie or television title');
- let source_details=await enrichSourceMetadata(source_caption);
+ const parsedHint=sourceHints(source_caption).title_hint;
+ const extractedHint=parsedHint||await localTitleHint(source_caption);
+ if(!extractedHint)throw new Error('Source caption has no explicit movie or television title');
+ let source_details=await enrichSourceMetadata(source_caption,parsedHint?{}:{title_hint_verified:extractedHint});
  if(!sourceDetailsComplete(source_details)){
   const title_hint=await localTitleHint(source_caption);
   if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
