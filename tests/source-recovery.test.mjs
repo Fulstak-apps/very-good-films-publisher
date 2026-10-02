@@ -61,6 +61,12 @@ test('repair has a bounded title-bearing metadata batch',async()=>{
  assert.match(script,/Source identity must pass current three-way verification/);
  assert.match(script,/!confirmed\.some\(post=>sameWork\(x,post\)\)/);
 });
+
+test('local recovery persists a repaired queue before dispatch',async()=>{
+ const script=await fs.readFile(new URL('../scripts/local-recovery.mjs',import.meta.url),'utf8');
+ assert.match(script,/persistRepairState\(\)/);
+ assert.ok(script.indexOf('persistRepairState();memory=remote')<script.indexOf("gh(['workflow','run'"));
+});
 });
 
 test('Wikipedia attribution fills credits when Wikidata has missing English labels',()=>{

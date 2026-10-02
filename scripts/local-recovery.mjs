@@ -7,6 +7,12 @@ const repo='Fulstak-apps/very-good-films-publisher';
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:64*1024*1024});
 const wait=(ms)=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
 const ghRead=args=>{let last;for(let attempt=0;attempt<3;attempt++){try{return gh(args);}catch(error){last=error;if(attempt<2)wait(2000*(attempt+1));}}throw last;};
+const git=args=>execFileSync('/usr/bin/git',args,{encoding:'utf8',timeout:60000,maxBuffer:16*1024*1024});
+const persistRepairState=()=>{
+ if(!git(['status','--porcelain','--','state/memory.json']).trim())return;
+ git(['add','--','state/memory.json']);git(['commit','-m','Restore verified source queue item']);
+ for(let attempt=0;attempt<3;attempt++)try{git(['push','origin','HEAD:main']);return;}catch(error){if(attempt===2)throw error;git(['pull','--rebase','--autostash','origin','main']);}
+};
 const remote=path=>JSON.parse(ghRead(['api','-H','Accept: application/vnd.github.raw+json',`repos/${repo}/contents/${path}`]));
 // Published reels live on the media host. Keeping their local captures and
 // rendered exports eventually fills the Mac disk and prevents the recovery
@@ -61,7 +67,7 @@ if(brand.enabled&&sourceBuffered<sourceTarget){
  // Rebuild verified approved-source captures before the queue reaches zero.
  // The repair script enforces its own floor and refuses branded or previously
  // published media, so running this check early cannot create duplicates.
- if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:240000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
+ if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:240000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});persistRepairState();memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
  memory=remote('state/memory.json');
  mediaCleanup=await cleanupPublishedMedia(memory);
 }
