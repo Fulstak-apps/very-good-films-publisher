@@ -32734,9 +32734,35 @@
         "source_title": "Abbott Elementary",
         "structured_title_evidence": true,
         "version": "source-caption-film-info-v6",
-        "identity_verified": false,
+        "identity_verified": true,
         "title_hint_verified": "Abbott Elementary",
-        "media_type_hint": "tv"
+        "media_type_hint": "tv",
+        "year": 2021,
+        "title": "Abbott Elementary",
+        "type": "tv",
+        "director": "Quinta Brunson",
+        "cast": [
+          "Quinta Brunson",
+          "Tyler James Williams",
+          "Lisa Ann Walter"
+        ],
+        "synopsis": "Abbott Elementary is an American mockumentary sitcom television series created by Quinta Brunson for ABC. It stars Brunson as Janine Teagues, a perpetually optimistic second-grade teacher at the underfunded Abbott Elementary, a fictional predominantly black public school in West Philadelphia. The ensemble cast includes Tyler James Williams, Janelle James, Lisa Ann Walter, Chris Perfetti, William Stanford Davis, and Sheryl Lee Ralph. The series premiered on December 7, 2021, and was met with critical acclaim and strong viewership numbers on Hulu and other delayed viewing methods. The show has been nominated for 37 Primetime Emmy Awards, winning four in the comedy series categories including L",
+        "metadata_source": "https://en.wikipedia.org/wiki/Abbott_Elementary",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Abbott Elementary",
+          "source_year": null,
+          "catalog_title": "Abbott Elementary",
+          "catalog_year": 2021,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_type_match"
+          ]
+        }
       },
       "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/26ce6eb3b0659c32f746fe7243d8622430e5c502725644bd8a8fc4304c4f6142.mp4?download=1",
       "asset_sha256": "26ce6eb3b0659c32f746fe7243d8622430e5c502725644bd8a8fc4304c4f6142",
@@ -32753,15 +32779,15 @@
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-10-02T04:09:32.836Z",
         "source_duration": 33.412062,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "recovered_at": "2026-10-02T16:13:58.972Z"
       },
       "caption_style": "source_repost",
       "metadata_pending": true,
-      "status": "needs_review",
-      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "status": "ready",
       "discovered_at": "2026-10-02T05:34:40.964Z",
       "key": "6a8a7760b48a8643516772dbe7befdbc9f29927e9edf8a29d31c2d29e1b63796",
-      "metadata_retry_at": "2026-10-02T22:06:20.774Z"
+      "metadata_retry_at": "2026-10-02T22:13:33.559Z"
     },
     {
       "kind": "source_repost",
