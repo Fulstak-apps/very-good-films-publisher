@@ -5594,7 +5594,7 @@
         "title_hint": "Big Fish",
         "year": 2003,
         "availability": ". Why Watch?",
-        "version": "source-caption-film-info-v2",
+        "version": "source-caption-film-info-v6",
         "cast": [
           "Ewan McGregor",
           "Albert Finney",
@@ -5603,7 +5603,28 @@
         "title": "Big Fish",
         "director": "Tim Burton",
         "synopsis": "Big Fish is a 2003 American fantasy drama film directed by Tim Burton. It is based on the 1998 novel Big Fish: A Novel of Mythic Proportions by Daniel Wallace. The film stars Ewan McGregor, Albert Finney, Billy Crudup, Jessica Lange, Helena Bonham Carter, Alison Lohman, Robert Guillaume, Marion Cotillard, Steve Buscemi, and Danny DeVito. It tells the story of a frustrated son who tries to distinguish fact from fiction in the life of his father, a teller of tall tales. The film's screenwriter, John August, read a manuscript of the novel six months before it was published and convinced Columbia Pictures to acquire the rights. He began adapting the novel as a screenplay while producers negotiat",
-        "metadata_source": "https://en.wikipedia.org/wiki/Big_Fish"
+        "metadata_source": "https://en.wikipedia.org/wiki/Big_Fish",
+        "media_type_hint": "movie",
+        "source_title": "Big Fish",
+        "source_year": 2003,
+        "structured_title_evidence": true,
+        "identity_verified": true,
+        "type": "movie",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Big Fish",
+          "source_year": 2003,
+          "catalog_title": "Big Fish",
+          "catalog_year": 2003,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
       },
       "review_reason": "Original approved-source video and VGF-only branding required"
     },
@@ -29135,14 +29156,39 @@
       "source_post_url": "https://www.instagram.com/popcorncutzz/reel/Dd1ObaORpK-/",
       "source_caption": "🎥🎬: Death Becomes Her (1992)\n\nMadeline Ashton and Helen Sharp have been bitter rivals for years, both connected to the same man, Ernest. When Helen suddenly returns looking impossibly young and beautiful, Madeline becomes desperate to discover her secret.\n\nShe soon meets the mysterious Lisle von Rhuman, who offers her a magical potion promising eternal youth. Madeline takes it, only to discover that immortality doesn’t mean she can’t be injured. When Helen gets the same treatment, their old rivalry turns into an outrageous battle where neither woman can actually die.\n\nWith Ernest caught between them, the feud spirals into a darkly hilarious struggle involving jealousy, vanity, revenge, and increasingly bizarre attempts to destroy one another.\n\n#DeathBecomesHer #MerylStreep #GoldieHawn #BruceWillis #DarkComedy",
       "source_details": {
-        "title_hint": "Death Becomes Her (1992)",
+        "title_hint": "Death Becomes Her",
         "year": 1992,
-        "source_title": "Death Becomes Her (1992)",
+        "source_title": "Death Becomes Her",
         "source_year": 1992,
         "version": "source-caption-film-info-v6",
-        "identity_verified": false,
+        "identity_verified": true,
         "title_hint_verified": "Death Becomes Her (1992)",
-        "structured_title_evidence": false
+        "structured_title_evidence": true,
+        "title": "Death Becomes Her",
+        "type": "movie",
+        "director": "Robert Zemeckis",
+        "cast": [
+          "Meryl Streep",
+          "Bruce Willis",
+          "Goldie Hawn"
+        ],
+        "synopsis": "Death Becomes Her is a 1992 American surrealist black comedy fantasy film directed and produced by Robert Zemeckis, written by David Koepp and Martin Donovan, and starring Meryl Streep, Bruce Willis, Goldie Hawn, and Isabella Rossellini. Filmed in Los Angeles between December 1991 and April 1992, it follows two women who drink a magic potion that promises eternal youth. Upon release in the United States by Universal Pictures on July 31, 1992, the film received mixed reviews from critics. Its pioneering usage of computer-generated effects helped it win the Academy Award for Best Visual Effects. The film is regarded as a cult classic and a highly treasured film within the gay community. It has",
+        "metadata_source": "https://en.wikipedia.org/wiki/Death_Becomes_Her",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Death Becomes Her",
+          "source_year": 1992,
+          "catalog_title": "Death Becomes Her",
+          "catalog_year": 1992,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
       },
       "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/077c612302113cbfcf227812d0ae30c32d97a59a081b9695b385756c78400482.mp4?download=1",
       "asset_sha256": "077c612302113cbfcf227812d0ae30c32d97a59a081b9695b385756c78400482",
@@ -29159,15 +29205,14 @@
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-09-29T01:26:39.068Z",
         "source_duration": 59.509886,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "recovered_at": "2026-10-02T20:36:43.427Z"
       },
       "caption_style": "source_repost",
       "metadata_pending": true,
-      "status": "needs_review",
-      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "status": "ready",
       "discovered_at": "2026-09-29T01:27:05.890Z",
-      "key": "9ef46fe367349b87951f08a00f8dc2b2fb8ef3e73fe1a237d951aa4a3e2728e3",
-      "metadata_retry_at": "2026-10-02T23:45:23.788Z"
+      "key": "9ef46fe367349b87951f08a00f8dc2b2fb8ef3e73fe1a237d951aa4a3e2728e3"
     },
     {
       "kind": "source_repost",
