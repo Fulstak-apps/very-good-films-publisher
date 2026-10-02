@@ -4,6 +4,10 @@ const clean=value=>String(value||'').normalize('NFKC').replace(/\s+/g,' ').trim(
 const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
 const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
 const names=value=>clean(value).replace(/\b(?:and|with)\b/gi,',').split(',').map(clean).filter(x=>/^[A-Z][A-Za-z .'-]{1,80}$/.test(x)).slice(0,3);
+const structuredTitleMatch=(caption,title)=>String(caption||'').normalize('NFKC').split(/\r?\n/).some(line=>{
+ const candidate=clean(line).replace(/^[🎬🎥📺\uFE0F\s:]+/gu,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'');
+ return normal(candidate)===normal(title);
+});
 export function fallbackCredits(extract){
  const director=clean(String(extract||'').match(/(?:written and )?directed by ([A-Z][A-Za-z .'-]{2,80}?)(?:\s+(?:that|who|,|\.|\band\b))/i)?.[1]);
  const castText=String(extract||'').match(/(?:stars?|features? an ensemble cast (?:including|that includes)|starring)\s+([^!\n]{3,500}?)(?:\.(?=\s+[A-Z]|$)|!|$)/i)?.[1];
@@ -63,7 +67,7 @@ export function verifiedSourceTitle(details){
  // The Godfather and blocks same-named remakes from inheriting the wrong year.
  const evidence=new Set(identity.evidence||[]);
  if(!evidence.has('caption_literal_title')||!evidence.has('catalog_exact_title')||
-   !(evidence.has('source_year_match')||evidence.has('source_type_match')))return undefined;
+   !(evidence.has('source_year_match')||evidence.has('source_type_match')||evidence.has('structured_title_match')))return undefined;
  const title=clean(details?.title);
  return title||undefined;
 }
@@ -119,7 +123,7 @@ async function wikiMetadata(base){
  const exact=normal(hit.title.replace(/\s*\([^)]*\)$/,''))===normal(base.source_title||base.title_hint)?[hit]:[];
  const yearMatches=!base.source_year||year===base.source_year;
  if(!director||!type||normal(title)!==normal(base.source_title||base.title_hint)||exact.length!==1||!yearMatches)return base;
- const disambiguator=base.source_year?'source_year_match':base.media_type_hint===type?'source_type_match':null;
+ const disambiguator=base.source_year?'source_year_match':base.media_type_hint===type?'source_type_match':base.structured_title_evidence?'structured_title_match':null;
  if(!disambiguator)return {...base,identity_error:'Title needs an explicit year or media type to disambiguate it'};
  return {...base,title,year,type,director,cast:cast.length?cast:(base.cast||[]),synopsis:extract.slice(0,700),metadata_source:`https://en.wikipedia.org/wiki/${encodeURIComponent(entry.title.replace(/ /g,'_'))}`,identity_verified:true,identity:{version:'source-catalog-identity-v2',method:'wikipedia_exact_title',source_title:base.source_title,source_year:base.source_year||null,catalog_title:title,catalog_year:year,catalog_type:type,exact_matches:exact.length,evidence:['caption_literal_title','catalog_exact_title',disambiguator]}};
 }
@@ -135,7 +139,7 @@ export async function enrichSourceMetadata(caption,current={}){
  // permanently prevent an exact catalog match.
  const trustedTitle=clean(current.title_hint_verified);
  const titleHint=trustedTitle&&normal(caption).includes(normal(trustedTitle))?trustedTitle:hints.title_hint;
- const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,version:'source-caption-film-info-v6',identity_verified:false};
+ const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,structured_title_evidence:structuredTitleMatch(caption,titleHint),version:'source-caption-film-info-v6',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}
@@ -159,7 +163,7 @@ export async function enrichSourceMetadata(caption,current={}){
   const title=data.title||data.name,year=Number((data.release_date||data.first_air_date||'').slice(0,4));
   if(normal(title)!==normal(base.source_title)||!Number.isInteger(year)||(base.source_year&&year!==base.source_year))return {...base,identity_error:'Catalog identity does not match source caption'};
   const director=credits.crew?.find(x=>x.job==='Director')?.name || (type==='tv'?data.created_by?.[0]?.name:undefined);
-  const disambiguator=base.source_year?'source_year_match':base.media_type_hint===type?'source_type_match':null;
+  const disambiguator=base.source_year?'source_year_match':base.media_type_hint===type?'source_type_match':structuredTitleMatch(caption,base.source_title)?'structured_title_match':null;
   if(!disambiguator)return {...base,identity_error:'Title needs an explicit year or media type to disambiguate it'};
   return {...base,title,year,type,director,cast:(credits.cast||[]).slice(0,3).map(x=>x.name),synopsis:clean(data.overview),availability:places.length?places.join(', '):base.availability,metadata_source:`https://www.themoviedb.org/${type}/${id}`,identity_verified:true,identity:{version:'source-catalog-identity-v2',method:'tmdb_exact_title',source_title:base.source_title,source_year:base.source_year||null,catalog_title:title,catalog_year:year,catalog_type:type,exact_matches:candidates.length,evidence:['caption_literal_title','catalog_exact_title',disambiguator]}};
  }catch{try{return await wikiMetadata(base);}catch{return base;}}

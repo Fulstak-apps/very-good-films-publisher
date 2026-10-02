@@ -81,6 +81,8 @@ test('identity requires three-way evidence and rejects ambiguous same-name works
  assert.equal(verifiedSourceTitle(twoChecks),undefined);
  const threeChecks={...base,identity:{...twoChecks.identity,source_year:1972,evidence:['caption_literal_title','catalog_exact_title','source_year_match']}};
  assert.equal(verifiedSourceTitle(threeChecks),'The Godfather');
+ const headingChecks={...base,identity:{...twoChecks.identity,evidence:['caption_literal_title','catalog_exact_title','structured_title_match']}};
+ assert.equal(verifiedSourceTitle(headingChecks),'The Godfather');
 });
 
 test('already imported clips make no metadata requests',async()=>{
