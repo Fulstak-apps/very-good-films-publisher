@@ -10,6 +10,17 @@ const ghRead=args=>{let last;for(let attempt=0;attempt<3;attempt++){try{return g
 // Do not use Apple's /usr/bin/git here: an OS/Xcode update can suddenly gate
 // it behind an interactive license prompt and silently stop queue recovery.
 const git=args=>execFileSync('/opt/homebrew/bin/git',args,{encoding:'utf8',timeout:60000,maxBuffer:16*1024*1024});
+const recoverStaleRebase=async()=>{
+ const relative=git(['rev-parse','--git-path','rebase-merge']).trim();
+ try{
+  const stat=await fs.stat(relative);
+  if(Date.now()-stat.mtimeMs<15*60_000)return false;
+  // The recovery lock guarantees this supervisor is the only local writer.
+  // A rebase directory older than three supervisor intervals is therefore a
+  // crashed operation, and leaving it in place blocks every future refill.
+  git(['rebase','--abort']);return true;
+ }catch(error){if(error.code==='ENOENT')return false;throw error;}
+};
 const persistRepairState=()=>{
  if(!git(['status','--porcelain','--','state/memory.json']).trim())return;
  git(['add','--','state/memory.json']);git(['commit','-m','Restore verified source queue item']);
@@ -53,6 +64,7 @@ process.on('unhandledRejection',async error=>{console.error(error);await release
 process.on('SIGTERM',async()=>{await releaseRecoveryLock();process.exit(143);});
 process.on('SIGINT',async()=>{await releaseRecoveryLock();process.exit(130);});
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
+const staleRebaseRecovered=await recoverStaleRebase();
 let mediaCleanup=await cleanupPublishedMedia(memory);
 let collectorStatus='not_needed',collectorError,repairError,classicsError;
 // Refill before the live queue reaches zero. The supervisor lock prevents
@@ -82,14 +94,16 @@ const posted=memory.items.filter(x=>x.instagram_published_at);
 const last=Math.max(0,...posted.map(x=>Date.parse(x.instagram_published_at)));
 const ready=memory.items.filter(x=>x.status==='ready').length;
 const pending=memory.items.some(x=>x.status==='publishing');
+const knownSceneIds=new Set(memory.items.map(x=>x.scene?.id).filter(Boolean));
+const inboxPending=(await fs.readdir('inbox').catch(error=>error.code==='ENOENT'?[]:Promise.reject(error))).some(name=>name.endsWith('.json')&&!knownSceneIds.has(name.slice(0,-5)));
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
-Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError,mediaCleanup});
+Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError,mediaCleanup,staleRebaseRecovered,inboxPending});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
 Object.assign(report,refillHealth(memory.items,brand,JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8').catch(()=>'{}'))));
-if(brand.enabled&&shouldDispatch({active,ready,pending,due,withinCap,discovered:memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now))})){
+if(brand.enabled&&shouldDispatch({active,ready,pending,due,withinCap,discovered:inboxPending||memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now))})){
  try{gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';}
  catch(error){report.action='dispatch_failed';report.dispatchError=String(error.message||error).slice(0,500);}
 }

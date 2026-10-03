@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
-import {validate,sceneKey} from './editorial.mjs';
+import {validate,sceneKey,duplicate} from './editorial.mjs';
 import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceIdentity} from './source-metadata.mjs';
 import {approvedSource} from './source-policy.mjs';
 export async function importPrepared(memory,directory='inbox'){
@@ -19,6 +19,11 @@ export async function importPrepared(memory,directory='inbox'){
   const errors=validate(x,x.status==='ready');if(x.kind!=='source_repost'||errors.length)throw new Error(`Invalid prepared import ${name}: ${errors.join('; ')}`);
   x.key=sceneKey(x);
   if(memory.items.some(y=>y.key===x.key||y.source_post_url===x.source_post_url||y.asset_sha256===x.asset_sha256))continue;
+  // Prepared inbox files can arrive in one batch after their movie has
+  // already been published. Quarantine those files during import so they do
+  // not inflate queue depth or keep the recovery loop from refilling with a
+  // genuinely new title.
+  if(duplicate(x,memory.items)){x.status='duplicate';x.review_reason='This movie has already been published; only one clip per movie is allowed';}
   memory.items.push(x);added++;
  }
  return {added};

@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {readJSON,saveMemory,withLock} from '../src/store.mjs';
 import {discover,discoverTMDB,enrichFilm} from '../src/discovery.mjs';
 import {download,formatVideo,sha256,upload,trustedURL} from '../src/media.mjs';
-import {duplicate,validate,caption} from '../src/editorial.mjs';
+import {duplicate,validate,caption,sameWork} from '../src/editorial.mjs';
 import {publish,accounts,verifyAccount} from '../src/meta.mjs';
 import {queuePlan} from '../src/queue.mjs';
 import {holdUnreviewed} from '../src/review.mjs';
@@ -20,6 +20,17 @@ await withLock(async()=>{
  if(!readOnly&&sources.source_feed_only&&enforceSourcePolicy(memory.items))await save();
  if(!readOnly&&(await importPrepared(memory)).added)await save();
  if(!readOnly&&(await importClassics(memory)).added)await save();
+ // Older inbox imports may predate import-time movie deduplication. Sweep
+ // only against confirmed publication history; never let two candidates mark
+ // each other duplicate and accidentally remove the sole usable new title.
+ if(!readOnly){
+  const confirmed=memory.items.filter(x=>x.status==='published'||x.instagram_media_id||x.threads_media_id);
+  let changed=false;
+  for(const item of memory.items)if(['ready','partial'].includes(item.status)&&!item.instagram_media_id&&!item.threads_media_id&&confirmed.some(post=>post.key!==item.key&&sameWork(item,post))){
+   item.status='duplicate';item.review_reason='This movie has already been published; only one clip per movie is allowed';changed=true;
+  }
+  if(changed)await save();
+ }
  let sourceMetadataChanged=false;
  for(const item of readOnly?[]:memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
   if(!sourceDetailsComplete(item.source_details)){

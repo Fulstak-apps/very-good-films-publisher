@@ -67,8 +67,17 @@ test('local recovery persists a repaired queue before dispatch',async()=>{
  const script=await fs.readFile(new URL('../scripts/local-recovery.mjs',import.meta.url),'utf8');
  assert.match(script,/\/opt\/homebrew\/bin\/git/);
  assert.doesNotMatch(script,/execFileSync\('\/usr\/bin\/git'/);
+ assert.match(script,/recoverStaleRebase/);
+ assert.match(script,/git\(\['rebase','--abort'\]\)/);
+ assert.match(script,/inboxPending/);
  assert.match(script,/persistRepairState\(\)/);
  assert.ok(script.indexOf('persistRepairState();memory=remote')<script.indexOf("gh(['workflow','run'"));
+});
+
+test('durable local state uses Homebrew Git when it is available',async()=>{
+ const store=await fs.readFile(new URL('../src/store.mjs',import.meta.url),'utf8');
+ assert.match(store,/VGF_GIT_BIN/);
+ assert.match(store,/\/opt\/homebrew\/bin\/git/);
 });
 
 test('collector asks the literal-title extractor before rejecting an unparsed caption',async()=>{
