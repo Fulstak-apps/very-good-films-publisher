@@ -33406,8 +33406,35 @@
         "source_title": "He's Just Not That Into You",
         "structured_title_evidence": false,
         "version": "source-caption-film-info-v6",
-        "identity_verified": false,
-        "identity_error": "Title needs an explicit year or media type to disambiguate it"
+        "identity_verified": true,
+        "identity_error": "Title needs an explicit year or media type to disambiguate it",
+        "year": 2009,
+        "source_year": 2009,
+        "title": "He's Just Not That into You",
+        "type": "movie",
+        "director": "Ken Kwapis",
+        "cast": [
+          "Ben Affleck",
+          "Jennifer Aniston",
+          "Drew Barrymore"
+        ],
+        "synopsis": "He's Just Not That into You is a 2009 romantic comedy-drama film directed by Ken Kwapis, based on Greg Behrendt and Liz Tuccillo's 2004 self-help book. It follows nine people and their varying romantic problems. Gigi, a common thread amongst the characters, is followed more closely than the other eight and has a more developed storyline as she consistently misreads all of her romantic partners' behaviors. She meets Alex, who helps her to interpret signs given to her by her dates. The film stars an ensemble cast of Ben Affleck, Jennifer Aniston, Drew Barrymore, Jennifer Connelly, Kevin Connolly, Bradley Cooper, Ginnifer Goodwin, Scarlett Johansson, and Justin Long. The film was produced by Ne",
+        "metadata_source": "https://en.wikipedia.org/wiki/He's_Just_Not_That_into_You_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "He's Just Not That Into You",
+          "source_year": 2009,
+          "catalog_title": "He's Just Not That into You",
+          "catalog_year": 2009,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
       },
       "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/5b813c5f679e0bc1664cc84049a4183e3dd703b75c8dfb05235b862fa7d405bc.mp4?download=1",
       "asset_sha256": "5b813c5f679e0bc1664cc84049a4183e3dd703b75c8dfb05235b862fa7d405bc",
@@ -33424,15 +33451,14 @@
         "branding": "very-good-films-only-v1",
         "reviewed_at": "2026-10-02T21:57:07.080Z",
         "source_duration": 19.499999,
-        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1",
+        "recovered_at": "2026-10-04T04:03:20.986Z"
       },
       "caption_style": "source_repost",
       "metadata_pending": true,
-      "status": "needs_review",
-      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "status": "ready",
       "discovered_at": "2026-10-02T21:57:46.983Z",
-      "key": "c7c573789719a78ae5562246ea21f14a7753a1bbb5a361b3d4d6281097acc333",
-      "metadata_retry_at": "2026-10-04T08:56:36.366Z"
+      "key": "c7c573789719a78ae5562246ea21f14a7753a1bbb5a361b3d4d6281097acc333"
     },
     {
       "kind": "source_repost",
