@@ -39,16 +39,21 @@ export function sourceHints(caption){
  // do not infer a title from the video itself.
  const workAfterPreposition=text.match(/\b(?:of|in|from)\s+([A-Z][A-Za-z0-9'’:& -]{1,80}?)\s*\((?:19\d{2}|20\d{2})\)/);
  const workAfterDescriptor=text.match(/\b(?:classic|film|movie|feature)\s+([A-Z][A-Za-z0-9'’:& -]{1,80}?)\s*,\s*(?:19\d{2}|20\d{2})\b/i);
+ // “in the 2009 romantic comedy-drama He's Just Not That into You” is a
+ // common prose form: the release year and medium precede the literal title.
+ // Keep this narrow and line-bounded so an actor biography cannot become a
+ // title guess.
+ const datedDescriptorTitle=text.match(/\b(?:the\s+)?(19\d{2}|20\d{2})\s+(?:romantic\s+)?(?:comedy(?:-drama)?|drama|thriller|horror|action|film|movie)\s+([A-Z][A-Za-z0-9'’:& -]{2,80}?)(?:\s*[.!?]|\s*$)/im);
  const availableMatch=text.match(/(?:^|\n|\.\s*)([^.\n]{2,90}?)\s+(?:is )?(?:available|streaming|watch(?:ing)?)(?:[^.\n]*)/i);
  // Some source pages put the title only in a single title hashtag. Treat it
  // as a lookup hint only when it is unambiguous; actor and topic tag clouds
  // are never used to guess a movie.
  const tags=[...raw.matchAll(/#([A-Za-z][A-Za-z0-9]{2,80})/g)].map(x=>x[1]);
  const hashtagTitle=tags.length===1?tags[0]:undefined;
- const title=clean(titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||workAfterPreposition?.[1]||workAfterDescriptor?.[1]||yearMatch?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'').replace(/[,\s]+$/,'');
+ const title=clean(titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||workAfterPreposition?.[1]||workAfterDescriptor?.[1]||datedDescriptorTitle?.[2]||yearMatch?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  const media_type_hint=/\b(?:season|episode|television|tv series|series finale|sitcom)\b|#(?:tv|tvcomedy|tvseries|sitcom)\b/i.test(text)?'tv':/\b(?:film|movie|feature)\b|#(?:movie|movies|horrorfilm)\b/i.test(text)?'movie':undefined;
- return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):standaloneYear?Number(standaloneYear[1]):undefined,media_type_hint,availability:availability||undefined};
+ return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):standaloneYear?Number(standaloneYear[1]):datedDescriptorTitle?Number(datedDescriptorTitle[1]):undefined,media_type_hint,availability:availability||undefined};
 }
 
 export function sourceDetailsComplete(details){return Boolean(details?.title&&Number.isInteger(details.year)&&['movie','tv'].includes(details?.type)&&details?.director&&Array.isArray(details.cast)&&details.cast.length&&details?.synopsis&&details.metadata_source&&details?.identity_verified===true);}

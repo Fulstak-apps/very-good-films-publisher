@@ -36,6 +36,9 @@ test('movie hints support camera labels, narrative captions and stale parser inp
 assert.equal(sourceHints("Emma Stone and Mark Ruffalo's iconic dance in Poor Things was choreographed in Lisbon.").title_hint,'Poor Things');
 assert.equal(sourceHints('Ethan Hawke was not fond of Great Expectations (1998), despite working with Robert De Niro.').title_hint,'Great Expectations');
 assert.equal(sourceHints('Demi Moore & Rob Lowe in 80s Romcom Classic About Last Night, 1986.').title_hint,'About Last Night');
+const datedProse=sourceHints("Scarlett Johansson plays Anna Marks in the 2009 romantic comedy-drama He's Just Not That into You");
+assert.equal(datedProse.title_hint,"He's Just Not That into You");
+assert.equal(datedProse.year,2009);
 
 test('Wikipedia fallback ignores same-named soundtrack results',async()=>{
  const original=global.fetch;
