@@ -2759,6 +2759,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeDcjjShjnw/",
       "queued_at": "2026-10-04T01:39:49.094Z",
       "asset_sha256": "e8d5aa26ab830ec499507147895fcc5d4f1ce8f62109247f4e67b2e82818c109"
+    },
+    "DeDE0paTapG": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeDE0paTapG/",
+      "queued_at": "2026-10-04T01:49:33.292Z",
+      "asset_sha256": "dc8b190c263aabbf0f6c3950d0994e7c6770d5c0cbbf10a534933e4b4359ae55"
     }
   },
   "checks": {
@@ -2812,77 +2818,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-02T01:25:47.985Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcEkNrEy0WN/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd1oXCByHBR/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd5y8iiSOHM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd7Ekiwy2yv/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd4NfeIhnh1/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd9BUEGhuyK/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 12,
-      "inventory": 379,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-02T01:25:48.453Z"
-    },
     {
       "started_at": "2026-10-02T01:31:02.291Z",
       "queued": [],
@@ -12103,6 +12038,19 @@
       "inventory": 402,
       "status": "candidates_on_hold",
       "finished_at": "2026-10-04T01:28:25.456Z"
+    },
+    {
+      "started_at": "2026-10-04T01:33:39.157Z",
+      "queued": [
+        "DeDcqS2BZYr",
+        "DeDcjjShjnw"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 2,
+      "inventory": 406,
+      "status": "queued",
+      "finished_at": "2026-10-04T01:39:51.707Z"
     }
   ],
   "next_account_index": 12,
