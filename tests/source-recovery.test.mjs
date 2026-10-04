@@ -70,6 +70,9 @@ test('local recovery persists a repaired queue before dispatch',async()=>{
  assert.match(script,/recoverStaleRebase/);
  assert.match(script,/git\(\['rebase','--abort'\]\)/);
  assert.match(script,/inboxPending/);
+ assert.match(script,/prepared\.scene\?\.id/);
+ assert.match(script,/knownSourceUrls/);
+ assert.match(script,/knownAssets/);
  assert.match(script,/persistRepairState\(\)/);
  assert.ok(script.indexOf('persistRepairState();memory=remote')<script.indexOf("gh(['workflow','run'"));
 });

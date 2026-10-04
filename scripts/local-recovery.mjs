@@ -95,7 +95,18 @@ const last=Math.max(0,...posted.map(x=>Date.parse(x.instagram_published_at)));
 const ready=memory.items.filter(x=>x.status==='ready').length;
 const pending=memory.items.some(x=>x.status==='publishing');
 const knownSceneIds=new Set(memory.items.map(x=>x.scene?.id).filter(Boolean));
-const inboxPending=(await fs.readdir('inbox').catch(error=>error.code==='ENOENT'?[]:Promise.reject(error))).some(name=>name.endsWith('.json')&&!knownSceneIds.has(name.slice(0,-5)));
+const knownSourceUrls=new Set(memory.items.map(x=>x.source_post_url).filter(Boolean));
+const knownAssets=new Set(memory.items.map(x=>x.asset_sha256).filter(Boolean));
+let inboxPending=false;
+for(const name of (await fs.readdir('inbox').catch(error=>error.code==='ENOENT'?[]:Promise.reject(error))).filter(name=>name.endsWith('.json'))){
+ try{
+  // Filenames are audit labels and are not always the Instagram shortcode
+  // (some old files end in "-ready"). Match the same durable identities as
+  // importPrepared so historical files cannot trigger a workflow forever.
+  const prepared=JSON.parse(await fs.readFile(`inbox/${name}`,'utf8'));
+  if(!knownSceneIds.has(prepared.scene?.id)&&!knownSourceUrls.has(prepared.source_post_url)&&!knownAssets.has(prepared.asset_sha256)){inboxPending=true;break;}
+ }catch{}
+}
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
