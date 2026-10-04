@@ -2831,6 +2831,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeEuOPxhNni/",
       "queued_at": "2026-10-04T15:48:44.235Z",
       "asset_sha256": "f9d0d46217356bd7c07c4fc3547c2908d5056a0062204a266842ea1d84630196"
+    },
+    "DeEmIZjBW9I": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeEmIZjBW9I/",
+      "queued_at": "2026-10-04T15:56:42.085Z",
+      "asset_sha256": "6ea773b4d2047365bfe9d0d99aadf95a74c2d2ac33aa0a73f53859ce46fe47da"
     }
   },
   "checks": {
@@ -2884,16 +2890,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-02T14:49:17.166Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 382,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T14:50:18.927Z"
-    },
     {
       "started_at": "2026-10-02T14:55:31.913Z",
       "queued": [],
@@ -12159,6 +12155,19 @@
       "inventory": 417,
       "status": "queued",
       "finished_at": "2026-10-04T15:41:25.729Z"
+    },
+    {
+      "started_at": "2026-10-04T15:42:13.797Z",
+      "queued": [
+        "DeEualsBLV8",
+        "DeEuOPxhNni"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 417,
+      "status": "queued",
+      "finished_at": "2026-10-04T15:48:46.213Z"
     }
   ],
   "next_account_index": 12,
