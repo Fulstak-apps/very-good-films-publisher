@@ -2747,6 +2747,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DeCzne-ydEu/",
       "queued_at": "2026-10-03T20:28:53.420Z",
       "asset_sha256": "83f9b096f72eb456a95b911efcf945d5dc2ad43b62f76d4ee16201d8b0008d31"
+    },
+    "DeDcqS2BZYr": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeDcqS2BZYr/",
+      "queued_at": "2026-10-04T01:36:46.621Z",
+      "asset_sha256": "4580164917944418ab831871e80ff7a6984347643979304e3071c43e78632e7b"
     }
   },
   "checks": {
@@ -2769,642 +2775,37 @@
       "checked_at": "2026-10-03T23:43:23.188Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-10-03T20:12:16.143Z"
+      "checked_at": "2026-10-04T00:19:51.233Z"
     },
     "film.fission": {
-      "checked_at": "2026-10-03T20:28:19.279Z"
+      "checked_at": "2026-10-04T00:25:33.324Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-10-03T20:34:27.388Z"
+      "checked_at": "2026-10-04T00:31:19.985Z"
     },
     "relatedfilms": {
-      "checked_at": "2026-10-03T20:46:14.143Z"
+      "checked_at": "2026-10-04T00:37:36.473Z"
     },
     "uneedmink": {
-      "checked_at": "2026-10-03T21:02:40.305Z"
+      "checked_at": "2026-10-04T00:54:48.787Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-10-03T21:08:10.165Z"
+      "checked_at": "2026-10-04T01:00:31.639Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-10-03T21:19:14.170Z"
+      "checked_at": "2026-10-04T01:06:18.998Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-10-03T21:35:49.877Z"
+      "checked_at": "2026-10-04T01:28:25.452Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-10-03T21:41:27.216Z"
+      "checked_at": "2026-10-04T01:34:11.081Z"
     },
     "popcorncutzz": {
       "checked_at": "2026-10-03T21:54:42.254Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-02T00:10:27.344Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:10:52.368Z"
-    },
-    {
-      "started_at": "2026-10-02T00:13:13.502Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:13:39.055Z"
-    },
-    {
-      "started_at": "2026-10-02T00:19:11.612Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd686QOMFY1/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DduXJgtTbvy/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd88Y0AsHbk/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcEkNrEy0WN/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd1oXCByHBR/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd5y8iiSOHM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd7Ekiwy2yv/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd4NfeIhnh1/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd9BUEGhuyK/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 37,
-      "inventory": 379,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-02T00:20:25.111Z"
-    },
-    {
-      "started_at": "2026-10-02T00:25:26.618Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:26:05.612Z"
-    },
-    {
-      "started_at": "2026-10-02T00:31:42.604Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:32:29.098Z"
-    },
-    {
-      "started_at": "2026-10-02T00:38:04.979Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:38:44.974Z"
-    },
-    {
-      "started_at": "2026-10-02T00:44:09.879Z",
-      "queued": [],
-      "errors": [
-        {
-          "stage": "discover",
-          "source_handle": "movie_vault_4u",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:44:13.509Z"
-    },
-    {
-      "started_at": "2026-10-02T00:44:41.156Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:45:27.983Z"
-    },
-    {
-      "started_at": "2026-10-02T00:47:18.016Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T00:48:18.396Z"
-    },
-    {
-      "started_at": "2026-10-02T00:49:16.537Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd686QOMFY1/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DduXJgtTbvy/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd88Y0AsHbk/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovered": 12,
-      "attempts": 20,
-      "inventory": 379,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-02T00:50:04.114Z"
-    },
-    {
-      "started_at": "2026-10-02T00:55:43.829Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcEkNrEy0WN/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd1oXCByHBR/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd5y8iiSOHM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/Dd7Ekiwy2yv/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd4NfeIhnh1/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dd9BUEGhuyK/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 12,
-      "inventory": 379,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-02T00:55:44.357Z"
-    },
-    {
-      "started_at": "2026-10-02T01:01:14.138Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T01:02:02.409Z"
-    },
-    {
-      "started_at": "2026-10-02T01:07:30.322Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T01:08:16.652Z"
-    },
-    {
-      "started_at": "2026-10-02T01:13:44.123Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 379,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T01:14:30.254Z"
-    },
-    {
-      "started_at": "2026-10-02T01:19:42.546Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd686QOMFY1/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DduXJgtTbvy/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd88Y0AsHbk/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovered": 12,
-      "attempts": 20,
-      "inventory": 379,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-02T01:20:37.364Z"
-    },
     {
       "started_at": "2026-10-02T01:25:47.985Z",
       "queued": [],
@@ -12154,9 +11555,551 @@
       "inventory": 402,
       "status": "candidates_on_hold",
       "finished_at": "2026-10-03T23:43:23.200Z"
+    },
+    {
+      "started_at": "2026-10-04T00:08:35.538Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T00:08:42.315Z"
+    },
+    {
+      "started_at": "2026-10-04T00:13:57.637Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DduXJgtTbvy/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeCQGSDB7gM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 17,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T00:14:18.745Z"
+    },
+    {
+      "started_at": "2026-10-04T00:19:32.661Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T00:19:51.252Z"
+    },
+    {
+      "started_at": "2026-10-04T00:25:06.856Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T00:25:33.330Z"
+    },
+    {
+      "started_at": "2026-10-04T00:30:47.789Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T00:31:19.989Z"
+    },
+    {
+      "started_at": "2026-10-04T00:36:35.097Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T00:37:36.482Z"
+    },
+    {
+      "started_at": "2026-10-04T00:42:51.342Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T00:43:00.056Z"
+    },
+    {
+      "started_at": "2026-10-04T00:48:13.688Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DduXJgtTbvy/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeCQGSDB7gM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 17,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T00:48:34.108Z"
+    },
+    {
+      "started_at": "2026-10-04T00:53:47.137Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T00:54:48.794Z"
+    },
+    {
+      "started_at": "2026-10-04T01:00:05.976Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T01:00:31.645Z"
+    },
+    {
+      "started_at": "2026-10-04T01:05:45.308Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T01:06:19.002Z"
+    },
+    {
+      "started_at": "2026-10-04T01:11:31.596Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T01:11:50.950Z"
+    },
+    {
+      "started_at": "2026-10-04T01:17:05.920Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T01:17:12.613Z"
+    },
+    {
+      "started_at": "2026-10-04T01:22:26.739Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DduXJgtTbvy/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeCQGSDB7gM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 17,
+      "inventory": 402,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-04T01:22:48.669Z"
+    },
+    {
+      "started_at": "2026-10-04T01:28:06.450Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 402,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-04T01:28:25.456Z"
     }
   ],
-  "next_account_index": 3,
+  "next_account_index": 12,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -12173,8 +12116,8 @@
     "DCeu2jgy3BO": {
       "collector_version": 13,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-03T22:11:15.192Z",
-      "retry_at": "2026-10-04T01:11:15.192Z"
+      "failed_at": "2026-10-04T01:11:42.002Z",
+      "retry_at": "2026-10-04T04:11:42.002Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -12299,8 +12242,8 @@
     "DZbqwhnT0Uq": {
       "collector_version": 13,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-03T22:11:23.356Z",
-      "retry_at": "2026-10-04T01:11:23.356Z"
+      "failed_at": "2026-10-04T01:11:50.948Z",
+      "retry_at": "2026-10-04T04:11:50.948Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -12573,14 +12516,14 @@
     "Da0lk6Mx0J9": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:29.160Z",
-      "retry_at": "2026-10-04T00:08:29.160Z"
+      "failed_at": "2026-10-04T01:17:08.858Z",
+      "retry_at": "2026-10-04T01:47:08.858Z"
     },
     "DdS2t1JyFk-": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:30.054Z",
-      "retry_at": "2026-10-04T00:08:30.054Z"
+      "failed_at": "2026-10-04T01:17:09.806Z",
+      "retry_at": "2026-10-04T01:47:09.806Z"
     },
     "DdS0bIiSmA6": {
       "collector_version": 12,
@@ -12591,8 +12534,8 @@
     "DdTx5Hagpfo": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:28.379Z",
-      "retry_at": "2026-10-04T00:08:28.379Z"
+      "failed_at": "2026-10-04T01:17:08.049Z",
+      "retry_at": "2026-10-04T01:47:08.050Z"
     },
     "DdT80p4ySJl": {
       "collector_version": 12,
@@ -12621,8 +12564,8 @@
     "DdbZwC6A5DM": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:27.917Z",
-      "retry_at": "2026-10-04T00:08:27.917Z"
+      "failed_at": "2026-10-04T01:17:07.543Z",
+      "retry_at": "2026-10-04T01:47:07.543Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
@@ -12639,8 +12582,8 @@
     "DdeIThxy21F": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:27.237Z",
-      "retry_at": "2026-10-04T00:08:27.237Z"
+      "failed_at": "2026-10-04T01:17:06.817Z",
+      "retry_at": "2026-10-04T01:47:06.817Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
@@ -12693,8 +12636,8 @@
     "DdjVdnnNA3K": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:31.724Z",
-      "retry_at": "2026-10-04T00:08:31.724Z"
+      "failed_at": "2026-10-04T01:17:11.515Z",
+      "retry_at": "2026-10-04T01:47:11.515Z"
     },
     "DcO7g_KSCQf": {
       "collector_version": 12,
@@ -12753,8 +12696,8 @@
     "Ddl5SHjACt3": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:32.751Z",
-      "retry_at": "2026-10-04T00:08:32.751Z"
+      "failed_at": "2026-10-04T01:17:12.606Z",
+      "retry_at": "2026-10-04T01:47:12.606Z"
     },
     "DdnyKXIy4a3": {
       "collector_version": 12,
@@ -12795,14 +12738,14 @@
     "DdolT-eNK_o": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:32.192Z",
-      "retry_at": "2026-10-04T00:08:32.192Z"
+      "failed_at": "2026-10-04T01:17:11.996Z",
+      "retry_at": "2026-10-04T01:47:11.996Z"
     },
     "DdpDhN-ymAz": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:00.772Z",
-      "retry_at": "2026-10-04T00:09:00.772Z"
+      "failed_at": "2026-10-04T01:22:33.152Z",
+      "retry_at": "2026-10-04T01:52:33.152Z"
     },
     "DdpvSGKh-c-": {
       "collector_version": 13,
@@ -12813,14 +12756,14 @@
     "Ddq66owhDGl": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:40:17.853Z",
-      "retry_at": "2026-10-04T00:10:17.855Z"
+      "failed_at": "2026-10-04T01:22:47.822Z",
+      "retry_at": "2026-10-04T01:52:47.822Z"
     },
     "DdrWCTvAzW-": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:01.696Z",
-      "retry_at": "2026-10-04T00:09:01.696Z"
+      "failed_at": "2026-10-04T01:22:33.657Z",
+      "retry_at": "2026-10-04T01:52:33.657Z"
     },
     "DdtgsXRBzmO": {
       "collector_version": 12,
@@ -12831,20 +12774,20 @@
     "DdtygKmyYg4": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:04.148Z",
-      "retry_at": "2026-10-04T00:09:04.148Z"
+      "failed_at": "2026-10-04T01:22:36.932Z",
+      "retry_at": "2026-10-04T01:52:36.932Z"
     },
     "DduXJgtTbvy": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:06.171Z",
-      "retry_at": "2026-10-04T00:09:06.171Z"
+      "failed_at": "2026-10-04T01:22:39.130Z",
+      "retry_at": "2026-10-04T01:52:39.130Z"
     },
     "DdwiV7FgqlR": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:06.742Z",
-      "retry_at": "2026-10-04T00:09:06.742Z"
+      "failed_at": "2026-10-04T01:22:39.802Z",
+      "retry_at": "2026-10-04T01:52:39.802Z"
     },
     "DdwxMJqsBrV": {
       "collector_version": 13,
@@ -12855,8 +12798,8 @@
     "DdwymejMeG9": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:56.946Z",
-      "retry_at": "2026-10-04T00:08:56.946Z"
+      "failed_at": "2026-10-04T01:22:29.073Z",
+      "retry_at": "2026-10-04T01:52:29.073Z"
     },
     "Ddw9cBCTiSN": {
       "collector_version": 12,
@@ -12867,8 +12810,8 @@
     "DdytSFEMIhJ": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:38:58.811Z",
-      "retry_at": "2026-10-04T00:08:58.811Z"
+      "failed_at": "2026-10-04T01:22:31.072Z",
+      "retry_at": "2026-10-04T01:52:31.072Z"
     },
     "Ddy76sszry8": {
       "collector_version": 12,
@@ -12879,8 +12822,8 @@
     "DdzPycUx-0G": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:29.279Z",
-      "retry_at": "2026-10-04T00:09:29.279Z"
+      "failed_at": "2026-10-04T01:22:40.489Z",
+      "retry_at": "2026-10-04T01:52:40.489Z"
     },
     "DdzlGPXp5TS": {
       "collector_version": 12,
@@ -12963,20 +12906,20 @@
     "Dd14-q9ShCi": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:31.236Z",
-      "retry_at": "2026-10-04T00:09:31.236Z"
+      "failed_at": "2026-10-04T01:22:42.535Z",
+      "retry_at": "2026-10-04T01:52:42.535Z"
     },
     "Dd31jR5sQF0": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:01.314Z",
-      "retry_at": "2026-10-04T00:09:01.314Z"
+      "failed_at": "2026-10-04T01:22:34.264Z",
+      "retry_at": "2026-10-04T01:52:34.264Z"
     },
     "Dd4En3eyyiA": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:31.919Z",
-      "retry_at": "2026-10-04T00:09:31.919Z"
+      "failed_at": "2026-10-04T01:22:43.295Z",
+      "retry_at": "2026-10-04T01:52:43.295Z"
     },
     "Dd4NfeIhnh1": {
       "collector_version": 13,
@@ -12987,20 +12930,20 @@
     "Dd4h_MSMR6Q": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:02.815Z",
-      "retry_at": "2026-10-04T00:09:02.815Z"
+      "failed_at": "2026-10-04T01:22:35.480Z",
+      "retry_at": "2026-10-04T01:52:35.480Z"
     },
     "DcmFwKuyDbi": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:33.919Z",
-      "retry_at": "2026-10-04T00:09:33.919Z"
+      "failed_at": "2026-10-04T01:22:46.671Z",
+      "retry_at": "2026-10-04T01:52:46.671Z"
     },
     "Dd4xsMbsc1F": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:03.474Z",
-      "retry_at": "2026-10-04T00:09:03.474Z"
+      "failed_at": "2026-10-04T01:22:36.205Z",
+      "retry_at": "2026-10-04T01:52:36.205Z"
     },
     "Dd5y8iiSOHM": {
       "collector_version": 13,
@@ -13023,8 +12966,8 @@
     "Dd67uiWx6WL": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:39:34.546Z",
-      "retry_at": "2026-10-04T00:09:34.546Z"
+      "failed_at": "2026-10-04T01:22:43.980Z",
+      "retry_at": "2026-10-04T01:52:43.980Z"
     },
     "Dd88Y0AsHbk": {
       "collector_version": 13,
@@ -13071,8 +13014,8 @@
     "DeCQGSDB7gM": {
       "collector_version": 13,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-03T23:40:35.900Z",
-      "retry_at": "2026-10-04T00:10:35.900Z"
+      "failed_at": "2026-10-04T01:22:48.659Z",
+      "retry_at": "2026-10-04T01:52:48.659Z"
     },
     "DeCP-WNBVrG": {
       "collector_version": 13,
@@ -15115,21 +15058,41 @@
       "handle": "film.fission",
       "url": "https://www.instagram.com/film.fission/reel/DeCzne-ydEu/",
       "shortcode": "DeCzne-ydEu"
+    },
+    "DeDcqS2BZYr": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DeDcqS2BZYr/",
+      "shortcode": "DeDcqS2BZYr"
+    },
+    "DeDcjjShjnw": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DeDcjjShjnw/",
+      "shortcode": "DeDcjjShjnw"
+    },
+    "DeDE0paTapG": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DeDE0paTapG/",
+      "shortcode": "DeDE0paTapG"
+    },
+    "DeDEsr7T2P3": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DeDEsr7T2P3/",
+      "shortcode": "DeDEsr7T2P3"
     }
   },
   "discovery_depth": {
     "reelgoodmovies": 60,
     "thecinemanerd.ig": 40,
     "theacenyc": 40,
-    "the_goodfilms": 20,
-    "film.fission": 30,
-    "ellsoriaa": 40,
-    "relatedfilms": 80,
-    "uneedmink": 80,
-    "cinemoviie": 30,
-    "filmreelsvault": 40,
-    "fuckinggoodmovies": 20,
-    "movie_vault_4u": 40,
+    "the_goodfilms": 30,
+    "film.fission": 40,
+    "ellsoriaa": 50,
+    "relatedfilms": 20,
+    "uneedmink": 20,
+    "cinemoviie": 40,
+    "filmreelsvault": 50,
+    "fuckinggoodmovies": 30,
+    "movie_vault_4u": 50,
     "popcorncutzz": 40
   }
 }
