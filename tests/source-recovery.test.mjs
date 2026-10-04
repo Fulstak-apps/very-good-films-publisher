@@ -98,6 +98,8 @@ test('collector asks the literal-title extractor before rejecting an unparsed ca
  const script=await fs.readFile(new URL('../scripts/source-collector.mjs',import.meta.url),'utf8');
  assert.match(script,/const extractedHint=parsedHint\|\|await localTitleHint\(source_caption\)/);
  assert.ok(script.indexOf('const extractedHint=')<script.indexOf("throw new Error('Source caption has no explicit"));
+ assert.match(script,/reset','--hard','origin\/main/);
+ assert.ok(script.indexOf("fs.readFile(ledgerPath")<script.indexOf("reset','--hard','origin/main"));
 });
 });
 
