@@ -2801,6 +2801,24 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeE7eCABGFR/",
       "queued_at": "2026-10-04T15:28:22.867Z",
       "asset_sha256": "25650cde239eb756d14fcfe623d75bc7bb9a955a0d779c351f1051761638492a"
+    },
+    "DeE7T5-hPpT": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeE7T5-hPpT/",
+      "queued_at": "2026-10-04T15:37:16.087Z",
+      "asset_sha256": "1ebf28ec2c46fbdd168cd65557755b05061777f8c278849080d083d6cb66eee6"
+    },
+    "DeEz_A3hnBn": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeEz_A3hnBn/",
+      "queued_at": "2026-10-04T15:39:26.412Z",
+      "asset_sha256": "3da08fb362f5ed8277eba094eb92e733d6ddd5e516e1ee46142f2c44daf6cabc"
+    },
+    "DeEzq3qh7K6": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeEzq3qh7K6/",
+      "queued_at": "2026-10-04T15:41:25.658Z",
+      "asset_sha256": "16e6b381f240aa1fa996eb3666cfb2142c0909f2f4596cff01b5d6929c897e2f"
     }
   },
   "checks": {
@@ -2854,16 +2872,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-02T14:43:04.524Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 382,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-02T14:43:52.902Z"
-    },
     {
       "started_at": "2026-10-02T14:49:17.166Z",
       "queued": [],
@@ -11964,6 +11972,181 @@
       "inventory": 409,
       "status": "candidates_on_hold",
       "finished_at": "2026-10-04T15:19:10.584Z"
+    },
+    {
+      "started_at": "2026-10-04T15:34:28.086Z",
+      "queued": [
+        "DeE7T5-hPpT",
+        "DeEz_A3hnBn",
+        "DeEzq3qh7K6"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdeIThxy21F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdbZwC6A5DM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdTx5Hagpfo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Da0lk6Mx0J9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdS2t1JyFk-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdjVdnnNA3K/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdolT-eNK_o/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Ddl5SHjACt3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('video:visible').first() to be visible\u001b[22m\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwymejMeG9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdytSFEMIhJ/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdpDhN-ymAz/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd31jR5sQF0/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdrWCTvAzW-/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4h_MSMR6Q/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Dd4xsMbsc1F/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DdtygKmyYg4/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdwiV7FgqlR/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('video:visible').first() to be visible\u001b[22m\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DdzPycUx-0G/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd14-q9ShCi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/Dd4En3eyyiA/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcmFwKuyDbi/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dd67uiWx6WL/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Ddq66owhDGl/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeCQGSDB7gM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeE7T5-hPpT/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git pull --rebase --autostash origin main\nerror: Pulling is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeEz_A3hnBn/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git pull --rebase --autostash origin main\nerror: Pulling is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeEzq3qh7K6/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git pull --rebase --autostash origin main\nerror: Pulling is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 32,
+      "inventory": 417,
+      "status": "queued",
+      "finished_at": "2026-10-04T15:41:25.729Z"
     }
   ],
   "next_account_index": 12,
@@ -11981,10 +12164,12 @@
       "retry_at": "2026-09-12T16:35:42.179Z"
     },
     "DCeu2jgy3BO": {
-      "collector_version": 13,
-      "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/\", waiting until \"domcontentloaded\"\n",
-      "failed_at": "2026-10-04T12:57:14.113Z",
-      "retry_at": "2026-10-04T15:57:14.113Z"
+      "collector_version": 14,
+      "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
+      "failed_at": "2026-10-04T15:34:39.830Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:34:39.830Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -12107,10 +12292,12 @@
       "retry_at": "2026-09-13T03:07:51.943Z"
     },
     "DZbqwhnT0Uq": {
-      "collector_version": 13,
-      "error": "browserType.launchPersistentContext: Timeout 180000ms exceeded.\nCall log:\n  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable",
-      "failed_at": "2026-10-04T13:01:58.511Z",
-      "retry_at": "2026-10-04T16:01:58.511Z"
+      "collector_version": 14,
+      "error": "Exact source caption missing, generic or truncated; needs review",
+      "failed_at": "2026-10-04T15:34:50.798Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:34:50.798Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -12381,16 +12568,20 @@
       "retry_at": "2026-09-18T10:40:16.596Z"
     },
     "Da0lk6Mx0J9": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:52.238Z",
-      "retry_at": "2026-10-04T15:29:52.238Z"
+      "failed_at": "2026-10-04T15:34:51.831Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:51.831Z"
     },
     "DdS2t1JyFk-": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:54.946Z",
-      "retry_at": "2026-10-04T15:29:54.950Z"
+      "failed_at": "2026-10-04T15:34:52.726Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:52.726Z"
     },
     "DdS0bIiSmA6": {
       "collector_version": 12,
@@ -12399,10 +12590,12 @@
       "retry_at": "2026-09-19T17:52:51.296Z"
     },
     "DdTx5Hagpfo": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:51.403Z",
-      "retry_at": "2026-10-04T15:29:51.403Z"
+      "failed_at": "2026-10-04T15:34:42.059Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:42.059Z"
     },
     "DdT80p4ySJl": {
       "collector_version": 12,
@@ -12429,10 +12622,12 @@
       "retry_at": "2026-09-28T21:58:40.819Z"
     },
     "DdbZwC6A5DM": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:51.022Z",
-      "retry_at": "2026-10-04T15:29:51.022Z"
+      "failed_at": "2026-10-04T15:34:41.608Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:41.608Z"
     },
     "DdcFGCNgjkT": {
       "collector_version": 12,
@@ -12447,10 +12642,12 @@
       "retry_at": "2026-09-24T19:41:21.651Z"
     },
     "DdeIThxy21F": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:50.633Z",
-      "retry_at": "2026-10-04T15:29:50.633Z"
+      "failed_at": "2026-10-04T15:34:40.916Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:40.916Z"
     },
     "DdeSvRUuc0_": {
       "collector_version": 12,
@@ -12501,10 +12698,12 @@
       "retry_at": "2026-09-28T21:58:50.410Z"
     },
     "DdjVdnnNA3K": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:57.008Z",
-      "retry_at": "2026-10-04T15:29:57.008Z"
+      "failed_at": "2026-10-04T15:34:54.403Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:54.403Z"
     },
     "DcO7g_KSCQf": {
       "collector_version": 12,
@@ -12561,10 +12760,12 @@
       "retry_at": "2026-09-28T21:58:54.906Z"
     },
     "Ddl5SHjACt3": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:58.146Z",
-      "retry_at": "2026-10-04T15:29:58.146Z"
+      "failed_at": "2026-10-04T15:34:55.424Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:55.424Z"
     },
     "DdnyKXIy4a3": {
       "collector_version": 12,
@@ -12579,10 +12780,12 @@
       "retry_at": "2026-09-28T21:59:02.645Z"
     },
     "DdoYWyWzhP3": {
-      "collector_version": 13,
-      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-04T15:00:50.643Z",
-      "retry_at": "2026-10-04T18:00:50.644Z"
+      "collector_version": 14,
+      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('video:visible').first() to be visible\u001b[22m\n",
+      "failed_at": "2026-10-04T15:35:47.259Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:35:47.263Z"
     },
     "DdoYK2ahxnK": {
       "collector_version": 12,
@@ -12603,34 +12806,44 @@
       "retry_at": "2026-09-28T21:59:30.917Z"
     },
     "DdolT-eNK_o": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T14:59:57.509Z",
-      "retry_at": "2026-10-04T15:29:57.509Z"
+      "failed_at": "2026-10-04T15:34:54.855Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:04:54.855Z"
     },
     "DdpDhN-ymAz": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:25.269Z",
-      "retry_at": "2026-10-04T15:30:25.269Z"
+      "failed_at": "2026-10-04T15:35:21.901Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:21.901Z"
     },
     "DdpvSGKh-c-": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json",
-      "failed_at": "2026-10-04T15:01:27.760Z",
-      "retry_at": "2026-10-04T18:01:27.760Z"
+      "failed_at": "2026-10-04T15:36:18.724Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:36:18.726Z"
     },
     "Ddq66owhDGl": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:01:28.830Z",
-      "retry_at": "2026-10-04T15:31:28.830Z"
+      "failed_at": "2026-10-04T15:36:19.916Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:06:19.916Z"
     },
     "DdrWCTvAzW-": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:25.685Z",
-      "retry_at": "2026-10-04T15:30:25.685Z"
+      "failed_at": "2026-10-04T15:35:22.858Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:22.858Z"
     },
     "DdtgsXRBzmO": {
       "collector_version": 12,
@@ -12639,10 +12852,12 @@
       "retry_at": "2026-09-28T21:59:34.146Z"
     },
     "DdtygKmyYg4": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:28.678Z",
-      "retry_at": "2026-10-04T15:30:28.678Z"
+      "failed_at": "2026-10-04T15:35:25.399Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:25.399Z"
     },
     "DduXJgtTbvy": {
       "collector_version": 13,
@@ -12651,22 +12866,28 @@
       "retry_at": "2026-10-04T02:27:49.529Z"
     },
     "DdwiV7FgqlR": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:29.245Z",
-      "retry_at": "2026-10-04T15:30:29.245Z"
+      "failed_at": "2026-10-04T15:35:25.981Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:25.981Z"
     },
     "DdwxMJqsBrV": {
-      "collector_version": 13,
-      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-04T15:00:19.195Z",
-      "retry_at": "2026-10-04T18:00:19.196Z"
+      "collector_version": 14,
+      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('video:visible').first() to be visible\u001b[22m\n",
+      "failed_at": "2026-10-04T15:35:15.766Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:35:15.768Z"
     },
     "DdwymejMeG9": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:21.306Z",
-      "retry_at": "2026-10-04T15:30:21.306Z"
+      "failed_at": "2026-10-04T15:35:17.902Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:17.902Z"
     },
     "Ddw9cBCTiSN": {
       "collector_version": 12,
@@ -12675,10 +12896,12 @@
       "retry_at": "2026-09-28T21:59:26.631Z"
     },
     "DdytSFEMIhJ": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:23.241Z",
-      "retry_at": "2026-10-04T15:30:23.241Z"
+      "failed_at": "2026-10-04T15:35:19.899Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:19.899Z"
     },
     "Ddy76sszry8": {
       "collector_version": 12,
@@ -12687,10 +12910,12 @@
       "retry_at": "2026-09-28T21:59:00.368Z"
     },
     "DdzPycUx-0G": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:51.387Z",
-      "retry_at": "2026-10-04T15:30:51.387Z"
+      "failed_at": "2026-10-04T15:35:47.999Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:47.999Z"
     },
     "DdzlGPXp5TS": {
       "collector_version": 12,
@@ -12771,22 +12996,28 @@
       "retry_at": "2026-10-02T20:51:18.913Z"
     },
     "Dd14-q9ShCi": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:53.340Z",
-      "retry_at": "2026-10-04T15:30:53.340Z"
+      "failed_at": "2026-10-04T15:35:49.972Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:49.972Z"
     },
     "Dd31jR5sQF0": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:26.227Z",
-      "retry_at": "2026-10-04T15:30:26.227Z"
+      "failed_at": "2026-10-04T15:35:22.471Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:22.471Z"
     },
     "Dd4En3eyyiA": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:54.018Z",
-      "retry_at": "2026-10-04T15:30:54.018Z"
+      "failed_at": "2026-10-04T15:35:50.675Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:50.675Z"
     },
     "Dd4NfeIhnh1": {
       "collector_version": 13,
@@ -12795,22 +13026,28 @@
       "retry_at": "2026-10-02T20:51:19.248Z"
     },
     "Dd4h_MSMR6Q": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:27.334Z",
-      "retry_at": "2026-10-04T15:30:27.334Z"
+      "failed_at": "2026-10-04T15:35:23.988Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:23.988Z"
     },
     "DcmFwKuyDbi": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:56.629Z",
-      "retry_at": "2026-10-04T15:30:56.629Z"
+      "failed_at": "2026-10-04T15:35:52.725Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:52.725Z"
     },
     "Dd4xsMbsc1F": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:28.013Z",
-      "retry_at": "2026-10-04T15:30:28.013Z"
+      "failed_at": "2026-10-04T15:35:24.708Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:24.708Z"
     },
     "Dd5y8iiSOHM": {
       "collector_version": 13,
@@ -12831,10 +13068,12 @@
       "retry_at": "2026-10-02T20:51:19.163Z"
     },
     "Dd67uiWx6WL": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:00:54.633Z",
-      "retry_at": "2026-10-04T15:30:54.633Z"
+      "failed_at": "2026-10-04T15:35:53.364Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:05:53.364Z"
     },
     "Dd88Y0AsHbk": {
       "collector_version": 13,
@@ -12879,10 +13118,12 @@
       "retry_at": "2026-10-03T21:42:30.293Z"
     },
     "DeCQGSDB7gM": {
-      "collector_version": 13,
+      "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-04T15:01:29.591Z",
-      "retry_at": "2026-10-04T15:31:29.591Z"
+      "failed_at": "2026-10-04T15:36:20.718Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T16:06:20.718Z"
     },
     "DeCP-WNBVrG": {
       "collector_version": 13,
@@ -12913,6 +13154,30 @@
       "error": "Command failed: git pull --rebase --autostash origin main\nFrom https://github.com/Fulstak-apps/very-good-films-publisher\n * branch              main       -> FETCH_HEAD\nfatal: It seems that there is already a rebase-merge directory, and\nI wonder if you are in the middle of another rebase.  If that i",
       "failed_at": "2026-10-03T20:28:54.149Z",
       "retry_at": "2026-10-03T23:28:54.149Z"
+    },
+    "DeE7T5-hPpT": {
+      "collector_version": 14,
+      "error": "Command failed: git pull --rebase --autostash origin main\nerror: Pulling is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n",
+      "failed_at": "2026-10-04T15:37:16.124Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:37:16.124Z"
+    },
+    "DeEz_A3hnBn": {
+      "collector_version": 14,
+      "error": "Command failed: git pull --rebase --autostash origin main\nerror: Pulling is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n",
+      "failed_at": "2026-10-04T15:39:26.485Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:39:26.485Z"
+    },
+    "DeEzq3qh7K6": {
+      "collector_version": 14,
+      "error": "Command failed: git pull --rebase --autostash origin main\nerror: Pulling is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n",
+      "failed_at": "2026-10-04T15:41:25.723Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-04T18:41:25.723Z"
     }
   },
   "candidates": {
