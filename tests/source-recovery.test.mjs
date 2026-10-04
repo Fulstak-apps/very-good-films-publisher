@@ -69,6 +69,8 @@ test('local recovery persists a repaired queue before dispatch',async()=>{
  assert.doesNotMatch(script,/execFileSync\('\/usr\/bin\/git'/);
  assert.match(script,/recoverStaleRebase/);
  assert.match(script,/git\(\['rebase','--abort'\]\)/);
+ assert.match(script,/rebaseRecoveredAfterCollectorFailure/);
+ assert.match(script,/rebase-merge directory\|rebase in progress/);
  assert.match(script,/inboxPending/);
  assert.match(script,/prepared\.scene\?\.id/);
  assert.match(script,/knownSourceUrls/);
