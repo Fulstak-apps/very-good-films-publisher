@@ -4,8 +4,10 @@ const clean=value=>String(value||'').normalize('NFKC').replace(/\s+/g,' ').trim(
 const normal=value=>clean(value).toLowerCase().replace(/[^a-z0-9]/g,'');
 const strip=value=>clean(String(value||'').replace(/<[^>]+>/g,' '));
 const names=value=>clean(value).replace(/\b(?:and|with)\b/gi,',').split(',').map(clean).filter(x=>/^[A-Z][A-Za-z .'-]{1,80}$/.test(x)).slice(0,3);
+const releaseYears='(?:19\\d{2}|20\\d{2})(?:\\s*[–—-]\\s*(?:19\\d{2}|20\\d{2}))?';
+const trailingReleaseYears=new RegExp(`\\s*\\(${releaseYears}\\)\\s*$`);
 const structuredTitleMatch=(caption,title)=>String(caption||'').normalize('NFKC').split(/\r?\n/).some(line=>{
- const candidate=clean(line).replace(/^[🎬🎥📺\uFE0F\s:]+/gu,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'');
+ const candidate=clean(line).replace(/^[🎬🎥📺\uFE0F\s:]+/gu,'').replace(trailingReleaseYears,'');
  return normal(candidate)===normal(title);
 });
 export function fallbackCredits(extract){
@@ -17,7 +19,7 @@ export function fallbackCredits(extract){
 export function sourceHints(caption){
  const raw=String(caption||'').normalize('NFKC');
  const text=raw.replace(/^[\p{Extended_Pictographic}\uFE0F\t :]+/gmu,'');
- const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
+ const yearMatch=text.match(/(?:^|\n)\s*(?:🎬\s*)?([^\n()]{2,90}?)\s*(?:\((19\d{2}|20\d{2})(?:\s*[–—-]\s*(?:19\d{2}|20\d{2}))?\)|[,–—-]\s*(19\d{2}|20\d{2}))/i);
  const standaloneYear=text.match(/(?:^|\n)\s*(19\d{2}|20\d{2})(?:\s*[‧·|–—-]|\s*$)/m);
  const titledLine=raw.match(/(?:^|\n)[ \t]*[🎬🎥📺]+[\uFE0F :\t]*([^\n]{2,100})/u);
  const narrative=text.match(/^([^\n]{2,110}?)\s+(?:follows\b|is (?:a|an)\b)/);
@@ -50,7 +52,7 @@ export function sourceHints(caption){
  // are never used to guess a movie.
  const tags=[...raw.matchAll(/#([A-Za-z][A-Za-z0-9]{2,80})/g)].map(x=>x[1]);
  const hashtagTitle=tags.length===1?tags[0]:undefined;
- const title=clean(titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||workAfterPreposition?.[1]||workAfterDescriptor?.[1]||datedDescriptorTitle?.[2]||yearMatch?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'').replace(/[,\s]+$/,'');
+ const title=clean(titledLine?.[1]||narrative?.[1]||proseTitle?.[1]||screeningTitle?.[1]||sceneInTitle||contextTitle?.[1]||workAfterPreposition?.[1]||workAfterDescriptor?.[1]||datedDescriptorTitle?.[2]||yearMatch?.[1]||availableMatch?.[1]||hashtagTitle).replace(/^(?:film|movie)\s*[:\-]\s*/i,'').replace(/^In\s+/,'').replace(trailingReleaseYears,'').replace(/[,\s]+$/,'');
  const availability=clean(availableMatch?.[0]);
  const media_type_hint=/\b(?:season|episode|television|tv series|series finale|sitcom)\b|#(?:tv|tvcomedy|tvseries|sitcom)\b/i.test(text)?'tv':/\b(?:film|movie|feature)\b|#(?:movie|movies|horrorfilm)\b/i.test(text)?'movie':undefined;
  return {title_hint:title||undefined,year:yearMatch?Number(yearMatch[2]||yearMatch[3]):standaloneYear?Number(standaloneYear[1]):datedDescriptorTitle?Number(datedDescriptorTitle[1]):undefined,media_type_hint,availability:availability||undefined};
@@ -149,7 +151,7 @@ export async function enrichSourceMetadata(caption,current={}){
  // a broad heading regex: otherwise a retry can replace “About Last Night”
  // with “Demi Moore & Rob Lowe in 80s Romcom Classic About Last Night” and
  // permanently prevent an exact catalog match.
- const trustedTitle=clean(current.title_hint_verified).replace(/\s*\((?:19\d{2}|20\d{2})\)\s*$/,'');
+ const trustedTitle=clean(current.title_hint_verified).replace(trailingReleaseYears,'');
  const titleHint=trustedTitle&&normal(caption).includes(normal(trustedTitle))?trustedTitle:hints.title_hint;
  const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,structured_title_evidence:structuredTitleMatch(caption,titleHint),version:'source-caption-film-info-v6',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.

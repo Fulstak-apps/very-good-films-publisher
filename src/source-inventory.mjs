@@ -4,5 +4,5 @@ export function rememberCandidates(ledger,candidates){
 }
 export function candidateReady(candidate,ledger,version,now=Date.now()){
  const failed=ledger.failed?.[candidate.shortcode];
- return !ledger.queued?.[candidate.shortcode]&&!(failed?.collector_version===version&&Date.parse(failed.retry_at||'')>now);
+ return !ledger.queued?.[candidate.shortcode]&&!(failed?.collector_version===version&&(failed.terminal||Date.parse(failed.retry_at||'')>now));
 }

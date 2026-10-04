@@ -27,7 +27,7 @@ const repository=process.env.GITHUB_REPOSITORY||'Fulstak-apps/very-good-films-pu
 const commandTimeout=120_000;
 // Bump when eligibility semantics change so clips previously held by an older
 // rule are reconsidered instead of waiting for stale retry timestamps.
-const collectorVersion=13;
+const collectorVersion=14;
 const json=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 const save=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await fs.writeFile(tmp,JSON.stringify(value,null,2)+'\n');await fs.rename(tmp,file);};
 const shortcode=url=>url.match(/\/(?:reel|p)\/([A-Za-z0-9_-]+)/)?.[1]||'';
@@ -233,7 +233,13 @@ try{
   catch(error){
    run.errors.push({source_url:candidate.url,stage:'capture_or_queue',error:error.message});
    const metadataFailure=/(?:Verified (?:title|movie title)|explicit movie or television title)/.test(error.message);
-   ledger.failed[candidate.shortcode]={collector_version:collectorVersion,error:error.message.slice(0,300),failed_at:new Date().toISOString(),retry_at:new Date(Date.now()+(metadataFailure?30:180)*60_000).toISOString()};
+   const failures=previous?.collector_version===collectorVersion?(previous.failures||1)+1:1;
+   // A second literal-title rejection is deterministic for an unchanged
+   // source caption. Retrying it forever used to monopolize every refill pass
+   // and leave the queue empty. Hold it until the parser version changes and
+   // continue discovering fresh posts instead.
+   const terminal=metadataFailure&&failures>=2;
+   ledger.failed[candidate.shortcode]={collector_version:collectorVersion,error:error.message.slice(0,300),failed_at:new Date().toISOString(),failures,terminal,retry_at:terminal?null:new Date(Date.now()+(metadataFailure?30:180)*60_000).toISOString()};
    await save(ledgerPath,ledger);
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
   }

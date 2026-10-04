@@ -18,3 +18,9 @@ test('discovery survives restart and an empty scan; failed first video does not 
   assert.equal(Object.values(resumed.candidates).filter(c=>candidateReady(c,resumed,12)).length,0);
  }finally{await fs.rm(dir,{recursive:true,force:true});}
 });
+test('a deterministic terminal rejection cannot monopolize later refill passes',()=>{
+ const ledger={queued:{},failed:{bad:{collector_version:14,terminal:true,retry_at:null}},candidates:{bad:{shortcode:'bad'},fresh:{shortcode:'fresh'}}};
+ assert.equal(candidateReady(ledger.candidates.bad,ledger,14),false);
+ assert.equal(candidateReady(ledger.candidates.bad,ledger,15),true);
+ assert.equal(candidateReady(ledger.candidates.fresh,ledger,14),true);
+});

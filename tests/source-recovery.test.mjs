@@ -27,6 +27,12 @@ test('movie hints support camera labels, narrative captions and stale parser inp
  assert.equal(sourceHints('🎬 Back to the Future (1985)').year,1985);
  assert.equal(sourceHints('🎥🎬: Death Becomes Her (1992)').title_hint,'Death Becomes Her');
  assert.equal(sourceHints('🎬 Bend It Like Beckham\n2002 ‧ Comedy').year,2002);
+ const seriesRange=sourceHints('🎬 The Office (2005–2013)\nA scene from the sitcom.');
+ assert.equal(seriesRange.title_hint,'The Office');
+ assert.equal(seriesRange.year,2005);
+ const hyphenRange=sourceHints('📺 Ted Lasso (2020-2023)');
+ assert.equal(hyphenRange.title_hint,'Ted Lasso');
+ assert.equal(hyphenRange.year,2020);
  assert.equal(sourceHints('Silo opening title sequence is widely praised').title_hint,'Silo');
  assert.equal(sourceHints('The Sopranos Season 3 spoilers warning').media_type_hint,'tv');
  assert.equal(sourceHints('Silo Season 3 spoilers warning').title_hint,'Silo');
