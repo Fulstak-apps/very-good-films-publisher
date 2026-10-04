@@ -29288,11 +29288,38 @@
       "source_details": {
         "title_hint": "Ted Lasso",
         "source_title": "Ted Lasso",
-        "version": "source-caption-film-info-v6",
-        "identity_verified": false,
+        "version": "source-caption-film-info-v7",
+        "identity_verified": true,
         "title_hint_verified": "Ted Lasso",
-        "structured_title_evidence": false,
-        "identity_error": "Title needs an explicit year or media type to disambiguate it"
+        "structured_title_evidence": true,
+        "identity_error": "Title needs an explicit year or media type to disambiguate it",
+        "year": 2020,
+        "source_year": 2020,
+        "title": "Ted Lasso",
+        "type": "tv",
+        "director": "Jason Sudeikis",
+        "cast": [
+          "Jason Sudeikis",
+          "Hannah Waddingham",
+          "Juno Temple"
+        ],
+        "synopsis": "Ted Lasso ( LASS-oh) is an American sports comedy-drama television series developed by Jason Sudeikis, Bill Lawrence, Brendan Hunt, and Joe Kelly. It is based on a character Sudeikis portrayed in a series of promotional media for NBC Sports' coverage of England's football Premier League. The show follows Ted Lasso, an American college football coach who is hired to coach an English football team, A.F.C. Richmond, whose owner secretly hopes his inexperience will lead it to failure; instead, Lasso's folksy, optimistic leadership proves unexpectedly successful. The first season of ten episodes premiered on Apple TV+ on August 14, 2020, with the first three episodes releasing immediately. A seco",
+        "metadata_source": "https://en.wikipedia.org/wiki/Ted_Lasso",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Ted Lasso",
+          "source_year": 2020,
+          "catalog_title": "Ted Lasso",
+          "catalog_year": 2020,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
       },
       "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/b05e21fafeae234c9acc9a9b25f41079703ea5b796ffef3a44540f6dd514b0db.mp4?download=1",
       "asset_sha256": "b05e21fafeae234c9acc9a9b25f41079703ea5b796ffef3a44540f6dd514b0db",
@@ -29316,8 +29343,7 @@
       "status": "needs_review",
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-09-29T01:28:28.756Z",
-      "key": "b0be7a9e75de6e595aa1a560e10e1e612227f108441148504dd45c74868594f4",
-      "metadata_retry_at": "2026-10-04T18:19:46.241Z"
+      "key": "b0be7a9e75de6e595aa1a560e10e1e612227f108441148504dd45c74868594f4"
     },
     {
       "kind": "source_repost",
