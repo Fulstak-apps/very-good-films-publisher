@@ -12,6 +12,15 @@ import {enforceSourcePolicy,approvedSource} from '../src/source-policy.mjs';
 import {importPrepared} from '../src/imports.mjs';
 import {importClassics} from '../src/classic-imports.mjs';
 import {enrichSourceMetadata,sourceDetailsComplete,verifiedSourceIdentity} from '../src/source-metadata.mjs';
+// Reasons that mean "held only until the three-way source identity verifies".
+// The metadata loop below may release exactly these holds once verification
+// passes. Anything else (unapproved source, branding, platform rejection,
+// uncertain publish outcome) stays held for a human or a dedicated repair path.
+const verificationHoldReasons=new Set([
+ 'Exact title, year, and media type must be verified before publishing',
+ 'Source identity must pass current three-way verification',
+]);
+const releasableVerificationHold=(reason)=>typeof reason==='string'&&(reason.startsWith('Verified')||verificationHoldReasons.has(reason));
 const command=process.argv[2]||'status';
 await withLock(async()=>{
  const memory=await readJSON('state/memory.json'),brand=await readJSON('config/brand.json'),sources=await readJSON('config/sources.json');const save=()=>saveMemory(memory);
@@ -43,11 +52,11 @@ await withLock(async()=>{
   }
   if(sourceDetailsComplete(item.source_details)){
    if(item.caption_style!=='source_repost'){item.caption_style='source_repost';delete item.metadata_pending;sourceMetadataChanged=true;}
-   if(item.status==='needs_review'&&item.review_reason?.startsWith('Verified')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
+   if(item.status==='needs_review'&&releasableVerificationHold(item.review_reason)){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
   }
   if(verifiedSourceIdentity(item.source_details,item.source_caption)){
    if(item.caption_style!=='source_repost'){item.caption_style='source_repost';delete item.metadata_pending;sourceMetadataChanged=true;}
-   if(item.status==='needs_review'&&item.review_reason?.startsWith('Verified')){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
+   if(item.status==='needs_review'&&releasableVerificationHold(item.review_reason)){item.status='ready';delete item.review_reason;sourceMetadataChanged=true;}
   }
   if(!verifiedSourceIdentity(item.source_details,item.source_caption)&&['ready','discovered','publishing'].includes(item.status)){item.status='needs_review';item.review_reason='Exact title, year, and media type must be verified before publishing';sourceMetadataChanged=true;}
  }
