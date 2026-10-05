@@ -109,6 +109,8 @@ test('Wikipedia attribution fills credits when Wikidata has missing English labe
  assert.deepEqual(credits.cast,['Fionn Whitehead','Tom Glynn-Carney','Jack Lowden']);
  const commonWording=fallbackCredits('Avengers: Endgame is a film directed by Anthony Russo that features an ensemble cast that includes Robert Downey Jr., Chris Evans, Mark Ruffalo.');
  assert.deepEqual(commonWording.cast,['Robert Downey Jr.','Chris Evans','Mark Ruffalo']);
+ const tv=fallbackCredits('The Office is an American mockumentary sitcom television series adapted for NBC by Greg Daniels. It aired from March 24, 2005.');
+ assert.equal(tv.director,'Greg Daniels');
 });
 
 test('TV metadata accepts a catalogued creator and premiere year',async()=>{

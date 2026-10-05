@@ -11,7 +11,9 @@ const structuredTitleMatch=(caption,title)=>String(caption||'').normalize('NFKC'
  return normal(candidate)===normal(title);
 });
 export function fallbackCredits(extract){
- const director=clean(String(extract||'').match(/(?:written and )?directed by ([A-Z][A-Za-z .'-]{2,80}?)(?:\s+(?:that|who|,|\.|\band\b))/i)?.[1]);
+ const text=String(extract||'');
+ const creditEnd='(?=\\s+(?:for|that|who|and)\\b|[,.]|$)';
+ const director=clean(text.match(new RegExp(`(?:written and )?directed by ([A-Z][A-Za-z .'-]{2,80}?)${creditEnd}`,'i'))?.[1]||text.match(new RegExp(`(?:created|developed|adapted(?:\\s+for\\s+[^,.]{1,40})?)\\s+by\\s+([A-Z][A-Za-z .'-]{2,80}?)${creditEnd}`,'i'))?.[1]);
  const castText=String(extract||'').match(/(?:stars?|features? an ensemble cast (?:including|that includes)|starring)\s+([^!\n]{3,500}?)(?:\.(?=\s+[A-Z]|$)|!|$)/i)?.[1];
  return {director,cast:names(castText||'')};
 }
@@ -115,7 +117,7 @@ async function wikiMetadata(base){
  }
  const extract=strip(entry.extract);
  if(!year){
-  const premiere=extract.match(/\b(?:premiered|debuted|released)\b[^.]{0,120}\b(19\d{2}|20\d{2})\b/i);
+  const premiere=extract.match(/\b(?:premiered|debuted|released|aired\s+from)\b[^.]{0,120}\b(19\d{2}|20\d{2})\b/i);
   if(premiere)year=Number(premiere[1]);
  }
  // Wikidata can omit English labels even when the film page has clearly
@@ -125,7 +127,7 @@ async function wikiMetadata(base){
  director??=fallback.director;
  if(!cast.length)cast=fallback.cast;
  const title=entry.title.replace(/\s*\([^)]*\)$/,'');
- const type=/\btelevision (?:series|show)\b/i.test(extract)?'tv':/\bfilm\b/i.test(extract)?'movie':undefined;
+ const type=/\b(?:television (?:series|show|sitcom)|(?:drama|comedy|limited|streaming|mockumentary) series|sitcom)\b/i.test(extract)?'tv':/\bfilm\b/i.test(extract)?'movie':undefined;
  // Wikipedia is allowed only for an exact, unambiguous title match. A source
  // year, when supplied, must agree with Wikidata; otherwise a same-named work
  // cannot be distinguished safely.
@@ -153,7 +155,7 @@ export async function enrichSourceMetadata(caption,current={}){
  // permanently prevent an exact catalog match.
  const trustedTitle=clean(current.title_hint_verified).replace(trailingReleaseYears,'');
  const titleHint=trustedTitle&&normal(caption).includes(normal(trustedTitle))?trustedTitle:hints.title_hint;
- const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,structured_title_evidence:structuredTitleMatch(caption,titleHint),version:'source-caption-film-info-v7',identity_verified:false};
+ const base={...current,...hints,source_title:titleHint,source_year:hints.year,title_hint:titleHint,structured_title_evidence:structuredTitleMatch(caption,titleHint),version:'source-caption-film-info-v8',identity_verified:false};
  // A verified source caption can supply credits missing from the metadata API.
  const castMatch=String(caption||'').match(/\bstarring\s*:\s*([^\n]+)/i)||String(caption||'').match(/\bstarring\s+([^!\n]+?)(?:\.\s*(?:$|\n)|$)/i);
  if(!base.cast?.length&&castMatch){base.cast=castMatch[1].split(/,\s*|\s+and\s+/).map(clean).filter(Boolean);}

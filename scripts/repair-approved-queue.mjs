@@ -70,7 +70,7 @@ await withLock(async()=>{
  const reviewBatch=memory.items.filter(x=>
   x.status==='needs_review'&&x.kind==='source_repost'&&approvedSource(x.source_post_url)&&!x.instagram_media_id&&!x.threads_media_id&&
   sourceHints(x.source_caption).title_hint&&
-  (x.source_details?.version!=='source-caption-film-info-v7'||x.source_details?.identity?.version!=='source-catalog-identity-v2'||!(Date.parse(x.metadata_retry_at||'')>Date.now())||
+  (x.source_details?.version!=='source-caption-film-info-v8'||x.source_details?.identity?.version!=='source-catalog-identity-v2'||!(Date.parse(x.metadata_retry_at||'')>Date.now())||
    (x.source_details?.identity_verified===true&&!verifiedSourceIdentity(x.source_details,x.source_caption)))
  ).sort((a,b)=>{
   const verifiedDelta=Number(b.source_details?.identity_verified===true)-Number(a.source_details?.identity_verified===true);
