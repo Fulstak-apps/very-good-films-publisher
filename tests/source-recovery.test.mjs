@@ -117,7 +117,7 @@ test('TV metadata accepts a catalogued creator and premiere year',async()=>{
  const original=global.fetch,response=value=>({ok:true,json:async()=>value});
  global.fetch=async url=>{const target=String(url);
   if(target.includes('list=search'))return response({query:{search:[{title:'Abbott Elementary',pageid:1}]}});
-  if(target.includes('pageids=1'))return response({query:{pages:{1:{title:'Abbott Elementary',pageprops:{wikibase_item:'Q1'},extract:'Abbott Elementary is an American sitcom television series created by Quinta Brunson. It stars Quinta Brunson and Tyler James Williams. The series premiered on December 7, 2021.'}}}});
+  if(target.includes('pageids=1'))return response({query:{pages:{1:{title:'Abbott Elementary',pageprops:{wikibase_item:'Q1'},extract:'Abbott Elementary is an American sitcom television series created by Quinta Brunson. It stars Quinta Brunson and Tyler James Williams. It aired from December 7, 2021, to May 12, 2026.'}}}});
   if(target.includes('EntityData/Q1'))return response({entities:{Q1:{claims:{P170:[{mainsnak:{datavalue:{value:{id:'Q2'}}}}],P161:[{mainsnak:{datavalue:{value:{id:'Q2'}}}},{mainsnak:{datavalue:{value:{id:'Q3'}}}}]}}}});
   if(target.includes('wbgetentities'))return response({entities:{Q2:{labels:{en:{value:'Quinta Brunson'}}},Q3:{labels:{en:{value:'Tyler James Williams'}}}}});throw Error(target);
  };

@@ -96,7 +96,7 @@ async function wikiMetadata(base){
  const matching=hits.filter(x=>normal(x.title).includes(normal(base.title_hint))||normal(base.title_hint).includes(normal(x.title)));
  // Prefer a film-specific result over a same-named novel, album, or general
  // article. This is common for titles such as Poor Things.
- const hit=matching.find(x=>base.media_type_hint==='tv'?/\((?:tv|television series)\)/i.test(x.title):/\((?:\d{4}\s+)?film\)/i.test(x.title))||matching[0];if(!hit)return base;
+ const hit=matching.find(x=>base.media_type_hint==='tv'?/\([^)]*\b(?:tv|television) series\)/i.test(x.title):/\((?:\d{4}\s+)?film\)/i.test(x.title))||matching[0];if(!hit)return base;
  const page=new URL('https://en.wikipedia.org/w/api.php');page.search='action=query&format=json&origin=*&prop=extracts|pageprops&exintro=1&explaintext=1&pageids='+hit.pageid;
  const entry=Object.values((await (await fetch(page,{headers,signal:AbortSignal.timeout(5000)})).json()).query?.pages||{})[0];if(!entry?.title)return base;
  const qid=entry.pageprops?.wikibase_item;
@@ -117,7 +117,7 @@ async function wikiMetadata(base){
  }
  const extract=strip(entry.extract);
  if(!year){
-  const premiere=extract.match(/\b(?:premiered|debuted|released|aired\s+from)\b[^.]{0,120}\b(19\d{2}|20\d{2})\b/i);
+  const premiere=extract.match(/\b(?:premiered|debuted|released|aired\s+from)\b[^.]{0,120}?\b(19\d{2}|20\d{2})\b/i);
   if(premiere)year=Number(premiere[1]);
  }
  // Wikidata can omit English labels even when the film page has clearly
