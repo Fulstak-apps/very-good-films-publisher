@@ -2915,6 +2915,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DeHaTDgOlI9/",
       "queued_at": "2026-10-05T15:55:07.718Z",
       "asset_sha256": "dd188eeb63d19170313069ad51373007d1754b410489349621859569fabbea4a"
+    },
+    "DeHRqGhMj9V": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DeHRqGhMj9V/",
+      "queued_at": "2026-10-05T16:07:03.563Z",
+      "asset_sha256": "580998ceb490e27c79bd23c4b8ecc9f1c9ad5f5f0c2dd7b9d5ff323e152d0049"
     }
   },
   "checks": {
@@ -2934,10 +2940,10 @@
       "checked_at": "2026-10-05T15:54:15.978Z"
     },
     "theacenyc": {
-      "checked_at": "2026-10-05T09:49:33.350Z"
+      "checked_at": "2026-10-05T16:00:51.990Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-10-05T09:55:47.978Z"
+      "checked_at": "2026-10-05T16:06:25.843Z"
     },
     "film.fission": {
       "checked_at": "2026-10-05T10:01:22.100Z"
@@ -2968,48 +2974,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-03T19:15:58.087Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeCQGSDB7gM/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 400,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-03T19:16:00.350Z"
-    },
-    {
-      "started_at": "2026-10-03T19:21:08.370Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 400,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-03T19:22:09.150Z"
-    },
     {
       "started_at": "2026-10-03T19:27:16.880Z",
       "queued": [],
@@ -8342,9 +8306,31 @@
       "inventory": 429,
       "status": "candidates_on_hold",
       "finished_at": "2026-10-05T15:48:25.120Z"
+    },
+    {
+      "started_at": "2026-10-05T15:53:48.816Z",
+      "queued": [
+        "DeHaTDgOlI9"
+      ],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 1,
+      "inventory": 430,
+      "status": "queued",
+      "finished_at": "2026-10-05T15:55:10.962Z"
+    },
+    {
+      "started_at": "2026-10-05T16:00:22.760Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 12,
+      "attempts": 0,
+      "inventory": 430,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-10-05T16:00:51.999Z"
     }
   ],
-  "next_account_index": 2,
+  "next_account_index": 4,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -11533,13 +11519,18 @@
       "handle": "thecinemanerd.ig",
       "url": "https://www.instagram.com/thecinemanerd.ig/reel/DeHaTDgOlI9/",
       "shortcode": "DeHaTDgOlI9"
+    },
+    "DeHRqGhMj9V": {
+      "handle": "the_goodfilms",
+      "url": "https://www.instagram.com/the_goodfilms/reel/DeHRqGhMj9V/",
+      "shortcode": "DeHRqGhMj9V"
     }
   },
   "discovery_depth": {
     "reelgoodmovies": 60,
     "thecinemanerd.ig": 40,
-    "theacenyc": 30,
-    "the_goodfilms": 20,
+    "theacenyc": 40,
+    "the_goodfilms": 30,
     "film.fission": 30,
     "ellsoriaa": 40,
     "relatedfilms": 80,
