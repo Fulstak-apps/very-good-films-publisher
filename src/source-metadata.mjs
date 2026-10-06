@@ -164,7 +164,11 @@ export async function enrichSourceMetadata(caption,current={}){
  try{
   const headers={Authorization:`Bearer ${process.env.TMDB_READ_TOKEN}`};
   const query=new URL('https://api.themoviedb.org/3/search/multi');query.searchParams.set('query',base.title_hint);query.searchParams.set('include_adult','false');
-  const search=await fetch(query,{headers,signal:AbortSignal.timeout(15000)});if(!search.ok)return base;
+  const search=await fetch(query,{headers,signal:AbortSignal.timeout(15000)});
+  // A dead, expired, or throttled TMDB token must not silently disable all
+  // verification: fall through to the Wikipedia exact-title path (which keeps
+  // its own exact-match gate) instead of returning an unverified record.
+  if(!search.ok){base.tmdb_error=`TMDB search HTTP ${search.status}`;try{return await wikiMetadata(base);}catch{return base;}}
   const exact=(await search.json()).results?.filter(x=>['movie','tv'].includes(x.media_type)&&normal(x.title||x.name)===normal(base.title_hint))||[];
   const candidates=(base.source_year?exact.filter(x=>Number((x.release_date||x.first_air_date||'').slice(0,4))===base.source_year):exact).filter(x=>!base.media_type_hint||x.media_type===base.media_type_hint);
   // No year means the exact title must resolve to exactly one movie/series.
@@ -172,7 +176,8 @@ export async function enrichSourceMetadata(caption,current={}){
   if(candidates.length!==1)return {...base,identity_error:'Ambiguous or missing exact catalog title'};
   const hit=candidates[0];
   const type=hit.media_type,id=hit.id;
-  const detail=await fetch(`https://api.themoviedb.org/3/${type}/${id}?append_to_response=credits,watch/providers`,{headers,signal:AbortSignal.timeout(15000)});if(!detail.ok)return base;
+  const detail=await fetch(`https://api.themoviedb.org/3/${type}/${id}?append_to_response=credits,watch/providers`,{headers,signal:AbortSignal.timeout(15000)});
+  if(!detail.ok){base.tmdb_error=`TMDB detail HTTP ${detail.status}`;try{return await wikiMetadata(base);}catch{return base;}}
   const data=await detail.json(),credits=data.credits||{};
   const providers=data['watch/providers']?.results?.US||{};
   const places=[...(providers.flatrate||[]),...(providers.free||[]),...(providers.ads||[])].map(x=>x.provider_name).filter(Boolean);
