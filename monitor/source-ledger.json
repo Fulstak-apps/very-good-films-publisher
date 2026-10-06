@@ -3035,6 +3035,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DcJH4BsM1xv/",
       "queued_at": "2026-10-06T15:49:02.391Z",
       "asset_sha256": "2a323055d0d5fa142a7a937cc44ac395a75ad514a90e0235c1400491ba456d8d"
+    },
+    "Db-7x84sVL2": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/Db-7x84sVL2/",
+      "queued_at": "2026-10-06T15:55:04.957Z",
+      "asset_sha256": "bd68683d101ca66a6eff81d6619ecf057c12a6a73e20185a10afefbf5f31695a"
     }
   },
   "checks": {
@@ -3088,16 +3094,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T00:48:49.328Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 426,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T00:49:50.151Z"
-    },
     {
       "started_at": "2026-10-05T00:55:08.178Z",
       "queued": [],
@@ -5919,6 +5915,28 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-06T15:40:36.640Z"
+    },
+    {
+      "started_at": "2026-10-06T15:45:47.959Z",
+      "queued": [
+        "DcT58pQNM0n",
+        "DcQ549VMoYq",
+        "DcOzouhMGXX",
+        "DcOPk9JMeVW",
+        "DcJH4BsM1xv"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DcMJlZHMo2c/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-06T15:49:04.980Z"
     }
   ],
   "next_account_index": 4,
@@ -6982,6 +7000,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-06T16:18:23.480Z"
+    },
+    "DcCIoKdsIDT": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-06T15:54:34.978Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-06T16:24:34.978Z"
     }
   },
   "candidates": {
