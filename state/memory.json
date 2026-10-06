@@ -39638,6 +39638,78 @@
       "review_reason": "This movie has already been published; only one clip per movie is allowed",
       "discovered_at": "2026-10-06T16:43:38.460Z",
       "key": "756e8835d151a058e0ed3cf4c3c6955c326aed6da10371ab0eafb48e9e6e0604"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Dbayuu2sxQp",
+        "title": "@the_goodfilms clip"
+      },
+      "scene": {
+        "id": "Dbayuu2sxQp",
+        "start": 0,
+        "end": 52.125
+      },
+      "source_post_url": "https://www.instagram.com/the_goodfilms/reel/Dbayuu2sxQp/",
+      "source_caption": "One of Odysseus’s sidequests 🎙️\n\nMatt Damon’s iconic, uncredited cameo as shirtless, bald punk rocker Donny in EuroTrip (2004) happened because the film’s writers/directors (Alec Berg, David Mandel, and Jeff Schaffer) were his old Harvard college friends. He was shooting The Brothers Grimm nearby in Prague and agreed to shave his head for the role.",
+      "source_details": {
+        "title_hint": "EuroTrip",
+        "year": 2004,
+        "media_type_hint": "movie",
+        "source_title": "EuroTrip",
+        "source_year": 2004,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "EuroTrip",
+        "type": "movie",
+        "director": "Jeff Schaffer",
+        "cast": [
+          "Scott Mechlowicz",
+          "Jacob Pitts",
+          "Michelle Trachtenberg"
+        ],
+        "synopsis": "EuroTrip is a 2004 American teen sex comedy film directed by Jeff Schaffer, from a screenplay he wrote with Alec Berg and David Mandel. The film was produced by The Montecito Picture Company and distributed by DreamWorks Pictures. It stars Scott Mechlowicz, Jacob Pitts, Michelle Trachtenberg, and Travis Wester. Mechlowicz portrays Scotty Thomas, a recent high school graduate from the Youngstown, Ohio area who travels across Europe in search of his German pen pal, Mieke (Jessica Boehrs). Accompanied by his friend Cooper (Pitts) and twin siblings Jenny and Jamie (Trachtenberg and Wester), Scotty's quest takes him to England, France, the Netherlands, Slovakia, Germany, and Italy, encountering a",
+        "metadata_source": "https://en.wikipedia.org/wiki/EuroTrip",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "EuroTrip",
+          "source_year": 2004,
+          "catalog_title": "EuroTrip",
+          "catalog_year": 2004,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media/d7ea4ce93af4babbcacb38f484f007e2b03c8226815b72262b05674b99ab1850.mp4?download=1",
+      "asset_sha256": "d7ea4ce93af4babbcacb38f484f007e2b03c8226815b72262b05674b99ab1850",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 52.059,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-10-06T16:45:02.569Z",
+        "source_duration": 52.125941,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "duplicate",
+      "review_reason": "This movie has already been published; only one clip per movie is allowed",
+      "discovered_at": "2026-10-06T16:46:31.692Z",
+      "key": "117a15d5f54994a7b8eafbda965fa13a5408c04e2296f8d407c55f7019457f12"
     }
   ],
   "discovery": [],
