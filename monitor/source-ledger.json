@@ -3125,6 +3125,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/Dbf7iEmMUIm/",
       "queued_at": "2026-10-06T16:35:47.186Z",
       "asset_sha256": "289fa82b42cb0f5c62ced8c43743ed4a3f65ca51ee268d72b500497560652f36"
+    },
+    "DbdYmZ4OCeI": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DbdYmZ4OCeI/",
+      "queued_at": "2026-10-06T16:43:08.059Z",
+      "asset_sha256": "2f7565787c2d71de4b15250407806619287b9726a60f7e7df27ca7773969a25f"
     }
   },
   "checks": {
@@ -3178,16 +3184,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T01:07:14.916Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 426,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T01:07:48.436Z"
-    },
     {
       "started_at": "2026-10-05T01:13:03.613Z",
       "queued": [],
@@ -6049,6 +6045,36 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-06T16:24:03.575Z"
+    },
+    {
+      "started_at": "2026-10-06T16:29:13.796Z",
+      "queued": [
+        "DbihGwbu4MR",
+        "Dbgh3UCsuib",
+        "Dbf7iEmMUIm"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DcMJlZHMo2c/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DcCIoKdsIDT/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/Db5t-GfuVsS/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-06T16:35:49.856Z"
     }
   ],
   "next_account_index": 4,
