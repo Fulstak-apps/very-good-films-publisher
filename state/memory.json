@@ -37706,9 +37706,10 @@
       },
       "caption_style": "source_repost",
       "metadata_pending": false,
-      "status": "ready",
+      "status": "publishing",
       "discovered_at": "2026-10-06T15:34:40.721Z",
-      "key": "502b07fb2812b024168e2b686141e0dcc5a07e7e2a46c14f882ab232ff8e1d6f"
+      "key": "502b07fb2812b024168e2b686141e0dcc5a07e7e2a46c14f882ab232ff8e1d6f",
+      "updated_at": "2026-10-06T15:35:03.366Z"
     },
     {
       "kind": "source_repost",
@@ -37975,7 +37976,8 @@
   "discovery": [],
   "platforms": {
     "instagram": {
-      "retry_at": "2026-09-10T08:40:05.363Z"
+      "retry_at": "2026-10-06T15:50:02.641Z",
+      "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
     },
     "threads": {
       "retry_at": "2026-09-10T06:40:36.630Z"
