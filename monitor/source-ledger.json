@@ -3323,6 +3323,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DZ24Z8tMOmI/",
       "queued_at": "2026-10-06T18:16:28.883Z",
       "asset_sha256": "e4de7d0cc2aef409e19c70b33a1e4c6ef5991f5a58e9eec10cb2766d03010335"
+    },
+    "DZ0GBS3sIIw": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DZ0GBS3sIIw/",
+      "queued_at": "2026-10-06T18:22:16.284Z",
+      "asset_sha256": "b2ec483546dccd91161333419052f92c4ec92395dfeec74a71f1e45cb8c3d1d2"
     }
   },
   "checks": {
@@ -3376,16 +3382,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T01:54:26.381Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 426,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T01:54:53.132Z"
-    },
     {
       "started_at": "2026-10-05T02:00:06.144Z",
       "queued": [],
@@ -6379,6 +6375,33 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-06T18:06:30.181Z"
+    },
+    {
+      "started_at": "2026-10-06T18:11:41.004Z",
+      "queued": [
+        "DZ-sl9hsU3k",
+        "DZ-FPW9sejd",
+        "DZ7sO-esw20",
+        "DZ5ZhvMsBut",
+        "DZ24Z8tMOmI"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DaAtwcJutLA/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZ450OpsQkg/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-06T18:16:31.100Z"
     }
   ],
   "next_account_index": 4,
@@ -7542,10 +7565,10 @@
     "DadeZpLMk_l": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-06T17:45:33.628Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-06T18:15:33.628Z"
+      "failed_at": "2026-10-06T18:21:46.899Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DaXzL7ZMA8w": {
       "collector_version": 14,
