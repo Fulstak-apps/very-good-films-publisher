@@ -76,8 +76,17 @@ async function profiles(handles=sourceAccounts,errors=[],ledger){
     // scan a deeper window before declaring the source rotation exhausted.
     const depth=ledger.discovery_depth?.[handle]||20;
     for(let row=0;row<depth&&Date.now()<discoveryDeadline;row++){
-     const urls=await page.locator('a[href*="/reel/"]').evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
+     const reelLinks=page.locator('a[href*="/reel/"]');
+     const urls=await reelLinks.evaluateAll(links=>links.map(x=>x.href).filter(Boolean));
      for(const url of urls)seen.add(url);
+     // Instagram often scrolls an internal container while window.scrollBy
+     // leaves the virtualized grid pinned to its first twelve reels. Bring the
+     // last rendered tile into view and send a real wheel event so older reels
+     // load. Falling back to window scrolling keeps this compatible with the
+     // simpler desktop layout.
+     const count=await reelLinks.count();
+     if(count)await reelLinks.nth(count-1).scrollIntoViewIfNeeded().catch(()=>{});
+     await page.mouse.wheel(0,Math.max((await page.viewportSize())?.height||800,1200));
      await page.evaluate(()=>window.scrollBy(0,Math.max(window.innerHeight*1.5,1200)));
      await page.waitForTimeout(700);
     }

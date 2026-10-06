@@ -100,6 +100,8 @@ test('collector asks the literal-title extractor before rejecting an unparsed ca
  assert.ok(script.indexOf('const extractedHint=')<script.indexOf("throw new Error('Source caption has no explicit"));
  assert.match(script,/reset','--hard','origin\/main/);
  assert.ok(script.indexOf("fs.readFile(ledgerPath")<script.indexOf("reset','--hard','origin/main"));
+ assert.match(script,/scrollIntoViewIfNeeded/);
+ assert.match(script,/page\.mouse\.wheel/);
 });
 });
 
