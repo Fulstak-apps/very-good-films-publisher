@@ -3509,6 +3509,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DZPenDgOaqE/",
       "queued_at": "2026-10-06T20:03:50.317Z",
       "asset_sha256": "65f2ae94df0462d6a26590760f83fa8a79d81c096d9cdc99601a2b1ec39d8f6d"
+    },
+    "DZPKAR1u6aV": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DZPKAR1u6aV/",
+      "queued_at": "2026-10-06T20:10:34.304Z",
+      "asset_sha256": "069da2db8eb7f3c96f2967793826e0f10fdd82e0c7e1a71d85aaadf954b70303"
     }
   },
   "checks": {
@@ -3562,16 +3568,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T02:34:30.118Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 426,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T02:34:55.550Z"
-    },
     {
       "started_at": "2026-10-05T02:40:09.388Z",
       "queued": [
@@ -6688,6 +6684,22 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-06T19:36:21.615Z"
+    },
+    {
+      "started_at": "2026-10-06T19:58:45.920Z",
+      "queued": [
+        "DbLVW2ZMpL4",
+        "DZQcV2euYmt",
+        "DZQOrhgOq8v",
+        "DZPzODcsXsg",
+        "DZPenDgOaqE"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-06T20:03:53.011Z"
     }
   ],
   "next_account_index": 4,
