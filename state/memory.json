@@ -38585,9 +38585,10 @@
       },
       "caption_style": "source_repost",
       "metadata_pending": false,
-      "status": "ready",
+      "status": "publishing",
       "discovered_at": "2026-10-06T15:49:41.553Z",
-      "key": "c3336f79ec2d2abd6672d6fd7f6ddf761d5e38a5af23a2544943729f357f9c20"
+      "key": "c3336f79ec2d2abd6672d6fd7f6ddf761d5e38a5af23a2544943729f357f9c20",
+      "updated_at": "2026-10-06T16:44:02.949Z"
     },
     {
       "kind": "source_repost",
@@ -39639,8 +39640,8 @@
   "discovery": [],
   "platforms": {
     "instagram": {
-      "retry_at": "2026-10-06T16:39:49.558Z",
-      "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
+      "retry_at": "2026-10-06T16:59:02.220Z",
+      "last_error": "Cannot convert argument to a ByteString because the character at index 65 has a value of 8203 which is greater than 255."
     },
     "threads": {
       "retry_at": "2026-09-10T06:40:36.630Z"
