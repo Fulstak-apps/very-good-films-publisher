@@ -3893,6 +3893,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DXPBejijDdt/",
       "queued_at": "2026-10-08T15:27:36.661Z",
       "asset_sha256": "3d7f788037f24560f159e264f6c29cbc6223375f47aa7b3522ce52116d56abf5"
+    },
+    "DXMt4CsDBxA": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DXMt4CsDBxA/",
+      "queued_at": "2026-10-08T16:38:32.205Z",
+      "asset_sha256": "1f8201fbf5528dda4861e773a62a042741ae5e3eb4f25704f39ebf87894ce01f"
     }
   },
   "checks": {
@@ -3946,16 +3952,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T04:05:04.969Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 427,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T04:05:57.299Z"
-    },
     {
       "started_at": "2026-10-05T04:11:31.560Z",
       "queued": [],
@@ -7438,6 +7434,42 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-08T14:15:56.147Z"
+    },
+    {
+      "started_at": "2026-10-08T15:23:05.724Z",
+      "queued": [
+        "DXXPM_ujJLE",
+        "DXU63BFDAF5",
+        "DXPJDezjCeF",
+        "DXPBejijDdt"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXUYcAAjICE/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXRhyOKjCDD/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXNS7YXDEy6/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXMt4CsDBxA/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-08T15:29:28.900Z"
     }
   ],
   "next_account_index": 4,
@@ -8777,10 +8809,10 @@
     "DXUYcAAjICE": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-08T15:25:48.845Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-08T15:55:48.845Z"
+      "failed_at": "2026-10-08T16:37:53.035Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DXRhyOKjCDD": {
       "collector_version": 14,
@@ -8789,6 +8821,22 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-08T18:25:56.787Z"
+    },
+    "DXNS7YXDEy6": {
+      "collector_version": 14,
+      "error": "Exact source caption missing, generic or truncated; needs review",
+      "failed_at": "2026-10-08T15:27:49.883Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-08T18:27:49.883Z"
+    },
+    "DXMt4CsDBxA": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-08T15:29:28.882Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-08T15:59:28.884Z"
     }
   },
   "candidates": {
