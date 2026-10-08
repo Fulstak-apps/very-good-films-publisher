@@ -3959,6 +3959,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DWy9OL4jJV1/",
       "queued_at": "2026-10-08T17:54:40.176Z",
       "asset_sha256": "e84886b87a7ccc88bd2d475e70a8e639926ed55e207510fc44ce629df1af4709"
+    },
+    "DWwLprdjHlh": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DWwLprdjHlh/",
+      "queued_at": "2026-10-08T19:40:36.526Z",
+      "asset_sha256": "a3b1e6134d7dad75fd6882541a08557434a84462de2d76738ae1e051276d7784"
     }
   },
   "checks": {
@@ -4012,16 +4018,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T04:18:12.110Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 427,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T04:18:59.928Z"
-    },
     {
       "started_at": "2026-10-05T04:24:44.582Z",
       "queued": [],
@@ -7557,6 +7553,36 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-08T16:44:30.633Z"
+    },
+    {
+      "started_at": "2026-10-08T17:48:29.203Z",
+      "queued": [
+        "DW4QYTxjPOy",
+        "DW1bqEXDDR2",
+        "DWy9OL4jJV1"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXANzMrDG5V/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DW3w4CkjIlF/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DW1o3oPjFgq/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-08T17:54:43.840Z"
     }
   ],
   "next_account_index": 4,
@@ -8904,18 +8930,18 @@
     "DXRhyOKjCDD": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-08T15:25:56.787Z",
-      "failures": 1,
+      "failed_at": "2026-10-08T19:38:49.029Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-10-08T18:25:56.787Z"
+      "retry_at": "2026-10-08T22:38:49.031Z"
     },
     "DXNS7YXDEy6": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-08T15:27:49.883Z",
-      "failures": 1,
+      "failed_at": "2026-10-08T19:38:57.425Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-10-08T18:27:49.883Z"
+      "retry_at": "2026-10-08T22:38:57.429Z"
     },
     "DXMt4CsDBxA": {
       "collector_version": 14,
@@ -8960,18 +8986,26 @@
     "DW3w4CkjIlF": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-08T17:51:17.836Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-08T18:21:17.836Z"
+      "failed_at": "2026-10-08T19:38:59.514Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DW1o3oPjFgq": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-08T17:51:31.612Z",
+      "failed_at": "2026-10-08T19:39:00.045Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DWwdF5MDNPT": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-08T19:40:18.050Z",
       "failures": 1,
       "terminal": false,
-      "retry_at": "2026-10-08T18:21:31.612Z"
+      "retry_at": "2026-10-08T20:10:18.050Z"
     }
   },
   "candidates": {
