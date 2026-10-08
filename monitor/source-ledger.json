@@ -3881,6 +3881,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DXU63BFDAF5/",
       "queued_at": "2026-10-08T15:25:31.978Z",
       "asset_sha256": "5edbfd46fa9877226f95f75e0b14d4354110dc3a468b9c32e9ac49befe011225"
+    },
+    "DXPJDezjCeF": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DXPJDezjCeF/",
+      "queued_at": "2026-10-08T15:26:52.955Z",
+      "asset_sha256": "8c7f437e98faba9a2fa0e685973dccb8028f49e3cfefebec614bbd17861515c2"
     }
   },
   "checks": {
@@ -8761,6 +8767,22 @@
       "failures": 2,
       "terminal": true,
       "retry_at": null
+    },
+    "DXUYcAAjICE": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-08T15:25:48.845Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-08T15:55:48.845Z"
+    },
+    "DXRhyOKjCDD": {
+      "collector_version": 14,
+      "error": "Exact source caption missing, generic or truncated; needs review",
+      "failed_at": "2026-10-08T15:25:56.787Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-08T18:25:56.787Z"
     }
   },
   "candidates": {
