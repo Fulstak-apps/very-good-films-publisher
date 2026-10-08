@@ -3731,6 +3731,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DX7kVvbs0a-/",
       "queued_at": "2026-10-08T06:34:31.523Z",
       "asset_sha256": "612d79ebc7b41cce3aa4ad7fc2ceaa1fc596998a9a754a3e27e67a29c23da029"
+    },
+    "DX6wAY7MFeE": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DX6wAY7MFeE/",
+      "queued_at": "2026-10-08T07:31:53.122Z",
+      "asset_sha256": "ae76e89a4cc3db81a47e06788b2017d6af5dd0cd38349e1fd7a218319d000eea"
     }
   },
   "checks": {
@@ -3784,16 +3790,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T03:30:10.627Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 427,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T03:30:36.387Z"
-    },
     {
       "started_at": "2026-10-05T03:35:48.234Z",
       "queued": [],
@@ -7126,6 +7122,28 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-08T06:24:27.539Z"
+    },
+    {
+      "started_at": "2026-10-08T06:29:37.570Z",
+      "queued": [
+        "DYC9UvTMUOQ",
+        "DX_8zuCMrL0",
+        "DX95iWLMYgo",
+        "DX9Tr4qsI7O",
+        "DX7kVvbs0a-"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYChd3MMKy5/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-08T06:34:33.700Z"
     }
   ],
   "next_account_index": 4,
@@ -8433,10 +8451,10 @@
     "DXzfO3yMo4j": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-08T06:24:27.536Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-08T06:54:27.536Z"
+      "failed_at": "2026-10-08T07:31:05.830Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DYChd3MMKy5": {
       "collector_version": 14,
