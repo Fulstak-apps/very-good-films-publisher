@@ -4331,6 +4331,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DdMR93gyo9v/",
       "queued_at": "2026-10-09T17:10:17.153Z",
       "asset_sha256": "4f0d901f5ac2ca19581c571c8a5651ea20c5e551834563a6327d3693285a0f3a"
+    },
+    "DdEgIkTS-6z": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DdEgIkTS-6z/",
+      "queued_at": "2026-10-09T17:15:51.211Z",
+      "asset_sha256": "e8b8a8db8213afc3496bafee0be4f3a5ebf9b65d7d2fc6aa07a197db6b4a916a"
     }
   },
   "checks": {
@@ -4384,16 +4390,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T06:15:17.603Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 428,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T06:15:57.519Z"
-    },
     {
       "started_at": "2026-10-05T06:21:10.404Z",
       "queued": [],
@@ -8394,6 +8390,21 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-09T16:59:00.037Z"
+    },
+    {
+      "started_at": "2026-10-09T17:04:12.193Z",
+      "queued": [
+        "DeR2EuzyTUT",
+        "DePw0Fryef9",
+        "DeKow2cTuKH",
+        "DdMR93gyo9v"
+      ],
+      "errors": [],
+      "discovered": 295,
+      "attempts": 4,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-09T17:10:19.320Z"
     }
   ],
   "next_account_index": 5,
