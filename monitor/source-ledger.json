@@ -4145,6 +4145,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DVoQQneDoua/",
       "queued_at": "2026-10-09T04:33:57.690Z",
       "asset_sha256": "aaf4bd70d4137758aaad9b2af8d1aef1ca0e94c454f22ed6c5d7fa78a658a06f"
+    },
+    "DVn9FzkjOEO": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DVn9FzkjOEO/",
+      "queued_at": "2026-10-09T05:55:02.604Z",
+      "asset_sha256": "94489e01b3f15df9a6e910aba604218afe4459d4c8e210f86ac9214cf310677e"
     }
   },
   "checks": {
@@ -4198,16 +4204,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T05:13:58.496Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 427,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T05:14:51.895Z"
-    },
     {
       "started_at": "2026-10-05T05:20:05.124Z",
       "queued": [],
@@ -8016,6 +8012,27 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-09T04:22:03.240Z"
+    },
+    {
+      "started_at": "2026-10-09T04:27:13.542Z",
+      "queued": [
+        "DVtg8YqDH9-",
+        "DVtISnAjJ_8",
+        "DVqgPmCDFQi",
+        "DVoQQneDoua"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DVvrNWujuiS/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-09T04:34:00.100Z"
     }
   ],
   "next_account_index": 4,
@@ -9515,10 +9532,10 @@
     "DVyTFcCDNEr": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T04:21:01.222Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T04:51:01.222Z"
+      "failed_at": "2026-10-09T05:40:07.750Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DVv9d8mDqDd": {
       "collector_version": 14,
@@ -9531,10 +9548,10 @@
     "DVvrNWujuiS": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T04:27:27.585Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T04:57:27.585Z"
+      "failed_at": "2026-10-09T05:40:08.142Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
