@@ -4091,6 +4091,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DV7cDK6CJRM/",
       "queued_at": "2026-10-09T01:51:25.427Z",
       "asset_sha256": "d5e255703f3c9c3b204bc65b07ab48792dc30a11ea5fa0d5dee072f364fdfbc4"
+    },
+    "DV6TfCrDMzy": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DV6TfCrDMzy/",
+      "queued_at": "2026-10-09T02:56:25.320Z",
+      "asset_sha256": "62b4bb09b7f5978c4fefae43d649305195c5dbf0b449d0c4c2c724bffc2a46aa"
     }
   },
   "checks": {
@@ -4144,16 +4150,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T05:02:13.303Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 427,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T05:02:45.636Z"
-    },
     {
       "started_at": "2026-10-05T05:07:57.730Z",
       "queued": [],
@@ -7886,6 +7882,33 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-09T01:27:34.524Z"
+    },
+    {
+      "started_at": "2026-10-09T01:48:10.734Z",
+      "queued": [
+        "DV_o1OnDN5Y",
+        "DV_Ea27jHQ2",
+        "DV88i8_DDgU",
+        "DV8hgXqDF7H",
+        "DV7cDK6CJRM"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DWRLfYNDAyT/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DV_K2BNjgt8/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-09T01:51:28.066Z"
     }
   ],
   "next_account_index": 4,
@@ -9233,18 +9256,18 @@
     "DXRhyOKjCDD": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-08T23:51:12.581Z",
-      "failures": 3,
+      "failed_at": "2026-10-09T02:55:48.765Z",
+      "failures": 4,
       "terminal": false,
-      "retry_at": "2026-10-09T02:51:12.581Z"
+      "retry_at": "2026-10-09T05:55:48.765Z"
     },
     "DXNS7YXDEy6": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-08T23:51:20.685Z",
-      "failures": 3,
+      "failed_at": "2026-10-09T02:55:56.515Z",
+      "failures": 4,
       "terminal": false,
-      "retry_at": "2026-10-09T02:51:20.685Z"
+      "retry_at": "2026-10-09T05:55:56.515Z"
     },
     "DXMt4CsDBxA": {
       "collector_version": 14,
@@ -9353,26 +9376,26 @@
     "DWEvaRZDK7p": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T01:24:00.592Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T01:54:00.592Z"
+      "failed_at": "2026-10-09T02:55:57.162Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DWBpcpHjCJn": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T01:27:34.522Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T01:57:34.522Z"
+      "failed_at": "2026-10-09T02:55:57.745Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DV_K2BNjgt8": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T01:48:53.053Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T02:18:53.053Z"
+      "failed_at": "2026-10-09T02:55:58.325Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
