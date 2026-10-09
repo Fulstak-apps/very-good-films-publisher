@@ -4295,6 +4295,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DU3CYf8jEYh/",
       "queued_at": "2026-10-09T16:50:41.490Z",
       "asset_sha256": "8f359b8918a00ab47831af297089ad2dd8053d4c5d2c7224c391dedc75129fb4"
+    },
+    "DU0oMltjG_K": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DU0oMltjG_K/",
+      "queued_at": "2026-10-09T16:57:10.640Z",
+      "asset_sha256": "93c48b19a2946b278f65e090e0c1f3d5e145500f3fdb381e95d9afe50ab8d74a"
     }
   },
   "checks": {
@@ -4348,18 +4354,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T06:02:11.693Z",
-      "queued": [
-        "DeGaG9FydbS"
-      ],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 1,
-      "inventory": 428,
-      "status": "queued",
-      "finished_at": "2026-10-05T06:03:52.902Z"
-    },
     {
       "started_at": "2026-10-05T06:09:02.553Z",
       "queued": [],
@@ -8331,6 +8325,21 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-09T16:39:01.633Z"
+    },
+    {
+      "started_at": "2026-10-09T16:44:14.950Z",
+      "queued": [
+        "DU8NL_ADGhT",
+        "DU5rt-XDN2o",
+        "DU3dX4PDKjE",
+        "DU3CYf8jEYh"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 734,
+      "status": "queued",
+      "finished_at": "2026-10-09T16:50:43.631Z"
     }
   ],
   "next_account_index": 4,
@@ -9870,18 +9879,18 @@
     "DVMNxbxjMz1": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T16:24:05.788Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T16:54:05.788Z"
+      "failed_at": "2026-10-09T16:55:58.740Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DVLpsqMjPKA": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T16:24:22.121Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T16:54:22.121Z"
+      "failed_at": "2026-10-09T16:55:59.375Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DVEgf0YjEnc": {
       "collector_version": 14,
