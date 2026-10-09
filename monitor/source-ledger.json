@@ -4229,6 +4229,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DVWC5NADHZ4/",
       "queued_at": "2026-10-09T14:55:14.573Z",
       "asset_sha256": "a86b31b13de76fba5dc2a19cdcb2e6d88ef7627bb3eb6836e96c62bb509c6243"
+    },
+    "DVTNAEfjLaT": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DVTNAEfjLaT/",
+      "queued_at": "2026-10-09T16:20:31.867Z",
+      "asset_sha256": "ef460cf9062af88aa8c059bf3d7cdb386be5063d7a72efa14013b193c2fd2b20"
     }
   },
   "checks": {
@@ -4282,16 +4288,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T05:43:48.282Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 427,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T05:44:43.594Z"
-    },
     {
       "started_at": "2026-10-05T05:49:56.446Z",
       "queued": [],
@@ -8178,6 +8174,27 @@
       "inventory": 734,
       "status": "queued",
       "finished_at": "2026-10-09T14:20:12.958Z"
+    },
+    {
+      "started_at": "2026-10-09T15:58:27.449Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DVTlqoXjINK/",
+          "stage": "capture_or_queue",
+          "error": "spawnSync ffmpeg ETIMEDOUT"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 734,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-09T16:05:19.845Z"
     }
   ],
   "next_account_index": 4,
@@ -8197,10 +8214,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-09T12:02:05.922Z",
-      "failures": 26,
+      "failed_at": "2026-10-09T15:58:59.727Z",
+      "failures": 27,
       "terminal": false,
-      "retry_at": "2026-10-09T15:02:05.922Z"
+      "retry_at": "2026-10-09T18:58:59.727Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -9705,6 +9722,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-09T06:30:54.627Z"
+    },
+    "DVTlqoXjINK": {
+      "collector_version": 14,
+      "error": "spawnSync ffmpeg ETIMEDOUT",
+      "failed_at": "2026-10-09T16:05:19.823Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-09T19:05:19.823Z"
     }
   },
   "candidates": {
