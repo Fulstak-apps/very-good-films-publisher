@@ -4433,6 +4433,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/Db85s8zyGIB/",
       "queued_at": "2026-10-09T22:46:51.086Z",
       "asset_sha256": "2b69b1b9fdec0f341d508566ce362b4c0215dfc00e7075a834b5f2583dc6e747"
+    },
+    "Db6gXlpzLhP": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/Db6gXlpzLhP/",
+      "queued_at": "2026-10-09T23:18:46.736Z",
+      "asset_sha256": "8fb40ecd5f0095b8d98f28b5c4a68ec8add4578f1fd73aa5d4316d4a2f141637"
     }
   },
   "checks": {
@@ -4486,16 +4492,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T06:33:19.001Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 428,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T06:34:20.600Z"
-    },
     {
       "started_at": "2026-10-05T06:39:34.810Z",
       "queued": [],
@@ -8519,6 +8515,28 @@
       "inventory": 1000,
       "status": "queued",
       "finished_at": "2026-10-09T18:51:04.770Z"
+    },
+    {
+      "started_at": "2026-10-09T22:42:40.186Z",
+      "queued": [
+        "DcJ5pFbzXOj",
+        "DcMFW2jyU1F",
+        "DcETLNJSzj2",
+        "DbGaVo5SJHN",
+        "Db85s8zyGIB"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DcCIeb4SqM3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-09T22:46:53.821Z"
     }
   ],
   "next_account_index": 5,
@@ -10114,10 +10132,10 @@
     "DcCIeb4SqM3": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T22:43:28.243Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T23:13:28.243Z"
+      "failed_at": "2026-10-09T23:17:58.152Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
