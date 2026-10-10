@@ -4835,6 +4835,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DXMp5gbEsoq/",
       "queued_at": "2026-10-10T17:10:44.685Z",
       "asset_sha256": "919d6f33a9c4f353f599f200063200570709e379650755f9b09eaffad2946b84"
+    },
+    "DXE_d1lkhK7": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DXE_d1lkhK7/",
+      "queued_at": "2026-10-10T17:48:20.793Z",
+      "asset_sha256": "e50fa2e05355d1a44079d31974abe1d074356f4b23298d150c2f6bb5d6eedd94"
     }
   },
   "checks": {
@@ -4888,16 +4894,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T09:13:39.658Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 428,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T09:13:57.891Z"
-    },
     {
       "started_at": "2026-10-05T09:19:11.886Z",
       "queued": [],
@@ -9117,6 +9113,30 @@
       "inventory": 1000,
       "status": "queued",
       "finished_at": "2026-10-10T16:21:59.051Z"
+    },
+    {
+      "started_at": "2026-10-10T17:09:16.063Z",
+      "queued": [
+        "DXwxvGXSC1W",
+        "DXMp5gbEsoq"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DYZ6bHsydZw/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DXKKEVpEhqr/",
+          "stage": "capture_or_queue",
+          "error": "spawnSync gh ETIMEDOUT"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-10T17:15:38.296Z"
     }
   ],
   "next_account_index": 5,
@@ -10756,6 +10776,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-10T16:37:53.107Z"
+    },
+    "DXKKEVpEhqr": {
+      "collector_version": 14,
+      "error": "spawnSync gh ETIMEDOUT",
+      "failed_at": "2026-10-10T17:15:38.291Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-10T20:15:38.291Z"
     }
   },
   "candidates": {
