@@ -5645,6 +5645,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DON7M-EEpN-/",
       "queued_at": "2026-10-11T19:52:51.845Z",
       "asset_sha256": "3b4f7fbae8c98eb3fb52f0c4a87f521f035ff74722aa9ab6690454000a3f3166"
+    },
+    "DeTt7PBi24l": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DeTt7PBi24l/",
+      "queued_at": "2026-10-11T20:19:45.333Z",
+      "asset_sha256": "32e2b6e3010424a521acc93f6d221b0d8723b3f00d1183c8b1f7be42bdca2a1e"
     }
   },
   "checks": {
@@ -5673,7 +5679,7 @@
       "checked_at": "2026-10-09T17:05:28.200Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-10-06T15:24:09.510Z"
+      "checked_at": "2026-10-11T20:19:09.959Z"
     },
     "relatedfilms": {
       "checked_at": "2026-10-06T09:12:56.485Z"
@@ -5698,16 +5704,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T16:36:35.445Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 431,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T16:37:07.271Z"
-    },
     {
       "started_at": "2026-10-05T16:42:22.714Z",
       "queued": [],
@@ -10566,9 +10562,43 @@
       "inventory": 1000,
       "status": "queued",
       "finished_at": "2026-10-11T19:46:52.062Z"
+    },
+    {
+      "started_at": "2026-10-11T19:52:02.458Z",
+      "queued": [
+        "DQRPPuokqLD",
+        "DON7M-EEpN-"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DVEgf0YjEnc/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DU-n_FrjCtc/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUvJGPpjOpU/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-11T19:53:04.641Z"
     }
   ],
-  "next_account_index": 5,
+  "next_account_index": 6,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -12121,34 +12151,34 @@
     "DVEgf0YjEnc": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T16:35:01.187Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T17:05:01.187Z"
+      "failed_at": "2026-10-11T19:52:54.919Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DU-n_FrjCtc": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T16:39:01.629Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T17:09:01.629Z"
+      "failed_at": "2026-10-11T19:52:55.314Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DUx1XlGjHKU": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-09T16:57:22.561Z",
-      "failures": 1,
+      "failed_at": "2026-10-11T19:53:04.219Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-10-09T19:57:22.561Z"
+      "retry_at": "2026-10-11T22:53:04.219Z"
     },
     "DUvJGPpjOpU": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-09T16:58:21.813Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-09T17:28:21.813Z"
+      "failed_at": "2026-10-11T19:53:04.639Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DciFV0Jy7A3": {
       "collector_version": 14,
@@ -17455,6 +17485,281 @@
       "handle": "film.fission",
       "url": "https://www.instagram.com/film.fission/reel/DON7M-EEpN-/",
       "shortcode": "DON7M-EEpN-"
+    },
+    "DeTt7PBi24l": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DeTt7PBi24l/",
+      "shortcode": "DeTt7PBi24l"
+    },
+    "DeSXxmeCeX8": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DeSXxmeCeX8/",
+      "shortcode": "DeSXxmeCeX8"
+    },
+    "DeRLbUUiGhf": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DeRLbUUiGhf/",
+      "shortcode": "DeRLbUUiGhf"
+    },
+    "DeOkYYSCZdo": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DeOkYYSCZdo/",
+      "shortcode": "DeOkYYSCZdo"
+    },
+    "DeML-cai3Ms": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DeML-cai3Ms/",
+      "shortcode": "DeML-cai3Ms"
+    },
+    "DdCfqZxinAJ": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DdCfqZxinAJ/",
+      "shortcode": "DdCfqZxinAJ"
+    },
+    "DdBZUezK_9A": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DdBZUezK_9A/",
+      "shortcode": "DdBZUezK_9A"
+    },
+    "Dc-8mMHCFFU": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc-8mMHCFFU/",
+      "shortcode": "Dc-8mMHCFFU"
+    },
+    "Dc9TRg7i0-n": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc9TRg7i0-n/",
+      "shortcode": "Dc9TRg7i0-n"
+    },
+    "Dc8aK3bCFI3": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc8aK3bCFI3/",
+      "shortcode": "Dc8aK3bCFI3"
+    },
+    "Dc6n_D0qtbF": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc6n_D0qtbF/",
+      "shortcode": "Dc6n_D0qtbF"
+    },
+    "Dc4FQhyCaDN": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc4FQhyCaDN/",
+      "shortcode": "Dc4FQhyCaDN"
+    },
+    "Dc1kmZOK9P7": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc1kmZOK9P7/",
+      "shortcode": "Dc1kmZOK9P7"
+    },
+    "Dc0yA7fCdus": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dc0yA7fCdus/",
+      "shortcode": "Dc0yA7fCdus"
+    },
+    "Dcy6OWvCkvq": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dcy6OWvCkvq/",
+      "shortcode": "Dcy6OWvCkvq"
+    },
+    "Dcx18H7Cqxd": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dcx18H7Cqxd/",
+      "shortcode": "Dcx18H7Cqxd"
+    },
+    "Dcv9sOEKWWY": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dcv9sOEKWWY/",
+      "shortcode": "Dcv9sOEKWWY"
+    },
+    "Dcvi-TGCMsR": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dcvi-TGCMsR/",
+      "shortcode": "Dcvi-TGCMsR"
+    },
+    "DctvOFHxU7L": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DctvOFHxU7L/",
+      "shortcode": "DctvOFHxU7L"
+    },
+    "Dcs39I7CQom": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dcs39I7CQom/",
+      "shortcode": "Dcs39I7CQom"
+    },
+    "DclXJM2scIw": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DclXJM2scIw/",
+      "shortcode": "DclXJM2scIw"
+    },
+    "DchDdrei0vN": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DchDdrei0vN/",
+      "shortcode": "DchDdrei0vN"
+    },
+    "Dcaw0Y8i5Tr": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dcaw0Y8i5Tr/",
+      "shortcode": "Dcaw0Y8i5Tr"
+    },
+    "DcZGI12i96o": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcZGI12i96o/",
+      "shortcode": "DcZGI12i96o"
+    },
+    "DcVrPcOC4JR": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcVrPcOC4JR/",
+      "shortcode": "DcVrPcOC4JR"
+    },
+    "DcS08AYCVIo": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcS08AYCVIo/",
+      "shortcode": "DcS08AYCVIo"
+    },
+    "DcMdB_FC8Gu": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcMdB_FC8Gu/",
+      "shortcode": "DcMdB_FC8Gu"
+    },
+    "DcLQuxsiYZW": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcLQuxsiYZW/",
+      "shortcode": "DcLQuxsiYZW"
+    },
+    "DcJ8cUQCkVh": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcJ8cUQCkVh/",
+      "shortcode": "DcJ8cUQCkVh"
+    },
+    "DcI6D-FiPjr": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcI6D-FiPjr/",
+      "shortcode": "DcI6D-FiPjr"
+    },
+    "DcHRGRwiwAw": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcHRGRwiwAw/",
+      "shortcode": "DcHRGRwiwAw"
+    },
+    "DcGS6KwC9Oz": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcGS6KwC9Oz/",
+      "shortcode": "DcGS6KwC9Oz"
+    },
+    "DcEqScmipO4": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcEqScmipO4/",
+      "shortcode": "DcEqScmipO4"
+    },
+    "DcDylRdC4eG": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
+      "shortcode": "DcDylRdC4eG"
+    },
+    "DcCNjYTi5EB": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcCNjYTi5EB/",
+      "shortcode": "DcCNjYTi5EB"
+    },
+    "DcBF5wQCAON": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DcBF5wQCAON/",
+      "shortcode": "DcBF5wQCAON"
+    },
+    "Db1YYCliyWv": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Db1YYCliyWv/",
+      "shortcode": "Db1YYCliyWv"
+    },
+    "Dbyst-KCGdL": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dbyst-KCGdL/",
+      "shortcode": "Dbyst-KCGdL"
+    },
+    "Dbtf9geiTso": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dbtf9geiTso/",
+      "shortcode": "Dbtf9geiTso"
+    },
+    "Dbq8jRbCsy8": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dbq8jRbCsy8/",
+      "shortcode": "Dbq8jRbCsy8"
+    },
+    "DbYzRHpi1l8": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbYzRHpi1l8/",
+      "shortcode": "DbYzRHpi1l8"
+    },
+    "DbWVQYzCgYA": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbWVQYzCgYA/",
+      "shortcode": "DbWVQYzCgYA"
+    },
+    "DbOsUNSiNNy": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbOsUNSiNNy/",
+      "shortcode": "DbOsUNSiNNy"
+    },
+    "DbMPX3FCQJq": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbMPX3FCQJq/",
+      "shortcode": "DbMPX3FCQJq"
+    },
+    "DbJcALqCxNo": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbJcALqCxNo/",
+      "shortcode": "DbJcALqCxNo"
+    },
+    "DbG3PGRiyQB": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbG3PGRiyQB/",
+      "shortcode": "DbG3PGRiyQB"
+    },
+    "DbESM-kCsoK": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbESM-kCsoK/",
+      "shortcode": "DbESM-kCsoK"
+    },
+    "DbBiunkiT9y": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DbBiunkiT9y/",
+      "shortcode": "DbBiunkiT9y"
+    },
+    "Da5-OdECKXA": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Da5-OdECKXA/",
+      "shortcode": "Da5-OdECKXA"
+    },
+    "Da3L1XKCnDO": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Da3L1XKCnDO/",
+      "shortcode": "Da3L1XKCnDO"
+    },
+    "Da0slshiO0h": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Da0slshiO0h/",
+      "shortcode": "Da0slshiO0h"
+    },
+    "DayLXYEib29": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DayLXYEib29/",
+      "shortcode": "DayLXYEib29"
+    },
+    "DaqYGWjiZRM": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DaqYGWjiZRM/",
+      "shortcode": "DaqYGWjiZRM"
+    },
+    "DaoBEHZC2JA": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DaoBEHZC2JA/",
+      "shortcode": "DaoBEHZC2JA"
+    },
+    "Dam1wlKi4IY": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/Dam1wlKi4IY/",
+      "shortcode": "Dam1wlKi4IY"
     }
   },
   "discovery_depth": {
@@ -17463,7 +17768,7 @@
     "theacenyc": 80,
     "the_goodfilms": 20,
     "film.fission": 20,
-    "ellsoriaa": 20,
+    "ellsoriaa": 30,
     "relatedfilms": 50,
     "uneedmink": 50,
     "cinemoviie": 70,
