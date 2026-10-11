@@ -5381,6 +5381,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DRcUrT0jPk7/",
       "queued_at": "2026-10-11T14:51:01.329Z",
       "asset_sha256": "85fe721a4741032fce63eeb1a4cca8b5deeeb05ceac8ba58ff8a08b9befe9f5b"
+    },
+    "DRaEB-XEpN9": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DRaEB-XEpN9/",
+      "queued_at": "2026-10-11T14:58:36.158Z",
+      "asset_sha256": "e2650f96424a6bcdea2dabd68573852f9cd905b677e544164e5c05abaa493162"
     }
   },
   "checks": {
@@ -5434,16 +5440,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T15:42:03.565Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 429,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T15:42:31.011Z"
-    },
     {
       "started_at": "2026-10-05T15:47:44.632Z",
       "queued": [],
@@ -10041,6 +10037,117 @@
       "inventory": 1000,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-11T13:57:56.890Z"
+    },
+    {
+      "started_at": "2026-10-11T14:44:33.375Z",
+      "queued": [
+        "DRpWmnmCJPn",
+        "DRhq3TpEuKy",
+        "DRfSLYdkkd9",
+        "DRcUrT0jPk7"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZLRpvlMPCE/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DWny2sbEu7x/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYChd3MMKy5/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DTlOkTRkg7L/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXRhyOKjCDD/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DTQsGPREvWy/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXNS7YXDEy6/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DSPVIIxkl-4/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DR7Lu8jklYE/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DRwh-EdDP5u/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DRwOFFtElOf/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DRl0VL_khrW/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 23,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-11T14:51:03.537Z"
     }
   ],
   "next_account_index": 5,
