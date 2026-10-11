@@ -5099,6 +5099,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DUqf-qhkgQa/",
       "queued_at": "2026-10-11T00:19:45.561Z",
       "asset_sha256": "b5f8211a079ca7b7382e9193020c437eef4c983c5e4046d818f28bad27dc5739"
+    },
+    "DUoAAUFjBEb": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DUoAAUFjBEb/",
+      "queued_at": "2026-10-11T00:25:40.457Z",
+      "asset_sha256": "3cfb466de15a2e5ef3c452ec4f9d978a53689746b0c67dfe9702f904d5d4129e"
     }
   },
   "checks": {
@@ -5152,16 +5158,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T09:54:46.907Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 428,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T09:55:47.982Z"
-    },
     {
       "started_at": "2026-10-05T10:01:03.868Z",
       "queued": [],
@@ -9489,6 +9485,38 @@
       "inventory": 1000,
       "status": "queued",
       "finished_at": "2026-10-10T22:46:50.875Z"
+    },
+    {
+      "started_at": "2026-10-11T00:13:25.245Z",
+      "queued": [
+        "DU5C6FNDB27",
+        "DU3hIkKksA0",
+        "DU02A8DEm7d",
+        "DUvrv6bklsV",
+        "DUqf-qhkgQa"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYChd3MMKy5/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DUtTTh1koPM/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DUsY49GDc6w/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-11T00:19:48.198Z"
     }
   ],
   "next_account_index": 5,
