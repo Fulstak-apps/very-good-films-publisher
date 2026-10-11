@@ -5633,6 +5633,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DOUFOT1kuLz/",
       "queued_at": "2026-10-11T19:46:49.966Z",
       "asset_sha256": "365bd0bdc3edeffc1250b92fd377656083af37ff22297b6775e9fe1314ee0e7e"
+    },
+    "DQRPPuokqLD": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DQRPPuokqLD/",
+      "queued_at": "2026-10-11T19:52:12.297Z",
+      "asset_sha256": "ca4fb76a265b6f7177d45e541f860ea5129e47565b9a6bbeb792c585808de068"
     }
   },
   "checks": {
@@ -5686,16 +5692,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T16:30:15.852Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 431,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T16:31:17.769Z"
-    },
     {
       "started_at": "2026-10-05T16:36:35.445Z",
       "queued": [],
@@ -10542,6 +10538,28 @@
       "inventory": 1000,
       "status": "queued",
       "finished_at": "2026-10-11T19:04:42.466Z"
+    },
+    {
+      "started_at": "2026-10-11T19:40:51.555Z",
+      "queued": [
+        "DVTlqoXjINK",
+        "DPCVFiwkiWQ",
+        "DO_eMeMEmqq",
+        "DOa3Bi6kopA",
+        "DOUFOT1kuLz"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DPMAW8PEre8/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-11T19:46:52.062Z"
     }
   ],
   "next_account_index": 5,
