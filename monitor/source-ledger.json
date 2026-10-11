@@ -5321,6 +5321,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DSXwzGzkroF/",
       "queued_at": "2026-10-11T06:11:58.699Z",
       "asset_sha256": "a13e769960d61b747e41827024bc4fe05456901b5b3e1f68dae147eed594a15e"
+    },
+    "DTnzakdEq-U": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DTnzakdEq-U/",
+      "queued_at": "2026-10-11T06:34:02.754Z",
+      "asset_sha256": "10113ab216cc9e1a28395fe76df04d4aba25b8dbc06a53ae2e01f069c396dfbd"
     }
   },
   "checks": {
@@ -5374,16 +5380,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T15:24:18.880Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 429,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T15:24:44.174Z"
-    },
     {
       "started_at": "2026-10-05T15:30:00.796Z",
       "queued": [],
@@ -9916,6 +9912,28 @@
       "inventory": 1000,
       "status": "queued",
       "finished_at": "2026-10-11T06:02:02.538Z"
+    },
+    {
+      "started_at": "2026-10-11T06:07:12.589Z",
+      "queued": [
+        "DSx7SB7DfiV",
+        "DScIKCLkrui",
+        "DSa3vdCjd6g",
+        "DSaUiYSEkCG",
+        "DSXwzGzkroF"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DSiU0H1EsJX/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1000,
+      "status": "queued",
+      "finished_at": "2026-10-11T06:12:00.743Z"
     }
   ],
   "next_account_index": 5,
@@ -9935,10 +9953,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-11T03:16:07.889Z",
-      "failures": 36,
+      "failed_at": "2026-10-11T06:32:42.763Z",
+      "failures": 37,
       "terminal": false,
-      "retry_at": "2026-10-11T06:16:07.889Z"
+      "retry_at": "2026-10-11T09:32:42.763Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -11231,10 +11249,10 @@
     "DYChd3MMKy5": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-11T03:17:26.273Z",
-      "failures": 11,
+      "failed_at": "2026-10-11T06:32:50.117Z",
+      "failures": 12,
       "terminal": false,
-      "retry_at": "2026-10-11T06:17:26.273Z"
+      "retry_at": "2026-10-11T09:32:50.117Z"
     },
     "DXopUfjDMPB": {
       "collector_version": 14,
