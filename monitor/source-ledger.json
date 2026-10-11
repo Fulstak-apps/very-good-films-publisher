@@ -5507,6 +5507,12 @@
       "source_url": "https://www.instagram.com/film.fission/reel/DQRy7SVDAb3/",
       "queued_at": "2026-10-11T16:42:09.501Z",
       "asset_sha256": "7cf5dbbf66ec225fff986df061e6db414e1bdb154dc2c738fbf34601e046ed1e"
+    },
+    "DQPGKdCEmmi": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DQPGKdCEmmi/",
+      "queued_at": "2026-10-11T17:24:26.070Z",
+      "asset_sha256": "c5cbd52a6378c1bfd24e89181cd7dce28ea4cb54359104f7652e7471633aa1e0"
     }
   },
   "checks": {
@@ -10319,10 +10325,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-11T13:40:57.770Z",
-      "failures": 38,
+      "failed_at": "2026-10-11T17:24:00.667Z",
+      "failures": 39,
       "terminal": false,
-      "retry_at": "2026-10-11T16:40:57.770Z"
+      "retry_at": "2026-10-11T20:24:00.667Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -10447,10 +10453,10 @@
     "DZbqwhnT0Uq": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-11T13:57:56.886Z",
-      "failures": 37,
+      "failed_at": "2026-10-11T17:24:08.128Z",
+      "failures": 38,
       "terminal": false,
-      "retry_at": "2026-10-11T16:57:56.886Z"
+      "retry_at": "2026-10-11T20:24:08.128Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -12163,6 +12169,14 @@
       "failures": 2,
       "terminal": true,
       "retry_at": null
+    },
+    "DQRPPuokqLD": {
+      "collector_version": 14,
+      "error": "Command failed: gh release upload media work/ca4fb76a265b6f7177d45e541f860ea5129e47565b9a6bbeb792c585808de068.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 408: Upload body timed out due to inactivity (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/38328373",
+      "failed_at": "2026-10-11T16:43:45.491Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-11T19:43:45.491Z"
     }
   },
   "candidates": {
