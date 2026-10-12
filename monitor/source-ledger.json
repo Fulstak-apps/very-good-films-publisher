@@ -5975,6 +5975,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DZczevczruY/",
       "queued_at": "2026-10-12T10:59:09.812Z",
       "asset_sha256": "a5028911b9f6271daac65b4217d8cf73bbcf2a13a492c66e6df050c732322f15"
+    },
+    "DZafGyupCxt": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DZafGyupCxt/",
+      "queued_at": "2026-10-12T11:36:51.849Z",
+      "asset_sha256": "6f71cb2afac8ab42ed6b67ed5f137150d7c1cb4731db8840c893bdb751889d20"
     }
   },
   "checks": {
@@ -6028,16 +6034,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T18:24:29.055Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 433,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T18:24:47.704Z"
-    },
     {
       "started_at": "2026-10-05T18:30:00.572Z",
       "queued": [],
@@ -11294,6 +11290,22 @@
       "inventory": 1233,
       "status": "queued",
       "finished_at": "2026-10-12T10:24:05.597Z"
+    },
+    {
+      "started_at": "2026-10-12T10:54:54.102Z",
+      "queued": [
+        "DZsVoYlTrLm",
+        "DZiENxjTzPt",
+        "DZfdc7OzZUn",
+        "DZdAZttp3wN",
+        "DZczevczruY"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1233,
+      "status": "queued",
+      "finished_at": "2026-10-12T10:59:12.072Z"
     }
   ],
   "next_account_index": 7,
@@ -11313,10 +11325,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-12T08:27:21.457Z",
-      "failures": 43,
+      "failed_at": "2026-10-12T11:35:20.875Z",
+      "failures": 44,
       "terminal": false,
-      "retry_at": "2026-10-12T11:27:21.457Z"
+      "retry_at": "2026-10-12T14:35:20.875Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -11441,10 +11453,10 @@
     "DZbqwhnT0Uq": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-12T08:27:28.294Z",
-      "failures": 42,
+      "failed_at": "2026-10-12T11:35:28.885Z",
+      "failures": 43,
       "terminal": false,
-      "retry_at": "2026-10-12T11:27:28.294Z"
+      "retry_at": "2026-10-12T14:35:28.885Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -11929,10 +11941,10 @@
     "DdoYWyWzhP3": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-12T08:28:05.555Z",
-      "failures": 42,
+      "failed_at": "2026-10-12T11:36:06.695Z",
+      "failures": 43,
       "terminal": false,
-      "retry_at": "2026-10-12T11:28:05.555Z"
+      "retry_at": "2026-10-12T14:36:06.695Z"
     },
     "DdoYK2ahxnK": {
       "collector_version": 12,
@@ -11971,10 +11983,10 @@
     "DdpvSGKh-c-": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json",
-      "failed_at": "2026-10-12T08:28:27.259Z",
-      "failures": 41,
+      "failed_at": "2026-10-12T11:36:29.362Z",
+      "failures": 42,
       "terminal": false,
-      "retry_at": "2026-10-12T11:28:27.259Z"
+      "retry_at": "2026-10-12T14:36:29.362Z"
     },
     "Ddq66owhDGl": {
       "collector_version": 14,
@@ -12023,10 +12035,10 @@
     "DdwxMJqsBrV": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-12T08:27:46.785Z",
-      "failures": 42,
+      "failed_at": "2026-10-12T11:35:47.747Z",
+      "failures": 43,
       "terminal": false,
-      "retry_at": "2026-10-12T11:27:46.785Z"
+      "retry_at": "2026-10-12T14:35:47.747Z"
     },
     "DdwymejMeG9": {
       "collector_version": 14,
