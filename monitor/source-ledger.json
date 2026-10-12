@@ -5849,6 +5849,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/Da5-OdECKXA/",
       "queued_at": "2026-10-12T06:12:22.878Z",
       "asset_sha256": "f360aa2b037293e8ca72138be46f36568462f03eeff1a01a6f6c0cbdb93c36cb"
+    },
+    "Da3L1XKCnDO": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/Da3L1XKCnDO/",
+      "queued_at": "2026-10-12T07:20:19.150Z",
+      "asset_sha256": "7f8c47553f809c1e857eb0c5f9ee028f77cfcae0713397bac74f2a1fa54e7555"
     }
   },
   "checks": {
@@ -5902,16 +5908,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T17:25:33.871Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 433,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T17:26:00.515Z"
-    },
     {
       "started_at": "2026-10-05T17:32:08.009Z",
       "queued": [],
@@ -10965,6 +10961,22 @@
       "inventory": 1055,
       "status": "queued",
       "finished_at": "2026-10-12T04:54:10.688Z"
+    },
+    {
+      "started_at": "2026-10-12T06:06:03.128Z",
+      "queued": [
+        "DbJcALqCxNo",
+        "DbG3PGRiyQB",
+        "DbESM-kCsoK",
+        "DbBiunkiT9y",
+        "Da5-OdECKXA"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1055,
+      "status": "queued",
+      "finished_at": "2026-10-12T06:12:24.998Z"
     }
   ],
   "next_account_index": 6,
