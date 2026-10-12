@@ -5915,6 +5915,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DaqHcLWTJg1/",
       "queued_at": "2026-10-12T08:43:42.956Z",
       "asset_sha256": "73a5a3b2f4454d691accff4bd12c0ec43353722a89845ba4e0f1a8c062ebffa5"
+    },
+    "DadVXHBTp0g": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DadVXHBTp0g/",
+      "queued_at": "2026-10-12T10:22:03.934Z",
+      "asset_sha256": "77e2bd7ed8dcf7d12f94978a60efee21b46cfda7caeaa046cdbd1cfcea43c666"
     }
   },
   "checks": {
@@ -5968,16 +5974,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T17:43:48.651Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 433,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T17:44:06.975Z"
-    },
     {
       "started_at": "2026-10-05T18:15:29.792Z",
       "queued": [],
@@ -11136,6 +11132,83 @@
       "inventory": 1055,
       "status": "queued",
       "finished_at": "2026-10-12T08:31:55.109Z"
+    },
+    {
+      "started_at": "2026-10-12T08:37:05.627Z",
+      "queued": [
+        "DbLWf9bpnrn",
+        "DaxzBXsTdtw",
+        "DavQ0LZT7gc",
+        "DasquLaJWAF",
+        "DaqHcLWTJg1"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOZ0YzJPrY/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOWWyNJZrm/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOTfFepwHD/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOPb-SJyLo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOMFY6JXoz/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOIg12Jnwx/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOFMdRJx1U/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOBqMdpBg2/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeN-6RgpM__/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeN8BmeTtjT/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
+        }
+      ],
+      "discovered": 208,
+      "attempts": 17,
+      "inventory": 1233,
+      "status": "queued",
+      "finished_at": "2026-10-12T08:43:45.274Z"
     }
   ],
   "next_account_index": 7,
@@ -13083,82 +13156,82 @@
     "DeOZ0YzJPrY": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:38:33.443Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:08:33.443Z"
+      "failed_at": "2026-10-12T10:21:16.144Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOWWyNJZrm": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:38:47.611Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:08:47.611Z"
+      "failed_at": "2026-10-12T10:21:20.492Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOTfFepwHD": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:39:18.285Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:09:18.285Z"
+      "failed_at": "2026-10-12T10:21:22.076Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOPb-SJyLo": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:39:33.296Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:09:33.296Z"
+      "failed_at": "2026-10-12T10:21:23.632Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOMFY6JXoz": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:39:45.770Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:09:45.770Z"
+      "failed_at": "2026-10-12T10:21:25.158Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOIg12Jnwx": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:39:58.879Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:09:58.879Z"
+      "failed_at": "2026-10-12T10:21:26.680Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOFMdRJx1U": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:40:11.567Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:10:11.567Z"
+      "failed_at": "2026-10-12T10:21:28.277Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeOBqMdpBg2": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:40:24.418Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:10:24.418Z"
+      "failed_at": "2026-10-12T10:21:29.871Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeN-6RgpM__": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:40:37.461Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:10:37.461Z"
+      "failed_at": "2026-10-12T10:21:31.410Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DeN8BmeTtjT": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T08:40:54.265Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T09:10:54.265Z"
+      "failed_at": "2026-10-12T10:21:32.941Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DbLrD8YpiH9": {
       "collector_version": 14,
