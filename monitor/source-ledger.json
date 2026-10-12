@@ -6389,6 +6389,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DW4Kt-eExMH/",
       "queued_at": "2026-10-12T21:33:54.875Z",
       "asset_sha256": "baa63a66b1baaa5757783a9abc3fbce7c314039a2ee078ed6cd74d017a90b292"
+    },
+    "DW1hp6wE0md": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DW1hp6wE0md/",
+      "queued_at": "2026-10-12T22:46:51.391Z",
+      "asset_sha256": "a12272d1871e59ef8c839ae94ff32069758655de1737552c0193d56267783cfd"
     }
   },
   "checks": {
@@ -6442,16 +6448,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T19:45:46.001Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 433,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T19:46:12.670Z"
-    },
     {
       "started_at": "2026-10-05T19:51:26.130Z",
       "queued": [],
@@ -11912,6 +11908,58 @@
       "inventory": 1233,
       "status": "queued",
       "finished_at": "2026-10-12T20:17:19.060Z"
+    },
+    {
+      "started_at": "2026-10-12T21:29:16.540Z",
+      "queued": [
+        "DXFDdOVE8WL",
+        "DXAAWYKE9hX",
+        "DW9YfUtk5K8",
+        "DW7HgTUk4NL",
+        "DW4Kt-eExMH"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DXHyin0k5n9/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 12,
+      "inventory": 1233,
+      "status": "queued",
+      "finished_at": "2026-10-12T21:33:57.478Z"
     }
   ],
   "next_account_index": 7,
@@ -13123,10 +13171,10 @@
     "DZvBdgZMNc0": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-12T08:29:53.462Z",
-      "failures": 21,
+      "failed_at": "2026-10-12T22:46:29.842Z",
+      "failures": 22,
       "terminal": false,
-      "retry_at": "2026-10-12T11:29:53.462Z"
+      "retry_at": "2026-10-13T01:46:29.845Z"
     },
     "DZpoyUsMidc": {
       "collector_version": 14,
@@ -13947,10 +13995,10 @@
     "DXHyin0k5n9": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T21:31:04.315Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T22:01:04.315Z"
+      "failed_at": "2026-10-12T22:46:20.274Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DW5u0ZKk8t2": {
       "collector_version": 14,
