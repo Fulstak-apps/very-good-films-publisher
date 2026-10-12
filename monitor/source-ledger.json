@@ -5777,6 +5777,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/Db1YYCliyWv/",
       "queued_at": "2026-10-12T00:40:22.018Z",
       "asset_sha256": "5d8eb5873ea557fb998018f9b03aa4abeaae9c53bdacc2cacea30fa153dac134"
+    },
+    "Dbyst-KCGdL": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/Dbyst-KCGdL/",
+      "queued_at": "2026-10-12T03:00:28.222Z",
+      "asset_sha256": "e5d1c3a7f1544e9ea1e79df28b8083a1a443d2b4c39b25d5569a475c5e15eec4"
     }
   },
   "checks": {
@@ -5830,16 +5836,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T17:06:56.430Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 432,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T17:07:43.676Z"
-    },
     {
       "started_at": "2026-10-05T17:13:02.431Z",
       "queued": [
@@ -10768,6 +10764,77 @@
       "inventory": 1055,
       "status": "queued",
       "finished_at": "2026-10-11T23:26:54.379Z"
+    },
+    {
+      "started_at": "2026-10-12T00:33:40.435Z",
+      "queued": [
+        "DcGS6KwC9Oz",
+        "DcEqScmipO4",
+        "DcCNjYTi5EB",
+        "Db1YYCliyWv"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcLQuxsiYZW/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcJ8cUQCkVh/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcI6D-FiPjr/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcHRGRwiwAw/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcBF5wQCAON/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 15,
+      "inventory": 1055,
+      "status": "queued",
+      "finished_at": "2026-10-12T00:40:23.895Z"
     }
   ],
   "next_account_index": 6,
@@ -12659,34 +12726,34 @@
     "DcLQuxsiYZW": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T00:35:14.173Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T01:05:14.173Z"
+      "failed_at": "2026-10-12T02:58:49.200Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DcJ8cUQCkVh": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T00:35:25.200Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T01:05:25.200Z"
+      "failed_at": "2026-10-12T02:58:49.698Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DcI6D-FiPjr": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T00:35:40.697Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T01:05:40.697Z"
+      "failed_at": "2026-10-12T02:58:51.415Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DcHRGRwiwAw": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T00:36:07.443Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T01:06:07.443Z"
+      "failed_at": "2026-10-12T02:58:52.049Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DcDylRdC4eG": {
       "collector_version": 14,
@@ -12699,10 +12766,10 @@
     "DcBF5wQCAON": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-12T00:38:54.798Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-12T01:08:54.798Z"
+      "failed_at": "2026-10-12T02:58:52.688Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
