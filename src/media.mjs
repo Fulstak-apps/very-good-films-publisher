@@ -4,7 +4,7 @@ import path from 'node:path';
 import {createReadStream,createWriteStream} from 'node:fs';
 import {pipeline} from 'node:stream/promises';
 import {Transform} from 'node:stream';
-import {execFileSync} from 'node:child_process';
+import {execFileSync,spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 
 export function trustedURL(value,hosts){const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port&&u.port!=='443'||!hosts.includes(u.hostname))throw new Error('Media/feed URL is not on the configured HTTPS host allowlist');return u;}
@@ -19,15 +19,42 @@ export function probe(path){return JSON.parse(execFileSync('ffprobe',['-v','erro
 
 export function reelFrameFilter(){return 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1';}
 
+// Only remove a contiguous, almost entirely black lead-in. This deliberately
+// inspects the source before letterboxing, so black padding added for a
+// landscape clip is never mistaken for a black opening frame.
+export function leadingBlackFromLog(log,{maxScanSeconds=8}={}){
+ const events=[...String(log).matchAll(/black_start:([\d.]+)\s+black_end:([\d.]+)\s+black_duration:([\d.]+)/g)]
+  .map(match=>({start:Number(match[1]),end:Number(match[2]),duration:Number(match[3])}));
+ const first=events.find(event=>Number.isFinite(event.start)&&Number.isFinite(event.duration)&&event.start<=0.12&&event.duration>=0.08);
+ if(!first)return 0;
+ return Math.min(maxScanSeconds,Math.max(0,first.duration));
+}
+
+export function leadingBlackDuration(input,start,duration){
+ const scan=Math.min(8,duration);
+ if(scan<0.08)return 0;
+ const result=spawnSync('ffmpeg',['-hide_banner','-nostats','-ss',String(start),'-t',String(scan),'-i',input,'-an','-vf','blackdetect=d=0.04:pix_th=0.10:pic_th=0.98','-f','null','-'],{timeout:60000,encoding:'utf8'});
+ const log=result.stderr||'';
+ if(!log)return 0;
+ const trim=leadingBlackFromLog(log,{maxScanSeconds:scan});
+ // A clip that remains black for the complete scan has no safe thumbnail.
+ // Rejecting it lets the queue quarantine that asset and continue to the next.
+ if(trim>=scan-0.08&&duration>scan+0.5)throw new Error('Leading black sequence exceeds the eight-second thumbnail safety scan');
+ return trim;
+}
+
 export function formatVideo(input,output,scene){
- const duration=scene.end-scene.start;if(!(duration>0&&duration<=90))throw new Error('Invalid clip duration');
+ const requestedDuration=scene.end-scene.start;if(!(requestedDuration>0&&requestedDuration<=90))throw new Error('Invalid clip duration');
+ const trim=leadingBlackDuration(input,scene.start,requestedDuration);
+ const start=scene.start+trim,duration=requestedDuration-trim;
+ if(duration<0.5)throw new Error('Leading black trim left no usable Reel footage');
  // Preserve every source pixel. Letterboxing is intentional: it prevents a
  // portrait Reel conversion from cutting off faces, subtitles, or credits.
  const filter=reelFrameFilter();
  // Moved logo up from H-h-252 to H-h-320 to avoid being clipped by mobile UI (home bars/captions).
  const branded=`[0:v]${filter}[frame];[1:v]scale=220:-1[logo];[frame][logo]overlay=44:H-h-320:format=auto[branded]`;
- const args=['-hide_banner','-loglevel','error','-y','-ss',String(scene.start),'-i',input,'-i','assets/very-good-films-logo.png','-t',String(duration),'-filter_complex',branded,'-map','[branded]','-map','0:a:0?','-r','30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-ar','48000','-ac','2','-movflags','+faststart',output];
- execFileSync('ffmpeg',args,{timeout:180000,stdio:'pipe'});return {...verifyVideo(output,duration),frame_preserved:true,layout:'full-frame-letterbox-v1'};
+ const args=['-hide_banner','-loglevel','error','-y','-ss',String(start),'-i',input,'-i','assets/very-good-films-logo.png','-t',String(duration),'-filter_complex',branded,'-map','[branded]','-map','0:a:0?','-r','30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-ar','48000','-ac','2','-movflags','+faststart',output];
+ execFileSync('ffmpeg',args,{timeout:180000,stdio:'pipe'});return {...verifyVideo(output,duration),frame_preserved:true,layout:'full-frame-letterbox-v1',leading_black_trim_seconds:trim,first_frame_content:true};
 }
 
 export function verifyVideo(file,expected){const p=probe(file),v=p.streams.find(s=>s.codec_type==='video'),a=p.streams.find(s=>s.codec_type==='audio'),d=Number(p.format.duration);if(!v||v.codec_name!=='h264'||v.width!==1080||v.height!==1920||v.pix_fmt!=='yuv420p'||!a||a.codec_name!=='aac'||!Number.isFinite(d)||Math.abs(d-expected)>1)throw new Error('Rendered Reel failed video/audio/duration QA');return {width:v.width,height:v.height,duration:d,audio:a.codec_name,video:v.codec_name};}

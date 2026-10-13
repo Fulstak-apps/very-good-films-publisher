@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {reelFrameFilter} from '../src/media.mjs';
+import {leadingBlackFromLog,reelFrameFilter} from '../src/media.mjs';
 import {validate} from '../src/editorial.mjs';
 
 test('source reels use letterboxing and never invoke crop filters',()=>{
@@ -8,6 +8,13 @@ test('source reels use letterboxing and never invoke crop filters',()=>{
  assert.match(filter,/force_original_aspect_ratio=decrease/);
  assert.match(filter,/pad=1080:1920/);
  assert.doesNotMatch(filter,/\bcrop=/);
+});
+
+test('a contiguous black lead-in is trimmed but a later dark scene is retained',()=>{
+ const lead='[blackdetect] black_start:0 black_end:1.04167 black_duration:1.04167';
+ const later='[blackdetect] black_start:4.2 black_end:5.1 black_duration:0.9';
+ assert.equal(leadingBlackFromLog(lead),1.04167);
+ assert.equal(leadingBlackFromLog(later),0);
 });
 
 test('a source clip cannot publish unless it preserves the entire original frame',()=>{
