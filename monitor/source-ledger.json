@@ -6539,6 +6539,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DWEzmh_k4NV/",
       "queued_at": "2026-10-13T03:09:42.950Z",
       "asset_sha256": "2ef619e889977988d45106c448d535ba3a1c8cdaac1a00ba08b37eabe1e663fc"
+    },
+    "DWCQyzlE_-A": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DWCQyzlE_-A/",
+      "queued_at": "2026-10-13T04:17:44.974Z",
+      "asset_sha256": "387f13b85b15e59720089acd04755b9b0c665acff19fbe876658bd6a129e0cbc"
     }
   },
   "checks": {
@@ -6592,16 +6598,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-05T20:16:53.986Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 434,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-05T20:17:41.451Z"
-    },
     {
       "started_at": "2026-10-05T20:23:00.070Z",
       "queued": [],
@@ -12190,6 +12186,38 @@
       "inventory": 1233,
       "status": "queued",
       "finished_at": "2026-10-13T02:03:09.425Z"
+    },
+    {
+      "started_at": "2026-10-13T03:05:00.454Z",
+      "queued": [
+        "DWQmkmoEwBQ",
+        "DWJ2iOck9fC",
+        "DWIr2RsEyxq",
+        "DWHQB0dk7nx",
+        "DWEzmh_k4NV"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 1233,
+      "status": "queued",
+      "finished_at": "2026-10-13T03:09:44.806Z"
     }
   ],
   "next_account_index": 7,
