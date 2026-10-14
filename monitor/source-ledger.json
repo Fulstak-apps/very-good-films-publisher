@@ -6611,6 +6611,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DcdiyrKBgcL/",
       "queued_at": "2026-10-14T23:34:04.455Z",
       "asset_sha256": "35a9c9217cfb9f3bfb3411723f462b2cad5329a56d23fed4826a7d33330360c7"
+    },
+    "DYp1tdSByqZ": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DYp1tdSByqZ/",
+      "queued_at": "2026-10-14T23:39:33.090Z",
+      "asset_sha256": "db1b24450e1d11b4b2e61d701cc5add57c2fbad7baadac60f542193b60be5a59"
     }
   },
   "checks": {
@@ -6664,16 +6670,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T06:18:27.346Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 435,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-06T06:19:13.906Z"
-    },
     {
       "started_at": "2026-10-06T06:24:26.329Z",
       "queued": [],
@@ -19681,6 +19677,33 @@
       "inventory": 1596,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-14T23:19:09.658Z"
+    },
+    {
+      "started_at": "2026-10-14T23:31:09.343Z",
+      "queued": [
+        "DYx4njUPUKA",
+        "DYuvMJZzkPP",
+        "DcgHlBsBB-X",
+        "DYlH1OtzNfl",
+        "DcdiyrKBgcL"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-14T23:34:06.701Z"
     }
   ],
   "next_account_index": 10,
