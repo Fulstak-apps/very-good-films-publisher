@@ -100,6 +100,6 @@ async function uploadGitHub(file,hash,repositoryOverride){
  }
 
  const named=`work/${hash}.mp4`;await fs.copyFile(file,named);
- execFileSync('gh',['release','upload','media',named,'--repo',repository],{stdio:'pipe',timeout:180000});
+ execFileSync('gh',['release','upload',shard,named,'--repo',repository],{stdio:'pipe',timeout:180000});
  const check=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(30000)});if(!check.ok)throw new Error('GitHub video asset is not publicly reachable');return url;
 }
