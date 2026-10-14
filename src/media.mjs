@@ -87,9 +87,14 @@ export async function cleanupLocalMedia(item){
 async function uploadGitHub(file,hash,repositoryOverride){
  const repository=repositoryOverride||process.env.GITHUB_REPOSITORY;if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository||''))throw new Error('Set GITHUB_REPOSITORY for GitHub Release media storage');
  const size=(await fs.stat(file)).size;if(size>90*1024*1024)throw new Error('Video exceeds GitHub media size limit');
- const url=`https://github.com/${repository}/releases/download/media/${hash}.mp4?download=1`;
+ // GitHub caps a release at 1,000 assets. The original single `media`
+ // release reached that ceiling and silently stranded the collector. New
+ // clips live in a daily release shard; old media URLs remain valid.
+ const shard=`media-${new Date().toISOString().slice(0,10).replaceAll('-','')}`;
  let release;
- try{release=JSON.parse(execFileSync('gh',['release','view','media','--repo',repository,'--json','assets'],{stdio:'pipe',timeout:30000}).toString());}catch{execFileSync('gh',['release','create','media','--repo',repository,'--title','Very Good Films video assets','--notes','Formatted cinema clips served to the Instagram and Threads APIs.'],{stdio:'pipe',timeout:30000});}
+ try{release=JSON.parse(execFileSync('gh',['release','view',shard,'--repo',repository,'--json','assets'],{stdio:'pipe',timeout:30000}).toString());}
+ catch{execFileSync('gh',['release','create',shard,'--repo',repository,'--title',`Very Good Films video assets ${shard.slice(6)}`,'--notes','Formatted cinema clips served to the Instagram and Threads APIs.'],{stdio:'pipe',timeout:30000});release={assets:[]};}
+ const url=`https://github.com/${repository}/releases/download/${shard}/${hash}.mp4?download=1`;
  if(release?.assets?.some(a=>a.name===`${hash}.mp4`)){
   const check=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(30000)});if(check.ok&&Number(check.headers.get('content-length'))===size)return url;throw new Error('Existing asset is not publicly reachable yet');
  }
