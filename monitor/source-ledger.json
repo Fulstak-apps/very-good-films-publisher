@@ -6791,6 +6791,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/Db26ym0h9QE/",
       "queued_at": "2026-10-15T00:36:27.487Z",
       "asset_sha256": "e53b96cb61d2a8d4a2a20ec31b07b9c4622fb820c98765b2d239efdcae8d37eb"
+    },
+    "DYBA5M4vH88": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DYBA5M4vH88/",
+      "queued_at": "2026-10-15T00:41:52.809Z",
+      "asset_sha256": "90c141f91b5092179f494e85806837682707d41c2ed354bd480d91e611df59d2"
     }
   },
   "checks": {
@@ -6844,16 +6850,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T06:53:39.651Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 435,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-06T06:54:26.438Z"
-    },
     {
       "started_at": "2026-10-06T06:59:42.938Z",
       "queued": [],
@@ -19893,6 +19889,28 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-15T00:29:36.536Z"
+    },
+    {
+      "started_at": "2026-10-15T00:34:48.451Z",
+      "queued": [
+        "Db6dZXKBYMN",
+        "DYDOfRxSfZD",
+        "Db34sMuBXnn",
+        "DYBlH3Vz1Ft",
+        "Db26ym0h9QE"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-15T00:36:29.595Z"
     }
   ],
   "next_account_index": 10,
