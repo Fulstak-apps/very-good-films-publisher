@@ -6851,6 +6851,18 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DbwKRg4B0sE/",
       "queued_at": "2026-10-15T00:49:40.902Z",
       "asset_sha256": "b4765ab3b8e6a9cb39c85e1736dc84cbe7846be6176e4c1e2b89a46ec1d42cf4"
+    },
+    "DX-CXruhC6A": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DX-CXruhC6A/",
+      "queued_at": "2026-10-15T00:55:03.297Z",
+      "asset_sha256": "f9084022c6600fa6aaa00b3fb5d30fd1b76cb22dbf8c23d61eef1b53d0b8de13"
+    },
+    "DbvMcIIBqTJ": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DbvMcIIBqTJ/",
+      "queued_at": "2026-10-15T00:55:25.199Z",
+      "asset_sha256": "aefe57f306c47bb56a8904deee428881127a83115aa35e16073ff5dd0fb63a41"
     }
   },
   "checks": {
@@ -6904,16 +6916,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T07:07:57.252Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 435,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-06T07:08:43.993Z"
-    },
     {
       "started_at": "2026-10-06T07:14:00.466Z",
       "queued": [],
@@ -19971,6 +19973,22 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-15T00:42:59.725Z"
+    },
+    {
+      "started_at": "2026-10-15T00:48:11.257Z",
+      "queued": [
+        "DbyvFb-BKf1",
+        "DX-4TQJz78_",
+        "DbxxQqtBVgx",
+        "DX-lUDUTjtM",
+        "DbwKRg4B0sE"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-15T00:49:43.480Z"
     }
   ],
   "next_account_index": 10,
@@ -22591,11 +22609,11 @@
     },
     "DX-CXruhC6A": {
       "collector_version": 14,
-      "error": "Command failed: gh release upload media work/f9084022c6600fa6aaa00b3fb5d30fd1b76cb22dbf8c23d61eef1b53d0b8de13.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=f",
-      "failed_at": "2026-10-14T20:41:42.733Z",
-      "failures": 8,
+      "error": "Command failed: git push origin HEAD:main\nTo https://github.com/Fulstak-apps/very-good-films-publisher.git\n ! [remote rejected]   HEAD -> main (cannot lock ref 'refs/heads/main': is at 2716d10bccb846561a4d76d7773f3c016d6bbc07 but expected 7bcb1c96cfb8b94829471d4b1192335695c502a7)\nerror: failed to pu",
+      "failed_at": "2026-10-15T00:55:11.957Z",
+      "failures": 9,
       "terminal": false,
-      "retry_at": "2026-10-14T23:41:42.733Z"
+      "retry_at": "2026-10-15T03:55:11.957Z"
     },
     "DX9i0dfzDXa": {
       "collector_version": 14,
