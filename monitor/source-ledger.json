@@ -6881,6 +6881,12 @@
       "source_url": "https://www.instagram.com/uneedmink/reel/DX8Sq-6zyM0/",
       "queued_at": "2026-10-15T00:56:31.371Z",
       "asset_sha256": "220722acea72b3001588f69aedbcf9c2249b19789683f7b2167b0c5ea619db36"
+    },
+    "DbsnoZMh6Pp": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DbsnoZMh6Pp/",
+      "queued_at": "2026-10-15T01:01:55.785Z",
+      "asset_sha256": "d5d92c544149d5b069510bfdb90bc37465a77e0be2e7e3f0052e7e61917923e2"
     }
   },
   "checks": {
@@ -6934,16 +6940,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T07:14:00.466Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 435,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-06T07:14:46.307Z"
-    },
     {
       "started_at": "2026-10-06T07:20:01.366Z",
       "queued": [],
@@ -20007,6 +20003,38 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-15T00:49:43.480Z"
+    },
+    {
+      "started_at": "2026-10-15T00:54:53.998Z",
+      "queued": [
+        "DX-CXruhC6A",
+        "DbvMcIIBqTJ",
+        "DX9i0dfzDXa",
+        "Db263VMBfe8",
+        "DX8Sq-6zyM0"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DX-CXruhC6A/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git push origin HEAD:main\nTo https://github.com/Fulstak-apps/very-good-films-publisher.git\n ! [remote rejected]   HEAD -> main (cannot lock ref 'refs/heads/main': is at 2716d10bccb846561a4d76d7773f3c016d6bbc07 but expected 7bcb1c96cfb8b94829471d4b1192335695c502a7)\nerror: failed to push some refs to 'https://github.com/Fulstak-apps/very-good-films-publisher.git'\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-15T00:56:33.404Z"
     }
   ],
   "next_account_index": 10,
