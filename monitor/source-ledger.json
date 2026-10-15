@@ -7121,6 +7121,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DbLJSGRBoil/",
       "queued_at": "2026-10-15T04:23:57.861Z",
       "asset_sha256": "142c19fef4e7e813631e2c3886a576f7b242e03c5355d0ac8faca397749b39e5"
+    },
+    "DbJiTFZh6cu": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DbJiTFZh6cu/",
+      "queued_at": "2026-10-15T05:00:39.706Z",
+      "asset_sha256": "efa5594d889662f3013e802d4d655d65f71f7ba06efeaa5569970b8d718d4323"
     }
   },
   "checks": {
@@ -7174,16 +7180,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T09:18:10.626Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 435,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-06T09:18:43.560Z"
-    },
     {
       "started_at": "2026-10-06T09:23:57.241Z",
       "queued": [],
@@ -20337,6 +20333,33 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-15T03:41:12.200Z"
+    },
+    {
+      "started_at": "2026-10-15T04:22:22.627Z",
+      "queued": [
+        "DbNuGFNhEU8",
+        "DVXvLsDDhgz",
+        "DbMHIBLhUQ7",
+        "DUElMFdEg41",
+        "DbLJSGRBoil"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-15T04:24:00.093Z"
     }
   ],
   "next_account_index": 10,
@@ -23142,10 +23165,10 @@
     "DUBUmfFEVMU": {
       "collector_version": 14,
       "error": "Rendered Reel failed video/audio/duration QA",
-      "failed_at": "2026-10-14T20:46:10.492Z",
-      "failures": 7,
+      "failed_at": "2026-10-15T05:00:29.129Z",
+      "failures": 8,
       "terminal": false,
-      "retry_at": "2026-10-14T23:46:10.493Z"
+      "retry_at": "2026-10-15T08:00:29.130Z"
     },
     "DT9WILCEbSo": {
       "collector_version": 14,
