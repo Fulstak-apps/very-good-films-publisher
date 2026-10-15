@@ -7241,6 +7241,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/Da08A2gh9RD/",
       "queued_at": "2026-10-15T14:49:21.176Z",
       "asset_sha256": "5fbc924538d49daa36385c71f1c3798ba7db8cf448646b3e459ecda62e42158f"
+    },
+    "Daz-JfQhkbU": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/Daz-JfQhkbU/",
+      "queued_at": "2026-10-15T16:36:01.130Z",
+      "asset_sha256": "88b3cf514facc6b7e148c1a95c22d5c892955873002ae2ab539e015e3aff3281"
     }
   },
   "checks": {
@@ -7294,16 +7300,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T09:55:36.216Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 435,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-10-06T09:55:54.810Z"
-    },
     {
       "started_at": "2026-10-06T10:03:13.767Z",
       "queued": [],
@@ -20524,6 +20520,22 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-15T14:42:37.729Z"
+    },
+    {
+      "started_at": "2026-10-15T14:48:06.072Z",
+      "queued": [
+        "Da6Fil2BZCM",
+        "Da5Hy3sh328",
+        "Da3gxs9B2mt",
+        "Da2i9Kwhyub",
+        "Da08A2gh9RD"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-15T14:49:23.904Z"
     }
   ],
   "next_account_index": 10,
@@ -20543,10 +20555,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-15T12:12:15.635Z",
-      "failures": 63,
+      "failed_at": "2026-10-15T16:34:02.089Z",
+      "failures": 64,
       "terminal": false,
-      "retry_at": "2026-10-15T15:12:15.635Z"
+      "retry_at": "2026-10-15T19:34:02.090Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -20670,11 +20682,11 @@
     },
     "DZbqwhnT0Uq": {
       "collector_version": 14,
-      "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-15T12:12:23.032Z",
-      "failures": 60,
+      "error": "locator.evaluate: AbortError: The play() request was interrupted by a new load request. https://goo.gl/LdLk22",
+      "failed_at": "2026-10-15T16:35:25.737Z",
+      "failures": 61,
       "terminal": false,
-      "retry_at": "2026-10-15T15:12:23.032Z"
+      "retry_at": "2026-10-15T19:35:25.737Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -21255,10 +21267,10 @@
     "DdwxMJqsBrV": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-15T12:19:18.031Z",
-      "failures": 60,
+      "failed_at": "2026-10-15T16:35:44.704Z",
+      "failures": 61,
       "terminal": false,
-      "retry_at": "2026-10-15T15:19:18.031Z"
+      "retry_at": "2026-10-15T19:35:44.704Z"
     },
     "DdwymejMeG9": {
       "collector_version": 14,
