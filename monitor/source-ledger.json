@@ -6671,6 +6671,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DcOeFTshjDG/",
       "queued_at": "2026-10-14T23:47:13.102Z",
       "asset_sha256": "96f92038106d0e521a97b98e8c85553a8dcf001cc20a4a5fdab1d424918a1592"
+    },
+    "DYS-QJcve4l": {
+      "source_handle": "uneedmink",
+      "source_url": "https://www.instagram.com/uneedmink/reel/DYS-QJcve4l/",
+      "queued_at": "2026-10-15T00:15:46.680Z",
+      "asset_sha256": "f3e2a8d4b0fe505acae1c03f174002770e73a054405ae8bc8ca0904e3f5fdbba"
     }
   },
   "checks": {
@@ -6724,32 +6730,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T06:30:03.351Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 435,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-06T06:31:10.061Z"
-    },
     {
       "started_at": "2026-10-06T06:36:24.068Z",
       "queued": [],
@@ -19759,6 +19739,22 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-14T23:40:50.684Z"
+    },
+    {
+      "started_at": "2026-10-14T23:46:01.324Z",
+      "queued": [
+        "DcTPi1hBY6n",
+        "DYXt8dYv37d",
+        "DcQqv5chWXd",
+        "DYVVCdjSV9p",
+        "DcOeFTshjDG"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-14T23:47:15.510Z"
     }
   ],
   "next_account_index": 10,
