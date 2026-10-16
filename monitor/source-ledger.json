@@ -7715,6 +7715,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DZZ2UyGhm4n/",
       "queued_at": "2026-10-16T22:58:44.030Z",
       "asset_sha256": "7dc6c921c114bceb7f66dcd57df57386f1263c605b8e12e6ddf04f90c4da45ea"
+    },
+    "DZUsy44BmHK": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DZUsy44BmHK/",
+      "queued_at": "2026-10-16T22:59:16.520Z",
+      "asset_sha256": "3477042909d0397b32ef02c2b37dda6c94857a385544bcc79d37bdff31e0cae9"
     }
   },
   "checks": {
@@ -7768,33 +7774,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T18:11:41.004Z",
-      "queued": [
-        "DZ-sl9hsU3k",
-        "DZ-FPW9sejd",
-        "DZ7sO-esw20",
-        "DZ5ZhvMsBut",
-        "DZ24Z8tMOmI"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DaAtwcJutLA/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZ450OpsQkg/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 7,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-06T18:16:31.100Z"
-    },
     {
       "started_at": "2026-10-06T18:21:43.355Z",
       "queued": [
@@ -21262,6 +21241,35 @@
       "inventory": 1596,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-16T22:04:05.561Z"
+    },
+    {
+      "started_at": "2026-10-16T22:55:37.427Z",
+      "queued": [
+        "DZZ2UyGhm4n",
+        "DZUsy44BmHK"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/DZUsy44BmHK/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git fetch origin main\nFrom https://github.com/Fulstak-apps/very-good-films-publisher\n * branch              main       -> FETCH_HEAD\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-16T23:03:06.327Z"
     }
   ],
   "next_account_index": 10,
@@ -25186,11 +25194,11 @@
     },
     "DZUsy44BmHK": {
       "collector_version": 14,
-      "error": "spawnSync ffmpeg ETIMEDOUT",
-      "failed_at": "2026-10-16T19:27:34.491Z",
-      "failures": 5,
+      "error": "Command failed: git fetch origin main\nFrom https://github.com/Fulstak-apps/very-good-films-publisher\n * branch              main       -> FETCH_HEAD\n",
+      "failed_at": "2026-10-16T23:03:06.313Z",
+      "failures": 6,
       "terminal": false,
-      "retry_at": "2026-10-16T22:27:34.491Z"
+      "retry_at": "2026-10-17T02:03:06.313Z"
     },
     "DZTFv-GBOME": {
       "collector_version": 14,
