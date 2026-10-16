@@ -7679,6 +7679,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DZVqjt1hoNW/",
       "queued_at": "2026-10-16T19:22:41.527Z",
       "asset_sha256": "da437f31a33269786ca8671aad2028dc2ec2f688c00beaa990ee6b739a78f3c7"
+    },
+    "DZTFv-GBOME": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DZTFv-GBOME/",
+      "queued_at": "2026-10-16T20:41:25.455Z",
+      "asset_sha256": "95e4d6b18b2cfc4da81eefbdbf900bbb9664d1d50dbef37974fc2bd92789884f"
     }
   },
   "checks": {
@@ -7732,48 +7738,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-06T17:15:48.419Z",
-      "queued": [
-        "Da8UAQAsiYv",
-        "Da0LqFtM9B5",
-        "DavCFFHMO5Q",
-        "DauwaJ1seq7",
-        "Dascyf7sOWi"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DbbQbziM5Ys/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Da5VqPOMKDI/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Da2zgCjsq2b/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/Da1AZ3KMG8c/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DaxxacZMuiW/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 10,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-06T17:21:33.843Z"
-    },
     {
       "started_at": "2026-10-06T17:39:19.050Z",
       "queued": [
@@ -21250,6 +21214,26 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-16T17:59:04.439Z"
+    },
+    {
+      "started_at": "2026-10-16T19:18:38.941Z",
+      "queued": [
+        "DZYPWuRhctL",
+        "DZXRkZZh7fs",
+        "DZVqjt1hoNW"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/filmreelsvault/reel/DZUsy44BmHK/",
+          "stage": "capture_or_queue",
+          "error": "spawnSync ffmpeg ETIMEDOUT"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-16T19:27:34.512Z"
     }
   ],
   "next_account_index": 10,
@@ -21269,10 +21253,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-16T16:44:00.579Z",
-      "failures": 69,
+      "failed_at": "2026-10-16T20:41:09.936Z",
+      "failures": 70,
       "terminal": false,
-      "retry_at": "2026-10-16T19:44:00.579Z"
+      "retry_at": "2026-10-16T23:41:09.936Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -25174,11 +25158,11 @@
     },
     "DZUsy44BmHK": {
       "collector_version": 14,
-      "error": "Command failed: gh release upload media work/3477042909d0397b32ef02c2b37dda6c94857a385544bcc79d37bdff31e0cae9.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=3",
-      "failed_at": "2026-10-14T21:05:33.033Z",
-      "failures": 4,
+      "error": "spawnSync ffmpeg ETIMEDOUT",
+      "failed_at": "2026-10-16T19:27:34.491Z",
+      "failures": 5,
       "terminal": false,
-      "retry_at": "2026-10-15T00:05:33.035Z"
+      "retry_at": "2026-10-16T22:27:34.491Z"
     },
     "DZTFv-GBOME": {
       "collector_version": 14,
