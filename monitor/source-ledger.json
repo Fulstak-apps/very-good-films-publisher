@@ -8171,6 +8171,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DYZefu_B60J/",
       "queued_at": "2026-10-17T20:24:17.353Z",
       "asset_sha256": "a746757508cd9a17cbd67913c26a4cd06bce88b1bb6fa8e4facdf85c43e36dd5"
+    },
+    "DU2VQc3kzhO": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DU2VQc3kzhO/",
+      "queued_at": "2026-10-17T21:00:50.634Z",
+      "asset_sha256": "198a6bcc5a6142e414f4be914118d2feabb69b28661b8c690f96fac5ef5e34fd"
     }
   },
   "checks": {
@@ -8224,33 +8230,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-08T12:21:40.969Z",
-      "queued": [
-        "DXejkCDDL4A",
-        "DXegeSWDGoj",
-        "DXcsqPQDGwP",
-        "DXcRjHVjKgc",
-        "DXcHxRpjJiY"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXopUfjDMPB/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXhOy3mDKGi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 7,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-08T12:27:15.130Z"
-    },
     {
       "started_at": "2026-10-08T14:09:51.877Z",
       "queued": [
@@ -21766,6 +21745,28 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-17T19:14:40.407Z"
+    },
+    {
+      "started_at": "2026-10-17T20:22:02.039Z",
+      "queued": [
+        "DYcDSc8BhEY",
+        "DU6Lo_7k67F",
+        "DYacTXlBsV1",
+        "DU4om-JE9Aa",
+        "DYZefu_B60J"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-17T20:24:19.391Z"
     }
   ],
   "next_account_index": 10,
