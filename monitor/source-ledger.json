@@ -8051,6 +8051,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DYmWbyghD00/",
       "queued_at": "2026-10-17T16:13:54.245Z",
       "asset_sha256": "1fa60340cdc68f870bb75436057d8ac7be58427a3938abea448e59719e8a0cb1"
+    },
+    "DVF-A4Zk7IW": {
+      "source_handle": "relatedfilms",
+      "source_url": "https://www.instagram.com/relatedfilms/reel/DVF-A4Zk7IW/",
+      "queued_at": "2026-10-17T16:40:17.444Z",
+      "asset_sha256": "bf4b480c17c0e4a6eccd8a78b870ec95dfcae19736f965942ddf7080440ef6cc"
     }
   },
   "checks": {
@@ -8104,28 +8110,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-08T06:29:37.570Z",
-      "queued": [
-        "DYC9UvTMUOQ",
-        "DX_8zuCMrL0",
-        "DX95iWLMYgo",
-        "DX9Tr4qsI7O",
-        "DX7kVvbs0a-"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYChd3MMKy5/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-08T06:34:33.700Z"
-    },
     {
       "started_at": "2026-10-08T07:31:02.894Z",
       "queued": [
@@ -21632,6 +21616,22 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-17T16:06:29.900Z"
+    },
+    {
+      "started_at": "2026-10-17T16:11:39.938Z",
+      "queued": [
+        "DYsdsTvJhg4",
+        "DVIF-X1k5XE",
+        "DYriNbbIjMi",
+        "DVG4z5FE7l1",
+        "DYmWbyghD00"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-17T16:13:56.606Z"
     }
   ],
   "next_account_index": 10,
@@ -23309,10 +23309,10 @@
     "DVeCR8Wkpww": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json",
-      "failed_at": "2026-10-14T22:18:36.314Z",
-      "failures": 11,
+      "failed_at": "2026-10-17T16:39:59.961Z",
+      "failures": 12,
       "terminal": false,
-      "retry_at": "2026-10-15T01:18:36.317Z"
+      "retry_at": "2026-10-17T19:39:59.961Z"
     },
     "DVL_6Sxkli4": {
       "collector_version": 14,
