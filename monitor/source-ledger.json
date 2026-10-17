@@ -8021,6 +8021,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DVJh7ywE6of/",
       "queued_at": "2026-10-17T16:06:26.912Z",
       "asset_sha256": "ad0dea676bc9a0d9bee6c1d3db68777a88ca8206ab1d99d6fc33e760a1561022"
+    },
+    "DYsdsTvJhg4": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DYsdsTvJhg4/",
+      "queued_at": "2026-10-17T16:11:59.121Z",
+      "asset_sha256": "d6e40a5b76409c606458ebe62aa1872e0d78cb5c58d1d179d44f89023dbd0278"
     }
   },
   "checks": {
@@ -8074,71 +8080,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-08T06:18:21.491Z",
-      "queued": [
-        "DYHipQWs95F",
-        "DYFXfWysd_m",
-        "DYFDZYosk_s"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZLRpvlMPCE/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYSBfIOsW27/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYIEsljsd6N/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXzfO3yMo4j/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 13,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-08T06:24:27.539Z"
-    },
     {
       "started_at": "2026-10-08T06:29:37.570Z",
       "queued": [
@@ -21651,6 +21592,22 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-17T15:58:43.990Z"
+    },
+    {
+      "started_at": "2026-10-17T16:03:55.495Z",
+      "queued": [
+        "DVMDaj1k3WI",
+        "DYvDKajR9Az",
+        "DVLE_AhEw5n",
+        "DYuEFAIoIvg",
+        "DVJh7ywE6of"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-17T16:06:29.900Z"
     }
   ],
   "next_account_index": 10,
