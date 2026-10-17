@@ -8081,6 +8081,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DVBt8qaE6vf/",
       "queued_at": "2026-10-17T16:42:46.436Z",
       "asset_sha256": "05f6b2ee06cbc87099ba112d4f2c03c5d5ecd09043ee5f69a4014a537127562e"
+    },
+    "DYiKsRJhkne": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DYiKsRJhkne/",
+      "queued_at": "2026-10-17T18:33:42.458Z",
+      "asset_sha256": "3ee038cf4637725e377c445dd547e63bbd7497e77d59eb373ba5d27d3eb63c49"
     }
   },
   "checks": {
@@ -8134,28 +8140,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-08T07:31:02.894Z",
-      "queued": [
-        "DX6wAY7MFeE",
-        "DX4xJ20MgPd",
-        "DX4I9VZsM-W",
-        "DX16bYeM1kd",
-        "DX10XJKMRYd"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXzfO3yMo4j/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-08T07:34:40.835Z"
-    },
     {
       "started_at": "2026-10-08T09:53:18.170Z",
       "queued": [
@@ -21656,6 +21640,28 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-17T16:13:56.606Z"
+    },
+    {
+      "started_at": "2026-10-17T16:39:50.054Z",
+      "queued": [
+        "DVF-A4Zk7IW",
+        "DYkvezzB9N7",
+        "DVDbYBME0ta",
+        "DYjxqhDhtaU",
+        "DVBt8qaE6vf"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-17T16:42:48.918Z"
     }
   ],
   "next_account_index": 10,
@@ -21675,10 +21681,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-17T15:13:12.928Z",
-      "failures": 74,
+      "failed_at": "2026-10-17T18:32:33.595Z",
+      "failures": 75,
       "terminal": false,
-      "retry_at": "2026-10-17T18:13:12.929Z"
+      "retry_at": "2026-10-17T21:32:33.595Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -21803,10 +21809,10 @@
     "DZbqwhnT0Uq": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-17T15:13:22.486Z",
-      "failures": 71,
+      "failed_at": "2026-10-17T18:32:40.998Z",
+      "failures": 72,
       "terminal": false,
-      "retry_at": "2026-10-17T18:13:22.486Z"
+      "retry_at": "2026-10-17T21:32:40.998Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -22293,10 +22299,10 @@
     "DdoYWyWzhP3": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-17T15:22:47.873Z",
-      "failures": 71,
+      "failed_at": "2026-10-17T18:33:26.756Z",
+      "failures": 72,
       "terminal": false,
-      "retry_at": "2026-10-17T18:22:47.873Z"
+      "retry_at": "2026-10-17T21:33:26.756Z"
     },
     "DdoYK2ahxnK": {
       "collector_version": 12,
@@ -22387,10 +22393,10 @@
     "DdwxMJqsBrV": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-17T15:13:42.518Z",
-      "failures": 71,
+      "failed_at": "2026-10-17T18:33:00.493Z",
+      "failures": 72,
       "terminal": false,
-      "retry_at": "2026-10-17T18:13:42.518Z"
+      "retry_at": "2026-10-17T21:33:00.493Z"
     },
     "DdwymejMeG9": {
       "collector_version": 14,
@@ -23597,10 +23603,10 @@
     "DeSPbeMzok2": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-17T15:13:51.472Z",
-      "failures": 29,
+      "failed_at": "2026-10-17T18:33:07.982Z",
+      "failures": 30,
       "terminal": false,
-      "retry_at": "2026-10-17T18:13:51.472Z"
+      "retry_at": "2026-10-17T21:33:07.982Z"
     },
     "DeOZ0YzJPrY": {
       "collector_version": 14,
