@@ -8261,6 +8261,12 @@
       "source_url": "https://www.instagram.com/relatedfilms/reel/DUsB86WE3gm/",
       "queued_at": "2026-10-18T00:20:54.966Z",
       "asset_sha256": "39b6c98d9cfb3df4bd1d6e0f75cbc58e52fa723bfe2243ae4884b9fa2350198e"
+    },
+    "DYPLVLDhcdR": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DYPLVLDhcdR/",
+      "queued_at": "2026-10-18T00:26:25.023Z",
+      "asset_sha256": "5dee3faf0e7b6f7da521b31c71d7d1f26bdc663cbef1eb377178a75294ab9ed6"
     }
   },
   "checks": {
@@ -8314,36 +8320,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-08T17:48:29.203Z",
-      "queued": [
-        "DW4QYTxjPOy",
-        "DW1bqEXDDR2",
-        "DWy9OL4jJV1"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXANzMrDG5V/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DW3w4CkjIlF/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DW1o3oPjFgq/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 734,
-      "status": "queued",
-      "finished_at": "2026-10-08T17:54:43.840Z"
-    },
     {
       "started_at": "2026-10-08T19:38:40.430Z",
       "queued": [
@@ -21847,6 +21823,22 @@
       "inventory": 1596,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-18T00:01:36.577Z"
+    },
+    {
+      "started_at": "2026-10-18T00:18:48.147Z",
+      "queued": [
+        "DUuKAHOk1P2",
+        "DYRwGgIByf5",
+        "DUtKF4lE_LG",
+        "DYQJDdLhkbJ",
+        "DUsB86WE3gm"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-18T00:20:57.163Z"
     }
   ],
   "next_account_index": 10,
