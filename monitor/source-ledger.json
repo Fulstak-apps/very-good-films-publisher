@@ -9221,6 +9221,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcrQ7wFxlvH/",
       "queued_at": "2026-10-19T22:06:20.105Z",
       "asset_sha256": "d4628f81aa01a0ba70e22d9dd0d473d8af5d69c4663cae35edb27aee5d0c0b08"
+    },
+    "DcqlXmggJQ8": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcqlXmggJQ8/",
+      "queued_at": "2026-10-19T22:12:03.497Z",
+      "asset_sha256": "4dbb2a7f8b9528c0c8a393784deea7b6f3612c70f2db64abcca018a8d12d8d10"
     }
   },
   "checks": {
@@ -9274,22 +9280,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-10T17:47:58.402Z",
-      "queued": [
-        "DXE_d1lkhK7",
-        "DW_237EEuET",
-        "DW9SECuktJh",
-        "DW1kiOxkpIl",
-        "DWzAoj3Ei-X"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-10T17:53:20.325Z"
-    },
     {
       "started_at": "2026-10-10T17:58:29.943Z",
       "queued": [
@@ -23262,6 +23252,26 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-19T21:15:13.240Z"
+    },
+    {
+      "started_at": "2026-10-19T22:00:20.807Z",
+      "queued": [
+        "DctdjJ9AnTw",
+        "DctBtfvgSo_",
+        "DcrQ7wFxlvH"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dcv_J3dAIo1/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-19T22:06:22.873Z"
     }
   ],
   "next_account_index": 11,
