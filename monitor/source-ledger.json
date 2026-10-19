@@ -8783,6 +8783,12 @@
       "source_url": "https://www.instagram.com/filmreelsvault/reel/DWha3bgSvys/",
       "queued_at": "2026-10-19T02:49:30.321Z",
       "asset_sha256": "73ef848ffa81e3e1aca11a7c8a962201b1a9c9769aa8a99c22a7a088b7cd1a31"
+    },
+    "DWgbY4ky1WW": {
+      "source_handle": "filmreelsvault",
+      "source_url": "https://www.instagram.com/filmreelsvault/reel/DWgbY4ky1WW/",
+      "queued_at": "2026-10-19T03:21:30.268Z",
+      "asset_sha256": "99ff200bb14012f4d2642942f06475af1a4bc4e6c83bb112fb96e5427d06ac8d"
     }
   },
   "checks": {
@@ -8836,21 +8842,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-09T17:04:12.193Z",
-      "queued": [
-        "DeR2EuzyTUT",
-        "DePw0Fryef9",
-        "DeKow2cTuKH",
-        "DdMR93gyo9v"
-      ],
-      "errors": [],
-      "discovered": 295,
-      "attempts": 4,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-09T17:10:19.320Z"
-    },
     {
       "started_at": "2026-10-09T17:15:29.806Z",
       "queued": [
@@ -22637,6 +22628,22 @@
       "inventory": 1596,
       "status": "queued",
       "finished_at": "2026-10-19T01:37:08.368Z"
+    },
+    {
+      "started_at": "2026-10-19T02:45:37.712Z",
+      "queued": [
+        "DWmkiP1hgcz",
+        "DWlmqpVh7Tl",
+        "DWj_q9LBmgt",
+        "DWjB5cNyV9r",
+        "DWha3bgSvys"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 1596,
+      "status": "queued",
+      "finished_at": "2026-10-19T02:49:32.751Z"
     }
   ],
   "next_account_index": 10,
@@ -24418,10 +24425,10 @@
     "DS_4shUkuEq": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-19T00:01:53.105Z",
-      "failures": 11,
+      "failed_at": "2026-10-19T03:20:55.860Z",
+      "failures": 12,
       "terminal": false,
-      "retry_at": "2026-10-19T03:01:53.105Z"
+      "retry_at": "2026-10-19T06:20:55.860Z"
     },
     "DS_BkxAEw4o": {
       "collector_version": 14,
