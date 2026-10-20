@@ -117486,6 +117486,79 @@
       "status": "ready",
       "discovered_at": "2026-10-20T06:45:03.176Z",
       "key": "da0f9ed8e7dda0646887183fec6d8a90238e1595a8a9175eb52ebb4715b4b9f7"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DaQrxrTgKdd",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "DaQrxrTgKdd",
+        "start": 0,
+        "end": 45.113
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/DaQrxrTgKdd/",
+      "source_caption": "America peaked right here 🛼 Patrick Swayze in Skatetown USA, 1979.",
+      "source_details": {
+        "title_hint": "Skatetown USA",
+        "year": 1979,
+        "source_title": "Skatetown USA",
+        "source_year": 1979,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "Skatetown USA",
+        "title": "Skatetown, U.S.A.",
+        "type": "movie",
+        "director": "William A. Levey",
+        "cast": [
+          "Scott Baio",
+          "Patrick Swayze",
+          "Flip Wilson"
+        ],
+        "synopsis": "Skatetown, U.S.A. is a 1979 American comedy musical film produced to capitalize on the short-lived fad of roller disco. Directed by William A. Levey, the film features many television stars from the 1960s and 1970s, among them Scott Baio, Flip Wilson, Maureen McCormick, Ron Palillo and Ruth Buzzi. Patrick Swayze's leading role as the skater \"Ace\" was his first movie performance. Also in the cast are Sydney Lassick, Billy Barty and Playboy centerfold model Dorothy Stratten.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Skatetown%2C_U.S.A.",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Skatetown USA",
+          "source_year": 1979,
+          "catalog_title": "Skatetown, U.S.A.",
+          "catalog_year": 1979,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261020/5c6ecc9511d2e170cf6a1c372a891600053fd4df074e6aac80f54edb52517df9.mp4?download=1",
+      "asset_sha256": "5c6ecc9511d2e170cf6a1c372a891600053fd4df074e6aac80f54edb52517df9",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 45.047,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-10-20T14:48:05.811Z",
+        "source_duration": 45.113514,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-10-20T14:50:31.972Z",
+      "key": "74aab6ba310ac0d65be6be3521aae8399006570d2c7adcb500e514ce011be5b5"
     }
   ],
   "discovery": [],
