@@ -9899,6 +9899,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZApl_bAQI6/",
       "queued_at": "2026-10-20T21:47:29.579Z",
       "asset_sha256": "f063f7b1c97612fbc2c8ef4e4ffd43b9687dab5b9bced33062ea711f79c18247"
+    },
+    "DZVasvtgKC-": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZVasvtgKC-/",
+      "queued_at": "2026-10-20T21:53:18.664Z",
+      "asset_sha256": "7137ae1048e98ae3b2faaf47ad8a4537e9e2127163846e1062ea6cd457a4b452"
     }
   },
   "checks": {
@@ -9952,22 +9958,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-11T20:18:44.788Z",
-      "queued": [
-        "DeTt7PBi24l",
-        "DeSXxmeCeX8",
-        "DeRLbUUiGhf",
-        "DeOkYYSCZdo",
-        "DeML-cai3Ms"
-      ],
-      "errors": [],
-      "discovered": 88,
-      "attempts": 5,
-      "inventory": 1055,
-      "status": "queued",
-      "finished_at": "2026-10-11T20:22:33.424Z"
-    },
     {
       "started_at": "2026-10-11T21:29:21.978Z",
       "queued": [
@@ -23813,6 +23803,20 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-20T21:35:28.034Z"
+    },
+    {
+      "started_at": "2026-10-20T21:40:55.784Z",
+      "queued": [
+        "DZDUQhPA4xr",
+        "DZC-N48INuG",
+        "DZApl_bAQI6"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-20T21:47:32.490Z"
     }
   ],
   "next_account_index": 11,
@@ -25570,10 +25574,10 @@
     "DTlOkTRkg7L": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-20T18:45:46.154Z",
-      "failures": 19,
+      "failed_at": "2026-10-20T21:53:16.069Z",
+      "failures": 20,
       "terminal": false,
-      "retry_at": "2026-10-20T21:45:46.154Z"
+      "retry_at": "2026-10-21T00:53:16.069Z"
     },
     "DTQsGPREvWy": {
       "collector_version": 14,
@@ -29266,10 +29270,10 @@
     "DaDHOMUA5Pl": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-20T18:43:46.485Z",
-      "failures": 2,
+      "failed_at": "2026-10-20T21:52:54.495Z",
+      "failures": 3,
       "terminal": false,
-      "retry_at": "2026-10-20T21:43:46.485Z"
+      "retry_at": "2026-10-21T00:52:54.495Z"
     },
     "DZ-Nk-Nohfv": {
       "collector_version": 14,
