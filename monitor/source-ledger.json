@@ -9869,6 +9869,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZIPv4yiKwX/",
       "queued_at": "2026-10-20T21:23:32.326Z",
       "asset_sha256": "b34e8c19d98068ce825f002ac8f8a5fb9ca072623abc14f32e19b8c44aba23b2"
+    },
+    "DaDlI7YoTN7": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DaDlI7YoTN7/",
+      "queued_at": "2026-10-20T21:31:31.773Z",
+      "asset_sha256": "394a8392611e7f5b32740b313a17ae00a6746d6d6dde66da6f14e72d4790d6c3"
     }
   },
   "checks": {
@@ -9922,28 +9928,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-11T19:40:51.555Z",
-      "queued": [
-        "DVTlqoXjINK",
-        "DPCVFiwkiWQ",
-        "DO_eMeMEmqq",
-        "DOa3Bi6kopA",
-        "DOUFOT1kuLz"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DPMAW8PEre8/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-11T19:46:52.062Z"
-    },
     {
       "started_at": "2026-10-11T19:52:02.458Z",
       "queued": [
@@ -23806,6 +23790,26 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-20T19:02:18.174Z"
+    },
+    {
+      "started_at": "2026-10-20T21:17:00.292Z",
+      "queued": [
+        "DZKRKaCgxJT",
+        "DZIk9rfguT1",
+        "DZIPv4yiKwX"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-20T21:23:35.005Z"
     }
   ],
   "next_account_index": 11,
