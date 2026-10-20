@@ -9767,6 +9767,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZhfXUKAzML/",
       "queued_at": "2026-10-20T17:19:55.237Z",
       "asset_sha256": "e3cef69c549061c40c80e143546691154b08ba201d17db8b9374471f6566e3eb"
+    },
+    "DZf39iCATjF": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZf39iCATjF/",
+      "queued_at": "2026-10-20T17:43:34.446Z",
+      "asset_sha256": "c5af5543948cab44e0e5e855fa02377717ce205098dda70723371ae9ac13d06d"
     }
   },
   "checks": {
@@ -9820,22 +9826,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-11T17:34:15.510Z",
-      "queued": [
-        "DPrcCf7ktq4",
-        "DPo0WMMEnXD",
-        "DPlGY32jK02",
-        "DPjSC-6EjVl",
-        "DPf3jBDitFZ"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-11T17:39:14.738Z"
-    },
     {
       "started_at": "2026-10-11T18:26:35.076Z",
       "queued": [
@@ -23757,6 +23747,21 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-20T16:28:03.322Z"
+    },
+    {
+      "started_at": "2026-10-20T17:13:40.976Z",
+      "queued": [
+        "DZqP8H_xJH8",
+        "DZnJa2XI3Ed",
+        "DZina7ug8Vh",
+        "DZhfXUKAzML"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-20T17:19:58.390Z"
     }
   ],
   "next_account_index": 11,
@@ -29226,10 +29231,10 @@
     "DZuTwXtM5q6": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-20T16:59:31.118Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-20T17:29:31.118Z"
+      "failed_at": "2026-10-20T17:42:11.211Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
