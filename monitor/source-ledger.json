@@ -9329,6 +9329,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcQ6fitgjAz/",
       "queued_at": "2026-10-19T23:56:45.038Z",
       "asset_sha256": "fe7a46dcd32cfd203cd65afd8043d909a2ee174fc92e22f962af5c315ae0c4ac"
+    },
+    "DcPAN41T4Ck": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcPAN41T4Ck/",
+      "queued_at": "2026-10-20T00:04:26.432Z",
+      "asset_sha256": "0610573f05124dfc44268ee24215d1005d9544cd4cfa966d0b8eaf8a53d1cc88"
     }
   },
   "checks": {
@@ -9382,28 +9388,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-10T22:39:53.112Z",
-      "queued": [
-        "DVgkdvJElLM",
-        "DVbcZxykmSf",
-        "DVaeFu0DCY5",
-        "DVRKgrEEoqa",
-        "DVOmMDiEmAG"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-10T22:46:50.875Z"
-    },
     {
       "started_at": "2026-10-11T00:13:25.245Z",
       "queued": [
@@ -23394,6 +23378,28 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-19T23:07:01.786Z"
+    },
+    {
+      "started_at": "2026-10-19T23:53:35.728Z",
+      "queued": [
+        "DcWhiphghRb",
+        "DcVtuPegizE",
+        "DcTMY56g1nP",
+        "DcRnsoNTQY0",
+        "DcQ6fitgjAz"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcgPYVyALnb/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-19T23:56:47.514Z"
     }
   ],
   "next_account_index": 11,
