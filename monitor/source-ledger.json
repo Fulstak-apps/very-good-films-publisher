@@ -9737,6 +9737,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZuhIRoAgcD/",
       "queued_at": "2026-10-20T16:28:00.734Z",
       "asset_sha256": "d06a5f90a40f127c8495b711d02a981d9a67292e6bd05698a9ff72e6dcda52e0"
+    },
+    "DZsNWJrI6GB": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZsNWJrI6GB/",
+      "queued_at": "2026-10-20T17:02:30.914Z",
+      "asset_sha256": "eeba9fd4346155cebfa6b4fa1a3587105d01ce5c6ac00150ac182746392d9a74"
     }
   },
   "checks": {
@@ -9790,38 +9796,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-11T17:23:50.789Z",
-      "queued": [
-        "DQPGKdCEmmi",
-        "DP9K8GBEkqh",
-        "DP4NrYPEjU1",
-        "DP1dOjeEuQ4",
-        "DPwZSCAEhNl"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DQFOmr8DKfi/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 8,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-11T17:29:04.455Z"
-    },
     {
       "started_at": "2026-10-11T17:34:15.510Z",
       "queued": [
@@ -23718,6 +23692,47 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-20T15:01:24.698Z"
+    },
+    {
+      "started_at": "2026-10-20T16:21:35.862Z",
+      "queued": [
+        "DZxBiSBgmwc",
+        "DZwrSZ5AWZs",
+        "DZu2g5MoUGt",
+        "DZuhIRoAgcD"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DaOTe_fMQ4a/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DaOAQYuANdu/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZ-Nk-Nohfv/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 9,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-20T16:28:03.322Z"
     }
   ],
   "next_account_index": 11,
@@ -29183,6 +29198,14 @@
       "failures": 2,
       "terminal": true,
       "retry_at": null
+    },
+    "DZuTwXtM5q6": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-20T16:59:31.118Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-20T17:29:31.118Z"
     }
   },
   "candidates": {
