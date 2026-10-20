@@ -114479,6 +114479,55 @@
       "status": "ready",
       "discovered_at": "2026-10-20T00:33:55.484Z",
       "key": "0e4ccd0fa531a98138ebd12c51d996a2b5b0bb8b51236b9e7e76f4a38213cbab"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Db5cEqGgEj-",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "Db5cEqGgEj-",
+        "start": 0,
+        "end": 80.6
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/Db5cEqGgEj-/",
+      "source_caption": "Still remember everyone in the theater cracking up during this scene 🤣 Django Unchained, 2013.",
+      "source_details": {
+        "title_hint": "Django Unchained",
+        "year": 2013,
+        "source_title": "Django Unchained",
+        "source_year": 2013,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": false,
+        "title_hint_verified": "Django Unchained"
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261020/6d369085b85818616df67b4109b2eed2a1cc8fc0e0a370d2694c77f053e3c117.mp4?download=1",
+      "asset_sha256": "6d369085b85818616df67b4109b2eed2a1cc8fc0e0a370d2694c77f053e3c117",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 80.6,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-10-20T01:09:43.755Z",
+        "source_duration": 80.6,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": true,
+      "status": "needs_review",
+      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "discovered_at": "2026-10-20T01:18:08.564Z",
+      "key": "40b39a15a7d12e8d0c58b0d038cd6942a751820923ee3be002102a9a17e609af"
     }
   ],
   "discovery": [],
