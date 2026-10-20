@@ -9881,6 +9881,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZHt9SNAJZC/",
       "queued_at": "2026-10-20T21:35:24.087Z",
       "asset_sha256": "fd209b68fa8d4277676d51d3e8aef1f588b5fb3d68796fe2b93d171f0b0dabab"
+    },
+    "DZDUQhPA4xr": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DZDUQhPA4xr/",
+      "queued_at": "2026-10-20T21:42:35.902Z",
+      "asset_sha256": "7cefcb531efbd1ae4a8eabb6fae91fc710470ea5f1a906bb9c2b59a1750be157"
     }
   },
   "checks": {
@@ -9934,40 +9940,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-11T19:52:02.458Z",
-      "queued": [
-        "DQRPPuokqLD",
-        "DON7M-EEpN-"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DVEgf0YjEnc/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DU-n_FrjCtc/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUvJGPpjOpU/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1000,
-      "status": "queued",
-      "finished_at": "2026-10-11T19:53:04.641Z"
-    },
     {
       "started_at": "2026-10-11T20:18:44.788Z",
       "queued": [
@@ -23816,6 +23788,19 @@
       "inventory": 1801,
       "status": "queued",
       "finished_at": "2026-10-20T21:23:35.005Z"
+    },
+    {
+      "started_at": "2026-10-20T21:28:49.928Z",
+      "queued": [
+        "DaDlI7YoTN7",
+        "DZHt9SNAJZC"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 1801,
+      "status": "queued",
+      "finished_at": "2026-10-20T21:35:28.034Z"
     }
   ],
   "next_account_index": 11,
