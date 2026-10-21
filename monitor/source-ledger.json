@@ -10421,6 +10421,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdUGN0HhkXe/",
       "queued_at": "2026-10-21T10:44:40.359Z",
       "asset_sha256": "95eff39420a443b047d9c60fd459020b0baf4533077270d0a40a6cca6d854ffc"
+    },
+    "DdT8bs-h4BQ": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdT8bs-h4BQ/",
+      "queued_at": "2026-10-21T10:57:24.214Z",
+      "asset_sha256": "212ab87415daab046bed228a54e0bee5f1a3be04b6355e6ddcd039e7d538ed4b"
     }
   },
   "checks": {
@@ -10474,22 +10480,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-12T18:27:50.401Z",
-      "queued": [
-        "DXqtx-CkwEe",
-        "DXpMIWSEzXa",
-        "DXmqZedk8qO",
-        "DXj-KcgE6HN",
-        "DXi_bv-E8VZ"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1233,
-      "status": "queued",
-      "finished_at": "2026-10-12T18:32:38.092Z"
-    },
     {
       "started_at": "2026-10-12T18:58:22.088Z",
       "queued": [
@@ -24131,6 +24121,24 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T10:34:53.886Z"
+    },
+    {
+      "started_at": "2026-10-21T10:40:05.949Z",
+      "queued": [
+        "DdUGN0HhkXe"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdT827ehfGo/",
+          "stage": "capture_or_queue",
+          "error": "locator.evaluate: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('video:visible').first()\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T10:47:05.736Z"
     }
   ],
   "next_account_index": 12,
@@ -25856,10 +25864,10 @@
     "DULp5l1kje8": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-20T20:25:34.569Z",
-      "failures": 21,
+      "failed_at": "2026-10-21T10:52:27.503Z",
+      "failures": 22,
       "terminal": false,
-      "retry_at": "2026-10-20T23:25:34.569Z"
+      "retry_at": "2026-10-21T13:52:27.503Z"
     },
     "DT3JjLeEr2i": {
       "collector_version": 14,
@@ -29724,6 +29732,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-21T13:34:53.874Z"
+    },
+    "DdT827ehfGo": {
+      "collector_version": 14,
+      "error": "locator.evaluate: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('video:visible').first()\n",
+      "failed_at": "2026-10-21T10:47:05.652Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-21T13:47:05.693Z"
     }
   },
   "candidates": {
