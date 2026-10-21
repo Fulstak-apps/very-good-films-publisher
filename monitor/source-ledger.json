@@ -10523,6 +10523,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdJ9Hm_h5CD/",
       "queued_at": "2026-10-21T13:28:41.799Z",
       "asset_sha256": "8de24e4f29a9d97bd011bd1188edb00c4f9623742d5deade13b57ee4e784fda1"
+    },
+    "DdUGX2Nh3lq": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdUGX2Nh3lq/",
+      "queued_at": "2026-10-21T13:39:58.714Z",
+      "asset_sha256": "b75a975161a843b29a722d3d464759587c9ea04999cf9b01dfe9ca67bf274d05"
     }
   },
   "checks": {
@@ -10576,22 +10582,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T04:16:32.797Z",
-      "queued": [
-        "DWCQyzlE_-A",
-        "DV_xSxAk7aR",
-        "DV8_SJyE0MY",
-        "DV77YCOEypB",
-        "DV6dEw_k82E"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1233,
-      "status": "queued",
-      "finished_at": "2026-10-13T04:23:04.151Z"
-    },
     {
       "started_at": "2026-10-13T05:35:39.399Z",
       "queued": [
@@ -24216,6 +24206,34 @@
       "inventory": 2012,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-21T13:18:28.662Z"
+    },
+    {
+      "started_at": "2026-10-21T13:23:40.542Z",
+      "queued": [
+        "DdJ9Hm_h5CD"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DTQsGPREvWy/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXNS7YXDEy6/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdJuzHvhEQh/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T13:30:40.292Z"
     }
   ],
   "next_account_index": 12,
@@ -25573,10 +25591,10 @@
     "DXNS7YXDEy6": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-20T22:04:27.831Z",
-      "failures": 24,
+      "failed_at": "2026-10-21T13:28:51.791Z",
+      "failures": 25,
       "terminal": false,
-      "retry_at": "2026-10-21T01:04:27.831Z"
+      "retry_at": "2026-10-21T16:28:51.791Z"
     },
     "DXMt4CsDBxA": {
       "collector_version": 14,
@@ -29865,6 +29883,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-21T16:06:14.490Z"
+    },
+    "DdJuzHvhEQh": {
+      "collector_version": 14,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-21T13:30:40.260Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-21T16:30:40.261Z"
     }
   },
   "candidates": {
