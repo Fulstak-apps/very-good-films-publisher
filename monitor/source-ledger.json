@@ -10577,6 +10577,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdHNl5th1hn/",
       "queued_at": "2026-10-21T14:32:02.245Z",
       "asset_sha256": "7b025c2c4d201d99350267f31b32692c47367c2903f141373b6823fa2eb620de"
+    },
+    "DdHNZxohEfI": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdHNZxohEfI/",
+      "queued_at": "2026-10-21T14:41:37.496Z",
+      "asset_sha256": "794962ec31c2a2507202c931440a37bcdfeca776044726e7befb64a133ee78fe"
     }
   },
   "checks": {
@@ -10630,22 +10636,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T10:56:11.768Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 1233,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T11:16:31.449Z"
-    },
     {
       "started_at": "2026-10-13T14:32:46.584Z",
       "queued": [],
@@ -24232,6 +24222,26 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T13:55:26.082Z"
+    },
+    {
+      "started_at": "2026-10-21T14:25:06.355Z",
+      "queued": [
+        "DdHawlfB-a0",
+        "DdHam--BJMR",
+        "DdHNl5th1hn"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYChd3MMKy5/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T14:32:04.980Z"
     }
   ],
   "next_account_index": 12,
