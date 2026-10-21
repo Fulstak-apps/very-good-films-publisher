@@ -10715,6 +10715,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdDNM2thhLo/",
       "queued_at": "2026-10-21T19:40:03.202Z",
       "asset_sha256": "5fef900f60818277648543aea3780d22c7d067dca3e9b74b4ea713e6ea0e2566"
+    },
+    "DdDDYpPhpXB": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdDDYpPhpXB/",
+      "queued_at": "2026-10-21T19:48:46.473Z",
+      "asset_sha256": "cc03506179acb6d5c6c18db5e1d057f0360c616365e8ae7a0ff63cba52c8d4ea"
     }
   },
   "checks": {
@@ -10768,27 +10774,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T16:56:54.949Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX7wJmIhXdZ/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX4ufMoPo4j/",
-          "stage": "capture_or_queue",
-          "error": "spawnSync ffmpeg ETIMEDOUT"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 1284,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T17:17:30.470Z"
-    },
     {
       "started_at": "2026-10-13T17:35:44.581Z",
       "queued": [],
@@ -24050,6 +24035,20 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T18:37:02.454Z"
+    },
+    {
+      "started_at": "2026-10-21T19:33:47.135Z",
+      "queued": [
+        "DdEKy6The7c",
+        "DdDNWo_h07_",
+        "DdDNM2thhLo"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T19:40:06.164Z"
     }
   ],
   "next_account_index": 12,
