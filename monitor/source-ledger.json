@@ -10685,6 +10685,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdEVqd0BxmF/",
       "queued_at": "2026-10-21T18:36:59.242Z",
       "asset_sha256": "4ef1b8c32c7807fcab4de0f9ff486df83f96f307208bb0f6127e83a0ce32df23"
+    },
+    "DdEVVlZBp5j": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdEVVlZBp5j/",
+      "queued_at": "2026-10-21T19:06:01.646Z",
+      "asset_sha256": "e41a8917ef86ff9e3488e0d256e945e74f446b530258e02b23b269f9e3a93d87"
     }
   },
   "checks": {
@@ -10738,42 +10744,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T16:03:08.985Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX8Sq-6zyM0/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/220722acea72b3001588f69aedbcf9c2249b19789683f7b2167b0c5ea619db36.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=220722acea72b3001588f69aedbcf9c2249b19789683f7b2167b0c5ea619db36.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX7wJmIhXdZ/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX7MihfzMjO/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/afc52f43f017ee376e2eba2f4519181ae446e475614ffc86d0ff5a969ab5b85e.mp4 --repo Fulstak-apps/very-good-films-publisher\nPost \"https://api.github.com/graphql\": net/http: TLS handshake timeout\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX5Zd0yTAqQ/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/2b42b16b1d8ac9fb99d2f8fad5f4ce84a18528d45d12d1a8f5f59f404b43f0df.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=2b42b16b1d8ac9fb99d2f8fad5f4ce84a18528d45d12d1a8f5f59f404b43f0df.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DX5N2YrvIFw/",
-          "stage": "capture_or_queue",
-          "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/uneedmink/reel/DX5N2YrvIFw/\", waiting until \"domcontentloaded\"\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1284,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T16:09:26.380Z"
-    },
     {
       "started_at": "2026-10-13T16:56:54.949Z",
       "queued": [],
@@ -24042,6 +24012,20 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T18:25:28.798Z"
+    },
+    {
+      "started_at": "2026-10-21T18:30:41.067Z",
+      "queued": [
+        "DdEj7GuBjAd",
+        "DdEj5GgBkjh",
+        "DdEVqd0BxmF"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T18:37:02.454Z"
     }
   ],
   "next_account_index": 12,
@@ -25799,10 +25783,10 @@
     "DTlOkTRkg7L": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-21T16:02:17.731Z",
-      "failures": 22,
+      "failed_at": "2026-10-21T19:03:25.154Z",
+      "failures": 23,
       "terminal": false,
-      "retry_at": "2026-10-21T19:02:17.734Z"
+      "retry_at": "2026-10-21T22:03:25.154Z"
     },
     "DTQsGPREvWy": {
       "collector_version": 14,
