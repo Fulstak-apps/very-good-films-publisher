@@ -10295,6 +10295,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DePQSi0hHF8/",
       "queued_at": "2026-10-21T07:20:16.883Z",
       "asset_sha256": "efb1f96c446580969a18c1305a7477a92fc37da6b69d514d3cde6fae9dab2be3"
+    },
+    "DePA6ulBx4U": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DePA6ulBx4U/",
+      "queued_at": "2026-10-21T07:30:40.305Z",
+      "asset_sha256": "59235795cf0a7fd71c29dd7f80bfd370e2de55b4c5289a6bddf3d77bc64bb205"
     }
   },
   "checks": {
@@ -10348,22 +10354,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-12T10:54:54.102Z",
-      "queued": [
-        "DZsVoYlTrLm",
-        "DZiENxjTzPt",
-        "DZfdc7OzZUn",
-        "DZdAZttp3wN",
-        "DZczevczruY"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1233,
-      "status": "queued",
-      "finished_at": "2026-10-12T10:59:12.072Z"
-    },
     {
       "started_at": "2026-10-12T11:35:09.236Z",
       "queued": [
@@ -24013,6 +24003,25 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T06:57:23.251Z"
+    },
+    {
+      "started_at": "2026-10-21T07:14:52.703Z",
+      "queued": [
+        "DePXkwUh2_v",
+        "DePQSi0hHF8"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DePJGNHBnJ-/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T07:21:52.494Z"
     }
   ],
   "next_account_index": 12,
@@ -29558,6 +29567,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-21T07:41:32.283Z"
+    },
+    "DePJGNHBnJ-": {
+      "collector_version": 14,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-21T07:21:52.444Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-21T10:21:52.447Z"
     }
   },
   "candidates": {
