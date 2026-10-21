@@ -10277,6 +10277,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeQcAMnhuJu/",
       "queued_at": "2026-10-21T06:57:20.856Z",
       "asset_sha256": "d13172327bd1ec2286f2ebfd30ac9c05720917a5e03521fbc1b00a89051021e9"
+    },
+    "DePeD3rhIsG": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DePeD3rhIsG/",
+      "queued_at": "2026-10-21T07:06:44.004Z",
+      "asset_sha256": "f5871e8bca4a692b2a63fd23e62ee8aebec66e7eb9dbdbd2c04efb5be25ef1f4"
     }
   },
   "checks": {
@@ -10330,73 +10336,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-12T10:21:13.033Z",
-      "queued": [
-        "DadVXHBTp0g",
-        "DaYKL2vTte1",
-        "DZz6YhbBdNL",
-        "DZvFaH0JjvM",
-        "DZu3KCWTo8P"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOZ0YzJPrY/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOWWyNJZrm/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOTfFepwHD/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOPb-SJyLo/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOMFY6JXoz/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOIg12Jnwx/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOFMdRJx1U/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeOBqMdpBg2/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeN-6RgpM__/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeN8BmeTtjT/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 15,
-      "inventory": 1233,
-      "status": "queued",
-      "finished_at": "2026-10-12T10:24:05.597Z"
-    },
     {
       "started_at": "2026-10-12T10:54:54.102Z",
       "queued": [
@@ -24048,6 +23987,20 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T06:33:36.544Z"
+    },
+    {
+      "started_at": "2026-10-21T06:51:01.396Z",
+      "queued": [
+        "DeZ0FrVhAyH",
+        "DeRs8I7BJge",
+        "DeQcAMnhuJu"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T06:57:23.251Z"
     }
   ],
   "next_account_index": 12,
@@ -25725,10 +25678,10 @@
     "DVeCR8Wkpww": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json",
-      "failed_at": "2026-10-20T21:08:05.739Z",
-      "failures": 28,
+      "failed_at": "2026-10-21T07:03:29.354Z",
+      "failures": 29,
       "terminal": false,
-      "retry_at": "2026-10-21T00:08:05.739Z"
+      "retry_at": "2026-10-21T10:03:29.354Z"
     },
     "DVL_6Sxkli4": {
       "collector_version": 14,
