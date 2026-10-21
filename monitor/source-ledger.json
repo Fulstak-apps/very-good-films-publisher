@@ -10427,6 +10427,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdT8bs-h4BQ/",
       "queued_at": "2026-10-21T10:57:24.214Z",
       "asset_sha256": "212ab87415daab046bed228a54e0bee5f1a3be04b6355e6ddcd039e7d538ed4b"
+    },
+    "DdRyxB9TkvF": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdRyxB9TkvF/",
+      "queued_at": "2026-10-21T11:09:00.721Z",
+      "asset_sha256": "6e68a416de7881f057b7140471a2962f029f086e0a0948486ccbaee4061a3117"
     }
   },
   "checks": {
@@ -10480,22 +10486,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-12T18:58:22.088Z",
-      "queued": [
-        "DXhbl2oE7hk",
-        "DXgIqBaE9kK",
-        "DXe4v83kzGt",
-        "DXcVY4LEwyB",
-        "DXZt2VZE06u"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1233,
-      "status": "queued",
-      "finished_at": "2026-10-12T19:00:31.262Z"
-    },
     {
       "started_at": "2026-10-12T19:41:37.232Z",
       "queued": [
@@ -24139,6 +24129,29 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T10:47:05.736Z"
+    },
+    {
+      "started_at": "2026-10-21T10:52:17.918Z",
+      "queued": [
+        "DdT8bs-h4BQ"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdSVav9zoP6/",
+          "stage": "capture_or_queue",
+          "error": "locator.evaluate: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('video:visible').first()\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T10:59:17.715Z"
     }
   ],
   "next_account_index": 12,
@@ -25400,10 +25413,10 @@
     "DZLRpvlMPCE": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-21T07:56:21.460Z",
-      "failures": 46,
+      "failed_at": "2026-10-21T11:04:39.011Z",
+      "failures": 47,
       "terminal": false,
-      "retry_at": "2026-10-21T10:56:21.460Z"
+      "retry_at": "2026-10-21T14:04:39.011Z"
     },
     "DY9md3SssWF": {
       "collector_version": 14,
@@ -25792,10 +25805,10 @@
     "DWny2sbEu7x": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-21T07:56:30.772Z",
-      "failures": 34,
+      "failed_at": "2026-10-21T11:04:48.176Z",
+      "failures": 35,
       "terminal": false,
-      "retry_at": "2026-10-21T10:56:30.772Z"
+      "retry_at": "2026-10-21T14:04:48.176Z"
     },
     "DWavjdgkqGq": {
       "collector_version": 14,
@@ -29488,10 +29501,10 @@
     "DbVG83mgRAS": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-10-21T07:56:49.890Z",
-      "failures": 7,
+      "failed_at": "2026-10-21T11:05:07.116Z",
+      "failures": 8,
       "terminal": false,
-      "retry_at": "2026-10-21T10:56:49.891Z"
+      "retry_at": "2026-10-21T14:05:07.116Z"
     },
     "DbNgVUvASQC": {
       "collector_version": 14,
@@ -29740,6 +29753,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-21T13:47:05.693Z"
+    },
+    "DdSVav9zoP6": {
+      "collector_version": 14,
+      "error": "locator.evaluate: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('video:visible').first()\n",
+      "failed_at": "2026-10-21T10:59:17.674Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-21T13:59:17.674Z"
     }
   },
   "candidates": {
