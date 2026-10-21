@@ -130130,6 +130130,81 @@
       "discovered_at": "2026-10-21T19:53:05.604Z",
       "key": "b1958a07aeb8beb81183e76f150f577ed7c5023955f32afb0f92c8969b5827b1",
       "metadata_retry_at": "2026-10-22T02:11:45.734Z"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DdKxQ1pBx2u",
+        "title": "@movie_vault_4u clip"
+      },
+      "scene": {
+        "id": "DdKxQ1pBx2u",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/movie_vault_4u/reel/DdKxQ1pBx2u/",
+      "source_caption": "🎬 John Wick (2014) — Action, Thriller\nJohn Wick (2014) follows a legendary former assassin who has walked away from his violent past to live a quiet life after the death of his wife. The last gift she leaves him is a puppy named Daisy, giving John something to care for while he begins coping with his loss.\nThat fragile peace is destroyed when Iosef Tarasov and his men break into John's home, steal his car, and kill Daisy. The attack takes away the final piece of the life John was trying to protect, pushing him back into the dangerous criminal world he had abandoned.\nJohn's return quickly reminds everyone why his name carries so much fear and respect. As he goes after the people responsible, he comes face-to-face with the criminal organization he once belonged to, where old connections, strict rules, and deadly consequences follow every move.\nThe film explores themes of grief, revenge, identity, loyalty, and the difficulty of escaping your past. John isn't simply seeking revenge for a dog—Daisy represented his connection to his late wife and the peaceful future he was trying to build.\nMore than just an action movie, John Wick is a story about loss and what happens when someone finally loses the one thing that helped them move forward.\n💬 Do you think John would have returned to his old life if Daisy had never been taken from him? 👇",
+      "source_details": {
+        "title_hint": "John Wick",
+        "year": 2014,
+        "media_type_hint": "movie",
+        "source_title": "John Wick",
+        "source_year": 2014,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "John Wick (2014)",
+        "title": "John Wick",
+        "type": "tv",
+        "director": "Chad Stahelski",
+        "cast": [
+          "Keanu Reeves",
+          "Adrianne Palicki",
+          "Alfie Allen"
+        ],
+        "synopsis": "John Wick is a 2014 American action thriller film directed by Chad Stahelski and written by Derek Kolstad. Keanu Reeves stars as John Wick, a legendary hitman who comes out of retirement to seek revenge against the men who killed his dog, a final gift from his recently deceased wife. The film also stars Michael Nyqvist, Alfie Allen, Adrianne Palicki, Bridget Moynahan, Dean Winters, Ian McShane, John Leguizamo, and Willem Dafoe. Kolstad's script drew on his interest in action, revenge, and neo noir films. The producer Basil Iwanyk purchased the rights for his first independent film production. Reeves, whose career was declining, liked the script and recommended that the experienced stunt chor",
+        "metadata_source": "https://en.wikipedia.org/wiki/John_Wick_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "John Wick",
+          "source_year": 2014,
+          "catalog_title": "John Wick",
+          "catalog_year": 2014,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261021/f5e9fa8c0e4ba56341a65146ed61b99921372463e7b2b3a0db0f69f0d70db906.mp4?download=1",
+      "asset_sha256": "f5e9fa8c0e4ba56341a65146ed61b99921372463e7b2b3a0db0f69f0d70db906",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-10-21T20:57:48.680Z",
+        "source_duration": 173.892834,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "duplicate",
+      "review_reason": "This movie has already been published; only one clip per movie is allowed",
+      "discovered_at": "2026-10-21T21:04:18.895Z",
+      "key": "39d9d97b4b616587d4cfd4280bcd6e4e6fd487294474ee850200ec5e7318bd4c"
     }
   ],
   "discovery": [],
