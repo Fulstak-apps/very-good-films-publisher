@@ -10499,6 +10499,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdOTjPWBe9O/",
       "queued_at": "2026-10-21T12:29:35.067Z",
       "asset_sha256": "c5713eeb5512a57121f13c498c59928e590f45db416a9fbf1675606d57941e9a"
+    },
+    "DdMT3DKhGOj": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdMT3DKhGOj/",
+      "queued_at": "2026-10-21T12:39:50.995Z",
+      "asset_sha256": "4a15499c8b49e2a47ef5f46008a1a01293d3fd35672638e409db5f8e3c4d0f2e"
     }
   },
   "checks": {
@@ -10552,33 +10558,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-12T22:46:17.984Z",
-      "queued": [
-        "DW1hp6wE0md",
-        "DW0ZzzfE4go",
-        "DWx5qLtk2i7",
-        "DWwckSek4PH",
-        "DWvKerYE9Qk"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DXHyin0k5n9/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 7,
-      "inventory": 1233,
-      "status": "queued",
-      "finished_at": "2026-10-12T22:49:40.586Z"
-    },
     {
       "started_at": "2026-10-12T23:56:31.125Z",
       "queued": [
@@ -24187,6 +24166,26 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T11:53:29.653Z"
+    },
+    {
+      "started_at": "2026-10-21T12:23:21.970Z",
+      "queued": [
+        "DdOiaEYBTRO",
+        "DdObkY-BS1S",
+        "DdOTjPWBe9O"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DTlOkTRkg7L/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T12:29:37.827Z"
     }
   ],
   "next_account_index": 12,
