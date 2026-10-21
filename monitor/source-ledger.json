@@ -10763,6 +10763,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdBxAe3BBxI/",
       "queued_at": "2026-10-21T23:48:06.150Z",
       "asset_sha256": "4ee10e43229fb49ab221f5d3084186ac6e5ef9313107482f74d50a87623c7e6f"
+    },
+    "DdBEl-xhUir": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdBEl-xhUir/",
+      "queued_at": "2026-10-21T23:53:50.263Z",
+      "asset_sha256": "0f62e60c0fc352e941ef1fd8573c4090cd4254eea43a3e0fecc9d38b637677f9"
     }
   },
   "checks": {
@@ -10816,22 +10822,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T18:08:38.199Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DU4om-JE9Aa/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/5624f009e5678e1b0653f2cad3adc32d68c70148c389e9207b65a6c09a252844.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=5624f009e5678e1b0653f2cad3adc32d68c70148c389e9207b65a6c09a252844.mp4)\nfile_count limited to 1000 assets per release\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 1284,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T18:08:43.449Z"
-    },
     {
       "started_at": "2026-10-13T18:14:00.792Z",
       "queued": [],
@@ -23876,6 +23866,18 @@
       "inventory": 2012,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-21T23:36:17.115Z"
+    },
+    {
+      "started_at": "2026-10-21T23:41:49.523Z",
+      "queued": [
+        "DdBxAe3BBxI"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-21T23:48:08.551Z"
     }
   ],
   "next_account_index": 12,
