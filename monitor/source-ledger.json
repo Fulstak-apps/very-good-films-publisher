@@ -11231,6 +11231,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DeNbdZjCxRD/",
       "queued_at": "2026-10-22T18:57:56.242Z",
       "asset_sha256": "0514574bc3b97f281cffb664111dee5bfd9cc167cca27016be61c3485c5e3306"
+    },
+    "DeMGUd4i7BR": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DeMGUd4i7BR/",
+      "queued_at": "2026-10-22T20:06:07.405Z",
+      "asset_sha256": "2e46f0f5493d8750736cf9438bc5453fb47b687e1b7789fc52eaaae61a95feac"
     }
   },
   "checks": {
@@ -11284,57 +11290,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-14T01:30:31.544Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYFP1aOz3-p/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/e9dea945e49cb9d2c1f3353c12ff961c0fe823ba5cc08a38967bce864545da7e.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=e9dea945e49cb9d2c1f3353c12ff961c0fe823ba5cc08a38967bce864545da7e.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYFRA11TtLs/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release create media --repo Fulstak-apps/very-good-films-publisher --title Very Good Films video assets --notes Formatted cinema clips served to the Instagram and Threads APIs.\nHTTP 422: Validation Failed (https://api.github.com/repos/Fulstak-apps/very-good-films-publisher/releases)\nRelease.tag_name already exists\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYDzLsmxtmW/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/0d8e43583131e9ded7c86350f3ff38bd7d3c1bd767f6913fe924a210464417ed.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=0d8e43583131e9ded7c86350f3ff38bd7d3c1bd767f6913fe924a210464417ed.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYDOfRxSfZD/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/a49f7d4a9c804c2df5edd826ff73e22052ab478868261c5c89c679a52f0801ba.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=a49f7d4a9c804c2df5edd826ff73e22052ab478868261c5c89c679a52f0801ba.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYBlH3Vz1Ft/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/a865c1a4d280a0e48868b8f770c2650952bfea48212f91f02761529309673205.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=a865c1a4d280a0e48868b8f770c2650952bfea48212f91f02761529309673205.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYBA5M4vH88/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/90c141f91b5092179f494e85806837682707d41c2ed354bd480d91e611df59d2.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=90c141f91b5092179f494e85806837682707d41c2ed354bd480d91e611df59d2.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYA30A1hq6F/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/0eea02d2f52293607add7996fa0aa2a7d14979883ad787ec4feecd0a9ae83795.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=0eea02d2f52293607add7996fa0aa2a7d14979883ad787ec4feecd0a9ae83795.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYALsvpTI4t/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release create media --repo Fulstak-apps/very-good-films-publisher --title Very Good Films video assets --notes Formatted cinema clips served to the Instagram and Threads APIs.\nHTTP 422: Validation Failed (https://api.github.com/repos/Fulstak-apps/very-good-films-publisher/releases)\nRelease.tag_name already exists\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 8,
-      "inventory": 1596,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-14T01:36:52.083Z"
-    },
     {
       "started_at": "2026-10-14T02:29:10.046Z",
       "queued": [],
@@ -23978,6 +23933,22 @@
       "inventory": 2313,
       "status": "queued",
       "finished_at": "2026-10-22T18:47:32.777Z"
+    },
+    {
+      "started_at": "2026-10-22T19:14:12.289Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DeNbZ7nixkC/",
+          "stage": "capture_or_queue",
+          "error": "spawnSync ffmpeg ETIMEDOUT"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 2313,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-10-22T19:38:55.606Z"
     }
   ],
   "next_account_index": 13,
@@ -29779,6 +29750,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-22T21:14:01.760Z"
+    },
+    "DeNbZ7nixkC": {
+      "collector_version": 14,
+      "error": "spawnSync ffmpeg ETIMEDOUT",
+      "failed_at": "2026-10-22T19:38:55.590Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-22T22:38:55.592Z"
     }
   },
   "candidates": {
