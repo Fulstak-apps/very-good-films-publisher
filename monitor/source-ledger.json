@@ -10829,6 +10829,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc-fCKOhMXz/",
       "queued_at": "2026-10-22T01:14:32.198Z",
       "asset_sha256": "85e95e77984fe24ec516101808daf0e85a9771e214dc5f1e08ba09c380096b85"
+    },
+    "Dc-HwbUhYyl": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc-HwbUhYyl/",
+      "queued_at": "2026-10-22T01:36:31.151Z",
+      "asset_sha256": "f1d5dbda53541b23a459f3634a4a277049af3977fc01154123a97ba4f66539c4"
     }
   },
   "checks": {
@@ -10882,37 +10888,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T18:20:08.510Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DUtKF4lE_LG/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/34e2374e726c7620f2bd44ad0ea544a8e7d8d937d6cb9b86900f08a067349b9b.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=34e2374e726c7620f2bd44ad0ea544a8e7d8d937d6cb9b86900f08a067349b9b.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DUsB86WE3gm/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/39b6c98d9cfb3df4bd1d6e0f75cbc58e52fa723bfe2243ae4884b9fa2350198e.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=39b6c98d9cfb3df4bd1d6e0f75cbc58e52fa723bfe2243ae4884b9fa2350198e.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DUqpZPvk2ao/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/bf53a4a48fa594273b06f2ff5037ee545e79e54e5af74631059fb54cd4e8a10e.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=bf53a4a48fa594273b06f2ff5037ee545e79e54e5af74631059fb54cd4e8a10e.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DUpOa6nkzIr/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/c43c02b851a26a9d0c3c54cf0f085299f46f570a2ea5d4597872fdbe589ad48f.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=c43c02b851a26a9d0c3c54cf0f085299f46f570a2ea5d4597872fdbe589ad48f.mp4)\nfile_count limited to 1000 assets per release\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 1284,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T18:20:30.780Z"
-    },
     {
       "started_at": "2026-10-13T18:25:41.911Z",
       "queued": [],
@@ -23906,6 +23881,25 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-21T23:59:44.662Z"
+    },
+    {
+      "started_at": "2026-10-22T01:08:52.820Z",
+      "queued": [
+        "DdCMCrrBupy",
+        "Dc-fCKOhMXz"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc-evxuhvsp/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-22T01:15:52.487Z"
     }
   ],
   "next_account_index": 12,
@@ -29627,6 +29621,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-22T03:08:23.131Z"
+    },
+    "Dc-evxuhvsp": {
+      "collector_version": 14,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-22T01:15:52.449Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-22T04:15:52.449Z"
     }
   },
   "candidates": {
