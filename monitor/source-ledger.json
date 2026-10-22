@@ -10961,6 +10961,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc5UPTJBp28/",
       "queued_at": "2026-10-22T04:47:57.976Z",
       "asset_sha256": "d4e4486c20e00016f80c5dc1c134b7c5b3a9b3b718a3ced8e770f975c53910ee"
+    },
+    "Dc5HHD3TpNt": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc5HHD3TpNt/",
+      "queued_at": "2026-10-22T04:59:04.962Z",
+      "asset_sha256": "c42d229a093a9fafa17d7213eebd07e19e166d8e38314ebb65e6c3682be5ed4a"
     }
   },
   "checks": {
@@ -11014,22 +11020,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T18:49:55.642Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYBlH3Vz1Ft/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/a865c1a4d280a0e48868b8f770c2650952bfea48212f91f02761529309673205.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=a865c1a4d280a0e48868b8f770c2650952bfea48212f91f02761529309673205.mp4)\nfile_count limited to 1000 assets per release\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 1284,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T18:50:00.334Z"
-    },
     {
       "started_at": "2026-10-13T18:55:13.686Z",
       "queued": [],
@@ -23986,6 +23976,19 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-22T03:46:27.171Z"
+    },
+    {
+      "started_at": "2026-10-22T04:41:11.634Z",
+      "queued": [
+        "Dc5U6BvhaIQ",
+        "Dc5UPTJBp28"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-22T04:48:00.404Z"
     }
   ],
   "next_account_index": 12,
