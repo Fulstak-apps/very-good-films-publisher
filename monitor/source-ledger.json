@@ -10889,6 +10889,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc7xggmBGlp/",
       "queued_at": "2026-10-22T03:33:11.509Z",
       "asset_sha256": "3973a4dcd90946188b9a5dc9409a2373ad3fcff8a47b3e653587f3fd345fc9ec"
+    },
+    "Dc7KwaUza4o": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc7KwaUza4o/",
+      "queued_at": "2026-10-22T03:44:29.560Z",
+      "asset_sha256": "19b4db57e484c15bf69641c3426e4e94754f0fd3ef38187b42be32fe0316441e"
     }
   },
   "checks": {
@@ -10942,27 +10948,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T18:38:26.320Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYVVCdjSV9p/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/d39944dc1a85d269441be7750bf6530e96c31bdf9dfc470ded0bcbe58305566c.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=d39944dc1a85d269441be7750bf6530e96c31bdf9dfc470ded0bcbe58305566c.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DYS-QJcve4l/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/f3e2a8d4b0fe505acae1c03f174002770e73a054405ae8bc8ca0904e3f5fdbba.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=f3e2a8d4b0fe505acae1c03f174002770e73a054405ae8bc8ca0904e3f5fdbba.mp4)\nfile_count limited to 1000 assets per release\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 1284,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T18:38:41.431Z"
-    },
     {
       "started_at": "2026-10-13T18:43:57.922Z",
       "queued": [],
@@ -23944,6 +23929,29 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-22T03:22:03.855Z"
+    },
+    {
+      "started_at": "2026-10-22T03:27:20.705Z",
+      "queued": [
+        "Dc7xggmBGlp"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc7gc0oBlpv/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-22T03:34:20.512Z"
     }
   ],
   "next_account_index": 12,
@@ -29397,10 +29405,10 @@
     "DaDHOMUA5Pl": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-22T00:30:58.540Z",
-      "failures": 9,
+      "failed_at": "2026-10-22T03:39:52.264Z",
+      "failures": 10,
       "terminal": false,
-      "retry_at": "2026-10-22T03:30:58.540Z"
+      "retry_at": "2026-10-22T06:39:52.264Z"
     },
     "DZ-Nk-Nohfv": {
       "collector_version": 14,
@@ -29681,6 +29689,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-22T05:33:28.663Z"
+    },
+    "Dc7gc0oBlpv": {
+      "collector_version": 14,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-22T03:34:20.441Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-22T06:34:20.443Z"
     }
   },
   "candidates": {
