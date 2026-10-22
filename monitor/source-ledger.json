@@ -11117,6 +11117,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dcy-xhBTZ9A/",
       "queued_at": "2026-10-22T17:39:55.753Z",
       "asset_sha256": "0bcf64ff85d13f736d3cc45f76d31ab70b2c4a02974961888213553852b030a4"
+    },
+    "DcyvIhYBoCM": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DcyvIhYBoCM/",
+      "queued_at": "2026-10-22T17:49:42.390Z",
+      "asset_sha256": "afd7521deaea312b9d5af8cc3411a5921109a6a76a39fe74dc36973cc643a195"
     }
   },
   "checks": {
@@ -11170,72 +11176,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-13T20:47:04.710Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/filmreelsvault/reel/DbWaW7VhEeI/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/659540a7a6a642f76b0a6946cb36b52a3a29e69b7f133b357b8f4b43c11c1a6b.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=659540a7a6a642f76b0a6946cb36b52a3a29e69b7f133b357b8f4b43c11c1a6b.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DXwplFoRgl-/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/134d71a3e9861d1d2367b165a299d9a48387a86f35258ed16207d53a2ee08c0c.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=134d71a3e9861d1d2367b165a299d9a48387a86f35258ed16207d53a2ee08c0c.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/filmreelsvault/reel/DbVcg5GhYZO/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/59962d1d7faec15d7262b989fb4f932ac32987f9ebf459136b88074501c0c215.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=59962d1d7faec15d7262b989fb4f932ac32987f9ebf459136b88074501c0c215.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DXvDZSmT44e/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/ac252232173691cc46e56a97da40d1dff16c9e88841121c6d5e556c7ab565ca8.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=ac252232173691cc46e56a97da40d1dff16c9e88841121c6d5e556c7ab565ca8.mp4)\nfile_count limited to 1000 assets per release\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 11,
-      "inventory": 1596,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-13T20:53:10.004Z"
-    },
     {
       "started_at": "2026-10-13T20:58:23.046Z",
       "queued": [],
@@ -24128,6 +24068,25 @@
       "inventory": 2012,
       "status": "queued",
       "finished_at": "2026-10-22T17:04:17.816Z"
+    },
+    {
+      "started_at": "2026-10-22T17:34:28.730Z",
+      "queued": [
+        "DczyTYgBMuv",
+        "Dcy-xhBTZ9A"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DcyyGFzBrc_/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2012,
+      "status": "queued",
+      "finished_at": "2026-10-22T17:41:28.437Z"
     }
   ],
   "next_account_index": 12,
@@ -29913,6 +29872,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-22T17:56:40.300Z"
+    },
+    "DcyyGFzBrc_": {
+      "collector_version": 14,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-22T17:41:28.430Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-22T20:41:28.430Z"
     }
   },
   "candidates": {
