@@ -11795,6 +11795,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DcKBGXbCnNp/",
       "queued_at": "2026-10-23T19:03:27.162Z",
       "asset_sha256": "e17e21bd00d4535b10b652e432f883084cf93e073138c84dbb24fdf9532070cb"
+    },
+    "DcJ_Al9C7Al": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DcJ_Al9C7Al/",
+      "queued_at": "2026-10-23T19:10:03.868Z",
+      "asset_sha256": "c9dcb345160145be0c4e0ccfc11df8becb42532fc94e68d49a4b0b65897972ba"
     }
   },
   "checks": {
@@ -11848,42 +11854,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-14T16:13:20.184Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/filmreelsvault/reel/DYW5oTZBsBO/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/e57f6a8ef9e8876a838a78473553a9bddbeac82fdaac33b05c7f68d8a6e1357b.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=e57f6a8ef9e8876a838a78473553a9bddbeac82fdaac33b05c7f68d8a6e1357b.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DUzS18Mk54y/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/1904d16c916d674d1fd1adee15ce73d6090b73062db6d59d9dcbaaf64f03a05a.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=1904d16c916d674d1fd1adee15ce73d6090b73062db6d59d9dcbaaf64f03a05a.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/filmreelsvault/reel/DYVSr-ZBxXd/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/a8145326fef5ee68fcb1cb4497e7bd869d21fd157ce04bdc3575b5fd8073e31a.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=a8145326fef5ee68fcb1cb4497e7bd869d21fd157ce04bdc3575b5fd8073e31a.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DUyVEmbE6dO/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/5b5cc6b884da81ed51ae48bc3d1789658793ca4d5ebb4e0935c9ccb9acbfcd21.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=5b5cc6b884da81ed51ae48bc3d1789658793ca4d5ebb4e0935c9ccb9acbfcd21.mp4)\nfile_count limited to 1000 assets per release\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/filmreelsvault/reel/DYUU125hsnU/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: gh release upload media work/2011579adfa33d4bc8e1d7d860924997c55ca16ff4f7a6fc32a428bfe880637f.mp4 --repo Fulstak-apps/very-good-films-publisher\nHTTP 422: Validation Failed (https://uploads.github.com/repos/Fulstak-apps/very-good-films-publisher/releases/383283730/assets?label=&name=2011579adfa33d4bc8e1d7d860924997c55ca16ff4f7a6fc32a428bfe880637f.mp4)\nfile_count limited to 1000 assets per release\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-14T16:19:26.403Z"
-    },
     {
       "started_at": "2026-10-14T16:24:39.684Z",
       "queued": [],
@@ -22836,6 +22806,33 @@
       "inventory": 2313,
       "status": "queued",
       "finished_at": "2026-10-23T18:25:09.713Z"
+    },
+    {
+      "started_at": "2026-10-23T18:56:49.267Z",
+      "queued": [
+        "DcNJmsOueO_",
+        "DcNJjfDOpIu",
+        "DcMY6oaCt6Z",
+        "DcKDFyci4UP",
+        "DcKBGXbCnNp"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 2313,
+      "status": "queued",
+      "finished_at": "2026-10-23T19:03:30.807Z"
     }
   ],
   "next_account_index": 13,
