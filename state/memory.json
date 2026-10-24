@@ -145004,6 +145004,79 @@
       "discovered_at": "2026-10-24T03:53:18.533Z",
       "key": "70f19f93cc38e24facc24f3549a829c6dbb243c75eb43cd0ffe82aee137639fd",
       "metadata_retry_at": "2026-10-24T10:17:57.583Z"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Db3lla9RU_v",
+        "title": "@popcorncutzz clip"
+      },
+      "scene": {
+        "id": "Db3lla9RU_v",
+        "start": 0,
+        "end": 58.266
+      },
+      "source_post_url": "https://www.instagram.com/popcorncutzz/reel/Db3lla9RU_v/",
+      "source_caption": "🎥🎬: X-Men (2000)\n\nIn a world where mutants are born with extraordinary abilities, fear and discrimination against them are growing. Professor Charles Xavier gathers mutants like Wolverine, Cyclops, Storm, and Jean Grey to protect others like them while working toward peaceful coexistence with humanity.\n\nBut Magneto believes humans will never accept mutants. He develops a plan to use a machine that can artificially trigger mutations in world leaders, hoping to force society to recognize mutant power.\n\nWhen Rogue becomes caught between Xavier’s X-Men and Magneto’s Brotherhood, Wolverine joins the team to help stop Magneto’s plan. The battle becomes a fight not only for humanity, but for the future of every mutant.\n\n#XMen #XMen2000 #Wolverine #Magneto #MarvelMovies",
+      "source_details": {
+        "title_hint": "X-Men",
+        "year": 2000,
+        "source_title": "X-Men",
+        "source_year": 2000,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "X-Men",
+        "type": "movie",
+        "director": "Bryan Singer",
+        "cast": [
+          "Patrick Stewart",
+          "Ian McKellen",
+          "Halle Berry"
+        ],
+        "synopsis": "X-Men is a 2000 American superhero film based on the superhero team from Marvel Comics created by Stan Lee and Jack Kirby. Directed by Bryan Singer from a screenplay by David Hayter and a story by Singer and Tom DeSanto, it features an ensemble cast consisting of Patrick Stewart, Hugh Jackman, Ian McKellen, Halle Berry, Famke Janssen, James Marsden, Bruce Davison, Rebecca Romijn, Ray Park, and Anna Paquin. The film depicts a world where an unknown proportion of people are mutants, possessing superhuman powers that make them distrusted by normal humans. It focuses on the mutants Wolverine and Rogue as they are brought into a conflict between two groups with radically different approaches to b",
+        "metadata_source": "https://en.wikipedia.org/wiki/X-Men_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "X-Men",
+          "source_year": 2000,
+          "catalog_title": "X-Men",
+          "catalog_year": 2000,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261024/cb170866fc36adbb16742234a91679969c7d3ea8f7cbc043c1b48f5640f62c32.mp4?download=1",
+      "asset_sha256": "cb170866fc36adbb16742234a91679969c7d3ea8f7cbc043c1b48f5640f62c32",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 58.266,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-10-24T04:27:19.939Z",
+        "source_duration": 58.266666666666666,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "duplicate",
+      "review_reason": "This movie has already been published; only one clip per movie is allowed",
+      "discovered_at": "2026-10-24T04:31:10.359Z",
+      "key": "c9fd083c17e27fb5ca3fd8583eace725582600bc5b8cd7b8385800dccb80b8a3"
     }
   ],
   "discovery": [],
