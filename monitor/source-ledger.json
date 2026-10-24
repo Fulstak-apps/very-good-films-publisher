@@ -12563,6 +12563,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DbWKpCnRoV-/",
       "queued_at": "2026-10-24T18:19:27.744Z",
       "asset_sha256": "8cd712be0448523c994e31a6b7fcbd140b09042e6f43db9b37a22c66a3be7d43"
+    },
+    "DbUMYu_O7wG": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DbUMYu_O7wG/",
+      "queued_at": "2026-10-24T18:27:03.320Z",
+      "asset_sha256": "57115698bc92135ae6e6e2cb9a0898367a16fd6a1b60a521656ccc95d87fc6f3"
     }
   },
   "checks": {
@@ -12616,22 +12622,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T00:15:38.292Z",
-      "queued": [
-        "DYS-QJcve4l",
-        "DcL5Mo-BQlC",
-        "DYQgY3hTCaX",
-        "DcI8bT0BD8R",
-        "DYNRi7yPMI0"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-15T00:16:55.486Z"
-    },
     {
       "started_at": "2026-10-15T00:22:06.665Z",
       "queued": [
@@ -20626,6 +20616,30 @@
       "inventory": 2313,
       "status": "queued",
       "finished_at": "2026-10-24T17:11:56.623Z"
+    },
+    {
+      "started_at": "2026-10-24T18:13:50.834Z",
+      "queued": [
+        "DbWKxhFRm4H",
+        "DbWKpCnRoV-"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 2313,
+      "status": "queued",
+      "finished_at": "2026-10-24T18:20:50.290Z"
     }
   ],
   "next_account_index": 13,
@@ -26342,11 +26356,11 @@
     },
     "Dc_xA94z9gC": {
       "collector_version": 14,
-      "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-22T15:38:59.498Z",
-      "failures": 4,
+      "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json",
+      "failed_at": "2026-10-24T18:20:50.285Z",
+      "failures": 5,
       "terminal": false,
-      "retry_at": "2026-10-22T18:38:59.498Z"
+      "retry_at": "2026-10-24T21:20:50.286Z"
     },
     "Dc-evxuhvsp": {
       "collector_version": 14,
