@@ -12815,6 +12815,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/Da1p-H9uwhC/",
       "queued_at": "2026-10-25T22:57:48.115Z",
       "asset_sha256": "a77f80ce308320114c03ca2041d53442ae271777a3cfa7cd348b2a0bee5438b6"
+    },
+    "Da1n4mvOoIC": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/Da1n4mvOoIC/",
+      "queued_at": "2026-10-25T23:20:41.082Z",
+      "asset_sha256": "2e0b8543231778ae945d4d9d3d7da35ee4f2bd4066d4a1327832608e1966f5e5"
     }
   },
   "checks": {
@@ -12868,22 +12874,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T01:20:36.962Z",
-      "queued": [
-        "DbdK1k5BgX1",
-        "DXzKMUXzuna",
-        "DbZAjQKpb4b",
-        "DXxgiz0PQuG",
-        "DbYBTL4BZ9m"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-15T01:21:51.041Z"
-    },
     {
       "started_at": "2026-10-15T01:27:01.940Z",
       "queued": [
@@ -21180,6 +21170,28 @@
       "inventory": 2313,
       "status": "queued",
       "finished_at": "2026-10-25T22:48:23.726Z"
+    },
+    {
+      "started_at": "2026-10-25T22:53:35.565Z",
+      "queued": [
+        "Da5ULZzuy-y",
+        "Da4k5NwODbm",
+        "Da4k6BQu4Aj",
+        "Da4k6j1up2l",
+        "Da1p-H9uwhC"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/Da4k4eSugXl/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 2313,
+      "status": "queued",
+      "finished_at": "2026-10-25T22:57:50.365Z"
     }
   ],
   "next_account_index": 13,
