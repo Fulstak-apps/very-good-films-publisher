@@ -12737,6 +12737,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DbCdlYCO4Dz/",
       "queued_at": "2026-10-25T22:20:26.454Z",
       "asset_sha256": "bf236811b8b35e67333c2f52d7ea434ec98a1229b4aadd44e6b2542e940eef4c"
+    },
+    "DbBoElti70t": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DbBoElti70t/",
+      "queued_at": "2026-10-25T22:27:52.385Z",
+      "asset_sha256": "78091ba56c8d63b184fc68fedc6f81a28ed66fd3f74d4e7558071d1571ff50e3"
     }
   },
   "checks": {
@@ -12790,22 +12796,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T01:01:43.807Z",
-      "queued": [
-        "DbsnoZMh6Pp",
-        "DbrAtVDBBAw",
-        "DX7MihfzMjO",
-        "DbqC5CdBTjN",
-        "DX5Zd0yTAqQ"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-15T01:02:38.896Z"
-    },
     {
       "started_at": "2026-10-15T01:07:48.818Z",
       "queued": [
@@ -21098,6 +21088,28 @@
       "inventory": 2313,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-25T22:08:12.741Z"
+    },
+    {
+      "started_at": "2026-10-25T22:13:29.505Z",
+      "queued": [
+        "DbCg8ASuONp",
+        "DbCg0b7u56Y",
+        "DbCdugmO9RS",
+        "DbCdtlAuNR5",
+        "DbCdlYCO4Dz"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 2313,
+      "status": "queued",
+      "finished_at": "2026-10-25T22:20:28.829Z"
     }
   ],
   "next_account_index": 13,
