@@ -12827,6 +12827,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/Da1nz01O7Tk/",
       "queued_at": "2026-10-25T23:23:26.216Z",
       "asset_sha256": "1c453147962fcab0dcc33cd18b2d69151fd0c97bcd8825b1e4dff8e22771292b"
+    },
+    "Da1nxBXOL13": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/Da1nxBXOL13/",
+      "queued_at": "2026-10-25T23:31:19.588Z",
+      "asset_sha256": "8b768308199f170d2a82ae6e16d1e12eabda3ac7160b6336ee752a7b5a03898c"
     }
   },
   "checks": {
@@ -12880,22 +12886,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T01:27:01.940Z",
-      "queued": [
-        "DXwvr3CRjTL",
-        "DbWaW7VhEeI",
-        "DXwplFoRgl-",
-        "DbVcg5GhYZO",
-        "DXvDZSmT44e"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-15T01:28:15.373Z"
-    },
     {
       "started_at": "2026-10-15T02:09:34.823Z",
       "queued": [
@@ -21198,6 +21188,25 @@
       "inventory": 2313,
       "status": "queued",
       "finished_at": "2026-10-25T22:57:50.365Z"
+    },
+    {
+      "started_at": "2026-10-25T23:18:33.600Z",
+      "queued": [
+        "Da1n4mvOoIC",
+        "Da1nz01O7Tk"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc3R1XVhydC/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 2313,
+      "status": "queued",
+      "finished_at": "2026-10-25T23:25:33.299Z"
     }
   ],
   "next_account_index": 13,
@@ -26970,11 +26979,11 @@
     },
     "Dc3R1XVhydC": {
       "collector_version": 14,
-      "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json",
-      "failed_at": "2026-10-22T16:24:45.124Z",
-      "failures": 1,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-25T23:25:33.273Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-10-22T19:24:45.124Z"
+      "retry_at": "2026-10-26T02:25:33.276Z"
     },
     "DczyscJBNxZ": {
       "collector_version": 14,
@@ -27083,10 +27092,10 @@
     "Da4k4eSugXl": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-10-25T22:55:56.389Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-10-25T23:25:56.389Z"
+      "failed_at": "2026-10-25T23:30:56.504Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
