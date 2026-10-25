@@ -7,7 +7,7 @@ export async function graph(base,token,path,params={},method='GET'){
  const res=await fetch(url,init);let data;try{data=await res.json();}catch{throw new Error(`Meta returned unreadable response (${res.status})`);}
  if(!res.ok||data.error){const detail=data.error?.error_user_msg||data.error?.message||data.error?.type||'no detail';const e=new Error(`Meta HTTP ${res.status}, code ${data.error?.code??'unknown'}, subcode ${data.error?.error_subcode??'none'}: ${detail}`);e.code=data.error?.code;e.subcode=data.error?.error_subcode;e.definitiveRejection=res.status<500&&!!data.error;e.rateLimited=res.status===429||[4,17,32,613,9].includes(data.error?.code);throw e;}return data;
 }
-export function accounts(env=process.env,brand={}){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN}].filter(a=>brand.platforms?.[a.name]!==false);}
+export function accounts(env=process.env,brand={}){return [{name:'instagram',base:'https://graph.instagram.com',id:env.INSTAGRAM_USER_ID,token:env.INSTAGRAM_ACCESS_TOKEN},{name:'threads',base:'https://graph.threads.net/v1.0',id:env.THREADS_USER_ID,token:env.THREADS_ACCESS_TOKEN},{name:'facebook',base:'https://graph.facebook.com/v24.0',id:env.FACEBOOK_PAGE_ID,token:env.FACEBOOK_PAGE_ACCESS_TOKEN}].filter(a=>brand.platforms?.[a.name]!==false && a.id && a.token);}
 export function threadsBacklogEligible(item,state={},now=Date.now()){
  if(item.status!=='published'||item.threads_pending!==true||item.threads_media_id||item.threads_abandoned_at)return false;
  if(Date.parse(state.retry_at||'')>now)return false;
@@ -42,7 +42,7 @@ export function releaseFailedItem(item,platformNames,platformState,now=Date.now(
  return true;
 }
 export function classifyMetaError(error){const code=Number(error?.code),sub=Number(error?.subcode);if(code===36004&&sub===2207010)return 'caption_too_long';if(code===4||code===17||code===32||code===613||code===9||error?.rateLimited)return 'rate_limited';if(code===190)return 'auth';if(error?.definitiveRejection)return 'permanent';return 'transient';}
-export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const me=await graph(a.base,a.token,a.id,{fields:'id,username'});if(me.username?.toLowerCase()!==handle.toLowerCase()||String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);return me;}
+export async function verifyAccount(a,handle){if(!a.id||!a.token)throw new Error(`${a.name}: missing credentials`);const fields=a.name==='facebook'?'id,name':'id,username';const me=await graph(a.base,a.token,a.id,{fields});if(String(me.id)!==String(a.id))throw new Error(`${a.name}: account identity mismatch`);if(handle&&a.name==='instagram'&&me.username?.toLowerCase()!==handle.toLowerCase())throw new Error(`${a.name}: account identity mismatch`);return me;}
 export async function publish(memory,brand,save){
  if(!brand.enabled)return {status:'paused'};
  // Verify each destination independently. A Threads outage must never prevent
@@ -95,6 +95,14 @@ export async function publish(memory,brand,save){
     const q=await graph(a.base,a.token,`${a.id}/content_publishing_limit`,{fields:'quota_usage,config'});const d=q.data?.[0];if(!d||!Number.isFinite(d.quota_usage)||!d.config?.quota_total)throw new Error('Cannot verify Instagram quota');if(d.quota_usage>=d.config.quota_total){state.retry_at=new Date(Date.now()+3600000).toISOString();await save();continue;}
    }
    const text=caption(item,item.caption_style,a.name==='threads').text;
+   if(a.name==='facebook'){
+    if(!item.facebook_media_id){
+     const posted=await graph(a.base,a.token,`${a.id}/videos`,{file_url:item.video_url,description:text},'POST');
+     if(!posted?.id)throw new Error('facebook: publish response missing ID');
+     item.facebook_media_id=posted.id;item.facebook_published_at=new Date().toISOString();item.updated_at=new Date().toISOString();await save();
+    }
+    continue;
+   }
    await advanceContainer({item,prefix:a.name,save,
     create:()=>graph(a.base,a.token,`${a.id}/${a.name==='instagram'?'media':'threads'}`,a.name==='instagram'?{media_type:'REELS',video_url:item.video_url,caption:text,share_to_feed:'true'}:{media_type:'VIDEO',video_url:item.video_url,text},'POST'),
     inspect:id=>graph(a.base,a.token,id,{fields:a.name==='instagram'?'status_code,status':'status,error_message'}),
