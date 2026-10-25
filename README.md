@@ -25,3 +25,4 @@ Optional: `TMDB_READ_TOKEN` (film discovery), `OMDB_API_KEY` (verified IMDb rati
 See [Architecture](docs/ARCHITECTURE.md), [Scene feed contract](docs/SCENE_FEED.md), [Operations](docs/OPERATIONS.md), and [editorial prompt](prompts/editor.md).
 
 The catalog and configured scene feeds are the source of publishable clips. A title discovered from metadata alone cannot produce an authentic film scene. Browser login, API authorization, and scene supply are separate setup steps.
+Facebook Page publishing uses two additional GitHub Actions secrets: `FACEBOOK_PAGE_ID` and `FACEBOOK_PAGE_ACCESS_TOKEN`. When present, every newly confirmed Instagram clip is also published as a Facebook Page video with the same caption. Facebook delivery is tracked independently from Instagram and Threads.
