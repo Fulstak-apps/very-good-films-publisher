@@ -13223,6 +13223,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/De3Vce9tGUR/",
       "queued_at": "2026-10-26T13:38:42.756Z",
       "asset_sha256": "25b57482b5d73c7bc773d0d79c3649fbd6f94ed757da132490cd7fb1260e0e1b"
+    },
+    "De3VZzPN5Lp": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/De3VZzPN5Lp/",
+      "queued_at": "2026-10-26T13:47:38.158Z",
+      "asset_sha256": "d5a8226c3bcba8820e565ef0eeb6c6045984916382fbeb2ae68109fc7213c269"
     }
   },
   "checks": {
@@ -13282,22 +13288,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T22:48:25.765Z",
-      "queued": [
-        "DaTdo3BB92k",
-        "DaSfzVRBOmP",
-        "DaQ41o8BL4L",
-        "DaP7DFAhYPi",
-        "DaOUBvPhq2T"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-15T22:50:00.895Z"
-    },
     {
       "started_at": "2026-10-16T01:19:34.104Z",
       "queued": [
@@ -21427,6 +21417,47 @@
       "inventory": 2401,
       "status": "queued",
       "finished_at": "2026-10-26T11:38:48.669Z"
+    },
+    {
+      "started_at": "2026-10-26T13:32:07.200Z",
+      "queued": [
+        "De5cdUGtB8J",
+        "De5cU03tXKm",
+        "De5cShVtdpP",
+        "De3Vce9tGUR"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 9,
+      "inventory": 2401,
+      "status": "queued",
+      "finished_at": "2026-10-26T13:38:45.626Z"
     }
   ],
   "next_account_index": 0,
