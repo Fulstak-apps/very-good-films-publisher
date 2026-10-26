@@ -12983,6 +12983,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/De6H2eONfKC/",
       "queued_at": "2026-10-26T02:35:18.018Z",
       "asset_sha256": "3d45e03cce83a8e4339e6684d43332e869ac02480de05028078a022c7a61d11c"
+    },
+    "De6HvtctCGx": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/De6HvtctCGx/",
+      "queued_at": "2026-10-26T02:49:14.663Z",
+      "asset_sha256": "9b4bb4d84a9b08b58fa4f7ffd8362525c3460db63ee782f243e99656531c4259"
     }
   },
   "checks": {
@@ -13042,43 +13048,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T14:34:13.643Z",
-      "queued": [
-        "DT1hApIEX8E",
-        "DbF_wiFBww-",
-        "DbEYyDzhXCO",
-        "DbDa-W-hTZj",
-        "DbBz94ZPzgn"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DUBUmfFEVMU/",
-          "stage": "capture_or_queue",
-          "error": "Rendered Reel failed video/audio/duration QA"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DTpAeVyDvOR/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 9,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-15T14:36:02.939Z"
-    },
     {
       "started_at": "2026-10-15T14:41:14.755Z",
       "queued": [
@@ -21298,6 +21267,27 @@
       "inventory": 2401,
       "status": "queued",
       "finished_at": "2026-10-26T00:48:08.571Z"
+    },
+    {
+      "started_at": "2026-10-26T02:29:41.558Z",
+      "queued": [
+        "De6IAbEtKIL",
+        "De6H5JXNrsm",
+        "De6H5clNbHO",
+        "De6H2eONfKC"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/De6H0Sptlut/",
+          "stage": "capture_or_queue",
+          "error": "page.waitForTimeout: Target page, context or browser has been closed"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 2401,
+      "status": "queued",
+      "finished_at": "2026-10-26T02:36:41.306Z"
     }
   ],
   "next_account_index": 0,
@@ -27195,6 +27185,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-26T05:18:51.872Z"
+    },
+    "De6H0Sptlut": {
+      "collector_version": 14,
+      "error": "page.waitForTimeout: Target page, context or browser has been closed",
+      "failed_at": "2026-10-26T02:36:41.296Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-26T05:36:41.297Z"
     }
   },
   "candidates": {
