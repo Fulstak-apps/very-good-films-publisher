@@ -12923,6 +12923,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/De6IS02Nyck/",
       "queued_at": "2026-10-26T00:30:50.760Z",
       "asset_sha256": "1479e1acd4d297cbdc265fc6c7b7ec9a6560527e7296db592694d17ac262320b"
+    },
+    "De6IUZUN0XR": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/De6IUZUN0XR/",
+      "queued_at": "2026-10-26T00:41:52.175Z",
+      "asset_sha256": "78a424dc22f904a8040d71d1edecc817df9c2ad2bad1326737c54358f13c852d"
     }
   },
   "checks": {
@@ -12982,32 +12988,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-15T12:12:00.569Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 1596,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-15T12:19:18.035Z"
-    },
     {
       "started_at": "2026-10-15T13:49:41.709Z",
       "queued": [],
@@ -21261,6 +21241,19 @@
       "inventory": 2313,
       "status": "candidates_on_hold",
       "finished_at": "2026-10-26T00:19:20.265Z"
+    },
+    {
+      "started_at": "2026-10-26T00:24:33.784Z",
+      "queued": [
+        "De7vsQXyjgR",
+        "De6IS02Nyck"
+      ],
+      "errors": [],
+      "discovered": 88,
+      "attempts": 2,
+      "inventory": 2401,
+      "status": "queued",
+      "finished_at": "2026-10-26T00:30:53.551Z"
     }
   ],
   "next_account_index": 0,
