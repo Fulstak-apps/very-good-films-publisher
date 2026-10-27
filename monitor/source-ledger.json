@@ -13607,6 +13607,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcY0D7COE08/",
       "queued_at": "2026-10-27T14:19:42.765Z",
       "asset_sha256": "c11c4ff1f7b7088a656cdc6ce591b01700a27c04629662b97e7e1247f62002ed"
+    },
+    "DcYpuq_uxss": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcYpuq_uxss/",
+      "queued_at": "2026-10-27T14:30:57.181Z",
+      "asset_sha256": "69738c67991c3d2562337f29e06b046325a7cb2915896fa97312b853aafbd004"
     }
   },
   "checks": {
@@ -13666,22 +13672,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-17T03:00:36.357Z",
-      "queued": [
-        "DVjcJ3pk8W_",
-        "DZBEvXxhzoU",
-        "DVh6qBtk9To",
-        "DZAGcN_BrFI",
-        "DVgq7TeE-7b"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-17T03:02:38.843Z"
-    },
     {
       "started_at": "2026-10-17T05:03:22.197Z",
       "queued": [],
@@ -21766,6 +21756,72 @@
       "inventory": 2695,
       "status": "no_eligible_clip",
       "finished_at": "2026-10-27T14:04:32.854Z"
+    },
+    {
+      "started_at": "2026-10-27T14:13:33.889Z",
+      "queued": [
+        "DeJ8AjHOSMo",
+        "Dcgi4L2Ov5S",
+        "Dcd2goHuxCe",
+        "DcY0D7COE08"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DUBUmfFEVMU/",
+          "stage": "capture_or_queue",
+          "error": "Rendered Reel failed video/audio/duration QA"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DcjEpnPujxH/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DTpAeVyDvOR/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 14,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-27T14:19:44.856Z"
     }
   ],
   "next_account_index": 2,
