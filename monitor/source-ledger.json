@@ -13493,6 +13493,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dehbp8zz7Uf/",
       "queued_at": "2026-10-27T03:10:26.828Z",
       "asset_sha256": "a2fbbb69a3261fdbf90607d8ef90fafac27e1115f1a6ba5cf10b9e3607d8daac"
+    },
+    "DefyzyjTNJ_": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DefyzyjTNJ_/",
+      "queued_at": "2026-10-27T04:18:45.783Z",
+      "asset_sha256": "cb0a831170ad8492e1b914248606d8871cab1e99c14a743a97258a0b043781c5"
     }
   },
   "checks": {
@@ -13552,35 +13558,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-16T22:55:37.427Z",
-      "queued": [
-        "DZZ2UyGhm4n",
-        "DZUsy44BmHK"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/filmreelsvault/reel/DZUsy44BmHK/",
-          "stage": "capture_or_queue",
-          "error": "Command failed: git fetch origin main\nFrom https://github.com/Fulstak-apps/very-good-films-publisher\n * branch              main       -> FETCH_HEAD\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-16T23:03:06.327Z"
-    },
     {
       "started_at": "2026-10-17T00:06:38.391Z",
       "queued": [],
@@ -21671,6 +21648,58 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-27T01:28:24.495Z"
+    },
+    {
+      "started_at": "2026-10-27T03:03:53.911Z",
+      "queued": [
+        "DewrXI0ONzW",
+        "DeuP30Ez4sz",
+        "Deo4mk_Oifm",
+        "DejzoEgOjCV",
+        "Dehbp8zz7Uf"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 12,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-27T03:10:28.986Z"
     }
   ],
   "next_account_index": 2,
