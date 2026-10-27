@@ -13589,6 +13589,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DeJ8AjHOSMo/",
       "queued_at": "2026-10-27T14:15:29.234Z",
       "asset_sha256": "1aec4f020812da8c27de51c0deaed63b75937c230fa8bfe36d451849bea03a6e"
+    },
+    "Dcgi4L2Ov5S": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Dcgi4L2Ov5S/",
+      "queued_at": "2026-10-27T14:18:09.598Z",
+      "asset_sha256": "74cf917ef7bb946c6c8ec3e06199851f658b1fc31f671be6d6e2042c14efc352"
     }
   },
   "checks": {
@@ -22207,10 +22213,12 @@
       "retry_at": "2026-09-24T18:08:28.275Z"
     },
     "DcjEpnPujxH": {
-      "collector_version": 12,
-      "error": "Verified movie title required before queueing",
-      "failed_at": "2026-09-16T19:08:01.577Z",
-      "retry_at": "2026-09-16T22:08:01.577Z"
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-27T14:16:26.847Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-27T14:46:26.847Z"
     },
     "DdZJ4TruOnt": {
       "collector_version": 12,
@@ -23673,10 +23681,10 @@
     "DcDylRdC4eG": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-26T23:41:03.254Z",
-      "failures": 77,
+      "failed_at": "2026-10-27T14:16:37.459Z",
+      "failures": 78,
       "terminal": false,
-      "retry_at": "2026-10-27T02:41:03.254Z"
+      "retry_at": "2026-10-27T17:16:37.459Z"
     },
     "DcBF5wQCAON": {
       "collector_version": 14,
@@ -24553,10 +24561,10 @@
     "DUBUmfFEVMU": {
       "collector_version": 14,
       "error": "Rendered Reel failed video/audio/duration QA",
-      "failed_at": "2026-10-26T23:03:13.753Z",
-      "failures": 70,
+      "failed_at": "2026-10-27T14:15:46.855Z",
+      "failures": 71,
       "terminal": false,
-      "retry_at": "2026-10-27T02:03:13.758Z"
+      "retry_at": "2026-10-27T17:15:46.855Z"
     },
     "DT9WILCEbSo": {
       "collector_version": 14,
@@ -24585,10 +24593,10 @@
     "DTpAeVyDvOR": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-26T23:41:10.956Z",
-      "failures": 68,
+      "failed_at": "2026-10-27T14:16:44.535Z",
+      "failures": 69,
       "terminal": false,
-      "retry_at": "2026-10-27T02:41:10.956Z"
+      "retry_at": "2026-10-27T17:16:44.538Z"
     },
     "DcdiyrKBgcL": {
       "collector_version": 14,
