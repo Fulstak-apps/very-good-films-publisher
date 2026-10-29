@@ -38,7 +38,9 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: main
-          fetch-depth: 0
+          # Publishing only commits from the checked-out main tip.  Fetching
+          # the media-heavy full history delayed every scheduled recovery.
+          fetch-depth: 1
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
