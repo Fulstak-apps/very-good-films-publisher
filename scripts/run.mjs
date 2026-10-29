@@ -41,7 +41,19 @@ await withLock(async()=>{
   if(changed)await save();
  }
  let sourceMetadataChanged=false;
- for(const item of readOnly?[]:memory.items)if(item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id){
+ // Metadata enrichment can make network requests.  Do not walk the entire
+ // historical review backlog before checking a ready/partial delivery: that
+ // turned a 30-minute publishing loop into a multi-minute (and sometimes
+ // timed-out) metadata job.  Prioritize resumable delivery, then make bounded
+ // progress through other eligible source clips on each cycle.
+ const metadataBatch=(readOnly?[]:memory.items
+  .filter(item=>item.kind==='source_repost'&&approvedSource(item.source_post_url)&&!item.instagram_media_id&&!item.threads_media_id)
+  .sort((a,b)=>{
+   const rank=x=>x.status==='partial'?0:x.status==='ready'?1:x.status==='discovered'?2:3;
+   return rank(a)-rank(b)||Date.parse(a.discovered_at||0)-Date.parse(b.discovered_at||0);
+  })
+  .slice(0,6));
+ for(const item of metadataBatch){
   if(!sourceDetailsComplete(item.source_details)){
    // Metadata refreshes can be throttled, but title eligibility cannot be:
    // an old retry timer must never let an unnamed clip reach the publisher.
