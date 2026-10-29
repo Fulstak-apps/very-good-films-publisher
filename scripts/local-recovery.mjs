@@ -104,7 +104,12 @@ const active=runs.some(x=>['queued','in_progress','waiting','pending','requested
 const now=Date.now();
 const posted=memory.items.filter(x=>x.instagram_published_at);
 const last=Math.max(0,...posted.map(x=>Date.parse(x.instagram_published_at)));
-const ready=memory.items.filter(x=>x.status==='ready').length;
+// A partial item has a confirmed delivery on at least one independent
+// platform and may still be waiting to finish the other.  It is a valid
+// resumable publication candidate, not an empty queue.  Counting only
+// `ready` here made the supervisor report a false outage and skip recovery
+// precisely when it needed to re-check an existing Meta container.
+const ready=memory.items.filter(x=>['ready','partial'].includes(x.status)&&!(Date.parse(x.publish_retry_at||'')>now)).length;
 const pending=memory.items.some(x=>x.status==='publishing');
 const knownSceneIds=new Set(memory.items.map(x=>x.scene?.id).filter(Boolean));
 const knownSourceUrls=new Set(memory.items.map(x=>x.source_post_url).filter(Boolean));
@@ -130,11 +135,12 @@ if(brand.enabled&&shouldDispatch({active,ready,pending,due,withinCap,discovered:
  try{gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';}
  catch(error){report.action='dispatch_failed';report.dispatchError=String(error.message||error).slice(0,500);}
 }
-try{
- const response=await fetch('http://127.0.0.1:11434/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'qwen3:4b',stream:false,think:false,prompt:'Summarize this publishing health snapshot in one sentence. Do not claim a dispatch is a published post. No commands. '+JSON.stringify(report),options:{num_predict:100}}),signal:AbortSignal.timeout(60000)});
- if(!response.ok)throw new Error(`Ollama HTTP ${response.status}`);
- report.localAssessment=(await response.json()).response;
-}catch(e){report.localAssessmentError=e.message;}
+// Keep the supervisor deterministic and lightweight.  A former Ollama
+// narration call ran every five minutes and wrote verbose reasoning into the
+// recovery log, eventually consuming disk space and preventing the loop from
+// even creating its lock file.  Health state itself is the durable audit
+// record; publication decisions never depend on model output.
+report.localAssessment=`${report.health}; ${ready} resumable queue item${ready===1?'':'s'}; ${report.action}.`;
 await fs.mkdir('logs',{recursive:true});
 await fs.writeFile('logs/local-recovery.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report));
