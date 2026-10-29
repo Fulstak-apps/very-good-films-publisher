@@ -13937,6 +13937,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DZaVAieOd0D/",
       "queued_at": "2026-10-29T22:15:39.700Z",
       "asset_sha256": "05ab80d16356a5188618cc58fe7a5d1f3346afb8991dc27a004576237e18659f"
+    },
+    "DZXu4ABuGYw": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DZXu4ABuGYw/",
+      "queued_at": "2026-10-29T23:22:23.310Z",
+      "asset_sha256": "ca329a0f08c04c90292dafaad47a528869456bed36533bdaaa1006e19c1a7c8d"
     }
   },
   "checks": {
@@ -13996,28 +14002,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-17T16:39:50.054Z",
-      "queued": [
-        "DVF-A4Zk7IW",
-        "DYkvezzB9N7",
-        "DVDbYBME0ta",
-        "DYjxqhDhtaU",
-        "DVBt8qaE6vf"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-17T16:42:48.918Z"
-    },
     {
       "started_at": "2026-10-17T18:32:24.037Z",
       "queued": [
@@ -22251,6 +22235,33 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-29T21:36:23.371Z"
+    },
+    {
+      "started_at": "2026-10-29T22:12:04.745Z",
+      "queued": [
+        "DZnPVanu9cu",
+        "DZkpEf6uv3W",
+        "DZh8udTOoHO",
+        "DZc4wb1uIGt",
+        "DZaVAieOd0D"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-29T22:15:41.943Z"
     }
   ],
   "next_account_index": 2,
