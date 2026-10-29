@@ -5,7 +5,10 @@ const brand=JSON.parse(await fs.readFile('config/brand.json','utf8'));
 const now=Date.now();
 const published=memory.items.filter(x=>x.instagram_published_at&&x.instagram_media_id).sort((a,b)=>Date.parse(b.instagram_published_at)-Date.parse(a.instagram_published_at));
 const last=published[0]?Date.parse(published[0].instagram_published_at):0;
-const ready=memory.items.filter(x=>x.status==='ready').length;
+// Treat resumable partial deliveries as available capacity.  A partial record
+// is not an empty queue: it has a persisted container that the next cycle can
+// safely inspect without recreating an upload.
+const ready=memory.items.filter(x=>['ready','partial'].includes(x.status)).length;
 const publishing=memory.items.filter(x=>x.status==='publishing').length;
 const needsReview=memory.items.filter(x=>x.status==='needs_review').length;
 const recentErrors=memory.items.filter(x=>x.instagram_error||x.threads_error).slice(-10).map(x=>({key:x.key,instagram:x.instagram_error_class,threads:x.threads_error_class}));

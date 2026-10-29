@@ -82,7 +82,16 @@ export function eligible(items,brand,now=Date.now()){
  if(posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length>=brand.daily_cap)return null;
  if(posted.some(x=>now-Date.parse(x.instagram_published_at)<brand.minimum_gap_minutes*60000))return null;
  const recentSources=posted.slice().sort((a,b)=>Date.parse(b.instagram_published_at)-Date.parse(a.instagram_published_at)).slice(0,6).map(x=>x.source_post_url?.split('/')[3]).filter(Boolean);
- const candidates=items.filter(x=>['ready','partial'].includes(x.status)&&(!x.publish_after||Date.parse(x.publish_after)<=now)&&(!x.publish_retry_at||Date.parse(x.publish_retry_at)<=now)&&(x.status==='partial'||!posted.some(y=>sameWork(x,y))));
+ const candidates=items.filter(x=>{
+  if(!['ready','partial'].includes(x.status)||Date.parse(x.publish_after||'')>now)return false;
+  // A partial record already has a durable platform container.  Polling that
+  // container is idempotent and guarded by advanceContainer's two-minute
+  // check interval, so a generic retry timer must not bury a finished Reel
+  // behind unrelated ready items for another full posting slot.
+  const resumable=x.status==='partial'&&['instagram','threads','facebook'].some(p=>x[`${p}_container_id`]&&!x[`${p}_media_id`]&&!x[`${p}_abandoned_at`]);
+  if(!resumable&&Date.parse(x.publish_retry_at||'')>now)return false;
+  return x.status==='partial'||!posted.some(y=>sameWork(x,y));
+ });
  const diversified=candidates.filter(x=>{const source=x.source_post_url?.split('/')[3];return !source||recentSources.filter(y=>y===source).length<2;});
  const progress=classicDailyProgress(items,brand,now);
  if(progress.confirmed<progress.due){const classic=candidates.find(isClassic);if(classic)return classic;}
