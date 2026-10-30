@@ -14201,6 +14201,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DXmiW6AE2ak/",
       "queued_at": "2026-10-30T04:23:17.518Z",
       "asset_sha256": "7562c8303c08da63dad6f00d3245b569680513c3b93d478c3b690c7237c6bfe1"
+    },
+    "DXmUJFNk3qp": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DXmUJFNk3qp/",
+      "queued_at": "2026-10-30T05:19:40.157Z",
+      "asset_sha256": "81d8d0c85e3c46473f892b478a3c26d0bdf8fdca547dfacc1142ed90fc82b12f"
     }
   },
   "checks": {
@@ -14260,22 +14266,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-18T00:44:23.110Z",
-      "queued": [
-        "DUoAW4lk92W",
-        "DYLAHvzBpqH",
-        "DYKCQGYBwKY",
-        "DYIaut6BNW4",
-        "DYHdf1khjzB"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-18T00:47:20.411Z"
-    },
     {
       "started_at": "2026-10-18T03:13:17.644Z",
       "queued": [
@@ -22560,6 +22550,38 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-30T04:14:07.700Z"
+    },
+    {
+      "started_at": "2026-10-30T04:19:17.428Z",
+      "queued": [
+        "DXzBYpJzeZw",
+        "DXw6016zq6R",
+        "DXrd9JIExMR",
+        "DXopK-sE4JN",
+        "DXmiW6AE2ak"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DYhpTKSuaaz/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-30T04:23:19.981Z"
     }
   ],
   "next_account_index": 2,
