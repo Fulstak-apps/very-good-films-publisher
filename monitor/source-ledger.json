@@ -14057,6 +14057,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DYw8VhxuxT2/",
       "queued_at": "2026-10-30T01:11:34.359Z",
       "asset_sha256": "6e529cf9bdf2d01e3d705c27a35426f703abb9ccf1011f71d79ea892c3046b34"
+    },
+    "DYpUbcROplM": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DYpUbcROplM/",
+      "queued_at": "2026-10-30T01:17:54.147Z",
+      "asset_sha256": "a820d4d490aedce9820a2e132ac5a8865a5b2089aa359e15784ab7ffc58f3e2f"
     }
   },
   "checks": {
@@ -14116,22 +14122,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-17T21:00:26.526Z",
-      "queued": [
-        "DU2VQc3kzhO",
-        "DYX3fZsBEn6",
-        "DU1CKx3EwwV",
-        "DYW5oTZBsBO",
-        "DUzS18Mk54y"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-17T21:05:51.609Z"
-    },
     {
       "started_at": "2026-10-17T22:22:56.219Z",
       "queued": [
@@ -22380,6 +22370,22 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-30T00:37:22.411Z"
+    },
+    {
+      "started_at": "2026-10-30T01:07:57.952Z",
+      "queued": [
+        "DY4ma_muf5_",
+        "DY2BXwzOi_A",
+        "DYzoJb-ujQH",
+        "DYxHBYEOiX_",
+        "DYw8VhxuxT2"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-30T01:11:36.763Z"
     }
   ],
   "next_account_index": 2,
@@ -23595,10 +23601,10 @@
     "DZvBdgZMNc0": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-29T22:14:53.151Z",
-      "failures": 80,
+      "failed_at": "2026-10-30T01:17:10.592Z",
+      "failures": 81,
       "terminal": false,
-      "retry_at": "2026-10-30T01:14:53.151Z"
+      "retry_at": "2026-10-30T04:17:10.595Z"
     },
     "DZpoyUsMidc": {
       "collector_version": 14,
@@ -24427,10 +24433,10 @@
     "DW5u0ZKk8t2": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json",
-      "failed_at": "2026-10-29T22:13:24.878Z",
-      "failures": 60,
+      "failed_at": "2026-10-30T01:17:02.207Z",
+      "failures": 61,
       "terminal": false,
-      "retry_at": "2026-10-30T01:13:24.880Z"
+      "retry_at": "2026-10-30T04:17:02.207Z"
     },
     "DV1dpUbky4y": {
       "collector_version": 14,
@@ -28343,6 +28349,14 @@
       "failures": 2,
       "terminal": true,
       "retry_at": null
+    },
+    "DYuVzgjuHby": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-30T01:17:30.359Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-30T01:47:30.359Z"
     }
   },
   "candidates": {
