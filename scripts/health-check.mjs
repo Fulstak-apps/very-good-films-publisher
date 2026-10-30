@@ -17,7 +17,20 @@ const stalePublishing=memory.items.filter(x=>x.status==='publishing'&&now-Date.p
 const delivery=Object.fromEntries(['instagram','threads'].filter(p=>brand.platforms?.[p]!==false).map(p=>{
  const latest=memory.items.filter(x=>x.video_url&&x[`${p}_media_id`]&&x[`${p}_published_at`]).sort((a,b)=>Date.parse(b[`${p}_published_at`])-Date.parse(a[`${p}_published_at`]))[0];
  const age=latest?(now-Date.parse(latest[`${p}_published_at`]))/3600000:null;
- return [p,{mediaId:latest?.[`${p}_media_id`]||null,hoursSinceVideo:age,healthy:age!==null&&age<=1}];
+ // A partial item completed on Instagram already carries a confirmed
+ // delivery to this platform from an earlier slot (its media ID exists),
+ // so no fresh post to this platform is possible or needed for that slot.
+ // Counting only wall-clock freshness fails the watchdog for the whole
+ // partial-drain phase even though the publisher just posted: e.g. on
+ // 2026-10-30 the 14:35 and 11:40 PT watchdog runs failed with a fresh
+ // Instagram post minutes old, solely because Threads' latest timestamp
+ // was the 20:17Z / 09:28Z post while the queue held only partials whose
+ // Threads delivery dated to Oct 28. A fresh Instagram-only post with no
+ // media ID on this platform (threads_pending) must still fail, so this
+ // exception applies only when the latest Instagram post itself already
+ // has a confirmed media ID on this platform.
+ const headItemConfirmed=Boolean(published[0]?.[`${p}_media_id`]&&published[0]?.[`${p}_published_at`]&&hoursSinceLast!==null&&hoursSinceLast<=1);
+ return [p,{mediaId:latest?.[`${p}_media_id`]||null,hoursSinceVideo:age,headItemConfirmed,healthy:age!==null&&(age<=1||headItemConfirmed)}];
 }));
 const queueHours=ready*brand.minimum_gap_minutes/60;
 let sourceLedger={};try{sourceLedger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));}catch{}
