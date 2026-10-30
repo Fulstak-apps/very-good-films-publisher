@@ -72,7 +72,13 @@ let collectorStatus='not_needed',collectorError,repairError,classicsError;
 const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
 const sourceBuffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)&&x.program!=='public_domain_classics').length;
 const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_minimum||0));
-if(brand.enabled&&sourceBuffered<sourceTarget){
+// Never make an overdue delivery wait behind a slow source-browser session.
+// Existing ready/partial items are independently verified and can be resumed
+// immediately; collection is only a last-reserve repair when there is nothing
+// publishable at all.  Previously being one item below the target held the
+// entire supervisor in a long collector call despite a full day of usable
+// queue capacity.
+if(brand.enabled&&sourceBuffered<sourceTarget&&buffered===0){
  // This supervisor runs every five minutes. It must not spend most of a
  // cycle waiting on sequential recovery jobs, or the next source attempt
  // never starts. The collector saves each completed item before moving on,
