@@ -14171,6 +14171,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DXzXWd9zqyv/",
       "queued_at": "2026-10-30T04:14:05.668Z",
       "asset_sha256": "38d8edf9f75c5ed47072287ff85945d7ebc89c6b893a4951991dfd32da347a3d"
+    },
+    "DXzBYpJzeZw": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DXzBYpJzeZw/",
+      "queued_at": "2026-10-30T04:20:08.358Z",
+      "asset_sha256": "cd3e85dab0a035908d6f4c3600a9ed28002d6c51b07f6695573a0cfcbfe6854a"
     }
   },
   "checks": {
@@ -14230,22 +14236,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-18T00:26:08.639Z",
-      "queued": [
-        "DYPLVLDhcdR",
-        "DUqpZPvk2ao",
-        "DYNkQtXhTDT",
-        "DUpOa6nkzIr",
-        "DYMmjxLh-7V"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-18T00:28:26.575Z"
-    },
     {
       "started_at": "2026-10-18T00:44:23.110Z",
       "queued": [
@@ -22514,6 +22504,38 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-30T03:38:50.189Z"
+    },
+    {
+      "started_at": "2026-10-30T04:09:23.674Z",
+      "queued": [
+        "DX9vvDhTiTW",
+        "DX9ndg5zWoH",
+        "DX69pOTT3pg",
+        "DX4eJFwTiRL",
+        "DXzXWd9zqyv"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZLRpvlMPCE/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DWny2sbEu7x/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DbVG83mgRAS/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-30T04:14:07.700Z"
     }
   ],
   "next_account_index": 2,
@@ -23729,10 +23751,10 @@
     "DZvBdgZMNc0": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-10-30T01:17:10.592Z",
-      "failures": 81,
+      "failed_at": "2026-10-30T04:19:38.069Z",
+      "failures": 82,
       "terminal": false,
-      "retry_at": "2026-10-30T04:17:10.595Z"
+      "retry_at": "2026-10-30T07:19:38.069Z"
     },
     "DZpoyUsMidc": {
       "collector_version": 14,
@@ -24561,10 +24583,10 @@
     "DW5u0ZKk8t2": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json",
-      "failed_at": "2026-10-30T01:17:02.207Z",
-      "failures": 61,
+      "failed_at": "2026-10-30T04:19:30.681Z",
+      "failures": 62,
       "terminal": false,
-      "retry_at": "2026-10-30T04:17:02.207Z"
+      "retry_at": "2026-10-30T07:19:30.681Z"
     },
     "DV1dpUbky4y": {
       "collector_version": 14,
@@ -28489,10 +28511,10 @@
     "DYhpTKSuaaz": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-30T01:19:15.766Z",
-      "failures": 1,
+      "failed_at": "2026-10-30T04:19:47.354Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-10-30T04:19:15.767Z"
+      "retry_at": "2026-10-30T07:19:47.354Z"
     }
   },
   "candidates": {
