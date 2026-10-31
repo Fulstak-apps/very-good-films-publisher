@@ -14453,6 +14453,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWV0cqGk9PH/",
       "queued_at": "2026-10-31T04:22:44.269Z",
       "asset_sha256": "f5361be10ea4f2d62fefccc5205123ea385a3d437498ab741272d1dec9a99711"
+    },
+    "DWReCAQE5Zb": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWReCAQE5Zb/",
+      "queued_at": "2026-10-31T04:26:11.078Z",
+      "asset_sha256": "99f40962262c9a98f95d09ce619fc4edf0dfa93092ee259be25ff923446a1163"
     }
   },
   "checks": {
@@ -14512,28 +14518,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-18T15:33:09.458Z",
-      "queued": [
-        "DXNLPNUhsts",
-        "DXMM3_lhQBv",
-        "DXKmdH0BP7Y",
-        "DXJoFeHhhzu",
-        "DXIDajqBcnz"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-18T15:36:37.104Z"
-    },
     {
       "started_at": "2026-10-18T18:01:13.552Z",
       "queued": [
@@ -22839,6 +22823,28 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-31T04:16:59.925Z"
+    },
+    {
+      "started_at": "2026-10-31T04:20:27.330Z",
+      "queued": [
+        "DWbgLfeE2eZ",
+        "DWY-kcGk1Dc",
+        "DWYxzl8kyAJ",
+        "DWWweW7ExTo",
+        "DWV0cqGk9PH"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-31T04:22:46.359Z"
     }
   ],
   "next_account_index": 2,
