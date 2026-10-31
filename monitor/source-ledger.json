@@ -14675,6 +14675,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DU5oG3YE0WW/",
       "queued_at": "2026-10-31T17:29:45.404Z",
       "asset_sha256": "f647f949e2a98618d52697662424b590ac7e204eb87cee442793cd628c7921f5"
+    },
+    "DU0m0DsE5ci": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DU0m0DsE5ci/",
+      "queued_at": "2026-10-31T17:37:16.670Z",
+      "asset_sha256": "7b77a99dfb1308686244ae76c2a45fa2805b29d198e8afbe3d4c6bdf48bb0099"
     }
   },
   "checks": {
@@ -14734,28 +14740,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-19T07:03:44.443Z",
-      "queued": [
-        "DWObjZxhXR5",
-        "DWM0gRChZGQ",
-        "DWL2t0ih6i1",
-        "DWKPtpIBVRM",
-        "DWJR78qR6SH"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-19T07:08:45.114Z"
-    },
     {
       "started_at": "2026-10-19T07:13:57.684Z",
       "queued": [
@@ -23017,6 +23001,60 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-31T17:25:38.052Z"
+    },
+    {
+      "started_at": "2026-10-31T17:25:40.528Z",
+      "queued": [
+        "DU8osd5k_yj",
+        "DU5oG3YE0WW"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DVG3GOrE7HK/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DVEJRhPEye_/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdB8F3vBd5g/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdB8F3vBd5g-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DVD_Alwk4cE/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DU_A-F0E9GG/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DU579OyE40V/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DU3cJ1Fk8S7/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 10,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-31T17:31:46.784Z"
     }
   ],
   "next_account_index": 2,
@@ -23036,10 +23074,10 @@
     "DCeu2jgy3BO": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-10-31T14:35:05.539Z",
-      "failures": 144,
+      "failed_at": "2026-10-31T17:36:01.862Z",
+      "failures": 145,
       "terminal": false,
-      "retry_at": "2026-10-31T17:35:05.539Z"
+      "retry_at": "2026-10-31T20:36:01.862Z"
     },
     "DdEzwoeNeTI": {
       "collector_version": 7,
@@ -28736,10 +28774,10 @@
     "Dc_xA94z9gC": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json",
-      "failed_at": "2026-10-27T01:10:06.898Z",
-      "failures": 9,
+      "failed_at": "2026-10-31T17:31:46.775Z",
+      "failures": 10,
       "terminal": false,
-      "retry_at": "2026-10-27T04:10:06.898Z"
+      "retry_at": "2026-10-31T20:31:46.776Z"
     },
     "Dc-evxuhvsp": {
       "collector_version": 14,
@@ -29148,6 +29186,30 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-10-31T17:58:54.160Z"
+    },
+    "DU3cJ1Fk8S7": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-10-31T17:30:24.827Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DU3JS1qk9Lw": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-10-31T17:36:30.352Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-10-31T18:06:30.352Z"
+    },
+    "DU03Nt6E7Uc": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-10-31T17:36:44.395Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
