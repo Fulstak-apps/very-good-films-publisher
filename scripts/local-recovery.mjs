@@ -1,5 +1,5 @@
 import {shouldDispatch,refillHealth} from '../src/refill-health.mjs';
-import {execFileSync} from 'node:child_process';
+import {execFileSync,spawn} from 'node:child_process';
 import fs from 'node:fs/promises';
 const repo='Fulstak-apps/very-good-films-publisher';
 // Ask GitHub for raw file content instead of a base64-wrapped Contents API
@@ -20,11 +20,6 @@ const recoverStaleRebase=async()=>{
   // crashed operation, and leaving it in place blocks every future refill.
   git(['rebase','--abort']);return true;
  }catch(error){if(error.code==='ENOENT')return false;throw error;}
-};
-const persistRepairState=()=>{
- if(!git(['status','--porcelain','--','state/memory.json']).trim())return;
- git(['add','--','state/memory.json']);git(['commit','-m','Restore verified source queue item']);
- for(let attempt=0;attempt<3;attempt++)try{git(['push','origin','HEAD:main']);return;}catch(error){if(attempt===2)throw error;git(['pull','--rebase','--autostash','origin','main']);}
 };
 const remote=path=>JSON.parse(ghRead(['api','-H','Accept: application/vnd.github.raw+json',`repos/${repo}/contents/${path}`]));
 // Published reels live on the media host. Keeping their local captures and
@@ -64,7 +59,7 @@ process.on('unhandledRejection',async error=>{console.error(error);await release
 process.on('SIGTERM',async()=>{await releaseRecoveryLock();process.exit(143);});
 process.on('SIGINT',async()=>{await releaseRecoveryLock();process.exit(130);});
 let memory=remote('state/memory.json'),brand=remote('config/brand.json');
-let staleRebaseRecovered=await recoverStaleRebase(),rebaseRecoveredAfterCollectorFailure=false;
+let staleRebaseRecovered=await recoverStaleRebase();
 let mediaCleanup=await cleanupPublishedMedia(memory);
 let collectorStatus='not_needed',collectorError,repairError,classicsError;
 // Refill before the live queue reaches zero. The supervisor lock prevents
@@ -87,29 +82,15 @@ const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_mini
 // entire supervisor in a long collector call despite a full day of usable
 // queue capacity.
 if(brand.enabled&&sourceBuffered<sourceTarget&&(buffered===0||threadsNeedsSupply)){
- // This supervisor runs every five minutes. It must not spend most of a
- // cycle waiting on sequential recovery jobs, or the next source attempt
- // never starts. The collector saves each completed item before moving on,
- // so a bounded run can safely resume on the next cycle.
- const runCollector=()=>execFileSync(process.execPath,['scripts/source-collector.mjs'],{stdio:'pipe',timeout:420000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});
- try{runCollector();const ledger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));collectorStatus=ledger.runs?.at(-1)?.status||'completed_without_outcome';}
- catch(error){
-  const message=String(error.message||error);
-  // A failed pull can create the rebase directory during this same pass, so
-  // the startup stale check cannot see it. Abort that known blockage and retry
-  // exactly once; other collector failures keep their normal bounded retry.
-  if(/rebase-merge directory|rebase in progress/i.test(message))try{
-   git(['rebase','--abort']);rebaseRecoveredAfterCollectorFailure=true;runCollector();
-   const ledger=JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8'));collectorStatus=ledger.runs?.at(-1)?.status||'completed_without_outcome';
-  }catch(retryError){collectorStatus='failed';collectorError=String(retryError.message||retryError).slice(0,500);}
-  else {collectorStatus='failed';collectorError=message.slice(0,500);}
- }
- // Rebuild verified approved-source captures before the queue reaches zero.
- // The repair script enforces its own floor and refuses branded or previously
- // published media, so running this check early cannot create duplicates.
- if(['no_eligible_clip','candidates_on_hold'].includes(collectorStatus))try{execFileSync(process.execPath,['scripts/repair-approved-queue.mjs'],{stdio:'pipe',timeout:240000,env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});persistRepairState();memory=remote('state/memory.json');}catch(error){repairError=String(error.message||error).slice(0,500);}
- memory=remote('state/memory.json');
- mediaCleanup=await cleanupPublishedMedia(memory);
+ // Capture may legitimately take several minutes.  It has its own durable
+ // single-writer lock, so start it independently: the five-minute supervisor
+ // must still dispatch an overdue existing reel while source browsing runs.
+ // The next pass reads the collector ledger and performs any needed repair.
+ try{
+  const collector=spawn(process.execPath,['scripts/source-collector.mjs'],{detached:true,stdio:'ignore',env:{...process.env,VGF_DURABLE_GIT:'1',GITHUB_REPOSITORY:repo}});
+  collector.unref();
+  collectorStatus='started';
+ }catch(error){collectorStatus='failed_to_start';collectorError=String(error.message||error).slice(0,500);}
 }
 let runs=[],workflowError;
 try{runs=JSON.parse(ghRead(['run','list','-R',repo,'--workflow','publisher.yml','--limit','20','--json','status,conclusion,createdAt']));}
@@ -141,7 +122,7 @@ for(const name of (await fs.readdir('inbox').catch(error=>error.code==='ENOENT'?
 const due=now-last>=brand.minimum_gap_minutes*60000;
 const withinCap=posted.filter(x=>now-Date.parse(x.instagram_published_at)<86400000).length<brand.daily_cap;
 const report={at:new Date().toISOString(),active,ready,pending,due,lastPost:last?new Date(last).toISOString():null,action:'none'};
-Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError,mediaCleanup,staleRebaseRecovered,rebaseRecoveredAfterCollectorFailure,inboxPending});
+Object.assign(report,{collectorStatus,collectorError,repairError,classicsError,workflowError,mediaCleanup,staleRebaseRecovered,inboxPending});
 report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&&!active?'overdue':'waiting';
 // Deterministic dispatch only. Local model output never executes commands.
 Object.assign(report,refillHealth(memory.items,brand,JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8').catch(()=>'{}'))));

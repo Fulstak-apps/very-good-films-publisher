@@ -78,14 +78,13 @@ test('local recovery persists a repaired queue before dispatch',async()=>{
  assert.doesNotMatch(script,/execFileSync\('\/usr\/bin\/git'/);
  assert.match(script,/recoverStaleRebase/);
  assert.match(script,/git\(\['rebase','--abort'\]\)/);
- assert.match(script,/rebaseRecoveredAfterCollectorFailure/);
- assert.match(script,/rebase-merge directory\|rebase in progress/);
  assert.match(script,/inboxPending/);
  assert.match(script,/prepared\.scene\?\.id/);
  assert.match(script,/knownSourceUrls/);
  assert.match(script,/knownAssets/);
- assert.match(script,/persistRepairState\(\)/);
- assert.ok(script.indexOf('persistRepairState();memory=remote')<script.indexOf("gh(['workflow','run'"));
+ assert.match(script,/spawn\(process\.execPath,\['scripts\/source-collector\.mjs'\]/);
+ assert.match(script,/collector\.unref\(\)/);
+ assert.ok(script.indexOf("spawn(process.execPath,['scripts/source-collector.mjs']")<script.indexOf("gh(['workflow','run'"));
 });
 
 test('durable local state uses Homebrew Git when it is available',async()=>{
