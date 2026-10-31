@@ -176831,6 +176831,80 @@
       "review_reason": "This movie has already been published; only one clip per movie is allowed",
       "discovered_at": "2026-10-31T08:38:30.891Z",
       "key": "8cd361b9b37554893fe7553bff5a43ae3f1872cdfa20476782636d36f02fb193"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DVgUNhDk3OU",
+        "title": "@thecinemanerd.ig clip"
+      },
+      "scene": {
+        "id": "DVgUNhDk3OU",
+        "start": 0,
+        "end": 27.98
+      },
+      "source_post_url": "https://www.instagram.com/thecinemanerd.ig/reel/DVgUNhDk3OU/",
+      "source_caption": "Listed as one of George Clooney's favorite films on his resumé. He said, \"It was the first time where I had a say, and it was the first good screenplay I'd read where I just went 'That's it.' Even though it didn't do very well box-office wise, we sort of tanked again, it was a really good film.\"\n\n📽️: Out of Sight(1998)\nDir. Steven Soderbergh",
+      "source_details": {
+        "title_hint": "Out of Sight",
+        "year": 1998,
+        "media_type_hint": "movie",
+        "source_title": "Out of Sight",
+        "source_year": 1998,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "Out of Sight(1998)",
+        "title": "Out of Sight",
+        "type": "tv",
+        "director": "Steven Soderbergh",
+        "cast": [
+          "George Clooney",
+          "Jennifer Lopez",
+          "Ving Rhames"
+        ],
+        "synopsis": "Out of Sight is a 1998 American crime comedy film directed by Steven Soderbergh and written by Scott Frank, adapted from Elmore Leonard's 1996 novel. The first of several collaborations between Soderbergh and actor George Clooney, it was released by Universal Pictures on June 26, 1998. The film stars Clooney and Jennifer Lopez, co-starring Ving Rhames, Don Cheadle, Dennis Farina, Nancy Allen, Steve Zahn, Catherine Keener, and Albert Brooks. There are also special appearances by Michael Keaton, briefly reprising his role as Ray Nicolette from Quentin Tarantino's Jackie Brown the previous year, and Samuel L. Jackson. The film received Academy Award nominations for Best Adapted Screenplay and B",
+        "metadata_source": "https://en.wikipedia.org/wiki/Out_of_Sight",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Out of Sight",
+          "source_year": 1998,
+          "catalog_title": "Out of Sight",
+          "catalog_year": 1998,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261031/c983d280568f5b7460afe6d5194c77793121a4a7ad05ae432b291ee3382ca871.mp4?download=1",
+      "asset_sha256": "c983d280568f5b7460afe6d5194c77793121a4a7ad05ae432b291ee3382ca871",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 27.933333,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-10-31T08:38:48.134Z",
+        "source_duration": 27.980045,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-10-31T08:44:03.539Z",
+      "key": "be95c3732b0701f90894318e3a9fdebefd91d7021da60433dd21664e55d89f18"
     }
   ],
   "discovery": [],
