@@ -14513,6 +14513,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWExFickwK1/",
       "queued_at": "2026-10-31T05:34:40.542Z",
       "asset_sha256": "f351e314aa9b19db2e0e2b36941b73c64ab02e792718a1cd363e8bbd7d46d653"
+    },
+    "DWEkOqFE7ud": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWEkOqFE7ud/",
+      "queued_at": "2026-10-31T05:37:31.104Z",
+      "asset_sha256": "95753061dd69a76360364a1cce4b4e2059fe0ba9164239a362eb4a202d54f37a"
     }
   },
   "checks": {
@@ -14572,28 +14578,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-18T20:04:37.159Z",
-      "queued": [
-        "DXAUf_1BXCc",
-        "DW_WmzHhdXn",
-        "DW9vqz-BnEl",
-        "DW8x5S7tAnT",
-        "DW8ufBEBCJ-"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 1596,
-      "status": "queued",
-      "finished_at": "2026-10-18T20:09:13.198Z"
-    },
     {
       "started_at": "2026-10-18T20:55:31.095Z",
       "queued": [
@@ -22799,6 +22783,38 @@
       "inventory": 2695,
       "status": "queued",
       "finished_at": "2026-10-31T04:29:50.488Z"
+    },
+    {
+      "started_at": "2026-10-31T05:31:45.972Z",
+      "queued": [
+        "DWJot8fE79s",
+        "DWHItpwk0su",
+        "DWG8g3SE1AN",
+        "DWFsWYPEwcr",
+        "DWExFickwK1"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWMPDuJk3iR/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWIkfWNExlQ/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DTlOkTRkg7L/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 2695,
+      "status": "queued",
+      "finished_at": "2026-10-31T05:34:42.708Z"
     }
   ],
   "next_account_index": 2,
