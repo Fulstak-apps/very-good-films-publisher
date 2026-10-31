@@ -84,7 +84,8 @@ test('local recovery persists a repaired queue before dispatch',async()=>{
  assert.match(script,/knownAssets/);
  assert.match(script,/spawn\(process\.execPath,\['scripts\/source-collector\.mjs'\]/);
  assert.match(script,/collector\.unref\(\)/);
- assert.ok(script.indexOf("spawn(process.execPath,['scripts/source-collector.mjs']")<script.indexOf("gh(['workflow','run'"));
+ assert.match(script,/const ghDispatch=/);
+ assert.ok(script.indexOf("spawn(process.execPath,['scripts/source-collector.mjs']")<script.indexOf('try{ghDispatch();report.action'));
 });
 
 test('durable local state uses Homebrew Git when it is available',async()=>{

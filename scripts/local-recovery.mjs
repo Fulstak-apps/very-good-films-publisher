@@ -7,6 +7,11 @@ const repo='Fulstak-apps/very-good-films-publisher';
 const gh=args=>execFileSync('/opt/homebrew/bin/gh',args,{encoding:'utf8',timeout:30000,maxBuffer:64*1024*1024});
 const wait=(ms)=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
 const ghRead=args=>{let last;for(let attempt=0;attempt<3;attempt++){try{return gh(args);}catch(error){last=error;if(attempt<2)wait(2000*(attempt+1));}}throw last;};
+// GitHub's API can reset a long-lived local connection even while Actions is
+// healthy.  A transient dispatch failure must not turn a due post into a
+// five-minute-or-longer outage; retry the idempotent workflow-dispatch call
+// before recording it as a real recovery failure.
+const ghDispatch=()=>{let last;for(let attempt=0;attempt<3;attempt++){try{return gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);}catch(error){last=error;if(attempt<2)wait(2000*(attempt+1));}}throw last;};
 // Do not use Apple's /usr/bin/git here: an OS/Xcode update can suddenly gate
 // it behind an interactive license prompt and silently stop queue recovery.
 const git=args=>execFileSync('/opt/homebrew/bin/git',args,{encoding:'utf8',timeout:60000,maxBuffer:16*1024*1024});
@@ -127,7 +132,7 @@ report.health=!brand.enabled?'paused':!ready&&!pending?'source_queue_empty':due&
 // Deterministic dispatch only. Local model output never executes commands.
 Object.assign(report,refillHealth(memory.items,brand,JSON.parse(await fs.readFile('monitor/source-ledger.json','utf8').catch(()=>'{}'))));
 if(brand.enabled&&shouldDispatch({active,ready,pending,due,withinCap,discovered:inboxPending||memory.items.some(x=>x.status==='discovered'&&!(Date.parse(x.prepare_retry_at)>now))})){
- try{gh(['workflow','run','publisher.yml','-R',repo,'--ref','main']);report.action='dispatched';}
+ try{ghDispatch();report.action='dispatched';}
  catch(error){report.action='dispatch_failed';report.dispatchError=String(error.message||error).slice(0,500);}
 }
 // Keep the supervisor deterministic and lightweight.  A former Ollama
