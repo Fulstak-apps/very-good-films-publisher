@@ -71,6 +71,14 @@ let collectorStatus='not_needed',collectorError,repairError,classicsError;
 // this longer capture from overlapping the next five-minute health pass.
 const buffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)).length;
 const sourceBuffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)&&x.program!=='public_domain_classics').length;
+// Queue capacity must be measured per delivery platform as well as globally.
+// A batch can be sent to Threads while Instagram is in a cooldown, leaving
+// apparently healthy global inventory that cannot produce another Threads
+// video.  Treat that as a refill condition; the collector runs independently
+// and never delays the existing Instagram delivery path below.
+const threadsEnabled=brand.platforms?.threads!==false;
+const threadsBuffered=memory.items.filter(x=>['ready','partial','publishing'].includes(x.status)&&!x.threads_media_id&&!x.threads_abandoned_at).length;
+const threadsNeedsSupply=threadsEnabled&&threadsBuffered===0;
 const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_minimum||0));
 // Never make an overdue delivery wait behind a slow source-browser session.
 // Existing ready/partial items are independently verified and can be resumed
@@ -78,7 +86,7 @@ const sourceTarget=Math.max(1,brand.queue_target-(brand.public_domain_daily_mini
 // publishable at all.  Previously being one item below the target held the
 // entire supervisor in a long collector call despite a full day of usable
 // queue capacity.
-if(brand.enabled&&sourceBuffered<sourceTarget&&buffered===0){
+if(brand.enabled&&sourceBuffered<sourceTarget&&(buffered===0||threadsNeedsSupply)){
  // This supervisor runs every five minutes. It must not spend most of a
  // cycle waiting on sequential recovery jobs, or the next source attempt
  // never starts. The collector saves each completed item before moving on,
