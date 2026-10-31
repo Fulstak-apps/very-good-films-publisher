@@ -8,6 +8,7 @@ import {formatVideo,sha256,upload} from '../src/media.mjs';
 import {approvedSource,capturedFromApprovedSource,sourceAccounts} from '../src/source-policy.mjs';
 import {navigateSource,SourceSessionError} from './capture/source-session.mjs';
 import {enrichSourceMetadata,sourceDetailsComplete,sourceHints,verifiedSourceIdentity} from '../src/source-metadata.mjs';
+import {sameWork} from '../src/editorial.mjs';
 
 const exec=promisify(execFile);
 const root=path.resolve('.');
@@ -166,6 +167,14 @@ async function queue(candidate,ledger){
   if(title_hint)source_details=await enrichSourceMetadata(source_caption,{...source_details,title_hint_verified:title_hint});
  }
  const identityVerified=Boolean(verifiedSourceIdentity(source_details,source_caption));
+ // Do not spend render/upload capacity on another scene from a film that is
+ // already queued or confirmed.  The publisher catches this later too, but
+ // feeding it into the collector's durable ledger prevents the same few
+ // popular films from repeatedly exhausting a platform-specific refill.
+ if(identityVerified){
+  const memory=await json(path.join(root,'state/memory.json'),{items:[]});
+  if(memory.items.some(existing=>['ready','partial','publishing','published'].includes(existing.status)&&sameWork({source_details},existing)))throw new Error('Movie is already represented in the publishing queue');
+ }
  const output=path.join('work',`vgf-${candidate.shortcode}.mp4`);
  console.log(JSON.stringify({status:'formatting',shortcode:candidate.shortcode}));
  const checkpoint=path.join(monitor,`render-${candidate.shortcode}.json`);
@@ -252,7 +261,8 @@ try{
    // source caption. Retrying it forever used to monopolize every refill pass
    // and leave the queue empty. Hold it until the parser version changes and
    // continue discovering fresh posts instead.
-   const terminal=metadataFailure&&failures>=2;
+   const duplicateWork=/Movie is already represented in the publishing queue/.test(error.message);
+   const terminal=duplicateWork||(metadataFailure&&failures>=2);
    ledger.failed[candidate.shortcode]={collector_version:collectorVersion,error:error.message.slice(0,300),failed_at:new Date().toISOString(),failures,terminal,retry_at:terminal?null:new Date(Date.now()+(metadataFailure?30:180)*60_000).toISOString()};
    await save(ledgerPath,ledger);
    if(error instanceof SourceSessionError){ledger.retry_after=new Date(Date.now()+error.retryAfterMs).toISOString();ledger.session_error=error.message;break;}
