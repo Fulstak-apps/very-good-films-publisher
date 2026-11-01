@@ -15143,6 +15143,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DfAcJ9vxkdD/",
       "queued_at": "2026-11-01T18:46:50.586Z",
       "asset_sha256": "ea1bff2119e44c139114dece9acfd3cccb5bb0cbf3d9c65cf3570181a60b5f76"
+    },
+    "De4kvelAlvF": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/De4kvelAlvF/",
+      "queued_at": "2026-11-01T18:51:30.983Z",
+      "asset_sha256": "dcd7d72eaa5d085aa558da21f9abc74bb9268f819f8048cb1366b2ffdceef767"
     }
   },
   "checks": {
@@ -15202,21 +15208,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-20T17:13:40.976Z",
-      "queued": [
-        "DZqP8H_xJH8",
-        "DZnJa2XI3Ed",
-        "DZina7ug8Vh",
-        "DZhfXUKAzML"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 1801,
-      "status": "queued",
-      "finished_at": "2026-10-20T17:19:58.390Z"
-    },
     {
       "started_at": "2026-10-20T18:13:13.602Z",
       "queued": [],
@@ -24371,6 +24362,30 @@
       "inventory": 2854,
       "status": "queued",
       "finished_at": "2026-11-01T18:36:23.618Z"
+    },
+    {
+      "started_at": "2026-11-01T18:40:25.911Z",
+      "queued": [
+        "DfDEb5Mxuu0",
+        "DfAcJ9vxkdD"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DfCvWaEAOVD/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DfAvRZLzun2/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 2854,
+      "status": "queued",
+      "finished_at": "2026-11-01T18:46:53.620Z"
     }
   ],
   "next_account_index": 11,
@@ -31342,6 +31357,22 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "DfAP1J0IfAd": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T18:50:55.001Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "De68xAPIpC0": {
+      "collector_version": 14,
+      "error": "Exact source caption missing, generic or truncated; needs review",
+      "failed_at": "2026-11-01T18:51:01.836Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T21:51:01.836Z"
     }
   },
   "candidates": {
