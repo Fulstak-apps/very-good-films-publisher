@@ -15419,6 +15419,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/De5tCXjxhVg/",
       "queued_at": "2026-11-01T21:21:14.334Z",
       "asset_sha256": "027ee2edd789c10d8c0c601f0185246dafe47ab148ade0ce7b956582bfc757fa"
+    },
+    "De5s7KDRxKu": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/De5s7KDRxKu/",
+      "queued_at": "2026-11-01T21:26:15.253Z",
+      "asset_sha256": "39dff86dd0c77f1fa66e1d829c1fe2f8887994deac639776b7f27e605b4e69f1"
     }
   },
   "checks": {
@@ -15478,35 +15484,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T07:52:24.072Z",
-      "queued": [
-        "DeW_s4Ihv16",
-        "DeOmUAnBNnD"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZLRpvlMPCE/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DWny2sbEu7x/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DbVG83mgRAS/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T07:58:44.076Z"
-    },
     {
       "started_at": "2026-10-21T08:16:13.787Z",
       "queued": [
@@ -24863,6 +24840,21 @@
       "inventory": 2913,
       "status": "queued",
       "finished_at": "2026-11-01T21:09:38.357Z"
+    },
+    {
+      "started_at": "2026-11-01T21:14:13.183Z",
+      "queued": [
+        "De6_q8SRpy_",
+        "De6_ps6xnIr",
+        "De55meyO7sP",
+        "De5tCXjxhVg"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T21:21:17.799Z"
     }
   ],
   "next_account_index": 13,
