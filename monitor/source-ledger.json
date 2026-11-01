@@ -15317,6 +15317,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DfBbEDnRONS/",
       "queued_at": "2026-11-01T20:44:30.459Z",
       "asset_sha256": "2254f6d54ebce9328029054493d780c3ef3dd5ceb82ed1ca6114ef6d52930100"
+    },
+    "DfBbBdXRsXF": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfBbBdXRsXF/",
+      "queued_at": "2026-11-01T20:50:17.868Z",
+      "asset_sha256": "4c8359b934e4c5a00e45fafea0004bf60f3b8e53305f9b0058f95493ed343e94"
     }
   },
   "checks": {
@@ -15376,25 +15382,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T04:34:32.652Z",
-      "queued": [
-        "DeXVsNHTMOv",
-        "DeW_7FQBwJU"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DeW_s4Ihv16/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T04:41:32.298Z"
-    },
     {
       "started_at": "2026-10-21T06:27:16.059Z",
       "queued": [
@@ -24721,6 +24708,54 @@
       "inventory": 2913,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-01T20:34:42.903Z"
+    },
+    {
+      "started_at": "2026-11-01T20:38:16.665Z",
+      "queued": [
+        "DfBbEDnRONS"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfEBpUKOR8i/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfEBq4wOsoK/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfEBnFgOTAM/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfEBlvxup0b/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfEBj3WOsJR/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfDBYvLCRQ2/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T20:44:33.086Z"
     }
   ],
   "next_account_index": 13,
