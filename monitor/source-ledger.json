@@ -15281,6 +15281,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DfFIJYsRTsA/",
       "queued_at": "2026-11-01T20:06:42.270Z",
       "asset_sha256": "5251d5458f16a2d8c04c41f22d0445c7f24a87695af278aeb1d71ff76252b85a"
+    },
+    "DfFIFcPRlKD": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfFIFcPRlKD/",
+      "queued_at": "2026-11-01T20:08:06.583Z",
+      "asset_sha256": "2f764c95fd1cd95d06157313d1efef0735e398633542d32792dac3d2212e90b5"
     }
   },
   "checks": {
@@ -15340,22 +15346,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T02:17:54.229Z",
-      "queued": [
-        "Del1UQwhxg8",
-        "Dek4NQGo-nx",
-        "Dek4L0nI3-a",
-        "Dekqc-zI-L9",
-        "DekqiYdIyw3"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T02:22:03.015Z"
-    },
     {
       "started_at": "2026-10-21T03:11:41.581Z",
       "queued": [
@@ -24612,6 +24602,33 @@
       "inventory": 2913,
       "status": "queued",
       "finished_at": "2026-11-01T19:58:23.921Z"
+    },
+    {
+      "started_at": "2026-11-01T20:02:37.195Z",
+      "queued": [
+        "DfF5VHAiAwS",
+        "DfF4QNhi0nH",
+        "DfFMmlPxo-y",
+        "DfFIIYoRmpu",
+        "DfFIJYsRTsA"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYpG7SZMMrI/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYnSYgEAiq5/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T20:06:44.435Z"
     }
   ],
   "next_account_index": 13,
@@ -31723,10 +31740,10 @@
     "DYjxDJ0ChDn": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T19:35:58.494Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T20:05:58.494Z"
+      "failed_at": "2026-11-01T20:07:44.152Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "De1Tdt2hrCJ": {
       "collector_version": 14,
