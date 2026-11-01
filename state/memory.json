@@ -184578,6 +184578,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-01T20:13:09.351Z",
       "key": "c5e50e9711c0b367d8c39c6def2c6b3ab1baa6f643fffb9939c91688da2ec388"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DfETnwMCy8Y",
+        "title": "@popcorncutzz clip"
+      },
+      "scene": {
+        "id": "DfETnwMCy8Y",
+        "start": 0,
+        "end": 59.866
+      },
+      "source_post_url": "https://www.instagram.com/popcorncutzz/reel/DfETnwMCy8Y/",
+      "source_caption": "🎥🎬: Jumanji: Open World (2026)\n\nEVERY ADVENTURE LEADS TO THIS MOMENT! 🌍🎮\nGet ready to reunite with Dwayne Johnson, Kevin Hart, Jack Black, and Karen Gillan as they return for another chapter in the Jumanji saga. The cast is back together for one more adventure filled with the unpredictable chaos, thrilling action, and unforgettable comedy that define this beloved franchise.\nAs the team faces whatever the game has in store, their bond will once again be at the heart of the journey. It’s a chance to celebrate the characters, the laughs, and the adventures that have kept fans coming back for more.\nOne final chapter. One unforgettable team. Are you playing? 👀🔥\n@JumanjiMovie\n#SonyPicsPartner #JumanjiOpenWorld #Jumanji #OneFinalGame #ComingSoon",
+      "source_details": {
+        "title_hint": "Jumanji: Open World",
+        "year": 2026,
+        "source_title": "Jumanji: Open World",
+        "source_year": 2026,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "Jumanji: Open World",
+        "type": "movie",
+        "director": "Jake Kasdan",
+        "cast": [
+          "Dwayne Johnson",
+          "Jack Black",
+          "Kevin Hart"
+        ],
+        "synopsis": "Jumanji: Open World is an upcoming American action-adventure film co-produced and directed by Jake Kasdan, who co-wrote it with Jeff Pinkner and Scott Rosenberg. It is the fifth and final installment in the Jumanji film series and the sequel to Jumanji: The Next Level (2019). Dwayne Johnson, Jack Black, Kevin Hart, Karen Gillan, Alex Wolff, Madison Iseman, Morgan Turner, Ser'Darius Blain, Rhys Darby, Nick Jonas, and Danny DeVito reprise their roles from the previous films. The film is scheduled to be released in the United States on December 25, 2026.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Jumanji%3A_Open_World",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Jumanji: Open World",
+          "source_year": 2026,
+          "catalog_title": "Jumanji: Open World",
+          "catalog_year": 2026,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261101/1b43406291e25d6f3e683d55174c88fef05ef2d9a30d8275a8603cc821a2271f.mp4?download=1",
+      "asset_sha256": "1b43406291e25d6f3e683d55174c88fef05ef2d9a30d8275a8603cc821a2271f",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 59.866667,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-01T20:14:04.469Z",
+        "source_duration": 59.86666666666667,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "duplicate",
+      "review_reason": "This movie has already been published; only one clip per movie is allowed",
+      "discovered_at": "2026-11-01T20:15:43.625Z",
+      "key": "2f45435bb178f283dc1f68e4164a70a4d72a62e047c9f967eea3df5f07172f79"
     }
   ],
   "discovery": [],
