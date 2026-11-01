@@ -15539,6 +15539,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfMIqPZNjT_/",
       "queued_at": "2026-11-01T22:48:42.648Z",
       "asset_sha256": "f78046ccdb60dbf01a60401d0c20fd86776c3c1b9a3233979637e384517ae2fd"
+    },
+    "DfMIo_ytncp": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfMIo_ytncp/",
+      "queued_at": "2026-11-01T23:20:16.551Z",
+      "asset_sha256": "694ea87c22ce29cb10da60a6ea4c4ab36ab2f92fd9ecb777c708e3ce647b72de"
     }
   },
   "checks": {
@@ -15598,39 +15604,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T11:04:31.575Z",
-      "queued": [
-        "DdRyxB9TkvF"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZLRpvlMPCE/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DWny2sbEu7x/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DbVG83mgRAS/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdRsfrEBDbg/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T11:11:31.291Z"
-    },
     {
       "started_at": "2026-10-21T11:34:09.832Z",
       "queued": [
@@ -24995,6 +24968,71 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-01T22:37:04.000Z"
+    },
+    {
+      "started_at": "2026-11-01T22:41:06.949Z",
+      "queued": [
+        "DfMIvAnt423",
+        "DfMItp9NdaP",
+        "DfMIqPZNjT_"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNoPgt8cR/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNm3kNr0Z/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNlnStvpd/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNkzYNCt3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNZINtp8B/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNYFMNaOV/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNW5DNhf7/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNWDNNJRN/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfNNVJ5tHgC/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfM04yHNjkc/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 13,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-01T22:48:44.997Z"
     }
   ],
   "next_account_index": 0,
