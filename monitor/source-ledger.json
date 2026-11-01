@@ -15521,6 +15521,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfMI5EBtRNh/",
       "queued_at": "2026-11-01T22:32:30.286Z",
       "asset_sha256": "11d2b1ba330e5e40eeadd61724e10b03ed732addbe03ee8694cfb6f84d0a0b60"
+    },
+    "DfMIvAnt423": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfMIvAnt423/",
+      "queued_at": "2026-11-01T22:42:39.861Z",
+      "asset_sha256": "69d949a2a95d915a873830761714b1a86c3dbd50cdb718510900b35f7373cb8c"
     }
   },
   "checks": {
@@ -15580,29 +15586,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T10:52:17.918Z",
-      "queued": [
-        "DdT8bs-h4BQ"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdSVav9zoP6/",
-          "stage": "capture_or_queue",
-          "error": "locator.evaluate: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('video:visible').first()\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T10:59:17.715Z"
-    },
     {
       "started_at": "2026-10-21T11:04:31.575Z",
       "queued": [
@@ -24972,6 +24955,34 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-01T22:29:24.832Z"
+    },
+    {
+      "started_at": "2026-11-01T22:30:53.951Z",
+      "queued": [
+        "DfMI5EBtRNh"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfMI2rZNb1j/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfMIzl5NLqF/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DadLUDmuYI1/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DadLUDmuYI1-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-01T22:37:04.000Z"
     }
   ],
   "next_account_index": 0,
@@ -30915,10 +30926,10 @@
     "DadLUDmuYI1": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DadLUDmuYI1-capture-diagnostic.json",
-      "failed_at": "2026-11-01T19:14:32.179Z",
-      "failures": 16,
+      "failed_at": "2026-11-01T22:37:03.994Z",
+      "failures": 17,
       "terminal": false,
-      "retry_at": "2026-11-01T22:14:32.181Z"
+      "retry_at": "2026-11-02T01:37:03.994Z"
     },
     "DZ2mS5nOq1c": {
       "collector_version": 14,
@@ -32235,82 +32246,82 @@
     "DfNNoPgt8cR": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:01:02.803Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:31:02.803Z"
+      "failed_at": "2026-11-01T22:41:09.392Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNm3kNr0Z": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:01:15.695Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:31:15.695Z"
+      "failed_at": "2026-11-01T22:41:11.066Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNlnStvpd": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:01:27.864Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:31:27.864Z"
+      "failed_at": "2026-11-01T22:41:12.728Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNkzYNCt3": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:01:40.831Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:31:40.831Z"
+      "failed_at": "2026-11-01T22:41:14.462Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNZINtp8B": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:01:55.102Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:31:55.102Z"
+      "failed_at": "2026-11-01T22:41:16.174Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNYFMNaOV": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:02:07.559Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:32:07.559Z"
+      "failed_at": "2026-11-01T22:41:17.812Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNW5DNhf7": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:02:19.760Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:32:19.760Z"
+      "failed_at": "2026-11-01T22:41:19.495Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNWDNNJRN": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:02:32.250Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:32:32.250Z"
+      "failed_at": "2026-11-01T22:41:21.172Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfNNVJ5tHgC": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:02:44.591Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:32:44.591Z"
+      "failed_at": "2026-11-01T22:41:22.847Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfM04yHNjkc": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T22:02:57.970Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T22:32:57.970Z"
+      "failed_at": "2026-11-01T22:41:24.527Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfMJR82NofN": {
       "collector_version": 14,
@@ -32327,6 +32338,22 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-02T01:11:23.451Z"
+    },
+    "DfMI2rZNb1j": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T22:35:54.829Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfMIzl5NLqF": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T22:36:44.007Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
