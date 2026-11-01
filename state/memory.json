@@ -183701,6 +183701,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-01T19:31:51.158Z",
       "key": "c1ddaa618e5063d9378dd67f64a17e4b81d127072c3a7503c219d77aeee81c41"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DYkumWHgXgU",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "DYkumWHgXgU",
+        "start": 0,
+        "end": 60.166
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYkumWHgXgU/",
+      "source_caption": "𝐌𝐲 𝐂𝐨𝐮𝐬𝐢𝐧 𝐕𝐢𝐧𝐧𝐲 (𝟏𝟗𝟗𝟐) is such a brilliant underrated comedy. There is simply so much to love about this movie. The dialogue is brilliant because of excellent performances by both Marisa Tomei and Joe Pesci. These two sell this whole load of nonsense so beautifully it should be mandatory viewing for first-year drama students. These two actors show how talented people can read practically anything and make it not only funny but also believable. This is one of those rare films you can watch over and over again for hours and not get tired of.⁣\n⁣\nHow do you guys rate 𝐌𝐲 𝐂𝐨𝐮𝐬𝐢𝐧 𝐕𝐢𝐧𝐧𝐲 (𝟏𝟗𝟗𝟐) out of ten?⁣ 👀 💭",
+      "source_details": {
+        "title_hint": "My Cousin Vinny",
+        "year": 1992,
+        "media_type_hint": "movie",
+        "availability": ". This is one of those rare films you can watch over and over again for hours and not get tired of",
+        "source_title": "My Cousin Vinny",
+        "source_year": 1992,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "My Cousin Vinny",
+        "type": "movie",
+        "director": "Jonathan Lynn",
+        "cast": [
+          "Joe Pesci",
+          "Ralph Macchio",
+          "Marisa Tomei"
+        ],
+        "synopsis": "My Cousin Vinny is a 1992 American comedy trial film directed by Jonathan Lynn and written by Dale Launer. It stars Joe Pesci, Ralph Macchio, Marisa Tomei, Mitchell Whitfield and Fred Gwynne in his final film appearance before his death in 1993. The film was distributed by 20th Century Fox and released in the United States on March 13, 1992. Macchio and Whitfield respectively, play Bill Gambini and Stan Rothenstein, two young New York men who are arrested in Alabama and put on trial for a murder of which they are wrongfully accused. Unable to afford a lawyer, they are defended by Gambini's cousin Vinny Gambini (Pesci), newly admitted to the bar, who arrives with his fiancée, Mona Lisa Vito (",
+        "metadata_source": "https://en.wikipedia.org/wiki/My_Cousin_Vinny",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "My Cousin Vinny",
+          "source_year": 1992,
+          "catalog_title": "My Cousin Vinny",
+          "catalog_year": 1992,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261101/f45615992f8119b5fc2d119dd52219f36cefa1a0d50f16bfbdb85c5935d1fb1e.mp4?download=1",
+      "asset_sha256": "f45615992f8119b5fc2d119dd52219f36cefa1a0d50f16bfbdb85c5935d1fb1e",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 60.166,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-01T19:34:40.882Z",
+        "source_duration": 60.166666666666664,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-01T19:36:49.878Z",
+      "key": "d6bf8f5918055e38de581a94b0c8d760fbe320c680c641a5f86c2f026f3821e3"
     }
   ],
   "discovery": [],
