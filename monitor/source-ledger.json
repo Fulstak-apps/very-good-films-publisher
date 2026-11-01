@@ -15227,6 +15227,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYkumWHgXgU/",
       "queued_at": "2026-11-01T19:34:40.889Z",
       "asset_sha256": "f45615992f8119b5fc2d119dd52219f36cefa1a0d50f16bfbdb85c5935d1fb1e"
+    },
+    "DY5KN4AArNU": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DY5KN4AArNU/",
+      "queued_at": "2026-11-01T19:37:13.742Z",
+      "asset_sha256": "6ff80aee6168c1fc437d15cdc78c36b66cf0cdc7636d87268052dcc8f07e50c2"
     }
   },
   "checks": {
@@ -15286,20 +15292,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-20T21:40:55.784Z",
-      "queued": [
-        "DZDUQhPA4xr",
-        "DZC-N48INuG",
-        "DZApl_bAQI6"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 1801,
-      "status": "queued",
-      "finished_at": "2026-10-20T21:47:32.490Z"
-    },
     {
       "started_at": "2026-10-20T21:52:44.795Z",
       "queued": [
@@ -24568,6 +24560,64 @@
       "inventory": 2854,
       "status": "queued",
       "finished_at": "2026-11-01T19:26:56.451Z"
+    },
+    {
+      "started_at": "2026-11-01T19:31:30.647Z",
+      "queued": [
+        "DYkumWHgXgU"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/De2bjs0zES3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dew9tStxDA0/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DewOSLygDF4/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DeuaiCvx5Cc/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DY7z8PMsNdK/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYpG7SZMMrI/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYnSYgEAiq5/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYmUYxmgGQB/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYjxDJ0ChDn/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 10,
+      "inventory": 2854,
+      "status": "queued",
+      "finished_at": "2026-11-01T19:35:58.507Z"
     }
   ],
   "next_account_index": 11,
@@ -31675,6 +31725,14 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "DYjxDJ0ChDn": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T19:35:58.494Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T20:05:58.494Z"
     }
   },
   "candidates": {
