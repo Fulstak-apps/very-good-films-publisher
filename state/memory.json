@@ -181637,6 +181637,78 @@
       "status": "ready",
       "discovered_at": "2026-11-01T16:13:31.588Z",
       "key": "f9f05b1192aa38f53517957ec1d1f299db54147749abd6c6e492f02ac43c0167"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DaLZ0ejCnBq",
+        "title": "@ellsoriaa clip"
+      },
+      "scene": {
+        "id": "DaLZ0ejCnBq",
+        "start": 0,
+        "end": 64.814
+      },
+      "source_post_url": "https://www.instagram.com/ellsoriaa/reel/DaLZ0ejCnBq/",
+      "source_caption": "stardust, 2007\n\n #fyp #stardust #clairedanes #michellepfeiffer #henrycavill",
+      "source_details": {
+        "title_hint": "stardust",
+        "year": 2007,
+        "source_title": "stardust",
+        "source_year": 2007,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "Stardust",
+        "type": "movie",
+        "director": "Matthew Vaughn",
+        "cast": [
+          "Charlie Cox",
+          "Claire Danes",
+          "Michelle Pfeiffer"
+        ],
+        "synopsis": "Stardust is a 2007 romantic fantasy adventure film directed by Matthew Vaughn and co-written by Vaughn and Jane Goldman. Based on Neil Gaiman's 1999 novel, it features an ensemble cast led by Claire Danes, Charlie Cox, Sienna Miller, Ricky Gervais, Jason Flemyng, Rupert Everett, Peter O'Toole, Michelle Pfeiffer and Robert De Niro, with narration by Ian McKellen. The film follows Tristan, a young man from the fictional town of Wall in England. Wall is a town on the border of the magical fantasy kingdom of Stormhold. Tristan enters the magical world to collect a fallen star to give to his beloved Victoria, in return for her hand in marriage. He finds the star, who to his surprise, is a woman n",
+        "metadata_source": "https://en.wikipedia.org/wiki/Stardust_(2007_film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "stardust",
+          "source_year": 2007,
+          "catalog_title": "Stardust",
+          "catalog_year": 2007,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261101/9865308d0f53620d643842174822b90378244e6ccd269a3463e20622118bad31.mp4?download=1",
+      "asset_sha256": "9865308d0f53620d643842174822b90378244e6ccd269a3463e20622118bad31",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 64.7,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0.0834168,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-01T16:14:19.194Z",
+        "source_duration": 64.81481481481481,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-01T16:18:36.765Z",
+      "key": "4349c9bd7ed628e361c373da7004fb5a0ae1988fa737da6855c5d4bdc7b37bab"
     }
   ],
   "discovery": [],
