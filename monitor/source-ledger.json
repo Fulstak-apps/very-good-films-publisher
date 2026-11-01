@@ -15473,6 +15473,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/De3p5vRhRwC/",
       "queued_at": "2026-11-01T21:41:05.940Z",
       "asset_sha256": "0854a968511923154eae4200624b33b826edaac10df3147ea2bc6da82ce563b6"
+    },
+    "De3L7OgO7t8": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/De3L7OgO7t8/",
+      "queued_at": "2026-11-01T21:47:10.328Z",
+      "asset_sha256": "97d8393c03e8004f94e6b7e5f9b59561e7f52e66cae22c30ad36be69dc6ddbb9"
     }
   },
   "checks": {
@@ -15532,24 +15538,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T08:28:05.855Z",
-      "queued": [
-        "DdW9rf2zok_"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdW9g6qzQMf/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T08:35:05.663Z"
-    },
     {
       "started_at": "2026-10-21T08:40:18.285Z",
       "queued": [
@@ -24898,6 +24886,27 @@
       "inventory": 2913,
       "status": "queued",
       "finished_at": "2026-11-01T21:30:52.710Z"
+    },
+    {
+      "started_at": "2026-11-01T21:34:42.155Z",
+      "queued": [
+        "De5oufkxP4p",
+        "De5PMcdi4zW",
+        "De5OgDTibhX",
+        "De3p5vRhRwC"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/De5POxmC4eF/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T21:41:08.907Z"
     }
   ],
   "next_account_index": 13,
