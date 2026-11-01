@@ -15479,6 +15479,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/De3L7OgO7t8/",
       "queued_at": "2026-11-01T21:47:10.328Z",
       "asset_sha256": "97d8393c03e8004f94e6b7e5f9b59561e7f52e66cae22c30ad36be69dc6ddbb9"
+    },
+    "DfMJPuqN7Ex": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfMJPuqN7Ex/",
+      "queued_at": "2026-11-01T22:06:33.251Z",
+      "asset_sha256": "33c072a76783e38118e0c44c80627d1201818c3a65c6c50e547011926918d72a"
     }
   },
   "checks": {
@@ -15531,67 +15537,13 @@
       "checked_at": "2026-11-01T19:52:39.739Z"
     },
     "cinamagiraffe41": {
-      "checked_at": "2026-10-26T00:19:20.256Z"
+      "checked_at": "2026-11-01T21:50:32.027Z"
     },
     "primefilmtv": {
-      "checked_at": "2026-10-26T00:24:55.274Z"
+      "checked_at": "2026-11-01T22:00:49.218Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T08:40:18.285Z",
-      "queued": [
-        "DdWzB9LBcw0"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdWeV0AhD4u/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T08:47:17.981Z"
-    },
-    {
-      "started_at": "2026-10-21T08:52:32.308Z",
-      "queued": [
-        "DdWeNluB2mr"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DaDHOMUA5Pl/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdWRnGbBZID/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T08:59:31.971Z"
-    },
-    {
-      "started_at": "2026-10-21T09:04:46.836Z",
-      "queued": [
-        "DdVX2n9B6-I",
-        "DdVXvjchN2I"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T09:11:37.214Z"
-    },
     {
       "started_at": "2026-10-21T10:03:21.194Z",
       "queued": [],
@@ -24907,9 +24859,47 @@
       "inventory": 2913,
       "status": "queued",
       "finished_at": "2026-11-01T21:41:08.907Z"
+    },
+    {
+      "started_at": "2026-11-01T21:44:57.276Z",
+      "queued": [
+        "De3L7OgO7t8"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T21:47:13.474Z"
+    },
+    {
+      "started_at": "2026-11-01T21:50:03.971Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 2913,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-01T21:50:32.042Z"
+    },
+    {
+      "started_at": "2026-11-01T21:55:10.096Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/De68xAPIpC0/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 2913,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-01T21:55:17.333Z"
     }
   ],
-  "next_account_index": 13,
+  "next_account_index": 0,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -31890,10 +31880,10 @@
     "De68xAPIpC0": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-01T18:51:01.836Z",
-      "failures": 1,
+      "failed_at": "2026-11-01T21:55:17.326Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-11-01T21:51:01.836Z"
+      "retry_at": "2026-11-02T00:55:17.326Z"
     },
     "De2bjs0zES3": {
       "collector_version": 14,
@@ -32163,6 +32153,94 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-01T21:38:53.839Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfNNoPgt8cR": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:01:02.803Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:31:02.803Z"
+    },
+    "DfNNm3kNr0Z": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:01:15.695Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:31:15.695Z"
+    },
+    "DfNNlnStvpd": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:01:27.864Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:31:27.864Z"
+    },
+    "DfNNkzYNCt3": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:01:40.831Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:31:40.831Z"
+    },
+    "DfNNZINtp8B": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:01:55.102Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:31:55.102Z"
+    },
+    "DfNNYFMNaOV": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:02:07.559Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:32:07.559Z"
+    },
+    "DfNNW5DNhf7": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:02:19.760Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:32:19.760Z"
+    },
+    "DfNNWDNNJRN": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:02:32.250Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:32:32.250Z"
+    },
+    "DfNNVJ5tHgC": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:02:44.591Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:32:44.591Z"
+    },
+    "DfM04yHNjkc": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T22:02:57.970Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T22:32:57.970Z"
+    },
+    "DfMJR82NofN": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T22:03:51.730Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
@@ -46733,6 +46811,646 @@
       "handle": "popcorncutzz",
       "url": "https://www.instagram.com/popcorncutzz/reel/De3L7OgO7t8/",
       "shortcode": "De3L7OgO7t8"
+    },
+    "DfNNoPgt8cR": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNoPgt8cR/",
+      "shortcode": "DfNNoPgt8cR"
+    },
+    "DfNNm3kNr0Z": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNm3kNr0Z/",
+      "shortcode": "DfNNm3kNr0Z"
+    },
+    "DfNNlnStvpd": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNlnStvpd/",
+      "shortcode": "DfNNlnStvpd"
+    },
+    "DfNNkzYNCt3": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNkzYNCt3/",
+      "shortcode": "DfNNkzYNCt3"
+    },
+    "DfNNZINtp8B": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNZINtp8B/",
+      "shortcode": "DfNNZINtp8B"
+    },
+    "DfNNYFMNaOV": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNYFMNaOV/",
+      "shortcode": "DfNNYFMNaOV"
+    },
+    "DfNNW5DNhf7": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNW5DNhf7/",
+      "shortcode": "DfNNW5DNhf7"
+    },
+    "DfNNWDNNJRN": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNWDNNJRN/",
+      "shortcode": "DfNNWDNNJRN"
+    },
+    "DfNNVJ5tHgC": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfNNVJ5tHgC/",
+      "shortcode": "DfNNVJ5tHgC"
+    },
+    "DfM04yHNjkc": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfM04yHNjkc/",
+      "shortcode": "DfM04yHNjkc"
+    },
+    "DfMJR82NofN": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJR82NofN/",
+      "shortcode": "DfMJR82NofN"
+    },
+    "DfMJPuqN7Ex": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJPuqN7Ex/",
+      "shortcode": "DfMJPuqN7Ex"
+    },
+    "DfMJOXmNKiX": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJOXmNKiX/",
+      "shortcode": "DfMJOXmNKiX"
+    },
+    "DfMJM9SNCgb": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJM9SNCgb/",
+      "shortcode": "DfMJM9SNCgb"
+    },
+    "DfMJKFOtlan": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJKFOtlan/",
+      "shortcode": "DfMJKFOtlan"
+    },
+    "DfMJGXXNRfP": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJGXXNRfP/",
+      "shortcode": "DfMJGXXNRfP"
+    },
+    "DfMJDnGt2hM": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMJDnGt2hM/",
+      "shortcode": "DfMJDnGt2hM"
+    },
+    "DfMI_b4twg5": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMI_b4twg5/",
+      "shortcode": "DfMI_b4twg5"
+    },
+    "DfMI5EBtRNh": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMI5EBtRNh/",
+      "shortcode": "DfMI5EBtRNh"
+    },
+    "DfMI2rZNb1j": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMI2rZNb1j/",
+      "shortcode": "DfMI2rZNb1j"
+    },
+    "DfMIzl5NLqF": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIzl5NLqF/",
+      "shortcode": "DfMIzl5NLqF"
+    },
+    "DfMIvAnt423": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIvAnt423/",
+      "shortcode": "DfMIvAnt423"
+    },
+    "DfMItp9NdaP": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMItp9NdaP/",
+      "shortcode": "DfMItp9NdaP"
+    },
+    "DfMIqPZNjT_": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIqPZNjT_/",
+      "shortcode": "DfMIqPZNjT_"
+    },
+    "DfMIo_ytncp": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIo_ytncp/",
+      "shortcode": "DfMIo_ytncp"
+    },
+    "DfMIm2BtsxX": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIm2BtsxX/",
+      "shortcode": "DfMIm2BtsxX"
+    },
+    "DfMIhzQNAUr": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIhzQNAUr/",
+      "shortcode": "DfMIhzQNAUr"
+    },
+    "DfMId9QNk7L": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMId9QNk7L/",
+      "shortcode": "DfMId9QNk7L"
+    },
+    "DfMIYD0tv4r": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIYD0tv4r/",
+      "shortcode": "DfMIYD0tv4r"
+    },
+    "DfMIUU4teUc": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIUU4teUc/",
+      "shortcode": "DfMIUU4teUc"
+    },
+    "DfMIDK7tW1U": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMIDK7tW1U/",
+      "shortcode": "DfMIDK7tW1U"
+    },
+    "DfMH__YtHdU": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMH__YtHdU/",
+      "shortcode": "DfMH__YtHdU"
+    },
+    "DfMHu6FNQFW": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHu6FNQFW/",
+      "shortcode": "DfMHu6FNQFW"
+    },
+    "DfMHsG3tcqa": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHsG3tcqa/",
+      "shortcode": "DfMHsG3tcqa"
+    },
+    "DfMHa6_tJK1": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHa6_tJK1/",
+      "shortcode": "DfMHa6_tJK1"
+    },
+    "DfMHZreNSn1": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHZreNSn1/",
+      "shortcode": "DfMHZreNSn1"
+    },
+    "DfMHYhGNQbC": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHYhGNQbC/",
+      "shortcode": "DfMHYhGNQbC"
+    },
+    "DfMHVJPNS9t": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHVJPNS9t/",
+      "shortcode": "DfMHVJPNS9t"
+    },
+    "DfMHS0NtWqg": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfMHS0NtWqg/",
+      "shortcode": "DfMHS0NtWqg"
+    },
+    "DfJggMuNR8b": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJggMuNR8b/",
+      "shortcode": "DfJggMuNR8b"
+    },
+    "DfJgfIDNLHW": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgfIDNLHW/",
+      "shortcode": "DfJgfIDNLHW"
+    },
+    "DfJgeEJt8Gy": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgeEJt8Gy/",
+      "shortcode": "DfJgeEJt8Gy"
+    },
+    "DfJgdB-N0Mp": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgdB-N0Mp/",
+      "shortcode": "DfJgdB-N0Mp"
+    },
+    "DfJgTdttpsb": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgTdttpsb/",
+      "shortcode": "DfJgTdttpsb"
+    },
+    "DfJgP_MNFbo": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgP_MNFbo/",
+      "shortcode": "DfJgP_MNFbo"
+    },
+    "DfJgKBBto4-": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgKBBto4-/",
+      "shortcode": "DfJgKBBto4-"
+    },
+    "DfJgEChNUs_": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJgEChNUs_/",
+      "shortcode": "DfJgEChNUs_"
+    },
+    "DfJf_qZtRoB": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJf_qZtRoB/",
+      "shortcode": "DfJf_qZtRoB"
+    },
+    "DfJfjwTtwbW": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfjwTtwbW/",
+      "shortcode": "DfJfjwTtwbW"
+    },
+    "DfJfdpstXWJ": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfdpstXWJ/",
+      "shortcode": "DfJfdpstXWJ"
+    },
+    "DfJfYpZtgkc": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfYpZtgkc/",
+      "shortcode": "DfJfYpZtgkc"
+    },
+    "DfJfVQptNf7": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfVQptNf7/",
+      "shortcode": "DfJfVQptNf7"
+    },
+    "DfJfSpeNl8H": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfSpeNl8H/",
+      "shortcode": "DfJfSpeNl8H"
+    },
+    "DfJfKszt_yg": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfKszt_yg/",
+      "shortcode": "DfJfKszt_yg"
+    },
+    "DfJfD_Vtc6Q": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJfD_Vtc6Q/",
+      "shortcode": "DfJfD_Vtc6Q"
+    },
+    "DfJe8d8NXAN": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJe8d8NXAN/",
+      "shortcode": "DfJe8d8NXAN"
+    },
+    "DfJe5jet-1w": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJe5jet-1w/",
+      "shortcode": "DfJe5jet-1w"
+    },
+    "DfJe2FbNNaY": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJe2FbNNaY/",
+      "shortcode": "DfJe2FbNNaY"
+    },
+    "DfJerlCNdeB": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJerlCNdeB/",
+      "shortcode": "DfJerlCNdeB"
+    },
+    "DfJel14NJmu": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJel14NJmu/",
+      "shortcode": "DfJel14NJmu"
+    },
+    "DfJef1Dtcqy": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJef1Dtcqy/",
+      "shortcode": "DfJef1Dtcqy"
+    },
+    "DfJeaTvtKAr": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJeaTvtKAr/",
+      "shortcode": "DfJeaTvtKAr"
+    },
+    "DfJdw2At8Zh": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJdw2At8Zh/",
+      "shortcode": "DfJdw2At8Zh"
+    },
+    "DfJdqPyN6jw": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJdqPyN6jw/",
+      "shortcode": "DfJdqPyN6jw"
+    },
+    "DfJdn7It0z9": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfJdn7It0z9/",
+      "shortcode": "DfJdn7It0z9"
+    },
+    "DfGujFCN03o": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGujFCN03o/",
+      "shortcode": "DfGujFCN03o"
+    },
+    "DfGubtKtR8f": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGubtKtR8f/",
+      "shortcode": "DfGubtKtR8f"
+    },
+    "DfGuTBANYeC": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuTBANYeC/",
+      "shortcode": "DfGuTBANYeC"
+    },
+    "DfGuWAMtG1F": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuWAMtG1F/",
+      "shortcode": "DfGuWAMtG1F"
+    },
+    "DfGuVRJtqVM": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuVRJtqVM/",
+      "shortcode": "DfGuVRJtqVM"
+    },
+    "DfGuUpMNtFr": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuUpMNtFr/",
+      "shortcode": "DfGuUpMNtFr"
+    },
+    "DfGuUAJtQQ1": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuUAJtQQ1/",
+      "shortcode": "DfGuUAJtQQ1"
+    },
+    "DfGuQGLteNp": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuQGLteNp/",
+      "shortcode": "DfGuQGLteNp"
+    },
+    "DfGuMGlti1L": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfGuMGlti1L/",
+      "shortcode": "DfGuMGlti1L"
+    },
+    "DfE31roNeBS": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE31roNeBS/",
+      "shortcode": "DfE31roNeBS"
+    },
+    "DfE33PDNiOp": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE33PDNiOp/",
+      "shortcode": "DfE33PDNiOp"
+    },
+    "DfE3ui9tUIq": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE3ui9tUIq/",
+      "shortcode": "DfE3ui9tUIq"
+    },
+    "DfE3kdXNHqp": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE3kdXNHqp/",
+      "shortcode": "DfE3kdXNHqp"
+    },
+    "DfE3iy8tpos": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE3iy8tpos/",
+      "shortcode": "DfE3iy8tpos"
+    },
+    "DfE3w9HNBF7": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE3w9HNBF7/",
+      "shortcode": "DfE3w9HNBF7"
+    },
+    "DfE3g32tQ3d": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE3g32tQ3d/",
+      "shortcode": "DfE3g32tQ3d"
+    },
+    "DfE3jAaNUrf": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfE3jAaNUrf/",
+      "shortcode": "DfE3jAaNUrf"
+    },
+    "DfD8Nt5NUTs": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8Nt5NUTs/",
+      "shortcode": "DfD8Nt5NUTs"
+    },
+    "DfD8MIqNbMd": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8MIqNbMd/",
+      "shortcode": "DfD8MIqNbMd"
+    },
+    "DfD8MxINde2": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8MxINde2/",
+      "shortcode": "DfD8MxINde2"
+    },
+    "DfD8K1BNys1": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8K1BNys1/",
+      "shortcode": "DfD8K1BNys1"
+    },
+    "DfD8IQ6tFLG": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8IQ6tFLG/",
+      "shortcode": "DfD8IQ6tFLG"
+    },
+    "DfD8JKDNoic": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8JKDNoic/",
+      "shortcode": "DfD8JKDNoic"
+    },
+    "DfD8IvdNCeu": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8IvdNCeu/",
+      "shortcode": "DfD8IvdNCeu"
+    },
+    "DfD8GLVtV3c": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD8GLVtV3c/",
+      "shortcode": "DfD8GLVtV3c"
+    },
+    "DfD0e0Zpu_I": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD0e0Zpu_I/",
+      "shortcode": "DfD0e0Zpu_I"
+    },
+    "DfD0a8NpmyJ": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD0a8NpmyJ/",
+      "shortcode": "DfD0a8NpmyJ"
+    },
+    "DfD0ZiypS00": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD0ZiypS00/",
+      "shortcode": "DfD0ZiypS00"
+    },
+    "DfD0YSrpfHA": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfD0YSrpfHA/",
+      "shortcode": "DfD0YSrpfHA"
+    },
+    "DfDz5z0pBEb": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDz5z0pBEb/",
+      "shortcode": "DfDz5z0pBEb"
+    },
+    "DfDz4depmKm": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDz4depmKm/",
+      "shortcode": "DfDz4depmKm"
+    },
+    "DfDz2ggJfVo": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDz2ggJfVo/",
+      "shortcode": "DfDz2ggJfVo"
+    },
+    "DfDz0BYJkkp": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDz0BYJkkp/",
+      "shortcode": "DfDz0BYJkkp"
+    },
+    "DfDzyU9pkPV": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDzyU9pkPV/",
+      "shortcode": "DfDzyU9pkPV"
+    },
+    "DfDzwOjJk0-": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDzwOjJk0-/",
+      "shortcode": "DfDzwOjJk0-"
+    },
+    "DfDzuuPpUIY": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDzuuPpUIY/",
+      "shortcode": "DfDzuuPpUIY"
+    },
+    "DfDzsk7Jcz5": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDzsk7Jcz5/",
+      "shortcode": "DfDzsk7Jcz5"
+    },
+    "DfDy3AQpJX_": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDy3AQpJX_/",
+      "shortcode": "DfDy3AQpJX_"
+    },
+    "DfDyo1aJR2X": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDyo1aJR2X/",
+      "shortcode": "DfDyo1aJR2X"
+    },
+    "DfDyjWJtP1l": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDyjWJtP1l/",
+      "shortcode": "DfDyjWJtP1l"
+    },
+    "DfDyaFctdMy": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDyaFctdMy/",
+      "shortcode": "DfDyaFctdMy"
+    },
+    "DfDySc8tUfO": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDySc8tUfO/",
+      "shortcode": "DfDySc8tUfO"
+    },
+    "DfDyMuZNzGW": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDyMuZNzGW/",
+      "shortcode": "DfDyMuZNzGW"
+    },
+    "DfDx8fvtjSI": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDx8fvtjSI/",
+      "shortcode": "DfDx8fvtjSI"
+    },
+    "DfDxz7wth1e": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxz7wth1e/",
+      "shortcode": "DfDxz7wth1e"
+    },
+    "DfDxnrstnaf": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxnrstnaf/",
+      "shortcode": "DfDxnrstnaf"
+    },
+    "DfDxf3iteHi": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxf3iteHi/",
+      "shortcode": "DfDxf3iteHi"
+    },
+    "DfDxfF3t5Kw": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxfF3t5Kw/",
+      "shortcode": "DfDxfF3t5Kw"
+    },
+    "DfDxcOfN90K": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxcOfN90K/",
+      "shortcode": "DfDxcOfN90K"
+    },
+    "DfDxa68thD7": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxa68thD7/",
+      "shortcode": "DfDxa68thD7"
+    },
+    "DfDxZSttTte": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxZSttTte/",
+      "shortcode": "DfDxZSttTte"
+    },
+    "DfDxRyqtiKN": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxRyqtiKN/",
+      "shortcode": "DfDxRyqtiKN"
+    },
+    "DfDxKr1NLrT": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxKr1NLrT/",
+      "shortcode": "DfDxKr1NLrT"
+    },
+    "DfDxFoINGhu": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDxFoINGhu/",
+      "shortcode": "DfDxFoINGhu"
+    },
+    "DfDw8CUNn77": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDw8CUNn77/",
+      "shortcode": "DfDw8CUNn77"
+    },
+    "DfDw48TtIU2": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDw48TtIU2/",
+      "shortcode": "DfDw48TtIU2"
+    },
+    "DfDwzwGt0da": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDwzwGt0da/",
+      "shortcode": "DfDwzwGt0da"
+    },
+    "DfDwwX3t-NB": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDwwX3t-NB/",
+      "shortcode": "DfDwwX3t-NB"
+    },
+    "DfDws4PNEfQ": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDws4PNEfQ/",
+      "shortcode": "DfDws4PNEfQ"
+    },
+    "DfDwk8PtgqJ": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDwk8PtgqJ/",
+      "shortcode": "DfDwk8PtgqJ"
+    },
+    "DfDwl_JNd51": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDwl_JNd51/",
+      "shortcode": "DfDwl_JNd51"
+    },
+    "DfDwgegtHE3": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDwgegtHE3/",
+      "shortcode": "DfDwgegtHE3"
+    },
+    "DfDwdkaNzqj": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/DfDwdkaNzqj/",
+      "shortcode": "DfDwdkaNzqj"
     }
   },
   "discovery_depth": {
@@ -46749,7 +47467,7 @@
     "fuckinggoodmovies": 80,
     "movie_vault_4u": 30,
     "popcorncutzz": 30,
-    "cinamagiraffe41": 30,
-    "primefilmtv": 30
+    "cinamagiraffe41": 40,
+    "primefilmtv": 40
   }
 }
