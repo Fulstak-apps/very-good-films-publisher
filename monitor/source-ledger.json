@@ -15335,6 +15335,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/De_m65cR3Xv/",
       "queued_at": "2026-11-01T20:56:24.869Z",
       "asset_sha256": "72ed86bb438a9eb905240db40f42eec29423be2331fc7bade3a65051e1d366f6"
+    },
+    "De7EGCbxDFk": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/De7EGCbxDFk/",
+      "queued_at": "2026-11-01T20:59:31.507Z",
+      "asset_sha256": "a026a37465fecb72e98d0d046abcfd8740f0a1ce2c7492cbc41732069d26fa53"
     }
   },
   "checks": {
@@ -15394,19 +15400,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T06:27:16.059Z",
-      "queued": [
-        "DeR1FybBQ1C",
-        "DeRtCfrh9GD"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T06:33:36.544Z"
-    },
     {
       "started_at": "2026-10-21T06:51:01.396Z",
       "queued": [
@@ -24768,6 +24761,31 @@
       "inventory": 2913,
       "status": "queued",
       "finished_at": "2026-11-01T20:44:33.086Z"
+    },
+    {
+      "started_at": "2026-11-01T20:48:30.324Z",
+      "queued": [
+        "DfBbBdXRsXF",
+        "DfBTySeREI5",
+        "De_m65cR3Xv"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfBTpBsxQEP/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfBTmi_xbnZ/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T20:56:27.186Z"
     }
   ],
   "next_account_index": 13,
