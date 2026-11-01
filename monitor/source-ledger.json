@@ -15251,6 +15251,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DfJ7Sj7CYhG/",
       "queued_at": "2026-11-01T19:54:20.253Z",
       "asset_sha256": "c47643d8c70cf7cfa7edffddaaf9f1812c35b88011367d0eb2323616327ca70a"
+    },
+    "DfF5VHAiAwS": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfF5VHAiAwS/",
+      "queued_at": "2026-11-01T20:03:15.180Z",
+      "asset_sha256": "f3e48b40e5abf4aa33657ca6da3766e4d342ed5e480179976e41ff9478fc9d22"
     }
   },
   "checks": {
@@ -15310,80 +15316,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T00:20:24.847Z",
-      "queued": [
-        "Det6kigha-5",
-        "Desj5wahQx6"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DUBUmfFEVMU/",
-          "stage": "capture_or_queue",
-          "error": "Rendered Reel failed video/audio/duration QA"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DTpAeVyDvOR/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcjEX6_gkI-/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 14,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T00:26:38.475Z"
-    },
     {
       "started_at": "2026-10-21T02:17:54.229Z",
       "queued": [
@@ -24617,6 +24549,45 @@
       "inventory": 2856,
       "status": "queued",
       "finished_at": "2026-11-01T19:51:19.050Z"
+    },
+    {
+      "started_at": "2026-11-01T19:52:19.381Z",
+      "queued": [
+        "DfJ7MCXi9pM",
+        "DfJ7Sj7CYhG"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfGBEqGCYQx/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfGA8vLiRKf/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfGA9tkCFDh/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfGA6bQif3w/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfGA3xmCPdV/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 88,
+      "attempts": 7,
+      "inventory": 2913,
+      "status": "queued",
+      "finished_at": "2026-11-01T19:58:23.921Z"
     }
   ],
   "next_account_index": 13,
@@ -31704,18 +31675,18 @@
     "DYpG7SZMMrI": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T19:32:05.032Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T20:02:05.032Z"
+      "failed_at": "2026-11-01T20:02:49.381Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DYnSYgEAiq5": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-01T19:32:16.542Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-01T20:02:16.542Z"
+      "failed_at": "2026-11-01T20:02:49.903Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DYmUYxmgGQB": {
       "collector_version": 14,
@@ -31737,6 +31708,46 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-01T19:48:47.368Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGBEqGCYQx": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T19:56:08.978Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGA8vLiRKf": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T19:57:35.278Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGA9tkCFDh": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T19:57:50.381Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGA6bQif3w": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T19:58:07.670Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGA3xmCPdV": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T19:58:23.912Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
