@@ -14801,6 +14801,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DT5Z6hjE0zY/",
       "queued_at": "2026-11-01T02:45:18.348Z",
       "asset_sha256": "dc00d97b54bd1eb6c85678d6edfe705e2ae597f4dd5a0db5731d7f59efc4ffb1"
+    },
+    "DT0iBGnEkWd": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DT0iBGnEkWd/",
+      "queued_at": "2026-11-01T02:46:16.501Z",
+      "asset_sha256": "2ff20bf48f80fba969f04af4493e1d84e3ad8f7c404ef847210394b8b4634a80"
     }
   },
   "checks": {
@@ -29866,6 +29872,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-01T02:38:29.731Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DT3Sbuok_ST": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-01T02:45:33.085Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-01T03:15:33.085Z"
+    },
+    "DT2of8IEuSp": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-01T02:45:44.423Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
