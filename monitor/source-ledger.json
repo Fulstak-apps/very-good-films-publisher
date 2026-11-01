@@ -15059,6 +15059,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DZ5qadaiAsu/",
       "queued_at": "2026-11-01T17:09:42.106Z",
       "asset_sha256": "67a224fde4b3908a07081ff4a48fc3d7e7cc133d54a31d466bde963882d1139e"
+    },
+    "DZ4kS3_CbGr": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DZ4kS3_CbGr/",
+      "queued_at": "2026-11-01T17:14:28.545Z",
+      "asset_sha256": "8daf64c27d54ff0d691331b80fd4642b7b6c86bca6ee5d83a679b448e6792478"
     }
   },
   "checks": {
@@ -15118,27 +15124,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-20T02:28:54.833Z",
-      "queued": [
-        "DbtT2p2A9D6",
-        "Dbs2UFOgGPS",
-        "DbqBPsqg62N",
-        "DboYQumR1r9"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DbvStfmgA87/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 1801,
-      "status": "queued",
-      "finished_at": "2026-10-20T02:35:42.841Z"
-    },
     {
       "started_at": "2026-10-20T02:40:54.259Z",
       "queued": [
@@ -24202,6 +24187,28 @@
       "inventory": 2778,
       "status": "queued",
       "finished_at": "2026-11-01T16:14:22.021Z"
+    },
+    {
+      "started_at": "2026-11-01T17:03:39.170Z",
+      "queued": [
+        "DaKiXaBCsol",
+        "DaILpHoCwPp",
+        "DaAKopXC1g4",
+        "DZ7CJoICzzx",
+        "DZ5qadaiAsu"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DaDVAV7Cfad/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 2778,
+      "status": "queued",
+      "finished_at": "2026-11-01T17:09:44.900Z"
     }
   ],
   "next_account_index": 6,
