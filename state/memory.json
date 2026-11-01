@@ -180046,6 +180046,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-01T06:23:46.253Z",
       "key": "35cbde3ee66fcfa64bed84eecb2a7f13641ddda49f7e790612ca052f4a0c6f71"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Deo_ZXKNEVv",
+        "title": "@the_goodfilms clip"
+      },
+      "scene": {
+        "id": "Deo_ZXKNEVv",
+        "start": 0,
+        "end": 33.08
+      },
+      "source_post_url": "https://www.instagram.com/the_goodfilms/reel/Deo_ZXKNEVv/",
+      "source_caption": "One of the best racing movies ever made, and an incredible true story about two men who refused to give up.\n\nFord v Ferrari (2019) tells the story of how Ford took on Ferrari at the 24 Hours of Le Mans, one of the most demanding races in the world. After a deal to buy Ferrari fell apart, Henry Ford II decided to beat the Italian company where it mattered most: on the racetrack.\n\nFord brought in legendary car designer Carroll Shelby (Matt Damon), who teamed up with fearless British driver Ken Miles (Christian Bale) to develop the Ford GT40. After years of failures, Ford finally defeated Ferrari at Le Mans in 1966, with its cars finishing in first, second, and third place. But the real story behind that victory was even more complicated than the movie suggests. Miles was denied the win despite leading for much of the race, making the finish one of the most controversial moments in racing history.\n\nChristian Bale is another reason the film works so well. After gaining around 40 pounds to play Dick Cheney in Vice (2018), he lost approximately 70 pounds to portray Ken Miles in Ford v Ferrari (2019).\n\nBut the transformation went beyond his appearance. Bale studied the real Ken Miles, learned his accent, and trained at a racing school to capture the driver’s personality and mannerisms. The result is one of his most convincing performances, bringing Miles’ stubbornness, dry humor, and obsession with racing to life.\n\nHis chemistry with Matt Damon makes the film even better. Their characters feel like real friends who argue, push each other, and share a genuine love for what they do.\n\nWith incredible racing sequences, practical effects, and a story about talent clashing with corporate politics, Ford v Ferrari is much more than a movie about cars. It’s about the people willing to risk everything to prove what they can do.\n\nHave you seen it?",
+      "source_details": {
+        "title_hint": "Ford v Ferrari",
+        "year": 2019,
+        "media_type_hint": "movie",
+        "source_title": "Ford v Ferrari",
+        "source_year": 2019,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "Ford v Ferrari",
+        "title": "Ford v Ferrari",
+        "type": "movie",
+        "director": "James Mangold",
+        "cast": [
+          "Matt Damon",
+          "Christian Bale",
+          "Jon Bernthal"
+        ],
+        "synopsis": "Ford v Ferrari (titled Le Mans '66 in some European countries) is a 2019 American biographical sports drama film directed by James Mangold and written by Jez Butterworth, John-Henry Butterworth, and Jason Keller. It stars Matt Damon and Christian Bale, with Jon Bernthal, Caitríona Balfe, Tracy Letts, Josh Lucas, Noah Jupe, Remo Girone, and Ray McKinnon in supporting roles. The plot follows a determined team of American and English engineers and designers, led by automotive designer Carroll Shelby and his English driver, Ken Miles, who are hired by Henry Ford II and Lee Iacocca to build a race car to defeat the perennially dominant Italian racing team Scuderia Ferrari at the 1966 24 Hours of ",
+        "metadata_source": "https://en.wikipedia.org/wiki/Ford_v_Ferrari",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Ford v Ferrari",
+          "source_year": 2019,
+          "catalog_title": "Ford v Ferrari",
+          "catalog_year": 2019,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261101/323074306c6af9608b4380d24d968b3d75aa00d9c11e810343b9d93574b5b246.mp4?download=1",
+      "asset_sha256": "323074306c6af9608b4380d24d968b3d75aa00d9c11e810343b9d93574b5b246",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 33.065,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-01T06:23:50.702Z",
+        "source_duration": 33.08,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-01T06:28:57.691Z",
+      "key": "6bd2b74e73831cb805e7014296ff84af978bdf9f24e71b6a93ac5c2c1d12fb39"
     }
   ],
   "discovery": [],
