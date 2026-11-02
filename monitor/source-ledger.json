@@ -15785,6 +15785,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfD8MIqNbMd/",
       "queued_at": "2026-11-02T10:38:04.142Z",
       "asset_sha256": "07922490e76b4836b60ed24731c95527b2ff0e4f5f3629f94a5a265ffd0c14fc"
+    },
+    "DfD8MxINde2": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfD8MxINde2/",
+      "queued_at": "2026-11-02T10:39:47.431Z",
+      "asset_sha256": "9492c0f609e821768d0ffa6594d87d3f00588e95e2d6b2014484dbecf6fa0a06"
     }
   },
   "checks": {
@@ -15844,19 +15850,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T19:45:19.346Z",
-      "queued": [
-        "DdDDYpPhpXB",
-        "DdDDOy-hZUx"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T19:51:35.892Z"
-    },
     {
       "started_at": "2026-10-21T21:45:51.542Z",
       "queued": [
@@ -25333,6 +25326,38 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T10:14:38.411Z"
+    },
+    {
+      "started_at": "2026-11-02T10:34:16.650Z",
+      "queued": [
+        "DfE3w9HNBF7",
+        "DfE3g32tQ3d",
+        "DfE3jAaNUrf",
+        "DfD8Nt5NUTs",
+        "DfD8MIqNbMd"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZLRpvlMPCE/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DWny2sbEu7x/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DbVG83mgRAS/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T10:38:06.371Z"
     }
   ],
   "next_account_index": 0,
