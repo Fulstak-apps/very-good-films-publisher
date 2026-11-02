@@ -15839,6 +15839,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfDz5z0pBEb/",
       "queued_at": "2026-11-02T11:14:10.932Z",
       "asset_sha256": "d6bb606b74b0d905c8ad719aaeccd521401e009b2f1f759670dd1d6e7a0ac04e"
+    },
+    "DfDzsk7Jcz5": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfDzsk7Jcz5/",
+      "queued_at": "2026-11-02T11:39:23.123Z",
+      "asset_sha256": "ee01209dc1db5e04f7158ca50d7ed0bfbdb653a677b3ff6614275d62f829682b"
     }
   },
   "checks": {
@@ -15898,104 +15904,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T23:29:17.993Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DUBUmfFEVMU/",
-          "stage": "capture_or_queue",
-          "error": "Rendered Reel failed video/audio/duration QA"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DTpAeVyDvOR/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcjEX6_gkI-/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DTlOkTRkg7L/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdBxH3KhOfS/",
-          "stage": "capture_or_queue",
-          "error": "locator.evaluate: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('video:visible').first()\n"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 15,
-      "inventory": 2012,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-21T23:36:17.115Z"
-    },
-    {
-      "started_at": "2026-10-21T23:41:49.523Z",
-      "queued": [
-        "DdBxAe3BBxI"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T23:48:08.551Z"
-    },
     {
       "started_at": "2026-10-21T23:53:21.069Z",
       "queued": [
@@ -25411,6 +25319,51 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T10:51:29.746Z"
+    },
+    {
+      "started_at": "2026-11-02T11:10:01.567Z",
+      "queued": [
+        "DfD0YSrpfHA",
+        "DfDz5z0pBEb"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDz4depmKm/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T11:17:13.184Z"
+    },
+    {
+      "started_at": "2026-11-02T11:20:14.218Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDz2ggJfVo/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDz0BYJkkp/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDzyU9pkPV/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3041,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-02T11:28:19.505Z"
     }
   ],
   "next_account_index": 0,
@@ -27090,10 +27043,10 @@
     "DVeCR8Wkpww": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json",
-      "failed_at": "2026-11-01T20:19:14.467Z",
-      "failures": 56,
+      "failed_at": "2026-11-02T11:30:35.534Z",
+      "failures": 57,
       "terminal": false,
-      "retry_at": "2026-11-01T23:19:14.467Z"
+      "retry_at": "2026-11-02T14:30:35.534Z"
     },
     "DVL_6Sxkli4": {
       "collector_version": 14,
@@ -32947,6 +32900,54 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-02T10:51:29.738Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDz4depmKm": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T11:17:13.170Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDz2ggJfVo": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T11:23:06.310Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDz0BYJkkp": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T11:25:05.427Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDzyU9pkPV": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T11:28:19.493Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDzwOjJk0-": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T11:32:13.139Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDzuuPpUIY": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T11:35:05.343Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
