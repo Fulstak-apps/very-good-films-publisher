@@ -15701,6 +15701,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfGuWAMtG1F/",
       "queued_at": "2026-11-02T07:43:21.751Z",
       "asset_sha256": "eb258fa88183c0bc59434a0fb27908e428e4bfda34697ed94fe2faad4422759c"
+    },
+    "DfGuVRJtqVM": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfGuVRJtqVM/",
+      "queued_at": "2026-11-02T07:47:38.638Z",
+      "asset_sha256": "896df0055759b46511421d1d6a31ffa7249ad881b46a2d8465c6197feaea4539"
     }
   },
   "checks": {
@@ -15760,27 +15766,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T18:06:16.112Z",
-      "queued": [
-        "DdGPxniB_Pk",
-        "DdFtH0vhIPx",
-        "DdFsrzAB3kM",
-        "DdE1j_mBsmA"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdEs7sVhfEo/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T18:13:15.871Z"
-    },
     {
       "started_at": "2026-10-21T18:18:29.060Z",
       "queued": [
@@ -25167,6 +25152,25 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T07:09:22.899Z"
+    },
+    {
+      "started_at": "2026-11-02T07:36:08.286Z",
+      "queued": [
+        "DfGuTBANYeC",
+        "DfGuWAMtG1F"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfGubtKtR8f/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T07:43:24.021Z"
     }
   ],
   "next_account_index": 0,
