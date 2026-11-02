@@ -15755,6 +15755,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfE3iy8tpos/",
       "queued_at": "2026-11-02T10:14:30.004Z",
       "asset_sha256": "2460ccea3eb806160768989fc21f90212d5a63325124c3dce6f46fb8ae8ca67a"
+    },
+    "DfE3w9HNBF7": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfE3w9HNBF7/",
+      "queued_at": "2026-11-02T10:35:17.773Z",
+      "asset_sha256": "d98b448b9c86a2377f16ebaa60ae7bd91f2dc5561b428e5245abdfa31042cf4d"
     }
   },
   "checks": {
@@ -15814,20 +15820,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T19:33:47.135Z",
-      "queued": [
-        "DdEKy6The7c",
-        "DdDNWo_h07_",
-        "DdDNM2thhLo"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T19:40:06.164Z"
-    },
     {
       "started_at": "2026-10-21T19:45:19.346Z",
       "queued": [
@@ -25295,6 +25287,28 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T10:06:59.384Z"
+    },
+    {
+      "started_at": "2026-11-02T10:08:44.821Z",
+      "queued": [
+        "DfE31roNeBS",
+        "DfE33PDNiOp",
+        "DfE3ui9tUIq",
+        "DfE3kdXNHqp",
+        "DfE3iy8tpos"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DYhpTKSuaaz/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T10:14:38.411Z"
     }
   ],
   "next_account_index": 0,
@@ -26558,10 +26572,10 @@
     "DZLRpvlMPCE": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-01T20:18:36.780Z",
-      "failures": 76,
+      "failed_at": "2026-11-02T10:34:25.201Z",
+      "failures": 77,
       "terminal": false,
-      "retry_at": "2026-11-01T23:18:36.780Z"
+      "retry_at": "2026-11-02T13:34:25.201Z"
     },
     "DY9md3SssWF": {
       "collector_version": 14,
@@ -26950,10 +26964,10 @@
     "DWny2sbEu7x": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-01T20:18:45.975Z",
-      "failures": 63,
+      "failed_at": "2026-11-02T10:34:34.436Z",
+      "failures": 64,
       "terminal": false,
-      "retry_at": "2026-11-01T23:18:45.975Z"
+      "retry_at": "2026-11-02T13:34:34.436Z"
     },
     "DWavjdgkqGq": {
       "collector_version": 14,
@@ -30646,10 +30660,10 @@
     "DbVG83mgRAS": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-11-01T20:19:04.927Z",
-      "failures": 36,
+      "failed_at": "2026-11-02T10:34:53.120Z",
+      "failures": 37,
       "terminal": false,
-      "retry_at": "2026-11-01T23:19:04.927Z"
+      "retry_at": "2026-11-02T13:34:53.120Z"
     },
     "DbNgVUvASQC": {
       "collector_version": 14,
