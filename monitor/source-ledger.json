@@ -15689,6 +15689,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfJdn7It0z9/",
       "queued_at": "2026-11-02T07:05:43.487Z",
       "asset_sha256": "069865f7a20fdc998ac51bdc81851a2df478db0a44f7ebab303a52e0caa6b2db"
+    },
+    "DfGuTBANYeC": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfGuTBANYeC/",
+      "queued_at": "2026-11-02T07:41:54.157Z",
+      "asset_sha256": "00d6176cd35d2649f0ec6f9e223e97e807a4159e58408e8aeae7d0f030bec6ed"
     }
   },
   "checks": {
@@ -15748,44 +15754,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T17:41:50.177Z",
-      "queued": [
-        "DdKEoGKzw4w"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXRhyOKjCDD/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DTQsGPREvWy/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXNS7YXDEy6/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdJuzHvhEQh/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T17:48:49.621Z"
-    },
     {
       "started_at": "2026-10-21T18:06:16.112Z",
       "queued": [
@@ -25169,6 +25137,30 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T06:43:51.795Z"
+    },
+    {
+      "started_at": "2026-11-02T07:00:30.572Z",
+      "queued": [
+        "DfJdqPyN6jw",
+        "DfJdn7It0z9"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DYhpTKSuaaz/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfGujFCN03o/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T07:09:22.899Z"
     }
   ],
   "next_account_index": 0,
@@ -31144,10 +31136,10 @@
     "DYhpTKSuaaz": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-01T20:18:29.060Z",
-      "failures": 13,
+      "failed_at": "2026-11-02T07:05:56.323Z",
+      "failures": 14,
       "terminal": false,
-      "retry_at": "2026-11-01T23:18:29.060Z"
+      "retry_at": "2026-11-02T10:05:56.323Z"
     },
     "DWmHJDLkw1Q": {
       "collector_version": 14,
@@ -32665,6 +32657,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-02T06:40:18.177Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGujFCN03o": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T07:09:22.887Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfGubtKtR8f": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T07:37:52.506Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
