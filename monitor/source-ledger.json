@@ -15977,6 +15977,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DfFVFcPO04H/",
       "queued_at": "2026-11-02T16:30:16.448Z",
       "asset_sha256": "93aacdcf3b14ec674ae35c6a28cd29e0fe0e4be1e1225d54ed01ddadd9d8cba3"
+    },
+    "DfC64E4zhdl": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DfC64E4zhdl/",
+      "queued_at": "2026-11-02T16:32:47.504Z",
+      "asset_sha256": "ec46c90c15acdf37eef9c86b43f3d55b431cab98bce87280e513b14221409cd3"
     }
   },
   "checks": {
@@ -16036,19 +16042,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-22T16:08:53.895Z",
-      "queued": [
-        "Dc3tU6NBrkH",
-        "Dc3f0X8hwgG"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-22T16:15:33.576Z"
-    },
     {
       "started_at": "2026-10-22T16:45:51.032Z",
       "queued": [
@@ -25526,6 +25519,33 @@
       "inventory": 3041,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-02T16:21:31.925Z"
+    },
+    {
+      "started_at": "2026-11-02T16:26:07.823Z",
+      "queued": [
+        "DfPjEIfuc2X",
+        "DfKaGeMOi6P",
+        "DfH-LTDTeZq",
+        "DfHsU7CuYN_",
+        "DfFVFcPO04H"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DfPVNaJOlKG/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DfNGBM4zoXq/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 88,
+      "attempts": 7,
+      "inventory": 3052,
+      "status": "queued",
+      "finished_at": "2026-11-02T16:30:19.795Z"
     }
   ],
   "next_account_index": 2,
@@ -33198,6 +33218,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-02T16:27:26.403Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfFKYP2uqEk": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T16:31:31.053Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
