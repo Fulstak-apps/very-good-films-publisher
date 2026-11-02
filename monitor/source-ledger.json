@@ -15941,6 +15941,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfDws4PNEfQ/",
       "queued_at": "2026-11-02T15:23:20.864Z",
       "asset_sha256": "c1817b534a0ac647665f2ed718a1c797a762edd319a37bbe7e2acc80773cc8bd"
+    },
+    "DfDwdkaNzqj": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfDwdkaNzqj/",
+      "queued_at": "2026-11-02T16:02:35.603Z",
+      "asset_sha256": "69fd8c70b66f0f334f0010c672d73991e97d383b1273bcd98012b4d456a5cd35"
     }
   },
   "checks": {
@@ -16000,22 +16006,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-22T05:05:47.952Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc48DjaBBVU/",
-          "stage": "capture_or_queue",
-          "error": "spawnSync ffmpeg ETIMEDOUT"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 2012,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-22T05:52:47.791Z"
-    },
     {
       "started_at": "2026-10-22T07:41:47.449Z",
       "queued": [
@@ -25548,6 +25538,25 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T14:51:00.569Z"
+    },
+    {
+      "started_at": "2026-11-02T15:19:52.992Z",
+      "queued": [
+        "DfDwwX3t-NB",
+        "DfDws4PNEfQ"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDwk8PtgqJ/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T15:27:08.968Z"
     }
   ],
   "next_account_index": 0,
@@ -26867,10 +26876,10 @@
     "DYChd3MMKy5": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-02T12:26:30.637Z",
-      "failures": 61,
+      "failed_at": "2026-11-02T15:55:43.778Z",
+      "failures": 62,
       "terminal": false,
-      "retry_at": "2026-11-02T15:26:30.637Z"
+      "retry_at": "2026-11-02T18:55:43.778Z"
     },
     "DXopUfjDMPB": {
       "collector_version": 14,
@@ -33180,6 +33189,30 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-02T14:51:00.553Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDwk8PtgqJ": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T15:27:08.950Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDwl_JNd51": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T15:56:34.683Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfDwgegtHE3": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T15:58:28.429Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
