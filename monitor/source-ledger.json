@@ -15629,6 +15629,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfJgEChNUs_/",
       "queued_at": "2026-11-02T03:36:19.046Z",
       "asset_sha256": "d507fe9fdc58f4a304fe3a146ff04991b9d6a5c81b48a6ad72edf2995ef732d0"
+    },
+    "DfJfjwTtwbW": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfJfjwTtwbW/",
+      "queued_at": "2026-11-02T04:43:00.809Z",
+      "asset_sha256": "f4d0fd9cf60b4046bfd8e10dff6a3143af2f0a8579e019b9ad5b791bf28ccd75"
     }
   },
   "checks": {
@@ -15688,30 +15694,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T13:48:26.417Z",
-      "queued": [
-        "DdT827ehfGo",
-        "DdJlyKxhxKz"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DULp5l1kje8/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdIk_LUhlrH/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T13:55:26.082Z"
-    },
     {
       "started_at": "2026-10-21T14:25:06.355Z",
       "queued": [
@@ -25109,6 +25091,25 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T03:18:22.348Z"
+    },
+    {
+      "started_at": "2026-11-02T03:26:26.737Z",
+      "queued": [
+        "DfJgP_MNFbo",
+        "DfJgEChNUs_"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfJgKBBto4-/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T03:36:21.970Z"
     }
   ],
   "next_account_index": 0,
@@ -32541,6 +32542,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-02T03:32:16.385Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfJf_qZtRoB": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-02T04:41:22.729Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
