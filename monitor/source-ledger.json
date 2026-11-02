@@ -15815,6 +15815,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfD8IvdNCeu/",
       "queued_at": "2026-11-02T10:42:34.317Z",
       "asset_sha256": "e3557a88848c944a82d66d928363431e4a3a0819fa2f632ac737b8b2e0f5cc4a"
+    },
+    "DfD8GLVtV3c": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfD8GLVtV3c/",
+      "queued_at": "2026-11-02T10:44:52.928Z",
+      "asset_sha256": "693b476e6595311fcfe7b1f432bf5f988121e047460232d4ef2d8ed6aaa772e3"
     }
   },
   "checks": {
@@ -15874,25 +15880,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-21T21:45:51.542Z",
-      "queued": [
-        "DdEsqK3BcRI",
-        "DdCMbHLB2HH"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdCMCrrBupy/",
-          "stage": "capture_or_queue",
-          "error": "page.waitForTimeout: Target page, context or browser has been closed"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2012,
-      "status": "queued",
-      "finished_at": "2026-10-21T21:52:51.203Z"
-    },
     {
       "started_at": "2026-10-21T21:58:09.100Z",
       "queued": [],
@@ -25382,6 +25369,22 @@
       "inventory": 3041,
       "status": "queued",
       "finished_at": "2026-11-02T10:38:06.371Z"
+    },
+    {
+      "started_at": "2026-11-02T10:39:22.037Z",
+      "queued": [
+        "DfD8MxINde2",
+        "DfD8K1BNys1",
+        "DfD8IQ6tFLG",
+        "DfD8JKDNoic",
+        "DfD8IvdNCeu"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 3041,
+      "status": "queued",
+      "finished_at": "2026-11-02T10:42:36.866Z"
     }
   ],
   "next_account_index": 0,
