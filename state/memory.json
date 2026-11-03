@@ -195026,6 +195026,54 @@
       "status": "ready",
       "discovered_at": "2026-11-03T16:15:59.338Z",
       "key": "d0ea7d046d7a43d89177e41d82a96daef12af1aa6e985fbdd1ddc4d4677fb75c"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DXHXxbbiJfc",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "DXHXxbbiJfc",
+        "start": 0,
+        "end": 24.333
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXHXxbbiJfc/",
+      "source_caption": "14 April 1912 🥀 #Titanic",
+      "source_details": {
+        "title_hint": "Titanic",
+        "source_title": "Titanic",
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": false,
+        "identity_error": "Title needs an explicit year or media type to disambiguate it",
+        "title_hint_verified": "Titanic"
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261103/9438ba1f3a20f934dc95fb86a2aa876cb218cac0875c217e8aa953a0c460d012.mp4?download=1",
+      "asset_sha256": "9438ba1f3a20f934dc95fb86a2aa876cb218cac0875c217e8aa953a0c460d012",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.333,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-03T16:23:59.766Z",
+        "source_duration": 24.333332,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": true,
+      "status": "needs_review",
+      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "discovered_at": "2026-11-03T16:26:28.915Z",
+      "key": "f25c0e1de979e31f284f17e8fe72a9a7b4b0b801148d415eeabbe4131fc14676"
     }
   ],
   "discovery": [],
