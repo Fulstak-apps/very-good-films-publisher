@@ -16109,6 +16109,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DYScbM9C9CQ/",
       "queued_at": "2026-11-03T02:21:05.864Z",
       "asset_sha256": "3fdb51510a4b9c3ba50de10df8c1be498220d59425e38931022d4dbeb705323b"
+    },
+    "DYP88GUC52k": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DYP88GUC52k/",
+      "queued_at": "2026-11-03T02:25:28.099Z",
+      "asset_sha256": "4e3cc80fa47feddcee48ca657e95086feba14a5ce56f21fe2ba2cbff9d0b49b2"
     }
   },
   "checks": {
@@ -16168,21 +16174,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-22T22:46:21.917Z",
-      "queued": [
-        "DeNbZ7nixkC",
-        "DdjB-8ix3-j",
-        "DdfzgtJuWVj",
-        "Ddfzb-ZOvmp"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-22T22:52:55.625Z"
-    },
     {
       "started_at": "2026-10-22T23:34:31.589Z",
       "queued": [
@@ -25937,6 +25928,38 @@
       "inventory": 3098,
       "status": "queued",
       "finished_at": "2026-11-03T02:09:21.068Z"
+    },
+    {
+      "started_at": "2026-11-03T02:13:34.009Z",
+      "queued": [
+        "DYbxZmoCARY",
+        "DYaQwhbCgfN",
+        "DYX8HwFM-Mx",
+        "DYXCQrvC1zi",
+        "DYScbM9C9CQ"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DYev3NxiYv1/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DYhpTKSuaaz/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DYUQH6ciq0k/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 3098,
+      "status": "queued",
+      "finished_at": "2026-11-03T02:21:08.890Z"
     }
   ],
   "next_account_index": 6,
@@ -33748,6 +33771,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-03T02:49:14.809Z"
+    },
+    "DYRtmUXC2-l": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-03T02:24:07.324Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
