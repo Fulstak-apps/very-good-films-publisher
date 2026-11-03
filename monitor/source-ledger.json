@@ -16283,6 +16283,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DfRqgpuiRFW/",
       "queued_at": "2026-11-03T17:08:50.840Z",
       "asset_sha256": "424eae3b05d4b8e630add18fe97dcf1baef0e161f247c54d567e09edd237f395"
+    },
+    "DfRqhleiBhv": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfRqhleiBhv/",
+      "queued_at": "2026-11-03T17:13:39.706Z",
+      "asset_sha256": "b8f7d8f81f607487ca1b9f471495679d240d6743110b024d81897548f7ed549e"
     }
   },
   "checks": {
@@ -16342,28 +16348,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-24T06:16:10.060Z",
-      "queued": [
-        "DbwUY3uiedV",
-        "DbwUK_8Krj2",
-        "DbwUNEgimO8",
-        "DbwUCpDib_n",
-        "Dbvn4XRumR4"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/popcorncutzz/reel/DbxweEFxfq2/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-24T06:21:04.208Z"
-    },
     {
       "started_at": "2026-10-24T07:28:07.841Z",
       "queued": [
@@ -26312,6 +26296,19 @@
       "inventory": 3138,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-03T16:57:24.490Z"
+    },
+    {
+      "started_at": "2026-11-03T17:02:30.645Z",
+      "queued": [
+        "DfRqhGgiOSR",
+        "DfRqgpuiRFW"
+      ],
+      "errors": [],
+      "discovered": 128,
+      "attempts": 2,
+      "inventory": 3142,
+      "status": "queued",
+      "finished_at": "2026-11-03T17:08:53.877Z"
     }
   ],
   "next_account_index": 13,
@@ -34303,10 +34300,10 @@
     "DXCyU7ygCc7": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-03T16:35:59.762Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-03T17:05:59.773Z"
+      "failed_at": "2026-11-03T17:12:48.453Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfPcRCjhJbP": {
       "collector_version": 14,
