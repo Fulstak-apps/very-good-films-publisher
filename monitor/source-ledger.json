@@ -16067,6 +16067,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DYnG1C1CGYd/",
       "queued_at": "2026-11-03T00:32:33.357Z",
       "asset_sha256": "a114f999631cfde4693cc6eef6d80a9461041d8cff3edc67addfde037912fbcb"
+    },
+    "DYh10QZiJaY": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DYh10QZiJaY/",
+      "queued_at": "2026-11-03T02:07:31.575Z",
+      "asset_sha256": "2de5aef7ced4a8dd6851b34d8c6a409b553e9f82b79a2475e1e29c2612098564"
     }
   },
   "checks": {
@@ -16126,22 +16132,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-22T20:15:51.220Z",
-      "queued": [
-        "DeKUIgei3nS",
-        "DeKUJWnCo9d",
-        "DeKUJLWCll5",
-        "DeKUFRQiABA",
-        "DdkObM7i9rS"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-22T20:22:26.118Z"
-    },
     {
       "started_at": "2026-10-22T21:44:44.337Z",
       "queued": [
@@ -25901,6 +25891,36 @@
       "inventory": 3098,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-03T00:22:26.690Z"
+    },
+    {
+      "started_at": "2026-11-03T00:26:16.584Z",
+      "queued": [
+        "DYpfUEaip-W",
+        "DYoi4iBCz8c",
+        "DYnG1C1CGYd"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DYwbAZniLQa/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DYsYi2ti25I/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DYrTcoxCoo0/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3098,
+      "status": "queued",
+      "finished_at": "2026-11-03T00:32:36.125Z"
     }
   ],
   "next_account_index": 6,
@@ -33644,10 +33664,10 @@
     "DZK0oboCxK4": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-02T22:33:20.748Z",
-      "failures": 1,
+      "failed_at": "2026-11-03T02:03:24.890Z",
+      "failures": 2,
       "terminal": false,
-      "retry_at": "2026-11-03T01:33:20.750Z"
+      "retry_at": "2026-11-03T05:03:24.892Z"
     },
     "DYzEaNTCGIa": {
       "collector_version": 14,
@@ -33677,6 +33697,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-03T00:28:29.120Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DYkbnc_isJk": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-03T02:04:32.245Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DYjkHrfixDy": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-03T02:05:35.433Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
