@@ -194645,6 +194645,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-03T05:50:15.304Z",
       "key": "1cd3d53f3fdffaf46db0d74a4858a8d76f97f40f7fbd55a9e1a0e90acc847e18"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DXev-zMCHQZ",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "DXev-zMCHQZ",
+        "start": 0,
+        "end": 22.874
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXev-zMCHQZ/",
+      "source_caption": "Nicole Kidman & Joaquin Phoenix in To Die For, 1995 ☔️",
+      "source_details": {
+        "title_hint": "To Die For",
+        "year": 1995,
+        "source_title": "To Die For",
+        "source_year": 1995,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "To Die For",
+        "title": "To Die For",
+        "type": "movie",
+        "director": "Gus Van Sant",
+        "cast": [
+          "Nicole Kidman",
+          "Joaquin Phoenix",
+          "Matt Dillon"
+        ],
+        "synopsis": "To Die For is a 1995 black comedy film directed by Gus Van Sant. It stars Nicole Kidman, Joaquin Phoenix and Matt Dillon. The plot follows Suzanne Stone, an ambitious New Hampshire woman with dreams of becoming a celebrity, who will stop at nothing until she achieves fame on TV. The film's narrative combines a traditional drama with darkly comic direct-to-camera monologues by Kidman's character, and mockumentary interviews, some tragic, with other characters in the film. To Die For was written by Buck Henry based on Joyce Maynard's novel of the same title, which in turn was inspired by the story of Pamela Smart, a woman who was convicted in 1991 for being an accomplice in a plot to murder he",
+        "metadata_source": "https://en.wikipedia.org/wiki/To_Die_For",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "To Die For",
+          "source_year": 1995,
+          "catalog_title": "To Die For",
+          "catalog_year": 1995,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261103/0a165850c05ad336c96dbb47f1ba159c998ad7cf59196b121adcdcd132b6988c.mp4?download=1",
+      "asset_sha256": "0a165850c05ad336c96dbb47f1ba159c998ad7cf59196b121adcdcd132b6988c",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 22.755,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-03T06:26:54.101Z",
+        "source_duration": 22.874999,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-03T06:31:10.259Z",
+      "key": "e7f3ad37e3dddc5ab009b01e1c8e15173f204f0749ea8f797e8882d09f59cdc1"
     }
   ],
   "discovery": [],
