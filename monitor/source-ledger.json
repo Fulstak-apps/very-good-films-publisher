@@ -16259,6 +16259,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfPcPx0hSQj/",
       "queued_at": "2026-11-03T16:43:30.929Z",
       "asset_sha256": "cc60c3d26c53d5f78ddeb2aeec6a74e9c3e019798732f7ea3eae0c8afc4b8286"
+    },
+    "DfO9i8Qhazf": {
+      "source_handle": "movie_vault_4u",
+      "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfO9i8Qhazf/",
+      "queued_at": "2026-11-03T16:50:35.609Z",
+      "asset_sha256": "c3f79b7245236b4303a5552fcc7c4faf4799c19a596546e4eadceac93ad9e406"
     }
   },
   "checks": {
@@ -16318,22 +16324,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-24T01:43:53.797Z",
-      "queued": [
-        "Db8wlQSxPvF",
-        "Db6kSOgi7A1",
-        "Db5OUgTiOiQ",
-        "Db5OSAgC7pR",
-        "Db5OP5-idBb"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-24T01:45:34.262Z"
-    },
     {
       "started_at": "2026-10-24T03:44:21.799Z",
       "queued": [
@@ -26288,6 +26278,24 @@
       "inventory": 3134,
       "status": "queued",
       "finished_at": "2026-11-03T16:36:12.143Z"
+    },
+    {
+      "started_at": "2026-11-03T16:36:25.107Z",
+      "queued": [
+        "DfPcPx0hSQj"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfPcRCjhJbP/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovered": 128,
+      "attempts": 2,
+      "inventory": 3138,
+      "status": "queued",
+      "finished_at": "2026-11-03T16:43:35.657Z"
     }
   ],
   "next_account_index": 12,
