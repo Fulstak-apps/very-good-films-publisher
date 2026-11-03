@@ -16247,6 +16247,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXHXxbbiJfc/",
       "queued_at": "2026-11-03T16:23:59.795Z",
       "asset_sha256": "9438ba1f3a20f934dc95fb86a2aa876cb218cac0875c217e8aa953a0c460d012"
+    },
+    "DXE83p_iPw9": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXE83p_iPw9/",
+      "queued_at": "2026-11-03T16:33:41.505Z",
+      "asset_sha256": "834490e3c403dc53b65dbfd8f5b1250d124552847b28720e4585998232782542"
     }
   },
   "checks": {
@@ -16306,22 +16312,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-23T22:12:03.934Z",
-      "queued": [
-        "DcCtkrDO80F",
-        "DcComBZOyTl",
-        "DcCPicDif53",
-        "DcCNYPCChU8",
-        "Db_SiDLRmAE"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-23T22:17:06.111Z"
-    },
     {
       "started_at": "2026-10-23T23:50:06.159Z",
       "queued": [
@@ -26242,6 +26232,44 @@
       "inventory": 3134,
       "status": "queued",
       "finished_at": "2026-11-03T16:16:57.241Z"
+    },
+    {
+      "started_at": "2026-11-03T16:20:52.132Z",
+      "queued": [
+        "DXHXxbbiJfc"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXaHAX1AIkB/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXZWQ1NgisB/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXHs6fJCOPY/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXHCQEECJpx/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXFNi4kANjb/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3134,
+      "status": "queued",
+      "finished_at": "2026-11-03T16:30:29.184Z"
     }
   ],
   "next_account_index": 11,
@@ -34205,6 +34233,22 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-03T16:52:17.329Z"
+    },
+    "DXHCQEECJpx": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-03T16:26:26.988Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DXFNi4kANjb": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-03T16:30:29.163Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
