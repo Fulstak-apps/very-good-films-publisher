@@ -193036,6 +193036,78 @@
       "status": "ready",
       "discovered_at": "2026-11-03T00:31:44.496Z",
       "key": "7a762838a6fa8a2e200cc3b134192a0ef866834b37886263e158ba860b31b644"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DYnG1C1CGYd",
+        "title": "@ellsoriaa clip"
+      },
+      "scene": {
+        "id": "DYnG1C1CGYd",
+        "start": 0,
+        "end": 41.541
+      },
+      "source_post_url": "https://www.instagram.com/ellsoriaa/reel/DYnG1C1CGYd/",
+      "source_caption": "vivre sa vie, 1962 \n\n#fyp #vivresavie #jeanlucgodard #annakarina #guylaineschlumberger",
+      "source_details": {
+        "title_hint": "vivre sa vie",
+        "year": 1962,
+        "source_title": "vivre sa vie",
+        "source_year": 1962,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "Vivre sa vie",
+        "type": "movie",
+        "director": "Jean-Luc Godard",
+        "cast": [
+          "Anna Karina",
+          "Brice Parain",
+          "Sady Rebbot"
+        ],
+        "synopsis": "Vivre sa vie (French: Vivre sa vie : film en douze tableaux, lit. 'To Live Her Life: A Film in Twelve Scenes', pronounced [vivʁ(ə) sa vi]) is a 1962 French New Wave drama film written and directed by Jean-Luc Godard. The film was released in the United States as My Life to Live and in the United Kingdom as It's My Life. It was met with critical acclaim for Anna Karina's performance and Godard's direction. It has been regarded it as one of Godard's best films and one of the greatest films of all time.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Vivre_sa_vie",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "vivre sa vie",
+          "source_year": 1962,
+          "catalog_title": "Vivre sa vie",
+          "catalog_year": 1962,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261103/a114f999631cfde4693cc6eef6d80a9461041d8cff3edc67addfde037912fbcb.mp4?download=1",
+      "asset_sha256": "a114f999631cfde4693cc6eef6d80a9461041d8cff3edc67addfde037912fbcb",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 41.434,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0.0834168,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-03T00:32:33.356Z",
+        "source_duration": 41.54145812479146,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-03T00:37:04.945Z",
+      "key": "45976067812890b6d63454568abcd27254c06140c5ba89e38c8c5503ec20f920"
     }
   ],
   "discovery": [],
