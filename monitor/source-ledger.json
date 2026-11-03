@@ -16241,6 +16241,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXKLUxXCNtO/",
       "queued_at": "2026-11-03T16:15:14.830Z",
       "asset_sha256": "b817a6247413bdc85837a256778950ec1a9cb2fb35b94ee868d6b93e46417d16"
+    },
+    "DXHXxbbiJfc": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXHXxbbiJfc/",
+      "queued_at": "2026-11-03T16:23:59.795Z",
+      "asset_sha256": "9438ba1f3a20f934dc95fb86a2aa876cb218cac0875c217e8aa953a0c460d012"
     }
   },
   "checks": {
@@ -16300,33 +16306,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-23T22:01:52.832Z",
-      "queued": [
-        "DcEMnxhuYBC",
-        "DcEIBEBOnKL",
-        "DcEH-pGuyCq",
-        "DcEH6hxOs0n",
-        "DcEH2fzO06E"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DW5u0ZKk8t2/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DW5u0ZKk8t2-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DZvBdgZMNc0/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 7,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-23T22:06:53.130Z"
-    },
     {
       "started_at": "2026-10-23T22:12:03.934Z",
       "queued": [
@@ -26240,6 +26219,29 @@
       "inventory": 3134,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-03T16:07:04.097Z"
+    },
+    {
+      "started_at": "2026-11-03T16:10:32.043Z",
+      "queued": [
+        "DXKLUxXCNtO"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXMMVU5CA2s/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXJ10g_CMZa/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3134,
+      "status": "queued",
+      "finished_at": "2026-11-03T16:16:57.241Z"
     }
   ],
   "next_account_index": 11,
@@ -34143,18 +34145,18 @@
     "DXaHAX1AIkB": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-03T15:49:06.239Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-03T16:19:06.239Z"
+      "failed_at": "2026-11-03T16:20:53.439Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DXZWQ1NgisB": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-03T15:50:43.914Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-03T16:20:43.914Z"
+      "failed_at": "2026-11-03T16:20:54.757Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DXY6NLYAE16": {
       "collector_version": 14,
@@ -34187,6 +34189,22 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "DXJ10g_CMZa": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-03T16:16:57.218Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DXHs6fJCOPY": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-03T16:22:17.329Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-03T16:52:17.329Z"
     }
   },
   "candidates": {
