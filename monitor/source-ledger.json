@@ -16379,6 +16379,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfRJIFbN9M_/",
       "queued_at": "2026-11-03T22:13:43.007Z",
       "asset_sha256": "0817f022d341987a25f5523fb373ffd1109cb50daaacb31ba85b8784957beef1"
+    },
+    "DfRJAi8N6QC": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfRJAi8N6QC/",
+      "queued_at": "2026-11-03T23:24:08.148Z",
+      "asset_sha256": "bd705be4b88c3af81c900c3744b248388162885401282f0dc7a39ca90e0c34e5"
     }
   },
   "checks": {
@@ -16438,28 +16444,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-24T14:19:29.807Z",
-      "queued": [
-        "DbflRa2Cj6R",
-        "DbflLN1iMmm",
-        "DberVkuOszz",
-        "DbenCpKujdP",
-        "DbejFWMupTg"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-24T14:25:31.477Z"
-    },
     {
       "started_at": "2026-10-24T15:32:26.808Z",
       "queued": [
@@ -26403,6 +26387,35 @@
       "inventory": 3200,
       "status": "queued",
       "finished_at": "2026-11-03T22:02:38.180Z"
+    },
+    {
+      "started_at": "2026-11-03T22:06:38.344Z",
+      "queued": [
+        "DfRJJo9NBky",
+        "DfRJIFbN9M_"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DTQsGPREvWy/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DXNS7YXDEy6/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfRJKjAtqNG/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 3200,
+      "status": "queued",
+      "finished_at": "2026-11-03T22:13:47.851Z"
     }
   ],
   "next_account_index": 0,
