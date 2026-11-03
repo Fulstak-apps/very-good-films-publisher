@@ -16205,6 +16205,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYciF2IiaRt/",
       "queued_at": "2026-11-03T04:44:36.639Z",
       "asset_sha256": "6c5994789d65071eaf14434ef2fe510f761cb6a0197c01a7fc91528e75a9272e"
+    },
+    "DYaZXbtg7iT": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYaZXbtg7iT/",
+      "queued_at": "2026-11-03T05:41:41.211Z",
+      "asset_sha256": "b0826c96ab5864cc3cf82ee522c3cbc361240b77cbe1a70a8b389d2b85389660"
     }
   },
   "checks": {
@@ -16264,22 +16270,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-23T11:03:15.391Z",
-      "queued": [
-        "DcjeuzrC1_Q",
-        "DcjbDIsiNq6",
-        "DcjbD2-K1C8",
-        "DchudX9Owbu",
-        "DchbrL9ukTp"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-23T11:07:28.862Z"
-    },
     {
       "started_at": "2026-10-23T12:40:10.235Z",
       "queued": [
@@ -26030,6 +26020,28 @@
       "inventory": 3134,
       "status": "queued",
       "finished_at": "2026-11-03T04:34:05.888Z"
+    },
+    {
+      "started_at": "2026-11-03T04:38:12.490Z",
+      "queued": [
+        "DYhZoTyChzU",
+        "DYfT4zgADTy",
+        "DYedd8Gg8Q6",
+        "DYc2PsIAgVe",
+        "DYciF2IiaRt"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DYepiBYiEKL/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3134,
+      "status": "queued",
+      "finished_at": "2026-11-03T04:44:39.245Z"
     }
   ],
   "next_account_index": 11,
@@ -32005,10 +32017,10 @@
     "DYhpTKSuaaz": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-03T02:17:21.630Z",
-      "failures": 18,
+      "failed_at": "2026-11-03T05:39:43.349Z",
+      "failures": 19,
       "terminal": false,
-      "retry_at": "2026-11-03T05:17:21.633Z"
+      "retry_at": "2026-11-03T08:39:43.349Z"
     },
     "DWmHJDLkw1Q": {
       "collector_version": 14,
@@ -33773,10 +33785,10 @@
     "DZK0oboCxK4": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-03T02:03:24.890Z",
-      "failures": 2,
+      "failed_at": "2026-11-03T05:39:34.280Z",
+      "failures": 3,
       "terminal": false,
-      "retry_at": "2026-11-03T05:03:24.892Z"
+      "retry_at": "2026-11-03T08:39:34.280Z"
     },
     "DYzEaNTCGIa": {
       "collector_version": 14,
@@ -33877,10 +33889,10 @@
     "DYepiBYiEKL": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-03T04:39:50.692Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-03T05:09:50.692Z"
+      "failed_at": "2026-11-03T05:39:43.994Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
