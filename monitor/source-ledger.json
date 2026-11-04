@@ -16787,6 +16787,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DfVJirzuQrl/",
       "queued_at": "2026-11-04T22:45:00.032Z",
       "asset_sha256": "d57b21468026383405e294b75f1cf3d9e9bb0965da8878ac024811a0cd2a6c2f"
+    },
+    "DVtk0YbghUR": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DVtk0YbghUR/",
+      "queued_at": "2026-11-04T22:55:23.989Z",
+      "asset_sha256": "793cf351caa5daf032c5cae968e95fea36dfd32b1264502b37930255387f9d87"
     }
   },
   "checks": {
@@ -16812,10 +16818,10 @@
       "checked_at": "2026-11-04T22:43:46.051Z"
     },
     "film.fission": {
-      "checked_at": "2026-11-04T06:29:54.682Z"
+      "checked_at": "2026-11-04T22:48:50.888Z"
     },
     "ellsoriaa": {
-      "checked_at": "2026-11-04T06:45:20.075Z"
+      "checked_at": "2026-11-04T22:54:04.914Z"
     },
     "relatedfilms": {
       "checked_at": "2026-11-04T16:01:30.391Z"
@@ -16846,108 +16852,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-27T21:55:35.577Z",
-      "queued": [
-        "Da2-00YuMj4",
-        "Da0Y8LCOe--",
-        "Da0Ef8Tty4I",
-        "DavKENpuDme",
-        "Dap_m5EO2ma"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2695,
-      "status": "queued",
-      "finished_at": "2026-10-27T21:58:02.713Z"
-    },
-    {
-      "started_at": "2026-10-29T17:59:03.908Z",
-      "queued": [
-        "DamFfnNOkqh",
-        "Dak2CT6uVKa",
-        "DaiQ5f0uKOV",
-        "DaVVZ1UuN1V"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
-          "stage": "capture_or_queue",
-          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
-        },
-        {
-          "source_url": "https://www.instagram.com/relatedfilms/reel/DbLrD8YpiH9/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DbLrD8YpiH9-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdpvSGKh-c-/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdpvSGKh-c--capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DUBUmfFEVMU/",
-          "stage": "capture_or_queue",
-          "error": "Rendered Reel failed video/audio/duration QA"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DcDylRdC4eG/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/uneedmink/reel/DTpAeVyDvOR/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/De0czysNnNF/",
-          "stage": "capture_or_queue",
-          "error": "Video exceeds GitHub media size limit"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/Db-32TBSqym/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DcjEX6_gkI-/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DadLUDmuYI1/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DadLUDmuYI1-capture-diagnostic.json"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 18,
-      "inventory": 2695,
-      "status": "queued",
-      "finished_at": "2026-10-29T18:05:16.785Z"
-    },
     {
       "started_at": "2026-10-29T19:10:17.545Z",
       "queued": [
@@ -27172,9 +27076,31 @@
       "inventory": 3286,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-04T22:38:37.635Z"
+    },
+    {
+      "started_at": "2026-11-04T22:42:58.001Z",
+      "queued": [
+        "DfVJirzuQrl"
+      ],
+      "errors": [],
+      "discovered": 208,
+      "attempts": 1,
+      "inventory": 3287,
+      "status": "queued",
+      "finished_at": "2026-11-04T22:45:03.246Z"
+    },
+    {
+      "started_at": "2026-11-04T22:48:04.178Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 196,
+      "attempts": 0,
+      "inventory": 3287,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-04T22:48:50.910Z"
     }
   ],
-  "next_account_index": 4,
+  "next_account_index": 6,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -52140,6 +52066,206 @@
       "handle": "the_goodfilms",
       "url": "https://www.instagram.com/the_goodfilms/reel/DfVJirzuQrl/",
       "shortcode": "DfVJirzuQrl"
+    },
+    "DVtk0YbghUR": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVtk0YbghUR/",
+      "shortcode": "DVtk0YbghUR"
+    },
+    "DVoYVwmgluf": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVoYVwmgluf/",
+      "shortcode": "DVoYVwmgluf"
+    },
+    "DVl--X6AqL-": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVl--X6AqL-/",
+      "shortcode": "DVl--X6AqL-"
+    },
+    "DVeMOJpgidO": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVeMOJpgidO/",
+      "shortcode": "DVeMOJpgidO"
+    },
+    "DVWV5_FgvNg": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVWV5_FgvNg/",
+      "shortcode": "DVWV5_FgvNg"
+    },
+    "DVT6NHkgn0e": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVT6NHkgn0e/",
+      "shortcode": "DVT6NHkgn0e"
+    },
+    "DVOhO3zAq9M": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVOhO3zAq9M/",
+      "shortcode": "DVOhO3zAq9M"
+    },
+    "DVBNM5_AqnF": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DVBNM5_AqnF/",
+      "shortcode": "DVBNM5_AqnF"
+    },
+    "DU3omnBArC3": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DU3omnBArC3/",
+      "shortcode": "DU3omnBArC3"
+    },
+    "DU1Kiengvwo": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DU1Kiengvwo/",
+      "shortcode": "DU1Kiengvwo"
+    },
+    "DUyfsbvgnuA": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUyfsbvgnuA/",
+      "shortcode": "DUyfsbvgnuA"
+    },
+    "DUvtdtcgh2j": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUvtdtcgh2j/",
+      "shortcode": "DUvtdtcgh2j"
+    },
+    "DUtbxq2gn_r": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUtbxq2gn_r/",
+      "shortcode": "DUtbxq2gn_r"
+    },
+    "DUqvdo8gtEL": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUqvdo8gtEL/",
+      "shortcode": "DUqvdo8gtEL"
+    },
+    "DUoEeTlAkoy": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUoEeTlAkoy/",
+      "shortcode": "DUoEeTlAkoy"
+    },
+    "DUlgx2lApfL": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUlgx2lApfL/",
+      "shortcode": "DUlgx2lApfL"
+    },
+    "DUggj4RgnsO": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUggj4RgnsO/",
+      "shortcode": "DUggj4RgnsO"
+    },
+    "DUeGvoaAgX7": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUeGvoaAgX7/",
+      "shortcode": "DUeGvoaAgX7"
+    },
+    "DUbV0r_Ap7N": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUbV0r_Ap7N/",
+      "shortcode": "DUbV0r_Ap7N"
+    },
+    "DUYuE_8AvuD": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUYuE_8AvuD/",
+      "shortcode": "DUYuE_8AvuD"
+    },
+    "DUWGnbIgo2N": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUWGnbIgo2N/",
+      "shortcode": "DUWGnbIgo2N"
+    },
+    "DUUNRejAsY1": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUUNRejAsY1/",
+      "shortcode": "DUUNRejAsY1"
+    },
+    "DURM3j5grgr": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DURM3j5grgr/",
+      "shortcode": "DURM3j5grgr"
+    },
+    "DUO1Awqgof3": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUO1Awqgof3/",
+      "shortcode": "DUO1Awqgof3"
+    },
+    "DULzSupgmaZ": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DULzSupgmaZ/",
+      "shortcode": "DULzSupgmaZ"
+    },
+    "DUJH1FFAjAS": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUJH1FFAjAS/",
+      "shortcode": "DUJH1FFAjAS"
+    },
+    "DUGuZwSAs9-": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUGuZwSAs9-/",
+      "shortcode": "DUGuZwSAs9-"
+    },
+    "DUBwMooAmCm": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DUBwMooAmCm/",
+      "shortcode": "DUBwMooAmCm"
+    },
+    "DTvs72yAnWT": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DTvs72yAnWT/",
+      "shortcode": "DTvs72yAnWT"
+    },
+    "DTqo_gMgpWr": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DTqo_gMgpWr/",
+      "shortcode": "DTqo_gMgpWr"
+    },
+    "DTeN3poArw1": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DTeN3poArw1/",
+      "shortcode": "DTeN3poArw1"
+    },
+    "DTYd045Avwd": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DTYd045Avwd/",
+      "shortcode": "DTYd045Avwd"
+    },
+    "DTWDMLZgn1r": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DTWDMLZgn1r/",
+      "shortcode": "DTWDMLZgn1r"
+    },
+    "DTQn8g6gpxk": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DTQn8g6gpxk/",
+      "shortcode": "DTQn8g6gpxk"
+    },
+    "DS-6SElgj-T": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DS-6SElgj-T/",
+      "shortcode": "DS-6SElgj-T"
+    },
+    "DS755eMgswb": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DS755eMgswb/",
+      "shortcode": "DS755eMgswb"
+    },
+    "DS28erhgsVq": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DS28erhgsVq/",
+      "shortcode": "DS28erhgsVq"
+    },
+    "DS2GJLZgrJy": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DS2GJLZgrJy/",
+      "shortcode": "DS2GJLZgrJy"
+    },
+    "DSp7vTuAh0J": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DSp7vTuAh0J/",
+      "shortcode": "DSp7vTuAh0J"
+    },
+    "DSn149cAqKw": {
+      "handle": "ellsoriaa",
+      "url": "https://www.instagram.com/ellsoriaa/reel/DSn149cAqKw/",
+      "shortcode": "DSn149cAqKw"
     }
   },
   "discovery_depth": {
@@ -52147,8 +52273,8 @@
     "thecinemanerd.ig": 50,
     "theacenyc": 50,
     "the_goodfilms": 60,
-    "film.fission": 50,
-    "ellsoriaa": 60,
+    "film.fission": 60,
+    "ellsoriaa": 70,
     "relatedfilms": 20,
     "uneedmink": 20,
     "cinemoviie": 40,
