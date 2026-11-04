@@ -201686,6 +201686,75 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-04T22:58:38.085Z",
       "key": "9b3a681bea9533b8f6935aab1f425ea85216214b981f4df22bf38a7896c226fd"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DVT6NHkgn0e",
+        "title": "@ellsoriaa clip"
+      },
+      "scene": {
+        "id": "DVT6NHkgn0e",
+        "start": 0,
+        "end": 28.537
+      },
+      "source_post_url": "https://www.instagram.com/ellsoriaa/reel/DVT6NHkgn0e/",
+      "source_caption": "Bridgerton Season 4\n\n #fyp #bridgerton #hwrpartner #bridgertonnetflix #cinephile",
+      "source_details": {
+        "title_hint": "Bridgerton Season 4",
+        "media_type_hint": "tv",
+        "source_title": "Bridgerton Season 4",
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": false,
+        "title": "Bridgerton",
+        "type": "tv",
+        "director": "Shondaland into an American television series",
+        "cast": [],
+        "synopsis": "Bridgerton is a series of eight Regency romance novels written by Julia Quinn. Published from 2000 to 2006, the Bridgerton series tells a story of eight siblings of the fictional noble Bridgerton family as they navigate London high society in search of love, adventure and happiness. The novels have been adapted by Shondaland into an American television series, Bridgerton, which premiered in 2020 on Netflix.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Bridgerton_(novel_series)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Bridgerton",
+          "source_year": null,
+          "catalog_title": "Bridgerton",
+          "catalog_year": 2020,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_type_match"
+          ]
+        },
+        "title_hint_verified": "Bridgerton Season 4"
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261104/1461b484e97ac05dff6819533f16f8fb94c98b26228572c40ed584205ca4dc8d.mp4?download=1",
+      "asset_sha256": "1461b484e97ac05dff6819533f16f8fb94c98b26228572c40ed584205ca4dc8d",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 28.533333,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-04T23:04:00.368Z",
+        "source_duration": 28.537324,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": true,
+      "status": "needs_review",
+      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "discovered_at": "2026-11-04T23:05:15.239Z",
+      "key": "b353b95d76850dc38a9c90c26cd262572e95e048de572ea7dc9e6c05bfad4c3b"
     }
   ],
   "discovery": [],
