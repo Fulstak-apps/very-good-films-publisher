@@ -198501,7 +198501,9 @@
       "threads_container_created_at": "2026-11-04T11:15:47.426Z",
       "threads_container_checked_at": "2026-11-04T11:15:47.426Z",
       "instagram_container_status": "FINISHED",
-      "instagram_publish_requested_at": "2026-11-04T11:20:43.753Z"
+      "instagram_publish_requested_at": "2026-11-04T11:20:43.753Z",
+      "instagram_error": "Command failed: git push origin HEAD:main\nremote: Internal Server Error        \nremote: Request ID 0C03:375A36:2853637:355B08A:6AEB1523        \nremote: Time 2026-11-04T11:21:08Z\nTo https://github.com/Fulstak-apps/very-good-films-publisher\n ! [remote rejected] HEAD -> main (Internal Server Error)\nerror: failed to push some refs to 'https://github.com/Fulstak-apps/very-good-films-publisher'\n",
+      "instagram_error_class": "transient"
     },
     {
       "kind": "source_repost",
@@ -199396,7 +199398,7 @@
   "discovery": [],
   "platforms": {
     "instagram": {
-      "retry_at": "2026-10-29T16:37:08.250Z",
+      "retry_at": "2026-11-04T11:36:08.658Z",
       "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
     },
     "threads": {
