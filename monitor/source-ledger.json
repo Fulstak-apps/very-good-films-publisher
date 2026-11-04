@@ -16643,6 +16643,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DWCVqQ1gvtU/",
       "queued_at": "2026-11-04T13:48:17.812Z",
       "asset_sha256": "f3543bfa3109f2f46696dabc4081aff6f908bec85412cb49adbe95f6c1a2372a"
+    },
+    "DV-_MawAvdZ": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DV-_MawAvdZ/",
+      "queued_at": "2026-11-04T14:08:57.039Z",
+      "asset_sha256": "2b1b7f9d517fd8b0ddae5db236ec16dee0d5665bf9827920b2cb9a82dfc577f9"
     }
   },
   "checks": {
@@ -16702,20 +16708,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-26T03:37:13.179Z",
-      "queued": [
-        "De6HidSt9_n",
-        "De6HkO5Neno",
-        "De6HbsLNna4"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2401,
-      "status": "queued",
-      "finished_at": "2026-10-26T03:44:09.609Z"
-    },
     {
       "started_at": "2026-10-26T07:08:54.992Z",
       "queued": [
@@ -26965,6 +26957,43 @@
       "inventory": 3242,
       "status": "queued",
       "finished_at": "2026-11-04T13:38:44.579Z"
+    },
+    {
+      "started_at": "2026-11-04T13:42:38.629Z",
+      "queued": [
+        "DWbdJQaAjIk",
+        "DWYvYVQgrNn",
+        "DWM5Zpvgt20",
+        "DWMLfpoArqj",
+        "DWCVqQ1gvtU"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DWgMqvrAlJE/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DWeyup8glA2/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DWdxIgUAiPh/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DYChd3MMKy5/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 9,
+      "inventory": 3242,
+      "status": "queued",
+      "finished_at": "2026-11-04T13:48:21.001Z"
     }
   ],
   "next_account_index": 6,
