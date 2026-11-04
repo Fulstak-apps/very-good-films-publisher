@@ -16481,6 +16481,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfOcBnwtqPh/",
       "queued_at": "2026-11-04T05:32:01.576Z",
       "asset_sha256": "41f3a3d8bad8327862a72314faead1d294cc2ac33fd6a89991d4bcda27f89aa3"
+    },
+    "DfOcT66tAGW": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfOcT66tAGW/",
+      "queued_at": "2026-11-04T05:56:25.917Z",
+      "asset_sha256": "78ac3af051391ae42ab9b2afef23d89f7c9f1d4af5aca11864c495597f2a51d8"
     }
   },
   "checks": {
@@ -16540,28 +16546,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-25T19:07:40.575Z",
-      "queued": [
-        "DbKX8Gcubx3",
-        "DbJZUQrCCDO",
-        "DbIP7gIhGsU",
-        "DbH7UoIB9oU",
-        "DbH5qyGCIjR"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 6,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-25T19:13:19.805Z"
-    },
     {
       "started_at": "2026-10-25T20:47:50.614Z",
       "queued": [
@@ -26668,6 +26652,34 @@
       "inventory": 3200,
       "status": "queued",
       "finished_at": "2026-11-04T05:24:57.294Z"
+    },
+    {
+      "started_at": "2026-11-04T05:27:59.020Z",
+      "queued": [
+        "DfOcBnwtqPh"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DbeTAW6CfGT/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfOfy0uN-0d/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfOcOyXtCD3/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 3200,
+      "status": "queued",
+      "finished_at": "2026-11-04T05:34:46.737Z"
     }
   ],
   "next_account_index": 0,
@@ -32386,11 +32398,11 @@
     },
     "Dc_xA94z9gC": {
       "collector_version": 14,
-      "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-03T15:45:35.823Z",
-      "failures": 20,
+      "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json",
+      "failed_at": "2026-11-04T05:54:53.353Z",
+      "failures": 21,
       "terminal": false,
-      "retry_at": "2026-11-03T18:45:35.823Z"
+      "retry_at": "2026-11-04T08:54:53.353Z"
     },
     "Dc-evxuhvsp": {
       "collector_version": 14,
@@ -34860,6 +34872,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-04T05:24:57.260Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfOfy0uN-0d": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-04T05:32:57.618Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfOcOyXtCD3": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-04T05:34:46.721Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
