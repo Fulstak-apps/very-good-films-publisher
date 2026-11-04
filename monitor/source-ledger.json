@@ -16517,6 +16517,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DXrcbcuAn79/",
       "queued_at": "2026-11-04T06:50:34.696Z",
       "asset_sha256": "5a467a27a4c92953d6e7a296c10a6f79b53c5c17b70ba46aff12cd9c80f03891"
+    },
+    "DXh4c1uAh97": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DXh4c1uAh97/",
+      "queued_at": "2026-11-04T07:42:24.751Z",
+      "asset_sha256": "4ec8ace16b3a155b098e9842da761a045f8a211810a56c93107d964afbdeff79"
     }
   },
   "checks": {
@@ -16576,29 +16582,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-26T00:08:30.108Z",
-      "queued": [
-        "DcyyGFzBrc_"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DczyscJBNxZ/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 2313,
-      "status": "queued",
-      "finished_at": "2026-10-26T00:13:48.243Z"
-    },
     {
       "started_at": "2026-10-26T00:19:00.624Z",
       "queued": [],
@@ -26563,6 +26546,32 @@
       "inventory": 3202,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-04T06:39:33.718Z"
+    },
+    {
+      "started_at": "2026-11-04T06:44:31.256Z",
+      "queued": [
+        "DX6kwgVigBr",
+        "DX4sj87iTWg",
+        "DXzdJHdCSzU",
+        "DXrcbcuAn79"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DX2ZGKkCqFh/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DXuFRr7AhvF/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 208,
+      "attempts": 6,
+      "inventory": 3242,
+      "status": "queued",
+      "finished_at": "2026-11-04T06:50:38.685Z"
     }
   ],
   "next_account_index": 6,
@@ -34803,6 +34812,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-04T06:49:27.324Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DXo_2JpglvC": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-04T07:41:19.185Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
