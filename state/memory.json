@@ -191810,7 +191810,9 @@
       "instagram_container_checked_at": "2026-11-04T09:59:02.583Z",
       "threads_container_id": "18126921154878796",
       "threads_container_created_at": "2026-11-04T09:59:10.356Z",
-      "threads_container_checked_at": "2026-11-04T09:59:10.356Z"
+      "threads_container_checked_at": "2026-11-04T09:59:10.356Z",
+      "threads_error": "Command failed: git push origin HEAD:main\nremote: Internal Server Error        \nremote: Request ID 0CC5:1C45D2:340BBA:49E3AB:6AEB01F2        \nremote: Time 2026-11-04T09:59:15Z\nTo https://github.com/Fulstak-apps/very-good-films-publisher\n ! [remote rejected] HEAD -> main (Internal Server Error)\nerror: failed to push some refs to 'https://github.com/Fulstak-apps/very-good-films-publisher'\n",
+      "threads_error_class": "transient"
     },
     {
       "kind": "source_repost",
@@ -198811,7 +198813,7 @@
       "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
     },
     "threads": {
-      "retry_at": "2026-11-03T05:52:33.887Z",
+      "retry_at": "2026-11-04T10:14:15.175Z",
       "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: This Threads account needs to complete a checkpoint before it can access this app. To recover access, log in to www.threads.com and follow the instructions."
     }
   },
