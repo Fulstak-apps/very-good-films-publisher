@@ -16673,6 +16673,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DVzc9wbgj40/",
       "queued_at": "2026-11-04T14:13:01.330Z",
       "asset_sha256": "b33f41dff299d555048e9fe3332e5668e8ae2e9cc901ea942c9e118b5ffc7ea7"
+    },
+    "DVx9tOkAko_": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DVx9tOkAko_/",
+      "queued_at": "2026-11-04T14:14:40.434Z",
+      "asset_sha256": "795b031e14c51091ad87572cb66664eaa3f0b31f022f8952661a8eabc5e73d9c"
     }
   },
   "checks": {
@@ -16732,21 +16738,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-26T07:08:54.992Z",
-      "queued": [
-        "De6HF6ztLYL",
-        "De6G8otNDmU",
-        "De6G19ttgJl",
-        "De6Gxp6tLKc"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 2401,
-      "status": "queued",
-      "finished_at": "2026-10-26T07:15:47.723Z"
-    },
     {
       "started_at": "2026-10-26T09:11:20.939Z",
       "queued": [
@@ -27018,6 +27009,28 @@
       "inventory": 3242,
       "status": "queued",
       "finished_at": "2026-11-04T13:48:21.001Z"
+    },
+    {
+      "started_at": "2026-11-04T14:08:12.161Z",
+      "queued": [
+        "DV-_MawAvdZ",
+        "DV8756wAkCR",
+        "DV6lEE9ghOG",
+        "DV1DyE7gj4Z",
+        "DVzc9wbgj40"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DbrxfavO00u/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3242,
+      "status": "queued",
+      "finished_at": "2026-11-04T14:13:03.962Z"
     }
   ],
   "next_account_index": 6,
@@ -32473,10 +32486,10 @@
     "DaDHOMUA5Pl": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-04T04:52:47.678Z",
-      "failures": 37,
+      "failed_at": "2026-11-04T14:13:26.207Z",
+      "failures": 38,
       "terminal": false,
-      "retry_at": "2026-11-04T07:52:47.678Z"
+      "retry_at": "2026-11-04T17:13:26.208Z"
     },
     "DZ-Nk-Nohfv": {
       "collector_version": 14,
@@ -33001,10 +33014,10 @@
     "DWmHJDLkw1Q": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-04T04:52:40.778Z",
-      "failures": 18,
+      "failed_at": "2026-11-04T14:13:36.138Z",
+      "failures": 19,
       "terminal": false,
-      "retry_at": "2026-11-04T07:52:40.779Z"
+      "retry_at": "2026-11-04T17:13:36.138Z"
     },
     "DWgvk-8kwhX": {
       "collector_version": 14,
