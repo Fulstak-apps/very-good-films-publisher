@@ -16583,6 +16583,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DW1K1_agtY4/",
       "queued_at": "2026-11-04T10:24:35.964Z",
       "asset_sha256": "9a60ec4697cf5b0545ecd513207ff120d73a63178de0378d3174872cbdebb980"
+    },
+    "DWq87_Hggwd": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DWq87_Hggwd/",
+      "queued_at": "2026-11-04T10:29:23.402Z",
+      "asset_sha256": "69d8836533a29080fbe0c9b4e4070b6ebdc226b8bde8e0bae870908b1902a873"
     }
   },
   "checks": {
@@ -16642,22 +16648,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-26T00:41:13.374Z",
-      "queued": [
-        "De6IUZUN0XR",
-        "De6ITb3tzDj",
-        "De6IOsBNjTz",
-        "De6IMxLtsmH",
-        "De6ILf5tevG"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2401,
-      "status": "queued",
-      "finished_at": "2026-10-26T00:48:08.571Z"
-    },
     {
       "started_at": "2026-10-26T02:29:41.558Z",
       "queued": [
@@ -26769,6 +26759,38 @@
       "inventory": 3242,
       "status": "queued",
       "finished_at": "2026-11-04T10:16:03.523Z"
+    },
+    {
+      "started_at": "2026-11-04T10:18:36.856Z",
+      "queued": [
+        "DXMq6V0AnEi",
+        "DXCmyaigkbl",
+        "DW9VeEgAnO9",
+        "DW3eLjOAnch",
+        "DW1K1_agtY4"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DXMq6V0AnEi/",
+          "stage": "capture_or_queue",
+          "error": "Command failed: git push origin HEAD:main\nremote: Internal Server Error        \nremote: Request ID 2C74:2DB467:59D801:6D03FC:6AEB06D6        \nremote: Time 2026-11-04T10:20:07Z\nTo https://github.com/Fulstak-apps/very-good-films-publisher.git\n ! [remote rejected]     HEAD -> main (Internal Server Error)\nerror: failed to push some refs to 'https://github.com/Fulstak-apps/very-good-films-publisher.git'\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DW4QOcugjy4/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 3242,
+      "status": "queued",
+      "finished_at": "2026-11-04T10:24:52.085Z"
     }
   ],
   "next_account_index": 6,
