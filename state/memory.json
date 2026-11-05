@@ -205987,6 +205987,78 @@
       "review_reason": "This movie has already been published; only one clip per movie is allowed",
       "discovered_at": "2026-11-05T19:55:49.083Z",
       "key": "09f54aab22f8d3c7e1eecb1de13742d6901b77361afcf278dcba9074c5ef87b4"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DRuuUyDgm-_",
+        "title": "@ellsoriaa clip"
+      },
+      "scene": {
+        "id": "DRuuUyDgm-_",
+        "start": 0,
+        "end": 40.54
+      },
+      "source_post_url": "https://www.instagram.com/ellsoriaa/reel/DRuuUyDgm-_/",
+      "source_caption": "The Grinch \n\n#fyp #thegrinch #thegrinchwhostolechristmas #drseuss #christmas",
+      "source_details": {
+        "title_hint_verified": "The Grinch",
+        "title_hint": "The Grinch",
+        "year": 2018,
+        "source_title": "The Grinch",
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "The Grinch",
+        "type": "movie",
+        "director": "Yarrow Cheney",
+        "cast": [
+          "Benedict Cumberbatch",
+          "Rashida Jones",
+          "Kenan Thompson"
+        ],
+        "synopsis": "Dr. Seuss' The Grinch (or simply The Grinch) is a 2018 American animated Christmas comedy film based on How the Grinch Stole Christmas! by Dr. Seuss. Produced by Universal Pictures and Illumination, it was directed by Scott Mosier and Yarrow Cheney and written by Michael LeSieur and Tommy Swerdlow. Narrated by Pharrell Williams, the film stars Benedict Cumberbatch as the Grinch, with Rashida Jones, Kenan Thompson, and Angela Lansbury in supporting roles. The plot follows the Grinch, who plans to stop Whoville's Christmas celebration by stealing all the town's decorations and gifts, with his pet dog Max. The film is the third screen adaptation of the book, following the 1966 television specia",
+        "metadata_source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "The Grinch",
+          "source_year": null,
+          "catalog_title": "The Grinch",
+          "catalog_year": 2018,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "structured_title_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261105/fa338206f8e9a5e6ea2b89b8dbb6a5867e26699a4ddb600a95af49a27a0f7d36.mp4?download=1",
+      "asset_sha256": "fa338206f8e9a5e6ea2b89b8dbb6a5867e26699a4ddb600a95af49a27a0f7d36",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 40.366,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0.0834168,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-05T19:55:55.018Z",
+        "source_duration": 40.540634,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-05T20:00:51.670Z",
+      "key": "17ab49061e5364606ddbb89b7d7fad65ec510906c09b8214af575d968c4c2d58"
     }
   ],
   "discovery": [],
