@@ -17183,6 +17183,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DR7l-3Sgt15/",
       "queued_at": "2026-11-05T19:51:49.980Z",
       "asset_sha256": "b41ff5b8b5f50821b7dab7af01c2aabc06db4d24f41ccb90a14f50002a7530c0"
+    },
+    "DRuuUyDgm-_": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DRuuUyDgm-_/",
+      "queued_at": "2026-11-05T19:55:55.021Z",
+      "asset_sha256": "fa338206f8e9a5e6ea2b89b8dbb6a5867e26699a4ddb600a95af49a27a0f7d36"
     }
   },
   "checks": {
@@ -32073,10 +32079,10 @@
     "DdB8F3vBd5g": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdB8F3vBd5g-capture-diagnostic.json",
-      "failed_at": "2026-11-05T15:47:15.217Z",
-      "failures": 27,
+      "failed_at": "2026-11-05T19:53:54.122Z",
+      "failures": 28,
       "terminal": false,
-      "retry_at": "2026-11-05T18:47:15.217Z"
+      "retry_at": "2026-11-05T22:53:54.122Z"
     },
     "DdBxH3KhOfS": {
       "collector_version": 14,
@@ -35219,6 +35225,30 @@
       "error": "Source caption has no explicit movie or television title",
       "failed_at": "2026-11-05T19:50:28.338Z",
       "failures": 2,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DR2T1tjgirC": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T19:52:25.202Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DRz6D05ApFM": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-05T19:52:42.223Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-05T20:22:42.223Z"
+    },
+    "DRxagVZgkNp": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T19:54:46.076Z",
+      "failures": 1,
       "terminal": true,
       "retry_at": null
     }
