@@ -16985,6 +16985,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DfVxFFAuEf_/",
       "queued_at": "2026-11-05T06:03:54.628Z",
       "asset_sha256": "fd1326f82a3c2bf466d30bac0ac9e07393c08b6974a682ee56141e41794f0f2f"
+    },
+    "DfVxHL7OrY2": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfVxHL7OrY2/",
+      "queued_at": "2026-11-05T06:08:18.535Z",
+      "asset_sha256": "5eb52291bc6822180ea609068fc9b188920537c2890e68b8b01a94a2ab420a51"
     }
   },
   "checks": {
@@ -17044,22 +17050,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-30T11:44:19.014Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWgvk-8kwhX/",
-          "stage": "capture_or_queue",
-          "error": "spawnSync ffmpeg ETIMEDOUT"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 2695,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-10-30T11:53:52.647Z"
-    },
     {
       "started_at": "2026-10-31T04:10:21.163Z",
       "queued": [
@@ -27215,6 +27205,31 @@
       "inventory": 3339,
       "status": "queued",
       "finished_at": "2026-11-05T05:54:39.594Z"
+    },
+    {
+      "started_at": "2026-11-05T05:57:37.274Z",
+      "queued": [
+        "DfVyZOgxyuD",
+        "DfVxH87uWED",
+        "DfVxFFAuEf_"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfV21-MuGJi/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/popcorncutzz/reel/DfVykk3RfAR/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 3339,
+      "status": "queued",
+      "finished_at": "2026-11-05T06:03:58.453Z"
     }
   ],
   "next_account_index": 13,
@@ -35862,10 +35877,10 @@
     "DfVcHAmRBPw": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-05T05:37:41.235Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-05T06:07:41.235Z"
+      "failed_at": "2026-11-05T06:07:53.192Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DfVQOzWxRVy": {
       "collector_version": 14,
