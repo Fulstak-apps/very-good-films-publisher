@@ -17207,6 +17207,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DRIQFBJAqQo/",
       "queued_at": "2026-11-05T20:28:06.756Z",
       "asset_sha256": "4ba8983482a5132d7a40fd171f20862d17be47a1b0df10f539e85ed1ea9b0b47"
+    },
+    "DQ7UGqxgmv9": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DQ7UGqxgmv9/",
+      "queued_at": "2026-11-05T20:31:42.739Z",
+      "asset_sha256": "6213a09f3ec4d9f4865edc55ce4b3f887b34e3d4556eb1cd357c3995e7ef8711"
     }
   },
   "checks": {
@@ -35274,6 +35280,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-05T20:27:23.526Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DRAhmWoAuhF": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-05T20:30:24.086Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-05T21:00:24.091Z"
+    },
+    "DQ91nSRgkQO": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T20:31:02.386Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
