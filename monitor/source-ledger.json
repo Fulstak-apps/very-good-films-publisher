@@ -17195,6 +17195,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DRkmn_jgk8k/",
       "queued_at": "2026-11-05T20:02:37.436Z",
       "asset_sha256": "b35b9aaca521bfe0718fdfe7fbef208496d223ea496accda4053cb2bd3de6c80"
+    },
+    "DRaUsprgtxd": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DRaUsprgtxd/",
+      "queued_at": "2026-11-05T20:07:04.158Z",
+      "asset_sha256": "bb7ac0719535027c2844c04d027b7cb0507e33faa77fcb26d6ddcf3c6477200b"
     }
   },
   "checks": {
@@ -32127,11 +32133,11 @@
     },
     "Dc_xA94z9gC": {
       "collector_version": 14,
-      "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json",
-      "failed_at": "2026-11-05T15:48:35.618Z",
-      "failures": 27,
+      "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
+      "failed_at": "2026-11-05T20:05:01.230Z",
+      "failures": 28,
       "terminal": false,
-      "retry_at": "2026-11-05T18:48:35.618Z"
+      "retry_at": "2026-11-05T23:05:01.232Z"
     },
     "Dc-evxuhvsp": {
       "collector_version": 14,
@@ -35308,6 +35314,22 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-05T20:31:20.775Z"
+    },
+    "DRiQJWLgros": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T20:05:31.826Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DRffLN8gkqk": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T20:06:00.463Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
