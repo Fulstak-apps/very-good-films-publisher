@@ -17255,6 +17255,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfDi_9_vhRH/",
       "queued_at": "2026-11-05T23:00:55.364Z",
       "asset_sha256": "cf79ee6600890e57247c6d41bdf6020f966a15524a20aee426fd039f6d9291ca"
+    },
+    "DfDi-ZrvvvV": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfDi-ZrvvvV/",
+      "queued_at": "2026-11-05T23:05:25.734Z",
+      "asset_sha256": "6960b4399d3569f9f0110d3f40cee2409554d3b06b41c01419061f1a10408937"
     }
   },
   "checks": {
@@ -17314,22 +17320,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-01T19:21:15.871Z",
-      "queued": [
-        "DYza3yxoLDI",
-        "DYugWZFogZT",
-        "DYsVPRQAhUJ",
-        "DYrhBSzgaYl",
-        "DYpT94iIh15"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2854,
-      "status": "queued",
-      "finished_at": "2026-11-01T19:26:56.451Z"
-    },
     {
       "started_at": "2026-11-01T19:31:30.647Z",
       "queued": [
@@ -26288,6 +26278,25 @@
       "inventory": 3446,
       "status": "queued",
       "finished_at": "2026-11-05T22:51:29.871Z"
+    },
+    {
+      "started_at": "2026-11-05T22:54:34.706Z",
+      "queued": [
+        "DfDvgK-tzww",
+        "DfDi_9_vhRH"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdB8F3vBd5g/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DdB8F3vBd5g-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3446,
+      "status": "queued",
+      "finished_at": "2026-11-05T23:00:58.048Z"
     }
   ],
   "next_account_index": 0,
