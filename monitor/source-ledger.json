@@ -17009,6 +17009,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfWGWRMthd1/",
       "queued_at": "2026-11-05T06:56:50.664Z",
       "asset_sha256": "0d1fd88377a325ddc9b3c8437c2948f13a28d882ec067372453a8bfea03ba3c1"
+    },
+    "DfWGO4GNYGu": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfWGO4GNYGu/",
+      "queued_at": "2026-11-05T07:04:29.079Z",
+      "asset_sha256": "e2bd3ec755066f06e5959e65405254b13e155d3af8c6dc746f23fc1be46360c3"
     }
   },
   "checks": {
@@ -17068,22 +17074,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-31T08:28:30.868Z",
-      "queued": [
-        "DVtaJIkE9gr",
-        "DVtDj4sExDP",
-        "DVq_Y3wE86i",
-        "DVq1T9SE05G",
-        "DVoN7vbExaI"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2695,
-      "status": "queued",
-      "finished_at": "2026-10-31T08:32:26.792Z"
-    },
     {
       "started_at": "2026-10-31T08:33:37.144Z",
       "queued": [
@@ -27065,6 +27055,19 @@
       "inventory": 3375,
       "status": "queued",
       "finished_at": "2026-11-05T06:47:38.970Z"
+    },
+    {
+      "started_at": "2026-11-05T06:48:56.999Z",
+      "queued": [
+        "DfWGbikNTE1",
+        "DfWGWRMthd1"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3375,
+      "status": "queued",
+      "finished_at": "2026-11-05T06:57:00.131Z"
     }
   ],
   "next_account_index": 0,
@@ -35737,6 +35740,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-05T05:58:42.766Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfWGXVptVhF": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T07:00:20.942Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
