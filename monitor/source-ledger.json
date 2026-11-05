@@ -16937,6 +16937,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DSp7vTuAh0J/",
       "queued_at": "2026-11-05T04:37:45.950Z",
       "asset_sha256": "ee009d819018cd7945d27b5f677d356682c6396868f70faf6db81388d4f161f9"
+    },
+    "DSn149cAqKw": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DSn149cAqKw/",
+      "queued_at": "2026-11-05T04:42:53.102Z",
+      "asset_sha256": "6c63340dc8ae7c1e4467d7b7c173d500e2916e7508ee5c8b65e54b68d2ee4808"
     }
   },
   "checks": {
@@ -16996,22 +17002,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-30T01:46:41.483Z",
-      "queued": [
-        "DYXRE80OfxB",
-        "DYUw63QOqi4",
-        "DYSL2bdO-4V",
-        "DYPXVCVOcwG",
-        "DYNA3iSu4DY"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2695,
-      "status": "queued",
-      "finished_at": "2026-10-30T01:50:11.346Z"
-    },
     {
       "started_at": "2026-10-30T03:31:57.559Z",
       "queued": [
@@ -27426,6 +27416,36 @@
       "inventory": 3327,
       "status": "queued",
       "finished_at": "2026-11-05T03:35:19.700Z"
+    },
+    {
+      "started_at": "2026-11-05T04:30:29.616Z",
+      "queued": [
+        "DS-6SElgj-T",
+        "DS28erhgsVq",
+        "DSp7vTuAh0J"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DS755eMgswb/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DS_4shUkuEq/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DS2GJLZgrJy/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3327,
+      "status": "queued",
+      "finished_at": "2026-11-05T04:37:49.159Z"
     }
   ],
   "next_account_index": 6,
