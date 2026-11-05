@@ -17063,6 +17063,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfWECqoNOPO/",
       "queued_at": "2026-11-05T08:51:44.280Z",
       "asset_sha256": "60db3ec90a16a89e56b9b31c6d4519d1e15f3265385debc859acc1a1e0fbc129"
+    },
+    "DfWERjctbaW": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfWERjctbaW/",
+      "queued_at": "2026-11-05T09:19:58.897Z",
+      "asset_sha256": "81d4207d053f6d246f2483ad29796d62416c3dab00bc28ce80aa29246b7ca865"
     }
   },
   "checks": {
@@ -17122,43 +17128,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-10-31T22:34:08.901Z",
-      "queued": [
-        "DUlHcldk7Vc",
-        "DUd1ju3E-j7",
-        "DUdlqDakz9t",
-        "DUayUogkzeB",
-        "DUYVhQBExIO"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DUisv9qk94Q/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DUgLesAE6LC/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DUgC9JUE06q/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DUa7tH4k7qD/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 9,
-      "inventory": 2695,
-      "status": "queued",
-      "finished_at": "2026-10-31T22:39:07.610Z"
-    },
     {
       "started_at": "2026-10-31T22:39:13.812Z",
       "queued": [
@@ -26754,6 +26723,19 @@
       "inventory": 3375,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-05T08:33:38.184Z"
+    },
+    {
+      "started_at": "2026-11-05T08:41:46.919Z",
+      "queued": [
+        "DfWEa2StQoQ",
+        "DfWECqoNOPO"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3375,
+      "status": "queued",
+      "finished_at": "2026-11-05T08:51:48.859Z"
     }
   ],
   "next_account_index": 0,
