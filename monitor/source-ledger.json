@@ -17087,6 +17087,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfWDmy2tww3/",
       "queued_at": "2026-11-05T16:08:01.447Z",
       "asset_sha256": "eba80a0c874cf119d8763f7902a37693bfc573012f41306d3d06a3760db66a7b"
+    },
+    "DfWDbNztrc5": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfWDbNztrc5/",
+      "queued_at": "2026-11-05T16:16:20.020Z",
+      "asset_sha256": "89f161f38400e668738a6392cf49d05c08193a820d2108cf49d5118eae462eb0"
     }
   },
   "checks": {
@@ -17146,57 +17152,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-01T03:40:47.309Z",
-      "queued": [
-        "DanYoP_xVAm",
-        "Dag0Xmbx1OY",
-        "DadQxULx928",
-        "DaXguAmxBvX"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DecP0T5RF2U/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DalR2CPx2oq/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DaeGgnMRkDI/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DabtWc5x718/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DabBYMuR0kt/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DaWked3R08k/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/theacenyc/reel/DaWXBG-xNc-/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovered": 27,
-      "attempts": 11,
-      "inventory": 2706,
-      "status": "queued",
-      "finished_at": "2026-11-01T03:45:35.024Z"
-    },
     {
       "started_at": "2026-11-01T03:45:51.762Z",
       "queued": [
@@ -26726,6 +26681,29 @@
       "inventory": 3375,
       "status": "queued",
       "finished_at": "2026-11-05T16:02:10.506Z"
+    },
+    {
+      "started_at": "2026-11-05T16:03:31.248Z",
+      "queued": [
+        "DfWDmy2tww3"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfWDY9CN-OF/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfWDaIhN1NH/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3375,
+      "status": "queued",
+      "finished_at": "2026-11-05T16:09:31.506Z"
     }
   ],
   "next_account_index": 0,
@@ -35518,6 +35496,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-05T16:06:21.581Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfWDaIhN1NH": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-05T16:09:31.496Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
