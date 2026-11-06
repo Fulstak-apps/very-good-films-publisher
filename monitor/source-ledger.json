@@ -17327,6 +17327,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfBQYmpJpue/",
       "queued_at": "2026-11-06T02:30:16.048Z",
       "asset_sha256": "7a954add5b932fa60e6e1c501557c74427cc19ca2c89178683c8d81e9c8902b1"
+    },
+    "DfXsMvwxVX1": {
+      "source_handle": "theacenyc",
+      "source_url": "https://www.instagram.com/theacenyc/reel/DfXsMvwxVX1/",
+      "queued_at": "2026-11-06T03:32:26.463Z",
+      "asset_sha256": "d9a1fcc5f6950a9cb2294dd1d7bcaf19d9e92f90296436f581f4aac41513ce34"
     }
   },
   "checks": {
@@ -17340,13 +17346,13 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-11-05T16:31:39.843Z"
+      "checked_at": "2026-11-06T03:06:23.840Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-11-05T16:36:35.728Z"
+      "checked_at": "2026-11-06T03:26:47.057Z"
     },
     "theacenyc": {
-      "checked_at": "2026-11-05T16:41:39.886Z"
+      "checked_at": "2026-11-06T03:31:55.012Z"
     },
     "the_goodfilms": {
       "checked_at": "2026-11-05T16:46:55.770Z"
@@ -17386,86 +17392,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-01T21:04:00.718Z",
-      "queued": [
-        "De7DznYRaIP",
-        "De7BvEox40I",
-        "De6_sw4Ro8e",
-        "De6_n2xx37d",
-        "De6_k5VRP9s"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2913,
-      "status": "queued",
-      "finished_at": "2026-11-01T21:09:38.357Z"
-    },
-    {
-      "started_at": "2026-11-01T21:14:13.183Z",
-      "queued": [
-        "De6_q8SRpy_",
-        "De6_ps6xnIr",
-        "De55meyO7sP",
-        "De5tCXjxhVg"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 2913,
-      "status": "queued",
-      "finished_at": "2026-11-01T21:21:17.799Z"
-    },
-    {
-      "started_at": "2026-11-01T21:24:27.544Z",
-      "queued": [
-        "De5s7KDRxKu",
-        "De5s-JLxM9I",
-        "De5o1eGxB6x",
-        "De5oy9cxumS",
-        "De5oxTZR15t"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2913,
-      "status": "queued",
-      "finished_at": "2026-11-01T21:30:52.710Z"
-    },
-    {
-      "started_at": "2026-11-01T21:34:42.155Z",
-      "queued": [
-        "De5oufkxP4p",
-        "De5PMcdi4zW",
-        "De5OgDTibhX",
-        "De3p5vRhRwC"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/popcorncutzz/reel/De5POxmC4eF/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2913,
-      "status": "queued",
-      "finished_at": "2026-11-01T21:41:08.907Z"
-    },
-    {
-      "started_at": "2026-11-01T21:44:57.276Z",
-      "queued": [
-        "De3L7OgO7t8"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 2913,
-      "status": "queued",
-      "finished_at": "2026-11-01T21:47:13.474Z"
-    },
     {
       "started_at": "2026-11-01T21:50:03.971Z",
       "queued": [],
@@ -26386,9 +26312,99 @@
       "inventory": 3446,
       "status": "queued",
       "finished_at": "2026-11-06T02:22:53.415Z"
+    },
+    {
+      "started_at": "2026-11-06T02:24:27.611Z",
+      "queued": [
+        "DfBQazUpt0n",
+        "DfBQYmpJpue"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3446,
+      "status": "queued",
+      "finished_at": "2026-11-06T02:30:19.722Z"
+    },
+    {
+      "started_at": "2026-11-06T03:05:22.338Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 3446,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-06T03:06:23.852Z"
+    },
+    {
+      "started_at": "2026-11-06T03:10:28.597Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfTphLrNZNH/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DfTphLrNZNH-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc3R1XVhydC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXNCiAZgK3N/",
+          "stage": "capture_or_queue",
+          "error": "Rendered Reel failed video/audio/duration QA"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 3446,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-06T03:16:18.622Z"
+    },
+    {
+      "started_at": "2026-11-06T03:20:46.680Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/film.fission/reel/DfSoOPEytqP/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfPcRCjhJbP/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3446,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-06T03:23:42.504Z"
+    },
+    {
+      "started_at": "2026-11-06T03:25:53.246Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 248,
+      "attempts": 0,
+      "inventory": 3446,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-06T03:26:47.068Z"
     }
   ],
-  "next_account_index": 0,
+  "next_account_index": 3,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -27961,10 +27977,10 @@
     "DUx1XlGjHKU": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-06T00:16:40.746Z",
-      "failures": 27,
+      "failed_at": "2026-11-06T03:20:55.663Z",
+      "failures": 28,
       "terminal": false,
-      "retry_at": "2026-11-06T03:16:40.746Z"
+      "retry_at": "2026-11-06T06:20:55.664Z"
     },
     "DUvJGPpjOpU": {
       "collector_version": 14,
@@ -32105,10 +32121,10 @@
     "Dc_xA94z9gC": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-06T00:07:38.987Z",
-      "failures": 29,
+      "failed_at": "2026-11-06T03:11:54.405Z",
+      "failures": 30,
       "terminal": false,
-      "retry_at": "2026-11-06T03:07:38.987Z"
+      "retry_at": "2026-11-06T06:11:54.406Z"
     },
     "Dc-evxuhvsp": {
       "collector_version": 14,
@@ -32161,10 +32177,10 @@
     "Dc3R1XVhydC": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json",
-      "failed_at": "2026-11-06T00:11:22.035Z",
-      "failures": 20,
+      "failed_at": "2026-11-06T03:15:03.618Z",
+      "failures": 21,
       "terminal": false,
-      "retry_at": "2026-11-06T03:11:22.036Z"
+      "retry_at": "2026-11-06T06:15:03.618Z"
     },
     "DczyscJBNxZ": {
       "collector_version": 14,
@@ -34321,10 +34337,10 @@
     "DXNCiAZgK3N": {
       "collector_version": 14,
       "error": "Rendered Reel failed video/audio/duration QA",
-      "failed_at": "2026-11-06T00:12:38.688Z",
-      "failures": 9,
+      "failed_at": "2026-11-06T03:16:18.591Z",
+      "failures": 10,
       "terminal": false,
-      "retry_at": "2026-11-06T03:12:38.690Z"
+      "retry_at": "2026-11-06T06:16:18.592Z"
     },
     "DXMMVU5CA2s": {
       "collector_version": 14,
@@ -34385,10 +34401,10 @@
     "DfPcRCjhJbP": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-06T00:19:04.788Z",
-      "failures": 9,
+      "failed_at": "2026-11-06T03:23:42.490Z",
+      "failures": 10,
       "terminal": false,
-      "retry_at": "2026-11-06T03:19:04.789Z"
+      "retry_at": "2026-11-06T06:23:42.495Z"
     },
     "DfR2OgZttOp": {
       "collector_version": 14,
@@ -34609,10 +34625,10 @@
     "DfSoOPEytqP": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-06T00:16:51.594Z",
-      "failures": 8,
+      "failed_at": "2026-11-06T03:21:05.947Z",
+      "failures": 9,
       "terminal": false,
-      "retry_at": "2026-11-06T03:16:51.594Z"
+      "retry_at": "2026-11-06T06:21:05.948Z"
     },
     "DX2ZGKkCqFh": {
       "collector_version": 14,
@@ -34817,10 +34833,10 @@
     "DfTphLrNZNH": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DfTphLrNZNH-capture-diagnostic.json",
-      "failed_at": "2026-11-06T00:07:48.767Z",
-      "failures": 7,
+      "failed_at": "2026-11-06T03:12:08.023Z",
+      "failures": 8,
       "terminal": false,
-      "retry_at": "2026-11-06T03:07:48.767Z"
+      "retry_at": "2026-11-06T06:12:08.023Z"
     },
     "DfTpcGgtRZ-": {
       "collector_version": 14,
@@ -52709,12 +52725,17 @@
       "handle": "primefilmtv",
       "url": "https://www.instagram.com/primefilmtv/reel/DfBQYmpJpue/",
       "shortcode": "DfBQYmpJpue"
+    },
+    "DfXsMvwxVX1": {
+      "handle": "theacenyc",
+      "url": "https://www.instagram.com/theacenyc/reel/DfXsMvwxVX1/",
+      "shortcode": "DfXsMvwxVX1"
     }
   },
   "discovery_depth": {
-    "reelgoodmovies": 70,
-    "thecinemanerd.ig": 60,
-    "theacenyc": 60,
+    "reelgoodmovies": 80,
+    "thecinemanerd.ig": 70,
+    "theacenyc": 70,
     "the_goodfilms": 70,
     "film.fission": 70,
     "ellsoriaa": 80,
