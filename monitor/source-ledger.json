@@ -17549,6 +17549,12 @@
       "source_url": "https://www.instagram.com/theacenyc/reel/DfZzAwORehm/",
       "queued_at": "2026-11-06T22:39:18.733Z",
       "asset_sha256": "26b58203014969574f7e1aa1c5a9ee599dfc13544bd99fc02785fe1a4d2e7692"
+    },
+    "DfaawTzzKKW": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DfaawTzzKKW/",
+      "queued_at": "2026-11-06T22:50:36.512Z",
+      "asset_sha256": "4b964654b7699a7d4b5fa2341c86b628ab71f8968b523fce61711f7bd83c0b36"
     }
   },
   "checks": {
@@ -17571,10 +17577,10 @@
       "checked_at": "2026-11-06T22:38:54.374Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-11-06T03:37:08.839Z"
+      "checked_at": "2026-11-06T22:44:09.908Z"
     },
     "film.fission": {
-      "checked_at": "2026-11-06T03:42:16.272Z"
+      "checked_at": "2026-11-06T22:49:17.115Z"
     },
     "ellsoriaa": {
       "checked_at": "2026-11-06T03:48:02.688Z"
@@ -17608,64 +17614,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-02T14:44:08.905Z",
-      "queued": [
-        "DfDw8CUNn77",
-        "DfDw48TtIU2"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DVeCR8Wkpww/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DVeCR8Wkpww-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDxFoINGhu/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DWmHJDLkw1Q/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DaDHOMUA5Pl/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDwzwGt0da/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 7,
-      "inventory": 3041,
-      "status": "queued",
-      "finished_at": "2026-11-02T14:51:00.569Z"
-    },
-    {
-      "started_at": "2026-11-02T15:19:52.992Z",
-      "queued": [
-        "DfDwwX3t-NB",
-        "DfDws4PNEfQ"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDwk8PtgqJ/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 3041,
-      "status": "queued",
-      "finished_at": "2026-11-02T15:27:08.968Z"
-    },
     {
       "started_at": "2026-11-02T15:55:35.534Z",
       "queued": [
@@ -26603,9 +26551,37 @@
       "inventory": 3497,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-06T22:33:48.015Z"
+    },
+    {
+      "started_at": "2026-11-06T22:37:46.453Z",
+      "queued": [
+        "DfZzAwORehm"
+      ],
+      "errors": [],
+      "discovered": 29,
+      "attempts": 1,
+      "inventory": 3498,
+      "status": "queued",
+      "finished_at": "2026-11-06T22:39:21.106Z"
+    },
+    {
+      "started_at": "2026-11-06T22:42:51.959Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DfZ5KaStroB/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 324,
+      "attempts": 1,
+      "inventory": 3499,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-06T22:44:37.855Z"
     }
   ],
-  "next_account_index": 3,
+  "next_account_index": 5,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -35811,6 +35787,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-06T22:24:53.657Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfZ5KaStroB": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-06T22:44:37.840Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
@@ -53306,14 +53290,24 @@
       "handle": "theacenyc",
       "url": "https://www.instagram.com/theacenyc/reel/DfZzAwORehm/",
       "shortcode": "DfZzAwORehm"
+    },
+    "DfZ5KaStroB": {
+      "handle": "the_goodfilms",
+      "url": "https://www.instagram.com/the_goodfilms/reel/DfZ5KaStroB/",
+      "shortcode": "DfZ5KaStroB"
+    },
+    "DfaawTzzKKW": {
+      "handle": "film.fission",
+      "url": "https://www.instagram.com/film.fission/reel/DfaawTzzKKW/",
+      "shortcode": "DfaawTzzKKW"
     }
   },
   "discovery_depth": {
     "reelgoodmovies": 20,
     "thecinemanerd.ig": 80,
     "theacenyc": 80,
-    "the_goodfilms": 80,
-    "film.fission": 80,
+    "the_goodfilms": 20,
+    "film.fission": 20,
     "ellsoriaa": 20,
     "relatedfilms": 50,
     "uneedmink": 50,
