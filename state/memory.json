@@ -207278,6 +207278,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-06T01:02:48.161Z",
       "key": "d58f27d325e670e52103d768bbfc437feaf1e8dce3d7d33b5f00034d0032d6c0"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DfBRHjXJVlt",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DfBRHjXJVlt",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DfBRHjXJVlt/",
+      "source_caption": "📺 Desperate Housewives (2004–2012)\n\nDesperate Housewives follows the seemingly perfect lives of a group of women living on Wisteria Lane, a beautiful suburban street in the fictional town of Fairview. Behind their picture-perfect homes, friendly neighbors, and peaceful lifestyles lie shocking secrets, complicated relationships, and unexpected mysteries. At the center of the story are Susan Mayer, a romantic and sometimes clumsy single mother; Lynette Scavo, a hardworking mother struggling to balance family and career; Bree Van de Kamp, a perfectionist determined to maintain her flawless reputation; and Gabrielle Solis, a glamorous former model whose luxurious lifestyle hides personal struggles. As the women navigate marriage, motherhood, infidelity, friendships, and family problems, mysterious deaths, betrayals, and dangerous secrets threaten to destroy their peaceful neighborhood. Through hilarious misunderstandings, emotional confrontations, and shocking revelations, the series reveals that appearances can often be deceiving. Combining dark comedy, suspense, romance, and dramatic storytelling, Desperate Housewives explores friendship, love, betrayal, family relationships, and the secrets hidden behind seemingly perfect lives.\n\n🎭 Genre: Comedy • Drama • Mystery • Romance\n\n⭐ IMDb: 7.6/10\n\n⏱️ Runtime: ~43 minutes per episode • 8 seasons • 180 episodes\n\n🎥 Creator: Marc Cherry\n\n🏆 Recognition: Starring Teri Hatcher, Felicity Huffman, Marcia Cross, Eva Longoria, and Nicollette Sheridan, the series became an international television phenomenon. It won multiple Primetime Emmy Awards and Golden Globe Awards, earning widespread recognition for its clever writing, unforgettable characters, shocking plot twists, and distinctive combination of comedy and mystery.\n\n📺 Where to Watch: Hulu in the United States and Disney+ in select international regions. Also check Amazon Prime Video and Apple TV for digital purchase availability. Availability varies by region.",
+      "source_details": {
+        "title_hint": "Desperate Housewives",
+        "year": 2004,
+        "media_type_hint": "tv",
+        "availability": ". Where to Watch: Hulu in the United States and Disney+ in select international regions",
+        "source_title": "Desperate Housewives",
+        "source_year": 2004,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Teri Hatcher",
+          "Felicity Huffman",
+          "Marcia Cross"
+        ],
+        "title": "Desperate Housewives",
+        "type": "tv",
+        "director": "Marc Cherry",
+        "synopsis": "Desperate Housewives is an American primetime television soap opera created by Marc Cherry, and produced by ABC Studios and Cherry Productions. It aired for eight seasons on ABC from October 3, 2004, until May 13, 2012, for a total of 180 episodes. Executive producer Marc Cherry served as showrunner. Other executive producers since the fourth season included Bob Daily, George W. Perkins, John Pardee, Joey Murphy, David Grossman, and Larry Shaw. Set on Wisteria Lane, a street in the fictional town of Fairview in the fictional Eagle State, Desperate Housewives follows the lives of a group of women as seen through the eyes of their friend and neighbor who takes her own life in the pilot episode",
+        "metadata_source": "https://en.wikipedia.org/wiki/Desperate_Housewives",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Desperate Housewives",
+          "source_year": 2004,
+          "catalog_title": "Desperate Housewives",
+          "catalog_year": 2004,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261106/9bc4100d48eb4133dbe8fb1801bac9b652e81519400c9d9a56e10680b1ebcba5.mp4?download=1",
+      "asset_sha256": "9bc4100d48eb4133dbe8fb1801bac9b652e81519400c9d9a56e10680b1ebcba5",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-06T01:17:24.018Z",
+        "source_duration": 112.94627961294628,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-06T01:18:09.624Z",
+      "key": "7d96896c6700e1dcad45d2cc2e5b6159314f6ec509a63d066f69679c85970760"
     }
   ],
   "discovery": [],
