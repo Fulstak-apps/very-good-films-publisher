@@ -17531,6 +17531,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfBNKZgNpA4/",
       "queued_at": "2026-11-06T22:19:11.601Z",
       "asset_sha256": "0456794acef9c2aa51e9848a085e1d76c16418fc9857af0e11b9ef7434532007"
+    },
+    "De_r2vOtfij": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/De_r2vOtfij/",
+      "queued_at": "2026-11-06T22:25:22.408Z",
+      "asset_sha256": "5faed82314147293e5cb5a5efb8012b516c0614e9aa8f6d15c2e2961582d206a"
     }
   },
   "checks": {
@@ -17590,25 +17596,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-02T12:01:01.450Z",
-      "queued": [
-        "DfDxz7wth1e",
-        "DfDxnrstnaf"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfDx8fvtjSI/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 3041,
-      "status": "queued",
-      "finished_at": "2026-11-02T12:09:24.515Z"
-    },
     {
       "started_at": "2026-11-02T12:21:30.358Z",
       "queued": [
@@ -26709,6 +26696,19 @@
       "inventory": 3497,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-06T22:08:49.017Z"
+    },
+    {
+      "started_at": "2026-11-06T22:12:07.572Z",
+      "queued": [
+        "DfBNRlAtfT8",
+        "DfBNKZgNpA4"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3497,
+      "status": "queued",
+      "finished_at": "2026-11-06T22:19:15.450Z"
     }
   ],
   "next_account_index": 0,
@@ -35909,6 +35909,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-06T22:08:49.003Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfBNEHGto_g": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-06T22:24:53.657Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
