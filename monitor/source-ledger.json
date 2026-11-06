@@ -17399,6 +17399,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfYoLxoNJ65/",
       "queued_at": "2026-11-06T06:12:20.453Z",
       "asset_sha256": "0d718109799923ba7a53c71e3a1a3f02aaf484e68f877b322b39ef8d3532ba68"
+    },
+    "DfYoGA9Nerh": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfYoGA9Nerh/",
+      "queued_at": "2026-11-06T06:47:08.886Z",
+      "asset_sha256": "51fcbe5c4f3cfcc615a54a2a5e6f7a0da24ccefe46541ee504917ac1c545a17d"
     }
   },
   "checks": {
@@ -17458,48 +17464,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-02T05:49:06.362Z",
-      "queued": [
-        "DfJfSpeNl8H",
-        "DfJfKszt_yg"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfJfVQptNf7/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 3041,
-      "status": "queued",
-      "finished_at": "2026-11-02T05:56:21.536Z"
-    },
-    {
-      "started_at": "2026-11-02T05:59:16.790Z",
-      "queued": [
-        "DfJe5jet-1w"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfJfD_Vtc6Q/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfJe8d8NXAN/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 3,
-      "inventory": 3041,
-      "status": "queued",
-      "finished_at": "2026-11-02T06:05:35.813Z"
-    },
     {
       "started_at": "2026-11-02T06:24:46.146Z",
       "queued": [
@@ -26258,6 +26222,50 @@
       "inventory": 3497,
       "status": "queued",
       "finished_at": "2026-11-06T05:20:10.490Z"
+    },
+    {
+      "started_at": "2026-11-06T06:04:29.960Z",
+      "queued": [
+        "DfYoKzdNroI",
+        "DfYoLxoNJ65"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3497,
+      "status": "queued",
+      "finished_at": "2026-11-06T06:12:29.813Z"
+    },
+    {
+      "started_at": "2026-11-06T06:14:44.292Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfTphLrNZNH/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DfTphLrNZNH-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc3R1XVhydC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXNCiAZgK3N/",
+          "stage": "capture_or_queue",
+          "error": "Rendered Reel failed video/audio/duration QA"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 3497,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-06T06:21:22.247Z"
     }
   ],
   "next_account_index": 0,
@@ -27833,10 +27841,10 @@
     "DUx1XlGjHKU": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-06T03:20:55.663Z",
-      "failures": 28,
+      "failed_at": "2026-11-06T06:40:52.836Z",
+      "failures": 29,
       "terminal": false,
-      "retry_at": "2026-11-06T06:20:55.664Z"
+      "retry_at": "2026-11-06T09:40:52.836Z"
     },
     "DUvJGPpjOpU": {
       "collector_version": 14,
@@ -31976,11 +31984,11 @@
     },
     "Dc_xA94z9gC": {
       "collector_version": 14,
-      "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-06T03:11:54.405Z",
-      "failures": 30,
+      "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json",
+      "failed_at": "2026-11-06T06:16:09.583Z",
+      "failures": 31,
       "terminal": false,
-      "retry_at": "2026-11-06T06:11:54.406Z"
+      "retry_at": "2026-11-06T09:16:09.584Z"
     },
     "Dc-evxuhvsp": {
       "collector_version": 14,
@@ -32033,10 +32041,10 @@
     "Dc3R1XVhydC": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json",
-      "failed_at": "2026-11-06T03:15:03.618Z",
-      "failures": 21,
+      "failed_at": "2026-11-06T06:19:15.445Z",
+      "failures": 22,
       "terminal": false,
-      "retry_at": "2026-11-06T06:15:03.618Z"
+      "retry_at": "2026-11-06T09:19:15.446Z"
     },
     "DczyscJBNxZ": {
       "collector_version": 14,
@@ -34193,10 +34201,10 @@
     "DXNCiAZgK3N": {
       "collector_version": 14,
       "error": "Rendered Reel failed video/audio/duration QA",
-      "failed_at": "2026-11-06T03:16:18.591Z",
-      "failures": 10,
+      "failed_at": "2026-11-06T06:21:22.205Z",
+      "failures": 11,
       "terminal": false,
-      "retry_at": "2026-11-06T06:16:18.592Z"
+      "retry_at": "2026-11-06T09:21:22.206Z"
     },
     "DXMMVU5CA2s": {
       "collector_version": 14,
@@ -34257,10 +34265,10 @@
     "DfPcRCjhJbP": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-06T03:23:42.490Z",
-      "failures": 10,
+      "failed_at": "2026-11-06T06:43:12.340Z",
+      "failures": 11,
       "terminal": false,
-      "retry_at": "2026-11-06T06:23:42.495Z"
+      "retry_at": "2026-11-06T09:43:12.340Z"
     },
     "DfR2OgZttOp": {
       "collector_version": 14,
@@ -34481,10 +34489,10 @@
     "DfSoOPEytqP": {
       "collector_version": 14,
       "error": "No unambiguous matching audio stream; refusing silent or unrelated audio",
-      "failed_at": "2026-11-06T03:21:05.947Z",
-      "failures": 9,
+      "failed_at": "2026-11-06T06:41:01.661Z",
+      "failures": 10,
       "terminal": false,
-      "retry_at": "2026-11-06T06:21:05.948Z"
+      "retry_at": "2026-11-06T09:41:01.661Z"
     },
     "DX2ZGKkCqFh": {
       "collector_version": 14,
@@ -34689,10 +34697,10 @@
     "DfTphLrNZNH": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect DfTphLrNZNH-capture-diagnostic.json",
-      "failed_at": "2026-11-06T03:12:08.023Z",
-      "failures": 8,
+      "failed_at": "2026-11-06T06:16:20.581Z",
+      "failures": 9,
       "terminal": false,
-      "retry_at": "2026-11-06T06:12:08.023Z"
+      "retry_at": "2026-11-06T09:16:20.585Z"
     },
     "DfTpcGgtRZ-": {
       "collector_version": 14,
@@ -35370,6 +35378,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-06T05:20:10.476Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfYoIhUN9Yw": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-06T06:45:38.799Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
