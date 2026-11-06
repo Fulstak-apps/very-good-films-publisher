@@ -207686,6 +207686,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-06T02:35:04.642Z",
       "key": "22299e71cec2556c8867b3e23bf4ea19c31f1b203a2c01f811a42d384c4c1806"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DfXsMvwxVX1",
+        "title": "@theacenyc clip"
+      },
+      "scene": {
+        "id": "DfXsMvwxVX1",
+        "start": 0,
+        "end": 23.199
+      },
+      "source_post_url": "https://www.instagram.com/theacenyc/reel/DfXsMvwxVX1/",
+      "source_caption": "Constantine (2005), directed by Francis Lawrence, offers a unique take on the comic book genre, distinctively blending supernatural horror with film noir. Based on DC/Vertigo’s Hellblazer comics and starring Keanu Reeves, this film transcended initial critical division to achieve cult classic status. Its hellish depiction of a desolate Los Angeles remains one of the standout visual achievements in mainstream cinema. Reeves’ portrayal of John Constantine as a world-weary, sardonic anti-hero, marked by his impending mortality due to terminal lung cancer, contrasts with traditional superhero archetypes. Despite original skepticism over Reeves as Constantine—traditionally a blond British character—his interpretation has gained acceptance as a compelling variation. What are your thoughts on this intriguing film?",
+      "source_details": {
+        "title_hint": "Constantine",
+        "year": 2005,
+        "media_type_hint": "movie",
+        "source_title": "Constantine",
+        "source_year": 2005,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Keanu Reeves",
+          "Rachel Weisz",
+          "Shia LaBeouf"
+        ],
+        "title": "Constantine",
+        "type": "movie",
+        "director": "Francis Lawrence",
+        "synopsis": "Constantine ( KON-stən-teen) is a 2005 American superhero horror film directed by Francis Lawrence in his directorial debut, and written by Kevin Brodbin and Frank Cappello. It is loosely based on the Hellblazer comic book series. The film stars Keanu Reeves as John Constantine, a cynical exorcist with the ability to perceive and communicate with half-angels and half-demons in their true forms and to travel between Earth and Hell. The cast also features Rachel Weisz, Shia LaBeouf, Tilda Swinton, Pruitt Taylor Vince, Djimon Hounsou, Gavin Rossdale and Peter Stormare. Constantine was released theatrically in the United States by Warner Bros. Pictures on February 18, 2005, to mixed reviews, and",
+        "metadata_source": "https://en.wikipedia.org/wiki/Constantine_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Constantine",
+          "source_year": 2005,
+          "catalog_title": "Constantine",
+          "catalog_year": 2005,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261106/d9a1fcc5f6950a9cb2294dd1d7bcaf19d9e92f90296436f581f4aac41513ce34.mp4?download=1",
+      "asset_sha256": "d9a1fcc5f6950a9cb2294dd1d7bcaf19d9e92f90296436f581f4aac41513ce34",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 23.127,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-06T03:32:26.459Z",
+        "source_duration": 23.199999,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-06T03:36:21.467Z",
+      "key": "445a4693add1722c5aa3b1783be8d138c10d1ff167bf66e1f78abc9acd7120ac"
     }
   ],
   "discovery": [],
