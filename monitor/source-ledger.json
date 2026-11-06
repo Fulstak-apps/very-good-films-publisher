@@ -17285,6 +17285,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfBWKpTNS0f/",
       "queued_at": "2026-11-06T00:37:59.685Z",
       "asset_sha256": "03b307dbc50f881d67d5a0414d595923e2b332fc966cc1d44262bf8796b6978a"
+    },
+    "DfBWF5ZtWm5": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfBWF5ZtWm5/",
+      "queued_at": "2026-11-06T00:46:34.333Z",
+      "asset_sha256": "4771b0fedd229af653dc2c76fc4bab9e5cb888683b7cf906513bfbd543545fbc"
     }
   },
   "checks": {
@@ -17344,24 +17350,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-01T19:47:13.351Z",
-      "queued": [
-        "De1TK5Thv9L"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/De1Tdt2hrCJ/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovered": 88,
-      "attempts": 2,
-      "inventory": 2856,
-      "status": "queued",
-      "finished_at": "2026-11-01T19:51:19.050Z"
-    },
     {
       "started_at": "2026-11-01T19:52:19.381Z",
       "queued": [
@@ -26308,6 +26296,29 @@
       "inventory": 3446,
       "status": "queued",
       "finished_at": "2026-11-06T00:23:25.385Z"
+    },
+    {
+      "started_at": "2026-11-06T00:26:42.461Z",
+      "queued": [
+        "DfBWKpTNS0f"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfBWRt5NozK/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfBWPN0t7qV/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3446,
+      "status": "queued",
+      "finished_at": "2026-11-06T00:38:04.308Z"
     }
   ],
   "next_account_index": 0,
