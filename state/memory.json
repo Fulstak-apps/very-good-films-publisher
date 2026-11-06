@@ -198810,7 +198810,7 @@
       },
       "caption_style": "source_repost",
       "metadata_pending": false,
-      "status": "publishing",
+      "status": "needs_review",
       "discovered_at": "2026-11-04T06:54:58.052Z",
       "key": "74a4eebaefaaf0c96cdeeb1660391e6bf066cd8e1df65a52262fedba05a1ae2e",
       "updated_at": "2026-11-06T22:17:43.936Z",
@@ -198829,7 +198829,10 @@
       "threads_media_id": "18147695488584447",
       "threads_published_at": "2026-11-04T11:21:19.965Z",
       "publish_retry_at": "2026-11-06T22:27:36.147Z",
-      "instagram_reconcile_required": true
+      "instagram_reconcile_required": true,
+      "instagram_abandoned_at": "2026-11-06T22:17:47.362Z",
+      "instagram_abandon_reason": "Publish outcome remained uncertain after the reconciliation window",
+      "review_reason": "Instagram publication outcome is uncertain; request was not repeated"
     },
     {
       "kind": "source_repost",
