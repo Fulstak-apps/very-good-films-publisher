@@ -17315,6 +17315,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfBQe-wJuhY/",
       "queued_at": "2026-11-06T02:22:51.180Z",
       "asset_sha256": "711c8dc3c203ea5c58552ac4e01e3b499c5ec8e7f94d890b3e115cb4e40c12d9"
+    },
+    "DfBQazUpt0n": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfBQazUpt0n/",
+      "queued_at": "2026-11-06T02:27:35.661Z",
+      "asset_sha256": "521ed9ec85e182413be21e38f29c27c24ffded61c53aa01f2bb03155abf76b2d"
     }
   },
   "checks": {
@@ -17374,22 +17380,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-01T20:58:54.913Z",
-      "queued": [
-        "De7EGCbxDFk",
-        "De7EC3kxpIx",
-        "De7D683x6ZB",
-        "De7Dy-ixvzX",
-        "De7DxCxxH3x"
-      ],
-      "errors": [],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 5,
-      "inventory": 2913,
-      "status": "queued",
-      "finished_at": "2026-11-01T21:02:49.996Z"
-    },
     {
       "started_at": "2026-11-01T21:04:00.718Z",
       "queued": [
@@ -26367,6 +26357,29 @@
       "inventory": 3446,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-06T02:09:54.676Z"
+    },
+    {
+      "started_at": "2026-11-06T02:14:17.047Z",
+      "queued": [
+        "DfBQe-wJuhY"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfBQtfRJ_zs/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfBQl01pZR_/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3446,
+      "status": "queued",
+      "finished_at": "2026-11-06T02:22:53.415Z"
     }
   ],
   "next_account_index": 0,
