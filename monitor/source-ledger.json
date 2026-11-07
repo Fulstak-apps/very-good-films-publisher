@@ -17633,6 +17633,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DP9QhUAAodN/",
       "queued_at": "2026-11-07T09:15:59.284Z",
       "asset_sha256": "ad66c498e41c565f854ff990f1001ef0b704ddb24e3509274de0800980dbdfbc"
+    },
+    "DP60tRGAkcC": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DP60tRGAkcC/",
+      "queued_at": "2026-11-07T09:20:39.122Z",
+      "asset_sha256": "92cf530e33613378a646498a7e4a5421657e764f386c71bb8ff5a338f354ca41"
     }
   },
   "checks": {
@@ -17692,16 +17698,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-04T22:32:41.624Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 168,
-      "attempts": 0,
-      "inventory": 3286,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-04T22:33:28.352Z"
-    },
     {
       "started_at": "2026-11-04T22:37:51.275Z",
       "queued": [],
@@ -24224,6 +24220,42 @@
       "inventory": 3513,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-07T09:05:29.162Z"
+    },
+    {
+      "started_at": "2026-11-07T09:09:49.623Z",
+      "queued": [
+        "DQiG3OkjBsz",
+        "DQWmopFiIos",
+        "DQCgLHJjO2R",
+        "DP9QhUAAodN"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQeHUcvAu1a/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQc6nVrAnNC/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQHl8mSjPIW/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQFBYYcAgcg/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovered": 324,
+      "attempts": 8,
+      "inventory": 3549,
+      "status": "queued",
+      "finished_at": "2026-11-07T09:16:02.398Z"
     }
   ],
   "next_account_index": 6,
