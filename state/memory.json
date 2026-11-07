@@ -199079,7 +199079,7 @@
       },
       "caption_style": "source_repost",
       "metadata_pending": false,
-      "status": "publishing",
+      "status": "needs_review",
       "discovered_at": "2026-11-04T07:45:59.340Z",
       "key": "9ec9d50cb1ea971d30c4a4bea3bfa308a4964b2d9d82acee5e793e5e871690dc",
       "updated_at": "2026-11-07T02:32:38.488Z",
@@ -199094,7 +199094,10 @@
       "threads_media_id": "17936268930147311",
       "threads_published_at": "2026-11-04T11:38:05.852Z",
       "publish_retry_at": "2026-11-04T11:53:21.335Z",
-      "instagram_container_status": "FINISHED"
+      "instagram_container_status": "FINISHED",
+      "instagram_error": "Meta HTTP 400, code -1, subcode 2207032: Create media fail, please try to re-create media",
+      "instagram_error_class": "permanent",
+      "review_reason": "instagram rejected this item: permanent"
     },
     {
       "kind": "source_repost",
@@ -210547,7 +210550,7 @@
   "discovery": [],
   "platforms": {
     "instagram": {
-      "retry_at": "2026-11-06T22:17:27.896Z",
+      "retry_at": "2026-11-07T02:32:50.946Z",
       "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
     },
     "threads": {
