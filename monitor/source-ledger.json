@@ -17663,6 +17663,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DPmehSigiMw/",
       "queued_at": "2026-11-07T09:25:00.434Z",
       "asset_sha256": "b04ffb4d82c807879f8b0cdfe801d9e7154a7237dde1ce4b20e3e8658b35856d"
+    },
+    "DPUAkUogYOn": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DPUAkUogYOn/",
+      "queued_at": "2026-11-07T09:26:21.847Z",
+      "asset_sha256": "039090b7d1966d07d859a516dd3a291bd6cacb5944c041a074cb32211df3cd98"
     }
   },
   "checks": {
@@ -17722,16 +17728,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-04T22:37:51.275Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 27,
-      "attempts": 0,
-      "inventory": 3286,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-04T22:38:37.635Z"
-    },
     {
       "started_at": "2026-11-04T22:42:58.001Z",
       "queued": [
@@ -24280,6 +24276,28 @@
       "inventory": 3549,
       "status": "queued",
       "finished_at": "2026-11-07T09:16:02.398Z"
+    },
+    {
+      "started_at": "2026-11-07T09:20:07.774Z",
+      "queued": [
+        "DP60tRGAkcC",
+        "DP4rbNfggHW",
+        "DP1lKDTgvWi",
+        "DPo4SMlAmCi",
+        "DPmehSigiMw"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPzCA8UAtIN/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 3549,
+      "status": "queued",
+      "finished_at": "2026-11-07T09:25:02.875Z"
     }
   ],
   "next_account_index": 6,
@@ -33571,6 +33589,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-07T12:22:54.959Z"
+    },
+    "DPhI3OzAZsO": {
+      "collector_version": 14,
+      "error": "Exact source caption missing, generic or truncated; needs review",
+      "failed_at": "2026-11-07T09:25:20.954Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-07T12:25:20.954Z"
     }
   },
   "candidates": {
