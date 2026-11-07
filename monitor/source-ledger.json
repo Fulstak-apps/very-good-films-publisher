@@ -17711,6 +17711,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DOTwYpQAp_G/",
       "queued_at": "2026-11-07T09:39:58.794Z",
       "asset_sha256": "1403c056950aec7498bf9d20f28c0fb850bf0b7c3e25cc171884ef6aebf699e3"
+    },
+    "DN1E7P-RBiK": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DN1E7P-RBiK/",
+      "queued_at": "2026-11-07T09:47:48.013Z",
+      "asset_sha256": "14c9a5de0c70251c8c8a15fa0a3262de856976237d9c2dfac3420fb7ea635411"
     }
   },
   "checks": {
@@ -17770,16 +17776,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-04T22:48:04.178Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 196,
-      "attempts": 0,
-      "inventory": 3287,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-04T22:48:50.910Z"
-    },
     {
       "started_at": "2026-11-04T22:53:10.758Z",
       "queued": [
@@ -24355,6 +24351,46 @@
       "inventory": 3549,
       "status": "queued",
       "finished_at": "2026-11-07T09:31:19.878Z"
+    },
+    {
+      "started_at": "2026-11-07T09:35:24.649Z",
+      "queued": [
+        "DOwGFi-gpsO",
+        "DOjX93vAtRz",
+        "DOTwYpQAp_G"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DO1Qhf8gsX0/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DOq37Irgmsm/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DOl8uDdAo2i/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DOgp-QMglEU/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc3R1XVhydC/",
+          "stage": "capture_or_queue",
+          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 8,
+      "inventory": 3549,
+      "status": "queued",
+      "finished_at": "2026-11-07T09:42:54.418Z"
     }
   ],
   "next_account_index": 6,
@@ -30130,10 +30166,10 @@
     "Dc3R1XVhydC": {
       "collector_version": 14,
       "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc3R1XVhydC-capture-diagnostic.json",
-      "failed_at": "2026-11-07T06:09:56.915Z",
-      "failures": 27,
+      "failed_at": "2026-11-07T09:42:54.405Z",
+      "failures": 28,
       "terminal": false,
-      "retry_at": "2026-11-07T09:09:56.915Z"
+      "retry_at": "2026-11-07T12:42:54.405Z"
     },
     "DczyscJBNxZ": {
       "collector_version": 14,
@@ -32290,10 +32326,10 @@
     "DXNCiAZgK3N": {
       "collector_version": 14,
       "error": "Rendered Reel failed video/audio/duration QA",
-      "failed_at": "2026-11-07T06:10:54.200Z",
-      "failures": 16,
+      "failed_at": "2026-11-07T09:46:15.128Z",
+      "failures": 17,
       "terminal": false,
-      "retry_at": "2026-11-07T09:10:54.201Z"
+      "retry_at": "2026-11-07T12:46:15.128Z"
     },
     "DXMMVU5CA2s": {
       "collector_version": 14,
@@ -33610,18 +33646,18 @@
     "DQeHUcvAu1a": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-07T09:12:34.482Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-07T09:42:34.482Z"
+      "failed_at": "2026-11-07T09:45:37.273Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DQc6nVrAnNC": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-07T09:13:13.672Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-07T09:43:13.672Z"
+      "failed_at": "2026-11-07T09:45:37.804Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "DQHl8mSjPIW": {
       "collector_version": 14,
@@ -33694,6 +33730,22 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-07T10:09:08.097Z"
+    },
+    "DOOr5R8ggVS": {
+      "collector_version": 14,
+      "error": "Exact source caption missing, generic or truncated; needs review",
+      "failed_at": "2026-11-07T09:45:45.680Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-07T12:45:45.683Z"
+    },
+    "DOL90tsghly": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-07T09:46:50.962Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
