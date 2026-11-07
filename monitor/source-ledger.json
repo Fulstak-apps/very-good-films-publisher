@@ -17567,6 +17567,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfbaNO7t0K9/",
       "queued_at": "2026-11-07T06:32:31.933Z",
       "asset_sha256": "9925b7574b0c364134679bc2e7a49e3abef1a2fd6ab7e1e4c4b02098c2a00f21"
+    },
+    "DfbaFblNlDT": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfbaFblNlDT/",
+      "queued_at": "2026-11-07T06:39:56.379Z",
+      "asset_sha256": "3159ebc29a5ade1a7e823c7d52efd5974e7c15aacecfef1f9523a0d083f97899"
     }
   },
   "checks": {
@@ -17626,37 +17632,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-04T15:55:14.308Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DXNCiAZgK3N/",
-          "stage": "capture_or_queue",
-          "error": "Rendered Reel failed video/audio/duration QA"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DfSoOPEytqP/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfPcRCjhJbP/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 3242,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-04T15:58:05.039Z"
-    },
     {
       "started_at": "2026-11-04T16:00:18.314Z",
       "queued": [],
@@ -24580,6 +24555,19 @@
       "inventory": 3500,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-07T06:22:15.742Z"
+    },
+    {
+      "started_at": "2026-11-07T06:26:32.547Z",
+      "queued": [
+        "DfbaIJ6t_7K",
+        "DfbaNO7t0K9"
+      ],
+      "errors": [],
+      "discovered": 248,
+      "attempts": 2,
+      "inventory": 3509,
+      "status": "queued",
+      "finished_at": "2026-11-07T06:32:36.255Z"
     }
   ],
   "next_account_index": 0,
