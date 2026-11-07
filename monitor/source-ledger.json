@@ -17693,6 +17693,12 @@
       "source_url": "https://www.instagram.com/ellsoriaa/reel/DO3y6usAh7O/",
       "queued_at": "2026-11-07T09:31:16.628Z",
       "asset_sha256": "b0b242346b265c0aec594fc1c3f888fd92922fa679b1b5bfb2a99249cdd8d0bc"
+    },
+    "DOwGFi-gpsO": {
+      "source_handle": "ellsoriaa",
+      "source_url": "https://www.instagram.com/ellsoriaa/reel/DOwGFi-gpsO/",
+      "queued_at": "2026-11-07T09:37:02.896Z",
+      "asset_sha256": "d7862cb22af69f2363332a405ce39ef383221ab34cf9b5ac3c6c5b781db53a97"
     }
   },
   "checks": {
@@ -17752,18 +17758,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-04T22:42:58.001Z",
-      "queued": [
-        "DfVJirzuQrl"
-      ],
-      "errors": [],
-      "discovered": 208,
-      "attempts": 1,
-      "inventory": 3287,
-      "status": "queued",
-      "finished_at": "2026-11-04T22:45:03.246Z"
-    },
     {
       "started_at": "2026-11-04T22:48:04.178Z",
       "queued": [],
@@ -24322,6 +24316,33 @@
       "inventory": 3549,
       "status": "queued",
       "finished_at": "2026-11-07T09:25:02.875Z"
+    },
+    {
+      "started_at": "2026-11-07T09:25:13.156Z",
+      "queued": [
+        "DPUAkUogYOn",
+        "DPE1yfZgkua",
+        "DO9BICdAvZx",
+        "DO6d2GYgjcT",
+        "DO3y6usAh7O"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPhI3OzAZsO/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPMXTYdgkTN/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 3549,
+      "status": "queued",
+      "finished_at": "2026-11-07T09:31:19.878Z"
     }
   ],
   "next_account_index": 6,
@@ -33626,6 +33647,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-07T09:27:05.051Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DO1Qhf8gsX0": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-07T09:36:04.367Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
