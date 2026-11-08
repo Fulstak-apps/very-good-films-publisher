@@ -17909,6 +17909,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Dfd2vZ9Nzni/",
       "queued_at": "2026-11-08T05:59:16.218Z",
       "asset_sha256": "b6c9b7ccf96690b2400cf3af101edd3af476083215564ef31e4aa5a90ebfa279"
+    },
+    "Dfd2jjuNHKq": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Dfd2jjuNHKq/",
+      "queued_at": "2026-11-08T06:09:53.772Z",
+      "asset_sha256": "a9d2abce01e19e3d43c38a4dd2da5ff74430d800107754f3f92fe336db35f687"
     }
   },
   "checks": {
@@ -17968,16 +17974,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-07T05:25:26.465Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 3500,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-07T05:25:59.736Z"
-    },
     {
       "started_at": "2026-11-07T05:30:30.611Z",
       "queued": [],
@@ -22927,6 +22923,24 @@
       "inventory": 3601,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-08T05:52:01.438Z"
+    },
+    {
+      "started_at": "2026-11-08T05:55:39.166Z",
+      "queued": [
+        "Dfd2vZ9Nzni"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Dfd3BGUtvoF/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3601,
+      "status": "queued",
+      "finished_at": "2026-11-08T06:02:13.629Z"
     }
   ],
   "next_account_index": 0,
@@ -32391,6 +32405,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-08T05:52:01.432Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Dfd3BGUtvoF": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-08T06:02:13.622Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
