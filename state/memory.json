@@ -214710,7 +214710,9 @@
       "instagram_container_status": "ERROR",
       "instagram_container_failures": 1,
       "instagram_previous_container_id": "18134520473306483",
-      "instagram_retry_at": "2026-11-08T10:07:38.607Z"
+      "instagram_retry_at": "2026-11-08T10:07:38.607Z",
+      "instagram_error": "instagram: ERROR; retry after 2026-11-08T10:07:38.607Z: ERROR",
+      "instagram_error_class": "transient"
     },
     {
       "kind": "source_repost",
@@ -214958,7 +214960,7 @@
   "discovery": [],
   "platforms": {
     "instagram": {
-      "retry_at": "2026-11-08T09:26:57.776Z",
+      "retry_at": "2026-11-08T09:52:44.631Z",
       "last_error": "Meta HTTP 401, code 190, subcode 0: Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
     },
     "threads": {
