@@ -18005,6 +18005,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DfnZtoizEE-/",
       "queued_at": "2026-11-12T18:58:37.427Z",
       "asset_sha256": "0de42a5139800e9a62c10d3b1b66f671cb940790ed216cb5b29872781f59968c"
+    },
+    "DfmLSVYx46o": {
+      "source_handle": "fuckinggoodmovies",
+      "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DfmLSVYx46o/",
+      "queued_at": "2026-11-12T19:05:01.003Z",
+      "asset_sha256": "6ae94732cf0495459f69a7264117d6329333b6e0d72f3ee181bd8439ced943fb"
     }
   },
   "checks": {
@@ -18064,16 +18070,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-07T21:20:36.133Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 3565,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-07T21:21:25.818Z"
-    },
     {
       "started_at": "2026-11-07T21:25:40.617Z",
       "queued": [],
@@ -23303,6 +23299,26 @@
       "inventory": 3614,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-12T18:47:45.129Z"
+    },
+    {
+      "started_at": "2026-11-12T18:52:29.694Z",
+      "queued": [
+        "DfpuoTQTAV9",
+        "Dfo8qrmgjtp",
+        "DfnZtoizEE-"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DfpT8I_A9hM/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 224,
+      "attempts": 4,
+      "inventory": 3623,
+      "status": "queued",
+      "finished_at": "2026-11-12T18:58:40.227Z"
     }
   ],
   "next_account_index": 11,
@@ -32874,6 +32890,14 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "Dfm9lPVRtsW": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-12T19:03:56.549Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-12T19:33:56.549Z"
     }
   },
   "candidates": {
