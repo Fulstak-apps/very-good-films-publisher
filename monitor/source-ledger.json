@@ -18023,6 +18023,12 @@
       "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dfj1rzpgUER/",
       "queued_at": "2026-11-12T19:09:46.427Z",
       "asset_sha256": "b8d3ddc9c56518a20215adc8be110fdf8437659097958dc9057ebf9f8ab7c18d"
+    },
+    "DfnayiviYd0": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfnayiviYd0/",
+      "queued_at": "2026-11-12T19:22:22.596Z",
+      "asset_sha256": "5149cf48db26ea1678802a54da21592880407c0a5d8142ccdd88b4217917165a"
     }
   },
   "checks": {
@@ -18069,10 +18075,10 @@
       "checked_at": "2026-11-12T18:54:06.912Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-11-08T20:02:57.313Z"
+      "checked_at": "2026-11-12T19:16:50.322Z"
     },
     "popcorncutzz": {
-      "checked_at": "2026-11-08T20:08:00.055Z"
+      "checked_at": "2026-11-12T19:21:59.690Z"
     },
     "cinamagiraffe41": {
       "checked_at": "2026-11-08T20:12:18.068Z"
@@ -18082,43 +18088,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-07T21:25:40.617Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQHl8mSjPIW/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQFBYYcAgcg/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 3565,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-07T21:25:55.379Z"
-    },
-    {
-      "started_at": "2026-11-07T21:30:45.374Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPzCA8UAtIN/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 3565,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-07T21:30:53.390Z"
-    },
     {
       "started_at": "2026-11-07T21:35:49.947Z",
       "queued": [],
@@ -23331,9 +23300,50 @@
       "inventory": 3623,
       "status": "queued",
       "finished_at": "2026-11-12T18:58:40.227Z"
+    },
+    {
+      "started_at": "2026-11-12T19:03:24.506Z",
+      "queued": [
+        "DfmLSVYx46o",
+        "DfkSJ1nAh3D",
+        "Dfj1rzpgUER"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dfm9lPVRtsW/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dfk0ZlTzBVI/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 3623,
+      "status": "queued",
+      "finished_at": "2026-11-12T19:09:49.744Z"
+    },
+    {
+      "started_at": "2026-11-12T19:14:14.539Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfmEu6TBjIX/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovered": 48,
+      "attempts": 1,
+      "inventory": 3624,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-12T19:18:47.738Z"
     }
   ],
-  "next_account_index": 11,
+  "next_account_index": 13,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -32918,6 +32928,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-12T19:35:51.857Z"
+    },
+    "DfmEu6TBjIX": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-12T19:18:47.725Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-12T19:48:47.725Z"
     }
   },
   "candidates": {
@@ -51035,6 +51053,66 @@
       "handle": "fuckinggoodmovies",
       "url": "https://www.instagram.com/fuckinggoodmovies/reel/Dfj1rzpgUER/",
       "shortcode": "Dfj1rzpgUER"
+    },
+    "DfmEu6TBjIX": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DfmEu6TBjIX/",
+      "shortcode": "DfmEu6TBjIX"
+    },
+    "DfnayiviYd0": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfnayiviYd0/",
+      "shortcode": "DfnayiviYd0"
+    },
+    "DfnaxZXimcs": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfnaxZXimcs/",
+      "shortcode": "DfnaxZXimcs"
+    },
+    "DfnabaRi4D7": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfnabaRi4D7/",
+      "shortcode": "DfnabaRi4D7"
+    },
+    "DfnaamMiZdT": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfnaamMiZdT/",
+      "shortcode": "DfnaamMiZdT"
+    },
+    "DfmYrkhih5z": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfmYrkhih5z/",
+      "shortcode": "DfmYrkhih5z"
+    },
+    "DfmZAACiIUz": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfmZAACiIUz/",
+      "shortcode": "DfmZAACiIUz"
+    },
+    "DfmY7o3iDQ6": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfmY7o3iDQ6/",
+      "shortcode": "DfmY7o3iDQ6"
+    },
+    "DflkkjluLg9": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DflkkjluLg9/",
+      "shortcode": "DflkkjluLg9"
+    },
+    "DflX0tiOloA": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DflX0tiOloA/",
+      "shortcode": "DflX0tiOloA"
+    },
+    "DfiM0Nei-nf": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfiM0Nei-nf/",
+      "shortcode": "DfiM0Nei-nf"
+    },
+    "DfiJY7bCEGl": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DfiJY7bCEGl/",
+      "shortcode": "DfiJY7bCEGl"
     }
   },
   "discovery_depth": {
@@ -51049,8 +51127,8 @@
     "cinemoviie": 20,
     "filmreelsvault": 30,
     "fuckinggoodmovies": 80,
-    "movie_vault_4u": 20,
-    "popcorncutzz": 20,
+    "movie_vault_4u": 30,
+    "popcorncutzz": 30,
     "cinamagiraffe41": 30,
     "primefilmtv": 30
   }
