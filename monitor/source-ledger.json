@@ -18089,6 +18089,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfoUZfvNsAB/",
       "queued_at": "2026-11-12T20:05:59.911Z",
       "asset_sha256": "e0c89fa00b4c369ab0bb68f8add70f2be3d4acaacf7464f8907f0ca6010b470a"
+    },
+    "DfoT9CbtrQp": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfoT9CbtrQp/",
+      "queued_at": "2026-11-12T20:11:29.131Z",
+      "asset_sha256": "06979443fd6eeb56ee0c7f410e8c1f134ed234c2b2177f4863a497456d9a2e24"
     }
   },
   "checks": {
@@ -18148,27 +18154,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-07T22:01:18.029Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DNn9gZ6iEeT/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DUx1XlGjHKU/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 3565,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-07T22:01:33.301Z"
-    },
     {
       "started_at": "2026-11-07T22:06:22.785Z",
       "queued": [],
@@ -23412,6 +23397,19 @@
       "inventory": 3635,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-12T19:52:20.917Z"
+    },
+    {
+      "started_at": "2026-11-12T19:57:23.174Z",
+      "queued": [
+        "DfoUeCPtlu5",
+        "DfoUZfvNsAB"
+      ],
+      "errors": [],
+      "discovered": 128,
+      "attempts": 2,
+      "inventory": 3745,
+      "status": "queued",
+      "finished_at": "2026-11-12T20:06:03.292Z"
     }
   ],
   "next_account_index": 0,
