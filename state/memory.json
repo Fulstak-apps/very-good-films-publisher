@@ -216321,6 +216321,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-12T19:42:29.032Z",
       "key": "70d04c24429b4012d5866ee24cdef5143adf1f11daef0d196208e7a0a58a878f"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DfoUeCPtlu5",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DfoUeCPtlu5",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DfoUeCPtlu5/",
+      "source_caption": "🎬 Elio (2025)\n\nElio follows an imaginative 11-year-old boy who feels lonely and misunderstood while dreaming of discovering life beyond Earth. His ordinary world changes when he is unexpectedly transported across the galaxy and mistaken for Earth’s official ambassador to an extraordinary organization of alien civilizations called the Communiverse. Surrounded by colorful extraterrestrial creatures and unfamiliar worlds, Elio must navigate intergalactic challenges while pretending to represent humanity. Along the way, he forms an unlikely friendship with a young alien named Glordon, discovering the importance of courage, acceptance, and belonging. As an unexpected crisis threatens his new friends, Elio must learn to believe in himself and embrace what makes him special. Pixar’s Elio combines breathtaking animation, humor, and heartfelt storytelling in an unforgettable adventure about friendship, family, and finding your place in the universe.\n\n🎭 Genre: Animation • Adventure • Comedy • Sci-Fi • Family\n\n⭐ IMDb: 6.7/10\n\n⏱️ Runtime: 1h 38m • PG\n\n🎥 Directors: Madeline Sharafian, Domee Shi & Adrian Molina\n\n📺 Where to Watch: Disney+ in the United States. Availability varies by region.",
+      "source_details": {
+        "title_hint": "Elio",
+        "year": 2025,
+        "availability": "Where to Watch: Disney+ in the United States",
+        "source_title": "Elio",
+        "source_year": 2025,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "Elio",
+        "type": "movie",
+        "director": "Adrian Molina",
+        "cast": [
+          "Yonas Kibreab",
+          "Jameela Jamil",
+          "Brad Garrett"
+        ],
+        "synopsis": "Elio is a 2025 American animated science fiction adventure film directed by Madeline Sharafian, Domee Shi, and Adrian Molina, and written by Julia Cho, Mark Hammer, and Mike Jones. Produced by Pixar Animation Studios for Walt Disney Pictures, the film stars the voices of Yonas Kibreab, Zoe Saldaña, Remy Edgerly, Brandon Moon, Brad Garrett, and Jameela Jamil. It follows 11-year-old Elio (Kibreab) who is mistaken for the intergalactic ambassador of Earth after being beamed up to the Communiverse by aliens for making contact, and must navigate a crisis that involves the warlord Grigon (Garrett), who is the father of the alien child Glordon (Edgerly) who Elio befriends. Elio was conceived by Mol",
+        "metadata_source": "https://en.wikipedia.org/wiki/Elio_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Elio",
+          "source_year": 2025,
+          "catalog_title": "Elio",
+          "catalog_year": 2025,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261112/082624aa2542d22097bf22c09d0e1d18e714c05ed5abd2afb31263068a976c0d.mp4?download=1",
+      "asset_sha256": "082624aa2542d22097bf22c09d0e1d18e714c05ed5abd2afb31263068a976c0d",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-12T20:01:22.756Z",
+        "source_duration": 153.155963,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-12T20:02:46.251Z",
+      "key": "aa9b76dd2f8a4bcae415b0b4d32f5503d1460483858959df2d5daa66371ecd28"
     }
   ],
   "discovery": [],
