@@ -18053,6 +18053,12 @@
       "source_url": "https://www.instagram.com/popcorncutzz/reel/DfmYrkhih5z/",
       "queued_at": "2026-11-12T19:26:43.660Z",
       "asset_sha256": "e4efe6aedfd10e242db3111a164e45b2a1bd18f6bb0878a35dc7a959dbf0f25c"
+    },
+    "DfmZAACiIUz": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DfmZAACiIUz/",
+      "queued_at": "2026-11-12T19:32:50.839Z",
+      "asset_sha256": "80895a082f919a0dde4bc5a625dca535a56bce00eee7395f5a85400ee550068b"
     }
   },
   "checks": {
@@ -18112,22 +18118,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-07T21:35:49.947Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPhI3OzAZsO/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 3565,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-07T21:35:57.168Z"
-    },
     {
       "started_at": "2026-11-07T21:40:54.934Z",
       "queued": [],
@@ -23365,6 +23355,22 @@
       "inventory": 3624,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-12T19:18:47.738Z"
+    },
+    {
+      "started_at": "2026-11-12T19:21:40.358Z",
+      "queued": [
+        "DfnayiviYd0",
+        "DfnaxZXimcs",
+        "DfnabaRi4D7",
+        "DfnaamMiZdT",
+        "DfmYrkhih5z"
+      ],
+      "errors": [],
+      "discovered": 88,
+      "attempts": 5,
+      "inventory": 3635,
+      "status": "queued",
+      "finished_at": "2026-11-12T19:26:46.217Z"
     }
   ],
   "next_account_index": 13,
