@@ -18251,6 +18251,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfltFqVtbhl/",
       "queued_at": "2026-11-12T23:39:25.514Z",
       "asset_sha256": "359bf89c6c700261c1432be8d6764daf319a6ebc368641e154d591fd94aefbe5"
+    },
+    "DflsHnmNuJ3": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DflsHnmNuJ3/",
+      "queued_at": "2026-11-12T23:48:39.465Z",
+      "asset_sha256": "852e24506a3a615be2a45fe91c150cc57e71c47d79e3ccbbb548a9438f059793"
     }
   },
   "checks": {
@@ -18310,37 +18316,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-08T00:34:27.703Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfTphLrNZNH/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQHl8mSjPIW/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQFBYYcAgcg/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPzCA8UAtIN/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 3565,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-08T00:35:01.908Z"
-    },
     {
       "started_at": "2026-11-08T00:39:32.531Z",
       "queued": [],
@@ -23736,6 +23711,25 @@
       "inventory": 3745,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-12T23:33:52.266Z"
+    },
+    {
+      "started_at": "2026-11-12T23:34:06.884Z",
+      "queued": [
+        "DfltL4AtBjn",
+        "DfltFqVtbhl"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DflsK8jNxV5/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3745,
+      "status": "queued",
+      "finished_at": "2026-11-12T23:43:40.018Z"
     }
   ],
   "next_account_index": 0,
@@ -33464,6 +33458,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-12T23:33:52.259Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DflsK8jNxV5": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-12T23:43:40.006Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
