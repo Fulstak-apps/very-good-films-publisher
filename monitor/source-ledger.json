@@ -18101,6 +18101,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfoT_xEtmYM/",
       "queued_at": "2026-11-12T20:14:30.264Z",
       "asset_sha256": "dfc2ee9c3b8415486f8b3e7b6abd0bb644562c50411eeea9e9115e889e194731"
+    },
+    "DfoT-zNtZwC": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfoT-zNtZwC/",
+      "queued_at": "2026-11-12T20:22:07.205Z",
+      "asset_sha256": "d0e12aca2d1db4672c361537f437b521195f6117d7adb78fd8621d13cc154650"
     }
   },
   "checks": {
@@ -18160,22 +18166,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-07T22:06:22.785Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DfSoOPEytqP/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 3565,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-07T22:06:32.241Z"
-    },
     {
       "started_at": "2026-11-07T22:11:28.566Z",
       "queued": [],
@@ -23416,6 +23406,19 @@
       "inventory": 3745,
       "status": "queued",
       "finished_at": "2026-11-12T20:06:03.292Z"
+    },
+    {
+      "started_at": "2026-11-12T20:07:33.833Z",
+      "queued": [
+        "DfoT9CbtrQp",
+        "DfoT_xEtmYM"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3745,
+      "status": "queued",
+      "finished_at": "2026-11-12T20:14:33.562Z"
     }
   ],
   "next_account_index": 0,
@@ -33024,6 +33027,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-12T19:34:49.597Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfoT6rgNzSA": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-12T20:20:28.746Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
