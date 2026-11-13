@@ -18347,6 +18347,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfgfXQ1tr7P/",
       "queued_at": "2026-11-13T03:00:58.958Z",
       "asset_sha256": "3eaf5394100e114536fb38cf8895c6a5aaf58cc16238d135760049fd9c609b40"
+    },
+    "Dfgfa2wtAZu": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Dfgfa2wtAZu/",
+      "queued_at": "2026-11-13T03:06:19.326Z",
+      "asset_sha256": "06813e4afd9426a6757ccd698651ba4504b40b0d4bd8b855dfbb8430668af270"
     }
   },
   "checks": {
@@ -18406,34 +18412,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-08T01:56:06.428Z",
-      "queued": [
-        "DNgWuSnit1x"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DNd0mmFCzsU/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DNWHT2QsB_7/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DNQ3QY6C7Pf/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        }
-      ],
-      "discovered": 328,
-      "attempts": 4,
-      "inventory": 3571,
-      "status": "queued",
-      "finished_at": "2026-11-08T01:59:33.044Z"
-    },
     {
       "started_at": "2026-11-08T02:01:12.357Z",
       "queued": [],
@@ -24204,6 +24182,19 @@
       "inventory": 3745,
       "status": "queued",
       "finished_at": "2026-11-13T02:52:33.415Z"
+    },
+    {
+      "started_at": "2026-11-13T02:54:22.450Z",
+      "queued": [
+        "DfjBCcsthni",
+        "DfgfXQ1tr7P"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3745,
+      "status": "queued",
+      "finished_at": "2026-11-13T03:01:02.049Z"
     }
   ],
   "next_account_index": 0,
