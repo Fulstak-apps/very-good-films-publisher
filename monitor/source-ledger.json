@@ -18407,6 +18407,12 @@
       "source_url": "https://www.instagram.com/theacenyc/reel/DfgM0h7RqrO/",
       "queued_at": "2026-11-13T04:47:38.173Z",
       "asset_sha256": "e403fd4b537f88c5e259a2f6dbdb24f4bde32a7ff68392580c7dac79cae4d758"
+    },
+    "DfkANm_MKgm": {
+      "source_handle": "the_goodfilms",
+      "source_url": "https://www.instagram.com/the_goodfilms/reel/DfkANm_MKgm/",
+      "queued_at": "2026-11-13T04:53:25.755Z",
+      "asset_sha256": "0a132605733003c2ba8f4137172858ce62269d1f869139ee61fd58d9b1ef73bb"
     }
   },
   "checks": {
@@ -18429,7 +18435,7 @@
       "checked_at": "2026-11-13T04:47:03.469Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-11-08T20:42:54.284Z"
+      "checked_at": "2026-11-13T04:52:21.762Z"
     },
     "film.fission": {
       "checked_at": "2026-11-08T20:47:58.774Z"
@@ -18466,16 +18472,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-08T03:12:25.022Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 300,
-      "attempts": 0,
-      "inventory": 3571,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-08T03:13:40.561Z"
-    },
     {
       "started_at": "2026-11-08T03:17:30.324Z",
       "queued": [],
@@ -24709,9 +24705,32 @@
       "inventory": 3750,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-13T04:41:50.276Z"
+    },
+    {
+      "started_at": "2026-11-13T04:46:44.622Z",
+      "queued": [
+        "DfgM0h7RqrO"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Dfpg5SORxLK/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/DfkfcIyRHTD/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 34,
+      "attempts": 3,
+      "inventory": 3753,
+      "status": "queued",
+      "finished_at": "2026-11-13T04:47:40.615Z"
     }
   ],
-  "next_account_index": 3,
+  "next_account_index": 4,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -34837,6 +34856,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-13T04:47:23.062Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfpY3NxsHQx": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-13T04:52:37.946Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfmreZ6t8kS": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-13T04:53:06.816Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
@@ -53607,13 +53642,33 @@
       "handle": "theacenyc",
       "url": "https://www.instagram.com/theacenyc/reel/DfgM0h7RqrO/",
       "shortcode": "DfgM0h7RqrO"
+    },
+    "DfpY3NxsHQx": {
+      "handle": "the_goodfilms",
+      "url": "https://www.instagram.com/the_goodfilms/reel/DfpY3NxsHQx/",
+      "shortcode": "DfpY3NxsHQx"
+    },
+    "DfmreZ6t8kS": {
+      "handle": "the_goodfilms",
+      "url": "https://www.instagram.com/the_goodfilms/reel/DfmreZ6t8kS/",
+      "shortcode": "DfmreZ6t8kS"
+    },
+    "DfkANm_MKgm": {
+      "handle": "the_goodfilms",
+      "url": "https://www.instagram.com/the_goodfilms/reel/DfkANm_MKgm/",
+      "shortcode": "DfkANm_MKgm"
+    },
+    "DfhbSKFtE60": {
+      "handle": "the_goodfilms",
+      "url": "https://www.instagram.com/the_goodfilms/reel/DfhbSKFtE60/",
+      "shortcode": "DfhbSKFtE60"
     }
   },
   "discovery_depth": {
     "reelgoodmovies": 40,
     "thecinemanerd.ig": 30,
     "theacenyc": 30,
-    "the_goodfilms": 30,
+    "the_goodfilms": 40,
     "film.fission": 30,
     "ellsoriaa": 40,
     "relatedfilms": 70,
