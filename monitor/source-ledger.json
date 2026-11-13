@@ -18377,6 +18377,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DfgfAiet68j/",
       "queued_at": "2026-11-13T03:24:31.354Z",
       "asset_sha256": "729c9168dbc6d104a45cc31349c09fe9693dc65c5a3ca891e1cb0ce0b44535ae"
+    },
+    "DfgfIL3Nke9": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfgfIL3Nke9/",
+      "queued_at": "2026-11-13T03:26:30.400Z",
+      "asset_sha256": "c5fea7de7732fd3d45f54b6c94eefc8c6d08258b31740502169835bf07aefe4d"
     }
   },
   "checks": {
@@ -18436,16 +18442,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-08T02:06:17.556Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 65,
-      "attempts": 0,
-      "inventory": 3571,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-08T02:06:57.331Z"
-    },
     {
       "started_at": "2026-11-08T02:11:22.225Z",
       "queued": [],
@@ -24222,6 +24218,41 @@
       "inventory": 3745,
       "status": "queued",
       "finished_at": "2026-11-13T03:10:36.523Z"
+    },
+    {
+      "started_at": "2026-11-13T03:14:53.716Z",
+      "queued": [
+        "Dflrx97NVq8",
+        "DfgfZ1QN_8D",
+        "DfgfAiet68j"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Dfgez9kNsmz/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfgfP3at7If/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfgfR3YtDbo/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfgfJRDtotE/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 3745,
+      "status": "queued",
+      "finished_at": "2026-11-13T03:24:34.566Z"
     }
   ],
   "next_account_index": 0,
