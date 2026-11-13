@@ -218286,6 +218286,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-12T23:50:04.890Z",
       "key": "699aacad29a282419214ca5dc6431518c86859d6104da7c6938e7d464bfbaa23"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DflrvxKNVeX",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DflrvxKNVeX",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DflrvxKNVeX/",
+      "source_caption": "🎬 Passenger 57 (1992)\n\nPassenger 57 follows John Cutter, a former police officer and aviation security expert who finds himself caught in a deadly situation aboard a commercial airplane. While traveling to begin a new job, Cutter discovers that a dangerous international terrorist, Charles Rane, has taken control of the aircraft with the help of armed accomplices. As the passengers and crew become hostages, Cutter must rely on his combat skills, intelligence, and quick thinking to stop the criminals before innocent lives are lost. With limited resources and danger around every corner, he faces a series of intense confrontations high above the ground. Starring Wesley Snipes, Passenger 57 delivers thrilling action, suspenseful moments, and explosive confrontations while exploring courage, survival, and the determination to protect others.\n\n🎭 Genre: Action • Crime • Thriller\n\n⭐ IMDb: 5.9/10\n\n⏱️ Runtime: 1h 24m • R\n\n🎥 Director: Kevin Hooks\n\n✍️ Writers: David Loughery & Dan Gordon\n\n📺 Where to Watch: Check Amazon Prime Video, Apple TV, and other digital platforms for current streaming or rental availability. Availability varies by region.",
+      "source_details": {
+        "title_hint": "Passenger 57",
+        "year": 1992,
+        "availability": "Where to Watch: Check Amazon Prime Video, Apple TV, and other digital platforms for current streaming or rental availability",
+        "source_title": "Passenger 57",
+        "source_year": 1992,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Wesley Snipes",
+          "Bruce Payne",
+          "Tom Sizemore"
+        ],
+        "title": "Passenger 57",
+        "type": "movie",
+        "director": "Kevin Hooks",
+        "synopsis": "Passenger 57 is a 1992 American action thriller film directed by Kevin Hooks. The film stars Wesley Snipes and Bruce Payne, with Snipes portraying security consultant John Cutter who finds himself forced to foil a plot to free captive terrorist Charles Rane during a commercial airline flight. Critical reviews were mixed, but the film was a box-office success, and made Snipes a popular action hero icon.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Passenger_57",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Passenger 57",
+          "source_year": 1992,
+          "catalog_title": "Passenger 57",
+          "catalog_year": 1992,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261113/3165f7bc942d14a658917c03f7ba2a3d9432656172042860867f796cfc0429d5.mp4?download=1",
+      "asset_sha256": "3165f7bc942d14a658917c03f7ba2a3d9432656172042860867f796cfc0429d5",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-13T01:20:04.859Z",
+        "source_duration": 144.46666666666667,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-13T01:23:03.346Z",
+      "key": "907fcfb5be8e285887db59937d367f953551cd676f56fca3d3c71c69f56cdd22"
     }
   ],
   "discovery": [],
