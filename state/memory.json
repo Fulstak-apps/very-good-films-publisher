@@ -221758,6 +221758,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-13T09:18:33.457Z",
       "key": "58b58650e833054e25d7e1575754346772170d0fa24301351235558383bf2f48"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Dfqpz15ta-S",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "Dfqpz15ta-S",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/Dfqpz15ta-S/",
+      "source_caption": "🎬 Big Eyes (2014)\n\nBig Eyes follows Margaret Keane, a talented artist whose distinctive paintings of children with unusually large eyes become a sensation in the 1950s and 1960s. After marrying the charismatic Walter Keane, Margaret watches as her husband takes credit for her artwork, building fame and fortune while keeping her true identity hidden. As her paintings become increasingly popular, Margaret struggles with the pressure of maintaining the deception and finding the courage to stand up for herself. Starring Amy Adams and Christoph Waltz, the film tells an emotional story inspired by real events, exploring creativity, ambition, betrayal, and one woman’s determination to reclaim her voice and artistic legacy.\n\n🎭 Genre: Biography • Drama • Crime\n\n⭐ IMDb: 7.0/10\n\n⏱️ Runtime: 1h 46m • PG-13\n\n🎥 Director: Tim Burton\n\n✍️ Writers: Scott Alexander & Larry Karaszewski\n\n🏆 Awards: Amy Adams won the Golden Globe for Best Actress in a Motion Picture – Musical or Comedy.\n\n📺 Where to Watch: Check Amazon Prime Video and Apple TV for current rental or streaming availability in the United States.",
+      "source_details": {
+        "title_hint": "Big Eyes",
+        "year": 2014,
+        "media_type_hint": "movie",
+        "availability": ". After marrying the charismatic Walter Keane, Margaret watches as her husband takes credit for her artwork, building fame and fortune while keeping her true identity hidden",
+        "source_title": "Big Eyes",
+        "source_year": 2014,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Amy Adams",
+          "Christoph Waltz",
+          "Krysten Ritter"
+        ],
+        "title": "Big Eyes",
+        "type": "movie",
+        "director": "Tim Burton",
+        "synopsis": "Big Eyes is a 2014 American biographical drama film directed by Tim Burton, written by Scott Alexander and Larry Karaszewski, and starring Amy Adams and Christoph Waltz. It is about the relationship between American artist Margaret Keane and her second husband, Walter Keane, who in the 1950s and 1960s took credit for Margaret's phenomenally popular paintings of people with big eyes. The film had its world premiere in New York City on December 15, 2014, and was released in the United States by The Weinstein Company on December 25, 2014. It was met with generally favorable reviews, with particular praise given to the performances of Adams and Waltz and performed moderately well at the box offi",
+        "metadata_source": "https://en.wikipedia.org/wiki/Big_Eyes",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Big Eyes",
+          "source_year": 2014,
+          "catalog_title": "Big Eyes",
+          "catalog_year": 2014,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261113/c4852ba7eb37a52de29e4899a02c8b79be580dc744f109e67530a6c477562422.mp4?download=1",
+      "asset_sha256": "c4852ba7eb37a52de29e4899a02c8b79be580dc744f109e67530a6c477562422",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-13T09:22:21.638Z",
+        "source_duration": 179.557052,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-13T09:23:38.536Z",
+      "key": "eed82706ca1afa9c5d7512257246b95855980e955beb1ecc7e83264563f192ef"
     }
   ],
   "discovery": [],
