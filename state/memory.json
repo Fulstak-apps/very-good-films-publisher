@@ -222812,6 +222812,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-14T15:33:32.465Z",
       "key": "3c4748641fffc86bfe731c25ab0277abeb1ae6cb313ff7ba45398a2d78d4f463"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DfuW5QVyBAn",
+        "title": "@film.fission clip"
+      },
+      "scene": {
+        "id": "DfuW5QVyBAn",
+        "start": 0,
+        "end": 84.333
+      },
+      "source_post_url": "https://www.instagram.com/film.fission/reel/DfuW5QVyBAn/",
+      "source_caption": "Don't Blush!\n\nThe romantic chemistry between music student Hannah Wells (Ella Bright) and star hockey captain Garrett Graham (Belmont Cameli) is the emotional heartbeat of the Amazon Prime Video series Off-Campus, adapted from Elle Kennedy's hit novel The Deal.\n\nPrime Video's hit YA hockey drama Off Campus will premiere its second season on April 28, 2027. The second season shifts focus to the romance between Allie Hayes (Mika Abdalla) and Dean Di Laurentis (Stephen Kalyn), adapting Elle Kennedy's book The Score. Ella Bright (Hannah Wells) and Belmont Cameli (Garrett Graham) return alongside Mika Abdalla, Stephen Kalyn, Antonio Cipriano, and Jalen Thomas Brooks.\n.\n.\n.\n#offcampus #ellabright",
+      "source_details": {
+        "title_hint": "Off-Campus",
+        "year": 2027,
+        "media_type_hint": "tv",
+        "source_title": "Off-Campus",
+        "source_year": 2027,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "Off-Campus",
+        "title": "Off Campus",
+        "type": "tv",
+        "director": "Sam Bailey",
+        "cast": [
+          "Ella Bright",
+          "Belmont Cameli",
+          "Mika Abdalla"
+        ],
+        "synopsis": "Off Campus is an American romantic drama television series created by Louisa Levy for Amazon Prime Video. It is based on the Off-Campus book series by Elle Kennedy. Set at the fictional campus of Briar University, four close-knit college hockey players navigate the complexities of adulthood, relationships, and sex to ultimately find their true love. The first season centers on Hannah Wells and Garrett Graham, while introducing the core four college hockey players Garrett, Dean, Logan, and Tucker. Off Campus premiered on May 13, 2026 and received positive reviews. In February 2026, ahead of the series premiere, the series was renewed for a second season, which is set to premiere on April 28, ",
+        "metadata_source": "https://en.wikipedia.org/wiki/Off_Campus",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Off-Campus",
+          "source_year": 2027,
+          "catalog_title": "Off Campus",
+          "catalog_year": 2027,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261114/2b66e9c2b4617e488c53ca9e78214a7ef69e0f77b61aa05a6b60ca1e6b345f4c.mp4?download=1",
+      "asset_sha256": "2b66e9c2b4617e488c53ca9e78214a7ef69e0f77b61aa05a6b60ca1e6b345f4c",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 84.333333,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-14T15:46:16.099Z",
+        "source_duration": 84.33333333333333,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-14T15:48:45.552Z",
+      "key": "88c9020d038fe1104f5de55c9b7c710f7808b3058bcbd4af526e138579e99708"
     }
   ],
   "discovery": [],
