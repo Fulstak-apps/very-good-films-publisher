@@ -18641,6 +18641,12 @@
       "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DfuernkOPV7/",
       "queued_at": "2026-11-14T15:30:39.140Z",
       "asset_sha256": "a3061c65e99bdfc4036c491eeb95be1fcd767a64c6333fd35ebe683643ff6bc9"
+    },
+    "DfuW5QVyBAn": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DfuW5QVyBAn/",
+      "queued_at": "2026-11-14T15:46:16.105Z",
+      "asset_sha256": "2b66e9c2b4617e488c53ca9e78214a7ef69e0f77b61aa05a6b60ca1e6b345f4c"
     }
   },
   "checks": {
@@ -18660,13 +18666,13 @@
       "checked_at": "2026-11-14T15:29:25.232Z"
     },
     "theacenyc": {
-      "checked_at": "2026-11-14T13:37:38.217Z"
+      "checked_at": "2026-11-14T15:34:26.036Z"
     },
     "the_goodfilms": {
-      "checked_at": "2026-11-14T13:42:49.926Z"
+      "checked_at": "2026-11-14T15:38:38.684Z"
     },
     "film.fission": {
-      "checked_at": "2026-11-14T13:47:54.024Z"
+      "checked_at": "2026-11-14T15:43:42.791Z"
     },
     "ellsoriaa": {
       "checked_at": "2026-11-14T13:52:05.356Z"
@@ -18700,61 +18706,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-13T04:56:57.467Z",
-      "queued": [
-        "DfpCUQqSW1S",
-        "DfmwctXS-p8"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/film.fission/reel/DfkWQEwSLCR/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovered": 124,
-      "attempts": 3,
-      "inventory": 3760,
-      "status": "queued",
-      "finished_at": "2026-11-13T05:01:12.622Z"
-    },
-    {
-      "started_at": "2026-11-13T05:02:04.716Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DfqC81wiwxb/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dfo7BZ2i6zd/",
-          "stage": "capture_or_queue",
-          "error": "Source caption has no explicit movie or television title"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dfk1zk3iTka/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovered": 168,
-      "attempts": 3,
-      "inventory": 3763,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-13T05:03:27.194Z"
-    },
-    {
-      "started_at": "2026-11-13T05:07:11.516Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 245,
-      "attempts": 0,
-      "inventory": 3763,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-13T05:08:20.259Z"
-    },
     {
       "started_at": "2026-11-13T05:12:17.100Z",
       "queued": [],
@@ -24193,9 +24144,41 @@
       "inventory": 3822,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-14T15:23:24.014Z"
+    },
+    {
+      "started_at": "2026-11-14T15:28:06.710Z",
+      "queued": [
+        "DfuernkOPV7"
+      ],
+      "errors": [],
+      "discovered": 324,
+      "attempts": 1,
+      "inventory": 3823,
+      "status": "queued",
+      "finished_at": "2026-11-14T15:30:41.670Z"
+    },
+    {
+      "started_at": "2026-11-14T15:33:11.028Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 34,
+      "attempts": 0,
+      "inventory": 3823,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-14T15:34:26.045Z"
+    },
+    {
+      "started_at": "2026-11-14T15:38:17.478Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 88,
+      "attempts": 0,
+      "inventory": 3823,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-14T15:38:38.693Z"
     }
   ],
-  "next_account_index": 2,
+  "next_account_index": 5,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -53697,14 +53680,19 @@
       "handle": "thecinemanerd.ig",
       "url": "https://www.instagram.com/thecinemanerd.ig/reel/DfuernkOPV7/",
       "shortcode": "DfuernkOPV7"
+    },
+    "DfuW5QVyBAn": {
+      "handle": "film.fission",
+      "url": "https://www.instagram.com/film.fission/reel/DfuW5QVyBAn/",
+      "shortcode": "DfuW5QVyBAn"
     }
   },
   "discovery_depth": {
     "reelgoodmovies": 30,
     "thecinemanerd.ig": 20,
-    "theacenyc": 80,
-    "the_goodfilms": 20,
-    "film.fission": 20,
+    "theacenyc": 20,
+    "the_goodfilms": 30,
+    "film.fission": 30,
     "ellsoriaa": 30,
     "relatedfilms": 60,
     "uneedmink": 60,
