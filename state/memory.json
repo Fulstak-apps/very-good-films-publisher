@@ -224465,6 +224465,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-15T21:48:32.687Z",
       "key": "6b13d0a11918f4295f89e0ab0ea8208fc41aefe7488aa66fd35e9a410737074a"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Dfxja8wx9bw",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "Dfxja8wx9bw",
+        "start": 0,
+        "end": 25.266
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dfxja8wx9bw/",
+      "source_caption": "In his commentary on 𝐎𝐧𝐥𝐲 𝐆𝐨𝐝 𝐅𝐨𝐫𝐠𝐢𝐯𝐞𝐬 (𝟐𝟎𝟏𝟑), writer and director Nicolas Winding Refn states that Bangkok is a radically different city depending on the time of day. If it is daytime, it is, in his words, like Disneyland. By night, however, things are far more sinister.",
+      "source_details": {
+        "title_hint": "Only God Forgives",
+        "year": 2013,
+        "source_title": "Only God Forgives",
+        "source_year": 2013,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title_hint_verified": "𝐎𝐧𝐥𝐲 𝐆𝐨𝐝 𝐅𝐨𝐫𝐠𝐢𝐯𝐞𝐬",
+        "title": "Only God Forgives",
+        "type": "movie",
+        "director": "Nicolas Winding Refn",
+        "cast": [
+          "Ryan Gosling",
+          "Kristin Scott Thomas",
+          "Tom Burke"
+        ],
+        "synopsis": "Only God Forgives is a 2013 action-thriller film written and directed by Nicolas Winding Refn and stars Ryan Gosling, Kristin Scott Thomas and Vithaya Pansringarm. It was shot on location in Bangkok, Thailand, and as with the director's earlier film Drive, it was dedicated to Chilean director Alejandro Jodorowsky. The surreal and neo-noir film competed for the Palme d'Or at the 2013 Cannes Film Festival. Only God Forgives premiered at the 2013 Cannes Film Festival to polarized reviews from critics who praised its soundtrack, action sequences and Refn's traditional style, but was heavily criticised for its screenwriting and characterization.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Only_God_Forgives",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Only God Forgives",
+          "source_year": 2013,
+          "catalog_title": "Only God Forgives",
+          "catalog_year": 2013,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261115/ed7bb5b36062ee9d84cad137d96328ef94a3044d739ad68bc3f8527b50a70e95.mp4?download=1",
+      "asset_sha256": "ed7bb5b36062ee9d84cad137d96328ef94a3044d739ad68bc3f8527b50a70e95",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 25.217,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-15T22:31:34.870Z",
+        "source_duration": 25.266666666666666,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-15T22:35:58.717Z",
+      "key": "dc085d40dd56be7790857bec61855028c8070ea5564ca9df745d26f63a1e753f"
     }
   ],
   "discovery": [],
