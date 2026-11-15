@@ -224282,6 +224282,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-15T14:24:12.740Z",
       "key": "f5389d9f3563679aedbffb616895361002eccfcec9e6cbb4df0efa1649ea069c"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Dfw_q_2A0Fe",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "Dfw_q_2A0Fe",
+        "start": 0,
+        "end": 35.033
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/Dfw_q_2A0Fe/",
+      "source_caption": "Chuck Norris was reportedly considered for the lead role in 𝐊𝐢𝐜𝐤𝐛𝐨𝐱𝐞𝐫 (𝟏𝟗𝟖𝟗), but producer Menahem Golan had other plans. Having acquired the project specifically for Jean-Claude Van Damme, Golan reportedly refused to sell the film rights to Norris.⁣\n⁣\nWhile Norris was already an established action star, Van Damme was still making a name for himself following his breakthrough in Bloodsport (1988). Kickboxer went on to become one of his most iconic films, remembered for its intense training sequences, martial arts action, and signature kicks.",
+      "source_details": {
+        "title_hint": "Kickboxer",
+        "year": 1989,
+        "media_type_hint": "movie",
+        "source_title": "Kickboxer",
+        "source_year": 1989,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "Kickboxer",
+        "type": "movie",
+        "director": "Mark DiSalle",
+        "cast": [
+          "Jean-Claude Van Damme",
+          "Dennis Alexio",
+          "Michel Qissi"
+        ],
+        "synopsis": "Kickboxer is a 1989 American martial arts film directed by Mark DiSalle and David Worth and starring Jean-Claude Van Damme. Former world kickboxing champion Dennis Alexio is also featured. The plot revolves around Kurt Sloane (Van Damme) seeking revenge on the fearsome kickboxing champion Tong Po (Michel Qissi) who paralyzed his brother Eric Sloane (Dennis Alexio). The film is regarded as the first movie to bring Muay Thai (Thai kickboxing) to a global audience. Produced by Kings Road Entertainment and released by The Cannon Group, Inc. on September 8, 1989, it grossed $50 million on a budget of $2.7 million. It spawned several sequels.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Kickboxer_(1989_film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Kickboxer",
+          "source_year": 1989,
+          "catalog_title": "Kickboxer",
+          "catalog_year": 1989,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261115/3ff4de90ee987382e31492618fbdbc993fff00164da7d0c7c033d42897e022bc.mp4?download=1",
+      "asset_sha256": "3ff4de90ee987382e31492618fbdbc993fff00164da7d0c7c033d42897e022bc",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 35.016,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-15T16:08:04.887Z",
+        "source_duration": 35.03333333333333,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-15T16:10:57.394Z",
+      "key": "79f4820bce7df805d3f0f2c237685dfcff72c21deb386b9f8d1c482b8e34acec"
     }
   ],
   "discovery": [],
