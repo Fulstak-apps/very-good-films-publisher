@@ -18671,6 +18671,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Dfvm93kNIji/",
       "queued_at": "2026-11-15T01:57:37.938Z",
       "asset_sha256": "5eb7b640458c32a6d1852a0c6babf82f61d4afac22c2084a84de9740aab95b24"
+    },
+    "Dfvli-vNRM8": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Dfvli-vNRM8/",
+      "queued_at": "2026-11-15T02:09:32.848Z",
+      "asset_sha256": "e36129ed1d0b0636a4d57a77e59e402080b23d289db69b2175eb7f076a7a2677"
     }
   },
   "checks": {
@@ -18730,16 +18736,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-14T01:54:40.139Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 288,
-      "attempts": 0,
-      "inventory": 3819,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-14T01:55:52.333Z"
-    },
     {
       "started_at": "2026-11-14T01:59:44.790Z",
       "queued": [],
@@ -23543,6 +23539,19 @@
       "inventory": 3868,
       "status": "queued",
       "finished_at": "2026-11-15T01:49:30.030Z"
+    },
+    {
+      "started_at": "2026-11-15T01:50:57.982Z",
+      "queued": [
+        "Dfvm1-8N0EP",
+        "Dfvm93kNIji"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3868,
+      "status": "queued",
+      "finished_at": "2026-11-15T01:57:41.259Z"
     }
   ],
   "next_account_index": 0,
@@ -33983,6 +33992,54 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-15T01:45:50.596Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Dfvm6XpNsms": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-15T02:02:04.264Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Dfvm40dNv7C": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-15T02:02:16.719Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Dfvm2h_tjMD": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-15T02:03:04.609Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Dfvmxyttmt5": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-15T02:03:52.140Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfvmwDFtjHj": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-15T02:04:42.967Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DfvmuBLtNid": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-15T02:05:29.964Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
