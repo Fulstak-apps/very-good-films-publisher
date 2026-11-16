@@ -225646,6 +225646,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-16T06:53:25.621Z",
       "key": "3a61bd02817ecb35f872f56d0daa024e85e214d660a0f0608c443823f8883758"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DfycjdXtTvx",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DfycjdXtTvx",
+        "start": 0,
+        "end": 59.602
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DfycjdXtTvx/",
+      "source_caption": "📺 Men of a Certain Age (2009–2011)\n\nMen of a Certain Age follows three longtime friends—Joe, Owen, and Terry—as they navigate the challenges of middle age while trying to balance careers, relationships, family responsibilities, and personal dreams. Joe is a recently separated father struggling with gambling and uncertainty about his future, Owen is a married man working at his father’s car dealership while dealing with financial pressure, and Terry is an aspiring actor who refuses to give up on finding success. Despite their different lifestyles, the three friends rely on one another for support, advice, and laughter as they confront unexpected changes and difficult decisions. Starring Ray Romano, Andre Braugher, and Scott Bakula, the series combines heartfelt drama, realistic humor, and meaningful moments while exploring friendship, aging, fatherhood, second chances, and the challenges of finding happiness later in life.\n\n🎭 Genre: Comedy • Drama\n\n⭐ IMDb: 8.0/10\n\n⏱️ Runtime: Approximately 43 minutes per episode • TV-MA\n\n🎥 Creators: Ray Romano & Mike Royce\n\n🏆 Awards: Andre Braugher received two Primetime Emmy Award nominations for Outstanding Supporting Actor in a Drama Series.\n\n📺 Where to Watch: Check Amazon Prime Video and Apple TV for current streaming or purchase availability in the United States.",
+      "source_details": {
+        "title_hint": "Men of a Certain Age",
+        "year": 2009,
+        "media_type_hint": "tv",
+        "availability": ". Where to Watch: Check Amazon Prime Video and Apple TV for current streaming or purchase availability in the United States",
+        "source_title": "Men of a Certain Age",
+        "source_year": 2009,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Ray Romano",
+          "Andre Braugher",
+          "Scott Bakula"
+        ],
+        "title": "Men of a Certain Age",
+        "type": "tv",
+        "director": "Mike Royce",
+        "synopsis": "Men of a Certain Age is an American comedy-drama television series created by Ray Romano and Mike Royce, that ran on TNT from December 7, 2009, to July 6, 2011. The hour-long program stars Romano, Andre Braugher, and Scott Bakula as three best friends in their late forties dealing with the realities of being middle aged. The show won a Peabody Award, and Braugher was twice nominated for the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series. On July 15, 2011, TNT cancelled the series after two seasons spanning 22 episodes.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Men_of_a_Certain_Age",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Men of a Certain Age",
+          "source_year": 2009,
+          "catalog_title": "Men of a Certain Age",
+          "catalog_year": 2009,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261116/7c1c25c98cbeabddd7cc127110d69dfed145fcc8569611365b1779fe384b36f9.mp4?download=1",
+      "asset_sha256": "7c1c25c98cbeabddd7cc127110d69dfed145fcc8569611365b1779fe384b36f9",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 59.466016,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-16T06:59:26.770Z",
+        "source_duration": 59.602766,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-16T07:01:09.652Z",
+      "key": "5d55b30e2a9b0b5547f6e36c6762f13d6c96353d57143e273eea836da0116968"
     }
   ],
   "discovery": [],
