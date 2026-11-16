@@ -18797,6 +18797,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Dfyes_Ittqq/",
       "queued_at": "2026-11-16T05:30:26.554Z",
       "asset_sha256": "011893bfe7133b8fcb596ff425941b0e521f8c5df02e328f9944dfe0d5ad5eab"
+    },
+    "DfyenVPtH18": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DfyenVPtH18/",
+      "queued_at": "2026-11-16T05:35:59.024Z",
+      "asset_sha256": "a5f811f7bdff2d64e06276f4f11e05c15e27d5a744ad13758ecb26ac2247041f"
     }
   },
   "checks": {
@@ -18856,16 +18862,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-15T04:39:24.902Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 248,
-      "attempts": 0,
-      "inventory": 3868,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T04:40:21.364Z"
-    },
     {
       "started_at": "2026-11-15T04:44:29.727Z",
       "queued": [],
@@ -23642,6 +23638,24 @@
       "inventory": 3880,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-16T05:18:55.371Z"
+    },
+    {
+      "started_at": "2026-11-16T05:23:43.424Z",
+      "queued": [
+        "Dfyes_Ittqq"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DfyelCENFaD/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovered": 88,
+      "attempts": 2,
+      "inventory": 3910,
+      "status": "queued",
+      "finished_at": "2026-11-16T05:30:29.033Z"
     }
   ],
   "next_account_index": 0,
