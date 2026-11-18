@@ -19043,6 +19043,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Df1M87zNlyP/",
       "queued_at": "2026-11-18T19:57:47.258Z",
       "asset_sha256": "22b1ec11112c8a7fcb684ec75cdba48a6b18f7ee4e9e338b3cb465def22f9e27"
+    },
+    "Df1MzwUtn1C": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Df1MzwUtn1C/",
+      "queued_at": "2026-11-18T20:07:18.860Z",
+      "asset_sha256": "0beb51c03f098ae43928751d1f000ec72031b6d64f2b90f071064ea8aedc0415"
     }
   },
   "checks": {
@@ -19102,16 +19108,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-15T18:22:37.667Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 34,
-      "attempts": 0,
-      "inventory": 3874,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T18:22:58.527Z"
-    },
     {
       "started_at": "2026-11-15T18:27:42.969Z",
       "queued": [],
@@ -24336,6 +24332,24 @@
       "inventory": 3965,
       "status": "queued",
       "finished_at": "2026-11-18T19:51:05.195Z"
+    },
+    {
+      "started_at": "2026-11-18T19:54:03.533Z",
+      "queued": [
+        "Df1M87zNlyP"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Df1J6O_NbXM/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 3965,
+      "status": "queued",
+      "finished_at": "2026-11-18T20:00:48.687Z"
     }
   ],
   "next_account_index": 0,
@@ -35104,6 +35118,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-18T19:47:04.339Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Df1J6O_NbXM": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-18T20:00:48.674Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
