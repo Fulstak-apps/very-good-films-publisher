@@ -19013,6 +19013,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Df3Z_gjN4fm/",
       "queued_at": "2026-11-18T19:28:33.334Z",
       "asset_sha256": "cec57f5bb3d79da7f0649435efc0d2afa73138a2801f516737907b47fe487aea"
+    },
+    "Df3ZWiTt3BM": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Df3ZWiTt3BM/",
+      "queued_at": "2026-11-18T19:35:06.517Z",
+      "asset_sha256": "302cb5adcb4cfb73eb20f0ccde6c3a0ef629a87b41b5c4d1f7d406c7cc6d0b9f"
     }
   },
   "checks": {
@@ -19072,57 +19078,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-15T18:07:24.106Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Dc_xA94z9gC/",
-          "stage": "capture_or_queue",
-          "error": "Captured media cannot be uniquely matched to the visible source video (0 matches); refusing unrelated media; inspect Dc_xA94z9gC-capture-diagnostic.json"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfTphLrNZNH/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQHl8mSjPIW/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DQFBYYcAgcg/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPzCA8UAtIN/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DPhI3OzAZsO/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DOq37Irgmsm/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        },
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/DOOr5R8ggVS/",
-          "stage": "capture_or_queue",
-          "error": "Exact source caption missing, generic or truncated; needs review"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 8,
-      "inventory": 3874,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-15T18:11:23.146Z"
-    },
     {
       "started_at": "2026-11-15T18:12:29.026Z",
       "queued": [],
@@ -24321,6 +24276,25 @@
       "inventory": 3965,
       "status": "queued",
       "finished_at": "2026-11-18T19:19:01.629Z"
+    },
+    {
+      "started_at": "2026-11-18T19:23:19.953Z",
+      "queued": [
+        "Df3Z72sNcos",
+        "Df3Z_gjN4fm"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Df3ZZVhNtll/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 3965,
+      "status": "queued",
+      "finished_at": "2026-11-18T19:31:58.184Z"
     }
   ],
   "next_account_index": 0,
@@ -35065,6 +35039,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-18T18:51:13.558Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "Df3ZZVhNtll": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-18T19:31:58.176Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
