@@ -19169,6 +19169,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Df1IkdlNvnY/",
       "queued_at": "2026-11-19T02:54:39.169Z",
       "asset_sha256": "14a042367d808b18f28c1a4ace1a9aae29f0d58e48eec9c8c1e43111ec247c1b"
+    },
+    "Df1IXnYNmF8": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Df1IXnYNmF8/",
+      "queued_at": "2026-11-19T03:09:32.882Z",
+      "asset_sha256": "c18599c101bdfdf683f3aee601346f02c4e5b5853886ba70c19ee0c9b2ad0f43"
     }
   },
   "checks": {
@@ -19218,7 +19224,7 @@
       "checked_at": "2026-11-19T02:26:35.638Z"
     },
     "popcorncutzz": {
-      "checked_at": "2026-11-16T18:56:43.997Z"
+      "checked_at": "2026-11-19T03:02:55.949Z"
     },
     "cinamagiraffe41": {
       "checked_at": "2026-11-18T18:19:55.630Z"
@@ -19228,36 +19234,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-15T23:10:01.776Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 8,
-      "attempts": 0,
-      "inventory": 3877,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:10:49.929Z"
-    },
-    {
-      "started_at": "2026-11-15T23:15:07.559Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 168,
-      "attempts": 0,
-      "inventory": 3877,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:15:48.519Z"
-    },
-    {
-      "started_at": "2026-11-15T23:20:12.108Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 34,
-      "attempts": 0,
-      "inventory": 3877,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:20:50.965Z"
-    },
     {
       "started_at": "2026-11-15T23:25:17.484Z",
       "queued": [],
@@ -24888,9 +24864,78 @@
       "inventory": 3990,
       "status": "queued",
       "finished_at": "2026-11-19T02:43:47.930Z"
+    },
+    {
+      "started_at": "2026-11-19T02:47:16.341Z",
+      "queued": [
+        "Df1IkdlNvnY"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Df1PQ7ihlCI/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Df1PO6ChPku/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Df02yB7hksW/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Df02zMaB19c/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Df1f28xAYoc/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Df0evm1z4kN/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 7,
+      "inventory": 3990,
+      "status": "queued",
+      "finished_at": "2026-11-19T02:54:43.216Z"
+    },
+    {
+      "started_at": "2026-11-19T02:57:27.897Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/Df5C55xzMZX/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 3990,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-19T02:57:28.597Z"
+    },
+    {
+      "started_at": "2026-11-19T03:02:35.147Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 88,
+      "attempts": 0,
+      "inventory": 3990,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-19T03:02:55.963Z"
     }
   ],
-  "next_account_index": 12,
+  "next_account_index": 13,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -35847,10 +35892,10 @@
     "Df5C55xzMZX": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-19T02:17:19.352Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-19T02:47:19.352Z"
+      "failed_at": "2026-11-19T02:57:28.590Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "Df4fON9gnu-": {
       "collector_version": 14,
@@ -55882,7 +55927,7 @@
     "filmreelsvault": 30,
     "fuckinggoodmovies": 80,
     "movie_vault_4u": 30,
-    "popcorncutzz": 20,
+    "popcorncutzz": 30,
     "cinamagiraffe41": 30,
     "primefilmtv": 30
   }
