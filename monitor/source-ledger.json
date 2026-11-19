@@ -19175,6 +19175,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Df1IXnYNmF8/",
       "queued_at": "2026-11-19T03:09:32.882Z",
       "asset_sha256": "c18599c101bdfdf683f3aee601346f02c4e5b5853886ba70c19ee0c9b2ad0f43"
+    },
+    "Df1IAX-NVCc": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Df1IAX-NVCc/",
+      "queued_at": "2026-11-19T03:33:57.457Z",
+      "asset_sha256": "1dd21a63d318182c2e54c3e65da137e81a01bff2d4c80c2b07a129722296f043"
     }
   },
   "checks": {
@@ -19188,7 +19194,7 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-11-19T00:39:13.125Z"
+      "checked_at": "2026-11-19T03:28:32.527Z"
     },
     "thecinemanerd.ig": {
       "checked_at": "2026-11-19T00:45:10.760Z"
@@ -19227,69 +19233,13 @@
       "checked_at": "2026-11-19T03:02:55.949Z"
     },
     "cinamagiraffe41": {
-      "checked_at": "2026-11-18T18:19:55.630Z"
+      "checked_at": "2026-11-19T03:13:13.674Z"
     },
     "primefilmtv": {
-      "checked_at": "2026-11-18T18:25:03.448Z"
+      "checked_at": "2026-11-19T03:18:25.597Z"
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-15T23:25:17.484Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 208,
-      "attempts": 0,
-      "inventory": 3877,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:26:06.671Z"
-    },
-    {
-      "started_at": "2026-11-15T23:30:22.362Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 12,
-      "attempts": 0,
-      "inventory": 3877,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:31:11.783Z"
-    },
-    {
-      "started_at": "2026-11-15T23:35:27.755Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/ellsoriaa/reel/Dfxytt_i7Ut/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovered": 12,
-      "attempts": 1,
-      "inventory": 3878,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-15T23:36:35.938Z"
-    },
-    {
-      "started_at": "2026-11-15T23:40:33.375Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 88,
-      "attempts": 0,
-      "inventory": 3878,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:40:53.210Z"
-    },
-    {
-      "started_at": "2026-11-15T23:45:38.640Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 67,
-      "attempts": 0,
-      "inventory": 3878,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-15T23:46:00.559Z"
-    },
     {
       "started_at": "2026-11-15T23:50:44.108Z",
       "queued": [],
@@ -24933,9 +24883,73 @@
       "inventory": 3990,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-19T03:02:55.963Z"
+    },
+    {
+      "started_at": "2026-11-19T03:07:42.396Z",
+      "queued": [
+        "Df1IXnYNmF8"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 3990,
+      "status": "queued",
+      "finished_at": "2026-11-19T03:09:37.629Z"
+    },
+    {
+      "started_at": "2026-11-19T03:12:47.780Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 3990,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-19T03:13:13.685Z"
+    },
+    {
+      "started_at": "2026-11-19T03:17:54.128Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Df6C1wEtCWo/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovered": 128,
+      "attempts": 1,
+      "inventory": 3991,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-19T03:18:51.514Z"
+    },
+    {
+      "started_at": "2026-11-19T03:22:59.793Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/Df1PO6ChPku/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 1,
+      "inventory": 3991,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-19T03:23:02.098Z"
+    },
+    {
+      "started_at": "2026-11-19T03:28:04.793Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 3991,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-19T03:28:32.539Z"
     }
   ],
-  "next_account_index": 13,
+  "next_account_index": 1,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -35932,10 +35946,10 @@
     "Df1PO6ChPku": {
       "collector_version": 14,
       "error": "Source caption has no explicit movie or television title",
-      "failed_at": "2026-11-19T02:49:47.866Z",
-      "failures": 1,
-      "terminal": false,
-      "retry_at": "2026-11-19T03:19:47.866Z"
+      "failed_at": "2026-11-19T03:23:02.081Z",
+      "failures": 2,
+      "terminal": true,
+      "retry_at": null
     },
     "Df02yB7hksW": {
       "collector_version": 14,
@@ -35960,6 +35974,14 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "Df6C1wEtCWo": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-19T03:18:51.493Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-19T03:48:51.493Z"
     }
   },
   "candidates": {
@@ -55912,10 +55934,15 @@
       "handle": "movie_vault_4u",
       "url": "https://www.instagram.com/movie_vault_4u/reel/Df0evm1z4kN/",
       "shortcode": "Df0evm1z4kN"
+    },
+    "Df6C1wEtCWo": {
+      "handle": "primefilmtv",
+      "url": "https://www.instagram.com/primefilmtv/reel/Df6C1wEtCWo/",
+      "shortcode": "Df6C1wEtCWo"
     }
   },
   "discovery_depth": {
-    "reelgoodmovies": 30,
+    "reelgoodmovies": 40,
     "thecinemanerd.ig": 20,
     "theacenyc": 20,
     "the_goodfilms": 30,
@@ -55928,7 +55955,7 @@
     "fuckinggoodmovies": 80,
     "movie_vault_4u": 30,
     "popcorncutzz": 30,
-    "cinamagiraffe41": 30,
-    "primefilmtv": 30
+    "cinamagiraffe41": 40,
+    "primefilmtv": 40
   }
 }
