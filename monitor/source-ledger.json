@@ -19289,6 +19289,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Df86q9NtDom/",
       "queued_at": "2026-11-20T16:40:30.382Z",
       "asset_sha256": "bdaa7e2848ffed571d74bff3ed99adc5cc0155ca8f4fbb5278072d9ca2e7638b"
+    },
+    "Df85qm_ND-u": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Df85qm_ND-u/",
+      "queued_at": "2026-11-20T16:50:13.836Z",
+      "asset_sha256": "ca6e9c60af6afa537aa132f036dfc5ca2dabeb9455221fdc3f58292fc70410c5"
     }
   },
   "checks": {
@@ -19348,16 +19354,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-19T05:09:48.415Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 3993,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-19T05:10:21.735Z"
-    },
     {
       "started_at": "2026-11-19T05:14:53.508Z",
       "queued": [
@@ -24361,6 +24357,34 @@
       "inventory": 4050,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-20T16:30:41.089Z"
+    },
+    {
+      "started_at": "2026-11-20T16:34:06.416Z",
+      "queued": [
+        "Df86q9NtDom"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Df87VFUNqLf/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Df87CR3tmyn/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/Df860QjNwKh/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 4050,
+      "status": "queued",
+      "finished_at": "2026-11-20T16:40:33.257Z"
     }
   ],
   "next_account_index": 0,
