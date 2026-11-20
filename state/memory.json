@@ -230210,6 +230210,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-20T05:07:50.821Z",
       "key": "76caa42afdc53fb7ffb77a7b0fd3ef2d025cc9144a6a9eec0eb549e96d206db1"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:Df885RKtIm9",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "Df885RKtIm9",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/Df885RKtIm9/",
+      "source_caption": "🎬 Angel of Mine (2019)\n\nAngel of Mine follows Lizzie, a grieving mother whose life has been shattered by the tragic loss of her young daughter. Struggling to move forward, she becomes convinced that a little girl named Lola, whom she encounters at a children’s birthday party, is actually her daughter. As Lizzie grows increasingly obsessed with the child, she begins inserting herself into Lola’s family life, creating tension with the girl’s mother, Claire, and raising concerns among those closest to her. What begins as a mother’s desperate search for answers soon turns into a disturbing psychological mystery filled with suspicion, emotional confrontations, and unexpected revelations. Starring Noomi Rapace, Yvonne Strahovski, and Luke Evans, the film delivers gripping suspense, powerful performances, and a heartbreaking story about motherhood, grief, obsession, and the lengths a parent will go to for someone they love.\n\n🎭 Genre: Psychological Thriller • Drama • Mystery\n\n⭐ IMDb: 6.4/10\n\n⏱️ Runtime: 1h 38m • R\n\n🎥 Director: Kim Farrant\n\n✍️ Writers: Luke Davies & David Regal\n\n📚 Based On: The 2008 French film Mark of an Angel.\n\n📺 Where to Watch: Check Amazon Prime Video and Apple TV for current streaming or rental availability in the United States.",
+      "source_details": {
+        "title_hint": "Angel of Mine",
+        "year": 2019,
+        "media_type_hint": "movie",
+        "availability": ". Where to Watch: Check Amazon Prime Video and Apple TV for current streaming or rental availability in the United States",
+        "source_title": "Angel of Mine",
+        "source_year": 2019,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Noomi Rapace",
+          "Luke Evans",
+          "Finn Little"
+        ],
+        "title": "Angel of Mine",
+        "type": "movie",
+        "director": "Kim Farrant",
+        "synopsis": "Angel of Mine is a 2019 Australian-American psychological thriller film directed by Kim Farrant and written by Luke Davies and David Regal. It stars Noomi Rapace, Luke Evans, Yvonne Strahovski and Richard Roxburgh. It is a remake of the 2008 French film Mark of an Angel. It had its world premiere at the Melbourne International Film Festival on 14 August 2019. It was released on 30 August 2019 by Lionsgate.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Angel_of_Mine_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Angel of Mine",
+          "source_year": 2019,
+          "catalog_title": "Angel of Mine",
+          "catalog_year": 2019,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261120/27174b22214dec5549dd32af837344ede7667e49130cf1cf4a4fb0bb36678ab4.mp4?download=1",
+      "asset_sha256": "27174b22214dec5549dd32af837344ede7667e49130cf1cf4a4fb0bb36678ab4",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-20T06:48:59.795Z",
+        "source_duration": 178.91666666666666,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-20T06:49:47.696Z",
+      "key": "3a1cbca7ee2e778cd515af041bf303d1334d5618fa9d45e5ff45f1ed13047dd3"
     }
   ],
   "discovery": [],
