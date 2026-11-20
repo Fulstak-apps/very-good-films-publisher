@@ -19319,6 +19319,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/Df849HstJZj/",
       "queued_at": "2026-11-20T17:14:17.933Z",
       "asset_sha256": "8fb055b1aa4cb946eb4d2afb22a7343f6c08b37228b21554fdcc32879452ed5b"
+    },
+    "Df82XMct5F2": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/Df82XMct5F2/",
+      "queued_at": "2026-11-20T17:19:26.552Z",
+      "asset_sha256": "b8a6492170b02254ed1769dcba77aa268fdf5152e80073885f1fb7e5aed95dce"
     }
   },
   "checks": {
@@ -19378,34 +19384,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-19T05:35:16.354Z",
-      "queued": [
-        "Df6RH0SNGRw"
-      ],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/Df6Re1NtcAY/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/Df6RGJUNLP1/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/Df6RL3AtF2o/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 4,
-      "inventory": 4010,
-      "status": "queued",
-      "finished_at": "2026-11-19T05:42:04.540Z"
-    },
     {
       "started_at": "2026-11-19T05:45:29.007Z",
       "queued": [
@@ -24414,6 +24392,19 @@
       "inventory": 4050,
       "status": "queued",
       "finished_at": "2026-11-20T17:01:03.775Z"
+    },
+    {
+      "started_at": "2026-11-20T17:05:28.196Z",
+      "queued": [
+        "Df8zcaNthfL",
+        "Df849HstJZj"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 4050,
+      "status": "queued",
+      "finished_at": "2026-11-20T17:14:21.463Z"
     }
   ],
   "next_account_index": 0,
