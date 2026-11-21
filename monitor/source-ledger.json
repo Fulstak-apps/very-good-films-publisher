@@ -19440,16 +19440,16 @@
       "checked_at": "2026-11-21T16:16:55.135Z"
     },
     "cinemoviie": {
-      "checked_at": "2026-11-21T13:24:12.226Z"
+      "checked_at": "2026-11-21T16:22:05.552Z"
     },
     "filmreelsvault": {
-      "checked_at": "2026-11-21T13:29:37.025Z"
+      "checked_at": "2026-11-21T16:27:32.387Z"
     },
     "fuckinggoodmovies": {
-      "checked_at": "2026-11-21T13:34:22.247Z"
+      "checked_at": "2026-11-21T16:32:16.771Z"
     },
     "movie_vault_4u": {
-      "checked_at": "2026-11-21T13:39:42.386Z"
+      "checked_at": "2026-11-21T16:37:39.130Z"
     },
     "popcorncutzz": {
       "checked_at": "2026-11-21T13:44:51.941Z"
@@ -19462,56 +19462,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-20T06:03:38.283Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 245,
-      "attempts": 0,
-      "inventory": 4022,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T06:04:37.951Z"
-    },
-    {
-      "started_at": "2026-11-20T06:08:43.715Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 67,
-      "attempts": 0,
-      "inventory": 4022,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T06:09:42.223Z"
-    },
-    {
-      "started_at": "2026-11-20T06:13:49.145Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 4022,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T06:14:53.207Z"
-    },
-    {
-      "started_at": "2026-11-20T06:18:53.927Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 88,
-      "attempts": 0,
-      "inventory": 4022,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T06:19:15.104Z"
-    },
-    {
-      "started_at": "2026-11-20T06:23:59.172Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 284,
-      "attempts": 0,
-      "inventory": 4022,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T06:25:08.929Z"
-    },
     {
       "started_at": "2026-11-20T06:29:03.998Z",
       "queued": [],
@@ -24386,9 +24336,80 @@
       "inventory": 4063,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-21T16:16:55.180Z"
+    },
+    {
+      "started_at": "2026-11-21T16:21:09.131Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 0,
+      "attempts": 0,
+      "inventory": 4063,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-21T16:22:05.565Z"
+    },
+    {
+      "started_at": "2026-11-21T16:26:14.007Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 328,
+      "attempts": 0,
+      "inventory": 4063,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-21T16:27:32.400Z"
+    },
+    {
+      "started_at": "2026-11-21T16:31:18.362Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DgAY2OTR9Hd/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovered": 248,
+      "attempts": 1,
+      "inventory": 4064,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-21T16:32:32.533Z"
+    },
+    {
+      "started_at": "2026-11-21T16:36:22.998Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DgAgKaEB47x/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DgAanXrhd92/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovered": 328,
+      "attempts": 2,
+      "inventory": 4066,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-21T16:41:37.140Z"
+    },
+    {
+      "started_at": "2026-11-21T16:46:32.341Z",
+      "queued": [],
+      "errors": [
+        {
+          "stage": "discover",
+          "error": "Instagram source session is signed out; open npm run source:login."
+        }
+      ],
+      "attempts": 0,
+      "inventory": 4066,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-21T16:46:33.437Z"
     }
   ],
-  "next_account_index": 8,
+  "next_account_index": 13,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -35709,6 +35730,30 @@
       "failures": 2,
       "terminal": true,
       "retry_at": null
+    },
+    "DgAY2OTR9Hd": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-21T16:32:32.518Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-21T17:02:32.518Z"
+    },
+    "DgAgKaEB47x": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-21T16:39:39.790Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-21T17:09:39.790Z"
+    },
+    "DgAanXrhd92": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-21T16:41:37.119Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-21T17:11:37.119Z"
     }
   },
   "candidates": {
@@ -56026,6 +56071,21 @@
       "handle": "film.fission",
       "url": "https://www.instagram.com/film.fission/reel/DgAcXKyyjYe/",
       "shortcode": "DgAcXKyyjYe"
+    },
+    "DgAY2OTR9Hd": {
+      "handle": "fuckinggoodmovies",
+      "url": "https://www.instagram.com/fuckinggoodmovies/reel/DgAY2OTR9Hd/",
+      "shortcode": "DgAY2OTR9Hd"
+    },
+    "DgAgKaEB47x": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DgAgKaEB47x/",
+      "shortcode": "DgAgKaEB47x"
+    },
+    "DgAanXrhd92": {
+      "handle": "movie_vault_4u",
+      "url": "https://www.instagram.com/movie_vault_4u/reel/DgAanXrhd92/",
+      "shortcode": "DgAanXrhd92"
     }
   },
   "discovery_depth": {
@@ -56037,12 +56097,14 @@
     "ellsoriaa": 30,
     "relatedfilms": 50,
     "uneedmink": 60,
-    "cinemoviie": 70,
-    "filmreelsvault": 80,
-    "fuckinggoodmovies": 60,
-    "movie_vault_4u": 80,
+    "cinemoviie": 80,
+    "filmreelsvault": 20,
+    "fuckinggoodmovies": 70,
+    "movie_vault_4u": 20,
     "popcorncutzz": 80,
     "cinamagiraffe41": 20,
     "primefilmtv": 20
-  }
+  },
+  "retry_after": "2026-11-21T17:46:33.425Z",
+  "session_error": "Instagram source session is signed out; open npm run source:login."
 }
