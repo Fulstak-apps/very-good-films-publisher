@@ -232239,6 +232239,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-21T22:42:24.811Z",
       "key": "efbb8e54711c4ffcbaaeba745f2a1615705eb1ca174def716d9106b4ebd2b961"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgBQKWxSl3B",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DgBQKWxSl3B",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DgBQKWxSl3B/",
+      "source_caption": "🎬 Goodrich (2024)\n\nGoodrich follows Andy Goodrich, a successful Los Angeles art dealer whose comfortable life is suddenly turned upside down when his younger wife enters a rehabilitation program, leaving him responsible for their nine-year-old twins. Having spent years prioritizing his career over his family, Andy struggles to adjust to the everyday challenges of parenting, from school routines and household responsibilities to understanding his children’s emotional needs. Desperate for help, he turns to his adult daughter Grace, who is pregnant and still carries emotional scars from growing up with an often-absent father. As Andy attempts to rebuild his relationships and become a more present parent, he begins to realize how much of his family’s life he has missed. Starring Michael Keaton and Mila Kunis, the film delivers heartfelt comedy, emotional family moments, and a touching story about fatherhood, forgiveness, second chances, and the importance of being there for the people you love.\n\n🎭 Genre: Comedy • Drama • Family\n\n⭐ IMDb: 6.3/10\n\n⏱️ Runtime: 1h 51m • R\n\n🎥 Director: Hallie Meyers-Shyer\n\n✍️ Writer: Hallie Meyers-Shyer\n\n📚 Themes: Fatherhood • Family Relationships • Redemption • Second Chances\n\n📺 Where to Watch: Check Amazon Prime Video and Apple TV for current streaming or rental availability in the United States.",
+      "source_details": {
+        "title_hint": "Goodrich",
+        "year": 2024,
+        "media_type_hint": "movie",
+        "availability": "Where to Watch: Check Amazon Prime Video and Apple TV for current streaming or rental availability in the United States",
+        "source_title": "Goodrich",
+        "source_year": 2024,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Michael Keaton",
+          "Andie MacDowell"
+        ],
+        "title": "Goodrich",
+        "type": "movie",
+        "director": "Hallie Meyers-Shyer",
+        "synopsis": "Goodrich is a 2024 American comedy drama film written and directed by Hallie Meyers-Shyer. The film stars Michael Keaton, Mila Kunis, Carmen Ejogo, Michael Urie, Kevin Pollak, Vivien Lyra Blair, Jacob Kopera, Nico Hiraga, Danny Deferrari with Laura Benanti and Andie MacDowell. Andy Goodrich's wife upends his life upon unexpectedly checking into a rehab program, leaving him alone with their school-aged twins. Leaning on Grace, his adult daughter from another marriage, he finally evolves into an attentive father. The film premiered in Los Angeles on October 8, 2024, and was released on October 18, 2024 in the United States by Ketchup Entertainment.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Goodrich_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Goodrich",
+          "source_year": 2024,
+          "catalog_title": "Goodrich",
+          "catalog_year": 2024,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261121/0fcf742987be06083c0631f8462d45023e390647c421f2587db1d3853908d1e6.mp4?download=1",
+      "asset_sha256": "0fcf742987be06083c0631f8462d45023e390647c421f2587db1d3853908d1e6",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-21T22:48:57.284Z",
+        "source_duration": 153.66666666666666,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-21T22:52:36.443Z",
+      "key": "a40b13d50d4f300933085d0ef8dbf108dbe57d297537fff5f4f5d6c4b9acd715"
     }
   ],
   "discovery": [],
