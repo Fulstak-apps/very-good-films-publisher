@@ -19439,6 +19439,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgBQON-yqQC/",
       "queued_at": "2026-11-21T22:41:34.860Z",
       "asset_sha256": "7785a97d41f277cbfbc7f6f769b318b134e9318774c9655a8ffe4c50ccebf829"
+    },
+    "DgBQKWxSl3B": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgBQKWxSl3B/",
+      "queued_at": "2026-11-21T22:48:57.290Z",
+      "asset_sha256": "0fcf742987be06083c0631f8462d45023e390647c421f2587db1d3853908d1e6"
     }
   },
   "checks": {
@@ -19498,19 +19504,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-20T18:32:23.833Z",
-      "queued": [
-        "Df-Lo9ZRh4K",
-        "Df94KvptnCR"
-      ],
-      "errors": [],
-      "discovered": 328,
-      "attempts": 2,
-      "inventory": 4055,
-      "status": "queued",
-      "finished_at": "2026-11-20T18:40:49.717Z"
-    },
     {
       "started_at": "2026-11-20T18:43:31.003Z",
       "queued": [
@@ -24629,6 +24622,55 @@
       "inventory": 4101,
       "status": "queued",
       "finished_at": "2026-11-21T22:29:43.097Z"
+    },
+    {
+      "started_at": "2026-11-21T22:31:51.746Z",
+      "queued": [
+        "DgBQTu4yoR_",
+        "DgBQON-yqQC"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Dfpg5SORxLK/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/fuckinggoodmovies/reel/DgA78pSR-V3/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgBQQu5SI0z/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 9,
+      "inventory": 4101,
+      "status": "queued",
+      "finished_at": "2026-11-21T22:41:38.058Z"
     }
   ],
   "next_account_index": 0,
@@ -35997,6 +36039,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-21T22:37:32.739Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DgBQL2eSKIs": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-21T22:45:12.000Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
