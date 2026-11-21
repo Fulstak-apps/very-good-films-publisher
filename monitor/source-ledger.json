@@ -19437,7 +19437,7 @@
       "checked_at": "2026-11-21T13:13:54.331Z"
     },
     "uneedmink": {
-      "checked_at": "2026-11-21T13:18:58.972Z"
+      "checked_at": "2026-11-21T16:16:55.135Z"
     },
     "cinemoviie": {
       "checked_at": "2026-11-21T13:24:12.226Z"
@@ -19462,37 +19462,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-20T05:53:27.288Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DfPcRCjhJbP/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        },
-        {
-          "source_url": "https://www.instagram.com/primefilmtv/reel/DfYn_fQNRFd/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 2,
-      "inventory": 4022,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-20T05:56:06.701Z"
-    },
-    {
-      "started_at": "2026-11-20T05:58:32.750Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 128,
-      "attempts": 0,
-      "inventory": 4022,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T05:59:04.401Z"
-    },
     {
       "started_at": "2026-11-20T06:03:38.283Z",
       "queued": [],
@@ -24371,9 +24340,55 @@
       "inventory": 4063,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-21T15:10:03.040Z"
+    },
+    {
+      "started_at": "2026-11-21T16:10:59.802Z",
+      "queued": [],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/uneedmink/reel/DZbqwhnT0Uq/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/the_goodfilms/reel/DdwxMJqsBrV/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/relatedfilms/reel/DeSPbeMzok2/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/theacenyc/reel/Dfpg5SORxLK/",
+          "stage": "capture_or_queue",
+          "error": "Exact source caption missing, generic or truncated; needs review"
+        },
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DdoYWyWzhP3/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 4063,
+      "status": "no_eligible_clip",
+      "finished_at": "2026-11-21T16:11:58.590Z"
+    },
+    {
+      "started_at": "2026-11-21T16:16:04.765Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 67,
+      "attempts": 0,
+      "inventory": 4063,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-21T16:16:55.180Z"
     }
   ],
-  "next_account_index": 7,
+  "next_account_index": 8,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -24518,10 +24533,10 @@
     "DZbqwhnT0Uq": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-21T12:58:07.367Z",
-      "failures": 243,
+      "failed_at": "2026-11-21T16:11:06.797Z",
+      "failures": 244,
       "terminal": false,
-      "retry_at": "2026-11-21T15:58:07.367Z"
+      "retry_at": "2026-11-21T19:11:06.797Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -25010,10 +25025,10 @@
     "DdoYWyWzhP3": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-11-21T12:58:57.977Z",
-      "failures": 241,
+      "failed_at": "2026-11-21T16:11:58.579Z",
+      "failures": 242,
       "terminal": false,
-      "retry_at": "2026-11-21T15:58:57.977Z"
+      "retry_at": "2026-11-21T19:11:58.579Z"
     },
     "DdoYK2ahxnK": {
       "collector_version": 12,
@@ -25104,10 +25119,10 @@
     "DdwxMJqsBrV": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-11-21T12:58:25.866Z",
-      "failures": 242,
+      "failed_at": "2026-11-21T16:11:25.302Z",
+      "failures": 243,
       "terminal": false,
-      "retry_at": "2026-11-21T15:58:25.866Z"
+      "retry_at": "2026-11-21T19:11:25.302Z"
     },
     "DdwymejMeG9": {
       "collector_version": 14,
@@ -26314,10 +26329,10 @@
     "DeSPbeMzok2": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-21T12:58:32.637Z",
-      "failures": 199,
+      "failed_at": "2026-11-21T16:11:32.495Z",
+      "failures": 200,
       "terminal": false,
-      "retry_at": "2026-11-21T15:58:32.638Z"
+      "retry_at": "2026-11-21T19:11:32.495Z"
     },
     "DeOZ0YzJPrY": {
       "collector_version": 14,
@@ -34490,10 +34505,10 @@
     "Dfpg5SORxLK": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-21T12:58:39.266Z",
-      "failures": 47,
+      "failed_at": "2026-11-21T16:11:39.695Z",
+      "failures": 48,
       "terminal": false,
-      "retry_at": "2026-11-21T15:58:39.266Z"
+      "retry_at": "2026-11-21T19:11:39.695Z"
     },
     "DfkfcIyRHTD": {
       "collector_version": 14,
@@ -56021,7 +56036,7 @@
     "film.fission": 20,
     "ellsoriaa": 30,
     "relatedfilms": 50,
-    "uneedmink": 50,
+    "uneedmink": 60,
     "cinemoviie": 70,
     "filmreelsvault": 80,
     "fuckinggoodmovies": 60,
@@ -56029,7 +56044,5 @@
     "popcorncutzz": 80,
     "cinamagiraffe41": 20,
     "primefilmtv": 20
-  },
-  "retry_after": "2026-11-21T16:10:03.030Z",
-  "session_error": "Instagram source session is signed out; open npm run source:login."
+  }
 }
