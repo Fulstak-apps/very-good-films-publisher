@@ -234043,6 +234043,78 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-22T22:07:09.331Z",
       "key": "eb1b74e23f8fa33c6253970d42fd22c6c38889df5d2ba89d8bcbbc469c842e90"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgDaMAKSKdB",
+        "title": "@film.fission clip"
+      },
+      "scene": {
+        "id": "DgDaMAKSKdB",
+        "start": 0,
+        "end": 17.74
+      },
+      "source_post_url": "https://www.instagram.com/film.fission/reel/DgDaMAKSKdB/",
+      "source_caption": "This scene from The Hunger Games!\n\nThe Hunger Games: Catching Fire came out 13 years ago today. Francis Lawrence took over as director for his first entry in the series, introducing Finnick Odair, Johanna Mason, and the 75th Hunger Games (the Third Quarter Quell). It remains the highest-grossing film in The Hunger Games franchise with roughly $865 million worldwide. Its $25.2 million preview total still holds the franchise record, just ahead of The Hunger Games: Sunrise on the Reaping, which opened with $21.25 million in previews.\n.\n.\n.\n#TheHungerGames #jenniferlawrence",
+      "source_details": {
+        "title_hint": "The Hunger Games",
+        "year": 2012,
+        "media_type_hint": "movie",
+        "source_title": "The Hunger Games",
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "The Hunger Games",
+        "type": "movie",
+        "director": "Gary Ross",
+        "cast": [
+          "Josh Hutcherson",
+          "Liam Hemsworth",
+          "Woody Harrelson"
+        ],
+        "synopsis": "The Hunger Games is a 2012 American dystopian film directed by Gary Ross, who co-wrote the screenplay with Suzanne Collins and Billy Ray, based on the 2008 novel by Collins. It is the first installment of The Hunger Games film series. The film stars Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Woody Harrelson, Elizabeth Banks, Lenny Kravitz, Stanley Tucci, and Donald Sutherland. In the film, Katniss Everdeen (Lawrence) and Peeta Mellark (Hutcherson) are forced to compete in the Hunger Games, an elaborate televised fight to the death consisting of adolescent contestants. Development of a film adaptation of Collins's original novel began in March 2009 when Lionsgate entered into a co-pr",
+        "metadata_source": "https://en.wikipedia.org/wiki/The_Hunger_Games_(film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "The Hunger Games",
+          "source_year": null,
+          "catalog_title": "The Hunger Games",
+          "catalog_year": 2012,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_type_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261122/05f56658322a6331d9cfc2e863486a1a1fa08cad46fbc1c87091595770d5a539.mp4?download=1",
+      "asset_sha256": "05f56658322a6331d9cfc2e863486a1a1fa08cad46fbc1c87091595770d5a539",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 17.733333,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-22T22:08:24.605Z",
+        "source_duration": 17.740045,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-22T22:12:15.575Z",
+      "key": "e5a76b42567524af6070758f727f96d7f080547175f901953c314849014d7cd2"
     }
   ],
   "discovery": [],
