@@ -19487,6 +19487,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgBPPx2yThn/",
       "queued_at": "2026-11-22T01:34:37.521Z",
       "asset_sha256": "58ccb3c4a4effe079484188fc49bd3e5f982f6d3d3458e16c191e73252ebeeb7"
+    },
+    "DgBPMSoySDD": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgBPMSoySDD/",
+      "queued_at": "2026-11-22T01:40:58.230Z",
+      "asset_sha256": "549793e95937e52ba67e7cb8999d7ead8af8936b4ff55b52b3fcac181e0c4a97"
     }
   },
   "checks": {
@@ -19546,16 +19552,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-20T19:44:43.870Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 34,
-      "attempts": 0,
-      "inventory": 4055,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T19:45:13.231Z"
-    },
     {
       "started_at": "2026-11-20T19:49:49.428Z",
       "queued": [],
@@ -24748,6 +24744,29 @@
       "inventory": 4101,
       "status": "queued",
       "finished_at": "2026-11-22T01:27:19.392Z"
+    },
+    {
+      "started_at": "2026-11-22T01:28:40.442Z",
+      "queued": [
+        "DgBPPx2yThn"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgBPOVPSVoM/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgBPYovy5us/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 4101,
+      "status": "queued",
+      "finished_at": "2026-11-22T01:34:41.126Z"
     }
   ],
   "next_account_index": 0,
@@ -24895,10 +24914,10 @@
     "DZbqwhnT0Uq": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-21T22:31:59.110Z",
-      "failures": 246,
+      "failed_at": "2026-11-22T01:38:59.336Z",
+      "failures": 247,
       "terminal": false,
-      "retry_at": "2026-11-22T01:31:59.110Z"
+      "retry_at": "2026-11-22T04:38:59.336Z"
     },
     "Dcyg3cHOJWx": {
       "collector_version": 7,
@@ -25387,10 +25406,10 @@
     "DdoYWyWzhP3": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-11-21T22:32:50.157Z",
-      "failures": 244,
+      "failed_at": "2026-11-22T01:39:50.175Z",
+      "failures": 245,
       "terminal": false,
-      "retry_at": "2026-11-22T01:32:50.157Z"
+      "retry_at": "2026-11-22T04:39:50.175Z"
     },
     "DdoYK2ahxnK": {
       "collector_version": 12,
@@ -25481,10 +25500,10 @@
     "DdwxMJqsBrV": {
       "collector_version": 14,
       "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
-      "failed_at": "2026-11-21T22:32:17.726Z",
-      "failures": 245,
+      "failed_at": "2026-11-22T01:39:17.961Z",
+      "failures": 246,
       "terminal": false,
-      "retry_at": "2026-11-22T01:32:17.726Z"
+      "retry_at": "2026-11-22T04:39:17.961Z"
     },
     "DdwymejMeG9": {
       "collector_version": 14,
@@ -26691,10 +26710,10 @@
     "DeSPbeMzok2": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-21T22:32:24.720Z",
-      "failures": 202,
+      "failed_at": "2026-11-22T01:39:24.824Z",
+      "failures": 203,
       "terminal": false,
-      "retry_at": "2026-11-22T01:32:24.720Z"
+      "retry_at": "2026-11-22T04:39:24.824Z"
     },
     "DeOZ0YzJPrY": {
       "collector_version": 14,
@@ -34867,10 +34886,10 @@
     "Dfpg5SORxLK": {
       "collector_version": 14,
       "error": "Exact source caption missing, generic or truncated; needs review",
-      "failed_at": "2026-11-21T22:32:31.504Z",
-      "failures": 50,
+      "failed_at": "2026-11-22T01:39:31.418Z",
+      "failures": 51,
       "terminal": false,
-      "retry_at": "2026-11-22T01:32:31.504Z"
+      "retry_at": "2026-11-22T04:39:31.418Z"
     },
     "DfkfcIyRHTD": {
       "collector_version": 14,
