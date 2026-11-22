@@ -19595,6 +19595,12 @@
       "source_url": "https://www.instagram.com/the_goodfilms/reel/DgDjkL5N49F/",
       "queued_at": "2026-11-22T22:04:57.853Z",
       "asset_sha256": "08c0647a2090fe7375b8f73846402767e88dc8219852f7e7975b28b8ab2a1af4"
+    },
+    "DgDaMAKSKdB": {
+      "source_handle": "film.fission",
+      "source_url": "https://www.instagram.com/film.fission/reel/DgDaMAKSKdB/",
+      "queued_at": "2026-11-22T22:08:24.609Z",
+      "asset_sha256": "05f56658322a6331d9cfc2e863486a1a1fa08cad46fbc1c87091595770d5a539"
     }
   },
   "checks": {
@@ -19620,7 +19626,7 @@
       "checked_at": "2026-11-22T22:02:55.258Z"
     },
     "film.fission": {
-      "checked_at": "2026-11-22T17:59:35.712Z"
+      "checked_at": "2026-11-22T22:07:57.770Z"
     },
     "ellsoriaa": {
       "checked_at": "2026-11-22T18:04:46.624Z"
@@ -19654,16 +19660,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-21T05:25:29.447Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 4059,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-21T05:26:34.241Z"
-    },
     {
       "started_at": "2026-11-21T05:30:34.973Z",
       "queued": [],
@@ -25393,9 +25389,21 @@
       "inventory": 4138,
       "status": "candidates_on_hold",
       "finished_at": "2026-11-22T21:57:40.397Z"
+    },
+    {
+      "started_at": "2026-11-22T22:01:44.070Z",
+      "queued": [
+        "DgDjkL5N49F"
+      ],
+      "errors": [],
+      "discovered": 288,
+      "attempts": 1,
+      "inventory": 4139,
+      "status": "queued",
+      "finished_at": "2026-11-22T22:05:01.926Z"
     }
   ],
-  "next_account_index": 4,
+  "next_account_index": 5,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -57765,6 +57773,11 @@
       "handle": "the_goodfilms",
       "url": "https://www.instagram.com/the_goodfilms/reel/DgDjkL5N49F/",
       "shortcode": "DgDjkL5N49F"
+    },
+    "DgDaMAKSKdB": {
+      "handle": "film.fission",
+      "url": "https://www.instagram.com/film.fission/reel/DgDaMAKSKdB/",
+      "shortcode": "DgDaMAKSKdB"
     }
   },
   "discovery_depth": {
@@ -57772,7 +57785,7 @@
     "thecinemanerd.ig": 70,
     "theacenyc": 70,
     "the_goodfilms": 80,
-    "film.fission": 70,
+    "film.fission": 80,
     "ellsoriaa": 80,
     "relatedfilms": 30,
     "uneedmink": 40,
