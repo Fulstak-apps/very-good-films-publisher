@@ -19559,6 +19559,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgBdyA-tbm4/",
       "queued_at": "2026-11-22T05:22:49.296Z",
       "asset_sha256": "87d150087247c8a0b4507410cc22e3276fa4fb465d75494ec0597a60cb10520b"
+    },
+    "DgBdtPqNTMM": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgBdtPqNTMM/",
+      "queued_at": "2026-11-22T05:27:06.569Z",
+      "asset_sha256": "111cd9f6024ee345b3d0903ed1e0daf2f15d37c6f445d4282bc63dade4347659"
     }
   },
   "checks": {
@@ -19618,16 +19624,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-20T23:29:03.038Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 208,
-      "attempts": 0,
-      "inventory": 4056,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-20T23:29:51.688Z"
-    },
     {
       "started_at": "2026-11-20T23:34:10.369Z",
       "queued": [],
@@ -24996,6 +24992,29 @@
       "inventory": 4131,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-22T05:08:59.839Z"
+    },
+    {
+      "started_at": "2026-11-22T05:13:00.616Z",
+      "queued": [
+        "DgBdyA-tbm4"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgBfbFzNBD_/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgBepX8NXJK/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 4131,
+      "status": "queued",
+      "finished_at": "2026-11-22T05:22:52.171Z"
     }
   ],
   "next_account_index": 0,
