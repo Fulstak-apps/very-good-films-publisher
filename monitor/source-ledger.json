@@ -19709,6 +19709,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgET-ZkNfDi/",
       "queued_at": "2026-11-23T06:19:53.980Z",
       "asset_sha256": "29bf945d017dbc05c0754dfb64cb3d31ae1a7ab89735173077c4309c34899de6"
+    },
+    "DgETWq6N16u": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgETWq6N16u/",
+      "queued_at": "2026-11-23T06:27:22.960Z",
+      "asset_sha256": "c9c7ee5db4a976a38bc3c65d7929e53962fe15ee8426fdc55922ca808dd9e56d"
     }
   },
   "checks": {
@@ -19768,16 +19774,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-21T12:17:21.293Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 248,
-      "attempts": 0,
-      "inventory": 4060,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-21T12:18:21.558Z"
-    },
     {
       "started_at": "2026-11-21T12:22:25.972Z",
       "queued": [],
@@ -25670,6 +25666,25 @@
       "inventory": 4191,
       "status": "queued",
       "finished_at": "2026-11-23T06:09:20.371Z"
+    },
+    {
+      "started_at": "2026-11-23T06:12:13.698Z",
+      "queued": [
+        "DgEUBwGtfn2",
+        "DgET-ZkNfDi"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEUHHWN2S8/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 4191,
+      "status": "queued",
+      "finished_at": "2026-11-23T06:19:57.220Z"
     }
   ],
   "next_account_index": 0,
@@ -37550,6 +37565,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-23T06:17:22.129Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DgETxKKtMQj": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-23T06:24:08.352Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
