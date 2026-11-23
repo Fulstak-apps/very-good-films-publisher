@@ -19667,6 +19667,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgEU4lwNm3I/",
       "queued_at": "2026-11-23T05:40:03.343Z",
       "asset_sha256": "0c472deb75194dce1802db1fea9f2a6cc73300efa8aebe5bfcb7257cf353a5c3"
+    },
+    "DgEU7vutM1y": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgEU7vutM1y/",
+      "queued_at": "2026-11-23T05:43:31.244Z",
+      "asset_sha256": "c7d7932df390bc7e132fa68f49acd54abaec1de68e78d4317fb7ec3763887888"
     }
   },
   "checks": {
@@ -19726,16 +19732,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-21T11:57:03.961Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 248,
-      "attempts": 0,
-      "inventory": 4059,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-21T11:58:02.163Z"
-    },
     {
       "started_at": "2026-11-21T12:02:08.405Z",
       "queued": [],
@@ -25596,6 +25592,40 @@
       "inventory": 4191,
       "status": "queued",
       "finished_at": "2026-11-23T05:26:32.286Z"
+    },
+    {
+      "started_at": "2026-11-23T05:31:11.710Z",
+      "queued": [
+        "DgEVDyRtTsU",
+        "DgEU4lwNm3I"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEVM_Lt_bt/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEVQGXtNYH/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEU6u1Ns8z/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEVHzftpU2/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 6,
+      "inventory": 4191,
+      "status": "queued",
+      "finished_at": "2026-11-23T05:40:08.711Z"
     }
   ],
   "next_account_index": 0,
@@ -37455,6 +37485,14 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "DgEUzbaN5cM": {
+      "collector_version": 14,
+      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n",
+      "failed_at": "2026-11-23T05:41:47.680Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-23T08:41:47.681Z"
     }
   },
   "candidates": {
