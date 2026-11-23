@@ -19679,6 +19679,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgEUs20Nymq/",
       "queued_at": "2026-11-23T05:47:53.073Z",
       "asset_sha256": "743b22b80c73ae40537e2971b3b4ff7b59eb9842502cf4e9d096d29e725692c8"
+    },
+    "DgEUqSwtn51": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgEUqSwtn51/",
+      "queued_at": "2026-11-23T05:56:43.040Z",
+      "asset_sha256": "a43b36d045d52770be54b565255d25ade03fb80eee8541c497a067a9a6c1ced8"
     }
   },
   "checks": {
@@ -19738,22 +19744,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-21T12:02:08.405Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
-          "stage": "capture_or_queue",
-          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
-        }
-      ],
-      "discovery_skipped": "eligible_inventory_available",
-      "attempts": 1,
-      "inventory": 4059,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-21T12:02:17.536Z"
-    },
     {
       "started_at": "2026-11-21T12:07:12.377Z",
       "queued": [],
@@ -25632,6 +25622,25 @@
       "inventory": 4191,
       "status": "queued",
       "finished_at": "2026-11-23T05:40:08.711Z"
+    },
+    {
+      "started_at": "2026-11-23T05:41:27.675Z",
+      "queued": [
+        "DgEU7vutM1y",
+        "DgEUs20Nymq"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEUzbaN5cM/",
+          "stage": "capture_or_queue",
+          "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('video:visible').first() to be visible\n"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 3,
+      "inventory": 4191,
+      "status": "queued",
+      "finished_at": "2026-11-23T05:47:56.567Z"
     }
   ],
   "next_account_index": 0,
