@@ -19685,6 +19685,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgEUqSwtn51/",
       "queued_at": "2026-11-23T05:56:43.040Z",
       "asset_sha256": "a43b36d045d52770be54b565255d25ade03fb80eee8541c497a067a9a6c1ced8"
+    },
+    "DgETvagtJnH": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgETvagtJnH/",
+      "queued_at": "2026-11-23T06:05:07.949Z",
+      "asset_sha256": "3d53ca56746ec7543f81245994bac4e51fa96e69296d51b882c1df299405c9f1"
     }
   },
   "checks": {
@@ -19744,16 +19750,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-21T12:07:12.377Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 168,
-      "attempts": 0,
-      "inventory": 4059,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-21T12:07:53.261Z"
-    },
     {
       "started_at": "2026-11-21T12:12:17.098Z",
       "queued": [],
@@ -25641,6 +25637,24 @@
       "inventory": 4191,
       "status": "queued",
       "finished_at": "2026-11-23T05:47:56.567Z"
+    },
+    {
+      "started_at": "2026-11-23T05:51:43.903Z",
+      "queued": [
+        "DgEUqSwtn51"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgEUhtCt2Dl/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 4191,
+      "status": "queued",
+      "finished_at": "2026-11-23T06:00:51.166Z"
     }
   ],
   "next_account_index": 0,
@@ -37508,6 +37522,14 @@
       "failures": 1,
       "terminal": false,
       "retry_at": "2026-11-23T08:41:47.681Z"
+    },
+    "DgEUhtCt2Dl": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-23T06:00:51.155Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
     }
   },
   "candidates": {
