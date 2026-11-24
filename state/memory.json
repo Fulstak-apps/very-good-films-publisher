@@ -237880,6 +237880,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-24T07:57:14.152Z",
       "key": "dc68e08224ff69b6d245fd70ae6289ee9c4bb7f67221f3d6a08bdbd2a1cf36e4"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgHBonTNmNM",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DgHBonTNmNM",
+        "start": 0,
+        "end": 90
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DgHBonTNmNM/",
+      "source_caption": "🎬 45 Years (2015)\n\n45 Years follows Kate and Geoff Mercer, a retired couple living a peaceful life in the English countryside as they prepare to celebrate their forty-fifth wedding anniversary. However, just days before the celebration, Geoff receives a surprising letter informing him that the body of his former girlfriend, who died in a mountain accident more than fifty years earlier, has been discovered in the Swiss Alps. The unexpected news awakens long-buried memories and forces Kate to question how much she truly knows about the man she has spent most of her life with. As Geoff becomes increasingly consumed by his past, Kate struggles with feelings of uncertainty, jealousy, and emotional isolation, causing their seemingly stable marriage to gradually unravel. Starring Charlotte Rampling and Tom Courtenay, the film delivers deeply moving performances and intimate storytelling while exploring marriage, love, memory, regret, trust, and how the secrets of the past can reshape an entire lifetime together.\n\n🎭 Genre: Drama • Romance\n\n⭐ IMDb: 7.1/10\n\n⏱️ Runtime: 1h 35m • R\n\n🎥 Director: Andrew Haigh\n\n✍️ Writer: Andrew Haigh\n\n📚 Based On: The short story In Another Country by David Constantine.\n\n🏆 Awards: Charlotte Rampling received an Academy Award nomination for Best Actress. Both lead actors won Silver Bear awards at the Berlin International Film Festival.\n\n📺 Where to Watch: Check The Criterion Channel, Amazon Prime Video, and Apple TV for current streaming, rental, or purchase availability in the United States.",
+      "source_details": {
+        "title_hint": "45 Years",
+        "year": 2015,
+        "media_type_hint": "movie",
+        "availability": ". Where to Watch: Check The Criterion Channel, Amazon Prime Video, and Apple TV for current streaming, rental, or purchase availability in the United States",
+        "source_title": "45 Years",
+        "source_year": 2015,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Charlotte Rampling",
+          "Tom Courtenay",
+          "Geraldine James"
+        ],
+        "title": "45 Years",
+        "type": "movie",
+        "director": "Andrew Haigh",
+        "synopsis": "45 Years is a 2015 British romantic drama film written and directed by Andrew Haigh. It is based on the short story \"In Another Country\" by David Constantine. 45 Years premiered in the main competition section of the 65th Berlin International Film Festival, where Charlotte Rampling won the Silver Bear for Best Actress and Tom Courtenay for Best Actor. It was released in the United Kingdom on 28 August 2015 and went on to gross $14.2 million worldwide. At the 88th Academy Awards, Rampling received a nomination for Best Actress in a Leading Role.",
+        "metadata_source": "https://en.wikipedia.org/wiki/45_Years",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "45 Years",
+          "source_year": 2015,
+          "catalog_title": "45 Years",
+          "catalog_year": 2015,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261124/905e665aec3f2ed5019436542e8602347ebd8336782303780e6d515654cf31e9.mp4?download=1",
+      "asset_sha256": "905e665aec3f2ed5019436542e8602347ebd8336782303780e6d515654cf31e9",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 90,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-24T07:58:54.257Z",
+        "source_duration": 175.632857,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-24T08:02:30.774Z",
+      "key": "06bc5b83f3ee14bba29398ac03eabaea7e432c30367660e70987ec5bd83ca036"
     }
   ],
   "discovery": [],
