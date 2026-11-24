@@ -19895,6 +19895,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgHCADONVlq/",
       "queued_at": "2026-11-24T07:44:15.888Z",
       "asset_sha256": "aac9cbea85a9c3c27d7f93d5e6f294f154cbd9e2ab2faa3cdfdcd87247a494f8"
+    },
+    "DgHBzhAtyUX": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgHBzhAtyUX/",
+      "queued_at": "2026-11-24T07:55:06.955Z",
+      "asset_sha256": "2bd6fd3f5e2150c482352b4bc888bff29beebbbeaf1e6a980fea3f671492efc1"
     }
   },
   "checks": {
@@ -19954,16 +19960,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-22T17:33:12.455Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 208,
-      "attempts": 0,
-      "inventory": 4136,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-22T17:34:04.023Z"
-    },
     {
       "started_at": "2026-11-22T17:38:17.787Z",
       "queued": [],
@@ -25774,6 +25770,30 @@
       "inventory": 4255,
       "status": "queued",
       "finished_at": "2026-11-24T07:38:36.037Z"
+    },
+    {
+      "started_at": "2026-11-24T07:40:20.460Z",
+      "queued": [
+        "DgHCAv6tRpe",
+        "DgHCADONVlq"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgHCBYttovJ/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgHB4p0tNZ5/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 4255,
+      "status": "queued",
+      "finished_at": "2026-11-24T07:47:17.909Z"
     }
   ],
   "next_account_index": 0,
@@ -37886,6 +37906,22 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-24T07:41:15.246Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DgHB4p0tNZ5": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-24T07:47:17.899Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DgHBzE2Nte8": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-24T07:54:42.149Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
