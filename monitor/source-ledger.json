@@ -19853,6 +19853,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgHCjOgtCzK/",
       "queued_at": "2026-11-24T07:17:42.034Z",
       "asset_sha256": "2c8dc0e465d8b2ce22e6ac059e6ac7acd7d46319987221d37c88ac092c172ff8"
+    },
+    "DgHCbdptdZx": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgHCbdptdZx/",
+      "queued_at": "2026-11-24T07:23:20.906Z",
+      "asset_sha256": "06331c9aa8b749c99b054a8d234bd983290bb25901878af17c9af865043e1aac"
     }
   },
   "checks": {
@@ -19912,16 +19918,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-22T17:17:42.184Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 4136,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-22T17:18:23.298Z"
-    },
     {
       "started_at": "2026-11-22T17:23:02.298Z",
       "queued": [],
@@ -25701,6 +25697,19 @@
       "inventory": 4255,
       "status": "queued",
       "finished_at": "2026-11-24T07:05:39.908Z"
+    },
+    {
+      "started_at": "2026-11-24T07:09:40.814Z",
+      "queued": [
+        "DgHCnTFtVMe",
+        "DgHCjOgtCzK"
+      ],
+      "errors": [],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 2,
+      "inventory": 4255,
+      "status": "queued",
+      "finished_at": "2026-11-24T07:17:45.538Z"
     }
   ],
   "next_account_index": 0,
