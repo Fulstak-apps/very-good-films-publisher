@@ -19805,6 +19805,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgG3rrptqaU/",
       "queued_at": "2026-11-24T04:42:44.325Z",
       "asset_sha256": "4cbb652a88b557080bb166e7babe377d61b62334dcf9e94e94b3723879d1de68"
+    },
+    "DgG3bKbNAPX": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgG3bKbNAPX/",
+      "queued_at": "2026-11-24T04:51:25.776Z",
+      "asset_sha256": "77b1cb8d8b1850af6eb66522cca83c7b4e449d29722798ed27ba298f32760fcd"
     }
   },
   "checks": {
@@ -19864,16 +19870,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-22T06:24:29.519Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 168,
-      "attempts": 0,
-      "inventory": 4131,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-22T06:25:09.765Z"
-    },
     {
       "started_at": "2026-11-22T06:29:34.179Z",
       "queued": [],
@@ -25622,6 +25618,34 @@
       "inventory": 4226,
       "status": "queued",
       "finished_at": "2026-11-24T04:33:14.416Z"
+    },
+    {
+      "started_at": "2026-11-24T04:36:43.852Z",
+      "queued": [
+        "DgG3rrptqaU"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgG3-FEtOzs/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgG3Yu4t8_L/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgG3gMmNytW/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 4226,
+      "status": "queued",
+      "finished_at": "2026-11-24T04:42:49.296Z"
     }
   ],
   "next_account_index": 0,
