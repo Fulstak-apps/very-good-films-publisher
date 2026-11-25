@@ -240501,6 +240501,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-25T06:04:01.251Z",
       "key": "3c7e7c5676357c3b3f1291cf68869fd64ee3c818bc7e39838125ded5f855af91"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgJjVUcNhiC",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DgJjVUcNhiC",
+        "start": 0,
+        "end": 59.066
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DgJjVUcNhiC/",
+      "source_caption": "🎬 Sgt. Bilko (1996)\n\nSgt. Bilko follows Master Sergeant Ernest G. Bilko, a charismatic and mischievous United States Army officer who runs the motor pool at Fort Baxter. Rather than focusing on his military responsibilities, Bilko spends his time organizing gambling operations, developing money-making schemes, and finding creative ways to avoid hard work. His comfortable lifestyle is threatened when Major Colin Thorn, an old rival seeking revenge, arrives to investigate his activities and expose his misconduct. Meanwhile, Bilko struggles to maintain his relationship with his longtime fiancée, Rita Robbins. Starring Steve Martin, Dan Aykroyd, and Phil Hartman, the film delivers outrageous humor, entertaining performances, and hilarious misunderstandings while exploring friendship, rivalry, loyalty, and the consequences of constantly trying to outsmart everyone.\n\n🎭 Genre: Comedy • Military\n\n⭐ IMDb: 5.8/10\n\n⏱️ Runtime: 1h 30m • PG\n\n🎥 Director: Jonathan Lynn\n\n✍️ Writer: Andy Breckman\n\n📚 Based On: The Phil Silvers Show (1955–1959).\n\n📺 Where to Watch: Check Amazon Prime Video and Apple TV for current streaming, rental, or purchase availability in the United States.",
+      "source_details": {
+        "title_hint": "Sgt. Bilko",
+        "year": 1996,
+        "media_type_hint": "movie",
+        "availability": ". Where to Watch: Check Amazon Prime Video and Apple TV for current streaming, rental, or purchase availability in the United States",
+        "source_title": "Sgt. Bilko",
+        "source_year": 1996,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Steve Martin",
+          "Dan Aykroyd",
+          "Phil Hartman"
+        ],
+        "title": "Sgt. Bilko",
+        "type": "tv",
+        "director": "Jonathan Lynn",
+        "synopsis": "Sgt. Bilko is a 1996 American military comedy film directed by Jonathan Lynn and written by Andy Breckman. It is an adaptation of the 1950s television series The Phil Silvers Show, often informally called Sgt. Bilko, or simply Bilko, and stars Steve Martin, Dan Aykroyd, Phil Hartman and Glenne Headly. Sgt. Bilko was released by Universal Pictures on March 29, 1996. The film received mixed reviews from critics and grossed $37,956,793 against a $39 million budget.",
+        "metadata_source": "https://en.wikipedia.org/wiki/Sgt._Bilko",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Sgt. Bilko",
+          "source_year": 1996,
+          "catalog_title": "Sgt. Bilko",
+          "catalog_year": 1996,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261125/ce108e149c2f27b19ef042ec6c3487e4c4e3c6906e1c49b05ae28889d5f040af.mp4?download=1",
+      "asset_sha256": "ce108e149c2f27b19ef042ec6c3487e4c4e3c6906e1c49b05ae28889d5f040af",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 59.066667,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-25T06:04:40.468Z",
+        "source_duration": 59.06666666666667,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-25T06:09:15.202Z",
+      "key": "2dca54abf3ed4db44988b1492827d5424b3c86840aa3ec46b75354653af982e1"
     }
   ],
   "discovery": [],
