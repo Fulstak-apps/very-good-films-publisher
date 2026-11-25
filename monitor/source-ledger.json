@@ -20183,6 +20183,12 @@
       "source_url": "https://www.instagram.com/movie_vault_4u/reel/DgKjKDDzjFr/",
       "queued_at": "2026-11-25T17:40:42.517Z",
       "asset_sha256": "c2e94ccaf9285e9efcdbe632c157b5953780ece31576589e07bd84595f734100"
+    },
+    "DgJ-yOvicFA": {
+      "source_handle": "popcorncutzz",
+      "source_url": "https://www.instagram.com/popcorncutzz/reel/DgJ-yOvicFA/",
+      "queued_at": "2026-11-25T17:46:53.743Z",
+      "asset_sha256": "425a5621ab9dc550ac573af2f23593eab0dca6e373eca30b866e1a5132deb2ef"
     }
   },
   "checks": {
@@ -20232,7 +20238,7 @@
       "checked_at": "2026-11-25T17:40:20.343Z"
     },
     "popcorncutzz": {
-      "checked_at": "2026-11-25T04:17:40.772Z"
+      "checked_at": "2026-11-25T17:45:25.400Z"
     },
     "cinamagiraffe41": {
       "checked_at": "2026-11-25T04:21:52.584Z"
@@ -20242,16 +20248,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-23T23:31:18.403Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 248,
-      "attempts": 0,
-      "inventory": 4203,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-23T23:32:18.597Z"
-    },
     {
       "started_at": "2026-11-23T23:36:23.849Z",
       "queued": [],
@@ -26009,9 +26005,27 @@
       "inventory": 4343,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-25T17:34:57.107Z"
+    },
+    {
+      "started_at": "2026-11-25T17:39:58.867Z",
+      "queued": [
+        "DgKjKDDzjFr"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/movie_vault_4u/reel/DgKVqMYBON2/",
+          "stage": "capture_or_queue",
+          "error": "Source caption has no explicit movie or television title"
+        }
+      ],
+      "discovered": 88,
+      "attempts": 2,
+      "inventory": 4345,
+      "status": "queued",
+      "finished_at": "2026-11-25T17:40:57.671Z"
     }
   ],
-  "next_account_index": 12,
+  "next_account_index": 13,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -38556,6 +38570,14 @@
       "failures": 2,
       "terminal": true,
       "retry_at": null
+    },
+    "DgKVqMYBON2": {
+      "collector_version": 14,
+      "error": "Source caption has no explicit movie or television title",
+      "failed_at": "2026-11-25T17:40:57.648Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-25T18:10:57.648Z"
     }
   },
   "candidates": {
@@ -60283,6 +60305,11 @@
       "handle": "movie_vault_4u",
       "url": "https://www.instagram.com/movie_vault_4u/reel/DgKVqMYBON2/",
       "shortcode": "DgKVqMYBON2"
+    },
+    "DgJ-yOvicFA": {
+      "handle": "popcorncutzz",
+      "url": "https://www.instagram.com/popcorncutzz/reel/DgJ-yOvicFA/",
+      "shortcode": "DgJ-yOvicFA"
     }
   },
   "discovery_depth": {
@@ -60298,7 +60325,7 @@
     "filmreelsvault": 40,
     "fuckinggoodmovies": 20,
     "movie_vault_4u": 30,
-    "popcorncutzz": 20,
+    "popcorncutzz": 30,
     "cinamagiraffe41": 30,
     "primefilmtv": 30
   }
