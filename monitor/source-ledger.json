@@ -20075,6 +20075,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgJlKYptg9y/",
       "queued_at": "2026-11-25T05:01:00.857Z",
       "asset_sha256": "6a1c9bd267784523fdc34f344ee5b4f6724d5f068015c1e6c0b43133d7ff6d1d"
+    },
+    "DgJlJEmN8RJ": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgJlJEmN8RJ/",
+      "queued_at": "2026-11-25T05:08:08.248Z",
+      "asset_sha256": "ebf82c773ecc21c3743d1395bdb817cd5b622e252c6e259b47c003dc65c71598"
     }
   },
   "checks": {
@@ -20134,22 +20140,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-23T17:59:36.892Z",
-      "queued": [],
-      "errors": [
-        {
-          "source_url": "https://www.instagram.com/the_goodfilms/reel/DgFi29aNrXG/",
-          "stage": "capture_or_queue",
-          "error": "Movie is already represented in the publishing queue"
-        }
-      ],
-      "discovered": 208,
-      "attempts": 1,
-      "inventory": 4198,
-      "status": "no_eligible_clip",
-      "finished_at": "2026-11-23T18:00:57.753Z"
-    },
     {
       "started_at": "2026-11-23T18:04:42.104Z",
       "queued": [
@@ -25654,6 +25644,30 @@
       "inventory": 4338,
       "status": "queued",
       "finished_at": "2026-11-25T04:53:16.417Z"
+    },
+    {
+      "started_at": "2026-11-25T04:57:19.647Z",
+      "queued": [
+        "DgJlUabNw_V",
+        "DgJlKYptg9y"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgJlPFetGHu/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgJlDpxNZvI/",
+          "stage": "capture_or_queue",
+          "error": "Video exceeds GitHub media size limit"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 4338,
+      "status": "queued",
+      "finished_at": "2026-11-25T05:06:02.720Z"
     }
   ],
   "next_account_index": 0,
@@ -37897,6 +37911,14 @@
       "failures": 1,
       "terminal": true,
       "retry_at": null
+    },
+    "DgJlDpxNZvI": {
+      "collector_version": 14,
+      "error": "Video exceeds GitHub media size limit",
+      "failed_at": "2026-11-25T05:06:02.707Z",
+      "failures": 1,
+      "terminal": false,
+      "retry_at": "2026-11-25T08:06:02.707Z"
     }
   },
   "candidates": {
