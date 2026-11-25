@@ -241172,6 +241172,52 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-25T16:43:52.900Z",
       "key": "3ccbc6f77bc9c5e2807b85f35b21704efb5ab5a3af682a6bfb5a08f3f6ee40cc"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgK33MIA2zd",
+        "title": "@fuckinggoodmovies clip"
+      },
+      "scene": {
+        "id": "DgK33MIA2zd",
+        "start": 0,
+        "end": 80.133
+      },
+      "source_post_url": "https://www.instagram.com/fuckinggoodmovies/reel/DgK33MIA2zd/",
+      "source_caption": "Christopher Nolan paying tribute to a true American masterpiece. 🙌 \n\n#HEAT",
+      "source_details": {
+        "title_hint": "HEAT",
+        "source_title": "HEAT",
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": false
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261125/4bfd57e402093a9cd6b9fc3f250efd4508e55a035ebbd244c2df3bbd8eba9a39.mp4?download=1",
+      "asset_sha256": "4bfd57e402093a9cd6b9fc3f250efd4508e55a035ebbd244c2df3bbd8eba9a39",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 80.133008,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-25T17:28:09.325Z",
+        "source_duration": 80.13333333333334,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": true,
+      "status": "needs_review",
+      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "discovered_at": "2026-11-25T17:30:05.160Z",
+      "key": "d5bca7ef2472588ae1b7b51db86bdd38c322ee19332f1ea8c6e02d9bf3fc8318"
     }
   ],
   "discovery": [],
