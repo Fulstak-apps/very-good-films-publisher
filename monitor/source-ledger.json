@@ -20099,6 +20099,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgJjdaqtPmx/",
       "queued_at": "2026-11-25T05:45:13.821Z",
       "asset_sha256": "1a732c7ad1fc8a68ce78fa9f8594683b3c7f63acbd4397f5e1145734a5d4de11"
+    },
+    "DgJjcZUtwwt": {
+      "source_handle": "primefilmtv",
+      "source_url": "https://www.instagram.com/primefilmtv/reel/DgJjcZUtwwt/",
+      "queued_at": "2026-11-25T05:49:53.132Z",
+      "asset_sha256": "ee43c73eae86333819b54f0bc597ef6059d0e2861de99872fd8fc9912304f07c"
     }
   },
   "checks": {
@@ -20158,16 +20164,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-23T18:20:01.656Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 67,
-      "attempts": 0,
-      "inventory": 4200,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-23T18:20:25.170Z"
-    },
     {
       "started_at": "2026-11-23T18:25:06.739Z",
       "queued": [],
@@ -25739,6 +25735,35 @@
       "inventory": 4338,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-25T05:36:04.622Z"
+    },
+    {
+      "started_at": "2026-11-25T05:38:07.617Z",
+      "queued": [
+        "DgJkKwPNKcH",
+        "DgJjdaqtPmx"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgJkFQStDPa/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgJkGPENpaw/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgJkCE_NqQi/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 5,
+      "inventory": 4338,
+      "status": "queued",
+      "finished_at": "2026-11-25T05:45:18.295Z"
     }
   ],
   "next_account_index": 0,
