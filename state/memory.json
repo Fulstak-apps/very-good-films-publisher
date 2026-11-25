@@ -240208,6 +240208,79 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-25T05:43:33.296Z",
       "key": "da0f00571cd0079e22789abc5ba6da1f2c8b352876cda166cd3c159ca2249502"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgJjdaqtPmx",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DgJjdaqtPmx",
+        "start": 0,
+        "end": 58.32
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DgJjdaqtPmx/",
+      "source_caption": "📺 Zoey 101 (2005–2008)\n\nZoey 101 follows Zoey Brooks, a confident and friendly teenager who enrolls at Pacific Coast Academy, a prestigious boarding school in Southern California that has recently started accepting female students. Alongside her younger brother Dustin and her new friends Chase, Lola, Quinn, Michael, and Logan, Zoey navigates the exciting challenges of teenage life. From school competitions and hilarious misunderstandings to complicated friendships and romantic feelings, the group experiences countless unforgettable adventures. Meanwhile, Chase struggles to express his true feelings for Zoey, creating one of the series’ most memorable romantic storylines. Starring Jamie Lynn Spears, Sean Flynn, and Victoria Justice, the series delivers entertaining comedy, nostalgic moments, and heartfelt storytelling while exploring friendship, independence, young love, personal growth, and the challenges of growing up.\n\n🎭 Genre: Comedy • Drama • Family • Teen Sitcom\n\n⭐ IMDb: 6.2/10\n\n⏱️ Runtime: Approximately 23 minutes per episode • TV-G\n\n🎥 Creator: Dan Schneider\n\n📺 Seasons: 4 • 61 Episodes\n\n📍 Setting: Pacific Coast Academy, Southern California.\n\n📺 Where to Watch: Paramount+ (United States; availability may vary).",
+      "source_details": {
+        "title_hint": "Zoey 101",
+        "year": 2005,
+        "media_type_hint": "tv",
+        "availability": ". Where to Watch: Paramount+ (United States; availability may vary)",
+        "source_title": "Zoey 101",
+        "source_year": 2005,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Jamie Lynn Spears",
+          "Paul Butcher"
+        ],
+        "title": "Zoey 101",
+        "type": "tv",
+        "director": "Roger Christiansen",
+        "synopsis": "Zoey 101 is an American teen situational comedy-drama television series created by Dan Schneider for Nickelodeon. It aired from January 9, 2005, to May 2, 2008, spanning a total of 61 episodes across four seasons. It focuses on the lives of Zoey Brooks (Jamie Lynn Spears), her brother, Dustin (Paul Butcher), and her friends as they attend Pacific Coast Academy, a fictional boarding school in Southern California. It was initially filmed at Pepperdine University in Malibu, California, then at stages in Valencia beginning in the third season. It was nominated for an \"Outstanding Children's Program\" Emmy in 2005. Zoey 101 was the most expensive production ever for a Nickelodeon standard, as it w",
+        "metadata_source": "https://en.wikipedia.org/wiki/Zoey_101",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Zoey 101",
+          "source_year": 2005,
+          "catalog_title": "Zoey 101",
+          "catalog_year": 2005,
+          "catalog_type": "tv",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261125/1a732c7ad1fc8a68ce78fa9f8594683b3c7f63acbd4397f5e1145734a5d4de11.mp4?download=1",
+      "asset_sha256": "1a732c7ad1fc8a68ce78fa9f8594683b3c7f63acbd4397f5e1145734a5d4de11",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 58.333008,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-25T05:45:13.812Z",
+        "source_duration": 58.32,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-25T05:48:44.286Z",
+      "key": "b912d9c0b0f7722040541837e0191690c14bd404865698c6ad894ac0f89d3e4f"
     }
   ],
   "discovery": [],
