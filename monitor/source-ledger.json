@@ -20159,6 +20159,12 @@
       "source_url": "https://www.instagram.com/primefilmtv/reel/DgJhYL1txGZ/",
       "queued_at": "2026-11-25T16:28:57.220Z",
       "asset_sha256": "9134ccb33b109138fc051dc29965d0ed4afb7c9b7a88bfec2ddbfd4fa4293275"
+    },
+    "DgKpYruhIpU": {
+      "source_handle": "thecinemanerd.ig",
+      "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DgKpYruhIpU/",
+      "queued_at": "2026-11-25T16:39:40.896Z",
+      "asset_sha256": "ea8ac0671f9df2856d3fc2fedfa227fbaf0ff55573720910f44ede92093c694d"
     }
   },
   "checks": {
@@ -20172,10 +20178,10 @@
       "checked_at": "2026-09-08T02:48:18.115Z"
     },
     "reelgoodmovies": {
-      "checked_at": "2026-11-25T02:34:41.075Z"
+      "checked_at": "2026-11-25T16:33:48.183Z"
     },
     "thecinemanerd.ig": {
-      "checked_at": "2026-11-25T02:40:35.777Z"
+      "checked_at": "2026-11-25T16:38:47.460Z"
     },
     "theacenyc": {
       "checked_at": "2026-11-25T02:45:48.540Z"
@@ -20218,26 +20224,6 @@
     }
   },
   "runs": [
-    {
-      "started_at": "2026-11-23T22:20:01.961Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 67,
-      "attempts": 0,
-      "inventory": 4202,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-23T22:20:32.306Z"
-    },
-    {
-      "started_at": "2026-11-23T22:25:07.748Z",
-      "queued": [],
-      "errors": [],
-      "discovered": 0,
-      "attempts": 0,
-      "inventory": 4202,
-      "status": "candidates_on_hold",
-      "finished_at": "2026-11-23T22:25:49.377Z"
-    },
     {
       "started_at": "2026-11-23T22:30:13.019Z",
       "queued": [],
@@ -26255,9 +26241,43 @@
       "inventory": 4338,
       "status": "no_eligible_clip",
       "finished_at": "2026-11-25T16:20:32.376Z"
+    },
+    {
+      "started_at": "2026-11-25T16:22:53.603Z",
+      "queued": [
+        "DgJhhVDNnI0",
+        "DgJhYL1txGZ"
+      ],
+      "errors": [
+        {
+          "source_url": "https://www.instagram.com/thecinemanerd.ig/reel/DCeu2jgy3BO/",
+          "stage": "capture_or_queue",
+          "error": "No unambiguous matching audio stream; refusing silent or unrelated audio"
+        },
+        {
+          "source_url": "https://www.instagram.com/primefilmtv/reel/DgJhb92tGuC/",
+          "stage": "capture_or_queue",
+          "error": "Movie is already represented in the publishing queue"
+        }
+      ],
+      "discovery_skipped": "eligible_inventory_available",
+      "attempts": 4,
+      "inventory": 4338,
+      "status": "queued",
+      "finished_at": "2026-11-25T16:29:01.724Z"
+    },
+    {
+      "started_at": "2026-11-25T16:33:19.849Z",
+      "queued": [],
+      "errors": [],
+      "discovered": 8,
+      "attempts": 0,
+      "inventory": 4338,
+      "status": "candidates_on_hold",
+      "finished_at": "2026-11-25T16:33:48.194Z"
     }
   ],
-  "next_account_index": 0,
+  "next_account_index": 2,
   "failed": {
     "DdHGUHpMrHH": {
       "collector_version": 7,
@@ -38783,6 +38803,14 @@
       "collector_version": 14,
       "error": "Movie is already represented in the publishing queue",
       "failed_at": "2026-11-25T16:24:59.739Z",
+      "failures": 1,
+      "terminal": true,
+      "retry_at": null
+    },
+    "DgK2-olu8uB": {
+      "collector_version": 14,
+      "error": "Movie is already represented in the publishing queue",
+      "failed_at": "2026-11-25T16:39:13.621Z",
       "failures": 1,
       "terminal": true,
       "retry_at": null
@@ -60478,11 +60506,21 @@
       "handle": "primefilmtv",
       "url": "https://www.instagram.com/primefilmtv/reel/DgJhYL1txGZ/",
       "shortcode": "DgJhYL1txGZ"
+    },
+    "DgK2-olu8uB": {
+      "handle": "thecinemanerd.ig",
+      "url": "https://www.instagram.com/thecinemanerd.ig/reel/DgK2-olu8uB/",
+      "shortcode": "DgK2-olu8uB"
+    },
+    "DgKpYruhIpU": {
+      "handle": "thecinemanerd.ig",
+      "url": "https://www.instagram.com/thecinemanerd.ig/reel/DgKpYruhIpU/",
+      "shortcode": "DgKpYruhIpU"
     }
   },
   "discovery_depth": {
-    "reelgoodmovies": 30,
-    "thecinemanerd.ig": 20,
+    "reelgoodmovies": 40,
+    "thecinemanerd.ig": 30,
     "theacenyc": 20,
     "the_goodfilms": 30,
     "film.fission": 30,
