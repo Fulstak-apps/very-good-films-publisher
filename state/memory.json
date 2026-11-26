@@ -241514,6 +241514,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-25T20:13:30.229Z",
       "key": "bcd44841817970d022517e5336f13afa7b18af2d23edb98783b04fbdedde1a32"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgL-TlKNOE7",
+        "title": "@primefilmtv clip"
+      },
+      "scene": {
+        "id": "DgL-TlKNOE7",
+        "start": 0,
+        "end": 58.116
+      },
+      "source_post_url": "https://www.instagram.com/primefilmtv/reel/DgL-TlKNOE7/",
+      "source_caption": "🎬 The Bucket List (2007)\n\nThe Bucket List follows Edward Cole, a wealthy corporate billionaire, and Carter Chambers, a hardworking mechanic, who develop an unexpected friendship after being diagnosed with terminal cancer and sharing a hospital room. Despite their completely different backgrounds, the two decide to create a list of experiences they want to accomplish before they die. Together, they embark on an extraordinary journey around the world, experiencing thrilling adventures, visiting breathtaking destinations, and reflecting on their personal regrets and relationships. As their friendship grows stronger, they discover that life’s greatest treasures are not material possessions but meaningful connections and unforgettable experiences. Starring Jack Nicholson and Morgan Freeman, the film combines heartfelt comedy, powerful performances, and emotional storytelling while exploring friendship, mortality, forgiveness, happiness, and the importance of living life to the fullest.\n\n🎭 Genre: Adventure • Comedy • Drama\n\n⭐ IMDb: 7.4/10\n\n⏱️ Runtime: 1h 37m • PG-13\n\n🎥 Director: Rob Reiner\n\n✍️ Writer: Justin Zackham\n\n📺 Where to Watch: Check Amazon Prime Video and Apple TV for current streaming, rental, or purchase availability in the United States.",
+      "source_details": {
+        "title_hint": "The Bucket List",
+        "year": 2007,
+        "media_type_hint": "movie",
+        "availability": "Where to Watch: Check Amazon Prime Video and Apple TV for current streaming, rental, or purchase availability in the United States",
+        "source_title": "The Bucket List",
+        "source_year": 2007,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "cast": [
+          "Jack Nicholson",
+          "Morgan Freeman",
+          "Sean Hayes"
+        ],
+        "title": "The Bucket List",
+        "type": "movie",
+        "director": "Rob Reiner",
+        "synopsis": "The Bucket List is a 2007 American buddy comedy-drama film directed and produced by Rob Reiner, written by Justin Zackham, and starring Jack Nicholson and Morgan Freeman. The main plot follows two terminally ill men on their road trip with a wish list of things to do before they \"kick the bucket\". Zackham coined the expression \"bucket list\" after he wrote his own \"List of Things to do Before I Kick the Bucket\" and shortened it to \"Justin's Bucket List\". The first item on his list was to \"get a film made at a major studio\". This list gave him the idea for the screenplay, and The Bucket List became his first studio film. The film premiered on December 15, 2007, in Hollywood and opened in limit",
+        "metadata_source": "https://en.wikipedia.org/wiki/The_Bucket_List",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "The Bucket List",
+          "source_year": 2007,
+          "catalog_title": "The Bucket List",
+          "catalog_year": 2007,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261126/1148c1b28c42c9666c7f2c2d8c79068a62b4599e6578fd0471102ab4d729e773.mp4?download=1",
+      "asset_sha256": "1148c1b28c42c9666c7f2c2d8c79068a62b4599e6578fd0471102ab4d729e773",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 58,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-26T02:05:54.904Z",
+        "source_duration": 58.116689,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-26T02:10:18.412Z",
+      "key": "8ed975379aa549017a94ee18a8f74a9943f6a9ff05eee82ec98cbf34d23b4011"
     }
   ],
   "discovery": [],
