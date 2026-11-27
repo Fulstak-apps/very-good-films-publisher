@@ -242300,6 +242300,80 @@
       "review_reason": "Exact title, year, and media type must be verified before publishing",
       "discovered_at": "2026-11-27T14:25:35.218Z",
       "key": "8259a99a67339f04a971762c2e056cd8925c948af209f7b18b241b94609eee7c"
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgQD2jxut2c",
+        "title": "@thecinemanerd.ig clip"
+      },
+      "scene": {
+        "id": "DgQD2jxut2c",
+        "start": 0,
+        "end": 22.684
+      },
+      "source_post_url": "https://www.instagram.com/thecinemanerd.ig/reel/DgQD2jxut2c/",
+      "source_caption": "Few films capture the complicated nature of love quite like Happy Together. Wong Kar-wai explores a relationship that’s caught between affection and resentment, where two people keep finding their way back to each other despite knowing how much they hurt one another. There’s something deeply sad about watching people hold on to a relationship that seems to be falling apart, simply because letting go is just as difficult.\n\nTony Leung and Leslie Cheung are both incredible, bringing so much vulnerability and emotional depth to their performances. Combined with Christopher Doyle’s beautiful cinematography and the film’s use of music, it’s an experience that feels as intimate as it is heartbreaking.\n-\n🎥: Happy Together (1997)\nDir. Wong Kar-wai",
+      "source_details": {
+        "title_hint": "Happy Together",
+        "year": 1997,
+        "media_type_hint": "movie",
+        "availability": ". There’s something deeply sad about watching people hold on to a relationship that seems to be falling apart, simply because letting go is just as difficult",
+        "source_title": "Happy Together",
+        "source_year": 1997,
+        "structured_title_evidence": true,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "Happy Together",
+        "type": "movie",
+        "director": "Wong Kar-wai",
+        "cast": [
+          "Tony Leung",
+          "Leslie Cheung",
+          "Chang Chen"
+        ],
+        "synopsis": "Happy Together (Chinese: 春光乍洩) is a 1997 Hong Kong romantic drama film written and directed by Wong Kar-wai and starring Leslie Cheung and Tony Leung Chiu-wai as a turbulent gay couple. The English title is inspired by the Turtles' 1967 song, which is covered by Danny Chung on the soundtrack. The Chinese title (previously used for Michelangelo Antonioni's Blowup) is an idiomatic expression suggesting \"the exposure of something intimate\". A landmark of Hong Kong LGBT cinema, the film was regarded as one of the best LGBT films in the New Queer Cinema movement and received critical acclaim and screened at several film festivals such as the 1997 Toronto International Film Festival; it was nomina",
+        "metadata_source": "https://en.wikipedia.org/wiki/Happy_Together_(1997_film)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "Happy Together",
+          "source_year": 1997,
+          "catalog_title": "Happy Together",
+          "catalog_year": 1997,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        }
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261127/cf667ea2c958115319c2d2fb0a59c976c1e5c362d4caaac0fbcf37c267d883fe.mp4?download=1",
+      "asset_sha256": "cf667ea2c958115319c2d2fb0a59c976c1e5c362d4caaac0fbcf37c267d883fe",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 22.666667,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-27T17:39:37.913Z",
+        "source_duration": 22.684443,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": false,
+      "status": "ready",
+      "discovered_at": "2026-11-27T17:43:36.721Z",
+      "key": "f681fc4ee2de7bddbc2cf493925e869990cffed04e0219dc54329f278b2d08a0"
     }
   ],
   "discovery": [],
