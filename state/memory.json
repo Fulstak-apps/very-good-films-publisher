@@ -242384,6 +242384,77 @@
       "instagram_published_at": "2026-11-27T17:46:18.862Z",
       "published_at": "2026-11-27T17:46:35.098Z",
       "threads_pending": true
+    },
+    {
+      "kind": "source_repost",
+      "film": {
+        "id": "instagram:DgQhDYxSB-Y",
+        "title": "@film.fission clip"
+      },
+      "scene": {
+        "id": "DgQhDYxSB-Y",
+        "start": 0,
+        "end": 12.329
+      },
+      "source_post_url": "https://www.instagram.com/film.fission/reel/DgQhDYxSB-Y/",
+      "source_caption": "That brilliant visual parallel in You Can See Everything (2026) highlights the film's central tension between domestic normalcy, impending confinement, and what is actually visible versus staged.\n\nDirected by Lance Oppenheim and produced with Nathan Fielder, the film follows Holmes during the final weeks before she begins her 11-year prison sentence for fraud. Using matching bar-like framing at the start and end creates a silent visual arc moving her from the domestic confinement of awaiting her sentence to actual incarceration.\n\nFollowing a surprise secret premiere at the Telluride Film Festival, the film opened to massive box office numbers in the US, Canada, and the UK. It holds a 97% rating on Rotten Tomatoes and a 9.2/10 on IMDb, with critics praising its surreal, unsettling examination of deception and the limits of documentary filmmaking.",
+      "source_details": {
+        "title_hint": "You Can See Everything",
+        "year": 2026,
+        "media_type_hint": "movie",
+        "source_title": "You Can See Everything",
+        "source_year": 2026,
+        "structured_title_evidence": false,
+        "version": "source-caption-film-info-v8",
+        "identity_verified": true,
+        "title": "You Can See Everything",
+        "type": "movie",
+        "director": "Lance Oppenheim",
+        "cast": [],
+        "synopsis": "You Can See Everything (Original Soundtrack) is the film score composed by Ari Balouzian to the 2026 documentary film You Can See Everything directed by Lance Oppenheim. The soundtrack accompanied 25 tracks which was released through A24 Music on October 16, 2026.",
+        "metadata_source": "https://en.wikipedia.org/wiki/You_Can_See_Everything_(soundtrack)",
+        "identity": {
+          "version": "source-catalog-identity-v2",
+          "method": "wikipedia_exact_title",
+          "source_title": "You Can See Everything",
+          "source_year": 2026,
+          "catalog_title": "You Can See Everything",
+          "catalog_year": 2026,
+          "catalog_type": "movie",
+          "exact_matches": 1,
+          "evidence": [
+            "caption_literal_title",
+            "catalog_exact_title",
+            "source_year_match"
+          ]
+        },
+        "title_hint_verified": "You Can See Everything (2026)"
+      },
+      "video_url": "https://github.com/Fulstak-apps/very-good-films-publisher/releases/download/media-20261127/5ed5566dc8991400b56d8d9bbef69f28f968a16bc2830959d8281ba808a547b6.mp4?download=1",
+      "asset_sha256": "5ed5566dc8991400b56d8d9bbef69f28f968a16bc2830959d8281ba808a547b6",
+      "qa": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 12.266667,
+        "audio": "aac",
+        "video": "h264",
+        "frame_preserved": true,
+        "layout": "full-frame-letterbox-v1",
+        "leading_black_trim_seconds": 0,
+        "first_frame_content": true,
+        "source_verified": true,
+        "media_verified": true,
+        "branding": "very-good-films-only-v1",
+        "reviewed_at": "2026-11-27T21:01:20.612Z",
+        "source_duration": 12.329795,
+        "media_match_method": "unique-complete-stream-duration-dimensions-v1"
+      },
+      "caption_style": "source_repost",
+      "metadata_pending": true,
+      "status": "needs_review",
+      "review_reason": "Exact title, year, and media type must be verified before publishing",
+      "discovered_at": "2026-11-27T21:04:55.745Z",
+      "key": "d18ca635bf8ea2d4332da05a3a8d14aba922908239d4ab29851d1a241fad77d2"
     }
   ],
   "discovery": [],
